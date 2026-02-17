@@ -297,5 +297,17 @@
     "notes": "SSAS Ch 9 & 11. LAMS 9 due Mar 22.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:21.290Z"
+  },
+  {
+    "id": "084797b9-8324-42d7-81f4-97a429c672b2",
+    "title": "AD1102 eLecture 10: Shareholders Equity & Dividends",
+    "course": "AD1102 Financial Accounting",
+    "type": "reading",
+    "dueDate": "2026-03-29T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "SSAS Ch 12. LAMS 10 due Mar 29. PA 8 due Apr 12.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:23.254Z"
   }
 ]
