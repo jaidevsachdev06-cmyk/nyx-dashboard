@@ -118,5 +118,17 @@
     "notes": "Groups of 3-4, weekly from Week 4. 10% group + 10% individual. Peer eval on GradeWay after Week 13.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:32:07.685Z"
+  },
+  {
+    "id": "698e4302-c1cd-4d12-8c51-34100bd17b37",
+    "title": "AD1102 Team Presentation",
+    "course": "AD1102 Financial Accounting",
+    "type": "presentation",
+    "dueDate": null,
+    "priority": "high",
+    "status": "todo",
+    "notes": "Up to 5 per team. 25-30 min, max 50 slides. 10% individual presentation + 5% team content. Email slides by 9am Friday before presentation week. Peer eval via GradeWay.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:32:09.690Z"
   }
 ]
