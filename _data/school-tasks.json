@@ -417,5 +417,17 @@
     "notes": "Online practice assignment.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:41.476Z"
+  },
+  {
+    "id": "c93fee6d-bedf-4f5c-bba0-f210b33cb27e",
+    "title": "AD1102 Practice Assignment 8",
+    "course": "AD1102 Financial Accounting",
+    "type": "assignment",
+    "dueDate": "2026-04-12T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "Final practice assignment.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:43.567Z"
   }
 ]
