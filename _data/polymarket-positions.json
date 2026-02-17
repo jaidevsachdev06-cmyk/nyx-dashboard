@@ -42,5 +42,26 @@
     "pnlPercent": 0,
     "createdAt": "2026-02-17T07:12:13.472Z",
     "entryDate": "2026-02-17T07:12:13.472Z"
+  },
+  {
+    "id": "f6ce40d2-247d-442d-a746-8fdaf4ad2811",
+    "market": "US strikes Iran by February 20, 2026?",
+    "position": "No",
+    "entryPrice": 0.949,
+    "currentPrice": 0.949,
+    "shares": 10.54,
+    "status": "open",
+    "notes": "Only 3 days out, no credible strike intel. 5.1% too high for 72hr window.",
+    "tags": [
+      "geopolitics",
+      "hedge-B"
+    ],
+    "createdBy": "Nyx",
+    "invested": 10,
+    "currentValue": 10,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "createdAt": "2026-02-17T07:12:14.249Z",
+    "entryDate": "2026-02-17T07:12:14.249Z"
   }
 ]
