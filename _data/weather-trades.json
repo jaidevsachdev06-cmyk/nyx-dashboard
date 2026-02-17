@@ -98,5 +98,30 @@
       "seattle"
     ],
     "createdAt": "2026-02-17T08:29:00.223Z"
+  },
+  {
+    "id": "c4c665bc-be72-4ea0-ba4b-68c27b4de305",
+    "city": "Dallas",
+    "market": "Will the highest temperature in Dallas be between 78-79°F on February 18?",
+    "marketId": "4430b33a-3ab2-4b30-ae49-9a71aa514754",
+    "marketUrl": "https://simmer.markets/4430b33a-3ab2-4b30-ae49-9a71aa514754",
+    "side": "yes",
+    "bucket": "78-79°F",
+    "entryPrice": 0.35,
+    "currentPrice": 0.222,
+    "shares": 45.4,
+    "status": "open",
+    "noaaForecast": "79°F",
+    "forecastConfidence": "medium-high",
+    "reasoning": "NWS hourly peaks at 79°F around 3pm. TAF shows S winds 17G27kt. Highest opportunity score.",
+    "source": "auto",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "paper-trade",
+      "dallas"
+    ],
+    "createdAt": "2026-02-17T08:29:04.055Z"
   }
 ]
