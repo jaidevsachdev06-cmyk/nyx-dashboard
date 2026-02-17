@@ -73,5 +73,25 @@
     ],
     "lastActive": "2026-02-17T08:29:55Z",
     "createdAt": "2026-02-17T08:29:55.348Z"
+  },
+  {
+    "id": "3dd10cb4-d27d-4771-8040-25e0603d9e51",
+    "name": "Stormwatch",
+    "avatar": "🌪️",
+    "role": "Automated weather market scanner — pulls NWS hourly forecasts, aviation TAFs, and Simmer markets. Trades when edge ≥10%. Runs 3x daily.",
+    "status": "idle",
+    "currentTask": "Next scan: 2:00 PM SGT",
+    "tools": [
+      "Simmer Markets",
+      "NOAA/NWS",
+      "Aviation Weather Center",
+      "Mesonet Data"
+    ],
+    "accessList": [
+      "polymarket",
+      "activity"
+    ],
+    "lastActive": "2026-02-17T08:29:58Z",
+    "createdAt": "2026-02-17T08:29:58.697Z"
   }
 ]
