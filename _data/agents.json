@@ -52,5 +52,26 @@
     ],
     "lastActive": "2026-02-17T08:29:50Z",
     "createdAt": "2026-02-17T08:29:50.966Z"
+  },
+  {
+    "id": "e8857789-6d61-4920-9af5-c30a6addbe06",
+    "name": "Herald",
+    "avatar": "📯",
+    "role": "Daily morning briefing — calendar, portfolio movers, action items. Runs at 10am SGT.",
+    "status": "idle",
+    "currentTask": "Next run: 10:00 AM SGT",
+    "tools": [
+      "Google Calendar",
+      "Web Search",
+      "Tavily",
+      "Tiger Trade Data"
+    ],
+    "accessList": [
+      "school",
+      "trading",
+      "activity"
+    ],
+    "lastActive": "2026-02-17T08:29:55Z",
+    "createdAt": "2026-02-17T08:29:55.348Z"
   }
 ]
