@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "653107d0-69c5-4152-8793-9ad5992e0c8b",
+    "course": "HE5091 Principles Of Economics",
+    "day": "Tuesday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "location": "LHS-TR 42",
+    "type": "tutorial",
+    "createdAt": "2026-02-17T07:13:35.915Z"
+  }
+]
