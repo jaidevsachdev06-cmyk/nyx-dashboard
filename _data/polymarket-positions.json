@@ -237,5 +237,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-17T08:23:55.025Z"
+  },
+  {
+    "id": "d9ec0ca4-e0df-4261-b122-bcdc0e0af8e0",
+    "market": "Will the highest temperature in Dallas be between 78-79°F on February 18?",
+    "marketUrl": "https://simmer.markets/4430b33a-3ab2-4b30-ae49-9a71aa514754",
+    "position": "Yes",
+    "entryPrice": 0.35,
+    "currentPrice": 0.35,
+    "shares": 45.4,
+    "status": "open",
+    "notes": "NWS hourly: Dallas peaks at 79°F Feb 18 around 3pm. TAF shows S winds 17G27kt — strong mixing but NWS already accounts for this. Highest opportunity score (50).",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "paper-trade",
+      "dallas"
+    ],
+    "createdAt": "2026-02-17T08:23:55.858Z",
+    "invested": 15.889999999999999,
+    "currentValue": 15.889999999999999,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-17T08:23:55.859Z"
   }
 ]
