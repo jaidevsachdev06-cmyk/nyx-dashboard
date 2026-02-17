@@ -23,5 +23,30 @@
       "miami"
     ],
     "createdAt": "2026-02-17T08:28:40.142Z"
+  },
+  {
+    "id": "42ea2859-d865-499f-a195-35e90538442d",
+    "city": "Chicago",
+    "market": "Will the highest temperature in Chicago be between 60-61°F on February 18?",
+    "marketId": "faea074e-7ed0-4011-8d6f-49ec775b9899",
+    "marketUrl": "https://simmer.markets/faea074e-7ed0-4011-8d6f-49ec775b9899",
+    "side": "yes",
+    "bucket": "60-61°F",
+    "entryPrice": 0.155,
+    "currentPrice": 0.248,
+    "shares": 48.8,
+    "status": "open",
+    "noaaForecast": "62°F",
+    "forecastConfidence": "medium",
+    "reasoning": "NWS says 62°F but thunderstorms Tue night could bring cold front early. Hedge position at 15.5¢.",
+    "source": "auto",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "paper-trade",
+      "chicago"
+    ],
+    "createdAt": "2026-02-17T08:28:42.462Z"
   }
 ]
