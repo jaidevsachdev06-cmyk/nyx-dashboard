@@ -190,5 +190,30 @@
       }
     ],
     "createdAt": "2026-02-17T12:47:39.025Z"
+  },
+  {
+    "id": "2ba1eb77-611c-43fd-9151-bf033ec88d25",
+    "city": "Chicago",
+    "market": "Will the highest temperature in Chicago be between 62-63°F on February 18?",
+    "marketId": "f5ce0b44-5ad3-4ac2-9530-70ffb526a7c4",
+    "marketUrl": "https://simmer.markets/f5ce0b44-5ad3-4ac2-9530-70ffb526a7c4",
+    "side": "yes",
+    "bucket": "62-63°F",
+    "entryPrice": 0.27,
+    "currentPrice": 0.302,
+    "shares": 62.4,
+    "status": "open",
+    "noaaForecast": "62°F",
+    "forecastConfidence": "high",
+    "reasoning": "NWS hourly shows Chicago peaking at exactly 62°F at 1-2pm CST after overnight thunderstorms clear. TAF KORD confirms SKC by 1pm with 23G28kt W winds. Post-frontal sunny skies constrain heating to 62°F.",
+    "source": "auto",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "paper-trade",
+      "chicago"
+    ],
+    "createdAt": "2026-02-17T14:07:33.694Z"
   }
 ]
