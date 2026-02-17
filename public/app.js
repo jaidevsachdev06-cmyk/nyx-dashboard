@@ -337,6 +337,8 @@ async function loadWeatherTrades() {
       <div class="summary-card"><div class="label">Weather P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
+    loadNoaaForecasts();
+
     document.querySelector('#weather-open-table tbody').innerHTML = open.map(t => `<tr>
       <td>${t.city || ''}</td>
       <td style="max-width:200px">${t.market || ''}</td>
@@ -354,6 +356,43 @@ async function loadWeatherTrades() {
 async function editWeatherTrade(id) {
   const t = await get(`/api/weather?id=${id}`);
   showModal('weather-trade', t);
+}
+
+// ========== NOAA FORECASTS ==========
+async function loadNoaaForecasts() {
+  const cities = ['NYC', 'Chicago', 'Miami', 'Dallas', 'Atlanta', 'Seattle'];
+  const container = document.getElementById('noaa-forecasts');
+  container.innerHTML = cities.map(c => `<div class="summary-card" id="noaa-${c}" style="min-width:150px"><div class="label">${c}</div><div class="value mono" style="font-size:14px">⏳</div></div>`).join('');
+
+  for (const city of cities) {
+    try {
+      const data = await get(`/api/weather?type=noaa&city=${city}`);
+      const el = document.getElementById(`noaa-${city}`);
+      if (data.forecast && data.forecast.length > 0) {
+        const now = data.forecast[0];
+        const temp = now.temperature;
+        const unit = now.temperatureUnit || 'F';
+        const short = now.shortForecast || '';
+        const wind = now.windSpeed || '';
+        const icon = short.toLowerCase().includes('rain') ? '🌧️' :
+                     short.toLowerCase().includes('cloud') ? '☁️' :
+                     short.toLowerCase().includes('snow') ? '🌨️' :
+                     short.toLowerCase().includes('thunder') ? '⛈️' :
+                     short.toLowerCase().includes('fog') ? '🌫️' :
+                     short.toLowerCase().includes('sunny') || short.toLowerCase().includes('clear') ? '☀️' : '🌤️';
+        el.innerHTML = `
+          <div class="label">${city}</div>
+          <div class="value mono" style="font-size:22px">${icon} ${temp}°${unit}</div>
+          <div class="detail" style="margin-top:4px">${short}</div>
+          <div class="detail">Wind: ${wind}</div>
+          <div class="detail" style="font-size:10px;opacity:0.5">${now.name || ''}</div>
+        `;
+      }
+    } catch (e) {
+      const el = document.getElementById(`noaa-${city}`);
+      if (el) el.innerHTML = `<div class="label">${city}</div><div class="value mono" style="font-size:12px;color:var(--red)">Error</div>`;
+    }
+  }
 }
 
 // ========== WHALE COPYTRADING ==========
