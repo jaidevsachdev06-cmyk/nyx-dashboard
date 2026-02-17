@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "c6b7e0d3-9c43-470a-9d4a-154c2ee387af",
+    "title": "Read Chapter 8 - Risk and Rates of Return",
+    "course": "AB1201 Financial Management",
+    "type": "reading",
+    "dueDate": "2026-02-20T23:59:00Z",
+    "priority": "high",
+    "status": "todo",
+    "notes": "Week 6 reading",
+    "createdBy": "Nyx",
+    "createdAt": "2026-02-17T07:11:44.630Z"
+  }
+]
