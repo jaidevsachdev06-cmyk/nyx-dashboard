@@ -22,5 +22,17 @@
     "notes": "Week 7 reading. Stocks and their Valuation + Stock Market Efficiency",
     "createdBy": "Nyx",
     "createdAt": "2026-02-17T07:11:45.441Z"
+  },
+  {
+    "id": "fb3ef803-c4c8-4957-a693-9dbdc4119ac1",
+    "title": "AB1201 Mid-Term Quiz",
+    "course": "AB1201 Financial Management",
+    "type": "exam",
+    "dueDate": "2026-03-17T11:00:00Z",
+    "priority": "critical",
+    "status": "todo",
+    "notes": "Week 8, Tuesday 7-8pm SGT. Closed book, lockdown browser, bring laptop + calculator. Covers weeks 1-7.",
+    "createdBy": "Nyx",
+    "createdAt": "2026-02-17T07:11:46.845Z"
   }
 ]
