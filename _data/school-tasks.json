@@ -70,5 +70,17 @@
     "notes": "10 MCQ, 30 min, during Tutorial 11. Covers Lectures 7-10 (macro). Week 13.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:31:58.849Z"
+  },
+  {
+    "id": "dca60c24-1050-4725-aeb7-955c7219e764",
+    "title": "AB1201 Final Exam",
+    "course": "AB1201 Financial Management",
+    "type": "exam",
+    "dueDate": null,
+    "priority": "critical",
+    "status": "todo",
+    "notes": "50% of grade. Closed-book, pen & paper. Bring calculator. Date TBD.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:32:02.162Z"
   }
 ]
