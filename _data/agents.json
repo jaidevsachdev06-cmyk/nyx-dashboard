@@ -94,5 +94,32 @@
     ],
     "lastActive": "2026-02-17T07:30:00Z",
     "createdAt": "2026-02-17T07:31:32.898Z"
+  },
+  {
+    "id": "6b8aa528-3edd-4523-b82f-5839b73c4d7b",
+    "name": "Pythia",
+    "role": "Prediction Market Oracle — tracks Polymarket positions, P&L, watchlist, trade history, and market research via Simmer API",
+    "status": "online",
+    "currentTask": "Initial data import — consolidating positions and market analysis",
+    "accessList": [
+      "polymarket",
+      "activity"
+    ],
+    "tools": [
+      "Simmer API",
+      "Dashboard API",
+      "Web Search",
+      "Polymarket Data"
+    ],
+    "avatar": "🔮",
+    "model": "claude-opus-4.6",
+    "integrations": [
+      "Simmer",
+      "Polymarket",
+      "Dashboard REST API"
+    ],
+    "description": "Dedicated prediction market subagent. Monitors open positions, flags price movements >10%, tracks resolution dates, computes portfolio P&L, and researches new opportunities. Integrates with Simmer for live trading ($SIM + real USDC).",
+    "lastActive": "2026-02-17T07:55:00Z",
+    "createdAt": "2026-02-17T07:54:22.819Z"
   }
 ]
