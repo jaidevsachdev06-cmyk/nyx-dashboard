@@ -126,5 +126,26 @@
     "pnlPercent": 0,
     "createdAt": "2026-02-17T07:12:18.185Z",
     "entryDate": "2026-02-17T07:12:18.185Z"
+  },
+  {
+    "id": "cce44d86-a42b-41eb-9354-1b9004befd8a",
+    "market": "US strikes Iran by February 28, 2026?",
+    "position": "No",
+    "entryPrice": 0.825,
+    "currentPrice": 0.825,
+    "shares": 12.12,
+    "invested": 10,
+    "currentValue": 10,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "notes": "17.5% for 11 days too high. Diplomatic channels active.",
+    "tags": [
+      "geopolitics",
+      "hedge-B"
+    ],
+    "createdBy": "Nyx",
+    "createdAt": "2026-02-17T07:12:30.159Z",
+    "entryDate": "2026-02-17T07:12:30.159Z"
   }
 ]
