@@ -170,6 +170,12 @@
       "activity"
     ],
     "lastActive": "2026-02-17T08:30:01Z",
-    "createdAt": "2026-02-17T08:30:01.727Z"
+    "createdAt": "2026-02-17T08:30:01.727Z",
+    "files": [
+      {
+        "name": "AgentMail inbox",
+        "desc": "nyx-ai@agentmail.to — incoming emails"
+      }
+    ]
   }
 ]
