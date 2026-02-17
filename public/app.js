@@ -313,6 +313,7 @@ async function loadPolymarket() {
       <td><button class="btn btn-sm" onclick="deletePolyWatch('${w.id}')" style="color:var(--red)">✕</button></td>
     </tr>`).join('') || '<tr><td colspan="5" style="color:var(--text-dim)">Watchlist empty</td></tr>';
     loadWeatherTrades();
+    loadWhaleTrades();
   } catch (e) { console.error(e); }
 }
 async function editPolyPosition(id) { const p = await get(`/api/polymarket?type=positions&id=${id}`); showModal('poly-position', p); }
@@ -328,8 +329,11 @@ async function loadWeatherTrades() {
     const wins = closed.filter(t => t.status === 'closed-win').length;
     const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
 
+    const totalInvestedW = open.reduce((s, t) => s + ((t.entryPrice || 0) * (t.shares || 0)), 0);
+
     document.getElementById('weather-summary').innerHTML = `
       <div class="summary-card"><div class="label">Weather Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvestedW)}</div></div>
       <div class="summary-card"><div class="label">Weather P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
@@ -350,6 +354,52 @@ async function loadWeatherTrades() {
 async function editWeatherTrade(id) {
   const t = await get(`/api/weather?id=${id}`);
   showModal('weather-trade', t);
+}
+
+// ========== WHALE COPYTRADING ==========
+async function loadWhaleTrades() {
+  try {
+    const trades = await get('/api/whale');
+    const open = trades.filter(t => t.status === 'open');
+    const closed = trades.filter(t => t.status !== 'open');
+    const totalInvested = open.reduce((s, t) => s + (t.invested || 0), 0);
+    const totalValue = open.reduce((s, t) => s + (t.currentValue || t.invested || 0), 0);
+    const totalPnl = totalValue - totalInvested;
+    const wins = closed.filter(t => t.status === 'closed-win').length;
+    const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
+
+    document.getElementById('whale-summary').innerHTML = `
+      <div class="summary-card"><div class="label">Whale Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
+      <div class="summary-card"><div class="label">Whale P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
+    `;
+
+    document.querySelector('#whale-open-table tbody').innerHTML = open.map(t => `<tr>
+      <td style="max-width:220px">${t.market || ''}</td>
+      <td>${t.side || ''}</td>
+      <td class="mono">${fmtMoney(t.entryPrice)}</td>
+      <td class="mono">${fmtMoney(t.currentPrice)}</td>
+      <td class="mono">${t.shares || ''}</td>
+      <td>${t.whales || ''}</td>
+      <td class="mono ${pnlClass(t.pnl)}">${fmtMoney(t.pnl)}</td>
+      <td class="mono ${pnlClass(t.pnlPercent)}">${fmtPct(t.pnlPercent)}</td>
+      <td><button class="btn btn-sm" onclick="editWhalePosition('${t.id}')">Edit</button></td>
+    </tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim)">No open whale positions</td></tr>';
+
+    document.querySelector('#whale-closed-table tbody').innerHTML = closed.map(t => `<tr>
+      <td>${t.market || ''}</td><td>${t.side || ''}</td>
+      <td class="mono">${fmtMoney(t.entryPrice)}</td><td class="mono">${fmtMoney(t.exitPrice)}</td>
+      <td>${t.whales || ''}</td>
+      <td class="mono ${pnlClass(t.pnl)}">${fmtMoney(t.pnl)}</td>
+      <td>${t.status}</td>
+    </tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim)">No closed whale positions</td></tr>';
+  } catch (e) { console.error('Whale load error:', e); }
+}
+
+async function editWhalePosition(id) {
+  const t = await get(`/api/whale?id=${id}`);
+  showModal('poly-position', t);
 }
 
 async function scanWeatherMarkets() {
