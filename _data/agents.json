@@ -19,7 +19,7 @@
     ],
     "createdAt": "2026-02-17T07:07:24.321Z",
     "description": "Oversees all operations, manages sub-agents, direct line to Jaidev. Handles research, scheduling, trading analysis, and system orchestration.",
-    "model": "claude-opus-4",
+    "model": "claude-opus-4.6",
     "accessList": [
       "school",
       "polymarket",
@@ -67,7 +67,7 @@
     "description": "Manages all academic tasks across 7 courses. Tracks assignments, readings, exams, class schedule, and study progress. Proactively alerts on upcoming deadlines and overdue items.",
     "status": "online",
     "currentTask": "Initial data import from all course syllabi",
-    "model": "claude-opus-4",
+    "model": "claude-opus-4.6",
     "tools": [
       "Dashboard API",
       "Google Calendar",
