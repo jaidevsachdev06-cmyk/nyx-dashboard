@@ -8,5 +8,15 @@
     "location": "LHS-TR 42",
     "type": "tutorial",
     "createdAt": "2026-02-17T07:13:35.915Z"
+  },
+  {
+    "id": "fc0d98ac-3a17-4178-a1fb-fdc7bfc2fc47",
+    "course": "ML0004 Career Design & Workplace Readiness",
+    "day": "Tuesday",
+    "startTime": "10:30",
+    "endTime": "12:30",
+    "location": "LHN-TR+14",
+    "type": "lecture",
+    "createdAt": "2026-02-17T07:13:38.212Z"
   }
 ]
