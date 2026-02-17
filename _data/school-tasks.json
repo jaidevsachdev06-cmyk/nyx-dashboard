@@ -393,5 +393,17 @@
     "notes": "Online, multiple attempts, best score counts. 12% total for all PAs.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:37.278Z"
+  },
+  {
+    "id": "20e4df9c-6174-4a98-b858-45a5e932bc92",
+    "title": "AD1102 Practice Assignment 6",
+    "course": "AD1102 Financial Accounting",
+    "type": "assignment",
+    "dueDate": "2026-03-15T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "Online practice assignment.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:39.351Z"
   }
 ]
