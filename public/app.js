@@ -188,11 +188,8 @@ async function loadSchool() {
       html += `<div class="schedule-cell schedule-time">${time}</div>`;
       days.forEach(day => {
         const events = schedule.filter(s => s.day === day && s.startTime === time);
-        const spanning = schedule.filter(s => s.day === day && s.startTime < time && s.endTime > time);
         if (events.length) {
           html += `<div class="schedule-cell">${events.map(e => `<div class="schedule-event">${e.course}<br><span style="color:var(--text-dim)">${e.startTime}–${e.endTime} · ${e.location || ''}</span></div>`).join('')}</div>`;
-        } else if (spanning.length) {
-          html += `<div class="schedule-cell" style="background:rgba(59,130,246,.04)"></div>`;
         } else {
           html += `<div class="schedule-cell"></div>`;
         }
