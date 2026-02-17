@@ -48,5 +48,15 @@
     "location": "S4-SR12",
     "type": "lecture",
     "createdAt": "2026-02-17T07:13:45.109Z"
+  },
+  {
+    "id": "7348c0dc-106b-4e58-8758-78703f8f20f6",
+    "course": "AB0403 Decision Making With Prog & Analytics",
+    "day": "Friday",
+    "startTime": "14:30",
+    "endTime": "16:30",
+    "location": "S4-SR7",
+    "type": "lecture",
+    "createdAt": "2026-02-17T07:13:47.455Z"
   }
 ]
