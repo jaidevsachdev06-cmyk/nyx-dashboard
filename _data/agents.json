@@ -1,10 +1,10 @@
 [
   {
     "id": "950700d4-c5a6-4ecf-8bfa-8d43c9fadae0",
-    "name": "[UNNAMED — PENDING]",
+    "name": "Oracle",
     "role": "Prediction markets tracker — positions, watchlist, P&L, trade history, market research. Paper trading on Simmer Markets. Specializes in weather markets using deep sourcing from aviation, maritime, agricultural, and meteorology communities.",
     "status": "online",
-    "currentTask": "Monitoring 5 open weather sim positions (Feb 18 resolution)",
+    "currentTask": "Monitoring 5 open weather positions (Feb 18 resolution)",
     "accessList": [
       "polymarket",
       "activity"
@@ -22,7 +22,7 @@
       "Mesonet Data"
     ],
     "avatar": "🔮",
-    "lastActive": "2026-02-17T08:25:05Z",
+    "lastActive": "2026-02-17T08:29:47Z",
     "createdAt": "2026-02-17T08:23:38.943Z"
   }
 ]
