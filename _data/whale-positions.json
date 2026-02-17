@@ -61,5 +61,26 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-17T16:19:41.600Z"
+  },
+  {
+    "id": "dadb04c5-4921-4b3b-9a3e-9e92a623be5f",
+    "market": "Claude 5 NOT released by Feb 28",
+    "side": "YES",
+    "entryPrice": 0.945,
+    "currentPrice": 0.945,
+    "shares": 31.7,
+    "whales": "PredictaDamus, EltonMa",
+    "whaleCount": 2,
+    "avgScore": 41.5,
+    "thesis": "No credible leak. Near-certain.",
+    "category": "consensus",
+    "endDate": "2026-02-28",
+    "createdAt": "2026-02-17T16:19:45.742Z",
+    "invested": 29.9565,
+    "currentValue": 29.9565,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "entryDate": "2026-02-17T16:19:45.742Z"
   }
 ]
