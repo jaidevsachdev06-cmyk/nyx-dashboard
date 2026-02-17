@@ -34,5 +34,17 @@
     "notes": "Week 8, Tuesday 7-8pm SGT. Closed book, lockdown browser, bring laptop + calculator. Covers weeks 1-7.",
     "createdBy": "Nyx",
     "createdAt": "2026-02-17T07:11:46.845Z"
+  },
+  {
+    "id": "03cda884-6716-4adf-ae94-35331e2fd5b8",
+    "title": "Read C11 - The Cost of Capital",
+    "course": "AB1201 Financial Management",
+    "type": "reading",
+    "dueDate": "2026-03-13T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "Week 8 reading after recess week",
+    "createdBy": "Nyx",
+    "createdAt": "2026-02-17T07:12:11.716Z"
   }
 ]
