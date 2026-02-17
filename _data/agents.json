@@ -2,11 +2,12 @@
   {
     "id": "950700d4-c5a6-4ecf-8bfa-8d43c9fadae0",
     "name": "Oracle",
-    "role": "Prediction markets tracker — positions, watchlist, P&L, trade history, market research. Paper trading on Simmer Markets. Specializes in weather markets using deep sourcing from aviation, maritime, agricultural, and meteorology communities.",
+    "role": "Prediction markets tracker — positions, watchlist, P&L, trade history, market research. Paper trading on Simmer Markets. Manages Stormwatch 🌪️ as subagent for automated weather scanning.",
     "status": "online",
     "currentTask": "Monitoring 5 open weather positions (Feb 18 resolution)",
     "accessList": [
       "polymarket",
+      "trading",
       "activity"
     ],
     "tools": [
@@ -23,7 +24,25 @@
     ],
     "avatar": "🔮",
     "lastActive": "2026-02-17T08:29:47Z",
-    "createdAt": "2026-02-17T08:23:38.943Z"
+    "createdAt": "2026-02-17T08:23:38.943Z",
+    "files": [
+      {
+        "name": "polymarket-strategy.md",
+        "desc": "Trading framework, risk rules, EV calculations"
+      },
+      {
+        "name": "weather-trading-journal.md",
+        "desc": "Lessons learned from resolved weather trades"
+      },
+      {
+        "name": "polymarket-agent.md",
+        "desc": "Agent config and Simmer API credentials"
+      },
+      {
+        "name": "polymarket-paper.md",
+        "desc": "Paper trading positions and history"
+      }
+    ]
   },
   {
     "id": "db5777b9-f232-49f7-abdb-b027e9912ea1",
