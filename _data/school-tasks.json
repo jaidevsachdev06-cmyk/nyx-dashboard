@@ -130,5 +130,17 @@
     "notes": "Up to 5 per team. 25-30 min, max 50 slides. 10% individual presentation + 5% team content. Email slides by 9am Friday before presentation week. Peer eval via GradeWay.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:32:09.690Z"
+  },
+  {
+    "id": "d5d37fc0-2fb0-437d-afe9-786bbb596855",
+    "title": "AB0403 Group Project",
+    "course": "AB0403 Decision Making with Prog & Analytics",
+    "type": "project",
+    "dueDate": null,
+    "priority": "high",
+    "status": "todo",
+    "notes": "15% team grade. Python-based. Peer eval via Eureka platform. Leader submits + recording.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:32:11.638Z"
   }
 ]
