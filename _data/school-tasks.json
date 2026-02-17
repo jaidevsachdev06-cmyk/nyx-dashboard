@@ -273,5 +273,17 @@
     "notes": "SSAS Ch 10. LAMS 7 due Mar 8. PA 6 due Mar 15.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:17.270Z"
+  },
+  {
+    "id": "920da7f1-97f0-4235-a66a-a496c2ad0fc6",
+    "title": "AD1102 eLecture 8: Investments, Subsidiaries, NCI",
+    "course": "AD1102 Financial Accounting",
+    "type": "reading",
+    "dueDate": "2026-03-15T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "SSAS Ch 13. LAMS 8 due Mar 15. PA 7 due Mar 29.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:19.328Z"
   }
 ]
