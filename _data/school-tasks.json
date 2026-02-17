@@ -10,5 +10,17 @@
     "notes": "Week 6 reading",
     "createdBy": "Nyx",
     "createdAt": "2026-02-17T07:11:44.630Z"
+  },
+  {
+    "id": "b5b89b92-c270-4407-a527-095da35ae37d",
+    "title": "Read C10 + Appendix 10A (excl 10.7) + C2.7 - Stocks & Market Efficiency",
+    "course": "AB1201 Financial Management",
+    "type": "reading",
+    "dueDate": "2026-02-27T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "Week 7 reading. Stocks and their Valuation + Stock Market Efficiency",
+    "createdBy": "Nyx",
+    "createdAt": "2026-02-17T07:11:45.441Z"
   }
 ]
