@@ -309,5 +309,25 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-17T16:20:48.197Z"
+  },
+  {
+    "id": "24f4661f-b030-4d66-96bf-864e3de6294d",
+    "market": "US strikes Iran by June 30",
+    "side": "YES",
+    "entryPrice": 0.505,
+    "currentPrice": 0.505,
+    "shares": 59.4,
+    "whales": "gopfan2, EltonMa",
+    "whaleCount": 2,
+    "avgScore": 58.4,
+    "category": "consensus",
+    "endDate": "2026-06-30",
+    "createdAt": "2026-02-17T16:21:04.627Z",
+    "invested": 29.997,
+    "currentValue": 29.997,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "entryDate": "2026-02-17T16:21:04.627Z"
   }
 ]
