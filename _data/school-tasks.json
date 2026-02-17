@@ -261,5 +261,17 @@
     "notes": "SSAS Ch 8. LAMS 6 due Feb 22. Inventory costing methods, lower of cost/NRV.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:15.210Z"
+  },
+  {
+    "id": "0c898137-5192-470c-afd0-d61e69ebb19a",
+    "title": "AD1102 eLecture 7: PPE & Intangible Assets",
+    "course": "AD1102 Financial Accounting",
+    "type": "reading",
+    "dueDate": "2026-03-08T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "SSAS Ch 10. LAMS 7 due Mar 8. PA 6 due Mar 15.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:17.270Z"
   }
 ]
