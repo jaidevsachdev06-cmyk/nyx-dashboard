@@ -28,5 +28,15 @@
     "location": "LHN-TR+26",
     "type": "lecture",
     "createdAt": "2026-02-17T07:13:40.534Z"
+  },
+  {
+    "id": "0493444f-81eb-4148-a179-00c1d8205967",
+    "course": "AD1102 Financial Accounting",
+    "day": "Wednesday",
+    "startTime": "14:30",
+    "endTime": "17:30",
+    "location": "ABS-SR10",
+    "type": "lecture",
+    "createdAt": "2026-02-17T07:13:42.811Z"
   }
 ]
