@@ -142,5 +142,17 @@
     "notes": "15% team grade. Python-based. Peer eval via Eureka platform. Leader submits + recording.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:32:11.638Z"
+  },
+  {
+    "id": "aa8925cc-5614-4510-ad40-ffa351944ae7",
+    "title": "AB0403 Individual Presentation",
+    "course": "AB0403 Decision Making with Prog & Analytics",
+    "type": "presentation",
+    "dueDate": null,
+    "priority": "high",
+    "status": "todo",
+    "notes": "15% individual. All members present in group meeting.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:32:13.444Z"
   }
 ]
