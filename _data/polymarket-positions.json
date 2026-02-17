@@ -20,5 +20,27 @@
     "pnlPercent": 0,
     "createdAt": "2026-02-17T07:12:12.676Z",
     "entryDate": "2026-02-17T07:12:12.676Z"
+  },
+  {
+    "id": "bbaae7c9-9616-4618-a1a0-1b55a78e0e5c",
+    "market": "Will J.D. Vance win the 2028 Republican presidential nomination?",
+    "position": "Yes",
+    "entryPrice": 0.462,
+    "currentPrice": 0.462,
+    "shares": 15.15,
+    "status": "open",
+    "notes": "Sitting VP, Trumps successor, party machinery. Hedge pair A with RFK NO.",
+    "tags": [
+      "politics",
+      "2028",
+      "hedge-A"
+    ],
+    "createdBy": "Nyx",
+    "invested": 7,
+    "currentValue": 7,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "createdAt": "2026-02-17T07:12:13.472Z",
+    "entryDate": "2026-02-17T07:12:13.472Z"
   }
 ]
