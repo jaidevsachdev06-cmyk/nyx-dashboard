@@ -58,5 +58,41 @@
       }
     ],
     "lastActive": "2026-02-17T07:20:00Z"
+  },
+  {
+    "id": "69ee1fdf-bdd0-401c-b5f7-1676ea412fd2",
+    "name": "ScholarNyx",
+    "avatar": "🎓",
+    "role": "Academic Manager — Deadlines, Readings & Study Tracking",
+    "description": "Manages all academic tasks across 7 courses. Tracks assignments, readings, exams, class schedule, and study progress. Proactively alerts on upcoming deadlines and overdue items.",
+    "status": "online",
+    "currentTask": "Initial data import from all course syllabi",
+    "model": "claude-opus-4",
+    "tools": [
+      "Dashboard API",
+      "Google Calendar",
+      "Course Syllabi Parser",
+      "Deadline Tracker"
+    ],
+    "accessList": [
+      "school",
+      "activity"
+    ],
+    "integrations": [
+      "Dashboard API",
+      "Google Calendar"
+    ],
+    "files": [
+      {
+        "name": "all-courses.md",
+        "desc": "Complete course data — schedules, assessments, readings for all 7 courses"
+      },
+      {
+        "name": "ab1201-schedule.md",
+        "desc": "AB1201 Financial Management weekly schedule + textbook readings"
+      }
+    ],
+    "lastActive": "2026-02-17T07:30:00Z",
+    "createdAt": "2026-02-17T07:31:32.898Z"
   }
 ]
