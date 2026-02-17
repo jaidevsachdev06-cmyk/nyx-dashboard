@@ -113,7 +113,17 @@
       "activity"
     ],
     "lastActive": "2026-02-17T08:29:55Z",
-    "createdAt": "2026-02-17T08:29:55.348Z"
+    "createdAt": "2026-02-17T08:29:55.348Z",
+    "files": [
+      {
+        "name": "Google Calendar",
+        "desc": "Jaidev's class schedule and events"
+      },
+      {
+        "name": "heartbeat-state.json",
+        "desc": "Last check timestamps"
+      }
+    ]
   },
   {
     "id": "3dd10cb4-d27d-4771-8040-25e0603d9e51",
