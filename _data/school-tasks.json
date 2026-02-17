@@ -357,5 +357,17 @@
     "notes": "Week 10 reading. Brigham Ch 3.7, Ch 13 excl 13.7.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:31.379Z"
+  },
+  {
+    "id": "26e148a1-05c4-40f5-8b68-7a425088b162",
+    "title": "AB1201 C20.2 + C14.6 + C15: Capital Structure & Leverage",
+    "course": "AB1201 Financial Management",
+    "type": "reading",
+    "dueDate": "2026-04-03T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "Week 11 reading. Brigham Ch 20.2, 14.6, 15.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:33.334Z"
   }
 ]
