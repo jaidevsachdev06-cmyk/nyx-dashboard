@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "1e203c01-1cb9-4ed8-8968-ba2b10479be4",
+    "name": "Nyx",
+    "role": "Main agent",
+    "status": "online",
+    "avatar": "🌙",
+    "currentTask": "Dashboard deployment",
+    "tools": [
+      "GitHub",
+      "Vercel"
+    ],
+    "createdAt": "2026-02-17T07:07:24.321Z"
+  }
+]
