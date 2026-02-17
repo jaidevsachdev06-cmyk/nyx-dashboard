@@ -73,5 +73,30 @@
       "nyc"
     ],
     "createdAt": "2026-02-17T08:28:56.352Z"
+  },
+  {
+    "id": "8037bd1f-9d5c-4065-ba07-7ac37c3020c8",
+    "city": "Seattle",
+    "market": "Will the highest temperature in Seattle be between 44-45°F on February 18?",
+    "marketId": "2058b1a3-0d91-4131-9a0a-d78a030024d7",
+    "marketUrl": "https://simmer.markets/2058b1a3-0d91-4131-9a0a-d78a030024d7",
+    "side": "yes",
+    "bucket": "44-45°F",
+    "entryPrice": 0.29,
+    "currentPrice": 0.365,
+    "shares": 48.2,
+    "status": "open",
+    "noaaForecast": "44°F",
+    "forecastConfidence": "medium",
+    "reasoning": "NWS hourly peaks at 44°F. Market favors 42-43 but NWS disagrees.",
+    "source": "auto",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "paper-trade",
+      "seattle"
+    ],
+    "createdAt": "2026-02-17T08:29:00.223Z"
   }
 ]
