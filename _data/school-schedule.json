@@ -38,5 +38,15 @@
     "location": "ABS-SR10",
     "type": "lecture",
     "createdAt": "2026-02-17T07:13:42.811Z"
+  },
+  {
+    "id": "6162e43f-9649-4428-aa1c-5e87a3e4ec98",
+    "course": "AB1201 Financial Management",
+    "day": "Thursday",
+    "startTime": "08:30",
+    "endTime": "11:30",
+    "location": "S4-SR12",
+    "type": "lecture",
+    "createdAt": "2026-02-17T07:13:45.109Z"
   }
 ]
