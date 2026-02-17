@@ -181,14 +181,21 @@ async function loadSchool() {
 
     // Schedule
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-    const times = ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00'];
+    const times = ['08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'];
     let html = '<div class="schedule-grid"><div class="schedule-header"></div>';
     days.forEach(d => { html += `<div class="schedule-header">${d.slice(0,3)}</div>`; });
     times.forEach(time => {
       html += `<div class="schedule-cell schedule-time">${time}</div>`;
       days.forEach(day => {
         const events = schedule.filter(s => s.day === day && s.startTime === time);
-        html += `<div class="schedule-cell">${events.map(e => `<div class="schedule-event">${e.course}<br><span style="color:var(--text-dim)">${e.location || ''}</span></div>`).join('')}</div>`;
+        const spanning = schedule.filter(s => s.day === day && s.startTime < time && s.endTime > time);
+        if (events.length) {
+          html += `<div class="schedule-cell">${events.map(e => `<div class="schedule-event">${e.course}<br><span style="color:var(--text-dim)">${e.startTime}–${e.endTime} · ${e.location || ''}</span></div>`).join('')}</div>`;
+        } else if (spanning.length) {
+          html += `<div class="schedule-cell" style="background:rgba(59,130,246,.04)"></div>`;
+        } else {
+          html += `<div class="schedule-cell"></div>`;
+        }
       });
     });
     html += '</div>';
