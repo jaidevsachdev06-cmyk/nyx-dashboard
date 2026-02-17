@@ -166,5 +166,26 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-17T16:20:01.523Z"
+  },
+  {
+    "id": "b6142ed7-c2dd-446a-a3d5-165bdfaa703d",
+    "market": "Barcelona wins Champions League 25-26",
+    "side": "YES",
+    "entryPrice": 0.115,
+    "currentPrice": 0.115,
+    "shares": 217.4,
+    "whales": "gopfan2",
+    "whaleCount": 1,
+    "avgScore": 75.5,
+    "thesis": "102k shares, +20.8% PnL. Longshot positive EV.",
+    "category": "single",
+    "endDate": "2026-05-31",
+    "createdAt": "2026-02-17T16:20:05.359Z",
+    "invested": 25.001,
+    "currentValue": 25.001,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "entryDate": "2026-02-17T16:20:05.359Z"
   }
 ]
