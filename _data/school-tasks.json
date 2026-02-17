@@ -154,5 +154,16 @@
     "notes": "15% individual. All members present in group meeting.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:32:13.444Z"
+  },
+  {
+    "id": "7c676ddf-e723-447e-b3ef-230fd13d206d",
+    "title": "AD1102 Final Exam",
+    "course": "AD1102 Financial Accounting",
+    "type": "exam",
+    "priority": "critical",
+    "status": "todo",
+    "notes": "50% of grade. Closed-book, 2.5 hours. Date TBD.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:32:23.413Z"
   }
 ]
