@@ -82,5 +82,26 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-17T16:19:45.742Z"
+  },
+  {
+    "id": "f17e039a-5f1d-4c8e-a06c-3449db82211c",
+    "market": "Khamenei stays as Supreme Leader by Feb 28",
+    "side": "NO",
+    "entryPrice": 0.971,
+    "currentPrice": 0.971,
+    "shares": 30.9,
+    "whales": "Noose, EltonMa",
+    "whaleCount": 2,
+    "avgScore": 51.4,
+    "thesis": "11 days. No regime change intel.",
+    "category": "consensus",
+    "endDate": "2026-02-28",
+    "createdAt": "2026-02-17T16:19:49.574Z",
+    "invested": 30.003899999999998,
+    "currentValue": 30.003899999999998,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "entryDate": "2026-02-17T16:19:49.574Z"
   }
 ]
