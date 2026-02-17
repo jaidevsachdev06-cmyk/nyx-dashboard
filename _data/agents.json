@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "950700d4-c5a6-4ecf-8bfa-8d43c9fadae0",
+    "name": "[UNNAMED — PENDING]",
+    "role": "Prediction markets tracker — positions, watchlist, P&L, trade history, market research. Paper trading on Simmer Markets. Specializes in weather markets using deep sourcing from aviation, maritime, agricultural, and meteorology communities.",
+    "status": "online",
+    "currentTask": "Initial data import — exporting positions and trade data",
+    "accessList": [
+      "polymarket",
+      "activity"
+    ],
+    "tools": [
+      "Dashboard API",
+      "Simmer Markets",
+      "Aviation Weather Center",
+      "NOAA",
+      "Tropical Tidbits",
+      "CPC",
+      "ECMWF Models",
+      "Pilot Forums",
+      "Maritime Sources",
+      "Mesonet Data"
+    ],
+    "avatar": "🔮",
+    "lastActive": "2026-02-17T08:23:37Z",
+    "createdAt": "2026-02-17T08:23:38.943Z"
+  }
+]
