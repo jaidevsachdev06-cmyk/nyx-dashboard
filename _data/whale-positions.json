@@ -210,27 +210,6 @@
     "entryDate": "2026-02-17T16:20:09.686Z"
   },
   {
-    "id": "a6de767f-2b15-437f-97fd-127ff9474eae",
-    "market": "Judy Shelton NOT Fed chair nominee",
-    "side": "NO",
-    "entryPrice": 0.962,
-    "currentPrice": 0.962,
-    "shares": 52,
-    "whales": "Noose, gopfan2",
-    "whaleCount": 2,
-    "avgScore": 68.5,
-    "thesis": "Kevin Warsh is consensus pick.",
-    "category": "consensus",
-    "endDate": "2026-12-31",
-    "createdAt": "2026-02-17T16:20:22.120Z",
-    "invested": 50.024,
-    "currentValue": 50.024,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-17T16:20:22.120Z"
-  },
-  {
     "id": "9e3f955c-4c81-46a7-ba41-c2bb689e972b",
     "market": "Kevin Warsh YES Fed chair nominee",
     "side": "YES",
