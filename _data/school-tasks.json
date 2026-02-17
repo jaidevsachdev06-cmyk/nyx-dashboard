@@ -345,5 +345,17 @@
     "notes": "Week 9 reading. Brigham Ch 12.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:29.421Z"
+  },
+  {
+    "id": "59c1b0b8-b78a-4d85-aa92-be304d2e0dc4",
+    "title": "AB1201 C3.7 + C13 (excl 13.7): Cash Flows",
+    "course": "AB1201 Financial Management",
+    "type": "reading",
+    "dueDate": "2026-03-27T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "Week 10 reading. Brigham Ch 3.7, Ch 13 excl 13.7.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:31.379Z"
   }
 ]
