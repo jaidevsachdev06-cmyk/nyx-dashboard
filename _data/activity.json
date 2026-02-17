@@ -18,5 +18,14 @@
     "status": "success",
     "details": "Portfolio: $74.50 deployed / $100 virtual | 3 hedged pairs + 3 singles | Weighted EV: +15.2%",
     "timestamp": "2026-02-17T07:54:42.568Z"
+  },
+  {
+    "id": "75bf57b4-15e4-4e71-8e04-aa60783ae1b1",
+    "agentId": "6b8aa528-3edd-4523-b82f-5839b73c4d7b",
+    "agentName": "Pythia",
+    "action": "Imported position: RFK NOT Rep Nominee 2028",
+    "section": "polymarket",
+    "status": "success",
+    "timestamp": "2026-02-17T07:54:43.387Z"
   }
 ]
