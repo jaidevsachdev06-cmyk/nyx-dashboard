@@ -11,5 +11,17 @@
     "targetEntry": null,
     "createdAt": "2026-02-17T07:54:39.976Z",
     "addedAt": "2026-02-17T07:54:39.976Z"
+  },
+  {
+    "id": "40467ed6-f3e6-4a44-aa85-71f3c7d73ad0",
+    "market": "Crypto markets (BTC, SOL price predictions)",
+    "notes": "Jaidev has crypto interest but focused portfolio on stocks. Watching for Polymarket crypto plays with clear edge.",
+    "tags": [
+      "crypto"
+    ],
+    "currentPrice": null,
+    "targetEntry": null,
+    "createdAt": "2026-02-17T07:54:41.290Z",
+    "addedAt": "2026-02-17T07:54:41.290Z"
   }
 ]
