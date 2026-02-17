@@ -381,5 +381,17 @@
     "notes": "Week 12 reading. Brigham Ch 16 excl 16.3a.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:35.253Z"
+  },
+  {
+    "id": "bfcc2d62-5b67-47ee-a622-ebc28a37005d",
+    "title": "AD1102 Practice Assignment 5",
+    "course": "AD1102 Financial Accounting",
+    "type": "assignment",
+    "dueDate": "2026-03-01T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "Online, multiple attempts, best score counts. 12% total for all PAs.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:37.278Z"
   }
 ]
