@@ -333,5 +333,17 @@
     "notes": "SSAS Ch 15. Final e-lecture. IGAR & IGSR references.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:27.321Z"
+  },
+  {
+    "id": "b3621da7-0fad-4fe1-82ee-417f8ce2a43c",
+    "title": "AB1201 C12: Basics of Capital Budgeting",
+    "course": "AB1201 Financial Management",
+    "type": "reading",
+    "dueDate": "2026-03-20T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "Week 9 reading. Brigham Ch 12.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:29.421Z"
   }
 ]
