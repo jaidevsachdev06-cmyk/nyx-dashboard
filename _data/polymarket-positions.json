@@ -105,5 +105,26 @@
     "pnlPercent": 0,
     "createdAt": "2026-02-17T07:12:17.403Z",
     "entryDate": "2026-02-17T07:12:17.403Z"
+  },
+  {
+    "id": "fe7fa790-c52a-4df8-86b3-8af96f618803",
+    "market": "Will NVIDIA be the largest company by market cap on February 28?",
+    "position": "Yes",
+    "entryPrice": 0.98,
+    "currentPrice": 0.98,
+    "shares": 7.14,
+    "status": "open",
+    "notes": "NVDA massive lead, 11 days. Near risk-free 2% return. Slightly negative EV though.",
+    "tags": [
+      "stocks",
+      "tech"
+    ],
+    "createdBy": "Nyx",
+    "invested": 7,
+    "currentValue": 7,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "createdAt": "2026-02-17T07:12:18.185Z",
+    "entryDate": "2026-02-17T07:12:18.185Z"
   }
 ]
