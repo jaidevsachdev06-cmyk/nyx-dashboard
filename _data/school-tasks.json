@@ -285,5 +285,17 @@
     "notes": "SSAS Ch 13. LAMS 8 due Mar 15. PA 7 due Mar 29.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:19.328Z"
+  },
+  {
+    "id": "d4d950d0-e656-4ec4-935e-cb8b912e202d",
+    "title": "AD1102 eLecture 9: Liabilities, Leases, Deferred Tax",
+    "course": "AD1102 Financial Accounting",
+    "type": "reading",
+    "dueDate": "2026-03-22T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "SSAS Ch 9 & 11. LAMS 9 due Mar 22.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:21.290Z"
   }
 ]
