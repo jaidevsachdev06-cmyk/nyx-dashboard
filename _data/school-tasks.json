@@ -249,5 +249,17 @@
     "notes": "FBAH Ch 26. QUIZ 2 this week during Tutorial 11!",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:13.089Z"
+  },
+  {
+    "id": "744869c2-e6c6-4528-84d5-50c623dfbce4",
+    "title": "AD1102 eLecture 6: Inventories & COGS",
+    "course": "AD1102 Financial Accounting",
+    "type": "reading",
+    "dueDate": "2026-02-22T23:59:00Z",
+    "priority": "high",
+    "status": "todo",
+    "notes": "SSAS Ch 8. LAMS 6 due Feb 22. Inventory costing methods, lower of cost/NRV.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:15.210Z"
   }
 ]
