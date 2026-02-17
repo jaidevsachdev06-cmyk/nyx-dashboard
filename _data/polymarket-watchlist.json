@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "328880a4-899d-4210-b762-81ed4cf0e861",
+    "market": "Will the Fed cut rates in 2026?",
+    "notes": "Jaidev interested in rate cut timing. CME FedWatch shows no near-term cut expected. Worth watching if macro shifts.",
+    "tags": [
+      "economics",
+      "fed"
+    ],
+    "currentPrice": null,
+    "targetEntry": null,
+    "createdAt": "2026-02-17T07:54:39.976Z",
+    "addedAt": "2026-02-17T07:54:39.976Z"
+  }
+]
