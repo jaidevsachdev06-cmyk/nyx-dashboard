@@ -40,5 +40,26 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-17T16:19:37.258Z"
+  },
+  {
+    "id": "f4c4a53b-d9f9-4e06-854e-305854a25b03",
+    "market": "Anthropic best AI model end of Feb",
+    "side": "YES",
+    "entryPrice": 0.696,
+    "currentPrice": 0.696,
+    "shares": 57.5,
+    "whales": "Influenz, EltonMa",
+    "whaleCount": 2,
+    "avgScore": 57.7,
+    "thesis": "Claude Opus 4 leads benchmarks. 11 days to go.",
+    "category": "consensus",
+    "endDate": "2026-02-28",
+    "createdAt": "2026-02-17T16:19:41.600Z",
+    "invested": 40.019999999999996,
+    "currentValue": 40.019999999999996,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "entryDate": "2026-02-17T16:19:41.600Z"
   }
 ]
