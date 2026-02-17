@@ -58,5 +58,17 @@
     "notes": "10 MCQ, 30 min, during Tutorial 6. Covers Lectures 1-6 (micro). Week 7.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:31:57.001Z"
+  },
+  {
+    "id": "603c6264-90c7-4a79-85e3-14c962557e60",
+    "title": "HE5091 Quiz 2 (Lectures 7-10)",
+    "course": "HE5091 Principles of Economics",
+    "type": "exam",
+    "dueDate": "2026-04-10T15:00:00Z",
+    "priority": "high",
+    "status": "todo",
+    "notes": "10 MCQ, 30 min, during Tutorial 11. Covers Lectures 7-10 (macro). Week 13.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:31:58.849Z"
   }
 ]
