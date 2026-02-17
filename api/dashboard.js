@@ -6,12 +6,13 @@ module.exports = async (req, res) => {
   if (!checkAuth(req)) return res.status(401).json({ error: 'Unauthorized' });
 
   try {
-    const [agents, activity, schoolTasks, polyPositions, tradingPositions] = await Promise.all([
+    const [agents, activity, schoolTasks, polyPositions, tradingPositions, weatherTrades] = await Promise.all([
       readFile('_data/agents.json').catch(() => ({ data: [] })),
       readFile('_data/activity.json').catch(() => ({ data: [] })),
       readFile('_data/school-tasks.json').catch(() => ({ data: [] })),
       readFile('_data/polymarket-positions.json').catch(() => ({ data: [] })),
-      readFile('_data/trading-positions.json').catch(() => ({ data: [] }))
+      readFile('_data/trading-positions.json').catch(() => ({ data: [] })),
+      readFile('_data/weather-trades.json').catch(() => ({ data: [] }))
     ]);
 
     const now = new Date();
@@ -38,6 +39,11 @@ module.exports = async (req, res) => {
     const openTrades = tradeData.filter(t => t.status === 'open');
     const totalTradePnl = openTrades.reduce((s, t) => s + (t.pnl || 0), 0);
 
+    // Weather summary
+    const weatherData = weatherTrades.data || [];
+    const openWeather = weatherData.filter(w => w.status === 'open');
+    const totalWeatherExposure = openWeather.reduce((s, w) => s + ((w.entryPrice || 0) * (w.shares || 0)), 0);
+
     // Recent activity
     const recentActivity = (activity.data || [])
       .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
@@ -48,6 +54,7 @@ module.exports = async (req, res) => {
       school: { pendingTasks, overdueTasks: overdueTasks.length, nextDeadline },
       polymarket: { openPositions: openPoly.length, totalExposure: totalPolyExposure },
       trading: { openPositions: openTrades.length, dailyPnl: totalTradePnl },
+      weather: { openPositions: openWeather.length, totalExposure: totalWeatherExposure },
       activity: recentActivity
     });
   } catch (e) {

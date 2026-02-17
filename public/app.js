@@ -312,10 +312,76 @@ async function loadPolymarket() {
       <td class="mono">${fmtMoney(w.targetEntry)}</td><td>${w.notes || ''}</td>
       <td><button class="btn btn-sm" onclick="deletePolyWatch('${w.id}')" style="color:var(--red)">✕</button></td>
     </tr>`).join('') || '<tr><td colspan="5" style="color:var(--text-dim)">Watchlist empty</td></tr>';
+    loadWeatherTrades();
   } catch (e) { console.error(e); }
 }
 async function editPolyPosition(id) { const p = await get(`/api/polymarket?type=positions&id=${id}`); showModal('poly-position', p); }
 async function deletePolyWatch(id) { await del(`/api/polymarket?type=watchlist&id=${id}`); loadPolymarket(); }
+
+// ========== WEATHER TRADES ==========
+async function loadWeatherTrades() {
+  try {
+    const trades = await get('/api/weather');
+    const open = trades.filter(t => t.status === 'open');
+    const closed = trades.filter(t => t.status !== 'open');
+    const totalPnl = open.reduce((s, t) => s + (t.pnl || 0), 0);
+    const wins = closed.filter(t => t.status === 'closed-win').length;
+    const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
+
+    document.getElementById('weather-summary').innerHTML = `
+      <div class="summary-card"><div class="label">Weather Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card"><div class="label">Weather P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
+    `;
+    document.querySelector('#weather-open-table tbody').innerHTML = open.map(t => `<tr>
+      <td>${t.city || ''}</td>
+      <td style="max-width:200px">${t.market || ''}</td>
+      <td>${t.side || ''}</td>
+      <td class="mono">${fmtMoney(t.entryPrice)}</td>
+      <td class="mono">${fmtMoney(t.currentPrice)}</td>
+      <td class="mono">${t.noaaForecast || '—'}</td>
+      <td class="mono">${t.shares || ''}</td>
+      <td class="mono ${pnlClass(t.pnl)}">${fmtMoney(t.pnl)}</td>
+      <td><button class="btn btn-sm" onclick="editWeatherTrade('${t.id}')">Edit</button></td>
+    </tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim)">No open weather positions</td></tr>';
+  } catch (e) { console.error('Weather load error:', e); }
+}
+
+async function editWeatherTrade(id) {
+  const t = await get(`/api/weather?id=${id}`);
+  showModal('weather-trade', t);
+}
+
+async function scanWeatherMarkets() {
+  try {
+    const tbody = document.querySelector('#weather-scan-table tbody');
+    tbody.innerHTML = '<tr><td colspan="6" style="color:var(--text-dim)">Scanning...</td></tr>';
+    const data = await get('/api/weather?type=scan');
+    const markets = data.markets || data.data || data || [];
+    if (!Array.isArray(markets) || !markets.length) {
+      tbody.innerHTML = '<tr><td colspan="6" style="color:var(--text-dim)">No weather markets found</td></tr>';
+      return;
+    }
+    tbody.innerHTML = markets.map(m => `<tr>
+      <td style="max-width:250px">${m.question || m.title || m.name || ''}</td>
+      <td class="mono">${m.last_price != null ? fmtMoney(m.last_price) : (m.price != null ? fmtMoney(m.price) : '—')}</td>
+      <td class="mono">—</td>
+      <td>${m.end_date ? fmtDate(m.end_date) : (m.resolution_date ? fmtDate(m.resolution_date) : '—')}</td>
+      <td class="mono">${m.volume_24h != null ? fmtMoney(m.volume_24h) : '—'}</td>
+      <td><button class="btn btn-sm btn-primary" onclick='prefillWeatherTrade(${JSON.stringify(m).replace(/'/g,"&#39;")})'>Trade</button></td>
+    </tr>`).join('');
+  } catch (e) { console.error('Scan error:', e); }
+}
+
+function prefillWeatherTrade(m) {
+  showModal('weather-trade', {
+    market: m.question || m.title || m.name || '',
+    marketId: m.id || m.market_id || '',
+    marketUrl: m.url || '',
+    side: 'yes',
+    entryPrice: m.last_price || m.price || null,
+  });
+}
 
 // ========== TRADING ==========
 async function loadTrading() {
@@ -477,6 +543,29 @@ function showModal(type, existing = null) {
         if (data.status !== 'open') data.exitPrice = data.currentPrice;
         isEdit ? await put(`/api/trading?type=positions&id=${existing.id}`, data) : await post('/api/trading?type=positions', data);
         loadTrading();
+      };
+      break;
+    case 'weather-trade':
+      title = isEdit ? 'Edit Weather Trade' : 'Add Weather Trade';
+      fields = `
+        <label>City</label><select id="m-city"><option value="">Select...</option><option value="NYC" ${existing?.city==='NYC'?'selected':''}>NYC</option><option value="Chicago" ${existing?.city==='Chicago'?'selected':''}>Chicago</option><option value="Seattle" ${existing?.city==='Seattle'?'selected':''}>Seattle</option><option value="Atlanta" ${existing?.city==='Atlanta'?'selected':''}>Atlanta</option><option value="Dallas" ${existing?.city==='Dallas'?'selected':''}>Dallas</option><option value="Miami" ${existing?.city==='Miami'?'selected':''}>Miami</option></select>
+        <label>Market</label><input id="m-market" value="${existing?.market || ''}">
+        <label>Market ID</label><input id="m-marketid" value="${existing?.marketId || ''}">
+        <label>Market URL</label><input id="m-url" value="${existing?.marketUrl || ''}">
+        <label>Side</label><select id="m-side"><option value="yes" ${existing?.side==='yes'?'selected':''}>Yes</option><option value="no" ${existing?.side==='no'?'selected':''}>No</option></select>
+        <label>Bucket (temp range)</label><input id="m-bucket" value="${existing?.bucket || ''}" placeholder="e.g. 30-35°F">
+        <label>Entry Price</label><input type="number" step="0.01" id="m-entry" value="${existing?.entryPrice || ''}">
+        <label>Shares</label><input type="number" id="m-shares" value="${existing?.shares || ''}">
+        <label>Status</label><select id="m-status"><option value="open">Open</option><option value="closed-win" ${existing?.status==='closed-win'?'selected':''}>Closed (Win)</option><option value="closed-loss" ${existing?.status==='closed-loss'?'selected':''}>Closed (Loss)</option></select>
+        <label>Reasoning</label><textarea id="m-reasoning">${existing?.reasoning || ''}</textarea>
+      `;
+      onSubmit = async () => {
+        const data = { city: v('m-city'), market: v('m-market'), marketId: v('m-marketid'), marketUrl: v('m-url'), side: v('m-side'), bucket: v('m-bucket'), entryPrice: parseFloat(v('m-entry')) || 0, shares: parseFloat(v('m-shares')) || 0, status: v('m-status'), reasoning: v('m-reasoning'), source: 'manual' };
+        data.currentPrice = data.entryPrice;
+        data.pnl = 0;
+        data.pnlPercent = 0;
+        isEdit ? await put(`/api/weather?id=${existing.id}`, data) : await post('/api/weather', data);
+        loadPolymarket();
       };
       break;
     case 'activity':
