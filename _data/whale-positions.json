@@ -210,26 +210,6 @@
     "entryDate": "2026-02-17T16:20:09.686Z"
   },
   {
-    "id": "773fac70-6579-4bb2-90c5-920aeef348bf",
-    "market": "JD Vance wins 2028 GOP nomination",
-    "side": "YES",
-    "entryPrice": 0.463,
-    "currentPrice": 0.463,
-    "shares": 75.6,
-    "whales": "PredictaDamus, XPredicter1",
-    "whaleCount": 2,
-    "avgScore": 58.9,
-    "category": "consensus",
-    "endDate": "2028-11-07",
-    "createdAt": "2026-02-17T16:21:08.642Z",
-    "invested": 35.0028,
-    "currentValue": 35.0028,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-17T16:21:08.642Z"
-  },
-  {
     "id": "d184ecfe-0ffc-461d-9285-9e9592443ded",
     "market": "Bitcoin NOT dip to $60k in Feb",
     "side": "NO",
