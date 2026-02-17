@@ -70,7 +70,29 @@
       "activity"
     ],
     "lastActive": "2026-02-17T08:29:50Z",
-    "createdAt": "2026-02-17T08:29:50.966Z"
+    "createdAt": "2026-02-17T08:29:50.966Z",
+    "files": [
+      {
+        "name": "SOUL.md",
+        "desc": "Identity and personality"
+      },
+      {
+        "name": "MEMORY.md",
+        "desc": "Long-term curated memory"
+      },
+      {
+        "name": "USER.md",
+        "desc": "Jaidev's profile, preferences, schedule"
+      },
+      {
+        "name": "HEARTBEAT.md",
+        "desc": "Periodic check-in tasks"
+      },
+      {
+        "name": "TOOLS.md",
+        "desc": "API keys and local config"
+      }
+    ]
   },
   {
     "id": "e8857789-6d61-4920-9af5-c30a6addbe06",
