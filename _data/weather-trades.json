@@ -60,9 +60,9 @@
     "side": "yes",
     "bucket": "44-45°F",
     "entryPrice": 0.075,
-    "currentPrice": 0.143,
+    "currentPrice": 0.139,
     "shares": 107.6,
-    "status": "open",
+    "status": "closed-loss",
     "noaaForecast": "45-46°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly shows NYC peaking at 45-46°F. Market has 40-41 as favorite but NWS says higher.",
@@ -74,7 +74,8 @@
       "paper-trade",
       "nyc"
     ],
-    "createdAt": "2026-02-17T08:28:56.352Z"
+    "createdAt": "2026-02-17T08:28:56.352Z",
+    "updatedAt": "2026-02-17T14:07:01.770Z"
   },
   {
     "id": "8037bd1f-9d5c-4065-ba07-7ac37c3020c8",
