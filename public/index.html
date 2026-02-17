@@ -56,12 +56,20 @@
         <!-- Agents Section -->
         <div class="section" id="sec-agents">
           <div class="section-header">
-            <div><h1>The Office</h1><div class="subtitle">Sub-agent management</div></div>
+            <div><h1>🏢 The Office</h1><div class="subtitle">Sub-agent management</div></div>
             <button class="btn btn-primary" onclick="showModal('agent')">+ Add Agent</button>
           </div>
-          <div class="card-grid" id="agents-grid"></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">All Activity</h2>
-          <div class="activity-feed" id="agents-activity"></div>
+          <!-- Office Floor -->
+          <div class="office-wrapper">
+            <div class="office-floor" id="office-floor"></div>
+            <div class="office-activity">
+              <div class="office-activity-header">📋 Activity Log</div>
+              <div class="activity-feed" id="agents-activity-side"></div>
+            </div>
+          </div>
+          <!-- Agent Breakdown -->
+          <h2 style="font-size:16px;margin:28px 0 14px;display:flex;align-items:center;gap:8px">🔍 Agent Breakdown</h2>
+          <div class="agent-breakdown" id="agents-breakdown"></div>
         </div>
 
         <!-- School Section -->

@@ -124,29 +124,98 @@ async function loadDashboard() {
 async function loadAgents() {
   try {
     const [agents, activity] = await Promise.all([get('/api/agents'), get('/api/activity')]);
-    document.getElementById('agents-grid').innerHTML = agents.map(a => `
-      <div class="agent-card">
-        <div class="agent-avatar">${a.avatar || '🤖'}</div>
-        <div class="agent-name">${statusDot(a.status || 'offline')} ${a.name}</div>
-        <div class="agent-role">${a.role || ''}</div>
-        <div class="agent-task">${a.currentTask || 'No active task'}</div>
-        <div style="font-size:11px;color:var(--text-dim);margin-top:6px">Last active: ${timeAgo(a.lastActive)}</div>
-        <div class="agent-tools">${(a.tools || []).map(t => `<span class="tool-tag">${t}</span>`).join('')}</div>
-        <div style="margin-top:10px;display:flex;gap:6px">
-          <button class="btn btn-sm" onclick="editAgent('${a.id}')">Edit</button>
-          <button class="btn btn-sm" onclick="deleteAgent('${a.id}')" style="color:var(--red)">Delete</button>
+
+    // Office floor - agent figures
+    document.getElementById('office-floor').innerHTML = agents.map(a => {
+      const s = a.status || 'offline';
+      const statusLabel = s === 'online' ? '● Working' : s === 'idle' ? '● Idle' : s === 'error' ? '● Error' : '● Offline';
+      return `
+        <div class="agent-figure">
+          <div class="agent-figure-body">
+            <div class="agent-figure-pixel ${s === 'online' ? 'working' : ''}">${a.avatar || '🤖'}</div>
+          </div>
+          <div class="agent-figure-card">
+            <div class="agent-figure-name">${a.avatar || ''} ${a.name}</div>
+            <div class="agent-figure-role">${a.role || ''}</div>
+            <div class="agent-figure-status ${s}">${statusLabel}</div>
+          </div>
         </div>
-      </div>
-    `).join('') || '<div style="color:var(--text-dim)">No agents registered yet. Add your first agent!</div>';
-    document.getElementById('agents-activity').innerHTML = activity.map(a => `
+      `;
+    }).join('') || '<div style="color:var(--text-dim);font-size:13px;padding:40px">No agents yet. Add your first agent!</div>';
+
+    // Side activity feed
+    document.getElementById('agents-activity-side').innerHTML = activity.slice(0, 20).map(a => `
       <div class="activity-item">
         <div class="activity-dot ${a.status || 'success'}"></div>
         <div class="activity-content">
           <div class="activity-action"><span class="activity-agent">${a.agentName || 'System'}</span> ${a.action}</div>
-          <div class="activity-meta"><span>${timeAgo(a.timestamp)}</span>${a.section ? sectionBadge(a.section) : ''}</div>
+          <div class="activity-meta"><span>${timeAgo(a.timestamp)}</span></div>
         </div>
       </div>
-    `).join('') || '<div style="color:var(--text-dim);padding:20px">No activity yet</div>';
+    `).join('') || '<div style="color:var(--text-dim);padding:16px;font-size:12px">No activity yet</div>';
+
+    // Agent breakdown cards
+    document.getElementById('agents-breakdown').innerHTML = agents.map(a => {
+      const s = a.status || 'offline';
+      const capabilities = (a.tools || []);
+      const accessSections = (a.accessList || []);
+      const integrations = (a.integrations || []);
+      const files = (a.files || []);
+      const model = a.model || '';
+      const description = a.description || a.role || '';
+
+      return `
+        <div class="breakdown-card">
+          <div class="breakdown-header">
+            <div class="breakdown-header-left">
+              <span class="avatar">${a.avatar || '🤖'}</span>
+              <div>
+                <div class="name">${a.name}</div>
+                <div class="role">${a.role || ''}</div>
+              </div>
+            </div>
+            ${model ? `<span class="breakdown-model">${model}</span>` : ''}
+          </div>
+          ${description && description !== a.role ? `<div class="breakdown-desc">${description}</div>` : ''}
+          ${capabilities.length ? `
+            <div class="breakdown-section">
+              <div class="breakdown-section-title">⚡ Capabilities</div>
+              <div class="breakdown-tags">${capabilities.map(t => `<span class="breakdown-tag">${t}</span>`).join('')}</div>
+            </div>
+          ` : ''}
+          ${accessSections.length ? `
+            <div class="breakdown-section">
+              <div class="breakdown-section-title">🔑 Access</div>
+              <div class="breakdown-tags">${accessSections.map(t => `<span class="breakdown-tag blue">${t}</span>`).join('')}</div>
+            </div>
+          ` : ''}
+          ${integrations.length ? `
+            <div class="breakdown-section">
+              <div class="breakdown-section-title">⚙️ Integrations</div>
+              <div class="breakdown-tags">${integrations.map(t => `<span class="breakdown-tag green">${t}</span>`).join('')}</div>
+            </div>
+          ` : ''}
+          ${files.length ? `
+            <div class="breakdown-section">
+              <div class="breakdown-section-title">📁 Special Files & References</div>
+              ${files.map(f => `
+                <div class="breakdown-file">
+                  <span class="breakdown-file-icon">📄</span>
+                  <div>
+                    <div class="breakdown-file-name">${f.name || ''}</div>
+                    <div class="breakdown-file-desc">${f.desc || ''}</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+          <div class="breakdown-actions">
+            <button class="btn btn-sm" onclick="editAgent('${a.id}')">Edit</button>
+            <button class="btn btn-sm" onclick="deleteAgent('${a.id}')" style="color:var(--red)">Delete</button>
+          </div>
+        </div>
+      `;
+    }).join('') || '';
   } catch (e) { console.error(e); }
 }
 async function deleteAgent(id) { if (confirm('Delete this agent?')) { await del(`/api/agents?id=${id}`); loadAgents(); } }
