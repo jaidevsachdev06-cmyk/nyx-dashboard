@@ -321,5 +321,17 @@
     "notes": "SSAS Ch 14. LAMS 11 due Apr 5.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:25.256Z"
+  },
+  {
+    "id": "d6dd9a97-c06d-4600-8c67-1cb3cf90bdc2",
+    "title": "AD1102 eLecture 12: Financial Statement Analysis",
+    "course": "AD1102 Financial Accounting",
+    "type": "reading",
+    "dueDate": "2026-04-12T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "SSAS Ch 15. Final e-lecture. IGAR & IGSR references.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:27.321Z"
   }
 ]
