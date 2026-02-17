@@ -94,5 +94,17 @@
     "notes": "45% of grade. Online via NTULearn. Date TBD.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:32:03.972Z"
+  },
+  {
+    "id": "198646bd-7b1d-4a1e-a270-906ae008904d",
+    "title": "HE5091 Final Exam",
+    "course": "HE5091 Principles of Economics",
+    "type": "exam",
+    "dueDate": null,
+    "priority": "critical",
+    "status": "todo",
+    "notes": "60% of grade. Date TBD.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:32:05.849Z"
   }
 ]
