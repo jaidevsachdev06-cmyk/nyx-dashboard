@@ -177,5 +177,36 @@
         "desc": "nyx-ai@agentmail.to — incoming emails"
       }
     ]
+  },
+  {
+    "id": "f3566b1f-3c8f-42e6-9e8a-bf644553a82d",
+    "name": "Copycat",
+    "avatar": "🐋",
+    "role": "Oracle's subagent — mirrors positions from top Polymarket whale wallets using Simmer SDK. Size-weighted aggregation, conflict detection, auto-rebalancing.",
+    "description": "Subagent of Oracle 🔮. Tracks and copies high-performing whale traders on Polymarket via paper trading.",
+    "status": "idle",
+    "currentTask": "Awaiting whale wallet configuration",
+    "tools": [
+      "Simmer Markets",
+      "Polymarket Data API",
+      "Predicting.top",
+      "AlphaWhale"
+    ],
+    "accessList": [
+      "polymarket",
+      "activity"
+    ],
+    "files": [
+      {
+        "name": "polymarket-copytrading/",
+        "desc": "Copytrading skill with trader script"
+      },
+      {
+        "name": "config.json",
+        "desc": "Target wallets and position sizing config"
+      }
+    ],
+    "lastActive": "2026-02-17T10:35:34Z",
+    "createdAt": "2026-02-17T10:35:34.420Z"
   }
 ]
