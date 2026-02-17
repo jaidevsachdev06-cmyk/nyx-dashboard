@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": "c7c46004-fcee-40cb-9168-c08423ac5930",
+    "market": "Will RFK Jr. win the 2028 Republican presidential nomination?",
+    "position": "No",
+    "entryPrice": 0.51,
+    "currentPrice": 0.51,
+    "shares": 19.61,
+    "status": "open",
+    "notes": "RFK at 49% is absurd. Party-switcher, no institutional GOP support. Biggest edge.",
+    "tags": [
+      "politics",
+      "2028",
+      "hedge-A"
+    ],
+    "createdBy": "Nyx",
+    "invested": 10,
+    "currentValue": 10,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "createdAt": "2026-02-17T07:12:12.676Z",
+    "entryDate": "2026-02-17T07:12:12.676Z"
+  }
+]
