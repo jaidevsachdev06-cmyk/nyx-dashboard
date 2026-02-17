@@ -1,704 +1,446 @@
-// Nyx Mission Control - Frontend
-let TOKEN = sessionStorage.getItem('nyx_token');
-let currentSection = 'home';
+// ========== CONFIG ==========
+const API = '';
+let TOKEN = sessionStorage.getItem('nyx-token') || '';
 
-// API helper
-async function api(endpoint, method = 'GET', body = null) {
-  const opts = { method, headers: { 'Content-Type': 'application/json' } };
-  if (TOKEN) opts.headers['Authorization'] = `Bearer ${TOKEN}`;
-  if (body) opts.body = JSON.stringify(body);
-  const res = await fetch(`/api/${endpoint}`, opts);
-  if (res.status === 401) { doLogout(); throw new Error('Unauthorized'); }
+// ========== API HELPERS ==========
+async function api(path, opts = {}) {
+  const res = await fetch(API + path, {
+    ...opts,
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${TOKEN}`, ...opts.headers }
+  });
+  if (res.status === 401) { logout(); throw new Error('Unauthorized'); }
   return res.json();
 }
+const get = (p) => api(p);
+const post = (p, d) => api(p, { method: 'POST', body: JSON.stringify(d) });
+const put = (p, d) => api(p, { method: 'PUT', body: JSON.stringify(d) });
+const del = (p) => api(p, { method: 'DELETE' });
 
-// Auth
-async function doLogin() {
+// ========== AUTH ==========
+function checkAuth() {
+  if (TOKEN) { document.getElementById('login-screen').style.display = 'none'; document.getElementById('app').style.display = 'block'; loadCurrentSection(); }
+}
+function logout() { TOKEN = ''; sessionStorage.removeItem('nyx-token'); location.reload(); }
+document.getElementById('login-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
   const pw = document.getElementById('login-password').value;
   try {
-    const res = await api('auth', 'POST', { password: pw });
-    if (res.token) {
-      TOKEN = res.token;
-      sessionStorage.setItem('nyx_token', TOKEN);
-      document.getElementById('login-screen').style.display = 'none';
-      document.getElementById('dashboard').style.display = 'flex';
-      navigate('home');
-    }
-  } catch (e) {
-    document.getElementById('login-error').textContent = 'Invalid password';
+    const r = await fetch(API + '/api/auth', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pw }) });
+    const d = await r.json();
+    if (d.token) { TOKEN = d.token; sessionStorage.setItem('nyx-token', TOKEN); checkAuth(); }
+    else { document.getElementById('login-error').textContent = 'Wrong password'; }
+  } catch (e) { document.getElementById('login-error').textContent = 'Connection error'; }
+});
+
+// ========== NAVIGATION ==========
+let currentSection = 'dashboard';
+document.querySelectorAll('.sidebar a').forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const sec = a.dataset.section;
+    switchSection(sec);
+    document.getElementById('sidebar').classList.remove('open');
+  });
+});
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.toggle('open');
+});
+
+function switchSection(sec) {
+  currentSection = sec;
+  document.querySelectorAll('.sidebar a').forEach(a => a.classList.toggle('active', a.dataset.section === sec));
+  document.querySelectorAll('.section').forEach(s => s.classList.toggle('active', s.id === `sec-${sec}`));
+  window.location.hash = sec;
+  loadCurrentSection();
+}
+
+function loadCurrentSection() {
+  switch(currentSection) {
+    case 'dashboard': loadDashboard(); break;
+    case 'agents': loadAgents(); break;
+    case 'school': loadSchool(); break;
+    case 'polymarket': loadPolymarket(); break;
+    case 'trading': loadTrading(); break;
   }
 }
-document.getElementById('login-password')?.addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
 
-function doLogout() {
-  TOKEN = null;
-  sessionStorage.removeItem('nyx_token');
-  document.getElementById('login-screen').style.display = 'flex';
-  document.getElementById('dashboard').style.display = 'none';
+// ========== HELPERS ==========
+function timeAgo(ts) {
+  if (!ts) return '—';
+  const diff = Date.now() - new Date(ts).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  const days = Math.floor(hrs / 24);
+  return `${days}d ago`;
 }
-
-// Check existing session
-if (TOKEN) {
-  document.getElementById('login-screen').style.display = 'none';
-  document.getElementById('dashboard').style.display = 'flex';
-  navigate('home');
+function fmtDate(ts) {
+  if (!ts) return '—';
+  return new Date(ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 }
+function fmtMoney(n) { return n != null ? `$${n.toFixed(2)}` : '—'; }
+function fmtPct(n) { return n != null ? `${n >= 0 ? '+' : ''}${n.toFixed(2)}%` : '—'; }
+function pnlClass(n) { return n > 0 ? 'pnl-pos' : n < 0 ? 'pnl-neg' : ''; }
+function statusDot(s) { return `<span class="status-dot status-${s}"></span>`; }
+function sectionBadge(s) { return `<span class="section-badge ${s}">${s}</span>`; }
+function priorityBadge(p) { return `<span class="badge badge-${p || 'low'}">${p || 'low'}</span>`; }
 
-// Navigation
-function navigate(section) {
-  currentSection = section;
-  document.querySelectorAll('#sidebar li').forEach(li => li.classList.toggle('active', li.dataset.section === section));
-  const titles = { home: 'Mission Control', agents: 'The Office', school: 'School', polymarket: 'Polymarket', trading: 'Swing Trading' };
-  document.getElementById('page-title').textContent = titles[section] || section;
-  const content = document.getElementById('content');
-  content.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
-  const renderers = { home: renderHome, agents: renderAgents, school: renderSchool, polymarket: renderPolymarket, trading: renderTrading };
-  (renderers[section] || renderHome)();
-  // Close sidebar on mobile
-  document.getElementById('sidebar').classList.remove('open');
-}
-
-function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
-function refreshCurrentSection() { navigate(currentSection); }
-
-// Modal
-function openModal(title, bodyHtml) {
-  document.getElementById('modal-title').textContent = title;
-  document.getElementById('modal-body').innerHTML = bodyHtml;
-  document.getElementById('modal-overlay').style.display = 'flex';
-}
-function closeModal() { document.getElementById('modal-overlay').style.display = 'none'; }
-
-// Helpers
-function timeAgo(iso) {
-  if (!iso) return '—';
-  const s = Math.floor((Date.now() - new Date(iso)) / 1000);
-  if (s < 60) return 'just now';
-  if (s < 3600) return Math.floor(s/60) + 'm ago';
-  if (s < 86400) return Math.floor(s/3600) + 'h ago';
-  return Math.floor(s/86400) + 'd ago';
-}
-function fmtDate(iso) { return iso ? new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—'; }
-function fmtMoney(n) { return n != null ? '$' + parseFloat(n).toFixed(2) : '—'; }
-function fmtPct(n) { return n != null ? (n >= 0 ? '+' : '') + parseFloat(n).toFixed(2) + '%' : '—'; }
-function pnlClass(n) { return parseFloat(n) >= 0 ? 'pnl-positive' : 'pnl-negative'; }
-function statusClass(s) { return `status-${s || 'offline'}`; }
-function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
-
-// ============ HOME ============
-async function renderHome() {
+// ========== DASHBOARD ==========
+async function loadDashboard() {
   try {
-    const data = await api('dashboard');
-    const c = document.getElementById('content');
-    c.innerHTML = `<div class="fade-in">
-      <div class="summary-cards">
-        <div class="summary-card"><div class="icon">📚</div><h4>School</h4><div class="value">${data.school.pendingCount} pending</div><div class="sub">${data.school.nextDeadline ? 'Next: ' + esc(data.school.nextDeadline.title) + ' (' + fmtDate(data.school.nextDeadline.dueDate) + ')' : 'No deadlines'}</div></div>
-        <div class="summary-card"><div class="icon">📊</div><h4>Polymarket</h4><div class="value">${data.polymarket.activePositions} positions</div><div class="sub">Exposure: ${fmtMoney(data.polymarket.totalExposure)}</div></div>
-        <div class="summary-card"><div class="icon">📈</div><h4>Trading</h4><div class="value">${data.trading.openPositions} open</div><div class="sub">P&L: <span class="${pnlClass(data.trading.dailyPnl)}">${fmtMoney(data.trading.dailyPnl)}</span></div></div>
-        <div class="summary-card"><div class="icon">🤖</div><h4>Agents</h4><div class="value">${data.agents.online}/${data.agents.total} online</div><div class="sub">${data.agents.total} registered</div></div>
+    const d = await get('/api/dashboard');
+    // Summary cards
+    document.getElementById('dash-summary').innerHTML = `
+      <div class="summary-card"><div class="label">Agents</div><div class="value">${d.agents.online}/${d.agents.total}</div><div class="detail">online</div></div>
+      <div class="summary-card"><div class="label">School</div><div class="value">${d.school.pendingTasks}</div><div class="detail">pending tasks${d.school.overdueTasks ? ` · <span style="color:var(--red)">${d.school.overdueTasks} overdue</span>` : ''}</div></div>
+      <div class="summary-card"><div class="label">Polymarket</div><div class="value">${d.polymarket.openPositions}</div><div class="detail">${fmtMoney(d.polymarket.totalExposure)} exposure</div></div>
+      <div class="summary-card"><div class="label">Trading</div><div class="value">${d.trading.openPositions}</div><div class="detail">P&L: <span class="${pnlClass(d.trading.dailyPnl)}">${fmtMoney(d.trading.dailyPnl)}</span></div></div>
+    `;
+    // Activity
+    document.getElementById('dash-activity').innerHTML = (d.activity || []).map(a => `
+      <div class="activity-item">
+        <div class="activity-dot ${a.status || 'success'}"></div>
+        <div class="activity-content">
+          <div class="activity-action"><span class="activity-agent">${a.agentName || 'System'}</span> ${a.action}</div>
+          <div class="activity-meta"><span>${timeAgo(a.timestamp)}</span>${a.section ? sectionBadge(a.section) : ''}</div>
+        </div>
       </div>
-      <div class="actions-bar">
-        <button class="btn btn-primary" onclick="navigate('school');setTimeout(()=>openAddTask(),300)">+ Add Task</button>
-        <button class="btn btn-ghost" onclick="openLogActivity()">📝 Log Activity</button>
-        <button class="btn btn-ghost" onclick="refreshCurrentSection()">🔄 Refresh</button>
+    `).join('') || '<div style="color:var(--text-dim);padding:20px">No activity yet</div>';
+    // Agents
+    document.getElementById('dash-agents').innerHTML = (d.agents.list || []).map(a => `
+      <div class="agent-card" onclick="switchSection('agents')">
+        <div class="agent-avatar">${a.avatar || '🤖'}</div>
+        <div class="agent-name">${statusDot(a.status || 'offline')} ${a.name}</div>
+        <div class="agent-role">${a.role || ''}</div>
+        <div class="agent-task">${a.currentTask || 'No active task'}</div>
       </div>
-      ${data.agents.list.length ? `<div class="section-header"><h3>Agents</h3></div><div class="cards-grid">${data.agents.list.map(a => `
-        <div class="agent-card" onclick="navigate('agents')">
-          <div class="agent-avatar">${a.avatar || '🤖'}</div>
-          <div class="agent-name">${esc(a.name)}</div>
-          <div class="agent-role">${esc(a.currentTask || a.role || '')}</div>
-          <div class="agent-status ${statusClass(a.status)}"><span class="status-dot"></span>${a.status || 'offline'}</div>
-        </div>`).join('')}</div>` : ''}
-      <div class="section-header" style="margin-top:1.5rem"><h3>Recent Activity</h3></div>
-      <div class="feed">
-        ${data.activity.length ? data.activity.slice(0,30).map(a => `
-          <div class="feed-item">
-            <div class="feed-dot ${a.status || 'success'}"></div>
-            <div class="feed-body">
-              <div class="feed-action"><strong>${esc(a.agentName || 'System')}</strong> ${esc(a.action)}</div>
-              <div class="feed-meta">${esc(a.section || '')} · ${timeAgo(a.timestamp)}${a.details ? ' · ' + esc(a.details) : ''}</div>
+    `).join('') || '<div style="color:var(--text-dim)">No agents registered</div>';
+  } catch (e) { console.error('Dashboard load error:', e); }
+}
+
+// ========== AGENTS ==========
+async function loadAgents() {
+  try {
+    const [agents, activity] = await Promise.all([get('/api/agents'), get('/api/activity')]);
+    document.getElementById('agents-grid').innerHTML = agents.map(a => `
+      <div class="agent-card">
+        <div class="agent-avatar">${a.avatar || '🤖'}</div>
+        <div class="agent-name">${statusDot(a.status || 'offline')} ${a.name}</div>
+        <div class="agent-role">${a.role || ''}</div>
+        <div class="agent-task">${a.currentTask || 'No active task'}</div>
+        <div style="font-size:11px;color:var(--text-dim);margin-top:6px">Last active: ${timeAgo(a.lastActive)}</div>
+        <div class="agent-tools">${(a.tools || []).map(t => `<span class="tool-tag">${t}</span>`).join('')}</div>
+        <div style="margin-top:10px;display:flex;gap:6px">
+          <button class="btn btn-sm" onclick="editAgent('${a.id}')">Edit</button>
+          <button class="btn btn-sm" onclick="deleteAgent('${a.id}')" style="color:var(--red)">Delete</button>
+        </div>
+      </div>
+    `).join('') || '<div style="color:var(--text-dim)">No agents registered yet. Add your first agent!</div>';
+    document.getElementById('agents-activity').innerHTML = activity.map(a => `
+      <div class="activity-item">
+        <div class="activity-dot ${a.status || 'success'}"></div>
+        <div class="activity-content">
+          <div class="activity-action"><span class="activity-agent">${a.agentName || 'System'}</span> ${a.action}</div>
+          <div class="activity-meta"><span>${timeAgo(a.timestamp)}</span>${a.section ? sectionBadge(a.section) : ''}</div>
+        </div>
+      </div>
+    `).join('') || '<div style="color:var(--text-dim);padding:20px">No activity yet</div>';
+  } catch (e) { console.error(e); }
+}
+async function deleteAgent(id) { if (confirm('Delete this agent?')) { await del(`/api/agents?id=${id}`); loadAgents(); } }
+async function editAgent(id) {
+  const agent = await get(`/api/agents?id=${id}`);
+  showModal('agent', agent);
+}
+
+// ========== SCHOOL ==========
+async function loadSchool() {
+  try {
+    const [tasks, schedule] = await Promise.all([get('/api/school?type=tasks'), get('/api/school?type=schedule')]);
+    const cols = { todo: [], 'in-progress': [], done: [], overdue: [] };
+    tasks.forEach(t => { const s = t.status || 'todo'; if (cols[s]) cols[s].push(t); else cols.todo.push(t); });
+    const renderCol = (title, items, color) => `
+      <div class="kanban-col">
+        <h3>${title} <span class="count">${items.length}</span></h3>
+        ${items.map(t => `
+          <div class="task-card ${t.status === 'overdue' ? 'overdue' : t.priority === 'high' || t.priority === 'critical' ? 'high' : ''}" onclick="editTask('${t.id}')">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+              <div class="task-title">${t.title}</div>
+              ${priorityBadge(t.priority)}
             </div>
-          </div>`).join('') : '<div class="empty-state"><p>No activity yet</p></div>'}
+            <div class="task-course">${t.course || ''}</div>
+            <div class="task-due">${t.dueDate ? fmtDate(t.dueDate) : 'No due date'}</div>
+          </div>
+        `).join('')}
       </div>
-    </div>`;
-  } catch (e) { document.getElementById('content').innerHTML = `<div class="empty-state"><div class="icon">⚠️</div><p>${esc(e.message)}</p></div>`; }
+    `;
+    document.getElementById('school-kanban').innerHTML =
+      renderCol('Overdue 🔴', cols.overdue) + renderCol('To Do', cols.todo) + renderCol('In Progress', cols['in-progress']) + renderCol('Done ✓', cols.done);
+
+    // Schedule
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    const times = ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00'];
+    let html = '<div class="schedule-grid"><div class="schedule-header"></div>';
+    days.forEach(d => { html += `<div class="schedule-header">${d.slice(0,3)}</div>`; });
+    times.forEach(time => {
+      html += `<div class="schedule-cell schedule-time">${time}</div>`;
+      days.forEach(day => {
+        const events = schedule.filter(s => s.day === day && s.startTime === time);
+        html += `<div class="schedule-cell">${events.map(e => `<div class="schedule-event">${e.course}<br><span style="color:var(--text-dim)">${e.location || ''}</span></div>`).join('')}</div>`;
+      });
+    });
+    html += '</div>';
+    document.getElementById('school-schedule').innerHTML = html;
+  } catch (e) { console.error(e); }
+}
+async function editTask(id) {
+  const task = await get(`/api/school?type=tasks&id=${id}`);
+  showModal('task', task);
 }
 
-function openLogActivity() {
-  openModal('Log Activity', `
-    <div class="form-group"><label>Agent Name</label><input id="f-agent" placeholder="e.g. Nyx"></div>
-    <div class="form-group"><label>Action</label><input id="f-action" placeholder="What happened?"></div>
-    <div class="form-group"><label>Section</label><select id="f-section"><option>general</option><option>school</option><option>polymarket</option><option>trading</option></select></div>
-    <div class="form-group"><label>Status</label><select id="f-status"><option>success</option><option>pending</option><option>failed</option></select></div>
-    <div class="form-group"><label>Details</label><input id="f-details" placeholder="Optional details"></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitLogActivity()">Log</button></div>
-  `);
-}
-async function submitLogActivity() {
-  await api('activity', 'POST', {
-    agentName: document.getElementById('f-agent').value || 'Manual',
-    action: document.getElementById('f-action').value,
-    section: document.getElementById('f-section').value,
-    status: document.getElementById('f-status').value,
-    details: document.getElementById('f-details').value,
-  });
-  closeModal();
-  navigate(currentSection);
-}
-
-// ============ AGENTS ============
-async function renderAgents() {
+// ========== POLYMARKET ==========
+async function loadPolymarket() {
   try {
-    const agents = await api('agents');
-    const c = document.getElementById('content');
-    c.innerHTML = `<div class="fade-in">
-      <div class="actions-bar"><button class="btn btn-primary" onclick="openAddAgent()">+ Add Agent</button></div>
-      <div class="cards-grid">
-        ${agents.length ? agents.map(a => `
-          <div class="agent-card" onclick='openAgentDetail(${JSON.stringify(a).replace(/'/g,"&#39;")})'>
-            <div class="agent-avatar">${a.avatar || '🤖'}</div>
-            <div class="agent-name">${esc(a.name)}</div>
-            <div class="agent-role">${esc(a.role || '')}</div>
-            <div class="agent-status ${statusClass(a.status)}"><span class="status-dot"></span>${a.status || 'offline'}</div>
-            <div style="margin-top:.5rem;font-size:.75rem;color:var(--text-dim)">Task: ${esc(a.currentTask || 'None')}</div>
-            <div style="font-size:.7rem;color:var(--text-dim)">Last active: ${timeAgo(a.lastActive)}</div>
-          </div>`).join('') : '<div class="empty-state" style="grid-column:1/-1"><div class="icon">🤖</div><p>No agents registered</p></div>'}
-      </div>
-    </div>`;
-  } catch (e) { document.getElementById('content').innerHTML = `<div class="empty-state"><p>${esc(e.message)}</p></div>`; }
-}
-
-function openAddAgent() {
-  openModal('Add Agent', `
-    <div class="form-group"><label>Name</label><input id="f-name" placeholder="Agent name"></div>
-    <div class="form-group"><label>Avatar (emoji)</label><input id="f-avatar" placeholder="🤖" maxlength="4"></div>
-    <div class="form-group"><label>Role</label><input id="f-role" placeholder="What does this agent do?"></div>
-    <div class="form-group"><label>Status</label><select id="f-status"><option>online</option><option>idle</option><option>offline</option><option>error</option></select></div>
-    <div class="form-group"><label>Tools (comma-separated)</label><input id="f-tools" placeholder="Google Calendar, API"></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitAddAgent()">Add</button></div>
-  `);
-}
-async function submitAddAgent() {
-  await api('agents', 'POST', {
-    name: document.getElementById('f-name').value,
-    avatar: document.getElementById('f-avatar').value || '🤖',
-    role: document.getElementById('f-role').value,
-    status: document.getElementById('f-status').value,
-    tools: document.getElementById('f-tools').value.split(',').map(s=>s.trim()).filter(Boolean),
-    lastActive: new Date().toISOString(),
-    currentTask: '',
-    accessList: [],
-  });
-  closeModal(); navigate('agents');
-}
-
-function openAgentDetail(agent) {
-  openModal(agent.name, `
-    <div style="text-align:center;font-size:3rem;margin-bottom:1rem">${agent.avatar || '🤖'}</div>
-    <div class="form-group"><label>Name</label><input id="f-name" value="${esc(agent.name)}"></div>
-    <div class="form-group"><label>Role</label><input id="f-role" value="${esc(agent.role || '')}"></div>
-    <div class="form-group"><label>Status</label><select id="f-status">${['online','idle','offline','error'].map(s=>`<option ${s===agent.status?'selected':''}>${s}</option>`).join('')}</select></div>
-    <div class="form-group"><label>Current Task</label><input id="f-task" value="${esc(agent.currentTask || '')}"></div>
-    <div class="form-group"><label>Tools</label><input id="f-tools" value="${esc((agent.tools||[]).join(', '))}"></div>
-    <div class="form-actions">
-      <button class="btn btn-danger" onclick="deleteAgent('${agent.id}')">Delete</button>
-      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
-      <button class="btn btn-primary" onclick="updateAgent('${agent.id}')">Save</button>
-    </div>
-  `);
-}
-async function updateAgent(id) {
-  await api(`agents?id=${id}`, 'PUT', {
-    name: document.getElementById('f-name').value,
-    role: document.getElementById('f-role').value,
-    status: document.getElementById('f-status').value,
-    currentTask: document.getElementById('f-task').value,
-    tools: document.getElementById('f-tools').value.split(',').map(s=>s.trim()).filter(Boolean),
-    lastActive: new Date().toISOString(),
-  });
-  closeModal(); navigate('agents');
-}
-async function deleteAgent(id) {
-  if (!confirm('Delete this agent?')) return;
-  await api(`agents?id=${id}`, 'DELETE');
-  closeModal(); navigate('agents');
-}
-
-// ============ SCHOOL ============
-let schoolTab = 'kanban';
-async function renderSchool() {
-  try {
-    const [tasks, schedule] = await Promise.all([api('school?type=tasks'), api('school?type=schedule')]);
-    const c = document.getElementById('content');
-    const todo = tasks.filter(t => t.status === 'todo');
-    const inProgress = tasks.filter(t => t.status === 'in-progress');
-    const done = tasks.filter(t => t.status === 'done');
-    const overdue = tasks.filter(t => t.status === 'overdue');
-
-    c.innerHTML = `<div class="fade-in">
-      <div class="actions-bar">
-        <button class="btn btn-primary" onclick="openAddTask()">+ Add Task</button>
-        <button class="btn btn-ghost" onclick="openAddSchedule()">+ Add Schedule</button>
-      </div>
-      <div class="tabs">
-        <div class="tab ${schoolTab==='kanban'?'active':''}" onclick="schoolTab='kanban';renderSchool()">Kanban</div>
-        <div class="tab ${schoolTab==='schedule'?'active':''}" onclick="schoolTab='schedule';renderSchool()">Schedule</div>
-      </div>
-      ${schoolTab === 'kanban' ? `
-        <div class="kanban">
-          ${renderKanbanCol('Overdue 🔴', overdue, 'overdue')}
-          ${renderKanbanCol('To Do', todo, 'todo')}
-          ${renderKanbanCol('In Progress', inProgress, 'in-progress')}
-          ${renderKanbanCol('Done ✅', done, 'done')}
-        </div>
-      ` : `
-        <div class="schedule-grid">
-          ${['Monday','Tuesday','Wednesday','Thursday','Friday'].map(day => `
-            <div class="schedule-day">
-              <div class="schedule-day-name">${day}</div>
-              ${schedule.filter(s => s.day === day).sort((a,b) => (a.startTime||'').localeCompare(b.startTime||'')).map(s => `
-                <div class="schedule-entry">
-                  <div class="time">${s.startTime || ''} - ${s.endTime || ''}</div>
-                  <div>${esc(s.course)}</div>
-                  <div style="font-size:.65rem;color:var(--text-dim)">${esc(s.location || '')}</div>
-                </div>
-              `).join('') || '<div style="font-size:.75rem;color:var(--text-dim)">No classes</div>'}
-            </div>
-          `).join('')}
-        </div>
-      `}
-    </div>`;
-  } catch (e) { document.getElementById('content').innerHTML = `<div class="empty-state"><p>${esc(e.message)}</p></div>`; }
-}
-
-function renderKanbanCol(title, items, status) {
-  return `<div class="kanban-col">
-    <div class="kanban-col-title">${title}<span class="count">${items.length}</span></div>
-    ${items.map(t => `
-      <div class="kanban-item ${t.status === 'overdue' ? 'overdue' : ''}" onclick='openEditTask(${JSON.stringify(t).replace(/'/g,"&#39;")})'>
-        <div class="kanban-item-title">${esc(t.title)}</div>
-        <div class="kanban-item-meta">
-          <span class="badge priority-${t.priority || 'low'}">${t.priority || 'low'}</span>
-          ${t.course ? `<span class="badge" style="background:rgba(59,130,246,.15);color:var(--blue)">${esc(t.course)}</span>` : ''}
-          ${t.dueDate ? `<span style="margin-left:.25rem">${fmtDate(t.dueDate)}</span>` : ''}
-        </div>
-      </div>
-    `).join('') || '<div style="text-align:center;font-size:.8rem;color:var(--text-dim);padding:.5rem">Empty</div>'}
-  </div>`;
-}
-
-function openAddTask() {
-  openModal('Add Task', `
-    <div class="form-group"><label>Title</label><input id="f-title" placeholder="Task title"></div>
-    <div class="form-group"><label>Course</label><input id="f-course" placeholder="CS 101"></div>
-    <div class="form-group"><label>Type</label><select id="f-type"><option>assignment</option><option>exam</option><option>reading</option><option>project</option><option>lecture-note</option><option>office-hours</option><option>other</option></select></div>
-    <div class="form-group"><label>Due Date</label><input id="f-due" type="date"></div>
-    <div class="form-group"><label>Priority</label><select id="f-priority"><option>low</option><option>medium</option><option>high</option></select></div>
-    <div class="form-group"><label>Notes</label><textarea id="f-notes" placeholder="Optional notes"></textarea></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitAddTask()">Add</button></div>
-  `);
-}
-async function submitAddTask() {
-  await api('school?type=tasks', 'POST', {
-    title: document.getElementById('f-title').value,
-    course: document.getElementById('f-course').value,
-    type: document.getElementById('f-type').value,
-    dueDate: document.getElementById('f-due').value,
-    priority: document.getElementById('f-priority').value,
-    status: 'todo',
-    notes: document.getElementById('f-notes').value,
-    createdBy: 'manual',
-  });
-  await logActivity('Added task: ' + document.getElementById('f-title').value, 'school');
-  closeModal(); navigate('school');
-}
-
-function openEditTask(task) {
-  openModal('Edit Task', `
-    <div class="form-group"><label>Title</label><input id="f-title" value="${esc(task.title)}"></div>
-    <div class="form-group"><label>Course</label><input id="f-course" value="${esc(task.course || '')}"></div>
-    <div class="form-group"><label>Type</label><select id="f-type">${['assignment','exam','reading','project','lecture-note','office-hours','other'].map(t=>`<option ${t===task.type?'selected':''}>${t}</option>`).join('')}</select></div>
-    <div class="form-group"><label>Due Date</label><input id="f-due" type="date" value="${task.dueDate ? task.dueDate.split('T')[0] : ''}"></div>
-    <div class="form-group"><label>Priority</label><select id="f-priority">${['low','medium','high'].map(p=>`<option ${p===task.priority?'selected':''}>${p}</option>`).join('')}</select></div>
-    <div class="form-group"><label>Status</label><select id="f-statusx">${['todo','in-progress','done'].map(s=>`<option ${s===task.status?'selected':''}>${s}</option>`).join('')}</select></div>
-    <div class="form-group"><label>Notes</label><textarea id="f-notes">${esc(task.notes || '')}</textarea></div>
-    <div class="form-actions">
-      <button class="btn btn-danger" onclick="deleteTask('${task.id}')">Delete</button>
-      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
-      <button class="btn btn-primary" onclick="updateTask('${task.id}')">Save</button>
-    </div>
-  `);
-}
-async function updateTask(id) {
-  await api(`school?type=tasks&id=${id}`, 'PUT', {
-    title: document.getElementById('f-title').value,
-    course: document.getElementById('f-course').value,
-    type: document.getElementById('f-type').value,
-    dueDate: document.getElementById('f-due').value,
-    priority: document.getElementById('f-priority').value,
-    status: document.getElementById('f-statusx').value,
-    notes: document.getElementById('f-notes').value,
-  });
-  closeModal(); navigate('school');
-}
-async function deleteTask(id) {
-  if (!confirm('Delete?')) return;
-  await api(`school?type=tasks&id=${id}`, 'DELETE');
-  closeModal(); navigate('school');
-}
-
-function openAddSchedule() {
-  openModal('Add Schedule Entry', `
-    <div class="form-group"><label>Course</label><input id="f-course" placeholder="CS 101"></div>
-    <div class="form-group"><label>Day</label><select id="f-day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option></select></div>
-    <div class="form-group"><label>Start Time</label><input id="f-start" type="time"></div>
-    <div class="form-group"><label>End Time</label><input id="f-end" type="time"></div>
-    <div class="form-group"><label>Location</label><input id="f-location" placeholder="Room 201"></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitAddSchedule()">Add</button></div>
-  `);
-}
-async function submitAddSchedule() {
-  await api('school?type=schedule', 'POST', {
-    course: document.getElementById('f-course').value,
-    day: document.getElementById('f-day').value,
-    startTime: document.getElementById('f-start').value,
-    endTime: document.getElementById('f-end').value,
-    location: document.getElementById('f-location').value,
-    type: 'lecture',
-  });
-  closeModal(); navigate('school');
-}
-
-// ============ POLYMARKET ============
-let polyTab = 'positions';
-async function renderPolymarket() {
-  try {
-    const [positions, watchlist] = await Promise.all([api('polymarket?type=positions'), api('polymarket?type=watchlist')]);
-    const c = document.getElementById('content');
+    const [positions, watchlist] = await Promise.all([get('/api/polymarket?type=positions'), get('/api/polymarket?type=watchlist')]);
     const open = positions.filter(p => p.status === 'open');
-    const closed = positions.filter(p => p.status && p.status.startsWith('closed'));
-    const totalInvested = open.reduce((s,p) => s + (parseFloat(p.invested)||0), 0);
-    const totalValue = open.reduce((s,p) => s + (parseFloat(p.currentValue)||0), 0);
+    const closed = positions.filter(p => p.status !== 'open');
+    const totalInvested = open.reduce((s, p) => s + (p.invested || 0), 0);
+    const totalValue = open.reduce((s, p) => s + (p.currentValue || 0), 0);
     const totalPnl = totalValue - totalInvested;
     const wins = closed.filter(p => p.status === 'closed-win').length;
-    const winRate = closed.length ? ((wins/closed.length)*100).toFixed(0) : 0;
+    const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
 
-    c.innerHTML = `<div class="fade-in">
-      <div class="stats-row">
-        <div class="stat-card"><div class="stat-label">Invested</div><div class="stat-value">${fmtMoney(totalInvested)}</div></div>
-        <div class="stat-card"><div class="stat-label">Value</div><div class="stat-value">${fmtMoney(totalValue)}</div></div>
-        <div class="stat-card"><div class="stat-label">P&L</div><div class="stat-value ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
-        <div class="stat-card"><div class="stat-label">Win Rate</div><div class="stat-value">${winRate}%</div></div>
-      </div>
-      <div class="actions-bar">
-        <button class="btn btn-primary" onclick="openAddPolyPosition()">+ Add Position</button>
-        <button class="btn btn-ghost" onclick="openAddPolyWatchlist()">+ Watchlist</button>
-      </div>
-      <div class="tabs">
-        <div class="tab ${polyTab==='positions'?'active':''}" onclick="polyTab='positions';renderPolymarket()">Open (${open.length})</div>
-        <div class="tab ${polyTab==='closed'?'active':''}" onclick="polyTab='closed';renderPolymarket()">Closed (${closed.length})</div>
-        <div class="tab ${polyTab==='watchlist'?'active':''}" onclick="polyTab='watchlist';renderPolymarket()">Watchlist (${watchlist.length})</div>
-      </div>
-      ${polyTab === 'positions' ? renderPolyTable(open) : polyTab === 'closed' ? renderPolyTable(closed) : renderPolyWatchlist(watchlist)}
-    </div>`;
-  } catch (e) { document.getElementById('content').innerHTML = `<div class="empty-state"><p>${esc(e.message)}</p></div>`; }
-}
-
-function renderPolyTable(items) {
-  if (!items.length) return '<div class="empty-state"><div class="icon">📊</div><p>No positions</p></div>';
-  return `<div style="overflow-x:auto"><table class="data-table">
-    <tr><th>Market</th><th>Position</th><th>Entry</th><th>Current</th><th>Shares</th><th>P&L</th><th>Actions</th></tr>
-    ${items.map(p => `<tr>
-      <td>${p.marketUrl ? `<a href="${esc(p.marketUrl)}" target="_blank" style="color:var(--blue)">${esc(p.market)}</a>` : esc(p.market)}</td>
-      <td>${esc(p.position)}</td>
+    document.getElementById('poly-summary').innerHTML = `
+      <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
+      <div class="summary-card"><div class="label">Current Value</div><div class="value mono">${fmtMoney(totalValue)}</div></div>
+      <div class="summary-card"><div class="label">Total P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
+    `;
+    document.querySelector('#poly-open-table tbody').innerHTML = open.map(p => `<tr>
+      <td style="max-width:250px">${p.market || ''}</td>
+      <td>${p.position || ''}</td>
       <td class="mono">${fmtMoney(p.entryPrice)}</td>
       <td class="mono">${fmtMoney(p.currentPrice)}</td>
-      <td class="mono">${p.shares || '—'}</td>
-      <td class="${pnlClass(p.pnl)}">${fmtMoney(p.pnl)} (${fmtPct(p.pnlPercent)})</td>
-      <td><button class="btn-sm" onclick='openEditPoly(${JSON.stringify(p).replace(/'/g,"&#39;")})'>✏️</button> <button class="btn-sm" onclick="deletePoly('${p.id}')">🗑</button></td>
-    </tr>`).join('')}
-  </table></div>`;
+      <td class="mono">${p.shares || ''}</td>
+      <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td>
+      <td class="mono ${pnlClass(p.pnlPercent)}">${fmtPct(p.pnlPercent)}</td>
+      <td><button class="btn btn-sm" onclick="editPolyPosition('${p.id}')">Edit</button></td>
+    </tr>`).join('') || '<tr><td colspan="8" style="color:var(--text-dim)">No open positions</td></tr>';
+    document.querySelector('#poly-closed-table tbody').innerHTML = closed.map(p => `<tr>
+      <td>${p.market || ''}</td><td>${p.position || ''}</td>
+      <td class="mono">${fmtMoney(p.entryPrice)}</td><td class="mono">${fmtMoney(p.exitPrice)}</td>
+      <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td>
+      <td>${p.status}</td>
+    </tr>`).join('') || '<tr><td colspan="6" style="color:var(--text-dim)">No closed positions</td></tr>';
+    document.querySelector('#poly-watch-table tbody').innerHTML = watchlist.map(w => `<tr>
+      <td>${w.market || ''}</td><td class="mono">${fmtMoney(w.currentPrice)}</td>
+      <td class="mono">${fmtMoney(w.targetEntry)}</td><td>${w.notes || ''}</td>
+      <td><button class="btn btn-sm" onclick="deletePolyWatch('${w.id}')" style="color:var(--red)">✕</button></td>
+    </tr>`).join('') || '<tr><td colspan="5" style="color:var(--text-dim)">Watchlist empty</td></tr>';
+  } catch (e) { console.error(e); }
 }
+async function editPolyPosition(id) { const p = await get(`/api/polymarket?type=positions&id=${id}`); showModal('poly-position', p); }
+async function deletePolyWatch(id) { await del(`/api/polymarket?type=watchlist&id=${id}`); loadPolymarket(); }
 
-function renderPolyWatchlist(items) {
-  if (!items.length) return '<div class="empty-state"><div class="icon">👀</div><p>Watchlist empty</p></div>';
-  return `<div style="overflow-x:auto"><table class="data-table">
-    <tr><th>Market</th><th>Current Price</th><th>Target Entry</th><th>Notes</th><th>Actions</th></tr>
-    ${items.map(w => `<tr>
-      <td>${w.marketUrl ? `<a href="${esc(w.marketUrl)}" target="_blank" style="color:var(--blue)">${esc(w.market)}</a>` : esc(w.market)}</td>
-      <td class="mono">${fmtMoney(w.currentPrice)}</td>
-      <td class="mono">${fmtMoney(w.targetEntry)}</td>
-      <td>${esc(w.notes || '')}</td>
-      <td><button class="btn-sm" onclick="deletePolyWatchlist('${w.id}')">🗑</button></td>
-    </tr>`).join('')}
-  </table></div>`;
-}
-
-function openAddPolyPosition() {
-  openModal('Add Position', `
-    <div class="form-group"><label>Market</label><input id="f-market" placeholder="Market name"></div>
-    <div class="form-group"><label>Market URL</label><input id="f-url" placeholder="https://..."></div>
-    <div class="form-group"><label>Position (Yes/No)</label><select id="f-position"><option>Yes</option><option>No</option></select></div>
-    <div class="form-group"><label>Entry Price</label><input id="f-entry" type="number" step="0.01"></div>
-    <div class="form-group"><label>Current Price</label><input id="f-current" type="number" step="0.01"></div>
-    <div class="form-group"><label>Shares</label><input id="f-shares" type="number"></div>
-    <div class="form-group"><label>Notes</label><textarea id="f-notes"></textarea></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitAddPolyPosition()">Add</button></div>
-  `);
-}
-async function submitAddPolyPosition() {
-  const entry = parseFloat(document.getElementById('f-entry').value)||0;
-  const current = parseFloat(document.getElementById('f-current').value)||0;
-  const shares = parseFloat(document.getElementById('f-shares').value)||0;
-  const invested = entry * shares;
-  const currentValue = current * shares;
-  const pnl = currentValue - invested;
-  await api('polymarket?type=positions', 'POST', {
-    market: document.getElementById('f-market').value,
-    marketUrl: document.getElementById('f-url').value,
-    position: document.getElementById('f-position').value,
-    entryPrice: entry, currentPrice: current, shares, invested, currentValue, pnl,
-    pnlPercent: invested ? (pnl/invested)*100 : 0,
-    status: 'open',
-    notes: document.getElementById('f-notes').value,
-    tags: [],
-  });
-  await logActivity('Added Polymarket position: ' + document.getElementById('f-market').value, 'polymarket');
-  closeModal(); navigate('polymarket');
-}
-
-function openEditPoly(p) {
-  openModal('Edit Position', `
-    <div class="form-group"><label>Market</label><input id="f-market" value="${esc(p.market)}"></div>
-    <div class="form-group"><label>Current Price</label><input id="f-current" type="number" step="0.01" value="${p.currentPrice||''}"></div>
-    <div class="form-group"><label>Status</label><select id="f-status">${['open','closed-win','closed-loss','watching'].map(s=>`<option ${s===p.status?'selected':''}>${s}</option>`).join('')}</select></div>
-    <div class="form-group"><label>Notes</label><textarea id="f-notes">${esc(p.notes||'')}</textarea></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="updatePoly('${p.id}',${p.entryPrice},${p.shares})">Save</button></div>
-  `);
-}
-async function updatePoly(id, entryPrice, shares) {
-  const current = parseFloat(document.getElementById('f-current').value)||0;
-  const invested = entryPrice * shares;
-  const currentValue = current * shares;
-  const pnl = currentValue - invested;
-  const status = document.getElementById('f-status').value;
-  const body = { market: document.getElementById('f-market').value, currentPrice: current, currentValue, pnl, pnlPercent: invested?(pnl/invested)*100:0, status, notes: document.getElementById('f-notes').value };
-  if (status.startsWith('closed') && !body.exitDate) { body.exitDate = new Date().toISOString(); body.exitPrice = current; }
-  await api(`polymarket?type=positions&id=${id}`, 'PUT', body);
-  closeModal(); navigate('polymarket');
-}
-async function deletePoly(id) { if(!confirm('Delete?'))return; await api(`polymarket?type=positions&id=${id}`, 'DELETE'); navigate('polymarket'); }
-async function deletePolyWatchlist(id) { if(!confirm('Delete?'))return; await api(`polymarket?type=watchlist&id=${id}`, 'DELETE'); navigate('polymarket'); }
-
-function openAddPolyWatchlist() {
-  openModal('Add to Watchlist', `
-    <div class="form-group"><label>Market</label><input id="f-market" placeholder="Market name"></div>
-    <div class="form-group"><label>Market URL</label><input id="f-url" placeholder="https://..."></div>
-    <div class="form-group"><label>Current Price</label><input id="f-current" type="number" step="0.01"></div>
-    <div class="form-group"><label>Target Entry</label><input id="f-target" type="number" step="0.01"></div>
-    <div class="form-group"><label>Notes</label><textarea id="f-notes"></textarea></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitPolyWatchlist()">Add</button></div>
-  `);
-}
-async function submitPolyWatchlist() {
-  await api('polymarket?type=watchlist', 'POST', {
-    market: document.getElementById('f-market').value,
-    marketUrl: document.getElementById('f-url').value,
-    currentPrice: parseFloat(document.getElementById('f-current').value)||0,
-    targetEntry: parseFloat(document.getElementById('f-target').value)||0,
-    notes: document.getElementById('f-notes').value,
-  });
-  closeModal(); navigate('polymarket');
-}
-
-// ============ TRADING ============
-let tradingTab = 'positions';
-async function renderTrading() {
+// ========== TRADING ==========
+async function loadTrading() {
   try {
     const [positions, watchlist, journal] = await Promise.all([
-      api('trading?type=positions'), api('trading?type=watchlist'), api('trading?type=journal')
+      get('/api/trading?type=positions'), get('/api/trading?type=watchlist'), get('/api/trading?type=journal')
     ]);
-    const c = document.getElementById('content');
     const open = positions.filter(p => p.status === 'open');
-    const closed = positions.filter(p => p.status && p.status !== 'open');
-    const totalInvested = open.reduce((s,p) => s+(parseFloat(p.invested)||0), 0);
-    const totalValue = open.reduce((s,p) => s+(parseFloat(p.currentValue)||0), 0);
+    const closed = positions.filter(p => p.status !== 'open');
+    const totalInvested = open.reduce((s, p) => s + (p.invested || 0), 0);
+    const totalValue = open.reduce((s, p) => s + (p.currentValue || 0), 0);
     const totalPnl = totalValue - totalInvested;
-    const closedPnl = closed.reduce((s,p) => s+(parseFloat(p.pnl)||0), 0);
     const wins = closed.filter(p => p.status === 'closed-profit').length;
-    const losses = closed.filter(p => p.status === 'closed-loss' || p.status === 'stopped-out').length;
-    const winRate = (wins+losses) ? ((wins/(wins+losses))*100).toFixed(0) : 0;
-    const avgWin = wins ? closed.filter(p=>p.status==='closed-profit').reduce((s,p)=>s+(parseFloat(p.pnl)||0),0)/wins : 0;
-    const avgLoss = losses ? closed.filter(p=>p.status!=='closed-profit').reduce((s,p)=>s+(parseFloat(p.pnl)||0),0)/losses : 0;
-    const profitFactor = avgLoss !== 0 ? Math.abs(avgWin / avgLoss) : 0;
+    const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
 
-    c.innerHTML = `<div class="fade-in">
-      <div class="stats-row">
-        <div class="stat-card"><div class="stat-label">Open P&L</div><div class="stat-value ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
-        <div class="stat-card"><div class="stat-label">Realized P&L</div><div class="stat-value ${pnlClass(closedPnl)}">${fmtMoney(closedPnl)}</div></div>
-        <div class="stat-card"><div class="stat-label">Win Rate</div><div class="stat-value">${winRate}%</div></div>
-        <div class="stat-card"><div class="stat-label">Avg Win</div><div class="stat-value pnl-positive">${fmtMoney(avgWin)}</div></div>
-        <div class="stat-card"><div class="stat-label">Avg Loss</div><div class="stat-value pnl-negative">${fmtMoney(avgLoss)}</div></div>
-        <div class="stat-card"><div class="stat-label">Profit Factor</div><div class="stat-value">${profitFactor.toFixed(2)}</div></div>
-      </div>
-      <div class="actions-bar">
-        <button class="btn btn-primary" onclick="openAddTrade()">+ Add Position</button>
-        <button class="btn btn-ghost" onclick="openAddTradeWatchlist()">+ Watchlist</button>
-        <button class="btn btn-ghost" onclick="openAddJournal()">📝 Journal</button>
-      </div>
-      <div class="tabs">
-        <div class="tab ${tradingTab==='positions'?'active':''}" onclick="tradingTab='positions';renderTrading()">Open (${open.length})</div>
-        <div class="tab ${tradingTab==='closed'?'active':''}" onclick="tradingTab='closed';renderTrading()">Closed (${closed.length})</div>
-        <div class="tab ${tradingTab==='watchlist'?'active':''}" onclick="tradingTab='watchlist';renderTrading()">Watchlist (${watchlist.length})</div>
-        <div class="tab ${tradingTab==='journal'?'active':''}" onclick="tradingTab='journal';renderTrading()">Journal (${journal.length})</div>
-      </div>
-      ${tradingTab==='positions' ? renderTradeTable(open, true) : tradingTab==='closed' ? renderTradeTable(closed, false) : tradingTab==='watchlist' ? renderTradeWatchlist(watchlist) : renderJournal(journal)}
-    </div>`;
-  } catch (e) { document.getElementById('content').innerHTML = `<div class="empty-state"><p>${esc(e.message)}</p></div>`; }
-}
-
-function renderTradeTable(items, showTargets) {
-  if (!items.length) return '<div class="empty-state"><div class="icon">📈</div><p>No positions</p></div>';
-  return `<div style="overflow-x:auto"><table class="data-table">
-    <tr><th>Ticker</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th>${showTargets?'<th>SL</th><th>TP</th>':''}<th>P&L</th><th>Actions</th></tr>
-    ${items.map(p => `<tr>
-      <td><strong>${esc(p.ticker)}</strong><div style="font-size:.7rem;color:var(--text-dim)">${esc(p.company||'')}</div></td>
-      <td>${esc(p.side||'long')}</td>
+    document.getElementById('trade-summary').innerHTML = `
+      <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
+      <div class="summary-card"><div class="label">Current Value</div><div class="value mono">${fmtMoney(totalValue)}</div></div>
+      <div class="summary-card"><div class="label">Total P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
+    `;
+    document.querySelector('#trade-open-table tbody').innerHTML = open.map(p => `<tr>
+      <td class="mono" style="font-weight:600">${p.ticker}</td>
+      <td>${p.side || 'long'}</td>
       <td class="mono">${fmtMoney(p.entryPrice)}</td>
       <td class="mono">${fmtMoney(p.currentPrice)}</td>
-      <td class="mono">${p.shares||'—'}</td>
-      ${showTargets?`<td class="mono" style="color:var(--red)">${fmtMoney(p.stopLoss)}</td><td class="mono" style="color:var(--green)">${fmtMoney(p.takeProfit)}</td>`:''}
-      <td class="${pnlClass(p.pnl)}">${fmtMoney(p.pnl)} (${fmtPct(p.pnlPercent)})</td>
-      <td><button class="btn-sm" onclick='openEditTrade(${JSON.stringify(p).replace(/'/g,"&#39;")})'>✏️</button> <button class="btn-sm" onclick="deleteTrade('${p.id}')">🗑</button></td>
-    </tr>`).join('')}
-  </table></div>`;
+      <td class="mono">${p.shares}</td>
+      <td class="mono" style="color:var(--red)">${fmtMoney(p.stopLoss)}</td>
+      <td class="mono" style="color:var(--green)">${fmtMoney(p.takeProfit)}</td>
+      <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td>
+      <td class="mono ${pnlClass(p.pnlPercent)}">${fmtPct(p.pnlPercent)}</td>
+      <td><button class="btn btn-sm" onclick="editTradePosition('${p.id}')">Edit</button></td>
+    </tr>`).join('') || '<tr><td colspan="10" style="color:var(--text-dim)">No open positions</td></tr>';
+    document.querySelector('#trade-closed-table tbody').innerHTML = closed.map(p => `<tr>
+      <td class="mono" style="font-weight:600">${p.ticker}</td><td>${p.side || 'long'}</td>
+      <td class="mono">${fmtMoney(p.entryPrice)}</td><td class="mono">${fmtMoney(p.exitPrice)}</td>
+      <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td><td>${p.status}</td>
+    </tr>`).join('') || '<tr><td colspan="6" style="color:var(--text-dim)">No closed positions</td></tr>';
+    document.querySelector('#trade-watch-table tbody').innerHTML = watchlist.map(w => `<tr>
+      <td class="mono" style="font-weight:600">${w.ticker}</td><td class="mono">${fmtMoney(w.currentPrice)}</td>
+      <td class="mono">${fmtMoney(w.targetEntry)}</td><td>${w.thesis || ''}</td>
+      <td><button class="btn btn-sm" onclick="deleteTradeWatch('${w.id}')" style="color:var(--red)">✕</button></td>
+    </tr>`).join('') || '<tr><td colspan="5" style="color:var(--text-dim)">Watchlist empty</td></tr>';
+    document.getElementById('trade-journal').innerHTML = journal.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).map(j => `
+      <div class="activity-item">
+        <div class="activity-dot success"></div>
+        <div class="activity-content">
+          <div class="activity-action"><span class="mono" style="color:var(--accent)">${j.ticker}</span> ${j.note}</div>
+          <div class="activity-meta"><span>${timeAgo(j.timestamp)}</span><span>${j.type || ''}</span></div>
+        </div>
+      </div>
+    `).join('') || '<div style="color:var(--text-dim);padding:20px">No journal entries</div>';
+  } catch (e) { console.error(e); }
 }
+async function editTradePosition(id) { const p = await get(`/api/trading?type=positions&id=${id}`); showModal('trade-position', p); }
+async function deleteTradeWatch(id) { await del(`/api/trading?type=watchlist&id=${id}`); loadTrading(); }
 
-function renderTradeWatchlist(items) {
-  if (!items.length) return '<div class="empty-state"><div class="icon">👀</div><p>Watchlist empty</p></div>';
-  return `<div style="overflow-x:auto"><table class="data-table">
-    <tr><th>Ticker</th><th>Company</th><th>Target Entry</th><th>Current</th><th>Thesis</th><th>Actions</th></tr>
-    ${items.map(w => `<tr>
-      <td><strong>${esc(w.ticker)}</strong></td><td>${esc(w.company||'')}</td>
-      <td class="mono">${fmtMoney(w.targetEntry)}</td><td class="mono">${fmtMoney(w.currentPrice)}</td>
-      <td style="max-width:200px;font-size:.8rem">${esc(w.thesis||'')}</td>
-      <td><button class="btn-sm" onclick="deleteTradeWatchlist('${w.id}')">🗑</button></td>
-    </tr>`).join('')}
-  </table></div>`;
-}
+// ========== MODALS ==========
+function showModal(type, existing = null) {
+  const isEdit = !!existing;
+  let title, fields, onSubmit;
 
-function renderJournal(items) {
-  if (!items.length) return '<div class="empty-state"><div class="icon">📝</div><p>No journal entries</p></div>';
-  return items.sort((a,b)=>new Date(b.timestamp)-new Date(a.timestamp)).map(j => `
-    <div class="journal-entry">
-      <div class="je-header"><span class="je-type">${esc(j.type||'note')}</span><span class="je-date">${esc(j.ticker||'')} · ${fmtDate(j.timestamp)}</span></div>
-      <div class="je-note">${esc(j.note)}</div>
+  switch (type) {
+    case 'agent':
+      title = isEdit ? 'Edit Agent' : 'Add Agent';
+      fields = `
+        <label>Name</label><input id="m-name" value="${existing?.name || ''}">
+        <label>Avatar (emoji)</label><input id="m-avatar" value="${existing?.avatar || '🤖'}" maxlength="4">
+        <label>Role</label><input id="m-role" value="${existing?.role || ''}">
+        <label>Status</label><select id="m-status"><option value="online" ${existing?.status==='online'?'selected':''}>Online</option><option value="idle" ${existing?.status==='idle'?'selected':''}>Idle</option><option value="offline" ${existing?.status==='offline'?'selected':''}>Offline</option><option value="error" ${existing?.status==='error'?'selected':''}>Error</option></select>
+        <label>Current Task</label><input id="m-task" value="${existing?.currentTask || ''}">
+        <label>Tools (comma-separated)</label><input id="m-tools" value="${(existing?.tools || []).join(', ')}">
+        <label>Access Sections (comma-separated)</label><input id="m-access" value="${(existing?.accessList || []).join(', ')}">
+      `;
+      onSubmit = async () => {
+        const data = { name: v('m-name'), avatar: v('m-avatar'), role: v('m-role'), status: v('m-status'), currentTask: v('m-task'), tools: v('m-tools').split(',').map(s=>s.trim()).filter(Boolean), accessList: v('m-access').split(',').map(s=>s.trim()).filter(Boolean), lastActive: new Date().toISOString() };
+        isEdit ? await put(`/api/agents?id=${existing.id}`, data) : await post('/api/agents', data);
+        loadAgents();
+      };
+      break;
+    case 'task':
+      title = isEdit ? 'Edit Task' : 'Add Task';
+      fields = `
+        <label>Title</label><input id="m-title" value="${existing?.title || ''}">
+        <label>Course</label><input id="m-course" value="${existing?.course || ''}">
+        <label>Type</label><select id="m-type"><option value="assignment">Assignment</option><option value="exam">Exam</option><option value="reading">Reading</option><option value="project">Project</option><option value="other">Other</option></select>
+        <label>Due Date</label><input type="datetime-local" id="m-due" value="${existing?.dueDate ? existing.dueDate.slice(0,16) : ''}">
+        <label>Priority</label><select id="m-priority"><option value="low">Low</option><option value="medium" ${existing?.priority==='medium'?'selected':''}>Medium</option><option value="high" ${existing?.priority==='high'?'selected':''}>High</option><option value="critical" ${existing?.priority==='critical'?'selected':''}>Critical</option></select>
+        <label>Status</label><select id="m-status"><option value="todo">To Do</option><option value="in-progress" ${existing?.status==='in-progress'?'selected':''}>In Progress</option><option value="done" ${existing?.status==='done'?'selected':''}>Done</option></select>
+        <label>Notes</label><textarea id="m-notes">${existing?.notes || ''}</textarea>
+      `;
+      if (existing?.type) setTimeout(() => { const el = document.getElementById('m-type'); if (el) el.value = existing.type; }, 0);
+      onSubmit = async () => {
+        const data = { title: v('m-title'), course: v('m-course'), type: v('m-type'), dueDate: v('m-due') ? new Date(v('m-due')).toISOString() : null, priority: v('m-priority'), status: v('m-status'), notes: v('m-notes') };
+        isEdit ? await put(`/api/school?type=tasks&id=${existing.id}`, data) : await post('/api/school?type=tasks', data);
+        loadSchool(); if (currentSection === 'dashboard') loadDashboard();
+      };
+      break;
+    case 'schedule':
+      title = 'Add Class';
+      fields = `
+        <label>Course</label><input id="m-course" value="">
+        <label>Day</label><select id="m-day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option></select>
+        <label>Start Time</label><input type="time" id="m-start" value="09:00">
+        <label>End Time</label><input type="time" id="m-end" value="10:00">
+        <label>Location</label><input id="m-location" value="">
+        <label>Type</label><select id="m-type"><option value="lecture">Lecture</option><option value="tutorial">Tutorial</option><option value="lab">Lab</option></select>
+      `;
+      onSubmit = async () => {
+        await post('/api/school?type=schedule', { course: v('m-course'), day: v('m-day'), startTime: v('m-start'), endTime: v('m-end'), location: v('m-location'), type: v('m-type') });
+        loadSchool();
+      };
+      break;
+    case 'poly-position':
+      title = isEdit ? 'Edit Position' : 'Add Polymarket Position';
+      fields = `
+        <label>Market</label><input id="m-market" value="${existing?.market || ''}">
+        <label>Market URL</label><input id="m-url" value="${existing?.marketUrl || ''}">
+        <label>Position</label><select id="m-position"><option value="Yes" ${existing?.position==='Yes'?'selected':''}>Yes</option><option value="No" ${existing?.position==='No'?'selected':''}>No</option></select>
+        <label>Entry Price</label><input type="number" step="0.01" id="m-entry" value="${existing?.entryPrice || ''}">
+        <label>Current Price</label><input type="number" step="0.01" id="m-current" value="${existing?.currentPrice || ''}">
+        <label>Shares</label><input type="number" id="m-shares" value="${existing?.shares || ''}">
+        <label>Status</label><select id="m-status"><option value="open">Open</option><option value="closed-win" ${existing?.status==='closed-win'?'selected':''}>Closed (Win)</option><option value="closed-loss" ${existing?.status==='closed-loss'?'selected':''}>Closed (Loss)</option></select>
+        <label>Notes</label><textarea id="m-notes">${existing?.notes || ''}</textarea>
+        <label>Tags (comma-separated)</label><input id="m-tags" value="${(existing?.tags || []).join(', ')}">
+      `;
+      onSubmit = async () => {
+        const data = { market: v('m-market'), marketUrl: v('m-url'), position: v('m-position'), entryPrice: parseFloat(v('m-entry')), currentPrice: parseFloat(v('m-current') || v('m-entry')), shares: parseFloat(v('m-shares')), status: v('m-status'), notes: v('m-notes'), tags: v('m-tags').split(',').map(s=>s.trim()).filter(Boolean) };
+        data.invested = data.entryPrice * data.shares;
+        data.currentValue = data.currentPrice * data.shares;
+        data.pnl = data.currentValue - data.invested;
+        data.pnlPercent = data.invested ? (data.pnl / data.invested) * 100 : 0;
+        if (data.status !== 'open') data.exitPrice = data.currentPrice;
+        isEdit ? await put(`/api/polymarket?type=positions&id=${existing.id}`, data) : await post('/api/polymarket?type=positions', data);
+        loadPolymarket();
+      };
+      break;
+    case 'trade-position':
+      title = isEdit ? 'Edit Position' : 'Add Trade Position';
+      fields = `
+        <label>Ticker</label><input id="m-ticker" value="${existing?.ticker || ''}" style="text-transform:uppercase">
+        <label>Company</label><input id="m-company" value="${existing?.company || ''}">
+        <label>Side</label><select id="m-side"><option value="long" ${existing?.side==='long'?'selected':''}>Long</option><option value="short" ${existing?.side==='short'?'selected':''}>Short</option></select>
+        <label>Entry Price</label><input type="number" step="0.01" id="m-entry" value="${existing?.entryPrice || ''}">
+        <label>Current Price</label><input type="number" step="0.01" id="m-current" value="${existing?.currentPrice || ''}">
+        <label>Shares</label><input type="number" id="m-shares" value="${existing?.shares || ''}">
+        <label>Stop Loss</label><input type="number" step="0.01" id="m-stop" value="${existing?.stopLoss || ''}">
+        <label>Take Profit</label><input type="number" step="0.01" id="m-target" value="${existing?.takeProfit || ''}">
+        <label>Status</label><select id="m-status"><option value="open">Open</option><option value="closed-profit" ${existing?.status==='closed-profit'?'selected':''}>Closed (Profit)</option><option value="closed-loss" ${existing?.status==='closed-loss'?'selected':''}>Closed (Loss)</option><option value="stopped-out" ${existing?.status==='stopped-out'?'selected':''}>Stopped Out</option></select>
+        <label>Thesis</label><textarea id="m-thesis">${existing?.thesis || ''}</textarea>
+        <label>Tags (comma-separated)</label><input id="m-tags" value="${(existing?.tags || []).join(', ')}">
+      `;
+      onSubmit = async () => {
+        const data = { ticker: v('m-ticker').toUpperCase(), company: v('m-company'), side: v('m-side'), entryPrice: parseFloat(v('m-entry')), currentPrice: parseFloat(v('m-current') || v('m-entry')), shares: parseFloat(v('m-shares')), stopLoss: parseFloat(v('m-stop')) || null, takeProfit: parseFloat(v('m-target')) || null, status: v('m-status'), thesis: v('m-thesis'), tags: v('m-tags').split(',').map(s=>s.trim()).filter(Boolean) };
+        data.invested = data.entryPrice * data.shares;
+        data.currentValue = data.currentPrice * data.shares;
+        data.pnl = data.currentValue - data.invested;
+        data.pnlPercent = data.invested ? (data.pnl / data.invested) * 100 : 0;
+        if (data.status !== 'open') data.exitPrice = data.currentPrice;
+        isEdit ? await put(`/api/trading?type=positions&id=${existing.id}`, data) : await post('/api/trading?type=positions', data);
+        loadTrading();
+      };
+      break;
+    case 'activity':
+      title = 'Log Activity';
+      fields = `
+        <label>Agent Name</label><input id="m-agent" value="Nyx">
+        <label>Action</label><input id="m-action" value="">
+        <label>Section</label><select id="m-section"><option value="general">General</option><option value="school">School</option><option value="polymarket">Polymarket</option><option value="trading">Trading</option></select>
+        <label>Status</label><select id="m-status"><option value="success">Success</option><option value="failed">Failed</option><option value="pending">Pending</option></select>
+        <label>Details</label><textarea id="m-details"></textarea>
+      `;
+      onSubmit = async () => {
+        await post('/api/activity', { agentName: v('m-agent'), action: v('m-action'), section: v('m-section'), status: v('m-status'), details: v('m-details') });
+        loadDashboard();
+      };
+      break;
+  }
+
+  const container = document.getElementById('modal-container');
+  container.innerHTML = `
+    <div class="modal-overlay" onclick="closeModal(event)">
+      <div class="modal" onclick="event.stopPropagation()">
+        <h2>${title}</h2>
+        ${fields}
+        <div class="modal-actions">
+          <button class="btn" onclick="closeModal()">Cancel</button>
+          <button class="btn btn-primary" id="modal-submit">Save</button>
+        </div>
+      </div>
     </div>
-  `).join('');
+  `;
+  document.getElementById('modal-submit').addEventListener('click', async () => { await onSubmit(); closeModal(); });
 }
 
-function openAddTrade() {
-  openModal('Add Position', `
-    <div class="form-group"><label>Ticker</label><input id="f-ticker" placeholder="AAPL"></div>
-    <div class="form-group"><label>Company</label><input id="f-company" placeholder="Apple Inc."></div>
-    <div class="form-group"><label>Side</label><select id="f-side"><option>long</option><option>short</option></select></div>
-    <div class="form-group"><label>Entry Price</label><input id="f-entry" type="number" step="0.01"></div>
-    <div class="form-group"><label>Current Price</label><input id="f-current" type="number" step="0.01"></div>
-    <div class="form-group"><label>Shares</label><input id="f-shares" type="number"></div>
-    <div class="form-group"><label>Stop Loss</label><input id="f-sl" type="number" step="0.01"></div>
-    <div class="form-group"><label>Take Profit</label><input id="f-tp" type="number" step="0.01"></div>
-    <div class="form-group"><label>Thesis</label><textarea id="f-thesis"></textarea></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitAddTrade()">Add</button></div>
-  `);
-}
-async function submitAddTrade() {
-  const entry = parseFloat(document.getElementById('f-entry').value)||0;
-  const current = parseFloat(document.getElementById('f-current').value)||0;
-  const shares = parseFloat(document.getElementById('f-shares').value)||0;
-  const invested = entry*shares;
-  const currentValue = current*shares;
-  const pnl = currentValue-invested;
-  await api('trading?type=positions', 'POST', {
-    ticker: document.getElementById('f-ticker').value,
-    company: document.getElementById('f-company').value,
-    side: document.getElementById('f-side').value,
-    entryPrice: entry, currentPrice: current, shares, invested, currentValue, pnl,
-    pnlPercent: invested?(pnl/invested)*100:0,
-    stopLoss: parseFloat(document.getElementById('f-sl').value)||null,
-    takeProfit: parseFloat(document.getElementById('f-tp').value)||null,
-    status: 'open',
-    thesis: document.getElementById('f-thesis').value,
-    tags: [], entryDate: new Date().toISOString(),
-  });
-  await logActivity('Added trade: ' + document.getElementById('f-ticker').value, 'trading');
-  closeModal(); navigate('trading');
-}
+function closeModal(e) { if (!e || e.target.classList.contains('modal-overlay')) document.getElementById('modal-container').innerHTML = ''; }
+function v(id) { const el = document.getElementById(id); return el ? el.value : ''; }
 
-function openEditTrade(p) {
-  openModal('Edit Position', `
-    <div class="form-group"><label>Ticker</label><input id="f-ticker" value="${esc(p.ticker)}"></div>
-    <div class="form-group"><label>Current Price</label><input id="f-current" type="number" step="0.01" value="${p.currentPrice||''}"></div>
-    <div class="form-group"><label>Stop Loss</label><input id="f-sl" type="number" step="0.01" value="${p.stopLoss||''}"></div>
-    <div class="form-group"><label>Take Profit</label><input id="f-tp" type="number" step="0.01" value="${p.takeProfit||''}"></div>
-    <div class="form-group"><label>Status</label><select id="f-status">${['open','closed-profit','closed-loss','stopped-out'].map(s=>`<option ${s===p.status?'selected':''}>${s}</option>`).join('')}</select></div>
-    <div class="form-group"><label>Thesis</label><textarea id="f-thesis">${esc(p.thesis||'')}</textarea></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="updateTrade('${p.id}',${p.entryPrice},${p.shares})">Save</button></div>
-  `);
-}
-async function updateTrade(id, entryPrice, shares) {
-  const current = parseFloat(document.getElementById('f-current').value)||0;
-  const invested = entryPrice*shares;
-  const currentValue = current*shares;
-  const pnl = currentValue-invested;
-  const status = document.getElementById('f-status').value;
-  const body = { ticker: document.getElementById('f-ticker').value, currentPrice: current, currentValue, pnl, pnlPercent: invested?(pnl/invested)*100:0, stopLoss: parseFloat(document.getElementById('f-sl').value)||null, takeProfit: parseFloat(document.getElementById('f-tp').value)||null, status, thesis: document.getElementById('f-thesis').value };
-  if (status !== 'open' && !body.exitDate) { body.exitDate = new Date().toISOString(); body.exitPrice = current; }
-  await api(`trading?type=positions&id=${id}`, 'PUT', body);
-  closeModal(); navigate('trading');
-}
-async function deleteTrade(id) { if(!confirm('Delete?'))return; await api(`trading?type=positions&id=${id}`, 'DELETE'); navigate('trading'); }
-async function deleteTradeWatchlist(id) { if(!confirm('Delete?'))return; await api(`trading?type=watchlist&id=${id}`, 'DELETE'); navigate('trading'); }
-
-function openAddTradeWatchlist() {
-  openModal('Add to Watchlist', `
-    <div class="form-group"><label>Ticker</label><input id="f-ticker" placeholder="AAPL"></div>
-    <div class="form-group"><label>Company</label><input id="f-company" placeholder="Apple Inc."></div>
-    <div class="form-group"><label>Target Entry</label><input id="f-target" type="number" step="0.01"></div>
-    <div class="form-group"><label>Current Price</label><input id="f-current" type="number" step="0.01"></div>
-    <div class="form-group"><label>Thesis</label><textarea id="f-thesis"></textarea></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitTradeWatchlist()">Add</button></div>
-  `);
-}
-async function submitTradeWatchlist() {
-  await api('trading?type=watchlist', 'POST', {
-    ticker: document.getElementById('f-ticker').value,
-    company: document.getElementById('f-company').value,
-    targetEntry: parseFloat(document.getElementById('f-target').value)||0,
-    currentPrice: parseFloat(document.getElementById('f-current').value)||0,
-    thesis: document.getElementById('f-thesis').value,
-    alerts: [],
-  });
-  closeModal(); navigate('trading');
-}
-
-function openAddJournal() {
-  openModal('Add Journal Entry', `
-    <div class="form-group"><label>Ticker</label><input id="f-ticker" placeholder="AAPL"></div>
-    <div class="form-group"><label>Type</label><select id="f-type"><option>entry</option><option>exit</option><option>update</option><option>thesis</option><option>note</option></select></div>
-    <div class="form-group"><label>Note</label><textarea id="f-note" placeholder="What happened?"></textarea></div>
-    <div class="form-actions"><button class="btn btn-ghost" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="submitJournal()">Add</button></div>
-  `);
-}
-async function submitJournal() {
-  await api('trading?type=journal', 'POST', {
-    ticker: document.getElementById('f-ticker').value,
-    type: document.getElementById('f-type').value,
-    note: document.getElementById('f-note').value,
-  });
-  closeModal(); navigate('trading');
-}
-
-// Activity logger helper
-async function logActivity(action, section) {
-  try { await api('activity', 'POST', { agentName: 'Dashboard', action, section, status: 'success' }); } catch {}
-}
+// ========== INIT ==========
+if (window.location.hash) { currentSection = window.location.hash.slice(1); }
+checkAuth();
