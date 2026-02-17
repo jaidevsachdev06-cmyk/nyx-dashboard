@@ -165,5 +165,17 @@
     "notes": "50% of grade. Closed-book, 2.5 hours. Date TBD.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:32:23.413Z"
+  },
+  {
+    "id": "5d99ff87-94e0-4a6c-b633-cee2a1833d65",
+    "title": "HE5091 L6: Economics of Public Policy (Ch 13,14)",
+    "course": "HE5091 Principles of Economics",
+    "type": "reading",
+    "dueDate": "2026-02-20T23:59:00Z",
+    "priority": "high",
+    "status": "todo",
+    "notes": "E-Learning recorded lecture. FBAH Ch 13 & 14. Public goods, externalities, pollution control.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:00.784Z"
   }
 ]
