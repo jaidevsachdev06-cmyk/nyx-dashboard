@@ -106,5 +106,17 @@
     "notes": "60% of grade. Date TBD.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:32:05.849Z"
+  },
+  {
+    "id": "21d2348b-8008-4211-a797-13ffa7ec2eb1",
+    "title": "AB1201 Group Project Presentation",
+    "course": "AB1201 Financial Management",
+    "type": "presentation",
+    "dueDate": null,
+    "priority": "high",
+    "status": "todo",
+    "notes": "Groups of 3-4, weekly from Week 4. 10% group + 10% individual. Peer eval on GradeWay after Week 13.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:32:07.685Z"
   }
 ]
