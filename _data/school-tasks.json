@@ -225,5 +225,17 @@
     "notes": "E-Learning recorded lecture. FBAH Ch 21, 22 & 23.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:08.848Z"
+  },
+  {
+    "id": "97445bf7-f09d-4f08-adde-e32ab79a1484",
+    "title": "HE5091 L11: AD-AS & Macro Policy (Ch 24,25)",
+    "course": "HE5091 Principles of Economics",
+    "type": "reading",
+    "dueDate": "2026-04-03T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "FBAH Ch 24 & 25.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:10.878Z"
   }
 ]
