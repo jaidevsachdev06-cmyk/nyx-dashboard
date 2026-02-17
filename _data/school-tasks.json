@@ -82,5 +82,17 @@
     "notes": "50% of grade. Closed-book, pen & paper. Bring calculator. Date TBD.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:32:02.162Z"
+  },
+  {
+    "id": "d35b8170-1f2e-4766-9b33-2687c2db6515",
+    "title": "AB0403 Online Final Exam",
+    "course": "AB0403 Decision Making with Prog & Analytics",
+    "type": "exam",
+    "dueDate": null,
+    "priority": "critical",
+    "status": "todo",
+    "notes": "45% of grade. Online via NTULearn. Date TBD.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:32:03.972Z"
   }
 ]
