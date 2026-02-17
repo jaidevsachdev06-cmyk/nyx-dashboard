@@ -2,14 +2,61 @@
   {
     "id": "1e203c01-1cb9-4ed8-8968-ba2b10479be4",
     "name": "Nyx",
-    "role": "Main agent",
+    "role": "Main Agent — Command Center",
     "status": "online",
-    "avatar": "🌙",
-    "currentTask": "Dashboard deployment",
+    "avatar": "🌑",
+    "currentTask": "Dashboard deployment & optimization",
     "tools": [
-      "GitHub",
-      "Vercel"
+      "Task management",
+      "Web search",
+      "Gmail/Calendar/Drive",
+      "GitHub & Vercel deployment",
+      "Cron scheduling",
+      "Sub-agent orchestration",
+      "Dashboard management",
+      "Polymarket analysis",
+      "Voice notes & TTS"
     ],
-    "createdAt": "2026-02-17T07:07:24.321Z"
+    "createdAt": "2026-02-17T07:07:24.321Z",
+    "description": "Oversees all operations, manages sub-agents, direct line to Jaidev. Handles research, scheduling, trading analysis, and system orchestration.",
+    "model": "claude-opus-4",
+    "accessList": [
+      "school",
+      "polymarket",
+      "trading",
+      "agents",
+      "activity"
+    ],
+    "integrations": [
+      "Telegram",
+      "Google Workspace",
+      "GitHub",
+      "Vercel",
+      "AgentMail",
+      "Polymarket API"
+    ],
+    "files": [
+      {
+        "name": "MEMORY.md",
+        "desc": "Long-term memory — curated decisions, people, context"
+      },
+      {
+        "name": "SOUL.md",
+        "desc": "Core identity and personality definition"
+      },
+      {
+        "name": "USER.md",
+        "desc": "Complete profile of Jaidev (schedule, interests, preferences)"
+      },
+      {
+        "name": "HEARTBEAT.md",
+        "desc": "Periodic check-in tasks and proactive monitoring"
+      },
+      {
+        "name": "TOOLS.md",
+        "desc": "Credentials map — Google, GitHub, Vercel, AgentMail"
+      }
+    ],
+    "lastActive": "2026-02-17T07:20:00Z"
   }
 ]
