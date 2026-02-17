@@ -78,7 +78,7 @@
     "id": "3dd10cb4-d27d-4771-8040-25e0603d9e51",
     "name": "Stormwatch",
     "avatar": "🌪️",
-    "role": "Automated weather market scanner — pulls NWS hourly forecasts, aviation TAFs, and Simmer markets. Trades when edge ≥10%. Runs 3x daily.",
+    "role": "Oracle's subagent — automated weather market scanner. Pulls NWS hourly forecasts, aviation TAFs, and Simmer markets. Trades when edge ≥10%. Runs 4x daily at optimal US market times.",
     "status": "idle",
     "currentTask": "Next scan: 2:00 PM SGT",
     "tools": [
@@ -92,7 +92,18 @@
       "activity"
     ],
     "lastActive": "2026-02-17T08:29:58Z",
-    "createdAt": "2026-02-17T08:29:58.697Z"
+    "createdAt": "2026-02-17T08:29:58.697Z",
+    "description": "Subagent of Oracle 🔮. Handles the automated scanning and execution loop for weather prediction markets.",
+    "files": [
+      {
+        "name": "weather-trading-journal.md",
+        "desc": "Cumulative lessons from resolved weather trades"
+      },
+      {
+        "name": "polymarket-strategy.md",
+        "desc": "Trading framework and risk rules"
+      }
+    ]
   },
   {
     "id": "92c0f02c-2b39-4078-8956-6256c4683b3c",
