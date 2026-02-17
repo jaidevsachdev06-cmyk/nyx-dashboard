@@ -24,5 +24,33 @@
     "avatar": "🔮",
     "lastActive": "2026-02-17T08:29:47Z",
     "createdAt": "2026-02-17T08:23:38.943Z"
+  },
+  {
+    "id": "db5777b9-f232-49f7-abdb-b027e9912ea1",
+    "name": "Nyx",
+    "avatar": "🌑",
+    "role": "Primary AI assistant — orchestrates all sub-agents, manages comms, calendar, email, research, and daily operations.",
+    "status": "online",
+    "currentTask": "Active — managing dashboard and weather trading setup",
+    "tools": [
+      "Telegram",
+      "Email (AgentMail)",
+      "Calendar (Google)",
+      "Web Search",
+      "Notion",
+      "GitHub",
+      "Vercel",
+      "TTS"
+    ],
+    "accessList": [
+      "dashboard",
+      "agents",
+      "school",
+      "polymarket",
+      "trading",
+      "activity"
+    ],
+    "lastActive": "2026-02-17T08:29:50Z",
+    "createdAt": "2026-02-17T08:29:50.966Z"
   }
 ]
