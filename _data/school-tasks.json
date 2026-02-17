@@ -309,5 +309,17 @@
     "notes": "SSAS Ch 12. LAMS 10 due Mar 29. PA 8 due Apr 12.",
     "createdBy": "ScholarNyx",
     "createdAt": "2026-02-17T07:33:23.254Z"
+  },
+  {
+    "id": "8242c7ee-2b8c-4ee2-b541-6e1291861e3e",
+    "title": "AD1102 eLecture 11: Cash Flow Statements",
+    "course": "AD1102 Financial Accounting",
+    "type": "reading",
+    "dueDate": "2026-04-05T23:59:00Z",
+    "priority": "medium",
+    "status": "todo",
+    "notes": "SSAS Ch 14. LAMS 11 due Apr 5.",
+    "createdBy": "ScholarNyx",
+    "createdAt": "2026-02-17T07:33:25.256Z"
   }
 ]
