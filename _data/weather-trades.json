@@ -34,9 +34,9 @@
     "side": "yes",
     "bucket": "60-61°F",
     "entryPrice": 0.155,
-    "currentPrice": 0.248,
+    "currentPrice": 0.13,
     "shares": 48.8,
-    "status": "open",
+    "status": "closed-loss",
     "noaaForecast": "62°F",
     "forecastConfidence": "medium",
     "reasoning": "NWS says 62°F but thunderstorms Tue night could bring cold front early. Hedge position at 15.5¢.",
@@ -48,7 +48,8 @@
       "paper-trade",
       "chicago"
     ],
-    "createdAt": "2026-02-17T08:28:42.462Z"
+    "createdAt": "2026-02-17T08:28:42.462Z",
+    "updatedAt": "2026-02-17T14:06:52.465Z"
   },
   {
     "id": "7083dfa1-295c-4a9a-991f-c0ce3c500060",
