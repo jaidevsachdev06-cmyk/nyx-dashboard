@@ -200,7 +200,7 @@
     "side": "yes",
     "bucket": "62-63°F",
     "entryPrice": 0.27,
-    "currentPrice": 0.302,
+    "currentPrice": 0.349,
     "shares": 62.4,
     "status": "open",
     "noaaForecast": "62°F",
@@ -214,7 +214,8 @@
       "paper-trade",
       "chicago"
     ],
-    "createdAt": "2026-02-17T14:07:33.694Z"
+    "createdAt": "2026-02-17T14:07:33.694Z",
+    "updatedAt": "2026-02-17T18:03:10.340Z"
   },
   {
     "id": "0f6b5b5b-0e90-4107-b585-37f8b3255844",
