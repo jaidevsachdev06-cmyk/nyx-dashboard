@@ -389,5 +389,25 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-17T16:21:16.435Z"
+  },
+  {
+    "id": "25f6a160-417b-454e-ad5e-bf82595fad6c",
+    "market": "7.0+ earthquake by March 31",
+    "side": "YES",
+    "entryPrice": 0.74,
+    "currentPrice": 0.74,
+    "shares": 40.5,
+    "whales": "gopfan2, EltonMa",
+    "whaleCount": 2,
+    "avgScore": 58.4,
+    "category": "consensus",
+    "endDate": "2026-03-31",
+    "createdAt": "2026-02-17T16:21:20.295Z",
+    "invested": 29.97,
+    "currentValue": 29.97,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "entryDate": "2026-02-17T16:21:20.295Z"
   }
 ]
