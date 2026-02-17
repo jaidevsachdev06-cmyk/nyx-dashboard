@@ -147,5 +147,26 @@
     "createdBy": "Nyx",
     "createdAt": "2026-02-17T07:12:30.159Z",
     "entryDate": "2026-02-17T07:12:30.159Z"
+  },
+  {
+    "id": "1350f4fb-9322-446f-a002-4458522f683f",
+    "market": "Will the DHS shutdown last 30 days or more?",
+    "position": "No",
+    "entryPrice": 0.645,
+    "currentPrice": 0.645,
+    "shares": 7.75,
+    "invested": 5,
+    "currentValue": 5,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "notes": "30+ days extreme. Hedge pair C with 14+ YES.",
+    "tags": [
+      "politics",
+      "hedge-C"
+    ],
+    "createdBy": "Nyx",
+    "createdAt": "2026-02-17T07:12:32.997Z",
+    "entryDate": "2026-02-17T07:12:32.997Z"
   }
 ]
