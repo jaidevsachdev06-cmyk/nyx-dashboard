@@ -8,9 +8,9 @@
     "side": "yes",
     "bucket": "76-77°F",
     "entryPrice": 0.115,
-    "currentPrice": 0.095,
+    "currentPrice": 0,
     "shares": 86.3,
-    "status": "open",
+    "status": "resolved",
     "noaaForecast": "77°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly forecast peaks at 77°F. Market prices 78-79 as favorite at 39¢ but NWS disagrees. Aviation TAF: E winds 10kt, stable.",
@@ -23,7 +23,8 @@
       "miami"
     ],
     "createdAt": "2026-02-17T08:28:40.142Z",
-    "updatedAt": "2026-02-18T10:03:30.891Z"
+    "updatedAt": "2026-02-18T23:02:54.990Z",
+    "result": "loss"
   },
   {
     "id": "42ea2859-d865-499f-a195-35e90538442d",
