@@ -227,7 +227,7 @@
     "bucket": "74-75°F",
     "entryPrice": 0.256,
     "currentPrice": 0.25,
-    "shares": 29,
+    "shares": 14,
     "status": "open",
     "noaaForecast": "75°F",
     "forecastConfidence": "medium-high",
@@ -241,8 +241,8 @@
       "feb19"
     ],
     "createdAt": "2026-02-18T02:04:09.118Z",
-    "updatedAt": "2026-02-18T23:16:38.764Z",
-    "notes": " | Partial exit (58.9→29): Forecast 75.4°F near bin boundary"
+    "updatedAt": "2026-02-18T23:17:49.713Z",
+    "notes": " | Partial exit (58.9→29): Forecast 75.4°F near bin boundary | Partial exit (29→14): Forecast 75.4°F near bin boundary"
   },
   {
     "id": "cf06b26b-189e-4e0d-a086-81867fd95fc5",
