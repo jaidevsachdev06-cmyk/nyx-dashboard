@@ -191,30 +191,6 @@
     "entryDate": "2026-02-17T07:12:35.729Z"
   },
   {
-    "id": "616c0b0b-fed9-420c-998a-feb727e4bd97",
-    "market": "Will the highest temperature in Chicago be between 60-61°F on February 18?",
-    "marketUrl": "https://simmer.markets/faea074e-7ed0-4011-8d6f-49ec775b9899",
-    "position": "Yes",
-    "entryPrice": 0.155,
-    "currentPrice": 0.13,
-    "shares": 48.8,
-    "status": "closed-loss",
-    "notes": "NWS says Chicago high 62°F but thunderstorms Tue night could bring cold front early. If front arrives by afternoon, high caps at 60-61. Hedge position.",
-    "tags": [
-      "weather",
-      "temperature",
-      "simmer",
-      "paper-trade",
-      "chicago"
-    ],
-    "createdAt": "2026-02-17T08:23:56.706Z",
-    "invested": 7.563999999999999,
-    "currentValue": 6.343999999999999,
-    "pnl": -1.2199999999999998,
-    "pnlPercent": -16.129032258064516,
-    "entryDate": "2026-02-17T08:23:56.706Z"
-  },
-  {
     "id": "742ddc71-3c9c-4b05-b53b-687db687d3cd",
     "market": "Will the highest temperature in New York City be between 44-45°F on February 18?",
     "marketUrl": "https://simmer.markets/c5c3027d-81bf-4025-aad3-f1163b12126d",
