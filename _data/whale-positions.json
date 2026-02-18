@@ -196,8 +196,10 @@
     "currentValue": 22.826999999999998,
     "pnl": -2.174000000000003,
     "pnlPercent": -8.695652173913055,
-    "status": "closed-win",
-    "entryDate": "2026-02-17T16:20:05.359Z"
+    "status": "closed-loss",
+    "entryDate": "2026-02-17T16:20:05.359Z",
+    "exitPrice": 0.105,
+    "reasoning": "Barcelona CL odds dropped. Closed at small loss (-8.7%)."
   },
   {
     "id": "6da1f257-efb2-41c6-97cc-0797c8d2ed31",
