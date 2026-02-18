@@ -14,9 +14,9 @@ module.exports = async (req, res) => {
     const traders = Array.isArray(data) ? data : (data.traders || []);
 
     const result = traders.map((t, i) => {
-      const s = t.score || {};
+      const s = t.smart_score || t.score || {};
       return {
-        rank: i + 1,
+        rank: t.rank || i + 1,
         name: t.name || t.username || 'Unknown',
         wallet: t.wallet ? t.wallet.slice(0, 10) + '...' : '',
         tier: s.tier || '—',
