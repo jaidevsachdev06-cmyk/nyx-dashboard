@@ -396,13 +396,18 @@ async function loadNoaaForecasts() {
 }
 
 // ========== WHALE COPYTRADING ==========
-function gradeScore(score) {
-  if (score >= 90) return { grade: 'A+', color: '#00ff88' };
-  if (score >= 80) return { grade: 'A', color: '#00cc66' };
-  if (score >= 70) return { grade: 'B+', color: '#88cc00' };
-  if (score >= 60) return { grade: 'B', color: '#cccc00' };
-  if (score >= 50) return { grade: 'C', color: '#ff8800' };
-  return { grade: 'D', color: '#ff4444' };
+function tierColor(tier) {
+  if (tier === 'Elite') return '#00ff88';
+  if (tier === 'Great') return '#00cc66';
+  if (tier === 'Good') return '#88cc00';
+  if (tier === 'Average') return '#cccc00';
+  if (tier === 'Risky') return '#ff4444';
+  return '#888';
+}
+
+function tierBadge(tier) {
+  const c = tierColor(tier);
+  return `<span style="color:${c};font-weight:600">${tier}</span>`;
 }
 
 async function loadWhaleTrades() {
@@ -424,48 +429,8 @@ async function loadWhaleTrades() {
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
 
-    // === WHALE SCORECARD ===
-    // Build per-whale stats from all trades (open + closed)
-    const whaleStats = {};
-    all.forEach(t => {
-      const whaleList = (t.whales || '').split(',').map(w => w.trim()).filter(Boolean);
-      whaleList.forEach(w => {
-        if (!whaleStats[w]) whaleStats[w] = { name: w, trades: 0, wins: 0, losses: 0, totalPnl: 0, openTrades: 0 };
-        whaleStats[w].trades++;
-        if (t.status === 'open') {
-          whaleStats[w].openTrades++;
-          whaleStats[w].totalPnl += (t.pnl || 0);
-        } else if (t.status === 'closed-win') {
-          whaleStats[w].wins++;
-          whaleStats[w].totalPnl += (t.pnl || 0);
-        } else if (t.status === 'closed-loss') {
-          whaleStats[w].losses++;
-          whaleStats[w].totalPnl += (t.pnl || 0);
-        }
-      });
-    });
-
-    const scorecard = document.getElementById('whale-scorecard');
-    const whaleArr = Object.values(whaleStats);
-    if (whaleArr.length) {
-      scorecard.innerHTML = whaleArr.sort((a,b) => b.totalPnl - a.totalPnl).map(w => {
-        const wr = (w.wins + w.losses) > 0 ? ((w.wins / (w.wins + w.losses)) * 100).toFixed(0) : '—';
-        // Score: weighted combo of win rate (40%), PnL direction (30%), trade count (30%)
-        const wrScore = (w.wins + w.losses) > 0 ? (w.wins / (w.wins + w.losses)) * 100 : 50;
-        const pnlScore = Math.min(100, Math.max(0, 50 + w.totalPnl * 2));
-        const activityScore = Math.min(100, w.trades * 15);
-        const composite = Math.round(wrScore * 0.4 + pnlScore * 0.3 + activityScore * 0.3);
-        const { grade, color } = gradeScore(composite);
-        return `<div class="summary-card" style="min-width:140px">
-          <div class="label">${w.name}</div>
-          <div class="value mono" style="font-size:24px;color:${color}">${grade}</div>
-          <div class="detail">${w.trades} trades · ${w.openTrades} open</div>
-          <div class="detail">WR: ${wr}% · P&L: <span class="${pnlClass(w.totalPnl)}">${fmtMoney(w.totalPnl)}</span></div>
-        </div>`;
-      }).join('');
-    } else {
-      scorecard.innerHTML = '<div style="color:var(--text-dim);padding:12px">No whale data yet</div>';
-    }
+    // === WHALE SCORECARD (from predicting.top live data) ===
+    loadWhaleScorecard();
 
     // === CONSENSUS TRADES (3+ whales on same market+side) ===
     const consensusMap = {};
@@ -517,6 +482,40 @@ async function loadWhaleTrades() {
       <td>${t.status}</td>
     </tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim)">No closed whale positions</td></tr>';
   } catch (e) { console.error('Whale load error:', e); }
+}
+
+async function loadWhaleScorecard() {
+  const tbody = document.getElementById('whale-scorecard-body');
+  tbody.innerHTML = '<tr><td colspan="11" style="color:var(--text-dim)">Loading from predicting.top...</td></tr>';
+  try {
+    const whales = await get('/api/whales?limit=20');
+    if (!whales.length) { tbody.innerHTML = '<tr><td colspan="11" style="color:var(--text-dim)">No data</td></tr>'; return; }
+    tbody.innerHTML = whales.filter(w => w.smartScore > 0).map(w => {
+      const wrPct = (w.winRate * 100).toFixed(1);
+      const wrClass = w.winRate >= 0.6 ? 'pnl-pos' : w.winRate < 0.4 ? 'pnl-neg' : '';
+      const scoreColor = tierColor(w.tier);
+      const retFmt = w.totalReturn >= 1000000 ? `$${(w.totalReturn/1000000).toFixed(1)}M` :
+                     w.totalReturn >= 1000 ? `$${(w.totalReturn/1000).toFixed(0)}K` :
+                     `$${w.totalReturn.toFixed(0)}`;
+      const ddPct = (w.maxDrawdownPct * 100).toFixed(1);
+      return `<tr>
+        <td class="mono">${w.rank}</td>
+        <td><strong>${w.name}</strong><div style="font-size:10px;color:var(--text-dim)">${w.wallet}</div></td>
+        <td>${tierBadge(w.tier)}</td>
+        <td class="mono" style="color:${scoreColor};font-weight:700">${w.smartScore.toFixed(1)}</td>
+        <td class="mono ${wrClass}">${wrPct}%</td>
+        <td class="mono">${w.winCount}/${w.lossCount}</td>
+        <td class="mono ${w.sharpe >= 2 ? 'pnl-pos' : w.sharpe < 0 ? 'pnl-neg' : ''}">${w.sharpe.toFixed(2)}</td>
+        <td class="mono ${w.maxDrawdownPct > 0.5 ? 'pnl-neg' : ''}">${ddPct}%</td>
+        <td class="mono ${w.profitFactor >= 2 ? 'pnl-pos' : w.profitFactor < 1 ? 'pnl-neg' : ''}">${w.profitFactor.toFixed(1)}x</td>
+        <td class="mono pnl-pos">${retFmt}</td>
+        <td class="mono">${w.longestWinStreak}</td>
+      </tr>`;
+    }).join('');
+  } catch (e) {
+    tbody.innerHTML = '<tr><td colspan="11" style="color:var(--red)">Failed to load scorecard</td></tr>';
+    console.error('Scorecard error:', e);
+  }
 }
 
 async function editWhalePosition(id) {
