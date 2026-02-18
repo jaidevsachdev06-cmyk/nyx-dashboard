@@ -122,7 +122,7 @@
     "currentValue": 29.997,
     "pnl": 0,
     "pnlPercent": 0,
-    "status": "open",
+    "status": "closed-loss",
     "entryDate": "2026-02-17T16:19:53.786Z"
   },
   {
