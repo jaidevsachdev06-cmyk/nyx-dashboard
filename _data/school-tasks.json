@@ -258,10 +258,11 @@
     "type": "reading",
     "dueDate": "2026-02-22T23:59:00Z",
     "priority": "high",
-    "status": "todo",
+    "status": "done",
     "notes": "SSAS Ch 8. LAMS 6 due Feb 22. Inventory costing methods, lower of cost/NRV.",
     "createdBy": "ScholarNyx",
-    "createdAt": "2026-02-17T07:33:15.210Z"
+    "createdAt": "2026-02-17T07:33:15.210Z",
+    "completedAt": "2026-02-18T08:18:31.996Z"
   },
   {
     "id": "0c898137-5192-470c-afd0-d61e69ebb19a",
