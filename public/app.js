@@ -277,36 +277,64 @@ async function editTask(id) {
 async function loadPolymarket() {
   try {
     const [positions, watchlist] = await Promise.all([get('/api/polymarket?type=positions'), get('/api/polymarket?type=watchlist')]);
+    // Client-side P&L
+    positions.forEach(p => {
+      if (p.entryPrice != null && p.currentPrice != null && p.shares) {
+        p.pnl = (p.currentPrice - p.entryPrice) * p.shares;
+      } else { p.pnl = p.pnl || 0; }
+    });
     const open = positions.filter(p => p.status === 'open');
     const closed = positions.filter(p => p.status !== 'open');
-    const totalInvested = open.reduce((s, p) => s + (p.invested || 0), 0);
-    const totalValue = open.reduce((s, p) => s + (p.currentValue || 0), 0);
-    const totalPnl = totalValue - totalInvested;
+    const totalInvested = open.reduce((s, p) => s + ((p.entryPrice || 0) * (p.shares || 0)), 0);
+    const totalPnl = open.reduce((s, p) => s + (p.pnl || 0), 0);
     const wins = closed.filter(p => p.status === 'closed-win').length;
     const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
 
     document.getElementById('poly-summary').innerHTML = `
+      <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
-      <div class="summary-card"><div class="label">Current Value</div><div class="value mono">${fmtMoney(totalValue)}</div></div>
-      <div class="summary-card"><div class="label">Total P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
+
+    const sideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? '#22c55e' : '#ef4444'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(s||'—').toUpperCase()}</span>`;
+
     document.querySelector('#poly-open-table tbody').innerHTML = open.map(p => `<tr>
-      <td style="max-width:250px">${p.market || ''}</td>
-      <td>${p.position || ''}</td>
+      <td style="max-width:250px"><a href="${p.marketUrl || '#'}" target="_blank" style="color:var(--accent)">${p.market || ''}</a></td>
+      <td>${sideBadge(p.position)}</td>
       <td class="mono">${fmtMoney(p.entryPrice)}</td>
       <td class="mono">${fmtMoney(p.currentPrice)}</td>
       <td class="mono">${p.shares || ''}</td>
       <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td>
-      <td class="mono ${pnlClass(p.pnlPercent)}">${fmtPct(p.pnlPercent)}</td>
       <td><button class="btn btn-sm" onclick="editPolyPosition('${p.id}')">Edit</button></td>
-    </tr>`).join('') || '<tr><td colspan="8" style="color:var(--text-dim)">No open positions</td></tr>';
-    document.querySelector('#poly-closed-table tbody').innerHTML = closed.map(p => `<tr>
-      <td>${p.market || ''}</td><td>${p.position || ''}</td>
-      <td class="mono">${fmtMoney(p.entryPrice)}</td><td class="mono">${fmtMoney(p.exitPrice)}</td>
-      <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td>
-      <td>${p.status}</td>
-    </tr>`).join('') || '<tr><td colspan="6" style="color:var(--text-dim)">No closed positions</td></tr>';
+    </tr>
+    <tr class="evidence-row"><td colspan="7" style="padding:4px 12px 12px;border-top:none;background:rgba(255,255,255,0.02)">
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
+        <span>${sideBadge(p.position)}</span>
+        <span>📊 ${(p.tags || []).map(t => `<span style="background:var(--surface);padding:1px 5px;border-radius:3px;font-size:11px">${t}</span>`).join(' ') || '—'}</span>
+        <span>⏱️ ${p.createdAt ? timeAgo(p.createdAt) : '—'}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.4">💡 ${p.notes || 'No reasoning recorded'}</div>
+    </td></tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim)">No open positions</td></tr>';
+
+    // Trade log for closed
+    document.getElementById('poly-trade-log').innerHTML = closed.length ? closed.map(p => `
+      <div class="activity-item">
+        <div class="activity-dot ${p.status === 'closed-win' ? 'success' : 'error'}"></div>
+        <div class="activity-content">
+          <div class="activity-action">
+            <strong>${p.market}</strong> — ${p.status === 'closed-win' ? '✅ WIN' : '❌ LOSS'}
+            <span class="mono ${pnlClass(p.pnl)}" style="margin-left:8px">${fmtMoney(p.pnl)}</span>
+          </div>
+          <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
+            ${p.position || ''} · Entry ${fmtMoney(p.entryPrice)} → Exit ${fmtMoney(p.exitPrice || p.currentPrice)} · ${p.shares || 0} shares
+          </div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.4">💡 ${p.notes || 'No reasoning'}</div>
+          <div class="activity-meta"><span>${p.updatedAt ? timeAgo(p.updatedAt) : '—'}</span></div>
+        </div>
+      </div>
+    `).join('') : '<div style="color:var(--text-dim);padding:20px">No closed trades yet</div>';
+
     document.querySelector('#poly-watch-table tbody').innerHTML = watchlist.map(w => `<tr>
       <td>${w.market || ''}</td><td class="mono">${fmtMoney(w.currentPrice)}</td>
       <td class="mono">${fmtMoney(w.targetEntry)}</td><td>${w.notes || ''}</td>
@@ -338,9 +366,9 @@ async function loadWeatherTrades() {
     const totalInvestedW = open.reduce((s, t) => s + ((t.entryPrice || 0) * (t.shares || 0)), 0);
 
     document.getElementById('weather-summary').innerHTML = `
-      <div class="summary-card"><div class="label">Weather Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvestedW)}</div></div>
-      <div class="summary-card"><div class="label">Weather P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
     loadNoaaForecasts();
@@ -458,18 +486,23 @@ async function loadWhaleTrades() {
   try {
     const trades = await get('/api/whale');
     const all = Array.isArray(trades) ? trades : [];
+    // Client-side P&L
+    all.forEach(t => {
+      if (t.entryPrice != null && t.currentPrice != null && t.shares) {
+        t.pnl = (t.currentPrice - t.entryPrice) * t.shares;
+      } else { t.pnl = t.pnl || 0; }
+    });
     const open = all.filter(t => t.status === 'open');
     const closed = all.filter(t => t.status !== 'open');
-    const totalInvested = open.reduce((s, t) => s + (t.invested || 0), 0);
-    const totalValue = open.reduce((s, t) => s + (t.currentValue || t.invested || 0), 0);
-    const totalPnl = totalValue - totalInvested;
+    const totalInvested = open.reduce((s, t) => s + ((t.entryPrice || 0) * (t.shares || 0)), 0);
+    const totalPnl = open.reduce((s, t) => s + (t.pnl || 0), 0);
     const wins = closed.filter(t => t.status === 'closed-win').length;
     const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
 
     document.getElementById('whale-summary').innerHTML = `
-      <div class="summary-card"><div class="label">Whale Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
-      <div class="summary-card"><div class="label">Whale P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
 
@@ -504,27 +537,49 @@ async function loadWhaleTrades() {
       </tr>`;
     }).join('') : '<tr><td colspan="7" style="color:var(--text-dim)">No consensus trades yet (need 3+ whales on same position)</td></tr>';
 
-    // === ACTIVE POSITIONS ===
+    // === ACTIVE POSITIONS with evidence rows ===
+    const whaleConfBadge = c => {
+      const colors = { high: '#22c55e', 'medium-high': '#84cc16', medium: '#eab308', low: '#ef4444' };
+      return `<span style="background:${colors[c] || '#666'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(c||'—').toUpperCase()}</span>`;
+    };
+    const whaleSideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? '#22c55e' : '#ef4444'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(s||'—').toUpperCase()}</span>`;
+
     document.querySelector('#whale-open-table tbody').innerHTML = open.map(t => `<tr>
-      <td style="max-width:220px">${t.market || ''}</td>
-      <td>${t.side || ''}</td>
+      <td style="max-width:220px"><a href="${t.marketUrl || '#'}" target="_blank" style="color:var(--accent)">${t.market || ''}</a></td>
+      <td>${whaleSideBadge(t.side)}</td>
       <td class="mono">${fmtMoney(t.entryPrice)}</td>
       <td class="mono">${fmtMoney(t.currentPrice)}</td>
       <td class="mono">${t.shares || ''}</td>
-      <td>${t.whales || ''}</td>
       <td class="mono ${pnlClass(t.pnl)}">${fmtMoney(t.pnl)}</td>
-      <td class="mono ${pnlClass(t.pnlPercent)}">${fmtPct(t.pnlPercent)}</td>
       <td><button class="btn btn-sm" onclick="editWhalePosition('${t.id}')">Edit</button></td>
-    </tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim)">No open whale positions</td></tr>';
+    </tr>
+    <tr class="evidence-row"><td colspan="7" style="padding:4px 12px 12px;border-top:none;background:rgba(255,255,255,0.02)">
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
+        <span>🐋 Whales: <strong>${t.whales || '—'}</strong></span>
+        <span>📊 Confidence: ${whaleConfBadge(t.confidence)}</span>
+        <span>📡 ${t.source || 'predicting.top'}</span>
+        <span>⏱️ ${t.createdAt ? timeAgo(t.createdAt) : '—'}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.4">💡 ${t.reasoning || t.notes || 'No reasoning recorded'}</div>
+    </td></tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim)">No open whale positions</td></tr>';
 
-    // === CLOSED ===
-    document.querySelector('#whale-closed-table tbody').innerHTML = closed.map(t => `<tr>
-      <td>${t.market || ''}</td><td>${t.side || ''}</td>
-      <td class="mono">${fmtMoney(t.entryPrice)}</td><td class="mono">${fmtMoney(t.exitPrice)}</td>
-      <td>${t.whales || ''}</td>
-      <td class="mono ${pnlClass(t.pnl)}">${fmtMoney(t.pnl)}</td>
-      <td>${t.status}</td>
-    </tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim)">No closed whale positions</td></tr>';
+    // === TRADE LOG for closed ===
+    document.getElementById('whale-trade-log').innerHTML = closed.length ? closed.map(t => `
+      <div class="activity-item">
+        <div class="activity-dot ${t.status === 'closed-win' ? 'success' : 'error'}"></div>
+        <div class="activity-content">
+          <div class="activity-action">
+            <strong>${t.market}</strong> — ${t.status === 'closed-win' ? '✅ WIN' : '❌ LOSS'}
+            <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px">${fmtMoney(t.pnl)}</span>
+          </div>
+          <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
+            ${t.side || ''} · Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.currentPrice)} · ${t.shares || 0} shares · Whales: ${t.whales || '—'}
+          </div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.4">💡 ${t.reasoning || t.notes || 'No reasoning'}</div>
+          <div class="activity-meta"><span>${t.updatedAt ? timeAgo(t.updatedAt) : '—'}</span></div>
+        </div>
+      </div>
+    `).join('') : '<div style="color:var(--text-dim);padding:20px">No closed whale trades yet</div>';
   } catch (e) { console.error('Whale load error:', e); }
 }
 
