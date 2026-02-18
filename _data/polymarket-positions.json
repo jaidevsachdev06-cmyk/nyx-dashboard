@@ -85,7 +85,9 @@
     "pnl": 0.9550000000000001,
     "pnlPercent": 12.738853503184714,
     "createdAt": "2026-02-17T07:12:15.628Z",
-    "entryDate": "2026-02-17T07:12:15.628Z"
+    "entryDate": "2026-02-17T07:12:15.628Z",
+    "side": "Yes",
+    "reasoning": "DHS shutdown likely lasts 14+ days."
   },
   {
     "id": "04257182-f66b-490c-9055-31544fd0023b",
