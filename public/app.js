@@ -484,13 +484,43 @@ async function loadWhaleTrades() {
   } catch (e) { console.error('Whale load error:', e); }
 }
 
+function toggleScorecard() {
+  const wrap = document.getElementById('scorecard-wrap');
+  const toggle = document.getElementById('scorecard-toggle');
+  const open = wrap.style.display !== 'none';
+  wrap.style.display = open ? 'none' : 'block';
+  toggle.textContent = open ? '▶' : '▼';
+}
+
 async function loadWhaleScorecard() {
   const tbody = document.getElementById('whale-scorecard-body');
-  tbody.innerHTML = '<tr><td colspan="11" style="color:var(--text-dim)">Loading from predicting.top...</td></tr>';
-  try {
-    const whales = await get('/api/whales?limit=20');
-    if (!whales.length) { tbody.innerHTML = '<tr><td colspan="11" style="color:var(--text-dim)">No data</td></tr>'; return; }
-    tbody.innerHTML = whales.filter(w => w.smartScore > 0).map(w => {
+  const meta = document.getElementById('scorecard-meta');
+
+  // Check cache (refresh once per day)
+  const cached = localStorage.getItem('whale-scorecard');
+  const cacheTime = localStorage.getItem('whale-scorecard-ts');
+  const ONE_DAY = 24 * 60 * 60 * 1000;
+  let whales;
+
+  if (cached && cacheTime && (Date.now() - parseInt(cacheTime)) < ONE_DAY) {
+    whales = JSON.parse(cached);
+    const ago = Math.round((Date.now() - parseInt(cacheTime)) / 3600000);
+    meta.textContent = `(${whales.length} whales · cached ${ago}h ago)`;
+  } else {
+    tbody.innerHTML = '<tr><td colspan="11" style="color:var(--text-dim)">Fetching from predicting.top...</td></tr>';
+    try {
+      whales = await get('/api/whales?limit=200');
+      localStorage.setItem('whale-scorecard', JSON.stringify(whales));
+      localStorage.setItem('whale-scorecard-ts', Date.now().toString());
+      meta.textContent = `(${whales.filter(w=>w.smartScore>0).length} whales · just updated)`;
+    } catch (e) {
+      if (cached) { whales = JSON.parse(cached); meta.textContent = '(using stale cache)'; }
+      else { tbody.innerHTML = '<tr><td colspan="11" style="color:var(--red)">Failed to load</td></tr>'; return; }
+    }
+  }
+
+  if (!whales.length) { tbody.innerHTML = '<tr><td colspan="11" style="color:var(--text-dim)">No data</td></tr>'; return; }
+  tbody.innerHTML = whales.filter(w => w.smartScore > 0).map(w => {
       const wrPct = (w.winRate * 100).toFixed(1);
       const wrClass = w.winRate >= 0.6 ? 'pnl-pos' : w.winRate < 0.4 ? 'pnl-neg' : '';
       const scoreColor = tierColor(w.tier);
