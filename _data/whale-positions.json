@@ -216,7 +216,10 @@
     "pnl": 0,
     "pnlPercent": 0,
     "status": "open",
-    "entryDate": "2026-02-17T16:20:09.686Z"
+    "entryDate": "2026-02-17T16:20:09.686Z",
+    "tags": [
+      "legacy"
+    ]
   },
   {
     "id": "70476dd9-f0d7-49b6-95e8-d4ea8f7365d0",
