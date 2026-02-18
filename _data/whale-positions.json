@@ -320,7 +320,7 @@
     "market": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "side": "Yes",
     "entryPrice": 0,
-    "currentPrice": 0,
+    "currentPrice": 0.825,
     "shares": 10,
     "status": "open",
     "source": "consensus-scanner",
