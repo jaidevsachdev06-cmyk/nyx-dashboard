@@ -519,33 +519,29 @@ async function loadWhaleScorecard() {
     }
   }
 
-  if (!whales.length) { tbody.innerHTML = '<tr><td colspan="11" style="color:var(--text-dim)">No data</td></tr>'; return; }
+  if (!whales || !whales.length) { tbody.innerHTML = '<tr><td colspan="11" style="color:var(--text-dim)">No data</td></tr>'; return; }
   tbody.innerHTML = whales.filter(w => w.smartScore > 0).map(w => {
-      const wrPct = (w.winRate * 100).toFixed(1);
-      const wrClass = w.winRate >= 0.6 ? 'pnl-pos' : w.winRate < 0.4 ? 'pnl-neg' : '';
-      const scoreColor = tierColor(w.tier);
-      const retFmt = w.totalReturn >= 1000000 ? `$${(w.totalReturn/1000000).toFixed(1)}M` :
-                     w.totalReturn >= 1000 ? `$${(w.totalReturn/1000).toFixed(0)}K` :
-                     `$${w.totalReturn.toFixed(0)}`;
-      const ddPct = (w.maxDrawdownPct * 100).toFixed(1);
-      return `<tr>
-        <td class="mono">${w.rank}</td>
-        <td><strong>${w.name}</strong><div style="font-size:10px;color:var(--text-dim)">${w.wallet}</div></td>
-        <td>${tierBadge(w.tier)}</td>
-        <td class="mono" style="color:${scoreColor};font-weight:700">${w.smartScore.toFixed(1)}</td>
-        <td class="mono ${wrClass}">${wrPct}%</td>
-        <td class="mono">${w.winCount}/${w.lossCount}</td>
-        <td class="mono ${w.sharpe >= 2 ? 'pnl-pos' : w.sharpe < 0 ? 'pnl-neg' : ''}">${w.sharpe.toFixed(2)}</td>
-        <td class="mono ${w.maxDrawdownPct > 0.5 ? 'pnl-neg' : ''}">${ddPct}%</td>
-        <td class="mono ${w.profitFactor >= 2 ? 'pnl-pos' : w.profitFactor < 1 ? 'pnl-neg' : ''}">${w.profitFactor.toFixed(1)}x</td>
-        <td class="mono pnl-pos">${retFmt}</td>
-        <td class="mono">${w.longestWinStreak}</td>
-      </tr>`;
-    }).join('');
-  } catch (e) {
-    tbody.innerHTML = '<tr><td colspan="11" style="color:var(--red)">Failed to load scorecard</td></tr>';
-    console.error('Scorecard error:', e);
-  }
+    const wrPct = (w.winRate * 100).toFixed(1);
+    const wrClass = w.winRate >= 0.6 ? 'pnl-pos' : w.winRate < 0.4 ? 'pnl-neg' : '';
+    const scoreColor = tierColor(w.tier);
+    const retFmt = w.totalReturn >= 1000000 ? `$${(w.totalReturn/1000000).toFixed(1)}M` :
+                   w.totalReturn >= 1000 ? `$${(w.totalReturn/1000).toFixed(0)}K` :
+                   `$${w.totalReturn.toFixed(0)}`;
+    const ddPct = (w.maxDrawdownPct * 100).toFixed(1);
+    return `<tr>
+      <td class="mono">${w.rank}</td>
+      <td><strong>${w.name}</strong><div style="font-size:10px;color:var(--text-dim)">${w.wallet}</div></td>
+      <td>${tierBadge(w.tier)}</td>
+      <td class="mono" style="color:${scoreColor};font-weight:700">${w.smartScore.toFixed(1)}</td>
+      <td class="mono ${wrClass}">${wrPct}%</td>
+      <td class="mono">${w.winCount}/${w.lossCount}</td>
+      <td class="mono ${w.sharpe >= 2 ? 'pnl-pos' : w.sharpe < 0 ? 'pnl-neg' : ''}">${w.sharpe.toFixed(2)}</td>
+      <td class="mono ${w.maxDrawdownPct > 0.5 ? 'pnl-neg' : ''}">${ddPct}%</td>
+      <td class="mono ${w.profitFactor >= 2 ? 'pnl-pos' : w.profitFactor < 1 ? 'pnl-neg' : ''}">${w.profitFactor.toFixed(1)}x</td>
+      <td class="mono pnl-pos">${retFmt}</td>
+      <td class="mono">${w.longestWinStreak}</td>
+    </tr>`;
+  }).join('');
 }
 
 async function editWhalePosition(id) {
