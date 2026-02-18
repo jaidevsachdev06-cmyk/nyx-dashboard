@@ -435,5 +435,28 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T08:02:15.671Z"
+  },
+  {
+    "id": "c33be58d-47d1-47f6-b03a-86e91644f6e4",
+    "market": "Will the United States win the most medals in the 2026 Winter Olympics?",
+    "side": "Yes",
+    "entryPrice": 0.008,
+    "currentPrice": 0.008,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Influenz, Dropper, gopfan2, Euan",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 83.8,
+    "avgWinRate": 70.6,
+    "reasoning": "Consensus: 4 whales (avg score 83.8, avg WR 70.6%) agree on Yes. Whales: Influenz, Dropper, gopfan2, Euan",
+    "endDate": "2026-02-22",
+    "createdAt": "2026-02-18T10:05:37.922Z",
+    "invested": 0.08,
+    "currentValue": 0.08,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-18T10:05:37.922Z"
   }
 ]
