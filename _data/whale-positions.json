@@ -128,8 +128,10 @@
     "currentValue": 35.937,
     "pnl": 5.939999999999998,
     "pnlPercent": 19.801980198019795,
-    "status": "closed-loss",
-    "entryDate": "2026-02-17T16:19:53.786Z"
+    "status": "closed-win",
+    "entryDate": "2026-02-17T16:19:53.786Z",
+    "exitPrice": 0.605,
+    "reasoning": "Iran strike probability rising — whales bet YES on strike by June 30. Position gained +19.8%."
   },
   {
     "id": "f1e078b8-e843-48db-9a10-3424b0787c18",
