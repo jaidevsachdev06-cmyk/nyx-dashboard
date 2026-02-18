@@ -69,7 +69,7 @@
     "market": "Will the DHS shutdown last 14 days or more?",
     "position": "Yes",
     "entryPrice": 0.785,
-    "currentPrice": 0.785,
+    "currentPrice": 0.885,
     "shares": 9.55,
     "status": "open",
     "notes": "Shutdowns always drag. Political will to resolve quickly doesnt exist.",
@@ -78,10 +78,10 @@
       "hedge-C"
     ],
     "createdBy": "Nyx",
-    "invested": 7.5,
-    "currentValue": 7.5,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "invested": 7.4967500000000005,
+    "currentValue": 8.45175,
+    "pnl": 0.9550000000000001,
+    "pnlPercent": 12.738853503184714,
     "createdAt": "2026-02-17T07:12:15.628Z",
     "entryDate": "2026-02-17T07:12:15.628Z"
   },
