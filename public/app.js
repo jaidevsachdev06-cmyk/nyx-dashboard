@@ -96,7 +96,7 @@ async function loadDashboard() {
       <div class="summary-card"><div class="label">Agents</div><div class="value">${d.agents.online}/${d.agents.total}</div><div class="detail">online</div></div>
       <div class="summary-card"><div class="label">School</div><div class="value">${d.school.pendingTasks}</div><div class="detail">pending tasks${d.school.overdueTasks ? ` · <span style="color:var(--red)">${d.school.overdueTasks} overdue</span>` : ''}</div></div>
       <div class="summary-card"><div class="label">Polymarket</div><div class="value">${d.polymarket.openPositions}</div><div class="detail">${fmtMoney(d.polymarket.totalExposure)} exposure</div></div>
-      <div class="summary-card"><div class="label">Trading</div><div class="value">${d.trading.openPositions}</div><div class="detail">P&L: <span class="${pnlClass(d.trading.dailyPnl)}">${fmtMoney(d.trading.dailyPnl)}</span></div></div>
+      <div class="summary-card"><div class="label">Weather</div><div class="value">${d.weather?.openPositions || 0}</div><div class="detail">${fmtMoney(d.weather?.totalExposure || 0)} exposure</div></div>
     `;
     // Activity
     document.getElementById('dash-activity').innerHTML = (d.activity || []).map(a => `
