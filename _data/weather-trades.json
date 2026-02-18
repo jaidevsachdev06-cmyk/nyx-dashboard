@@ -112,7 +112,7 @@
     "side": "yes",
     "bucket": "78-79°F",
     "entryPrice": 0.2213,
-    "currentPrice": 0.225,
+    "currentPrice": 0.2,
     "shares": 45.4,
     "status": "open",
     "noaaForecast": "79°F",
@@ -127,7 +127,7 @@
       "dallas"
     ],
     "createdAt": "2026-02-17T08:29:04.055Z",
-    "updatedAt": "2026-02-18T04:01:29.571Z"
+    "updatedAt": "2026-02-18T10:03:46.920Z"
   },
   {
     "id": "2ba1eb77-611c-43fd-9151-bf033ec88d25",
