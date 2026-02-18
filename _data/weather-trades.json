@@ -170,9 +170,9 @@
     "side": "yes",
     "bucket": "76-77°F",
     "entryPrice": 0.174,
-    "currentPrice": 0.095,
+    "currentPrice": 0,
     "shares": 66.3,
-    "status": "open",
+    "status": "resolved",
     "noaaForecast": "77°F",
     "forecastConfidence": "high",
     "reasoning": "Adding to existing position. NWS hourly still shows Miami peaking at 77°F (3-4pm EST). TAF KMIA confirms light E winds 7kt, FEW025 — clear skies favor 77°F. 21.5pp edge at entry.",
@@ -186,7 +186,8 @@
       "add-on"
     ],
     "createdAt": "2026-02-17T14:07:44.192Z",
-    "updatedAt": "2026-02-18T10:03:54.656Z"
+    "updatedAt": "2026-02-18T23:03:14.270Z",
+    "result": "loss"
   },
   {
     "id": "b9787d2b-143d-4744-92b7-f8a7710dc0fb",
