@@ -268,9 +268,9 @@
     "marketUrl": "https://simmer.markets/faea074e-7ed0-4011-8d6f-49ec775b9899",
     "position": "Yes",
     "entryPrice": 0.155,
-    "currentPrice": 0.155,
+    "currentPrice": 0.13,
     "shares": 48.8,
-    "status": "open",
+    "status": "closed-loss",
     "notes": "NWS says Chicago high 62°F but thunderstorms Tue night could bring cold front early. If front arrives by afternoon, high caps at 60-61. Hedge position.",
     "tags": [
       "weather",
@@ -281,9 +281,9 @@
     ],
     "createdAt": "2026-02-17T08:23:56.706Z",
     "invested": 7.563999999999999,
-    "currentValue": 7.563999999999999,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 6.343999999999999,
+    "pnl": -1.2199999999999998,
+    "pnlPercent": -16.129032258064516,
     "entryDate": "2026-02-17T08:23:56.706Z"
   },
   {
