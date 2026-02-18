@@ -116,9 +116,9 @@
     "side": "yes",
     "bucket": "78-79°F",
     "entryPrice": 0.2213,
-    "currentPrice": 0.2,
+    "currentPrice": 0,
     "shares": 45.4,
-    "status": "open",
+    "status": "resolved",
     "noaaForecast": "79°F",
     "forecastConfidence": "medium-high",
     "reasoning": "NWS hourly peaks at 79°F around 3pm. TAF shows S winds 17G27kt. Highest opportunity score.",
@@ -131,7 +131,8 @@
       "dallas"
     ],
     "createdAt": "2026-02-17T08:29:04.055Z",
-    "updatedAt": "2026-02-18T10:03:46.920Z"
+    "updatedAt": "2026-02-18T23:03:08.002Z",
+    "result": "loss"
   },
   {
     "id": "2ba1eb77-611c-43fd-9151-bf033ec88d25",
