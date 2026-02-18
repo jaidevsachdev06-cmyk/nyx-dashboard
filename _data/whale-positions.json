@@ -185,7 +185,7 @@
     "currentValue": 25.001,
     "pnl": 0,
     "pnlPercent": 0,
-    "status": "open",
+    "status": "closed-win",
     "entryDate": "2026-02-17T16:20:05.359Z"
   },
   {
