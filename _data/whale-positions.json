@@ -359,5 +359,28 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T06:54:23.578Z"
+  },
+  {
+    "id": "cad867be-86d9-4c48-8b06-59574dba0685",
+    "market": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+    "side": "Yes",
+    "entryPrice": 0,
+    "currentPrice": 0,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "nicoco89, XieGuangKun, scottilicious, Qualitative",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 88.7,
+    "avgWinRate": 69.2,
+    "reasoning": "Consensus: 4 whales (avg score 88.7, avg WR 69.2%) agree on Yes. Whales: nicoco89, XieGuangKun, scottilicious, Qualitative",
+    "endDate": "2026-11-03",
+    "createdAt": "2026-02-18T06:55:09.829Z",
+    "invested": 0,
+    "currentValue": 0,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-18T06:55:09.829Z"
   }
 ]
