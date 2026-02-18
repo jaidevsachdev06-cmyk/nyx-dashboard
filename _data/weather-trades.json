@@ -60,7 +60,7 @@
     "side": "yes",
     "bucket": "44-45°F",
     "entryPrice": 0.075,
-    "currentPrice": 0.139,
+    "currentPrice": 0.155,
     "shares": 107.6,
     "status": "open",
     "noaaForecast": "45-46°F",
@@ -75,7 +75,7 @@
       "nyc"
     ],
     "createdAt": "2026-02-17T08:28:56.352Z",
-    "updatedAt": "2026-02-18T03:24:39.145Z"
+    "updatedAt": "2026-02-18T04:01:14.100Z"
   },
   {
     "id": "8037bd1f-9d5c-4065-ba07-7ac37c3020c8",
