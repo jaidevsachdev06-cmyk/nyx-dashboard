@@ -189,29 +189,5 @@
     "createdBy": "Nyx",
     "createdAt": "2026-02-17T07:12:35.729Z",
     "entryDate": "2026-02-17T07:12:35.729Z"
-  },
-  {
-    "id": "742ddc71-3c9c-4b05-b53b-687db687d3cd",
-    "market": "Will the highest temperature in New York City be between 44-45°F on February 18?",
-    "marketUrl": "https://simmer.markets/c5c3027d-81bf-4025-aad3-f1163b12126d",
-    "position": "Yes",
-    "entryPrice": 0.075,
-    "currentPrice": 0.139,
-    "shares": 107.6,
-    "status": "closed-loss",
-    "notes": "NWS hourly shows NYC peaking at 45-46°F on Feb 18. Market has 40-41 as favorite at 41.5¢ but NWS hourly says higher. Wed forecast also 45°F confirming warm bias.",
-    "tags": [
-      "weather",
-      "temperature",
-      "simmer",
-      "paper-trade",
-      "nyc"
-    ],
-    "createdAt": "2026-02-17T08:24:15.693Z",
-    "invested": 8.069999999999999,
-    "currentValue": 14.9564,
-    "pnl": 6.886400000000002,
-    "pnlPercent": 85.33333333333337,
-    "entryDate": "2026-02-17T08:24:15.693Z"
   }
 ]
