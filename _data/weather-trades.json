@@ -130,68 +130,6 @@
     "updatedAt": "2026-02-18T02:03:29.371Z"
   },
   {
-    "id": "8b6004b3-22e3-410f-84c5-11b349956b1a",
-    "action": "set_positions",
-    "positions": [
-      {
-        "market": "NYC 42-43°F Feb 19",
-        "side": "YES",
-        "shares": 140,
-        "entry": 0.145,
-        "current": 0.14,
-        "pnl": -0.67,
-        "status": "active",
-        "source": "NWS hourly exact match"
-      },
-      {
-        "market": "Chicago 60-61°F Feb 18",
-        "side": "YES",
-        "shares": 49,
-        "entry": 0.226,
-        "current": 0.18,
-        "pnl": -2.24,
-        "status": "active"
-      },
-      {
-        "market": "Dallas 78-79°F Feb 18",
-        "side": "YES",
-        "shares": 45,
-        "entry": 0.221,
-        "current": 0.28,
-        "pnl": 2.66,
-        "status": "active"
-      },
-      {
-        "market": "Seattle 44-45°F Feb 18",
-        "side": "YES",
-        "shares": 48,
-        "entry": 0.338,
-        "current": 0.205,
-        "pnl": -6.4,
-        "status": "active"
-      },
-      {
-        "market": "NYC 44-45°F Feb 18",
-        "side": "YES",
-        "shares": 108,
-        "entry": 0.141,
-        "current": 0.105,
-        "pnl": -3.88,
-        "status": "active"
-      },
-      {
-        "market": "Miami 76-77°F Feb 18",
-        "side": "YES",
-        "shares": 86,
-        "entry": 0.273,
-        "current": 0.135,
-        "pnl": -11.92,
-        "status": "active"
-      }
-    ],
-    "createdAt": "2026-02-17T12:47:39.025Z"
-  },
-  {
     "id": "2ba1eb77-611c-43fd-9151-bf033ec88d25",
     "city": "Chicago",
     "market": "Will the highest temperature in Chicago be between 62-63°F on February 18?",
