@@ -312,5 +312,71 @@
     ],
     "createdAt": "2026-02-18T10:04:39.792Z",
     "updatedAt": "2026-02-18T11:41:23.281Z"
+  },
+  {
+    "id": "08e944d7-6914-48d5-b45f-c18c9780fd62",
+    "trades": [
+      {
+        "marketId": "f2514237-28d4-4e95-9946-73c8d4390d3d",
+        "title": "Dallas 70-71°F Feb 20",
+        "side": "yes",
+        "amount": 20,
+        "shares": 211.64,
+        "price": 0.095,
+        "edge": 66,
+        "status": "open",
+        "timestamp": "2026-02-18T14:04:00Z"
+      },
+      {
+        "marketId": "e2ef6370-1874-4b8f-a3c0-65f8ae6ed0b6",
+        "title": "Chicago 46-47°F Feb 20",
+        "side": "yes",
+        "amount": 15,
+        "shares": 63.83,
+        "price": 0.27,
+        "edge": 48,
+        "status": "open",
+        "timestamp": "2026-02-18T14:04:00Z"
+      },
+      {
+        "marketId": "6ea63982-d948-40d9-9f4f-ff401a2805f4",
+        "title": "Dallas 76-77°F Feb 19",
+        "side": "yes",
+        "amount": 15,
+        "shares": 36.83,
+        "price": 0.41,
+        "edge": 34,
+        "status": "open",
+        "timestamp": "2026-02-18T14:04:00Z"
+      }
+    ],
+    "priceUpdates": [
+      {
+        "marketId": "db22393b-876f-492f-8117-585cf30996d9",
+        "title": "Chicago 50-51°F Feb 19",
+        "price": 0.034
+      },
+      {
+        "marketId": "2ce09acd-0708-4094-9b55-563446ca58a4",
+        "title": "Chicago ≥54°F Feb 19",
+        "price": 0.717
+      },
+      {
+        "marketId": "8f78df26-8a22-4cf4-863f-7f3d8e28a9cd",
+        "title": "Miami 78-79°F Feb 19",
+        "price": 0.075
+      },
+      {
+        "marketId": "64b10a07-29d3-4ec2-a3dc-617560a86776",
+        "title": "Atlanta 74-75°F Feb 19",
+        "price": 0.16
+      },
+      {
+        "marketId": "b5a0e43b-5bcc-4ed3-a2fc-2d4a0dbd6086",
+        "title": "Seattle 42-43°F Feb 19",
+        "price": 0.315
+      }
+    ],
+    "createdAt": "2026-02-18T14:04:53.059Z"
   }
 ]
