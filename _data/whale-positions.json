@@ -343,7 +343,7 @@
     "market": "Will Trump acquire Greenland before 2027?",
     "side": "No",
     "entryPrice": 0,
-    "currentPrice": 0,
+    "currentPrice": 0.885,
     "shares": 10,
     "status": "open",
     "source": "consensus-scanner",
