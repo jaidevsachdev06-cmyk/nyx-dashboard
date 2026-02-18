@@ -336,5 +336,28 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T06:54:19.694Z"
+  },
+  {
+    "id": "0fcf15f5-1c50-4e66-9cb1-23432759a88a",
+    "market": "Khamenei out as Supreme Leader of Iran in 2026?",
+    "side": "Yes",
+    "entryPrice": 0,
+    "currentPrice": 0,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, debased, x.compolymarketbet, Snoorrason, Qualitative",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 82.4,
+    "avgWinRate": 69.6,
+    "reasoning": "Consensus: 5 whales (avg score 82.4, avg WR 69.6%) agree on Yes. Whales: Roflan, debased, x.compolymarketbet, Snoorrason, Qualitative",
+    "endDate": "2026-12-31",
+    "createdAt": "2026-02-18T06:54:23.578Z",
+    "invested": 0,
+    "currentValue": 0,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-18T06:54:23.578Z"
   }
 ]
