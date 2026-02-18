@@ -111,8 +111,8 @@
     "marketUrl": "https://simmer.markets/4430b33a-3ab2-4b30-ae49-9a71aa514754",
     "side": "yes",
     "bucket": "78-79°F",
-    "entryPrice": 0.35,
-    "currentPrice": 0.31,
+    "entryPrice": 0.2213,
+    "currentPrice": 0.33,
     "shares": 45.4,
     "status": "open",
     "noaaForecast": "79°F",
@@ -127,7 +127,7 @@
       "dallas"
     ],
     "createdAt": "2026-02-17T08:29:04.055Z",
-    "updatedAt": "2026-02-18T02:03:29.371Z"
+    "updatedAt": "2026-02-18T03:09:02.464Z"
   },
   {
     "id": "2ba1eb77-611c-43fd-9151-bf033ec88d25",
