@@ -378,5 +378,29 @@
       }
     ],
     "createdAt": "2026-02-18T14:04:53.059Z"
+  },
+  {
+    "0": {
+      "market": "Seattle 44-45°F Feb 20",
+      "side": "yes",
+      "entry": 0.43,
+      "shares": 36.5,
+      "cost": 15.81,
+      "edge": 34,
+      "status": "open",
+      "date": "2026-02-18"
+    },
+    "1": {
+      "market": "Atlanta 74-75°F Feb 20",
+      "side": "yes",
+      "entry": 0.48,
+      "shares": 32.55,
+      "cost": 15.66,
+      "edge": 29,
+      "status": "open",
+      "date": "2026-02-18"
+    },
+    "id": "825de4a1-1ee5-46a4-ad7f-e6ecf60a5527",
+    "createdAt": "2026-02-18T18:02:11.041Z"
   }
 ]
