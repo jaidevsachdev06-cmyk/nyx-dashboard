@@ -243,7 +243,7 @@
     "side": "no",
     "bucket": ">=54°F",
     "entryPrice": 0.122,
-    "currentPrice": 0.125,
+    "currentPrice": 0.875,
     "shares": 166.07,
     "status": "open",
     "noaaForecast": "50°F",
@@ -258,7 +258,8 @@
       "feb19",
       "contrarian"
     ],
-    "createdAt": "2026-02-18T10:04:30.692Z"
+    "createdAt": "2026-02-18T10:04:30.692Z",
+    "updatedAt": "2026-02-18T11:41:10.545Z"
   },
   {
     "id": "1d415d16-b4c3-47f9-ac88-215744d69747",
