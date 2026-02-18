@@ -474,5 +474,28 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T06:55:25.116Z"
+  },
+  {
+    "id": "a9fc3c48-e9d3-40b1-9cad-8c2331e62cd5",
+    "market": "Will Trump nominate himself as the next Fed chair?",
+    "side": "Yes",
+    "entryPrice": 0,
+    "currentPrice": 0,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Influenz, Roflan, debased, x.compolymarketbet",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 79.1,
+    "avgWinRate": 72.7,
+    "reasoning": "Consensus: 4 whales (avg score 79.1, avg WR 72.7%) agree on Yes. Whales: Influenz, Roflan, debased, x.compolymarketbet",
+    "endDate": "2026-12-31",
+    "createdAt": "2026-02-18T06:55:28.959Z",
+    "invested": 0,
+    "currentValue": 0,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-18T06:55:28.959Z"
   }
 ]
