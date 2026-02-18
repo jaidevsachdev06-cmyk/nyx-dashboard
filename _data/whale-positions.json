@@ -394,7 +394,7 @@
     "id": "9182d96e-0535-4a6d-8b3a-2dceaaaa2703",
     "market": "Will the next Prime Minister of Hungary be Klára Dobrev?",
     "side": "Yes",
-    "entryPrice": 0,
+    "entryPrice": 0.0005,
     "currentPrice": 0,
     "shares": 10,
     "status": "open",
