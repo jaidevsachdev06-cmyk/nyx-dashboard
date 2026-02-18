@@ -323,6 +323,12 @@ async function deletePolyWatch(id) { await del(`/api/polymarket?type=watchlist&i
 async function loadWeatherTrades() {
   try {
     const trades = await get('/api/weather');
+    // Compute P&L client-side from entry/current/shares
+    trades.forEach(t => {
+      if (t.entryPrice != null && t.currentPrice != null && t.shares) {
+        t.pnl = (t.currentPrice - t.entryPrice) * t.shares;
+      } else { t.pnl = 0; }
+    });
     const open = trades.filter(t => t.status === 'open');
     const closed = trades.filter(t => t.status !== 'open');
     const totalPnl = open.reduce((s, t) => s + (t.pnl || 0), 0);
