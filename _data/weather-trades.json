@@ -312,7 +312,7 @@
     "entryPrice": 0.345,
     "currentPrice": 0.346,
     "shares": 43.63,
-    "status": "open",
+    "status": "closed",
     "noaaForecast": "42°F",
     "forecastConfidence": "medium-high",
     "reasoning": "NWS hourly peaks at 42°F at 1-4pm PST Feb 19. Mostly sunny afternoon after morning clearing. TAF KSEA shows light winds. Market at 34¢, NWS supports 42°F peak squarely in this bucket. ~10pp edge.",
@@ -325,7 +325,9 @@
       "feb19"
     ],
     "createdAt": "2026-02-18T10:04:39.792Z",
-    "updatedAt": "2026-02-18T11:41:23.281Z"
+    "updatedAt": "2026-02-18T23:17:52.972Z",
+    "result": "exit",
+    "notes": " | Exit: Forecast 40.0°F outside bin 42-43°F"
   },
   {
     "id": "08e944d7-6914-48d5-b45f-c18c9780fd62",
