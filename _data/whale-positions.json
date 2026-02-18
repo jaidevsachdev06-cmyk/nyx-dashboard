@@ -290,5 +290,28 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T06:54:12.103Z"
+  },
+  {
+    "id": "0eaca637-2bfc-4690-a89a-ee519e4810d0",
+    "market": "Khamenei out as Supreme Leader of Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0,
+    "currentPrice": 0,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, XieGuangKun, debased, Thonker, Qualitative, Dropper",
+    "whaleCount": 6,
+    "confidence": "Very High",
+    "avgScore": 84.2,
+    "avgWinRate": 71.9,
+    "reasoning": "Consensus: 6 whales (avg score 84.2, avg WR 71.9%) agree on No. Whales: Roflan, XieGuangKun, debased, Thonker, Qualitative, Dropper",
+    "endDate": "2026-03-31",
+    "createdAt": "2026-02-18T06:54:15.952Z",
+    "invested": 0,
+    "currentValue": 0,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-18T06:54:15.952Z"
   }
 ]
