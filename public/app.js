@@ -345,9 +345,19 @@ async function loadWeatherTrades() {
     `;
     loadNoaaForecasts();
 
+    const confBadge = c => {
+      const colors = { high: '#22c55e', 'medium-high': '#84cc16', medium: '#eab308', low: '#ef4444' };
+      return `<span style="background:${colors[c] || '#666'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(c||'—').toUpperCase()}</span>`;
+    };
+    const edgePct = t => {
+      if (!t.entryPrice || !t.currentPrice) return '—';
+      const edge = ((t.currentPrice - t.entryPrice) / t.entryPrice * 100).toFixed(1);
+      return `<span class="${edge > 0 ? 'pnl-pos' : 'pnl-neg'}">${edge > 0 ? '+' : ''}${edge}%</span>`;
+    };
+
     document.querySelector('#weather-open-table tbody').innerHTML = open.map(t => `<tr>
       <td>${t.city || ''}</td>
-      <td style="max-width:200px">${t.market || ''}</td>
+      <td style="max-width:200px"><a href="${t.marketUrl || '#'}" target="_blank" style="color:var(--accent)">${t.market || ''}</a></td>
       <td>${t.side || ''}</td>
       <td class="mono">${fmtMoney(t.entryPrice)}</td>
       <td class="mono">${fmtMoney(t.currentPrice)}</td>
@@ -355,7 +365,35 @@ async function loadWeatherTrades() {
       <td class="mono">${t.shares || ''}</td>
       <td class="mono ${pnlClass(t.pnl)}">${fmtMoney(t.pnl)}</td>
       <td><button class="btn btn-sm" onclick="editWeatherTrade('${t.id}')">Edit</button></td>
-    </tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim)">No open weather positions</td></tr>';
+    </tr>
+    <tr class="evidence-row"><td colspan="9" style="padding:4px 12px 12px;border-top:none;background:rgba(255,255,255,0.02)">
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
+        <span>🎯 Bucket: <strong>${t.bucket || '—'}</strong></span>
+        <span>🌡️ NOAA: <strong>${t.noaaForecast || '—'}</strong></span>
+        <span>📊 Confidence: ${confBadge(t.forecastConfidence)}</span>
+        <span>📈 Edge: ${edgePct(t)}</span>
+        <span>⏱️ ${t.createdAt ? timeAgo(t.createdAt) : '—'}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.4">💡 ${t.reasoning || 'No reasoning recorded'}</div>
+    </td></tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim)">No open weather positions</td></tr>';
+
+    // Closed trades with outcome evidence
+    document.getElementById('weather-trade-log').innerHTML = closed.length ? closed.map(t => `
+      <div class="activity-item">
+        <div class="activity-dot ${t.status === 'closed-win' ? 'success' : 'error'}"></div>
+        <div class="activity-content">
+          <div class="activity-action">
+            <strong>${t.city}</strong> ${t.bucket || ''} — ${t.status === 'closed-win' ? '✅ WIN' : '❌ LOSS'}
+            <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px">${fmtMoney(t.pnl)}</span>
+          </div>
+          <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
+            Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.currentPrice)} · ${t.shares} shares · NOAA: ${t.noaaForecast || '—'} · Confidence: ${t.forecastConfidence || '—'}
+          </div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.4">💡 ${t.reasoning || 'No reasoning'}</div>
+          <div class="activity-meta"><span>${t.updatedAt ? timeAgo(t.updatedAt) : '—'}</span></div>
+        </div>
+      </div>
+    `).join('') : '<div style="color:var(--text-dim);padding:20px">No resolved trades yet</div>';
   } catch (e) { console.error('Weather load error:', e); }
 }
 
