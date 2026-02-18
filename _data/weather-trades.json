@@ -270,7 +270,7 @@
     "side": "yes",
     "bucket": "50-51°F",
     "entryPrice": 0.042,
-    "currentPrice": 0.044,
+    "currentPrice": 0.048,
     "shares": 372.19,
     "status": "open",
     "noaaForecast": "50°F",
@@ -284,7 +284,8 @@
       "chicago",
       "feb19"
     ],
-    "createdAt": "2026-02-18T10:04:34.634Z"
+    "createdAt": "2026-02-18T10:04:34.634Z",
+    "updatedAt": "2026-02-18T11:41:14.562Z"
   },
   {
     "id": "fcc451c2-2584-4169-a619-4fdd2eb9bdcd",
