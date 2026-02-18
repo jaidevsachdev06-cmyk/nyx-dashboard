@@ -220,9 +220,9 @@
     "marketUrl": "https://simmer.markets/2058b1a3-0d91-4131-9a0a-d78a030024d7",
     "position": "Yes",
     "entryPrice": 0.29,
-    "currentPrice": 0.29,
+    "currentPrice": 0.143,
     "shares": 48.2,
-    "status": "open",
+    "status": "closed-loss",
     "notes": "NWS hourly: Seattle peaks at 44°F Feb 18. Market favors 42-43 at 40¢ but NWS disagrees. Rain/snow mix could cap temps but NWS model accounts for precip.",
     "tags": [
       "weather",
@@ -233,9 +233,9 @@
     ],
     "createdAt": "2026-02-17T08:23:55.025Z",
     "invested": 13.978,
-    "currentValue": 13.978,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 6.8926,
+    "pnl": -7.0854,
+    "pnlPercent": -50.689655172413794,
     "entryDate": "2026-02-17T08:23:55.025Z"
   },
   {
