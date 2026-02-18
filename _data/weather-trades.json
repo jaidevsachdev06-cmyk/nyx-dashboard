@@ -259,5 +259,30 @@
       "contrarian"
     ],
     "createdAt": "2026-02-18T10:04:30.692Z"
+  },
+  {
+    "id": "1d415d16-b4c3-47f9-ac88-215744d69747",
+    "city": "Chicago",
+    "market": "Will the highest temperature in Chicago be between 50-51°F on February 19?",
+    "marketId": "db22393b-876f-492f-8117-585cf30996d9",
+    "marketUrl": "https://simmer.markets/db22393b-876f-492f-8117-585cf30996d9",
+    "side": "yes",
+    "bucket": "50-51°F",
+    "entryPrice": 0.042,
+    "currentPrice": 0.044,
+    "shares": 372.19,
+    "status": "open",
+    "noaaForecast": "50°F",
+    "forecastConfidence": "high",
+    "reasoning": "NWS hourly peaks at exactly 50°F at 12-4pm CST Feb 19 with rain likely all day. Market at 3.45¢ drastically underprices this — true prob ~25-35%. TAF KORD confirms overcast/rain pattern. ~25pp edge.",
+    "source": "auto",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "chicago",
+      "feb19"
+    ],
+    "createdAt": "2026-02-18T10:04:34.634Z"
   }
 ]
