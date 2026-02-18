@@ -106,7 +106,9 @@
     "pnl": 0.7169250000000007,
     "pnlPercent": 8.96296296296297,
     "createdAt": "2026-02-17T07:12:17.403Z",
-    "entryDate": "2026-02-17T07:12:17.403Z"
+    "entryDate": "2026-02-17T07:12:17.403Z",
+    "side": "Yes",
+    "reasoning": "Anthropic best AI model end of Feb. Whale consensus."
   },
   {
     "id": "fe7fa790-c52a-4df8-86b3-8af96f618803",
