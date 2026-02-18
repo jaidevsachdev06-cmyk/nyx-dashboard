@@ -284,7 +284,7 @@
     "entryPrice": 0.042,
     "currentPrice": 0.048,
     "shares": 372.19,
-    "status": "open",
+    "status": "closed",
     "noaaForecast": "50°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly peaks at exactly 50°F at 12-4pm CST Feb 19 with rain likely all day. Market at 3.45¢ drastically underprices this — true prob ~25-35%. TAF KORD confirms overcast/rain pattern. ~25pp edge.",
@@ -297,7 +297,9 @@
       "feb19"
     ],
     "createdAt": "2026-02-18T10:04:34.634Z",
-    "updatedAt": "2026-02-18T11:41:14.562Z"
+    "updatedAt": "2026-02-18T23:16:43.075Z",
+    "result": "exit",
+    "notes": " | Exit: Forecast 47.2°F outside bin 50-51°F"
   },
   {
     "id": "fcc451c2-2584-4169-a619-4fdd2eb9bdcd",
