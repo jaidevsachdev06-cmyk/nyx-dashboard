@@ -234,13 +234,14 @@
     "whales": "XieGuangKun, nicoco89, scottilicious, Qualitative",
     "entryPrice": 0.825,
     "shares": 60.6,
-    "invested": 50,
+    "invested": 49.995,
     "status": "open",
     "createdAt": "2026-02-18T02:56:40.842Z",
     "currentValue": 49.995,
     "pnl": 0,
     "pnlPercent": 0,
-    "entryDate": "2026-02-18T02:56:40.842Z"
+    "entryDate": "2026-02-18T02:56:40.842Z",
+    "currentPrice": 0.825
   },
   {
     "id": "1d74ad8f-6465-4d04-91b8-91a53eb12a01",
