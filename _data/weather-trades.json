@@ -243,5 +243,30 @@
     ],
     "createdAt": "2026-02-17T14:07:44.192Z",
     "updatedAt": "2026-02-18T02:03:46.159Z"
+  },
+  {
+    "id": "b9787d2b-143d-4744-92b7-f8a7710dc0fb",
+    "city": "Miami",
+    "market": "Will the highest temperature in Miami be between 78-79°F on February 19?",
+    "marketId": "8f78df26-8a22-4cf4-863f-7f3d8e28a9cd",
+    "marketUrl": "https://simmer.markets/8f78df26-8a22-4cf4-863f-7f3d8e28a9cd",
+    "side": "yes",
+    "bucket": "78-79°F",
+    "entryPrice": 0.142,
+    "currentPrice": 0.144,
+    "shares": 142.9,
+    "status": "open",
+    "noaaForecast": "78°F",
+    "forecastConfidence": "high",
+    "reasoning": "NWS hourly peaks at 78°F at 1-2pm EST Feb 19. Sunny skies, light SE winds per TAF KMIA. Market massively overweights 82-85°F range (57% combined) but NWS disagrees by 4-7°F. 78-79 at 13.5¢ entry = ~20pp edge.",
+    "source": "auto",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "miami",
+      "feb19"
+    ],
+    "createdAt": "2026-02-18T02:03:57.538Z"
   }
 ]
