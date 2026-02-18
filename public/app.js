@@ -248,6 +248,43 @@ async function loadSchool() {
     document.getElementById('school-kanban').innerHTML =
       renderCol('Overdue 🔴', cols.overdue) + renderCol('To Do', cols.todo) + renderCol('In Progress', cols['in-progress']) + renderCol('Done ✓', cols.done);
 
+    // Checklist — upcoming tasks sorted by due date
+    const now = new Date();
+    const upcoming = tasks
+      .filter(t => t.status !== 'done' && t.dueDate)
+      .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+
+    const urgencyLabel = (d) => {
+      const ms = new Date(d) - now;
+      const hrs = ms / 3600000;
+      if (hrs < 0) return '<span style="color:var(--red);font-weight:600">OVERDUE</span>';
+      if (hrs < 24) return '<span style="color:var(--red);font-weight:600">TODAY</span>';
+      if (hrs < 48) return '<span style="color:#f59e0b;font-weight:600">TOMORROW</span>';
+      if (hrs < 168) return '<span style="color:#eab308">This week</span>';
+      return '<span style="color:var(--text-dim)">' + Math.ceil(hrs / 24) + 'd</span>';
+    };
+
+    document.getElementById('school-checklist').innerHTML = upcoming.length ? `
+      <div style="display:flex;flex-direction:column;gap:2px">
+        ${upcoming.map(t => {
+          const isOverdue = new Date(t.dueDate) < now;
+          const checked = t.status === 'in-progress' ? 'style="opacity:0.6"' : '';
+          return `<div class="checklist-item" ${checked} style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;background:${isOverdue ? 'rgba(239,68,68,0.1)' : 'rgba(255,255,255,0.03)'};cursor:pointer" onclick="toggleTaskDone('${t.id}','${t.status}')">
+            <input type="checkbox" ${t.status === 'done' ? 'checked' : ''} style="width:18px;height:18px;accent-color:var(--accent);cursor:pointer" onclick="event.stopPropagation();toggleTaskDone('${t.id}','${t.status}')">
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;${t.status === 'in-progress' ? 'color:var(--accent)' : ''}">${t.title}</div>
+              <div style="font-size:11px;color:var(--text-dim);display:flex;gap:12px;margin-top:2px">
+                <span>${t.course || ''}</span>
+                <span>${t.dueDate ? fmtDate(t.dueDate) : ''}</span>
+              </div>
+            </div>
+            <div style="text-align:right;white-space:nowrap">${urgencyLabel(t.dueDate)}</div>
+            ${t.priority === 'high' || t.priority === 'critical' ? '<span style="color:var(--red);font-size:10px">●</span>' : ''}
+          </div>`;
+        }).join('')}
+      </div>
+    ` : '<div style="color:var(--text-dim);padding:12px">No upcoming tasks 🎉</div>';
+
     // Schedule
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
     const times = ['08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'];
@@ -271,6 +308,12 @@ async function loadSchool() {
 async function editTask(id) {
   const task = await get(`/api/school?type=tasks&id=${id}`);
   showModal('task', task);
+}
+async function toggleTaskDone(id, currentStatus) {
+  const newStatus = currentStatus === 'done' ? 'todo' : 'done';
+  await put(`/api/school?type=tasks&id=${id}`, { status: newStatus });
+  loadSchool();
+  if (currentSection === 'dashboard') loadDashboard();
 }
 
 // ========== POLYMARKET ==========
