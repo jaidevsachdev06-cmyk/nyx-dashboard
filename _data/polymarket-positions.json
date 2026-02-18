@@ -123,7 +123,7 @@
     "entryPrice": 0.98,
     "currentPrice": 0.9765,
     "shares": 7.14,
-    "status": "open",
+    "status": "closed-loss",
     "notes": "NVDA massive lead, 11 days. Near risk-free 2% return. Slightly negative EV though.",
     "tags": [
       "stocks",
@@ -135,7 +135,9 @@
     "pnl": -0.024989999999999846,
     "pnlPercent": -0.357142857142855,
     "createdAt": "2026-02-17T07:12:18.185Z",
-    "entryDate": "2026-02-17T07:12:18.185Z"
+    "entryDate": "2026-02-17T07:12:18.185Z",
+    "side": "Yes",
+    "reasoning": "Closed: Negative EV. Paid 98¢ for $1 potential — not worth the risk of AAPL/MSFT flipping."
   },
   {
     "id": "cce44d86-a42b-41eb-9354-1b9004befd8a",
