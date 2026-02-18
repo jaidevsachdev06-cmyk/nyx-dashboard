@@ -8,7 +8,7 @@
     "side": "yes",
     "bucket": "76-77°F",
     "entryPrice": 0.115,
-    "currentPrice": 0.155,
+    "currentPrice": 0.085,
     "shares": 86.3,
     "status": "open",
     "noaaForecast": "77°F",
@@ -23,7 +23,7 @@
       "miami"
     ],
     "createdAt": "2026-02-17T08:28:40.142Z",
-    "updatedAt": "2026-02-18T02:03:19.832Z"
+    "updatedAt": "2026-02-18T03:08:50.904Z"
   },
   {
     "id": "42ea2859-d865-499f-a195-35e90538442d",
