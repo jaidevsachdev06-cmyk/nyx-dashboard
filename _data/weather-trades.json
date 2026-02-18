@@ -86,7 +86,7 @@
     "side": "yes",
     "bucket": "44-45°F",
     "entryPrice": 0.29,
-    "currentPrice": 0.285,
+    "currentPrice": 0.33,
     "shares": 48.2,
     "status": "open",
     "noaaForecast": "44°F",
@@ -101,7 +101,7 @@
       "seattle"
     ],
     "createdAt": "2026-02-17T08:29:00.223Z",
-    "updatedAt": "2026-02-18T04:01:37.302Z"
+    "updatedAt": "2026-02-18T10:03:43.036Z"
   },
   {
     "id": "c4c665bc-be72-4ea0-ba4b-68c27b4de305",
