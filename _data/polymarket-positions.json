@@ -4,9 +4,9 @@
     "market": "Will RFK Jr. win the 2028 Republican presidential nomination?",
     "position": "No",
     "entryPrice": 0.49,
-    "currentPrice": 0.959,
+    "currentPrice": 0.041,
     "shares": 19.61,
-    "status": "open",
+    "status": "closed-loss",
     "notes": "RFK at 49% is absurd. Party-switcher, no institutional GOP support. Biggest edge.",
     "tags": [
       "politics",
@@ -15,13 +15,14 @@
     ],
     "createdBy": "Nyx",
     "invested": 9.6089,
-    "currentValue": 18.805989999999998,
-    "pnl": 9.197089999999998,
-    "pnlPercent": 95.71428571428568,
+    "currentValue": 0.80401,
+    "pnl": -8.80489,
+    "pnlPercent": -91.63265306122449,
     "createdAt": "2026-02-17T07:12:12.676Z",
     "entryDate": "2026-02-17T07:12:12.676Z",
     "side": "No",
-    "reasoning": "RFK unlikely to win GOP nom. Paper position."
+    "reasoning": "Cut loss — RFK chances surged from ~50% to ~96%. NO side collapsed. Bad entry, should have sized smaller on a contrarian bet this binary.",
+    "exitPrice": 0.041
   },
   {
     "id": "bbaae7c9-9616-4618-a1a0-1b55a78e0e5c",
