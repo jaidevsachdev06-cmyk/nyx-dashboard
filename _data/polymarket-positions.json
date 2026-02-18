@@ -196,7 +196,7 @@
     "marketUrl": "https://simmer.markets/15e45f52-6744-44a7-bf81-29b69ee17c6c",
     "position": "Yes",
     "entryPrice": 0.115,
-    "currentPrice": 0.115,
+    "currentPrice": 0.085,
     "shares": 86.3,
     "status": "open",
     "notes": "NWS hourly forecast peaks at 77°F for Miami Feb 18. Market prices 78-79 as favorite at 39¢ but NWS hourly disagrees. Aviation TAF: E winds 10kt, stable conditions.",
@@ -209,9 +209,9 @@
     ],
     "createdAt": "2026-02-17T08:23:52.997Z",
     "invested": 9.9245,
-    "currentValue": 9.9245,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 7.335500000000001,
+    "pnl": -2.5889999999999995,
+    "pnlPercent": -26.086956521739125,
     "entryDate": "2026-02-17T08:23:52.997Z"
   },
   {
