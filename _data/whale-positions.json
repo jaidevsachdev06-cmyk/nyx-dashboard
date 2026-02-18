@@ -235,5 +235,21 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T02:56:40.842Z"
+  },
+  {
+    "id": "1d74ad8f-6465-4d04-91b8-91a53eb12a01",
+    "market": "Khamenei stays March 31",
+    "side": "NO",
+    "entryPrice": 0.835,
+    "shares": 89.8,
+    "invested": 75,
+    "whales": "Roflan, XieGuangKun, debased, Thonker, TheWolfOfPoly, Qualitative",
+    "whaleCount": 6,
+    "status": "open",
+    "createdAt": "2026-02-18T03:10:24.711Z",
+    "currentValue": 74.98299999999999,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-18T03:10:24.711Z"
   }
 ]
