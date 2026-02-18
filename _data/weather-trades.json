@@ -137,9 +137,9 @@
     "marketUrl": "https://simmer.markets/f5ce0b44-5ad3-4ac2-9530-70ffb526a7c4",
     "side": "yes",
     "bucket": "62-63°F",
-    "entryPrice": 0.27,
-    "currentPrice": 0.335,
-    "shares": 62.4,
+    "entryPrice": 0.2911,
+    "currentPrice": 0.34,
+    "shares": 94.22,
     "status": "open",
     "noaaForecast": "62°F",
     "forecastConfidence": "high",
@@ -153,7 +153,7 @@
       "chicago"
     ],
     "createdAt": "2026-02-17T14:07:33.694Z",
-    "updatedAt": "2026-02-18T02:03:37.591Z"
+    "updatedAt": "2026-02-18T03:08:58.644Z"
   },
   {
     "id": "0f6b5b5b-0e90-4107-b585-37f8b3255844",
