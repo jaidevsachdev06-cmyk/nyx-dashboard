@@ -191,30 +191,6 @@
     "entryDate": "2026-02-17T07:12:35.729Z"
   },
   {
-    "id": "19b8b56c-f3a7-44df-8028-a6620085e50a",
-    "market": "Will the highest temperature in Miami be between 76-77°F on February 18?",
-    "marketUrl": "https://simmer.markets/15e45f52-6744-44a7-bf81-29b69ee17c6c",
-    "position": "Yes",
-    "entryPrice": 0.115,
-    "currentPrice": 0.085,
-    "shares": 86.3,
-    "status": "open",
-    "notes": "NWS hourly forecast peaks at 77°F for Miami Feb 18. Market prices 78-79 as favorite at 39¢ but NWS hourly disagrees. Aviation TAF: E winds 10kt, stable conditions.",
-    "tags": [
-      "weather",
-      "temperature",
-      "simmer",
-      "paper-trade",
-      "miami"
-    ],
-    "createdAt": "2026-02-17T08:23:52.997Z",
-    "invested": 9.9245,
-    "currentValue": 7.335500000000001,
-    "pnl": -2.5889999999999995,
-    "pnlPercent": -26.086956521739125,
-    "entryDate": "2026-02-17T08:23:52.997Z"
-  },
-  {
     "id": "0886d81f-f19d-4fb6-b04b-b983a90156c5",
     "market": "Will the highest temperature in Seattle be between 44-45°F on February 18?",
     "marketUrl": "https://simmer.markets/2058b1a3-0d91-4131-9a0a-d78a030024d7",
