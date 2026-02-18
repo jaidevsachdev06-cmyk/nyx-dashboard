@@ -255,7 +255,7 @@
     "entryPrice": 0.122,
     "currentPrice": 0.125,
     "shares": 166.07,
-    "status": "open",
+    "status": "closed",
     "noaaForecast": "50°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly peaks at 50°F with rain all day Feb 19. TAF KORD shows post-frontal cooling. Market YES at 78.5¢ is massively overpriced — true prob of >=54°F near 0-5%. Buying NO at ~12.2¢ gives ~75pp edge. Rain suppresses heating.",
@@ -269,7 +269,9 @@
       "contrarian"
     ],
     "createdAt": "2026-02-18T10:04:30.692Z",
-    "updatedAt": "2026-02-18T11:49:14.712Z"
+    "updatedAt": "2026-02-18T23:16:41.709Z",
+    "result": "exit",
+    "notes": " | Exit: Forecast 47.2°F below threshold 54°F"
   },
   {
     "id": "1d415d16-b4c3-47f9-ac88-215744d69747",
