@@ -313,5 +313,28 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T06:54:15.952Z"
+  },
+  {
+    "id": "6f80cd5a-99f3-4357-911f-49994aad502d",
+    "market": "Will Trump nominate Kevin Warsh as the next Fed chair?",
+    "side": "Yes",
+    "entryPrice": 0,
+    "currentPrice": 0,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, debased, Thonker, scottilicious, Dropper",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 84,
+    "avgWinRate": 72.2,
+    "reasoning": "Consensus: 5 whales (avg score 84, avg WR 72.2%) agree on Yes. Whales: Roflan, debased, Thonker, scottilicious, Dropper",
+    "endDate": "2026-12-31",
+    "createdAt": "2026-02-18T06:54:19.694Z",
+    "invested": 0,
+    "currentValue": 0,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-18T06:54:19.694Z"
   }
 ]
