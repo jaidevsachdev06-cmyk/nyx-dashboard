@@ -233,5 +233,31 @@
     ],
     "createdAt": "2026-02-18T02:04:09.118Z",
     "updatedAt": "2026-02-18T10:04:03.157Z"
+  },
+  {
+    "id": "cf06b26b-189e-4e0d-a086-81867fd95fc5",
+    "city": "Chicago",
+    "market": "Will the highest temperature in Chicago be 54°F or higher on February 19?",
+    "marketId": "2ce09acd-0708-4094-9b55-563446ca58a4",
+    "marketUrl": "https://simmer.markets/2ce09acd-0708-4094-9b55-563446ca58a4",
+    "side": "no",
+    "bucket": ">=54°F",
+    "entryPrice": 0.122,
+    "currentPrice": 0.125,
+    "shares": 166.07,
+    "status": "open",
+    "noaaForecast": "50°F",
+    "forecastConfidence": "high",
+    "reasoning": "NWS hourly peaks at 50°F with rain all day Feb 19. TAF KORD shows post-frontal cooling. Market YES at 78.5¢ is massively overpriced — true prob of >=54°F near 0-5%. Buying NO at ~12.2¢ gives ~75pp edge. Rain suppresses heating.",
+    "source": "auto",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "chicago",
+      "feb19",
+      "contrarian"
+    ],
+    "createdAt": "2026-02-18T10:04:30.692Z"
   }
 ]
