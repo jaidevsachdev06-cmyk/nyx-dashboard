@@ -268,5 +268,30 @@
       "feb19"
     ],
     "createdAt": "2026-02-18T02:03:57.538Z"
+  },
+  {
+    "id": "504b3efb-0d66-4876-baea-846beb42265f",
+    "city": "Atlanta",
+    "market": "Will the highest temperature in Atlanta be between 74-75°F on February 19?",
+    "marketId": "64b10a07-29d3-4ec2-a3dc-617560a86776",
+    "marketUrl": "https://simmer.markets/64b10a07-29d3-4ec2-a3dc-617560a86776",
+    "side": "yes",
+    "bucket": "74-75°F",
+    "entryPrice": 0.256,
+    "currentPrice": 0.257,
+    "shares": 58.9,
+    "status": "open",
+    "noaaForecast": "75°F",
+    "forecastConfidence": "medium-high",
+    "reasoning": "NWS hourly peaks at 75°F at 3-4pm EST Feb 19. Morning rain showers clear by noon per TAF KATL (23010G20kt SW winds afternoon). Polymarket has this at 33.5¢ vs Simmer 25.1¢ — 10pp edge on Simmer. Cloud cover adds slight uncertainty.",
+    "source": "auto",
+    "tags": [
+      "weather",
+      "temperature",
+      "simmer",
+      "atlanta",
+      "feb19"
+    ],
+    "createdAt": "2026-02-18T02:04:09.118Z"
   }
 ]
