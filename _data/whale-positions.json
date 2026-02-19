@@ -96,7 +96,7 @@
     "market": "Khamenei stays as Supreme Leader by Feb 28",
     "side": "NO",
     "entryPrice": 0.029,
-    "currentPrice": 0.785,
+    "currentPrice": 0.0315,
     "shares": 30.9,
     "whales": "Roflan, Thonker, TheWolfOfPoly, Qualitative",
     "whaleCount": 4,
@@ -106,12 +106,12 @@
     "endDate": "2026-02-28",
     "createdAt": "2026-02-17T16:19:49.574Z",
     "invested": 0.8961,
-    "currentValue": 24.2565,
-    "pnl": 23.3604,
-    "pnlPercent": 2606.8965517241377,
+    "currentValue": 0.9733499999999999,
+    "pnl": 0.07724999999999993,
+    "pnlPercent": 8.620689655172406,
     "status": "open",
     "entryDate": "2026-02-17T16:19:49.574Z",
-    "conditionId": "0x70909f0ba8256a89c301da58812ae47203df54957a07c7f8b10235e877ad63c2"
+    "conditionId": null
   },
   {
     "id": "0d656af4-a8c3-48e7-858b-05d67855fc46",
