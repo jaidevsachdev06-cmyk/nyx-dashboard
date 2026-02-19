@@ -515,5 +515,19 @@
     "createdAt": "2026-02-19T10:02:37.465Z",
     "exitPrice": 0,
     "updatedAt": "2026-02-19T10:22:58.629Z"
+  },
+  {
+    "id": "64b5c110-e138-4b04-b617-910c3aaad9f4",
+    "market": "Will the highest temperature in New York City be between 40-41°F on February 20?",
+    "side": "no",
+    "entryPrice": 0.52,
+    "currentPrice": 0.52,
+    "shares": 5.77,
+    "status": "open",
+    "source": "polymarket-paper",
+    "date": "2026-02-20",
+    "conditionId": "0xNYC-40-41-feb20-no",
+    "notes": "edge=0.35, kelly=72.9%→5%, p_model=0.87, p_mkt=0.52, spread=3.2°F",
+    "createdAt": "2026-02-19T13:09:28.172Z"
   }
 ]
