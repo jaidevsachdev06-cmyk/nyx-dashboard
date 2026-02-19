@@ -213,6 +213,7 @@
     "createdAt": "2026-02-17T07:12:35.729Z",
     "entryDate": "2026-02-17T07:12:35.729Z",
     "side": "Yes",
-    "reasoning": "Fed holds rates in March. Strong consensus."
+    "reasoning": "Fed holds rates in March. Strong consensus.",
+    "conditionId": "0x257b18205f908aef01ef2d1d50e6fea7d29cf5486fe04031d8b101394476faed"
   }
 ]
