@@ -23,14 +23,5 @@
     "targetEntry": null,
     "createdAt": "2026-02-17T07:54:41.290Z",
     "addedAt": "2026-02-17T07:54:41.290Z"
-  },
-  {
-    "id": "51fd4008-7741-421e-a70c-df5042cc99c9",
-    "market": "Will the highest temperature in Atlanta be 68°F or higher on February 18?",
-    "currentPrice": 0.745,
-    "targetEntry": null,
-    "notes": "NWS says exactly 68°F. Too close to boundary — 1°F miss = total loss. Avoid.",
-    "createdAt": "2026-02-17T08:24:17.547Z",
-    "addedAt": "2026-02-17T08:24:17.547Z"
   }
 ]
