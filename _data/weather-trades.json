@@ -425,14 +425,14 @@
     "market": "Will the highest temperature in Paris be 10°C or higher on February 19?",
     "side": "no",
     "entryPrice": 0.185,
-    "currentPrice": 0.185,
+    "currentPrice": 0.195,
     "shares": 135,
     "status": "open",
     "source": "polymarket-paper",
     "date": "2026-02-19",
     "notes": "edge=0.38, kelly=5.0%, p_model=0.56, p_mkt=0.185, forecast=9.6°C",
     "createdAt": "2026-02-19T01:10:06.316Z",
-    "updatedAt": "2026-02-19T13:10:34.998Z",
+    "updatedAt": "2026-02-19T13:30:01.921Z",
     "conditionId": "0xd00d8eb54544e0e79730269d6d356eb6523f1b6936080fe4b4d63bf9ebf87430"
   },
   {
