@@ -470,26 +470,5 @@
     "notes": "Consensus 52°F, 33% edge. gopfan2 NO entry.",
     "updatedAt": "2026-02-19T05:30:50.946Z",
     "conditionId": "0xf56ff481d6eb43313b7ce830530a344cac00808e0822d5685565d7b886ddc787"
-  },
-  {
-    "id": "e46c0dfd-aeca-43f3-82b8-ca64b64e9cba",
-    "action": "trade",
-    "platform": "polymarket",
-    "market": "Will the highest temperature in Toronto be 5°C or higher on February 20?",
-    "marketId": "toronto-5c-feb20",
-    "side": "yes",
-    "price": 0.09,
-    "amount": 3,
-    "shares": 33.33,
-    "reasoning": "3-model consensus 3.8°C, 32% true prob vs 9¢ market, 23% edge. Longshot but great price.",
-    "createdAt": "2026-02-19T02:31:06.198Z",
-    "entryPrice": 0.09,
-    "currentPrice": 0.0005,
-    "status": "open",
-    "source": "polymarket-paper",
-    "date": "2026-02-20",
-    "notes": "Consensus 3.8°C, 23% edge. Longshot.",
-    "updatedAt": "2026-02-19T02:55:46.562Z",
-    "conditionId": "0xf49d532ad2f21a12e4a3a592ff134f53bef7ab002796576580d97ca0c65179be"
   }
 ]
