@@ -24,10 +24,10 @@
   },
   {
     "id": "ed4d15a9-81cb-4921-b680-bfb5743a86c8",
-    "market": "Will Trump nominate Kevin Warsh as the next Fed chair?",
+    "market": "Will Kevin Warsh be formally nominated to be Chair of the Federal Reserve by February 6, 2026?",
     "side": "YES",
     "entryPrice": 0.944,
-    "currentPrice": 0.942,
+    "currentPrice": 0,
     "shares": 42.4,
     "whales": "Roflan, debased, Thonker, Brokie, scottilicious, JAHODA",
     "whaleCount": 6,
@@ -43,7 +43,7 @@
     "status": "open",
     "entryDate": "2026-02-17T16:19:37.258Z",
     "ep": "whale",
-    "conditionId": "0x61b66d02793b4a68ab0cc25be60d65f517fe18c7d654041281bb130341244fcc"
+    "conditionId": "0xa7cf623905218991d27d8322666ac09dbf52ecdbc8f8498a2db792854126ebbe"
   },
   {
     "id": "f4c4a53b-d9f9-4e06-854e-305854a25b03",
