@@ -53,7 +53,7 @@
     "currentPrice": 0.4675,
     "shares": 57.5,
     "whales": "Influenz, EltonMa",
-    "whaleCount": 2,
+    "whaleCount": 4,
     "avgScore": 57.7,
     "thesis": "Claude Opus 4 leads benchmarks. 11 days to go.",
     "category": "consensus",
@@ -69,7 +69,8 @@
       "legacy"
     ],
     "ep": "whale",
-    "conditionId": "0xcbf9e16f0ad8bef39c3860dda598df8c4906f737bbed4dc1c65f7e0c07675ab3"
+    "conditionId": "0xcbf9e16f0ad8bef39c3860dda598df8c4906f737bbed4dc1c65f7e0c07675ab3",
+    "notes": "Upgraded 2→4 whales. Now meets criteria."
   },
   {
     "id": "dadb04c5-4921-4b3b-9a3e-9e92a623be5f",
