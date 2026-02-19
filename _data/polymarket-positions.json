@@ -71,7 +71,8 @@
     "entryDate": "2026-02-17T07:12:14.249Z",
     "side": "No",
     "reasoning": "No US strikes on Iran by Feb 20. High probability.",
-    "conditionId": null
+    "conditionId": "0xe1c67f75aac5b10dc28f1a2fbb79b079fc7f7320abfbd6a950a50c372979569b",
+    "ep": "polymarket"
   },
   {
     "id": "37c81058-80d4-4e4e-9042-19d122e39d0c",
