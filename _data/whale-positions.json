@@ -19,7 +19,8 @@
     "pnlPercent": -3.947368421052635,
     "status": "open",
     "entryDate": "2026-02-17T16:19:33.127Z",
-    "conditionId": null
+    "conditionId": "0x46d40e851b24d9b0af4bc1942ccd86439cae82a9011767da14950df0ad997adf",
+    "ep": "whale"
   },
   {
     "id": "ed4d15a9-81cb-4921-b680-bfb5743a86c8",
