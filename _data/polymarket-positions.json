@@ -94,7 +94,8 @@
     "createdAt": "2026-02-17T07:12:15.628Z",
     "entryDate": "2026-02-17T07:12:15.628Z",
     "side": "Yes",
-    "reasoning": "DHS shutdown likely lasts 14+ days."
+    "reasoning": "DHS shutdown likely lasts 14+ days.",
+    "conditionId": "0xbfb0390157f5ba2421213ab9d289333a11f2d04139b79c3084d69a0e71cb6e7a"
   },
   {
     "id": "04257182-f66b-490c-9055-31544fd0023b",
