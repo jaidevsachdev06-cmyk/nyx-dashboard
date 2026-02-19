@@ -550,13 +550,14 @@
     "side": "no",
     "entryPrice": 0.545,
     "currentPrice": 0.545,
-    "shares": 5.5,
+    "shares": 45.8,
     "status": "open",
     "source": "polymarket-paper",
     "date": "2026-02-19",
     "conditionId": "0x9b2cef81576d6ede1bf692aad97d5d1f12e8a5bb99ed87a1d35fb73c4985cb0b",
-    "notes": "edge=0.35, kelly=75.8%→5%, p_model=0.89, p_mkt=0.545, spread=1.7°F",
-    "createdAt": "2026-02-19T13:09:36.071Z"
+    "notes": "edge=0.35, kelly=5.0%, p_model=0.89, p_mkt=0.545, forecast=74.3°F",
+    "createdAt": "2026-02-19T13:09:36.071Z",
+    "updatedAt": "2026-02-19T13:10:26.585Z"
   },
   {
     "id": "ac6943ce-7536-40e2-94e7-ec45b12b1e6f",
