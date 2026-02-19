@@ -78,7 +78,7 @@
     "market": "Will the DHS shutdown last 14 days or more?",
     "position": "Yes",
     "entryPrice": 0.785,
-    "currentPrice": 1,
+    "currentPrice": 0.935,
     "shares": 9.55,
     "status": "open",
     "notes": "Shutdowns always drag. Political will to resolve quickly doesnt exist.",
@@ -88,14 +88,14 @@
     ],
     "createdBy": "Nyx",
     "invested": 7.4967500000000005,
-    "currentValue": 9.55,
-    "pnl": 2.0532500000000002,
-    "pnlPercent": 27.388535031847134,
+    "currentValue": 8.929250000000001,
+    "pnl": 1.432500000000001,
+    "pnlPercent": 19.108280254777082,
     "createdAt": "2026-02-17T07:12:15.628Z",
     "entryDate": "2026-02-17T07:12:15.628Z",
     "side": "Yes",
     "reasoning": "DHS shutdown likely lasts 14+ days.",
-    "conditionId": "0xbfb0390157f5ba2421213ab9d289333a11f2d04139b79c3084d69a0e71cb6e7a"
+    "conditionId": null
   },
   {
     "id": "04257182-f66b-490c-9055-31544fd0023b",
