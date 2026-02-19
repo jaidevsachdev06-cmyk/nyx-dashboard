@@ -251,7 +251,9 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T02:56:40.842Z",
-    "currentPrice": 0.825
+    "currentPrice": 0.825,
+    "ep": "whale",
+    "conditionId": "0xd5d9fc47718bd553592d126b1fa5e87183d27f3936975b0c04cc0f2dec1f1bb4"
   },
   {
     "id": "bd76b94c-1735-4ee2-b24a-95a2ac59ef84",
