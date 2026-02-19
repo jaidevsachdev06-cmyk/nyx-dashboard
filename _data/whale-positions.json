@@ -472,7 +472,7 @@
     "market": "Will no player win a Calendar Grand Slam in 2026?",
     "side": "Yes",
     "entryPrice": 0.9725,
-    "currentPrice": 0.9725,
+    "currentPrice": 0.9705,
     "shares": 10,
     "status": "open",
     "source": "consensus-scanner",
@@ -485,9 +485,9 @@
     "endDate": "2026-12-31",
     "createdAt": "2026-02-18T20:00:24.645Z",
     "invested": 9.725,
-    "currentValue": 9.725,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 9.705,
+    "pnl": -0.019999999999999574,
+    "pnlPercent": -0.2056555269922835,
     "entryDate": "2026-02-18T20:00:24.645Z"
   },
   {
