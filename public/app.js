@@ -58,10 +58,9 @@ function loadCurrentSection() {
   switch(currentSection) {
     case 'dashboard': loadDashboard(); break;
     case 'agents': loadAgents(); break;
-    case 'school': loadSchool(); break;
+    case 'school': loadSchool(); loadInternships(); break;
     case 'polymarket': loadPolymarket(); break;
     case 'trading': loadTrading(); break;
-    case 'internships': loadInternships(); break;
   }
 }
 
