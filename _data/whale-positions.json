@@ -426,7 +426,7 @@
     "market": "Will the United States win the most medals in the 2026 Winter Olympics?",
     "side": "Yes",
     "entryPrice": 0.008,
-    "currentPrice": 0.0115,
+    "currentPrice": 0.017,
     "shares": 10,
     "status": "open",
     "source": "consensus-scanner",
@@ -439,9 +439,9 @@
     "endDate": "2026-02-22",
     "createdAt": "2026-02-18T10:05:37.922Z",
     "invested": 0.08,
-    "currentValue": 0.11499999999999999,
-    "pnl": 0.03499999999999999,
-    "pnlPercent": 43.749999999999986,
+    "currentValue": 0.17,
+    "pnl": 0.09000000000000001,
+    "pnlPercent": 112.5,
     "entryDate": "2026-02-18T10:05:37.922Z"
   },
   {
