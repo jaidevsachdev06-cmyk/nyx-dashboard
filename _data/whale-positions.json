@@ -560,5 +560,28 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-19T04:00:24.611Z"
+  },
+  {
+    "id": "9f1686e6-8905-4ed3-825d-0ba62fcb66a9",
+    "market": "Will Anthropic have the best AI model at the end of February 2026?",
+    "side": "Yes",
+    "entryPrice": 0.4675,
+    "currentPrice": 0.4675,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "ProfessionalPunter, Influenz, The-Joker, Gr33d",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 75.9,
+    "avgWinRate": 68.8,
+    "reasoning": "Consensus: 4 whales (avg score 75.9, avg WR 68.8%) on Yes. Whales: ProfessionalPunter, Influenz, The-Joker, Gr33d",
+    "endDate": "2026-02-28",
+    "createdAt": "2026-02-19T08:03:49.088Z",
+    "invested": 4.675000000000001,
+    "currentValue": 4.675000000000001,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-19T08:03:49.088Z"
   }
 ]
