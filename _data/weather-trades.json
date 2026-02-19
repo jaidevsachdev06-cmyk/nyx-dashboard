@@ -584,7 +584,7 @@
     "market": "Will the highest temperature in New York City be between 38-39°F on February 19?",
     "side": "no",
     "entryPrice": 0.49,
-    "currentPrice": 0.79,
+    "currentPrice": 0.765,
     "shares": 6.12,
     "status": "open",
     "source": "polymarket-paper",
@@ -592,6 +592,6 @@
     "conditionId": "0xfa56748c82ffe0a1e17546dec339615da3be6a0c7e5a7bdf9ba0dd25902f16e5",
     "notes": "edge=0.41, kelly=80.4%→capped 5%, p_model=0.90, p_mkt=0.49, forecast=40.9°F, spread=0.2°F",
     "createdAt": "2026-02-19T14:01:25.716Z",
-    "updatedAt": "2026-02-19T20:30:04.928Z"
+    "updatedAt": "2026-02-19T21:00:04.573Z"
   }
 ]
