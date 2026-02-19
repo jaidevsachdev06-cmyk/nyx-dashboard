@@ -425,13 +425,14 @@
     "market": "Will the highest temperature in Paris be 10°C or higher on February 19?",
     "side": "no",
     "entryPrice": 0.36,
-    "currentPrice": 0.36,
+    "currentPrice": 0.24,
     "shares": 8,
     "status": "open",
     "source": "polymarket-paper",
     "date": "2026-02-19",
     "notes": "Forecast 8.5°C (ECMWF/GFS/ICON consensus). Edge 37%. Settlement: LFPG (CDG Airport) via WU.",
-    "createdAt": "2026-02-19T01:10:06.316Z"
+    "createdAt": "2026-02-19T01:10:06.316Z",
+    "updatedAt": "2026-02-19T02:42:01.346Z"
   },
   {
     "id": "070ae003-00ea-4718-8a95-c574fbffcff0",
