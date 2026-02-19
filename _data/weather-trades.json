@@ -470,13 +470,20 @@
     "id": "e46c0dfd-aeca-43f3-82b8-ca64b64e9cba",
     "action": "trade",
     "platform": "polymarket",
-    "market": "Toronto ≥5°C Feb 20",
+    "market": "Will the highest temperature in Toronto be 5°C or higher on February 20?",
     "marketId": "toronto-5c-feb20",
     "side": "yes",
     "price": 0.09,
     "amount": 3,
     "shares": 33.33,
     "reasoning": "3-model consensus 3.8°C, 32% true prob vs 9¢ market, 23% edge. Longshot but great price.",
-    "createdAt": "2026-02-19T02:31:06.198Z"
+    "createdAt": "2026-02-19T02:31:06.198Z",
+    "entryPrice": 0.09,
+    "currentPrice": 0.09,
+    "status": "open",
+    "source": "polymarket-paper",
+    "date": "2026-02-20",
+    "notes": "Consensus 3.8°C, 23% edge. Longshot.",
+    "updatedAt": "2026-02-19T02:35:36.240Z"
   }
 ]
