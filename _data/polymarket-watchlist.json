@@ -41,14 +41,5 @@
     "notes": "Contrarian play if Atlanta undershoots by 1°F. Watching.",
     "createdAt": "2026-02-17T08:24:19.336Z",
     "addedAt": "2026-02-17T08:24:19.336Z"
-  },
-  {
-    "id": "ea648fe0-10e9-4e3a-b3dc-372a5491b3b7",
-    "market": "Will the highest temperature in Chicago be between 62-63°F on February 18?",
-    "currentPrice": 0.245,
-    "targetEntry": null,
-    "notes": "Consensus play — NWS says 62°F high. Didnt trade because less edge than 60-61 hedge.",
-    "createdAt": "2026-02-17T08:24:21.183Z",
-    "addedAt": "2026-02-17T08:24:21.183Z"
   }
 ]
