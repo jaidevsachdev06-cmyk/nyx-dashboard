@@ -464,12 +464,13 @@
     "createdAt": "2026-02-19T02:31:05.061Z",
     "entryPrice": 0.46,
     "currentPrice": 0.085,
-    "status": "open",
+    "status": "closed",
     "source": "polymarket-paper",
     "date": "2026-02-19",
-    "notes": "Consensus 52°F, 33% edge. gopfan2 NO entry.",
-    "updatedAt": "2026-02-19T16:00:02.931Z",
-    "conditionId": "0xf56ff481d6eb43313b7ce830530a344cac00808e0822d5685565d7b886ddc787"
+    "notes": "Consensus 52°F, 33% edge. gopfan2 NO entry. | Exit: Stop loss: price 0.085 < 0.276",
+    "updatedAt": "2026-02-19T16:00:40.021Z",
+    "conditionId": "0xf56ff481d6eb43313b7ce830530a344cac00808e0822d5685565d7b886ddc787",
+    "result": "exit"
   },
   {
     "id": "9b7d30d7-8a25-451e-85c8-9b52adc7b1e5",
