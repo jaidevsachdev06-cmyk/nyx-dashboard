@@ -18,7 +18,8 @@
     "pnl": -0.07800000000000007,
     "pnlPercent": -3.947368421052635,
     "status": "open",
-    "entryDate": "2026-02-17T16:19:33.127Z"
+    "entryDate": "2026-02-17T16:19:33.127Z",
+    "conditionId": "0x21450e1d9c581df3cb90cfb1da5694af1d425f62837a2f39bad7e8f4163cbc17"
   },
   {
     "id": "ed4d15a9-81cb-4921-b680-bfb5743a86c8",
