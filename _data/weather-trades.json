@@ -460,13 +460,13 @@
     "shares": 6.52,
     "reasoning": "NWS 52°F, 3-model consensus 52°F, 33% edge. Already hold on Simmer, adding Polymarket paper.",
     "createdAt": "2026-02-19T02:31:05.061Z",
-    "entryPrice": 0.54,
+    "entryPrice": 0.46,
     "currentPrice": 0.46499999999999997,
     "status": "open",
     "source": "polymarket-paper",
     "date": "2026-02-19",
     "notes": "Consensus 52°F, 33% edge. gopfan2 NO entry.",
-    "updatedAt": "2026-02-19T02:42:07.090Z"
+    "updatedAt": "2026-02-19T02:43:46.625Z"
   },
   {
     "id": "e46c0dfd-aeca-43f3-82b8-ca64b64e9cba",
