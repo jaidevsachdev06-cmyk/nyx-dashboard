@@ -509,7 +509,7 @@
     "market": "US strikes Iran by February 28, 2026?",
     "side": "Yes",
     "entryPrice": 0.225,
-    "currentPrice": 0.28,
+    "currentPrice": 0,
     "shares": 10,
     "status": "open",
     "source": "consensus-scanner",
