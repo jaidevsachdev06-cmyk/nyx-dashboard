@@ -672,5 +672,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-19T16:02:55.032Z"
+  },
+  {
+    "id": "1510edeb-ef54-40ee-a66b-0362dfcc3a44",
+    "market": "US strikes Iran by March 31, 2026?",
+    "side": "No",
+    "entryPrice": 0.565,
+    "currentPrice": 0.565,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, Mombil, TheWolfOfPoly, GollumGekko",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 79.5,
+    "avgWinRate": 67.6,
+    "reasoning": "Consensus: 4 whales (avg score 79.5, avg WR 67.6%) on No. Whales: Roflan, Mombil, TheWolfOfPoly, GollumGekko",
+    "endDate": "2026-06-30",
+    "conditionId": "",
+    "createdAt": "2026-02-19T16:02:58.880Z",
+    "invested": 5.6499999999999995,
+    "currentValue": 5.6499999999999995,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-19T16:02:58.880Z"
   }
 ]
