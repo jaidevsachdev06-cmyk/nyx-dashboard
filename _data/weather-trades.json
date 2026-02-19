@@ -484,5 +484,19 @@
     "conditionId": "0x34fd7d50f174b2a15779540c75cf9c995e5f1ac9520ad9ab4d9e0ee9175a0539",
     "notes": "edge=0.33, kelly=70.3%, f_eff=5%, p_model=0.86, p_mkt=0.529, forecast=53.7F, spread=3.2F, maxSize cap $3",
     "createdAt": "2026-02-19T10:02:30.205Z"
+  },
+  {
+    "id": "dd58a3ad-0110-4aba-b4f8-10a6b5253e7e",
+    "market": "Will the highest temperature in London be 10°C or higher on February 19?",
+    "side": "yes",
+    "entryPrice": 0.003,
+    "currentPrice": 0.003,
+    "shares": 1000,
+    "status": "open",
+    "source": "polymarket-paper",
+    "date": "2026-02-19",
+    "conditionId": "0x2bc718947eabc2b2c2cf067b49684baea4d6e7c869524cabb5ac9ac35861859d",
+    "notes": "edge=0.12, kelly=11.7%, f_eff=5%, p_model=0.12, p_mkt=0.003, forecast=7.1C, spread=1.6C(2.9F), lottery ticket $3 risk",
+    "createdAt": "2026-02-19T10:02:31.634Z"
   }
 ]
