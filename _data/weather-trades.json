@@ -439,13 +439,14 @@
     "market": "Will the highest temperature in Toronto be 5°C or higher on February 20?",
     "side": "yes",
     "entryPrice": 0.12,
-    "currentPrice": 0.12,
+    "currentPrice": 0.095,
     "shares": 25,
     "status": "open",
     "source": "polymarket-paper",
     "date": "2026-02-20",
     "notes": "Forecast 3.1°C (models: 2.6/3.1/3.8). Edge 11%. Tight but threshold met. Settlement: CYYZ (Pearson) via WU.",
-    "createdAt": "2026-02-19T01:10:09.106Z"
+    "createdAt": "2026-02-19T01:10:09.106Z",
+    "updatedAt": "2026-02-19T02:42:04.135Z"
   },
   {
     "id": "8563b054-86ed-47e6-a022-bc6b55c87b31",
