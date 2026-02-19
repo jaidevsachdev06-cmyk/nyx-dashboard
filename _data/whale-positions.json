@@ -272,13 +272,13 @@
     "whaleCount": 3,
     "status": "open",
     "createdAt": "2026-02-18T03:10:28.559Z",
-    "currentValue": 46.359,
-    "pnl": -3.6359999999999957,
-    "pnlPercent": -7.2727272727272645,
+    "currentValue": 46.662,
+    "pnl": -3.3329999999999984,
+    "pnlPercent": -6.666666666666663,
     "entryDate": "2026-02-18T03:10:28.559Z",
-    "currentPrice": 0.765,
+    "currentPrice": 0.77,
     "conditionId": "0x569d909807a5d032aac3cbb3971c503f72552bb49378636fc2812820158c7a64",
-    "updatedAt": "2026-02-19T10:36:26.613Z"
+    "updatedAt": "2026-02-19T11:30:11.024Z"
   },
   {
     "id": "0eaca637-2bfc-4690-a89a-ee519e4810d0",
