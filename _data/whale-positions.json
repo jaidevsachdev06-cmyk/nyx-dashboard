@@ -80,7 +80,7 @@
     "market": "Will Claude 5 be released by February 28, 2026?",
     "side": "No",
     "entryPrice": 0.945,
-    "currentPrice": 0.9785,
+    "currentPrice": 0.983,
     "shares": 31.7,
     "whales": "PredictaDamus, EltonMa",
     "whaleCount": 2,
@@ -90,16 +90,17 @@
     "endDate": "2026-02-28",
     "createdAt": "2026-02-17T16:19:45.742Z",
     "invested": 29.9565,
-    "currentValue": 31.01845,
-    "pnl": 1.061950000000003,
-    "pnlPercent": 3.544973544973555,
+    "currentValue": 31.161099999999998,
+    "pnl": 1.2045999999999992,
+    "pnlPercent": 4.021164021164019,
     "status": "open",
     "entryDate": "2026-02-17T16:19:45.742Z",
     "tags": [
       "legacy"
     ],
     "conditionId": "0x904813dbc02417ef42534a4522c4efe117f2be7d24b72860c0fffde38ea6c9e8",
-    "ep": "whale"
+    "ep": "whale",
+    "updatedAt": "2026-02-19T10:52:08.936Z"
   },
   {
     "id": "f17e039a-5f1d-4c8e-a06c-3449db82211c",
