@@ -149,12 +149,12 @@
     "market": "US strikes Iran by February 28, 2026?",
     "position": "No",
     "entryPrice": 0.175,
-    "currentPrice": 1,
+    "currentPrice": 0.72,
     "shares": 12.12,
     "invested": 2.1209999999999996,
-    "currentValue": 12.12,
-    "pnl": 9.998999999999999,
-    "pnlPercent": 471.42857142857144,
+    "currentValue": 8.7264,
+    "pnl": 6.6054,
+    "pnlPercent": 311.4285714285715,
     "status": "open",
     "notes": "17.5% for 11 days too high. Diplomatic channels active.",
     "tags": [
@@ -166,7 +166,7 @@
     "entryDate": "2026-02-17T07:12:30.159Z",
     "side": "No",
     "reasoning": "No US strikes on Iran by Feb 28.",
-    "conditionId": "0x3bed62b0b7e3eb52c1f0d8a5d11edad1f74989038fc1cae2889cdbe96a248dfe"
+    "conditionId": null
   },
   {
     "id": "1350f4fb-9322-446f-a002-4458522f683f",
