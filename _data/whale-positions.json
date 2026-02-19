@@ -76,7 +76,7 @@
     "market": "Claude 5 NOT released by Feb 28",
     "side": "YES",
     "entryPrice": 0.945,
-    "currentPrice": null,
+    "currentPrice": 0.9785,
     "shares": 31.7,
     "whales": "PredictaDamus, EltonMa",
     "whaleCount": 2,
@@ -86,15 +86,15 @@
     "endDate": "2026-02-28",
     "createdAt": "2026-02-17T16:19:45.742Z",
     "invested": 29.9565,
-    "currentValue": 31.43055,
-    "pnl": 1.4740500000000019,
-    "pnlPercent": 4.920634920634927,
+    "currentValue": 31.01845,
+    "pnl": 1.061950000000003,
+    "pnlPercent": 3.544973544973555,
     "status": "open",
     "entryDate": "2026-02-17T16:19:45.742Z",
     "tags": [
       "legacy"
     ],
-    "conditionId": "0x2a1e119c12119a73d7",
+    "conditionId": "0x904813dbc02417ef42534a4522c4efe117f2be7d24b72860c0fffde38ea6c9e8",
     "ep": "whale"
   },
   {
