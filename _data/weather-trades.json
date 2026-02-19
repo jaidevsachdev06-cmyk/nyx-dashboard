@@ -442,12 +442,12 @@
     "entryPrice": 0.12,
     "currentPrice": 0.08,
     "shares": 25,
-    "status": "open",
+    "status": "closed-loss",
     "source": "polymarket-paper",
     "date": "2026-02-20",
-    "notes": "Forecast 3.1°C (models: 2.6/3.1/3.8). Edge 11%. Tight but threshold met. Settlement: CYYZ (Pearson) via WU.",
+    "notes": "SOLD: Forecast 3.1°C, well below 5°C. Cold front.",
     "createdAt": "2026-02-19T01:10:09.106Z",
-    "updatedAt": "2026-02-19T02:55:40.765Z",
+    "updatedAt": "2026-02-19T07:30:33.076Z",
     "conditionId": "0xaf832299e9a6b20956dae7558955bc75bc701d53cb922def0d875021855c57b4"
   },
   {
