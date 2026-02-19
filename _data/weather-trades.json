@@ -470,5 +470,19 @@
     "notes": "Consensus 52°F, 33% edge. gopfan2 NO entry.",
     "updatedAt": "2026-02-19T10:01:28.041Z",
     "conditionId": "0xf56ff481d6eb43313b7ce830530a344cac00808e0822d5685565d7b886ddc787"
+  },
+  {
+    "id": "9b7d30d7-8a25-451e-85c8-9b52adc7b1e5",
+    "market": "Will the highest temperature in Chicago be between 52-53°F on February 19?",
+    "side": "no",
+    "entryPrice": 0.529,
+    "currentPrice": 0.529,
+    "shares": 5,
+    "status": "open",
+    "source": "polymarket-paper",
+    "date": "2026-02-19",
+    "conditionId": "0x34fd7d50f174b2a15779540c75cf9c995e5f1ac9520ad9ab4d9e0ee9175a0539",
+    "notes": "edge=0.33, kelly=70.3%, f_eff=5%, p_model=0.86, p_mkt=0.529, forecast=53.7F, spread=3.2F, maxSize cap $3",
+    "createdAt": "2026-02-19T10:02:30.205Z"
   }
 ]
