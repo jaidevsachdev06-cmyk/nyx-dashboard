@@ -76,7 +76,7 @@
     "market": "Claude 5 NOT released by Feb 28",
     "side": "YES",
     "entryPrice": 0.945,
-    "currentPrice": 0.9915,
+    "currentPrice": null,
     "shares": 31.7,
     "whales": "PredictaDamus, EltonMa",
     "whaleCount": 2,
@@ -94,7 +94,7 @@
     "tags": [
       "legacy"
     ],
-    "conditionId": "0xeb07ab8bd8f2b94a37869cea9c163ec6eb0fc1471d51fc46b25ba5581b3c3f08",
+    "conditionId": "0x2a1e119c12119a73d7",
     "ep": "whale"
   },
   {
