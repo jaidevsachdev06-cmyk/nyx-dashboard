@@ -792,5 +792,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-19T20:01:28.786Z"
+  },
+  {
+    "id": "6bf756e8-b174-4b97-8451-48ca046c49ef",
+    "market": "Israel strikes Iran by February 28, 2026?",
+    "side": "No",
+    "entryPrice": 0.235,
+    "currentPrice": 0.235,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, Car, kekkone, GollumGekko",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 84.5,
+    "avgWinRate": 70.8,
+    "reasoning": "Consensus: 4 whales (avg score 84.5, avg WR 70.8%) on No. Whales: Roflan, Car, kekkone, GollumGekko",
+    "endDate": "2026-02-28",
+    "conditionId": "",
+    "createdAt": "2026-02-19T20:01:32.636Z",
+    "invested": 2.3499999999999996,
+    "currentValue": 2.3499999999999996,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-19T20:01:32.636Z"
   }
 ]
