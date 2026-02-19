@@ -50,14 +50,5 @@
     "notes": "Consensus play — NWS says 62°F high. Didnt trade because less edge than 60-61 hedge.",
     "createdAt": "2026-02-17T08:24:21.183Z",
     "addedAt": "2026-02-17T08:24:21.183Z"
-  },
-  {
-    "id": "15e87dbd-88e8-4e8a-a645-5c1af702c135",
-    "market": "Will the highest temperature in Miami be between 78-79°F on February 18?",
-    "currentPrice": 0.39,
-    "targetEntry": null,
-    "notes": "Market favorite but NWS disagrees. Potential NO trade if Miami stays at 77°F.",
-    "createdAt": "2026-02-17T08:24:23.016Z",
-    "addedAt": "2026-02-17T08:24:23.016Z"
   }
 ]
