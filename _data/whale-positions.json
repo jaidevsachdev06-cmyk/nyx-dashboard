@@ -525,6 +525,7 @@
     "currentValue": 2.8000000000000003,
     "pnl": 0.5500000000000003,
     "pnlPercent": 24.444444444444457,
-    "entryDate": "2026-02-19T00:00:24.079Z"
+    "entryDate": "2026-02-19T00:00:24.079Z",
+    "conditionId": "0x3bed62b0b7e3eb52c1f0d8a5d11edad1f74989038fc1cae2889cdbe96a248dfe"
   }
 ]
