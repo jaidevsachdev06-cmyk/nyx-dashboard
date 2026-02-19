@@ -106,7 +106,7 @@
     "market": "Will Anthropic have the best AI model at the end of February 2026?",
     "position": "Yes",
     "entryPrice": 0.675,
-    "currentPrice": 0.428,
+    "currentPrice": 0.4295,
     "shares": 11.85,
     "status": "open",
     "notes": "Claude Opus 4 is SOTA. Only 11 days left, unlikely competitor surpasses.",
@@ -116,15 +116,15 @@
     ],
     "createdBy": "Nyx",
     "invested": 7.99875,
-    "currentValue": 5.0718,
-    "pnl": -2.9269500000000006,
-    "pnlPercent": -36.592592592592595,
+    "currentValue": 5.089575,
+    "pnl": -2.9091750000000003,
+    "pnlPercent": -36.370370370370374,
     "createdAt": "2026-02-17T07:12:17.403Z",
     "entryDate": "2026-02-17T07:12:17.403Z",
     "side": "Yes",
     "reasoning": "Anthropic best AI model end of Feb. Whale consensus.",
     "conditionId": "0xcbf9e16f0ad8bef39c3860dda598df8c4906f737bbed4dc1c65f7e0c07675ab3",
-    "updatedAt": "2026-02-19T10:36:19.354Z"
+    "updatedAt": "2026-02-19T10:52:01.862Z"
   },
   {
     "id": "fe7fa790-c52a-4df8-86b3-8af96f618803",
