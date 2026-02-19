@@ -4,7 +4,7 @@
     "market": "Will Trump nominate Judy Shelton as the next Fed chair?",
     "side": "Yes",
     "entryPrice": 0.038,
-    "currentPrice": 0.0365,
+    "currentPrice": 0.0345,
     "shares": 52,
     "whales": "Roflan, debased, Snoorrason, tsybka, Gr33d, scottilicious, JAHODA, Qualitative",
     "whaleCount": 8,
@@ -14,13 +14,14 @@
     "endDate": "2026-12-31",
     "createdAt": "2026-02-17T16:19:33.126Z",
     "invested": 1.976,
-    "currentValue": 1.898,
-    "pnl": -0.07800000000000007,
-    "pnlPercent": -3.947368421052635,
+    "currentValue": 1.794,
+    "pnl": -0.18199999999999994,
+    "pnlPercent": -9.21052631578947,
     "status": "open",
     "entryDate": "2026-02-17T16:19:33.127Z",
     "conditionId": "0x46d40e851b24d9b0af4bc1942ccd86439cae82a9011767da14950df0ad997adf",
-    "ep": "whale"
+    "ep": "whale",
+    "updatedAt": "2026-02-19T10:52:04.160Z"
   },
   {
     "id": "ed4d15a9-81cb-4921-b680-bfb5743a86c8",
