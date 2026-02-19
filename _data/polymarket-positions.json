@@ -165,7 +165,8 @@
     "createdAt": "2026-02-17T07:12:30.159Z",
     "entryDate": "2026-02-17T07:12:30.159Z",
     "side": "No",
-    "reasoning": "No US strikes on Iran by Feb 28."
+    "reasoning": "No US strikes on Iran by Feb 28.",
+    "conditionId": "0x3bed62b0b7e3eb52c1f0d8a5d11edad1f74989038fc1cae2889cdbe96a248dfe"
   },
   {
     "id": "1350f4fb-9322-446f-a002-4458522f683f",
