@@ -696,5 +696,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-19T16:02:58.880Z"
+  },
+  {
+    "id": "a25bc7b2-3161-47ac-8cb8-85f462971923",
+    "market": "Will Thomas Massie win the 2028 Republican presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.0135,
+    "currentPrice": 0.0135,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Brokie, Influenz, TheWolfOfPoly, GollumGekko",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 79.3,
+    "avgWinRate": 68.9,
+    "reasoning": "Consensus: 4 whales (avg score 79.3, avg WR 68.9%) on Yes. Whales: Brokie, Influenz, TheWolfOfPoly, GollumGekko",
+    "endDate": "2028-11-07",
+    "conditionId": "",
+    "createdAt": "2026-02-19T16:03:02.734Z",
+    "invested": 0.135,
+    "currentValue": 0.135,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-19T16:03:02.734Z"
   }
 ]
