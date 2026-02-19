@@ -529,5 +529,19 @@
     "conditionId": "0xNYC-40-41-feb20-no",
     "notes": "edge=0.35, kelly=72.9%→5%, p_model=0.87, p_mkt=0.52, spread=3.2°F",
     "createdAt": "2026-02-19T13:09:28.172Z"
+  },
+  {
+    "id": "89faa20e-fac7-4ea9-af16-383870adea35",
+    "market": "Will the highest temperature in Seattle be between 38-39°F on February 19?",
+    "side": "no",
+    "entryPrice": 0.545,
+    "currentPrice": 0.545,
+    "shares": 5.5,
+    "status": "open",
+    "source": "polymarket-paper",
+    "date": "2026-02-19",
+    "conditionId": "0x3d11ede8110658615d8f74addf48d92dafc8f0278842af34ceb7eb1f63a2e25a",
+    "notes": "edge=0.30, kelly=67.0%→5%, p_model=0.85, p_mkt=0.545, spread=3.9°F",
+    "createdAt": "2026-02-19T13:09:29.877Z"
   }
 ]
