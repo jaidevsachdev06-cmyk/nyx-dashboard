@@ -50,7 +50,7 @@
     "market": "Anthropic best AI model end of Feb",
     "side": "YES",
     "entryPrice": 0.696,
-    "currentPrice": 0.4675,
+    "currentPrice": 0.55,
     "shares": 57.5,
     "whales": "Influenz, EltonMa",
     "whaleCount": 4,
@@ -60,9 +60,9 @@
     "endDate": "2026-02-28",
     "createdAt": "2026-02-17T16:19:41.600Z",
     "invested": 40.019999999999996,
-    "currentValue": 26.88125,
-    "pnl": -13.138749999999995,
-    "pnlPercent": -32.830459770114935,
+    "currentValue": 31.625000000000004,
+    "pnl": -8.394999999999992,
+    "pnlPercent": -20.977011494252856,
     "status": "open",
     "entryDate": "2026-02-17T16:19:41.600Z",
     "tags": [
@@ -70,7 +70,8 @@
     ],
     "ep": "whale",
     "conditionId": "0xcbf9e16f0ad8bef39c3860dda598df8c4906f737bbed4dc1c65f7e0c07675ab3",
-    "notes": "Upgraded 2→4 whales. Now meets criteria."
+    "notes": "Upgraded 2→4 whales. Now meets criteria.",
+    "updatedAt": "2026-02-19T08:13:04.916Z"
   },
   {
     "id": "dadb04c5-4921-4b3b-9a3e-9e92a623be5f",
