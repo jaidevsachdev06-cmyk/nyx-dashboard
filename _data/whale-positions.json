@@ -489,5 +489,28 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-18T20:00:24.645Z"
+  },
+  {
+    "id": "f06d1fcb-bf9f-48df-90cf-220be3d87893",
+    "market": "US strikes Iran by February 28, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.225,
+    "currentPrice": 0.225,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Dropper, aenews, Roflan, ProfessionalPunter",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 81.8,
+    "avgWinRate": 67.5,
+    "reasoning": "Consensus: 4 whales (avg score 81.8, avg WR 67.5%) on Yes. Whales: Dropper, aenews, Roflan, ProfessionalPunter",
+    "endDate": "2026-01-31",
+    "createdAt": "2026-02-19T00:00:24.079Z",
+    "invested": 2.25,
+    "currentValue": 2.25,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-19T00:00:24.079Z"
   }
 ]
