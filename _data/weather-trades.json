@@ -543,5 +543,19 @@
     "conditionId": "0x3d11ede8110658615d8f74addf48d92dafc8f0278842af34ceb7eb1f63a2e25a",
     "notes": "edge=0.30, kelly=67.0%→5%, p_model=0.85, p_mkt=0.545, spread=3.9°F",
     "createdAt": "2026-02-19T13:09:29.877Z"
+  },
+  {
+    "id": "36547abe-bf95-4520-a642-b788d6aa3bdc",
+    "market": "Will the highest temperature in Atlanta be between 76-77°F on February 19?",
+    "side": "no",
+    "entryPrice": 0.545,
+    "currentPrice": 0.545,
+    "shares": 5.5,
+    "status": "open",
+    "source": "polymarket-paper",
+    "date": "2026-02-19",
+    "conditionId": "0x9b2cef81576d6ede1bf692aad97d5d1f12e8a5bb99ed87a1d35fb73c4985cb0b",
+    "notes": "edge=0.35, kelly=75.8%→5%, p_model=0.89, p_mkt=0.545, spread=1.7°F",
+    "createdAt": "2026-02-19T13:09:36.071Z"
   }
 ]
