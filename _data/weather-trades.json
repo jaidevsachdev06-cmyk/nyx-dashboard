@@ -450,14 +450,21 @@
     "id": "8563b054-86ed-47e6-a022-bc6b55c87b31",
     "action": "trade",
     "platform": "polymarket",
-    "market": "Chicago ≥54°F Feb 19",
+    "market": "Will the highest temperature in Chicago be 54°F or higher on February 19?",
     "marketId": "chicago-54-feb19",
     "side": "no",
     "price": 0.46,
     "amount": 3,
     "shares": 6.52,
     "reasoning": "NWS 52°F, 3-model consensus 52°F, 33% edge. Already hold on Simmer, adding Polymarket paper.",
-    "createdAt": "2026-02-19T02:31:05.061Z"
+    "createdAt": "2026-02-19T02:31:05.061Z",
+    "entryPrice": 0.54,
+    "currentPrice": 0.54,
+    "status": "open",
+    "source": "polymarket-paper",
+    "date": "2026-02-19",
+    "notes": "Consensus 52°F, 33% edge. gopfan2 NO entry.",
+    "updatedAt": "2026-02-19T02:35:33.405Z"
   },
   {
     "id": "e46c0dfd-aeca-43f3-82b8-ca64b64e9cba",
