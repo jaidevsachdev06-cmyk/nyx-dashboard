@@ -405,7 +405,8 @@
     "currentValue": 0,
     "pnl": 0,
     "pnlPercent": 0,
-    "entryDate": "2026-02-18T06:55:21.197Z"
+    "entryDate": "2026-02-18T06:55:21.197Z",
+    "conditionId": "0x5599856587ed77cf40cf20608448180f6abdcc512027016bcdd68ad73fca3e9f"
   },
   {
     "id": "089036f1-9735-434c-be9d-5bef5574abb5",
