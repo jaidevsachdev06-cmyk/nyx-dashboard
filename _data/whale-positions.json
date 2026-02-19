@@ -535,6 +535,7 @@
     "pnl": 0.2999999999999998,
     "pnlPercent": 13.333333333333325,
     "entryDate": "2026-02-19T00:00:24.079Z",
-    "conditionId": null
+    "conditionId": "0x3488f31e6449f9803f99a8b5dd232c7ad883637f1c86e6953305a2ef19c77f20",
+    "ep": "whale"
   }
 ]
