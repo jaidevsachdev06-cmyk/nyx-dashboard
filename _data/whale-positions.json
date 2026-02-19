@@ -409,7 +409,7 @@
     "market": "Will the next Prime Minister of Hungary be Klára Dobrev?",
     "side": "Yes",
     "entryPrice": 0.0005,
-    "currentPrice": 0,
+    "currentPrice": 0.0015,
     "shares": 10,
     "status": "open",
     "source": "consensus-scanner",
@@ -421,12 +421,13 @@
     "reasoning": "Consensus: 4 whales (avg score 81.4, avg WR 71.3%) agree on Yes. Whales: Influenz, Roflan, Snoorrason, UbuntuTrading",
     "endDate": "2026-04-12",
     "createdAt": "2026-02-18T06:55:21.197Z",
-    "invested": 0,
-    "currentValue": 0,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "invested": 0.005,
+    "currentValue": 0.015,
+    "pnl": 0.009999999999999998,
+    "pnlPercent": 199.99999999999994,
     "entryDate": "2026-02-18T06:55:21.197Z",
-    "conditionId": "0x5599856587ed77cf40cf20608448180f6abdcc512027016bcdd68ad73fca3e9f"
+    "conditionId": "0x5599856587ed77cf40cf20608448180f6abdcc512027016bcdd68ad73fca3e9f",
+    "updatedAt": "2026-02-19T10:52:11.859Z"
   },
   {
     "id": "089036f1-9735-434c-be9d-5bef5574abb5",
