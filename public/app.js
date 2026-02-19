@@ -61,6 +61,7 @@ function loadCurrentSection() {
     case 'school': loadSchool(); break;
     case 'polymarket': loadPolymarket(); break;
     case 'trading': loadTrading(); break;
+    case 'internships': loadInternships(); break;
   }
 }
 
@@ -80,7 +81,7 @@ function fmtDate(ts) {
   if (!ts) return '—';
   return new Date(ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 }
-function fmtMoney(n) { return n != null ? `$${n.toFixed(2)}` : '—'; }
+function fmtMoney(n) { if (n == null) return '—'; if (n !== 0 && Math.abs(n) < 0.01) return `$${n.toPrecision(2)}`; return `$${n.toFixed(2)}`; }
 function fmtPct(n) { return n != null ? `${n >= 0 ? '+' : ''}${n.toFixed(2)}%` : '—'; }
 function pnlClass(n) { return n > 0 ? 'pnl-pos' : n < 0 ? 'pnl-neg' : ''; }
 function statusDot(s) { return `<span class="status-dot status-${s}"></span>`; }
@@ -320,7 +321,7 @@ async function toggleTaskDone(id, currentStatus) {
 async function loadPolymarket() {
   try {
     const [positions, watchlist] = await Promise.all([get('/api/polymarket?type=positions'), get('/api/polymarket?type=watchlist')]);
-    // Client-side P&L
+    // Client-side P&L (entry + current stored from our side's perspective)
     positions.forEach(p => {
       if (p.entryPrice != null && p.currentPrice != null && p.shares) {
         p.pnl = (p.currentPrice - p.entryPrice) * p.shares;
@@ -333,10 +334,11 @@ async function loadPolymarket() {
     const wins = closed.filter(p => p.status === 'closed-win').length;
     const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
 
+    const dailyPctP = totalInvested > 0 ? (totalPnl / totalInvested * 100) : 0;
     document.getElementById('poly-summary').innerHTML = `
       <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
-      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctP)}">${dailyPctP >= 0 ? '+' : ''}${dailyPctP.toFixed(1)}%</div></div>
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
 
@@ -394,7 +396,7 @@ async function deletePolyWatch(id) { await del(`/api/polymarket?type=watchlist&i
 async function loadWeatherTrades() {
   try {
     const trades = await get('/api/weather');
-    // Compute P&L client-side from entry/current/shares
+    // Compute P&L client-side (entry + current stored from our side's perspective)
     trades.forEach(t => {
       if (t.entryPrice != null && t.currentPrice != null && t.shares) {
         t.pnl = (t.currentPrice - t.entryPrice) * t.shares;
@@ -408,10 +410,11 @@ async function loadWeatherTrades() {
 
     const totalInvestedW = open.reduce((s, t) => s + ((t.entryPrice || 0) * (t.shares || 0)), 0);
 
+    const dailyPctW = totalInvestedW > 0 ? (totalPnl / totalInvestedW * 100) : 0;
     document.getElementById('weather-summary').innerHTML = `
       <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvestedW)}</div></div>
-      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctW)}">${dailyPctW >= 0 ? '+' : ''}${dailyPctW.toFixed(1)}%</div></div>
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
     loadNoaaForecasts();
@@ -445,26 +448,31 @@ async function loadWeatherTrades() {
         <span>📈 Edge: ${edgePct(t)}</span>
         <span>⏱️ ${t.createdAt ? timeAgo(t.createdAt) : '—'}</span>
       </div>
-      <div style="font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.4">💡 ${t.reasoning || 'No reasoning recorded'}</div>
+      <div style="font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.4">💡 ${t.reasoning || t.notes || 'No reasoning recorded'}</div>
     </td></tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim)">No open weather positions</td></tr>';
 
     // Closed trades with outcome evidence
-    document.getElementById('weather-trade-log').innerHTML = closed.length ? closed.map(t => `
+    document.getElementById('weather-trade-log').innerHTML = closed.length ? closed.map(t => {
+      const label = t.city || t.market || 'Unknown';
+      const shortLabel = label.length > 60 ? label.substring(0, 57) + '...' : label;
+      const reason = t.reasoning || t.notes || 'No reasoning';
+      const isWin = t.status === 'closed-win';
+      return `
       <div class="activity-item">
-        <div class="activity-dot ${t.status === 'closed-win' ? 'success' : 'error'}"></div>
+        <div class="activity-dot ${isWin ? 'success' : 'error'}"></div>
         <div class="activity-content">
           <div class="activity-action">
-            <strong>${t.city}</strong> ${t.bucket || ''} — ${t.status === 'closed-win' ? '✅ WIN' : '❌ LOSS'}
+            <strong>${shortLabel}</strong> ${t.bucket || t.side || ''} — ${isWin ? '✅ WIN' : '❌ LOSS'}
             <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px">${fmtMoney(t.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
-            Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.currentPrice)} · ${t.shares} shares · NOAA: ${t.noaaForecast || '—'} · Confidence: ${t.forecastConfidence || '—'}
+            Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.currentPrice)} · ${t.shares || '—'} shares
           </div>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.4">💡 ${t.reasoning || 'No reasoning'}</div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.4">💡 ${reason}</div>
           <div class="activity-meta"><span>${t.updatedAt ? timeAgo(t.updatedAt) : '—'}</span></div>
         </div>
-      </div>
-    `).join('') : '<div style="color:var(--text-dim);padding:20px">No resolved trades yet</div>';
+      </div>`;
+    }).join('') : '<div style="color:var(--text-dim);padding:20px">No resolved trades yet</div>';
   } catch (e) { console.error('Weather load error:', e); }
 }
 
@@ -529,7 +537,7 @@ async function loadWhaleTrades() {
   try {
     const trades = await get('/api/whale');
     const all = Array.isArray(trades) ? trades : [];
-    // Client-side P&L
+    // Client-side P&L (entry + current stored from our side's perspective)
     all.forEach(t => {
       if (t.entryPrice != null && t.currentPrice != null && t.shares) {
         t.pnl = (t.currentPrice - t.entryPrice) * t.shares;
@@ -542,10 +550,11 @@ async function loadWhaleTrades() {
     const wins = closed.filter(t => t.status === 'closed-win').length;
     const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
 
+    const dailyPctWh = totalInvested > 0 ? (totalPnl / totalInvested * 100) : 0;
     document.getElementById('whale-summary').innerHTML = `
       <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
-      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctWh)}">${dailyPctWh >= 0 ? '+' : ''}${dailyPctWh.toFixed(1)}%</div></div>
       <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
 
@@ -941,6 +950,39 @@ function showModal(type, existing = null) {
 
 function closeModal(e) { if (!e || e.target.classList.contains('modal-overlay')) document.getElementById('modal-container').innerHTML = ''; }
 function v(id) { const el = document.getElementById(id); return el ? el.value : ''; }
+
+// ========== INTERNSHIPS ==========
+const INTERNSHIPS = [
+  { company: "Seine Pacific Capital Partners", role: "Finance Analyst Intern, M&A & Growth Acceleration", priority: "HIGH", link: "https://sg.linkedin.com/jobs/view/finance-analyst-intern-m-a-growth-acceleration-at-seine-pacific-capital-partners-4372094909", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Finance Analyst Intern position at Seine Pacific Capital Partners. I am a Year 1 Business student at NTU specialising in Banking & Finance, with hands-on experience in financial modelling and a strong personal investing track record.\n\nAt Mega Pacific Land, I built DCF and sensitivity analysis models for real estate developments, structured 5–10 year cash flow projections evaluating IRR and NPV, and analysed 10+ market comparables to inform acquisition decisions. Separately, I manage a personal equity portfolio (~$21.8k deployed), generating 131% cumulative returns since August 2024 through thesis-driven, fundamental analysis — identifying asymmetric opportunities in names like Palantir, Nebius, and AST SpaceMobile before consensus.\n\nI am drawn to Seine Pacific's cross-border M&A advisory focus and the opportunity to apply these skills in a deal-oriented environment. I am available from 11 May to 17 July 2026.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` },
+  { company: "Frasers Property", role: "Summer Intern, Investment", priority: "HIGH", link: "https://sg.linkedin.com/jobs/view/summer-intern-investment-at-frasers-property-limited-4364840686", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Summer Intern, Investment position at Frasers Property. I am a Year 1 Business student at NTU specialising in Banking & Finance, with direct experience in real estate financial analysis.\n\nAt Mega Pacific Land, I built DCF and sensitivity analysis models for ongoing and prospective real estate developments, structured 5–10 year cash flow projections to evaluate project IRR and NPV, and analysed 10+ market comparables, rental yields, and property valuation data to support pricing and acquisition decisions. This experience gave me a practical understanding of how investment decisions are made in real estate.\n\nI also actively manage a personal equity portfolio (~$21.8k deployed), generating 131% cumulative returns since August 2024 through fundamental, thesis-driven analysis — a discipline I look forward to applying to real asset investment evaluation at Frasers. I am available from 11 May to 17 July 2026.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` },
+  { company: "SG Growth Capital", role: "Intern, Investment", priority: "HIGH", link: "https://sg.linkedin.com/jobs/view/intern-investment-at-sg-growth-capital-4366458342", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Investment Intern position at SG Growth Capital. I am a Year 1 Business student at NTU specialising in Banking & Finance, with a demonstrated ability to identify and evaluate high-growth investment opportunities.\n\nI actively manage a personal equity portfolio (~$21.8k deployed), generating 131% cumulative returns since August 2024 by identifying asymmetric risk-reward opportunities early — including positions in Palantir ($29 entry), Nebius ($46), and AST SpaceMobile ($21.50), all well before consensus. My approach is thesis-driven and grounded in fundamental analysis: financial statement review, TAM estimation, competitive positioning, and downside scenario modelling.\n\nAt Mega Pacific Land, I further developed my analytical toolkit through DCF modelling, sensitivity analysis, and market comparable analysis for real estate investments. I am eager to apply this combination of hands-on investing instinct and formal valuation skills at SG Growth Capital. I am available from 11 May to 17 July 2026.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` },
+  { company: "Keppel Fund Management", role: "Intern, DC Investment (June-Aug)", priority: "HIGH", link: "https://sg.linkedin.com/jobs/view/keppel-internship-programme-2026-intern-dc-investment-june-aug-dec-2026-at-keppel-fund-management-investment-4344312165", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Intern, DC Investment position under the Keppel Internship Programme 2026. I am a Year 1 Bachelor of Business student at NTU, specialising in Banking & Finance, with experience in financial modelling and equity research.\n\nDuring my internship at Mega Pacific Land, I built DCF and sensitivity analysis models for real estate developments, evaluated project IRR and NPV through 5–10 year cash flow projections, and analysed market comparables to support investment decisions. I also actively manage a personal equity portfolio (~$21.8k deployed capital), which has generated 131% cumulative returns since August 2024 through disciplined, fundamental analysis.\n\nI am keen to contribute to Keppel's investment team and develop my understanding of data centre and infrastructure investments within a structured programme. I am available from June to August 2026.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` },
+  { company: "Temasek", role: "Finance Intern, Treasury (Debt Capital Market)", priority: "MEDIUM", link: "https://sg.linkedin.com/jobs/view/finance-intern-treasury-debt-capital-market-jun-jul-dec-2026-at-temasek-4355362083", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Finance Intern, Treasury (Debt Capital Market) position at Temasek. I am a Year 1 Business student at NTU specialising in Banking & Finance, with strong financial modelling skills and an analytical approach to markets.\n\nAt Mega Pacific Land, I structured 5–10 year Excel-based cash flow models evaluating IRR, NPV, and sensitivity to interest rate fluctuations — directly relevant to fixed income and debt instrument analysis. I also manage a personal equity portfolio (~$21.8k deployed) generating 131% cumulative returns, which has sharpened my understanding of market pricing, risk assessment, and macro drivers.\n\nI am eager to broaden my capital markets experience into fixed income and debt capital markets at Temasek, and to contribute analytical rigour to the treasury function. I am available from May to July 2026.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` },
+  { company: "Temasek", role: "Finance Intern, Treasury (FX Management)", priority: "MEDIUM", link: "https://sg.linkedin.com/jobs/view/finance-intern-treasury-fx-management-jun-jul-dec-2026-at-temasek-4355305665", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Finance Intern, Treasury (FX Management) position at Temasek. I am a Year 1 Business student at NTU specialising in Banking & Finance, with experience in financial modelling and quantitative analysis.\n\nAt Mega Pacific Land, I built sensitivity analysis models assessing project viability under varying assumptions — an analytical approach directly applicable to FX risk assessment. I am also proficient in Python and R, which I have used for data analysis alongside managing a personal equity portfolio (~$21.8k deployed, 131% cumulative returns). I am eager to apply these quantitative skills to FX exposure management and hedging strategy at Temasek. I am available from May to July 2026.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` },
+  { company: "Frasers Property", role: "Summer Intern, Finance", priority: "MEDIUM", link: "https://sg.linkedin.com/jobs/view/summer-intern-finance-at-frasers-property-limited-4366297864", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Summer Intern, Finance position at Frasers Property. I am a Year 1 Business student at NTU specialising in Banking & Finance, with prior real estate finance experience.\n\nAt Mega Pacific Land, I built DCF models, evaluated project feasibility through cash flow analysis, and analysed market comparables and rental yields to support financial decisions. I bring strong Excel proficiency, financial statement analysis skills, and a detail-oriented approach. I am available from 11 May to 17 July 2026.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` },
+  { company: "BMW Group", role: "Intern, Finance", priority: "LOW", link: "https://sg.linkedin.com/jobs/view/intern-finance-at-bmw-group-4371511518", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Finance Intern position at BMW Group. I am a Year 1 Business student at NTU specialising in Banking & Finance, with financial modelling and analytical experience from my internship at Mega Pacific Land, where I built DCF models, sensitivity analyses, and market comparable studies.\n\nI am proficient in Excel and Python, and bring a strong analytical mindset developed through both academic coursework and actively managing a personal equity portfolio. I am available from 11 May to 17 July 2026 and eager to contribute to BMW's finance team.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` },
+  { company: "Shopee", role: "Business Analyst Intern, Strategy Office", priority: "MEDIUM", link: "https://sg.linkedin.com/jobs/view/business-analyst-intern-group-president-s-strategy-office-summer-2026-at-shopee-4372323207", letter: `Dear Hiring Manager,\n\nI am writing to apply for the Business Analyst Intern position in Shopee's Group President's Strategy Office. I am a Year 1 Business student at NTU with a strong analytical background and experience translating data into actionable decisions.\n\nI actively manage a personal equity portfolio (~$21.8k deployed, 131% cumulative returns) through data-driven thesis development — screening opportunities, modelling scenarios, and evaluating risk-reward asymmetries. At Mega Pacific Land, I applied similar rigour to real estate investment appraisal through DCF modelling and market analysis. I am proficient in Python, R, and Excel, and approach problems with the same structured, evidence-based mindset that drives strategic decision-making. I am available from 11 May to 17 July 2026.\n\nThank you for your consideration.\n\nSincerely,\nJaidev Singh Sachdev` }
+];
+
+function loadInternships() {
+  const wrap = document.getElementById('internship-cards');
+  if (!wrap) return;
+  const priorityColor = { HIGH: '#22c55e', MEDIUM: '#eab308', LOW: '#6b7280' };
+  wrap.innerHTML = INTERNSHIPS.map((it, i) => `
+    <div class="card" style="margin-bottom:16px;cursor:pointer" onclick="this.querySelector('.cl-body').style.display=this.querySelector('.cl-body').style.display==='none'?'block':'none'">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <h3 style="font-size:15px;margin:0">${it.company}</h3>
+        <span style="font-size:11px;padding:2px 8px;border-radius:8px;background:${priorityColor[it.priority]}22;color:${priorityColor[it.priority]};font-weight:600">${it.priority}</span>
+      </div>
+      <div style="font-size:13px;color:var(--text-dim);margin-bottom:8px">${it.role}</div>
+      <div style="display:flex;gap:8px;margin-bottom:8px">
+        <a href="${it.link}" target="_blank" class="btn" style="font-size:12px;padding:4px 10px" onclick="event.stopPropagation()">LinkedIn ↗</a>
+        <button class="btn" style="font-size:12px;padding:4px 10px" onclick="event.stopPropagation();navigator.clipboard.writeText(INTERNSHIPS[${i}].letter);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Letter',1500)">Copy Letter</button>
+      </div>
+      <div class="cl-body" style="display:none;white-space:pre-wrap;font-size:13px;line-height:1.6;color:var(--text-dim);border-top:1px solid var(--border);padding-top:12px;margin-top:4px">${it.letter}</div>
+    </div>
+  `).join('');
+}
 
 // ========== INIT ==========
 if (window.location.hash) { currentSection = window.location.hash.slice(1); }

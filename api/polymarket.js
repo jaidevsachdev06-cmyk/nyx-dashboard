@@ -17,10 +17,35 @@ module.exports = async (req, res) => {
         const item = data.find(d => d.id === id);
         return item ? res.json(item) : res.status(404).json({ error: 'Not found' });
       }
+      const conditionId = req.query.conditionId;
+      if (conditionId) {
+        const item = data.find(d => d.conditionId === conditionId);
+        return item ? res.json(item) : res.status(404).json({ error: 'Not found' });
+      }
+      const status = req.query.status;
+      if (status) return res.json(data.filter(d => d.status === status));
       return res.json(data);
     }
 
     if (req.method === 'POST') {
+      // UPSERT: if conditionId exists AND position is open, update instead of duplicate
+      if (type === 'positions' && req.body.conditionId) {
+        const existing = data.findIndex(d => d.conditionId === req.body.conditionId && d.status === 'open');
+        if (existing !== -1) {
+          const updates = { ...req.body };
+          delete updates.id;
+          delete updates.createdAt;
+          data[existing] = { ...data[existing], ...updates, updatedAt: new Date().toISOString() };
+          if (data[existing].currentPrice && data[existing].entryPrice && data[existing].shares) {
+            data[existing].currentValue = data[existing].currentPrice * data[existing].shares;
+            data[existing].invested = data[existing].entryPrice * data[existing].shares;
+            data[existing].pnl = data[existing].currentValue - data[existing].invested;
+            data[existing].pnlPercent = ((data[existing].pnl / data[existing].invested) * 100);
+          }
+          await writeFile(FILE, data, sha);
+          return res.status(200).json({ ...data[existing], _upsert: 'updated' });
+        }
+      }
       const item = { id: uuid(), ...req.body, createdAt: new Date().toISOString() };
       if (type === 'positions') {
         item.invested = item.invested || (item.entryPrice * item.shares);
@@ -34,14 +59,16 @@ module.exports = async (req, res) => {
       }
       data.push(item);
       await writeFile(FILE, data, sha);
-      return res.status(201).json(item);
+      return res.status(201).json({ ...item, _upsert: 'created' });
     }
 
     if (req.method === 'PUT') {
-      if (!id) return res.status(400).json({ error: 'id required' });
-      const idx = data.findIndex(d => d.id === id);
+      let idx = -1;
+      if (id) idx = data.findIndex(d => d.id === id);
+      else if (req.query.conditionId) idx = data.findIndex(d => d.conditionId === req.query.conditionId);
+      else return res.status(400).json({ error: 'id or conditionId required' });
       if (idx === -1) return res.status(404).json({ error: 'Not found' });
-      data[idx] = { ...data[idx], ...req.body };
+      data[idx] = { ...data[idx], ...req.body, updatedAt: new Date().toISOString() };
       // Recalculate P&L
       if (data[idx].currentPrice && data[idx].entryPrice && data[idx].shares) {
         data[idx].currentValue = data[idx].currentPrice * data[idx].shares;

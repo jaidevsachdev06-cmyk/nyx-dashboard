@@ -65,18 +65,40 @@ module.exports = async (req, res) => {
         const trade = data.find(t => t.id === id);
         return trade ? res.json(trade) : res.status(404).json({ error: 'Not found' });
       }
+      if (req.query.conditionId) {
+        const item = data.find(d => d.conditionId === req.query.conditionId);
+        return item ? res.json(item) : res.status(404).json({ error: 'Not found' });
+      }
+      if (req.query.status) {
+        return res.json(data.filter(d => d.status === req.query.status));
+      }
       return res.json(data);
     }
 
     if (req.method === 'POST') {
+      // UPSERT: if conditionId exists AND position is open, update instead of duplicate
+      if (req.body.conditionId) {
+        const existing = data.findIndex(d => d.conditionId === req.body.conditionId && d.status === 'open');
+        if (existing !== -1) {
+          const updates = { ...req.body };
+          delete updates.id;
+          delete updates.createdAt;
+          data[existing] = { ...data[existing], ...updates, updatedAt: new Date().toISOString() };
+          await writeFile(DATA_PATH, data, sha);
+          return res.json({ ...data[existing], _upsert: 'updated' });
+        }
+      }
       const trade = { id: uuid(), ...req.body, createdAt: new Date().toISOString() };
       data.push(trade);
       await writeFile(DATA_PATH, data, sha);
-      return res.json(trade);
+      return res.json({ ...trade, _upsert: 'created' });
     }
 
     if (req.method === 'PUT') {
-      const idx = data.findIndex(t => t.id === id);
+      let idx = -1;
+      if (id) idx = data.findIndex(t => t.id === id);
+      else if (req.query.conditionId) idx = data.findIndex(t => t.conditionId === req.query.conditionId);
+      else return res.status(400).json({ error: 'id or conditionId required' });
       if (idx === -1) return res.status(404).json({ error: 'Not found' });
       data[idx] = { ...data[idx], ...req.body, updatedAt: new Date().toISOString() };
       await writeFile(DATA_PATH, data, sha);
