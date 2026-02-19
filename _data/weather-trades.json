@@ -484,12 +484,12 @@
     "reasoning": "3-model consensus 3.8°C, 32% true prob vs 9¢ market, 23% edge. Longshot but great price.",
     "createdAt": "2026-02-19T02:31:06.198Z",
     "entryPrice": 0.09,
-    "currentPrice": 0.095,
+    "currentPrice": 0.0005,
     "status": "open",
     "source": "polymarket-paper",
     "date": "2026-02-20",
     "notes": "Consensus 3.8°C, 23% edge. Longshot.",
-    "updatedAt": "2026-02-19T02:55:45.330Z",
+    "updatedAt": "2026-02-19T02:55:46.562Z",
     "conditionId": "0xf49d532ad2f21a12e4a3a592ff134f53bef7ab002796576580d97ca0c65179be"
   }
 ]
