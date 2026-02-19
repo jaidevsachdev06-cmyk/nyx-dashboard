@@ -537,5 +537,28 @@
     "entryDate": "2026-02-19T00:00:24.079Z",
     "conditionId": "0x3488f31e6449f9803f99a8b5dd232c7ad883637f1c86e6953305a2ef19c77f20",
     "ep": "whale"
+  },
+  {
+    "id": "0434f28f-2448-4242-ad4d-8d99b30920d3",
+    "market": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.0315,
+    "currentPrice": 0.0315,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "ProfessionalPunter, Roflan, Rooke Brollins, Car",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 84.9,
+    "avgWinRate": 70.4,
+    "reasoning": "Consensus: 4 whales (avg score 84.9, avg WR 70.4%) on Yes. Whales: ProfessionalPunter, Roflan, Rooke Brollins, Car",
+    "endDate": "2026-03-31",
+    "createdAt": "2026-02-19T04:00:24.610Z",
+    "invested": 0.315,
+    "currentValue": 0.315,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-19T04:00:24.611Z"
   }
 ]
