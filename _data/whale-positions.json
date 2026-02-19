@@ -576,5 +576,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-19T04:00:24.611Z"
+  },
+  {
+    "id": "0bcf1d6f-c2eb-4b12-93bc-7a28dc2d8754",
+    "market": "Russia x Ukraine ceasefire by end of 2026?",
+    "side": "Yes",
+    "entryPrice": 0.395,
+    "currentPrice": 0.395,
+    "shares": 10,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, Car, Mombil, TheWolfOfPoly, GollumGekko",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 82.9,
+    "avgWinRate": 68.1,
+    "reasoning": "Consensus: 5 whales (avg score 82.9, avg WR 68.1%) on Yes. Whales: Roflan, Car, Mombil, TheWolfOfPoly, GollumGekko",
+    "endDate": "2026-12-31",
+    "conditionId": "",
+    "createdAt": "2026-02-19T16:02:43.172Z",
+    "invested": 3.95,
+    "currentValue": 3.95,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-19T16:02:43.172Z"
   }
 ]
