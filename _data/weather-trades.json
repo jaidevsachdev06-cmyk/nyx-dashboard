@@ -128,7 +128,7 @@
     "side": "yes",
     "bucket": "78-79°F",
     "entryPrice": 0.2213,
-    "currentPrice": 0,
+    "currentPrice": 1,
     "shares": 45.4,
     "status": "closed-win",
     "noaaForecast": "79°F",
@@ -143,10 +143,11 @@
       "dallas"
     ],
     "createdAt": "2026-02-17T08:29:04.055Z",
-    "updatedAt": "2026-02-18T23:03:08.002Z",
+    "updatedAt": "2026-02-20T10:09:43.006Z",
     "result": "loss",
     "pnl": 35.35298,
-    "pnlPercent": 351.87528242205155
+    "pnlPercent": 351.87528242205155,
+    "exitPrice": 1
   },
   {
     "id": "2ba1eb77-611c-43fd-9151-bf033ec88d25",
