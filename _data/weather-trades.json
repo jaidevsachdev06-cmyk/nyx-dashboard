@@ -250,7 +250,7 @@
     "side": "yes",
     "bucket": "74-75°F",
     "entryPrice": 0.256,
-    "currentPrice": 0,
+    "currentPrice": 1,
     "shares": 14,
     "status": "closed-win",
     "noaaForecast": "75°F",
@@ -265,11 +265,12 @@
       "feb19"
     ],
     "createdAt": "2026-02-18T02:04:09.118Z",
-    "updatedAt": "2026-02-19T00:35:03.523Z",
+    "updatedAt": "2026-02-20T10:09:48.466Z",
     "notes": " | Partial exit (58.9→29): Forecast 75.4°F near bin boundary | Partial exit (29→14): Forecast 75.4°F near bin boundary | RT Exit: Past peak, max only 62.6°F, below 74°F floor",
     "result": "exit",
     "pnl": 10.416,
-    "pnlPercent": 290.625
+    "pnlPercent": 290.625,
+    "exitPrice": 1
   },
   {
     "id": "cf06b26b-189e-4e0d-a086-81867fd95fc5",
