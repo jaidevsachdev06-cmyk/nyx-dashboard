@@ -436,16 +436,16 @@
     "entryPrice": 0.003,
     "currentPrice": 0.001,
     "shares": 1000,
-    "status": "closed-win",
+    "status": "closed-loss",
     "source": "polymarket-paper",
     "date": "2026-02-19",
     "conditionId": "0x2bc718947eabc2b2c2cf067b49684baea4d6e7c869524cabb5ac9ac35861859d",
-    "notes": "edge=0.12, kelly=11.7%, f_eff=5%, p_model=0.12, p_mkt=0.003, forecast=7.1C, spread=1.6C(2.9F), lottery ticket $3 risk | Exit: Forecast 6.5° below threshold 10° (YES losing) [OUTLIER: 0.3¢ entry, 333x return]",
+    "notes": "Resolved NO — London did not reach 10°C on Feb 19",
     "createdAt": "2026-02-19T10:02:31.634Z",
     "result": "exit",
     "updatedAt": "2026-02-19T14:00:37.651Z",
-    "pnl": 997,
-    "pnlPercent": 33233.33333333333
+    "pnl": -3,
+    "pnlPercent": -100
   },
   {
     "id": "d02d037f-37f9-40f9-96f3-90a05a1350d2",
