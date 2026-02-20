@@ -488,7 +488,7 @@
     "market": "Will the highest temperature in New York City be between 40-41°F on February 20?",
     "side": "no",
     "entryPrice": 0.52,
-    "currentPrice": 0.52,
+    "currentPrice": 1,
     "shares": 5.77,
     "status": "closed-win",
     "source": "polymarket-paper",
@@ -498,7 +498,8 @@
     "createdAt": "2026-02-19T13:09:28.172Z",
     "result": "NO wins — max 35.6°F, never reached 40°F floor",
     "pnl": 2.77,
-    "updatedAt": "2026-02-20T02:10:24.311Z"
+    "updatedAt": "2026-02-20T10:10:00.363Z",
+    "exitPrice": 1
   },
   {
     "id": "89faa20e-fac7-4ea9-af16-383870adea35",
