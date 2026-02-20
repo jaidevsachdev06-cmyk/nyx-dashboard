@@ -70,9 +70,9 @@
     "side": "yes",
     "bucket": "44-45°F",
     "entryPrice": 0.075,
-    "currentPrice": 1,
+    "currentPrice": 0,
     "shares": 107.6,
-    "status": "closed-win",
+    "status": "closed-loss",
     "noaaForecast": "45-46°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly shows NYC peaking at 45-46°F. Market has 40-41 as favorite but NWS says higher.",
@@ -85,11 +85,12 @@
       "nyc"
     ],
     "createdAt": "2026-02-17T08:28:56.352Z",
-    "updatedAt": "2026-02-20T10:09:40.353Z",
+    "updatedAt": "2026-02-20T10:13:49.585Z",
     "result": "loss",
     "pnl": 99.53,
     "pnlPercent": 1233.3333333333335,
-    "exitPrice": 1
+    "exitPrice": 0,
+    "notes": "Corrected via WU verification: Actual high 38°F, 44-45 bin lost"
   },
   {
     "id": "8037bd1f-9d5c-4065-ba07-7ac37c3020c8",
