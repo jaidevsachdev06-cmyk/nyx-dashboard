@@ -594,14 +594,14 @@
     "avgWinRate": 68.1,
     "reasoning": "Consensus: 5 whales (avg score 82.9, avg WR 68.1%) on Yes. Whales: Roflan, Car, Mombil, TheWolfOfPoly, GollumGekko",
     "endDate": "2026-12-31",
-    "conditionId": "0xaeea5f917fc574638724d12d79fb7e455bba9f35e4af60aa22f4d42d78bed000",
+    "conditionId": "0xaeea5f917fc5746387b5f9c0a4263dba035dbb3f0ac6ad72bf92183d21e26739",
     "createdAt": "2026-02-19T16:02:43.172Z",
     "invested": 3.95,
     "currentValue": 3.95,
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-19T16:02:43.172Z",
-    "updatedAt": "2026-02-20T02:21:56.634Z"
+    "updatedAt": "2026-02-20T02:22:48.617Z"
   },
   {
     "id": "650aebcb-1d32-4b11-9488-7f4167894f2e",
