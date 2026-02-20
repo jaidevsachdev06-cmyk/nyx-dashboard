@@ -674,5 +674,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T04:01:27.807Z"
+  },
+  {
+    "id": "ff2d1910-5a8f-4b5d-937f-85a8d5e149da",
+    "market": "Will Khamenei leave Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.08499999999999996,
+    "currentPrice": 0.08499999999999996,
+    "shares": 65.65,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Roflan, kekkone, archaic",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 88.7,
+    "avgWinRate": 72.6,
+    "reasoning": "Consensus: 4 whales (avg score 88.7, avg WR 72.6%) on No. tier=1%, wrScale=1.12, bet=$5.58, shares=65.65. Whales: Car, Roflan, kekkone, archaic",
+    "endDate": "2026-01-09",
+    "conditionId": "",
+    "createdAt": "2026-02-20T04:01:31.558Z",
+    "invested": 5.580249999999998,
+    "currentValue": 5.580249999999998,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T04:01:31.558Z"
   }
 ]
