@@ -14,7 +14,7 @@
     "noaaForecast": "77°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly forecast peaks at 77°F. Market prices 78-79 as favorite at 39¢ but NWS disagrees. Aviation TAF: E winds 10kt, stable.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -43,7 +43,7 @@
     "noaaForecast": "62°F",
     "forecastConfidence": "medium",
     "reasoning": "NWS says 62°F but thunderstorms Tue night could bring cold front early. Hedge position at 15.5¢.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -72,7 +72,7 @@
     "noaaForecast": "45-46°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly shows NYC peaking at 45-46°F. Market has 40-41 as favorite but NWS says higher.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -101,7 +101,7 @@
     "noaaForecast": "44°F",
     "forecastConfidence": "medium",
     "reasoning": "NWS hourly peaks at 44°F. Market favors 42-43 but NWS disagrees.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -130,7 +130,7 @@
     "noaaForecast": "79°F",
     "forecastConfidence": "medium-high",
     "reasoning": "NWS hourly peaks at 79°F around 3pm. TAF shows S winds 17G27kt. Highest opportunity score.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -159,7 +159,7 @@
     "noaaForecast": "62°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly shows Chicago peaking at exactly 62°F at 1-2pm CST after overnight thunderstorms clear. TAF KORD confirms SKC by 1pm with 23G28kt W winds. Post-frontal sunny skies constrain heating to 62°F.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -188,7 +188,7 @@
     "noaaForecast": "77°F",
     "forecastConfidence": "high",
     "reasoning": "Adding to existing position. NWS hourly still shows Miami peaking at 77°F (3-4pm EST). TAF KMIA confirms light E winds 7kt, FEW025 — clear skies favor 77°F. 21.5pp edge at entry.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -218,7 +218,7 @@
     "noaaForecast": "78°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly peaks at 78°F at 1-2pm EST Feb 19. Sunny skies, light SE winds per TAF KMIA. Market massively overweights 82-85°F range (57% combined) but NWS disagrees by 4-7°F. 78-79 at 13.5¢ entry = ~20pp edge.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -248,7 +248,7 @@
     "noaaForecast": "75°F",
     "forecastConfidence": "medium-high",
     "reasoning": "NWS hourly peaks at 75°F at 3-4pm EST Feb 19. Morning rain showers clear by noon per TAF KATL (23010G20kt SW winds afternoon). Polymarket has this at 33.5¢ vs Simmer 25.1¢ — 10pp edge on Simmer. Cloud cover adds slight uncertainty.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -278,7 +278,7 @@
     "noaaForecast": "50°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly peaks at 50°F with rain all day Feb 19. TAF KORD shows post-frontal cooling. Market YES at 78.5¢ is massively overpriced — true prob of >=54°F near 0-5%. Buying NO at ~12.2¢ gives ~75pp edge. Rain suppresses heating.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -309,7 +309,7 @@
     "noaaForecast": "50°F",
     "forecastConfidence": "high",
     "reasoning": "NWS hourly peaks at exactly 50°F at 12-4pm CST Feb 19 with rain likely all day. Market at 3.45¢ drastically underprices this — true prob ~25-35%. TAF KORD confirms overcast/rain pattern. ~25pp edge.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -339,7 +339,7 @@
     "noaaForecast": "42°F",
     "forecastConfidence": "medium-high",
     "reasoning": "NWS hourly peaks at 42°F at 1-4pm PST Feb 19. Mostly sunny afternoon after morning clearing. TAF KSEA shows light winds. Market at 34¢, NWS supports 42°F peak squarely in this bucket. ~10pp edge.",
-    "source": "auto",
+    "source": "simmer",
     "tags": [
       "weather",
       "temperature",
@@ -440,7 +440,7 @@
     "source": "polymarket-paper",
     "date": "2026-02-19",
     "conditionId": "0x2bc718947eabc2b2c2cf067b49684baea4d6e7c869524cabb5ac9ac35861859d",
-    "notes": "edge=0.12, kelly=11.7%, f_eff=5%, p_model=0.12, p_mkt=0.003, forecast=7.1C, spread=1.6C(2.9F), lottery ticket $3 risk | Exit: Forecast 6.5° below threshold 10° (YES losing)",
+    "notes": "edge=0.12, kelly=11.7%, f_eff=5%, p_model=0.12, p_mkt=0.003, forecast=7.1C, spread=1.6C(2.9F), lottery ticket $3 risk | Exit: Forecast 6.5° below threshold 10° (YES losing) [OUTLIER: 0.3¢ entry, 333x return]",
     "createdAt": "2026-02-19T10:02:31.634Z",
     "result": "exit",
     "updatedAt": "2026-02-19T14:00:37.651Z",
