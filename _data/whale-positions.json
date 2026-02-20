@@ -950,5 +950,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T08:35:45.799Z"
+  },
+  {
+    "id": "05649677-f186-4406-95c3-69244e2195d9",
+    "market": "Will the US confirm that aliens exist before 2027?",
+    "side": "Yes",
+    "entryPrice": 0.165,
+    "currentPrice": 0.165,
+    "shares": 36.42,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, debased, Rooke Brollins",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 89.6,
+    "avgWinRate": 78.1,
+    "reasoning": "Consensus: 3 whales (avg score 89.6, WR 78.1%) Yes. bet=$6.01, shares=36.42. Whales: Car, debased, Rooke Brollins",
+    "endDate": "2026-12-31",
+    "conditionId": "0x747dc809fb79e1b05be09c42d6179459a58de2ef3e40f02484a4e1260f741f75",
+    "createdAt": "2026-02-20T08:36:02.538Z",
+    "invested": 6.0093000000000005,
+    "currentValue": 6.0093000000000005,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T08:36:02.538Z"
   }
 ]
