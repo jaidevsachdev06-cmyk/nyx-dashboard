@@ -1074,7 +1074,7 @@
     "market": "Will Khamenei visit Russia by March 31?",
     "side": "No",
     "entryPrice": 0.9824999999999999,
-    "currentPrice": 0.9824999999999999,
+    "currentPrice": 0.982,
     "shares": 6.31,
     "status": "open",
     "source": "consensus-scanner",
@@ -1088,15 +1088,15 @@
     "conditionId": "0x444f181da82f6a9ed38f9a702f52a0a2c744a7dd942fcd3ca2a7b6bea827c6aa",
     "createdAt": "2026-02-20T08:36:19.638Z",
     "invested": 6.199574999999999,
-    "currentValue": 6.199574999999999,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 6.19642,
+    "pnl": -0.003154999999999575,
+    "pnlPercent": -0.05089058524172343,
     "entryDate": "2026-02-20T08:36:19.638Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-20T10:31:53.923Z"
+    "updatedAt": "2026-02-20T11:31:57.463Z"
   },
   {
     "id": "4d5893b3-439b-475b-af7b-7256ce8a1f6c",
