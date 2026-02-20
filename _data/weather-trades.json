@@ -219,7 +219,7 @@
     "side": "yes",
     "bucket": "78-79°F",
     "entryPrice": 0.142,
-    "currentPrice": 0.167,
+    "currentPrice": 0,
     "shares": 142.9,
     "status": "closed-loss",
     "noaaForecast": "78°F",
@@ -234,11 +234,12 @@
       "feb19"
     ],
     "createdAt": "2026-02-18T02:03:57.538Z",
-    "updatedAt": "2026-02-18T23:16:35.706Z",
+    "updatedAt": "2026-02-20T10:09:47.143Z",
     "result": "exit",
     "notes": " | Exit: Forecast 81.5°F outside bin 78-79°F",
     "pnl": -20.2918,
-    "pnlPercent": -100
+    "pnlPercent": -100,
+    "exitPrice": 0
   },
   {
     "id": "504b3efb-0d66-4876-baea-846beb42265f",
