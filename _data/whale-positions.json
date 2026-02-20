@@ -444,7 +444,7 @@
     "entryPrice": 0.9725,
     "currentPrice": 0.9695,
     "shares": 10,
-    "status": "open",
+    "status": "closed-exit",
     "source": "consensus-scanner",
     "whales": "Dropper, aenews, elucidate, gopfan2",
     "whaleCount": 4,
@@ -460,7 +460,8 @@
     "pnlPercent": -0.3084832904884253,
     "entryDate": "2026-02-18T20:00:24.645Z",
     "conditionId": "0x46d3e7c392e525406f6180ad27995260786943bb1975856654ec962f151a1ddb",
-    "updatedAt": "2026-02-19T10:52:15.248Z"
+    "updatedAt": "2026-02-20T07:03:09.799Z",
+    "notes": "Dropped from whale consensus entirely"
   },
   {
     "id": "f06d1fcb-bf9f-48df-90cf-220be3d87893",
