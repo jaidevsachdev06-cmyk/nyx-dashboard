@@ -534,32 +534,6 @@
     "updatedAt": "2026-02-20T02:25:36.695Z"
   },
   {
-    "id": "1510edeb-ef54-40ee-a66b-0362dfcc3a44",
-    "market": "US strikes Iran by March 7, 2026?",
-    "side": "No",
-    "entryPrice": 0.565,
-    "currentPrice": 0.595,
-    "shares": 10,
-    "status": "open",
-    "source": "consensus-scanner",
-    "whales": "Roflan, Mombil, TheWolfOfPoly, GollumGekko",
-    "whaleCount": 4,
-    "confidence": "High",
-    "avgScore": 79.5,
-    "avgWinRate": 67.6,
-    "reasoning": "Consensus: 4 whales (avg score 79.5, avg WR 67.6%) on No. Whales: Roflan, Mombil, TheWolfOfPoly, GollumGekko",
-    "endDate": "2026-06-30",
-    "conditionId": "0x824df6aa7e270678a5239d697918e918834a52cc6e59ebc25b650b2df649ac82",
-    "createdAt": "2026-02-20T02:20:19.491Z",
-    "invested": 5.6499999999999995,
-    "currentValue": 5.949999999999999,
-    "pnl": 0.2999999999999998,
-    "pnlPercent": 5.309734513274334,
-    "entryDate": "2026-02-20T02:20:19.491Z",
-    "updatedAt": "2026-02-20T02:29:19.154Z",
-    "notes": "Remapped from Mar 31 (delisted) → Mar 7 (closest available)"
-  },
-  {
     "id": "a25bc7b2-3161-47ac-8cb8-85f462971923",
     "market": "Will Thomas Massie win the 2028 Republican presidential nomination?",
     "side": "Yes",
@@ -711,17 +685,6 @@
     "updatedAt": "2026-02-20T02:21:01.702Z"
   },
   {
-    "id": "1510edeb-ef54-40ee-a66b-0362dfcc3a44",
-    "conditionId": null,
-    "createdAt": "2026-02-20T02:19:40.067Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:40.067Z"
-  },
-  {
     "id": "27aac9c6-883f-4ee9-bcdf-0f9a5582b2cf",
     "conditionId": null,
     "createdAt": "2026-02-20T02:19:41.450Z",
@@ -797,17 +760,6 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-20T02:20:15.898Z"
-  },
-  {
-    "id": "1510edeb-ef54-40ee-a66b-0362dfcc3a44",
-    "conditionId": "0x4b02efe53e631ada84681303fd66d79ad615f3d2b6a28b4633d43d935f89af58",
-    "createdAt": "2026-02-20T02:20:19.491Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:20:19.491Z"
   },
   {
     "id": "690dd780-c89c-433a-ac5d-4068050705f2",
