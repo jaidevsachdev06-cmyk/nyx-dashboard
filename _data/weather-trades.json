@@ -451,7 +451,7 @@
     "market": "Will the highest temperature in London be 10°C or higher on February 19?",
     "side": "yes",
     "entryPrice": 0.003,
-    "currentPrice": 0.001,
+    "currentPrice": 0,
     "shares": 1000,
     "status": "closed-loss",
     "source": "polymarket-paper",
@@ -460,9 +460,10 @@
     "notes": "Resolved NO — London did not reach 10°C on Feb 19",
     "createdAt": "2026-02-19T10:02:31.634Z",
     "result": "exit",
-    "updatedAt": "2026-02-19T14:00:37.651Z",
+    "updatedAt": "2026-02-20T10:09:59.069Z",
     "pnl": -3,
-    "pnlPercent": -100
+    "pnlPercent": -100,
+    "exitPrice": 0
   },
   {
     "id": "d02d037f-37f9-40f9-96f3-90a05a1350d2",
