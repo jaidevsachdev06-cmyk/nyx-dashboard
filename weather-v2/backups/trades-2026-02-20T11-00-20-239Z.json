@@ -1,0 +1,34 @@
+{
+  "trades": [
+    {
+      "id": "oc-mlus3hn6-jibf12",
+      "conditionId": "0x05fe17252de1996c7cf2bd0cb43b9aca2b763b61e6f15d82fe2bcbbf8bfc5181",
+      "tokenId": "10059777089880890231154039294857114989436314379709796751636334372677468555011",
+      "marketSlug": "test",
+      "city": "New York City",
+      "date": "2026-02-20",
+      "bucket": "38-39°F",
+      "question": "Will the highest temperature in New York City be between 38-39°F on February 20?",
+      "side": "YES",
+      "status": "entered",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-20T11:00:16.530Z",
+      "signal": {
+        "forecastTemp": 39.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.315,
+        "modelProb": 0.409,
+        "edge": 0.094
+      },
+      "entryPrice": 0.315,
+      "size": 21,
+      "sizeUSDC": 6.615,
+      "enteredAt": "2026-02-20T11:00:20.238Z"
+    }
+  ],
+  "meta": {
+    "version": 2,
+    "lastUpdated": "2026-02-20T11:00:20.238Z"
+  }
+}
