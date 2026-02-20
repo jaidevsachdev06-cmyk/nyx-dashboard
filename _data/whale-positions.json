@@ -17,11 +17,12 @@
     "currentValue": 1.794,
     "pnl": -0.18199999999999994,
     "pnlPercent": -9.21052631578947,
-    "status": "open",
+    "status": "closed-exit",
     "entryDate": "2026-02-17T16:19:33.127Z",
     "conditionId": "0x46d40e851b24d9b0af4bc1942ccd86439cae82a9011767da14950df0ad997adf",
     "ep": "whale",
-    "updatedAt": "2026-02-19T10:52:04.160Z"
+    "updatedAt": "2026-02-20T07:02:59.084Z",
+    "notes": "Dropped from whale consensus entirely"
   },
   {
     "id": "ed4d15a9-81cb-4921-b680-bfb5743a86c8",
