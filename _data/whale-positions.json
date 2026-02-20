@@ -458,31 +458,6 @@
     "updatedAt": "2026-02-19T10:01:50.943Z"
   },
   {
-    "id": "fa50fcaf-eeab-4edb-9324-154ba08e3972",
-    "market": "Zelenskyy out as Ukraine president by end of 2026?",
-    "side": "No",
-    "entryPrice": 0.73,
-    "currentPrice": 0.745,
-    "shares": 10,
-    "status": "open",
-    "source": "consensus-scanner",
-    "whales": "gopfan2, scottilicious, jinsun1377, Thonker",
-    "whaleCount": 4,
-    "confidence": "High",
-    "avgScore": 78.5,
-    "avgWinRate": 62.6,
-    "reasoning": "Consensus: 4 whales (avg score 78.5, avg WR 62.6%) on No. Whales: gopfan2, scottilicious, jinsun1377, Thonker",
-    "endDate": "2026-12-31",
-    "createdAt": "2026-02-18T12:00:23.538Z",
-    "invested": 7.3,
-    "currentValue": 7.45,
-    "pnl": 0.15000000000000036,
-    "pnlPercent": 2.0547945205479503,
-    "entryDate": "2026-02-18T12:00:23.538Z",
-    "conditionId": "0x51f624dbbf14f9edb575fef1be6f7a303751de70783fa144fce27b957452c803",
-    "updatedAt": "2026-02-20T02:25:22.151Z"
-  },
-  {
     "id": "c1b3c348-091c-401a-83b8-acd206e6794e",
     "market": "Will no player win a Calendar Grand Slam in 2026?",
     "side": "Yes",
@@ -834,17 +809,6 @@
     "pnlPercent": 0,
     "entryDate": "2026-02-19T20:01:36.445Z",
     "updatedAt": "2026-02-20T02:21:01.702Z"
-  },
-  {
-    "id": "fa50fcaf-eeab-4edb-9324-154ba08e3972",
-    "conditionId": null,
-    "createdAt": "2026-02-20T02:19:35.569Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:35.569Z"
   },
   {
     "id": "0bcf1d6f-c2eb-4b12-93bc-7a28dc2d8754",
