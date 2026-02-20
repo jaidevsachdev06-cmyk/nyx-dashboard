@@ -281,7 +281,7 @@
     "side": "no",
     "bucket": ">=54°F",
     "entryPrice": 0.122,
-    "currentPrice": 0.125,
+    "currentPrice": 0,
     "shares": 166.07,
     "status": "closed-loss",
     "noaaForecast": "50°F",
@@ -297,11 +297,12 @@
       "contrarian"
     ],
     "createdAt": "2026-02-18T10:04:30.692Z",
-    "updatedAt": "2026-02-19T02:14:22.303Z",
+    "updatedAt": "2026-02-20T10:09:49.807Z",
     "result": "exit",
     "notes": " | Exit: Forecast 47.2°F below threshold 54°F | Reopened: exit was side-blind bug (NO position exited when forecast confirmed our thesis)",
     "pnl": -20.26054,
-    "pnlPercent": -100
+    "pnlPercent": -100,
+    "exitPrice": 0
   },
   {
     "id": "1d415d16-b4c3-47f9-ac88-215744d69747",
