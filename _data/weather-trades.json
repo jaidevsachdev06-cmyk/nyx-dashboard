@@ -39,9 +39,9 @@
     "side": "yes",
     "bucket": "60-61°F",
     "entryPrice": 0.155,
-    "currentPrice": 1,
+    "currentPrice": 0,
     "shares": 48.8,
-    "status": "closed-win",
+    "status": "closed-loss",
     "noaaForecast": "62°F",
     "forecastConfidence": "medium",
     "reasoning": "NWS says 62°F but thunderstorms Tue night could bring cold front early. Hedge position at 15.5¢.",
@@ -54,11 +54,12 @@
       "chicago"
     ],
     "createdAt": "2026-02-17T08:28:42.462Z",
-    "updatedAt": "2026-02-20T10:09:39.037Z",
+    "updatedAt": "2026-02-20T10:13:48.293Z",
     "result": "loss",
     "pnl": 41.236,
     "pnlPercent": 545.1612903225807,
-    "exitPrice": 1
+    "exitPrice": 0,
+    "notes": "Corrected via WU verification: Actual high 63°F, 60-61 bin lost"
   },
   {
     "id": "7083dfa1-295c-4a9a-991f-c0ce3c500060",
