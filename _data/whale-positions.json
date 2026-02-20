@@ -1005,7 +1005,11 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T08:36:02.538Z",
-    "updatedAt": "2026-02-20T08:36:54.800Z"
+    "updatedAt": "2026-02-20T09:01:42.759Z",
+    "priceHistory": [
+      {},
+      {}
+    ]
   },
   {
     "id": "db06e9a3-35c8-43f0-b24b-b2175ee70880",
