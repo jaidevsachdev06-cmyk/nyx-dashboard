@@ -534,31 +534,6 @@
     "updatedAt": "2026-02-20T02:25:36.695Z"
   },
   {
-    "id": "0bcf1d6f-c2eb-4b12-93bc-7a28dc2d8754",
-    "market": "Russia x Ukraine ceasefire by end of 2026?",
-    "side": "Yes",
-    "entryPrice": 0.395,
-    "currentPrice": 0.385,
-    "shares": 10,
-    "status": "open",
-    "source": "consensus-scanner",
-    "whales": "Roflan, Car, Mombil, TheWolfOfPoly, GollumGekko",
-    "whaleCount": 5,
-    "confidence": "Very High",
-    "avgScore": 82.9,
-    "avgWinRate": 68.1,
-    "reasoning": "Consensus: 5 whales (avg score 82.9, avg WR 68.1%) on Yes. Whales: Roflan, Car, Mombil, TheWolfOfPoly, GollumGekko",
-    "endDate": "2026-12-31",
-    "conditionId": "0xaeea5f917fc5746387b5f9c0a4263dba035dbb3f0ac6ad72bf92183d21e26739",
-    "createdAt": "2026-02-20T02:20:16.762Z",
-    "invested": 3.95,
-    "currentValue": 3.85,
-    "pnl": -0.10000000000000009,
-    "pnlPercent": -2.531645569620255,
-    "entryDate": "2026-02-20T02:20:16.762Z",
-    "updatedAt": "2026-02-20T02:25:38.135Z"
-  },
-  {
     "id": "650aebcb-1d32-4b11-9488-7f4167894f2e",
     "market": "Will Marco Rubio win the 2028 Republican presidential nomination?",
     "side": "Yes",
@@ -811,17 +786,6 @@
     "updatedAt": "2026-02-20T02:21:01.702Z"
   },
   {
-    "id": "0bcf1d6f-c2eb-4b12-93bc-7a28dc2d8754",
-    "conditionId": null,
-    "createdAt": "2026-02-20T02:19:36.831Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:36.831Z"
-  },
-  {
     "id": "650aebcb-1d32-4b11-9488-7f4167894f2e",
     "conditionId": null,
     "createdAt": "2026-02-20T02:19:37.597Z",
@@ -941,17 +905,6 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-20T02:20:15.898Z"
-  },
-  {
-    "id": "0bcf1d6f-c2eb-4b12-93bc-7a28dc2d8754",
-    "conditionId": "0xaeea5f917fc5746387b5f9c0a4263dba035dbb3f0ac6ad72bf92183d21e26739",
-    "createdAt": "2026-02-20T02:20:16.762Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:20:16.762Z"
   },
   {
     "id": "650aebcb-1d32-4b11-9488-7f4167894f2e",
