@@ -686,7 +686,7 @@
   },
   {
     "id": "1510edeb-ef54-40ee-a66b-0362dfcc3a44",
-    "market": "US strikes Iran by March 31, 2026?",
+    "market": "US strikes Iran by March 7, 2026?",
     "side": "No",
     "entryPrice": 0.565,
     "currentPrice": 0.595,
@@ -700,14 +700,15 @@
     "avgWinRate": 67.6,
     "reasoning": "Consensus: 4 whales (avg score 79.5, avg WR 67.6%) on No. Whales: Roflan, Mombil, TheWolfOfPoly, GollumGekko",
     "endDate": "2026-06-30",
-    "conditionId": "0x4b02efe53e631ada84681303fd66d79ad615f3d2b6a28b4633d43d935f89af58",
+    "conditionId": "0x824df6aa7e270678a5239d697918e918834a52cc6e59ebc25b650b2df649ac82",
     "createdAt": "2026-02-20T02:20:19.491Z",
     "invested": 5.6499999999999995,
     "currentValue": 5.949999999999999,
     "pnl": 0.2999999999999998,
     "pnlPercent": 5.309734513274334,
     "entryDate": "2026-02-20T02:20:19.491Z",
-    "updatedAt": "2026-02-20T02:25:42.566Z"
+    "updatedAt": "2026-02-20T02:29:19.154Z",
+    "notes": "Remapped from Mar 31 (delisted) → Mar 7 (closest available)"
   },
   {
     "id": "a25bc7b2-3161-47ac-8cb8-85f462971923",
