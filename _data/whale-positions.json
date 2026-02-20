@@ -1279,7 +1279,7 @@
     "entryPrice": 0.9955,
     "currentPrice": 0.9955,
     "shares": 4.85,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "kekkone, Brokie, Thonker",
     "whaleCount": 3,
@@ -1299,8 +1299,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-20T15:48:59.896Z",
-    "exitPrice": 0.995,
+    "updatedAt": "2026-02-20T16:00:53.920Z",
+    "exitPrice": 0.9955,
     "notes": "Dropped from whale consensus"
   },
   {
