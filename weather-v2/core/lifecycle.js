@@ -45,6 +45,12 @@ async function enterTrade(tradeId, { price, size }) {
     throw new Error(`Risk limit: city "${trade.city}" already has ${cityPositions.length} open positions (max ${maxPerCity})`);
   }
 
+  // E027: Same city + same date = 1 position only (correlated bet protection)
+  const sameCityDate = openPositions.filter(t => t.city === trade.city && t.date === trade.date);
+  if (sameCityDate.length > 0) {
+    throw new Error(`Risk limit: "${trade.city}" ${trade.date} already has a position (${sameCityDate[0].bucket} ${sameCityDate[0].side}). Same city+date = 1 position only.`);
+  }
+
   const cityExposure = cityPositions
     .reduce((sum, t) => sum + (t.sizeUSDC || 0), 0);
   if (cityExposure + sizeUSDC > config.risk.maxExposurePerCity) {
