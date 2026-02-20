@@ -257,6 +257,20 @@ function fmtDate(ts) {
   return new Date(ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 }
 function fmtMoney(n) { if (n == null) return '—'; if (n !== 0 && Math.abs(n) < 0.01) return `$${n.toPrecision(2)}`; return `$${n.toFixed(2)}`; }
+function fmtCountdown(ts) {
+  if (!ts) return '';
+  const ms = new Date(ts).getTime() - Date.now();
+  if (ms <= 0) return '<span style="color:var(--red);font-weight:600">RESOLVING</span>';
+  const h = Math.floor(ms / 3600000);
+  const d = Math.floor(h / 24);
+  const rem = h % 24;
+  if (d > 30) return `<span style="color:var(--text-dim)">${d}d</span>`;
+  if (d > 7) return `<span style="color:var(--text-dim)">${d}d ${rem}h</span>`;
+  if (d > 1) return `<span style="color:var(--yellow)">${d}d ${rem}h</span>`;
+  if (h > 6) return `<span style="color:var(--yellow)">${h}h</span>`;
+  const m = Math.floor((ms % 3600000) / 60000);
+  return `<span style="color:var(--red);font-weight:600">${h}h ${m}m</span>`;
+}
 function fmtPct(n) { return n != null ? `${n >= 0 ? '+' : ''}${n.toFixed(2)}%` : '—'; }
 function pnlClass(n) { return n > 0 ? 'pnl-pos' : n < 0 ? 'pnl-neg' : ''; }
 function statusDot(s) { return `<span class="status-dot status-${s}"></span>`; }
@@ -529,9 +543,10 @@ async function loadPolymarket() {
       <td class="mono">${fmtMoney(p.currentPrice)}</td>
       <td class="mono">${p.shares || ''}</td>
       <td class="mono ${pnlClass(p.pnl)}" style="font-weight:700">${fmtMoney(p.pnl)}</td>
+      <td class="mono" style="font-size:11px">${fmtCountdown(p.endDate || p.resolutionDate)}</td>
       <td><button class="btn btn-sm" onclick="editPolyPosition('${p.id}')">Edit</button></td>
     </tr>
-    <tr class="evidence-row"><td colspan="7" style="padding:6px 16px 14px;border-top:none">
+    <tr class="evidence-row"><td colspan="8" style="padding:6px 16px 14px;border-top:none">
       <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
         <span>${sideBadge(p.position)}</span>
         <span>📊 ${(p.tags || []).map(t => `<span style="background:rgba(255,255,255,0.04);padding:2px 8px;border-radius:6px;font-size:11px">${t}</span>`).join(' ') || '—'}</span>
@@ -643,9 +658,10 @@ async function loadWeatherTrades() {
       <td class="mono">${t.noaaForecast || '—'}</td>
       <td class="mono">${t.shares || ''}</td>
       <td class="mono ${pnlClass(t.pnl)}" style="font-weight:700">${fmtMoney(t.pnl)}</td>
+      <td class="mono" style="font-size:11px">${fmtCountdown(t.date ? t.date + 'T23:59:59Z' : t.endDate)}</td>
       <td><button class="btn btn-sm" onclick="editWeatherTrade('${t.id}')">Edit</button></td>
     </tr>
-    <tr class="evidence-row"><td colspan="9" style="padding:6px 16px 14px;border-top:none">
+    <tr class="evidence-row"><td colspan="10" style="padding:6px 16px 14px;border-top:none">
       <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
         <span>🎯 Bucket: <strong>${t.bucket || '—'}</strong></span>
         <span>🌡️ NOAA: <strong>${t.noaaForecast || '—'}</strong></span>
@@ -825,9 +841,10 @@ async function loadWhaleTrades() {
       <td class="mono">${fmtMoney(t.currentPrice)}</td>
       <td class="mono">${t.shares || ''}</td>
       <td class="mono ${pnlClass(t.pnl)}" style="font-weight:700">${fmtMoney(t.pnl)}</td>
+      <td class="mono" style="font-size:11px">${fmtCountdown(t.endDate)}</td>
       <td><button class="btn btn-sm" onclick="editWhalePosition('${t.id}')">Edit</button></td>
     </tr>
-    <tr class="evidence-row"><td colspan="7" style="padding:6px 16px 14px;border-top:none">
+    <tr class="evidence-row"><td colspan="8" style="padding:6px 16px 14px;border-top:none">
       <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
         <span>🐋 Whales: <strong>${t.whales || '—'}</strong></span>
         <span>📊 Confidence: ${whaleConfBadge(t.confidence)}</span>
