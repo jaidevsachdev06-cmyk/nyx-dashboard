@@ -963,5 +963,16 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-20T02:19:42.278Z"
+  },
+  {
+    "id": "da46059c-23ea-4c25-b676-0c1a1e1f9471",
+    "conditionId": null,
+    "createdAt": "2026-02-20T02:19:43.062Z",
+    "invested": null,
+    "currentValue": null,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "status": "open",
+    "entryDate": "2026-02-20T02:19:43.062Z"
   }
 ]
