@@ -545,7 +545,7 @@
     "market": "Will J.D. Vance win the 2028 Republican presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.461,
-    "currentPrice": 0.4385,
+    "currentPrice": 0.452,
     "shares": 10,
     "status": "open",
     "source": "consensus-scanner",
@@ -559,11 +559,11 @@
     "conditionId": "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919",
     "createdAt": "2026-02-19T16:03:06.809Z",
     "invested": 4.61,
-    "currentValue": 4.385,
-    "pnl": -0.22500000000000053,
-    "pnlPercent": -4.880694143167039,
+    "currentValue": 4.5200000000000005,
+    "pnl": -0.08999999999999986,
+    "pnlPercent": -1.9522776572668081,
     "entryDate": "2026-02-19T16:03:06.809Z",
-    "updatedAt": "2026-02-20T02:25:30.236Z"
+    "updatedAt": "2026-02-20T08:00:08.904Z"
   },
   {
     "id": "4674fdfc-8d68-4400-afea-a72d98a23fb1",
