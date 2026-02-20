@@ -721,7 +721,7 @@
     "id": "ff2d1910-5a8f-4b5d-937f-85a8d5e149da",
     "market": "Will Khamenei leave Iran by March 31?",
     "side": "No",
-    "entryPrice": 0.08499999999999996,
+    "entryPrice": 0.919851696767493,
     "currentPrice": 0.92,
     "shares": 65.65,
     "status": "open",
@@ -735,16 +735,17 @@
     "endDate": "2026-01-09",
     "conditionId": "0xf835de42f566a714be49df12ba436279ac3b06a8b570baaca49835cd0358c916",
     "createdAt": "2026-02-20T04:01:31.558Z",
-    "invested": 5.580249999999998,
+    "invested": 60.38826389278592,
     "currentValue": 60.39800000000001,
-    "pnl": 54.81775000000001,
-    "pnlPercent": 982.3529411764712,
+    "pnl": 0.009736107214088463,
+    "pnlPercent": 0.016122515512905073,
     "entryDate": "2026-02-20T04:01:31.558Z",
-    "updatedAt": "2026-02-20T08:18:40.822Z",
+    "updatedAt": "2026-02-20T08:27:28.601Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "notes": "Entry corrected from YES to NO price (bug fix 2026-02-20)"
   },
   {
     "id": "ea213e63-a461-4372-9fc9-7e348bfe1ba6",
