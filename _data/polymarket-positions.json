@@ -66,14 +66,15 @@
     "createdBy": "Nyx",
     "invested": 0.5375399999999999,
     "currentValue": 0.6324,
-    "pnl": 0.09486000000000006,
-    "pnlPercent": 17.647058823529424,
+    "pnl": -9.37,
+    "pnlPercent": -93.7,
     "createdAt": "2026-02-17T07:12:14.249Z",
     "entryDate": "2026-02-17T07:12:14.249Z",
     "side": "No",
     "reasoning": "No US strikes on Iran by Feb 20. High probability.",
     "conditionId": "0xe1c67f75aac5b10dc28f1a2fbb79b079fc7f7320abfbd6a950a50c372979569b",
-    "ep": "polymarket"
+    "ep": "polymarket",
+    "exitPrice": 0.06
   },
   {
     "id": "37c81058-80d4-4e4e-9042-19d122e39d0c",
@@ -158,8 +159,8 @@
     "shares": 12.12,
     "invested": 2.1209999999999996,
     "currentValue": 3.3936,
-    "pnl": 1.2726000000000006,
-    "pnlPercent": 60.00000000000004,
+    "pnl": -6.61,
+    "pnlPercent": -66.1,
     "status": "closed-loss",
     "notes": "SOLD: Active strike planning underway. Cut losses.",
     "tags": [
@@ -171,7 +172,8 @@
     "entryDate": "2026-02-17T07:12:30.159Z",
     "side": "No",
     "reasoning": "No US strikes on Iran by Feb 28.",
-    "conditionId": null
+    "conditionId": null,
+    "exitPrice": 0.28
   },
   {
     "id": "1350f4fb-9322-446f-a002-4458522f683f",
