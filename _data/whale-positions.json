@@ -669,13 +669,14 @@
     "avgWinRate": 65.6,
     "reasoning": "Consensus: 4 whales (avg score 81.1, avg WR 65.6%) on No. Whales: elucidate, LinaBell, TheWolfOfPoly, GollumGekko",
     "endDate": "2026-11-03",
-    "conditionId": "",
+    "conditionId": "0x9345d5142a67f5541264c96515496affee02580f1c572680759eac9fd2a1588a",
     "createdAt": "2026-02-19T16:02:55.032Z",
     "invested": 3.1499999999999995,
     "currentValue": 3.1499999999999995,
     "pnl": 0,
     "pnlPercent": 0,
-    "entryDate": "2026-02-19T16:02:55.032Z"
+    "entryDate": "2026-02-19T16:02:55.032Z",
+    "updatedAt": "2026-02-20T02:22:50.318Z"
   },
   {
     "id": "1510edeb-ef54-40ee-a66b-0362dfcc3a44",
