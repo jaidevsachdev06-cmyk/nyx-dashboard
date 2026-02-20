@@ -24,7 +24,9 @@
     ],
     "createdAt": "2026-02-17T08:28:40.142Z",
     "updatedAt": "2026-02-18T23:02:54.990Z",
-    "result": "loss"
+    "result": "loss",
+    "pnl": 76.3755,
+    "pnlPercent": 769.5652173913044
   },
   {
     "id": "42ea2859-d865-499f-a195-35e90538442d",
@@ -51,7 +53,9 @@
     ],
     "createdAt": "2026-02-17T08:28:42.462Z",
     "updatedAt": "2026-02-18T23:02:58.074Z",
-    "result": "loss"
+    "result": "loss",
+    "pnl": 41.236,
+    "pnlPercent": 545.1612903225807
   },
   {
     "id": "7083dfa1-295c-4a9a-991f-c0ce3c500060",
@@ -78,7 +82,9 @@
     ],
     "createdAt": "2026-02-17T08:28:56.352Z",
     "updatedAt": "2026-02-18T23:03:01.191Z",
-    "result": "loss"
+    "result": "loss",
+    "pnl": 99.53,
+    "pnlPercent": 1233.3333333333335
   },
   {
     "id": "8037bd1f-9d5c-4065-ba07-7ac37c3020c8",
@@ -105,7 +111,9 @@
     ],
     "createdAt": "2026-02-17T08:29:00.223Z",
     "updatedAt": "2026-02-18T23:03:04.884Z",
-    "result": "win"
+    "result": "win",
+    "pnl": -13.978,
+    "pnlPercent": -100
   },
   {
     "id": "c4c665bc-be72-4ea0-ba4b-68c27b4de305",
@@ -132,7 +140,9 @@
     ],
     "createdAt": "2026-02-17T08:29:04.055Z",
     "updatedAt": "2026-02-18T23:03:08.002Z",
-    "result": "loss"
+    "result": "loss",
+    "pnl": 35.35298,
+    "pnlPercent": 351.87528242205155
   },
   {
     "id": "2ba1eb77-611c-43fd-9151-bf033ec88d25",
@@ -159,7 +169,9 @@
     ],
     "createdAt": "2026-02-17T14:07:33.694Z",
     "updatedAt": "2026-02-18T23:03:11.153Z",
-    "result": "loss"
+    "result": "loss",
+    "pnl": 66.792558,
+    "pnlPercent": 243.5245620061834
   },
   {
     "id": "0f6b5b5b-0e90-4107-b585-37f8b3255844",
@@ -187,7 +199,9 @@
     ],
     "createdAt": "2026-02-17T14:07:44.192Z",
     "updatedAt": "2026-02-18T23:03:14.270Z",
-    "result": "loss"
+    "result": "loss",
+    "pnl": 54.763799999999996,
+    "pnlPercent": 474.7126436781609
   },
   {
     "id": "b9787d2b-143d-4744-92b7-f8a7710dc0fb",
@@ -215,7 +229,9 @@
     "createdAt": "2026-02-18T02:03:57.538Z",
     "updatedAt": "2026-02-18T23:16:35.706Z",
     "result": "exit",
-    "notes": " | Exit: Forecast 81.5°F outside bin 78-79°F"
+    "notes": " | Exit: Forecast 81.5°F outside bin 78-79°F",
+    "pnl": -20.2918,
+    "pnlPercent": -100
   },
   {
     "id": "504b3efb-0d66-4876-baea-846beb42265f",
@@ -243,7 +259,9 @@
     "createdAt": "2026-02-18T02:04:09.118Z",
     "updatedAt": "2026-02-19T00:35:03.523Z",
     "notes": " | Partial exit (58.9→29): Forecast 75.4°F near bin boundary | Partial exit (29→14): Forecast 75.4°F near bin boundary | RT Exit: Past peak, max only 62.6°F, below 74°F floor",
-    "result": "exit"
+    "result": "exit",
+    "pnl": 10.416,
+    "pnlPercent": 290.625
   },
   {
     "id": "cf06b26b-189e-4e0d-a086-81867fd95fc5",
@@ -272,7 +290,9 @@
     "createdAt": "2026-02-18T10:04:30.692Z",
     "updatedAt": "2026-02-19T02:14:22.303Z",
     "result": "exit",
-    "notes": " | Exit: Forecast 47.2°F below threshold 54°F | Reopened: exit was side-blind bug (NO position exited when forecast confirmed our thesis)"
+    "notes": " | Exit: Forecast 47.2°F below threshold 54°F | Reopened: exit was side-blind bug (NO position exited when forecast confirmed our thesis)",
+    "pnl": -20.26054,
+    "pnlPercent": -100
   },
   {
     "id": "1d415d16-b4c3-47f9-ac88-215744d69747",
@@ -300,7 +320,9 @@
     "createdAt": "2026-02-18T10:04:34.634Z",
     "updatedAt": "2026-02-18T23:16:43.075Z",
     "result": "exit",
-    "notes": " | Exit: Forecast 47.2°F outside bin 50-51°F"
+    "notes": " | Exit: Forecast 47.2°F outside bin 50-51°F",
+    "pnl": -15.63198,
+    "pnlPercent": -100
   },
   {
     "id": "fcc451c2-2584-4169-a619-4fdd2eb9bdcd",
@@ -328,7 +350,9 @@
     "createdAt": "2026-02-18T10:04:39.792Z",
     "updatedAt": "2026-02-18T23:17:52.972Z",
     "result": "exit",
-    "notes": " | Exit: Forecast 40.0°F outside bin 42-43°F"
+    "notes": " | Exit: Forecast 40.0°F outside bin 42-43°F",
+    "pnl": -15.05235,
+    "pnlPercent": -100
   },
   {
     "id": "13530905-c736-46ef-9ff4-1a1373f6198b",
@@ -360,7 +384,9 @@
     "notes": "SOLD: Forecast 3.1°C, well below 5°C. Cold front.",
     "createdAt": "2026-02-19T01:10:09.106Z",
     "updatedAt": "2026-02-19T07:30:33.076Z",
-    "conditionId": "0xaf832299e9a6b20956dae7558955bc75bc701d53cb922def0d875021855c57b4"
+    "conditionId": "0xaf832299e9a6b20956dae7558955bc75bc701d53cb922def0d875021855c57b4",
+    "pnl": -3,
+    "pnlPercent": -100
   },
   {
     "id": "8563b054-86ed-47e6-a022-bc6b55c87b31",
@@ -382,7 +408,9 @@
     "notes": "Consensus 52°F, 33% edge. gopfan2 NO entry. | Exit: Stop loss: price 0.085 < 0.276",
     "updatedAt": "2026-02-19T16:00:40.021Z",
     "conditionId": "0xf56ff481d6eb43313b7ce830530a344cac00808e0822d5685565d7b886ddc787",
-    "result": "exit"
+    "result": "exit",
+    "pnl": 3.5207999999999995,
+    "pnlPercent": 117.39130434782608
   },
   {
     "id": "9b7d30d7-8a25-451e-85c8-9b52adc7b1e5",
@@ -415,7 +443,9 @@
     "notes": "edge=0.12, kelly=11.7%, f_eff=5%, p_model=0.12, p_mkt=0.003, forecast=7.1C, spread=1.6C(2.9F), lottery ticket $3 risk | Exit: Forecast 6.5° below threshold 10° (YES losing)",
     "createdAt": "2026-02-19T10:02:31.634Z",
     "result": "exit",
-    "updatedAt": "2026-02-19T14:00:37.651Z"
+    "updatedAt": "2026-02-19T14:00:37.651Z",
+    "pnl": 997,
+    "pnlPercent": 33233.33333333333
   },
   {
     "id": "d02d037f-37f9-40f9-96f3-90a05a1350d2",
@@ -431,7 +461,9 @@
     "notes": "Market under UMA review. No valid pricing. Voided - should not have been entered.",
     "createdAt": "2026-02-19T10:02:37.465Z",
     "exitPrice": 0,
-    "updatedAt": "2026-02-19T10:22:58.629Z"
+    "updatedAt": "2026-02-19T10:22:58.629Z",
+    "pnl": -3,
+    "pnlPercent": -100
   },
   {
     "id": "64b5c110-e138-4b04-b617-910c3aaad9f4",
@@ -481,7 +513,9 @@
     "notes": "edge=0.35, kelly=5.0%, p_model=0.89, p_mkt=0.545, forecast=74.3°F | Exit: Stop loss: price 0.38 < 0.409",
     "createdAt": "2026-02-19T13:09:36.071Z",
     "updatedAt": "2026-02-19T16:00:59.399Z",
-    "result": "exit"
+    "result": "exit",
+    "pnl": 20.839,
+    "pnlPercent": 83.4862385321101
   },
   {
     "id": "ac6943ce-7536-40e2-94e7-ec45b12b1e6f",
