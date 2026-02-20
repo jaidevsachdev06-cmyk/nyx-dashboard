@@ -62,6 +62,10 @@ const TRADE_SCHEMA = {
   orderId:       { type: 'string',  required: false },
   txHash:        { type: 'string',  required: false, nullable: true },
 
+  // Price tracking (updated by price sync)
+  currentPrice:  { type: 'number',  required: false, min: 0, max: 1 },
+  updatedAt:     { type: 'string',  required: false },
+
   // Signal metadata (for feedback loop)
   signal: {
     type: 'object',
@@ -173,16 +177,12 @@ function validateTrade(trade) {
     errors.push('Resolved trades must have a result (win/loss/push)');
   }
 
-  // Cross-field: P&L only on resolved/closed
-  if (trade.pnlUSDC !== undefined && trade.pnlUSDC !== null) {
-    if (!['resolved', 'closed'].includes(trade.status)) {
-      errors.push('P&L can only be set on resolved or closed trades');
-    }
-  }
+  // Cross-field: P&L on open trades = unrealized (from price sync), on resolved/closed = realized
+  // Both are valid
 
-  // Cross-field: resolutionSource must be "polymarket"
-  if (trade.resolutionSource && trade.resolutionSource !== 'polymarket') {
-    errors.push(`resolutionSource must be "polymarket", got "${trade.resolutionSource}"`);
+  // Cross-field: resolutionSource must be "polymarket" or "price-inferred"
+  if (trade.resolutionSource && !['polymarket', 'price-inferred'].includes(trade.resolutionSource)) {
+    errors.push(`resolutionSource must be "polymarket" or "price-inferred", got "${trade.resolutionSource}"`);
   }
 
   // Placeholder detection — catch fake conditionIds

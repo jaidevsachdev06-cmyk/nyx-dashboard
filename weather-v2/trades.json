@@ -160,9 +160,9 @@
       "bucket": "10°C",
       "question": "Will the highest temperature in London be 10°C on February 20?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.36,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.4415,
       "createdAt": "2026-02-20T11:19:55.016Z",
       "signal": {
         "forecastTemp": 10.5,
@@ -178,7 +178,11 @@
       "orderId": "paper-mlussqyw-lmo7",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-20T16:00:09.918Z"
+      "updatedAt": "2026-02-20T16:00:09.918Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-20T21:05:38.266Z",
+      "closedAt": "2026-02-20T21:05:38.268Z"
     },
     {
       "id": "oc-mlussqyx-yg0ddb",
@@ -551,7 +555,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-20T20:11:54.586Z",
+    "lastUpdated": "2026-02-20T21:05:38.269Z",
     "lastPriceSync": "2026-02-20T21:00:25.423Z"
   }
 }
