@@ -558,31 +558,6 @@
     "updatedAt": "2026-02-20T02:25:30.236Z"
   },
   {
-    "id": "6bf756e8-b174-4b97-8451-48ca046c49ef",
-    "market": "Israel strikes Iran by February 28, 2026?",
-    "side": "No",
-    "entryPrice": 0.235,
-    "currentPrice": 0.185,
-    "shares": 10,
-    "status": "open",
-    "source": "consensus-scanner",
-    "whales": "Roflan, Car, kekkone, GollumGekko",
-    "whaleCount": 4,
-    "confidence": "High",
-    "avgScore": 84.5,
-    "avgWinRate": 70.8,
-    "reasoning": "Consensus: 4 whales (avg score 84.5, avg WR 70.8%) on No. Whales: Roflan, Car, kekkone, GollumGekko",
-    "endDate": "2026-02-28",
-    "conditionId": "0x291f0f6023efa933d36cc80fd55f9d176309a92b61b9567fd4f044a8b21873fb",
-    "createdAt": "2026-02-20T02:20:23.635Z",
-    "invested": 2.3499999999999996,
-    "currentValue": 1.85,
-    "pnl": -0.49999999999999956,
-    "pnlPercent": -21.276595744680833,
-    "entryDate": "2026-02-20T02:20:23.635Z",
-    "updatedAt": "2026-02-20T02:25:46.903Z"
-  },
-  {
     "id": "27aac9c6-883f-4ee9-bcdf-0f9a5582b2cf",
     "conditionId": null,
     "createdAt": "2026-02-20T02:19:41.450Z",
@@ -594,17 +569,6 @@
     "entryDate": "2026-02-20T02:19:41.450Z"
   },
   {
-    "id": "6bf756e8-b174-4b97-8451-48ca046c49ef",
-    "conditionId": null,
-    "createdAt": "2026-02-20T02:19:43.816Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:43.816Z"
-  },
-  {
     "id": "0434f28f-2448-4242-ad4d-8d99b30920d3",
     "conditionId": "0x1d54eb5eac2cee8f595f3097c65da7d07f8ab5dee63d7c0c6883eb70e1e9af30",
     "createdAt": "2026-02-20T02:20:15.898Z",
@@ -614,16 +578,5 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-20T02:20:15.898Z"
-  },
-  {
-    "id": "6bf756e8-b174-4b97-8451-48ca046c49ef",
-    "conditionId": "0x291f0f6023efa933d36cc80fd55f9d176309a92b61b9567fd4f044a8b21873fb",
-    "createdAt": "2026-02-20T02:20:23.635Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:20:23.635Z"
   }
 ]
