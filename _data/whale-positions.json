@@ -687,7 +687,7 @@
     "market": "Israel strikes Iran by February 28, 2026?",
     "side": "No",
     "entryPrice": 0.19499999999999995,
-    "currentPrice": 0.81,
+    "currentPrice": 0.805,
     "shares": 28.62,
     "status": "open",
     "source": "consensus-scanner",
@@ -701,11 +701,11 @@
     "conditionId": "0x291f0f6023efa933d36cc80fd55f9d176309a92b61b9567fd4f044a8b21873fb",
     "createdAt": "2026-02-20T04:01:35.501Z",
     "invested": 5.580899999999999,
-    "currentValue": 23.1822,
-    "pnl": 17.601300000000002,
-    "pnlPercent": 315.3846153846155,
+    "currentValue": 23.0391,
+    "pnl": 17.4582,
+    "pnlPercent": 312.82051282051293,
     "entryDate": "2026-02-20T04:01:35.501Z",
-    "updatedAt": "2026-02-20T06:51:52.428Z"
+    "updatedAt": "2026-02-20T07:00:09.881Z"
   },
   {
     "id": "a53612ea-04c6-4215-9565-5465b0a99faa",
