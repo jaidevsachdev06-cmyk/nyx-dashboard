@@ -188,7 +188,7 @@
     "side": "yes",
     "bucket": "76-77°F",
     "entryPrice": 0.174,
-    "currentPrice": 0,
+    "currentPrice": 1,
     "shares": 66.3,
     "status": "closed-win",
     "noaaForecast": "77°F",
@@ -204,10 +204,11 @@
       "add-on"
     ],
     "createdAt": "2026-02-17T14:07:44.192Z",
-    "updatedAt": "2026-02-18T23:03:14.270Z",
+    "updatedAt": "2026-02-20T10:09:45.809Z",
     "result": "loss",
     "pnl": 54.763799999999996,
-    "pnlPercent": 474.7126436781609
+    "pnlPercent": 474.7126436781609,
+    "exitPrice": 1
   },
   {
     "id": "b9787d2b-143d-4744-92b7-f8a7710dc0fb",
