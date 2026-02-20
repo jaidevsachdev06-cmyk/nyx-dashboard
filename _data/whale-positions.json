@@ -392,7 +392,7 @@
     "entryPrice": 0.963,
     "currentPrice": 0.9505,
     "shares": 10,
-    "status": "open",
+    "status": "closed-exit",
     "source": "consensus-scanner",
     "whales": "Roflan, Thonker, Gr33d, Qualitative, TheWolfOfPoly",
     "whaleCount": 5,
@@ -408,7 +408,8 @@
     "pnlPercent": -1.29802699896156,
     "entryDate": "2026-02-18T08:02:15.671Z",
     "conditionId": "0xd4bbf7f6707c67beb736135ad32a41f6db41f8ae52d3ac4919650de9eeb94ed8",
-    "updatedAt": "2026-02-20T06:00:09.075Z"
+    "updatedAt": "2026-02-20T07:03:06.193Z",
+    "notes": "Dropped from whale consensus entirely"
   },
   {
     "id": "c33be58d-47d1-47f6-b03a-86e91644f6e4",
