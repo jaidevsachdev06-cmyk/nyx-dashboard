@@ -149,32 +149,6 @@
     "reasoning": "Iran strike probability rising — whales bet YES on strike by June 30. Position gained +19.8%."
   },
   {
-    "id": "f1e078b8-e843-48db-9a10-3424b0787c18",
-    "market": "JD Vance wins 2028 GOP nomination",
-    "side": "YES",
-    "entryPrice": 0.463,
-    "currentPrice": 0.4385,
-    "shares": 75.6,
-    "whales": "PredictaDamus, XPredicter1",
-    "whaleCount": 2,
-    "avgScore": 58.9,
-    "thesis": "Sitting VP, Trump successor.",
-    "category": "consensus",
-    "endDate": "2028-11-07",
-    "createdAt": "2026-02-20T02:20:13.414Z",
-    "invested": 35.0028,
-    "currentValue": 33.1506,
-    "pnl": -1.8522000000000034,
-    "pnlPercent": -5.291576673866101,
-    "status": "open",
-    "entryDate": "2026-02-20T02:20:13.414Z",
-    "tags": [
-      "legacy"
-    ],
-    "conditionId": "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919",
-    "updatedAt": "2026-02-20T02:25:33.819Z"
-  },
-  {
     "id": "adfe43b8-f5cb-45cc-b17d-25d4f32fd97b",
     "market": "Bitcoin NOT dip to $60k in Feb",
     "side": "NO",
@@ -862,41 +836,6 @@
     "updatedAt": "2026-02-20T02:21:01.702Z"
   },
   {
-    "id": "f1e078b8-e843-48db-9a10-3424b0787c18",
-    "conditionId": "0xaf9d0e448129a9f657f851d49495ba4742055d80e0ef1166ba0ee81d4d594214",
-    "createdAt": "2026-02-20T02:17:39.152Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:17:39.152Z",
-    "updatedAt": "2026-02-20T02:17:54.496Z"
-  },
-  {
-    "id": "f1e078b8-e843-48db-9a10-3424b0787c18",
-    "conditionId": "0xe3b423dfad8c22ff75c9899c4e8176f628cf4ad4caa00481764d320e7415f7a9",
-    "createdAt": "2026-02-20T02:19:02.702Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:02.702Z",
-    "updatedAt": "2026-02-20T02:19:24.292Z"
-  },
-  {
-    "id": "f1e078b8-e843-48db-9a10-3424b0787c18",
-    "conditionId": null,
-    "createdAt": "2026-02-20T02:19:34.268Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:34.268Z"
-  },
-  {
     "id": "fa50fcaf-eeab-4edb-9324-154ba08e3972",
     "conditionId": null,
     "createdAt": "2026-02-20T02:19:35.569Z",
@@ -1016,18 +955,6 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-20T02:19:44.648Z"
-  },
-  {
-    "id": "f1e078b8-e843-48db-9a10-3424b0787c18",
-    "conditionId": "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919",
-    "createdAt": "2026-02-20T02:20:13.414Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:20:13.414Z",
-    "updatedAt": "2026-02-20T02:20:21.023Z"
   },
   {
     "id": "6da1f257-efb2-41c6-97cc-0797c8d2ed31",
