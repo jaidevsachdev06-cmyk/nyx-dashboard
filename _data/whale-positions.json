@@ -534,31 +534,6 @@
     "updatedAt": "2026-02-20T02:25:36.695Z"
   },
   {
-    "id": "47ba645c-182e-4191-9322-1c3d6c20bf4e",
-    "market": "Will Graham Platner be the Democratic nominee for Senate in Maine?",
-    "side": "Yes",
-    "entryPrice": 0.635,
-    "currentPrice": 0.63,
-    "shares": 10,
-    "status": "open",
-    "source": "consensus-scanner",
-    "whales": "elucidate, Ozi, Car, GollumGekko",
-    "whaleCount": 4,
-    "confidence": "High",
-    "avgScore": 83.8,
-    "avgWinRate": 68.8,
-    "reasoning": "Consensus: 4 whales (avg score 83.8, avg WR 68.8%) on Yes. Whales: elucidate, Ozi, Car, GollumGekko",
-    "endDate": "2026-07-31",
-    "conditionId": "0x807a5bd3d52942c2d8b58bf71a583d4aa03a637f3fd9ff7a7c4a1ad818003067",
-    "createdAt": "2026-02-19T16:02:51.025Z",
-    "invested": 6.35,
-    "currentValue": 6.3,
-    "pnl": -0.04999999999999982,
-    "pnlPercent": -0.7874015748031469,
-    "entryDate": "2026-02-19T16:02:51.025Z",
-    "updatedAt": "2026-02-20T02:25:27.012Z"
-  },
-  {
     "id": "def3541e-711c-47e6-aab9-ff359a8abd0d",
     "market": "Billionaire one-time wealth tax passes in California election 2026?",
     "side": "No",
@@ -759,17 +734,6 @@
     "pnlPercent": 0,
     "entryDate": "2026-02-19T20:01:36.445Z",
     "updatedAt": "2026-02-20T02:21:01.702Z"
-  },
-  {
-    "id": "47ba645c-182e-4191-9322-1c3d6c20bf4e",
-    "conditionId": null,
-    "createdAt": "2026-02-20T02:19:38.357Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:38.357Z"
   },
   {
     "id": "def3541e-711c-47e6-aab9-ff359a8abd0d",
