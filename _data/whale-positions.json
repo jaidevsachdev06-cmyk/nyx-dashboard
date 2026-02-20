@@ -634,31 +634,6 @@
     "updatedAt": "2026-02-20T02:25:46.903Z"
   },
   {
-    "id": "77ad56b7-827d-49e3-9258-ec5c568fc25e",
-    "market": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
-    "side": "Yes",
-    "entryPrice": 0.755,
-    "currentPrice": 0.755,
-    "shares": 10,
-    "status": "open",
-    "source": "consensus-scanner",
-    "whales": "Car, kekkone, gopfan2, GollumGekko",
-    "whaleCount": 4,
-    "confidence": "High",
-    "avgScore": 83.3,
-    "avgWinRate": 68.6,
-    "reasoning": "Consensus: 4 whales (avg score 83.3, avg WR 68.6%) on Yes. Whales: Car, kekkone, gopfan2, GollumGekko",
-    "endDate": "2026-09-30",
-    "conditionId": "0x502a94e5c525766d5ee7f16c6568131ba1b2cbadb69c703af05a6ef00336ed64",
-    "createdAt": "2026-02-19T20:01:36.445Z",
-    "invested": 7.55,
-    "currentValue": 7.55,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "entryDate": "2026-02-19T20:01:36.445Z",
-    "updatedAt": "2026-02-20T02:21:01.702Z"
-  },
-  {
     "id": "27aac9c6-883f-4ee9-bcdf-0f9a5582b2cf",
     "conditionId": null,
     "createdAt": "2026-02-20T02:19:41.450Z",
@@ -690,17 +665,6 @@
     "pnlPercent": 0,
     "status": "open",
     "entryDate": "2026-02-20T02:19:43.816Z"
-  },
-  {
-    "id": "77ad56b7-827d-49e3-9258-ec5c568fc25e",
-    "conditionId": null,
-    "createdAt": "2026-02-20T02:19:44.648Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:44.648Z"
   },
   {
     "id": "6da1f257-efb2-41c6-97cc-0797c8d2ed31",
