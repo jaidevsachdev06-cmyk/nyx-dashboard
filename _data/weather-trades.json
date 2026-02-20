@@ -38,7 +38,7 @@
     "side": "yes",
     "bucket": "60-61°F",
     "entryPrice": 0.155,
-    "currentPrice": 0,
+    "currentPrice": 1,
     "shares": 48.8,
     "status": "closed-win",
     "noaaForecast": "62°F",
@@ -53,10 +53,11 @@
       "chicago"
     ],
     "createdAt": "2026-02-17T08:28:42.462Z",
-    "updatedAt": "2026-02-18T23:02:58.074Z",
+    "updatedAt": "2026-02-20T10:09:39.037Z",
     "result": "loss",
     "pnl": 41.236,
-    "pnlPercent": 545.1612903225807
+    "pnlPercent": 545.1612903225807,
+    "exitPrice": 1
   },
   {
     "id": "7083dfa1-295c-4a9a-991f-c0ce3c500060",
