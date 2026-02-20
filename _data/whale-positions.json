@@ -1022,5 +1022,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T08:36:12.876Z"
+  },
+  {
+    "id": "44ec72b3-f8b2-427f-8e21-c99202662e3e",
+    "market": "Will Khamenei visit Russia by March 31?",
+    "side": "No",
+    "entryPrice": 0.9824999999999999,
+    "currentPrice": 0.9824999999999999,
+    "shares": 6.31,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "kekkone, archaic, Michael5289",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 86.1,
+    "avgWinRate": 80.6,
+    "reasoning": "Consensus: 3 whales (avg score 86.1, WR 80.6%) No. bet=$6.20, shares=6.31. Whales: kekkone, archaic, Michael5289",
+    "endDate": "2026-12-31",
+    "conditionId": "0x444f181da82f6a9ed38f9a702f52a0a2c744a7dd942fcd3ca2a7b6bea827c6aa",
+    "createdAt": "2026-02-20T08:36:19.638Z",
+    "invested": 6.199574999999999,
+    "currentValue": 6.199574999999999,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T08:36:19.638Z"
   }
 ]
