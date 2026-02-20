@@ -67,15 +67,15 @@
     "currentValue": 48.012499999999996,
     "pnl": 7.9925,
     "pnlPercent": 19.971264367816094,
-    "status": "open",
+    "status": "closed-exit",
     "entryDate": "2026-02-17T16:19:41.600Z",
     "tags": [
       "legacy"
     ],
     "ep": "whale",
     "conditionId": "0xcbf9e16f0ad8bef39c3860dda598df8c4906f737bbed4dc1c65f7e0c07675ab3",
-    "notes": "Upgraded 2→4 whales. Now meets criteria.",
-    "updatedAt": "2026-02-20T06:49:37.122Z"
+    "notes": "Dropped from whale consensus entirely",
+    "updatedAt": "2026-02-20T07:03:02.614Z"
   },
   {
     "id": "dadb04c5-4921-4b3b-9a3e-9e92a623be5f",
