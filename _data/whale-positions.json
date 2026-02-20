@@ -899,7 +899,7 @@
     "market": "Will Khamenei visit Russia by June 30?",
     "side": "No",
     "entryPrice": 0.9546,
-    "currentPrice": 0.9015,
+    "currentPrice": 0.9059999999999999,
     "shares": 6.27,
     "status": "open",
     "source": "consensus-scanner",
@@ -913,12 +913,16 @@
     "conditionId": "0xa454a98c451d635ee4d928ab690d694541868169b296bb3a5d01c9383fd8e438",
     "createdAt": "2026-02-20T08:35:35.872Z",
     "invested": 5.985341999999999,
-    "currentValue": 5.652404999999999,
-    "pnl": -0.33293700000000026,
-    "pnlPercent": -5.562539283469521,
+    "currentValue": 5.680619999999999,
+    "pnl": -0.30472199999999994,
+    "pnlPercent": -5.091137649277184,
     "entryDate": "2026-02-20T08:35:35.872Z",
     "notes": "Entry corrected via Dome historical audit (was 0.9015)",
-    "updatedAt": "2026-02-20T08:41:50.640Z"
+    "updatedAt": "2026-02-20T09:01:31.427Z",
+    "priceHistory": [
+      {},
+      {}
+    ]
   },
   {
     "id": "dd0398bb-0cf3-4c3d-9645-0249bd6da66e",
