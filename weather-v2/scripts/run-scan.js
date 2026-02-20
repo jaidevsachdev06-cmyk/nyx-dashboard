@@ -20,6 +20,14 @@ async function main() {
     return { scanned: result.candidates.length, entered: 0 };
   }
 
+  // Sort by edge descending — best trades enter first, spreads across cities
+  result.passing.sort((a, b) => (b.edge || 0) - (a.edge || 0));
+
+  // Cap max edge to filter illiquid garbage (>500% usually means 3¢ market)
+  result.passing = result.passing.filter(c => (c.edge || 0) <= 5.0);
+
+  console.log(`[run-scan] After sorting & filtering: ${result.passing.length} candidates (top 5: ${result.passing.slice(0,5).map(c => `${c.city} ${c.bucket} ${(c.edge*100).toFixed(0)}%`).join(', ')})`);
+
   // Enter trades for passing candidates (stop when position cap hit)
   let entered = 0;
   let capHit = false;

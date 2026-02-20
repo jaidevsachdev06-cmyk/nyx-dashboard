@@ -39,8 +39,13 @@ async function enterTrade(tradeId, { price, size }) {
     throw new Error(`Risk limit: position size $${sizeUSDC.toFixed(2)} exceeds max $${config.risk.maxPositionSizeUSDC}`);
   }
 
-  const cityExposure = openPositions
-    .filter(t => t.city === trade.city)
+  const cityPositions = openPositions.filter(t => t.city === trade.city);
+  const maxPerCity = config.risk.maxPositionsPerCity || 3;
+  if (cityPositions.length >= maxPerCity) {
+    throw new Error(`Risk limit: city "${trade.city}" already has ${cityPositions.length} open positions (max ${maxPerCity})`);
+  }
+
+  const cityExposure = cityPositions
     .reduce((sum, t) => sum + (t.sizeUSDC || 0), 0);
   if (cityExposure + sizeUSDC > config.risk.maxExposurePerCity) {
     throw new Error(`Risk limit: city "${trade.city}" exposure exceeds max $${config.risk.maxExposurePerCity}`);
