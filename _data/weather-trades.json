@@ -131,9 +131,9 @@
     "side": "yes",
     "bucket": "78-79°F",
     "entryPrice": 0.2213,
-    "currentPrice": 1,
+    "currentPrice": 0,
     "shares": 45.4,
-    "status": "closed-win",
+    "status": "closed-loss",
     "noaaForecast": "79°F",
     "forecastConfidence": "medium-high",
     "reasoning": "NWS hourly peaks at 79°F around 3pm. TAF shows S winds 17G27kt. Highest opportunity score.",
@@ -146,11 +146,12 @@
       "dallas"
     ],
     "createdAt": "2026-02-17T08:29:04.055Z",
-    "updatedAt": "2026-02-20T10:09:43.006Z",
+    "updatedAt": "2026-02-20T10:13:50.864Z",
     "result": "loss",
     "pnl": 35.35298,
     "pnlPercent": 351.87528242205155,
-    "exitPrice": 1
+    "exitPrice": 0,
+    "notes": "Corrected via WU verification: Actual high 77°F, 78-79 bin lost"
   },
   {
     "id": "2ba1eb77-611c-43fd-9151-bf033ec88d25",
