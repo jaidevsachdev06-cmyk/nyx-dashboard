@@ -626,5 +626,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T04:01:20.223Z"
+  },
+  {
+    "id": "20d89de9-1419-4deb-9c36-d06931092860",
+    "market": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
+    "side": "Yes",
+    "entryPrice": 0.755,
+    "currentPrice": 0.755,
+    "shares": 13.8,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "gopfan2, Car, Brokie, kekkone, archaic",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 85.7,
+    "avgWinRate": 67.7,
+    "reasoning": "Consensus: 5 whales (avg score 85.7, avg WR 67.7%) on Yes. tier=2%, wrScale=1.04, bet=$10.42, shares=13.8. Whales: gopfan2, Car, Brokie, kekkone, archaic",
+    "endDate": "2026-09-30",
+    "conditionId": "",
+    "createdAt": "2026-02-20T04:01:24.007Z",
+    "invested": 10.419,
+    "currentValue": 10.419,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T04:01:24.007Z"
   }
 ]
