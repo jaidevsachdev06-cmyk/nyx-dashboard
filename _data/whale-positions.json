@@ -558,28 +558,6 @@
     "updatedAt": "2026-02-20T02:25:30.236Z"
   },
   {
-    "id": "27aac9c6-883f-4ee9-bcdf-0f9a5582b2cf",
-    "conditionId": null,
-    "createdAt": "2026-02-20T02:19:41.450Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:19:41.450Z"
-  },
-  {
-    "id": "0434f28f-2448-4242-ad4d-8d99b30920d3",
-    "conditionId": "0x1d54eb5eac2cee8f595f3097c65da7d07f8ab5dee63d7c0c6883eb70e1e9af30",
-    "createdAt": "2026-02-20T02:20:15.898Z",
-    "invested": null,
-    "currentValue": null,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "status": "open",
-    "entryDate": "2026-02-20T02:20:15.898Z"
-  },
-  {
     "id": "4674fdfc-8d68-4400-afea-a72d98a23fb1",
     "market": "Will the U.S. collect less than $100b in revenue in 2025?",
     "side": "Yes",
