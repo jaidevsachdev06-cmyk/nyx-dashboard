@@ -998,5 +998,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T08:36:07.816Z"
+  },
+  {
+    "id": "8bd4b379-b565-4d5f-913f-b4ec94ee2331",
+    "market": "Supreme Court rules in favor of Trump's tariffs?",
+    "side": "Yes",
+    "entryPrice": 0.255,
+    "currentPrice": 0.255,
+    "shares": 21.45,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Rooke Brollins, nicoco89, Snoorrason",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 87.6,
+    "avgWinRate": 71.1,
+    "reasoning": "Consensus: 3 whales (avg score 87.6, WR 71.1%) Yes. bet=$5.47, shares=21.45. Whales: Rooke Brollins, nicoco89, Snoorrason",
+    "endDate": "2026-12-31",
+    "conditionId": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+    "createdAt": "2026-02-20T08:36:12.876Z",
+    "invested": 5.46975,
+    "currentValue": 5.46975,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T08:36:12.876Z"
   }
 ]
