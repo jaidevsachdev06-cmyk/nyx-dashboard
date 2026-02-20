@@ -255,9 +255,9 @@
     "side": "yes",
     "bucket": "74-75°F",
     "entryPrice": 0.256,
-    "currentPrice": 1,
+    "currentPrice": 0,
     "shares": 14,
-    "status": "closed-win",
+    "status": "closed-loss",
     "noaaForecast": "75°F",
     "forecastConfidence": "medium-high",
     "reasoning": "NWS hourly peaks at 75°F at 3-4pm EST Feb 19. Morning rain showers clear by noon per TAF KATL (23010G20kt SW winds afternoon). Polymarket has this at 33.5¢ vs Simmer 25.1¢ — 10pp edge on Simmer. Cloud cover adds slight uncertainty.",
@@ -270,12 +270,12 @@
       "feb19"
     ],
     "createdAt": "2026-02-18T02:04:09.118Z",
-    "updatedAt": "2026-02-20T10:09:48.466Z",
-    "notes": " | Partial exit (58.9→29): Forecast 75.4°F near bin boundary | Partial exit (29→14): Forecast 75.4°F near bin boundary | RT Exit: Past peak, max only 62.6°F, below 74°F floor",
+    "updatedAt": "2026-02-20T10:13:52.167Z",
+    "notes": "Corrected via WU verification: Actual high 79°F, 74-75 bin lost",
     "result": "exit",
     "pnl": 10.416,
     "pnlPercent": 290.625,
-    "exitPrice": 1
+    "exitPrice": 0
   },
   {
     "id": "cf06b26b-189e-4e0d-a086-81867fd95fc5",
