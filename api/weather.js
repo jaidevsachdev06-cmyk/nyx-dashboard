@@ -42,6 +42,7 @@ module.exports = async (req, res) => {
       system: 'weather-v2',
       paper: true,
       timestamp: new Date().toISOString(),
+      meta: data.meta || {},
       stats: {
         totalTrades: closed.length,
         wins,
