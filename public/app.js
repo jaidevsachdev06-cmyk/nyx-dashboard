@@ -320,25 +320,31 @@ async function toggleTaskDone(id, currentStatus) {
 async function loadPolymarket() {
   try {
     const [positions, watchlist] = await Promise.all([get('/api/polymarket?type=positions'), get('/api/polymarket?type=watchlist')]);
-    // Client-side P&L (entry + current stored from our side's perspective)
+    // Client-side P&L (side-aware: NO profits when price drops, YES when rises)
     positions.forEach(p => {
-      if (p.entryPrice != null && p.currentPrice != null && p.shares) {
-        p.pnl = (p.currentPrice - p.entryPrice) * p.shares;
+      if (p.pnl != null && p.pnl !== 0) { /* keep server pnl */ }
+      else if (p.entryPrice != null && p.currentPrice != null && p.shares) {
+        const isNo = (p.side || p.position || '').toLowerCase() === 'no';
+        p.pnl = isNo
+          ? (p.entryPrice - p.currentPrice) * p.shares
+          : (p.currentPrice - p.entryPrice) * p.shares;
       } else { p.pnl = p.pnl || 0; }
     });
     const open = positions.filter(p => p.status === 'open');
     const closed = positions.filter(p => p.status !== 'open');
     const totalInvested = open.reduce((s, p) => s + ((p.entryPrice || 0) * (p.shares || 0)), 0);
-    const totalPnl = open.reduce((s, p) => s + (p.pnl || 0), 0);
-    const wins = closed.filter(p => p.status === 'closed-win').length;
-    const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
+    const totalPnl = closed.reduce((s, p) => s + (p.pnl || 0), 0) + open.reduce((s, p) => s + (p.pnl || 0), 0);
+    const wins = closed.filter(p => p.status === 'closed-win' || p.status === 'resolved-win').length;
+    const losses = closed.filter(p => p.status === 'closed-loss' || p.status === 'resolved-loss').length;
+    const scored = wins + losses;
+    const winRate = scored ? ((wins / scored) * 100).toFixed(0) : '—';
 
     const dailyPctP = totalInvested > 0 ? (totalPnl / totalInvested * 100) : 0;
     document.getElementById('poly-summary').innerHTML = `
       <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
       <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctP)}">${dailyPctP >= 0 ? '+' : ''}${dailyPctP.toFixed(1)}%</div></div>
-      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
+      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
 
     const sideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? '#22c55e' : '#ef4444'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(s||'—').toUpperCase()}</span>`;
@@ -395,17 +401,23 @@ async function deletePolyWatch(id) { await del(`/api/polymarket?type=watchlist&i
 async function loadWeatherTrades() {
   try {
     const trades = await get('/api/weather');
-    // Compute P&L client-side (entry + current stored from our side's perspective)
+    // P&L: use server pnl if set, otherwise compute client-side (side-aware)
     trades.forEach(t => {
-      if (t.entryPrice != null && t.currentPrice != null && t.shares) {
-        t.pnl = (t.currentPrice - t.entryPrice) * t.shares;
+      if (t.pnl != null && t.pnl !== 0) { /* keep server pnl */ }
+      else if (t.entryPrice != null && t.currentPrice != null && t.shares) {
+        const isNo = (t.side || '').toLowerCase() === 'no';
+        t.pnl = isNo
+          ? (t.entryPrice - t.currentPrice) * t.shares   // NO: profit when price drops
+          : (t.currentPrice - t.entryPrice) * t.shares;  // YES: profit when price rises
       } else { t.pnl = 0; }
     });
     const open = trades.filter(t => t.status === 'open');
     const closed = trades.filter(t => t.status !== 'open');
-    const totalPnl = open.reduce((s, t) => s + (t.pnl || 0), 0);
-    const wins = closed.filter(t => t.status === 'closed-win').length;
-    const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
+    const totalPnl = closed.reduce((s, t) => s + (t.pnl || 0), 0);
+    const wins = closed.filter(t => t.status === 'closed-win' || t.status === 'resolved-win').length;
+    const losses = closed.filter(t => t.status === 'closed-loss' || t.status === 'resolved-loss').length;
+    const scored = wins + losses;
+    const winRate = scored ? ((wins / scored) * 100).toFixed(0) : '—';
 
     const totalInvestedW = open.reduce((s, t) => s + ((t.entryPrice || 0) * (t.shares || 0)), 0);
 
@@ -414,7 +426,7 @@ async function loadWeatherTrades() {
       <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvestedW)}</div></div>
       <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctW)}">${dailyPctW >= 0 ? '+' : ''}${dailyPctW.toFixed(1)}%</div></div>
-      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
+      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
     loadNoaaForecasts();
 
@@ -455,13 +467,15 @@ async function loadWeatherTrades() {
       const label = t.city || t.market || 'Unknown';
       const shortLabel = label.length > 60 ? label.substring(0, 57) + '...' : label;
       const reason = t.reasoning || t.notes || 'No reasoning';
-      const isWin = t.status === 'closed-win';
+      const isWin = t.status === 'closed-win' || t.status === 'resolved-win';
+      const isLoss = t.status === 'closed-loss' || t.status === 'resolved-loss';
+      const outcomeLabel = isWin ? '✅ WIN' : isLoss ? '❌ LOSS' : '⚪ CLOSED';
       return `
       <div class="activity-item">
-        <div class="activity-dot ${isWin ? 'success' : 'error'}"></div>
+        <div class="activity-dot ${isWin ? 'success' : isLoss ? 'error' : ''}"></div>
         <div class="activity-content">
           <div class="activity-action">
-            <strong>${shortLabel}</strong> ${t.bucket || t.side || ''} — ${isWin ? '✅ WIN' : '❌ LOSS'}
+            <strong>${shortLabel}</strong> ${t.bucket || t.side || ''} — ${outcomeLabel}
             <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px">${fmtMoney(t.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
@@ -536,25 +550,31 @@ async function loadWhaleTrades() {
   try {
     const trades = await get('/api/whale');
     const all = Array.isArray(trades) ? trades : [];
-    // Client-side P&L (entry + current stored from our side's perspective)
+    // Client-side P&L (side-aware)
     all.forEach(t => {
-      if (t.entryPrice != null && t.currentPrice != null && t.shares) {
-        t.pnl = (t.currentPrice - t.entryPrice) * t.shares;
+      if (t.pnl != null && t.pnl !== 0) { /* keep server pnl */ }
+      else if (t.entryPrice != null && t.currentPrice != null && t.shares) {
+        const isNo = (t.side || '').toLowerCase() === 'no';
+        t.pnl = isNo
+          ? (t.entryPrice - t.currentPrice) * t.shares
+          : (t.currentPrice - t.entryPrice) * t.shares;
       } else { t.pnl = t.pnl || 0; }
     });
     const open = all.filter(t => t.status === 'open');
     const closed = all.filter(t => t.status !== 'open');
     const totalInvested = open.reduce((s, t) => s + ((t.entryPrice || 0) * (t.shares || 0)), 0);
-    const totalPnl = open.reduce((s, t) => s + (t.pnl || 0), 0);
-    const wins = closed.filter(t => t.status === 'closed-win').length;
-    const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
+    const totalPnl = closed.reduce((s, t) => s + (t.pnl || 0), 0) + open.reduce((s, t) => s + (t.pnl || 0), 0);
+    const wins = closed.filter(t => t.status === 'closed-win' || t.status === 'resolved-win').length;
+    const losses = closed.filter(t => t.status === 'closed-loss' || t.status === 'resolved-loss').length;
+    const scored = wins + losses;
+    const winRate = scored ? ((wins / scored) * 100).toFixed(0) : '—';
 
     const dailyPctWh = totalInvested > 0 ? (totalPnl / totalInvested * 100) : 0;
     document.getElementById('whale-summary').innerHTML = `
       <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
       <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
       <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctWh)}">${dailyPctWh >= 0 ? '+' : ''}${dailyPctWh.toFixed(1)}%</div></div>
-      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
+      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
 
     // === WHALE SCORECARD (from predicting.top live data) ===
@@ -620,7 +640,7 @@ async function loadWhaleTrades() {
         <div class="activity-dot ${t.status === 'closed-win' ? 'success' : 'error'}"></div>
         <div class="activity-content">
           <div class="activity-action">
-            <strong>${t.market}</strong> — ${t.status === 'closed-win' ? '✅ WIN' : '❌ LOSS'}
+            <strong>${t.market}</strong> — ${(t.status === 'closed-win' || t.status === 'resolved-win') ? '✅ WIN' : (t.status === 'closed-loss' || t.status === 'resolved-loss') ? '❌ LOSS' : '⚪ CLOSED'}
             <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px">${fmtMoney(t.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
