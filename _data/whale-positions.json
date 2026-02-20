@@ -402,7 +402,11 @@
     "pnlPercent": 199.99999999999994,
     "entryDate": "2026-02-18T06:55:21.197Z",
     "conditionId": "0x5599856587ed77cf40cf20608448180f6abdcc512027016bcdd68ad73fca3e9f",
-    "updatedAt": "2026-02-19T10:52:11.859Z"
+    "updatedAt": "2026-02-20T08:18:10.805Z",
+    "priceHistory": [
+      {},
+      {}
+    ]
   },
   {
     "id": "089036f1-9735-434c-be9d-5bef5574abb5",
