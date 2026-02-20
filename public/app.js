@@ -421,7 +421,29 @@ async function deletePolyWatch(id) { await del(`/api/polymarket?type=watchlist&i
 // ========== WEATHER TRADES ==========
 async function loadWeatherTrades() {
   try {
-    const trades = await get('/api/weather');
+    const raw = await get('/api/weather');
+    // v2 API returns { openPositions, recentTrades, stats, ... } — normalize
+    let trades;
+    if (Array.isArray(raw)) {
+      trades = raw;
+    } else {
+      // Map v2 openPositions to the format the frontend expects
+      const openPos = (raw.openPositions || []).map(t => ({
+        ...t, status: 'open', market: `${t.city} ${t.date} ${t.bucket}`,
+        shares: t.sizeUSDC && t.entryPrice ? Math.round(t.sizeUSDC / t.entryPrice) : 0,
+        currentPrice: t.entryPrice, pnl: 0, side: (t.side || 'YES').toLowerCase(),
+        city: t.city, bucket: t.bucket,
+        forecastConfidence: t.signal?.edge > 0.3 ? 'high' : t.signal?.edge > 0.15 ? 'medium-high' : 'medium',
+        noaaForecast: t.signal?.forecastTemp ? `${t.signal.forecastTemp.toFixed(1)}°` : '—',
+        reasoning: t.signal ? `Model: ${(t.signal.modelProb*100).toFixed(0)}% vs Market: ${(t.signal.impliedProb*100).toFixed(0)}% | Edge: ${(t.signal.edge*100).toFixed(0)}%` : '',
+      }));
+      const closedPos = (raw.recentTrades || []).map(t => ({
+        ...t, status: t.result === 'win' ? 'closed-win' : 'closed-loss',
+        market: `${t.city} ${t.date} ${t.bucket}`, pnl: t.pnlUSDC || 0,
+        shares: t.sizeUSDC && t.entryPrice ? Math.round(t.sizeUSDC / t.entryPrice) : 0,
+      }));
+      trades = [...openPos, ...closedPos];
+    }
     trades.forEach(t => {
       if (t.pnl != null && t.pnl !== 0) { /* keep server pnl */ }
       else if (t.entryPrice != null && t.currentPrice != null && t.shares) {
