@@ -543,7 +543,7 @@
     "market": "Will the highest temperature in Miami be between 82-83°F on February 19?",
     "side": "no",
     "entryPrice": 0.545,
-    "currentPrice": 0.545,
+    "currentPrice": 1,
     "shares": 5,
     "status": "closed-win",
     "source": "polymarket-paper",
@@ -551,9 +551,10 @@
     "conditionId": "0xfe5f87e00dcc623a4576bab52234de2fd830e3013e81157b20e4de0e87c0c4cc",
     "notes": "edge=0.35, kelly=5.0%, p_model=0.89, p_mkt=0.545, forecast=80.1°F | Partial exit (45.8→22): Forecast 82.8° near bin boundary | Partial exit (22→11): Forecast 82.7° near bin boundary | Partial exit (11→5): Forecast 82.7° near bin boundary",
     "createdAt": "2026-02-19T13:10:25.614Z",
-    "updatedAt": "2026-02-20T02:09:59.591Z",
+    "updatedAt": "2026-02-20T10:10:04.378Z",
     "result": "NO wins — max 81°F, never hit 82°F floor",
-    "pnl": 4.5
+    "pnl": 4.5,
+    "exitPrice": 1
   },
   {
     "id": "56a57fb0-e02a-460b-8dfe-1dbc0dbf9815",
