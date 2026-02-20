@@ -1118,5 +1118,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T08:36:34.772Z"
+  },
+  {
+    "id": "8eecd089-fe04-4e46-b797-8fb6c40fe550",
+    "market": "US strikes Iran by March 31, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.605,
+    "currentPrice": 0.605,
+    "shares": 8.3,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Mombil, Roflan",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 83.3,
+    "avgWinRate": 65.3,
+    "reasoning": "Consensus: 3 whales (avg score 83.3, WR 65.3%) Yes. bet=$5.02, shares=8.3. Whales: Car, Mombil, Roflan",
+    "endDate": "2026-06-30",
+    "conditionId": "0x4b02efe53e631ada84681303fd66d79ad615f3d2b6a28b4633d43d935f89af58",
+    "createdAt": "2026-02-20T08:36:39.875Z",
+    "invested": 5.0215000000000005,
+    "currentValue": 5.0215000000000005,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T08:36:39.875Z"
   }
 ]
