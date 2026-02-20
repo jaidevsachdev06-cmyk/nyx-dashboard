@@ -211,7 +211,11 @@
     "reasoning": "DHS shutdown unlikely to last 30+ days. Hedging DHS YES.",
     "conditionId": "0xbbe335576024805eab8f9da0aeb2f59db740605c6d314a8d861b100fa57fcfca",
     "ep": "polymarket",
-    "updatedAt": "2026-02-19T23:00:09.954Z"
+    "updatedAt": "2026-02-20T08:16:49.909Z",
+    "priceHistory": [
+      {},
+      {}
+    ]
   },
   {
     "id": "5375744c-3c05-49d2-b863-ac20a5054fc5",
