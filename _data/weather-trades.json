@@ -364,12 +364,13 @@
     "status": "closed-loss",
     "source": "polymarket-paper",
     "date": "2026-02-19",
-    "notes": "edge=0.38, kelly=5.0%, p_model=0.56, p_mkt=0.185, forecast=9.6°C",
+    "notes": "Lost: Paris hit exactly 10°C. conditionId is WRONG (points to Biden market). E014.",
     "createdAt": "2026-02-19T01:10:06.316Z",
     "updatedAt": "2026-02-20T02:10:01.232Z",
     "conditionId": "0xd00d8eb54544e0e79730269d6d356eb6523f1b6936080fe4b4d63bf9ebf87430",
     "result": "NO loses — actual hit exactly 10°C, threshold met",
-    "pnl": -24.98
+    "pnl": -24.98,
+    "pnlPercent": -100
   },
   {
     "id": "070ae003-00ea-4718-8a95-c574fbffcff0",
