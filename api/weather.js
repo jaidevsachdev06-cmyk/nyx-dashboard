@@ -60,8 +60,13 @@ module.exports = async (req, res) => {
         bucket: t.bucket,
         side: t.side,
         entryPrice: t.entryPrice,
+        currentPrice: t.currentPrice ?? t.entryPrice,
         sizeUSDC: t.sizeUSDC,
-        signal: t.signal
+        pnlUSDC: t.pnlUSDC ?? 0,
+        signal: t.signal,
+        conditionId: t.conditionId,
+        tokenId: t.tokenId,
+        updatedAt: t.updatedAt
       })),
       recentTrades: closed
         .sort((a, b) => (b.closedAt || '').localeCompare(a.closedAt || ''))

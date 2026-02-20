@@ -596,8 +596,10 @@ async function loadWeatherTrades() {
       // Map v2 openPositions to the format the frontend expects
       const openPos = (raw.openPositions || []).map(t => ({
         ...t, status: 'open', market: `${t.city} ${t.date} ${t.bucket}`,
-        shares: t.sizeUSDC && t.entryPrice ? Math.round(t.sizeUSDC / t.entryPrice) : 0,
-        currentPrice: t.entryPrice, pnl: 0, side: (t.side || 'YES').toLowerCase(),
+        shares: t.sizeUSDC && t.entryPrice ? t.sizeUSDC / t.entryPrice : 0,
+        currentPrice: t.currentPrice ?? t.entryPrice,
+        pnl: t.pnlUSDC ?? 0,
+        side: (t.side || 'YES').toLowerCase(),
         city: t.city, bucket: t.bucket,
         forecastConfidence: t.signal?.edge > 0.3 ? 'high' : t.signal?.edge > 0.15 ? 'medium-high' : 'medium',
         noaaForecast: t.signal?.forecastTemp ? `${t.signal.forecastTemp.toFixed(1)}°` : '—',
