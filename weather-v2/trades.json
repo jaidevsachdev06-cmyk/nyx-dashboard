@@ -220,9 +220,9 @@
       "bucket": "10°C",
       "question": "Will the highest temperature in Paris be 10°C on February 20?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 14.85,
       "createdAt": "2026-02-20T11:19:55.018Z",
       "signal": {
         "forecastTemp": 10.7,
@@ -236,7 +236,11 @@
       "sizeUSDC": 12.15,
       "enteredAt": "2026-02-20T11:19:55.019Z",
       "orderId": "paper-mlussqyz-11d9",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-20T15:59:14.081Z",
+      "closedAt": "2026-02-20T15:59:14.083Z"
     },
     {
       "id": "oc-mlussqz0-epq21t",
@@ -473,7 +477,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-20T11:19:55.033Z",
+    "lastUpdated": "2026-02-20T15:59:14.084Z",
     "lastPriceSync": "2026-02-20T15:46:30.668Z"
   }
 }
