@@ -1103,7 +1103,7 @@
     "market": "Will Matt Mahan win the California Governor Election in 2026?",
     "side": "No",
     "entryPrice": 0.8049999999999999,
-    "currentPrice": 0.8049999999999999,
+    "currentPrice": 0.81,
     "shares": 6.19,
     "status": "open",
     "source": "consensus-scanner",
@@ -1117,15 +1117,15 @@
     "conditionId": "0x58b0474e74a03480c439d50e13dd0b75146c3596e5a475f95e70035c90cee4ca",
     "createdAt": "2026-02-20T08:36:24.645Z",
     "invested": 4.98295,
-    "currentValue": 4.98295,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 5.0139000000000005,
+    "pnl": 0.0309500000000007,
+    "pnlPercent": 0.6211180124223743,
     "entryDate": "2026-02-20T08:36:24.645Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-20T18:32:19.594Z"
+    "updatedAt": "2026-02-20T19:02:20.126Z"
   },
   {
     "id": "5d4c9b99-c232-4435-bc54-e1a084f33369",
