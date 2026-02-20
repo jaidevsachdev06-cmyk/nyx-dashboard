@@ -225,9 +225,9 @@
     "currentPrice": 0.9295,
     "shares": 10.81,
     "invested": 9.999250000000002,
-    "currentValue": 9.999250000000002,
-    "pnl": 0.048644999999999446,
-    "pnlPercent": 0.4864864864864809,
+    "currentValue": 10.047895,
+    "pnl": 0.04864499999999872,
+    "pnlPercent": 0.4864864864864735,
     "status": "open",
     "notes": "CME FedWatch 97% no change. Near-certain.",
     "tags": [
@@ -239,6 +239,11 @@
     "entryDate": "2026-02-17T07:12:35.729Z",
     "side": "Yes",
     "reasoning": "Fed holds rates in March. Strong consensus.",
-    "conditionId": "0x257b18205f908aef01ef2d1d50e6fea7d29cf5486fe04031d8b101394476faed"
+    "conditionId": "0x257b18205f908aef01ef2d1d50e6fea7d29cf5486fe04031d8b101394476faed",
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-02-20T08:16:54.322Z"
   }
 ]
