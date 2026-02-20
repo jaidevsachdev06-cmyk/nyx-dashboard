@@ -602,5 +602,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T03:12:48.835Z"
+  },
+  {
+    "id": "52d59b72-5507-4011-89e5-10575ad22180",
+    "market": "Will the Iranian regime fall before 2027?",
+    "side": "No",
+    "entryPrice": 0.385,
+    "currentPrice": 0.385,
+    "shares": 28.65,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Anjun, Car, Roflan, kekkone, archaic",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 88.6,
+    "avgWinRate": 71.7,
+    "reasoning": "Consensus: 5 whales (avg score 88.6, avg WR 71.7%) on No. tier=2%, wrScale=1.10, bet=$11.03, shares=28.65. Whales: Anjun, Car, Roflan, kekkone, archaic",
+    "endDate": "2026-12-31",
+    "conditionId": "",
+    "createdAt": "2026-02-20T04:01:20.222Z",
+    "invested": 11.03025,
+    "currentValue": 11.03025,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T04:01:20.223Z"
   }
 ]
