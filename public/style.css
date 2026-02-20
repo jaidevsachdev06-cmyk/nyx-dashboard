@@ -364,6 +364,95 @@ h3.sub-title {
 .quick-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
 
 /* ========== RESPONSIVE ========== */
+/* ========== POLYMARKET OVERVIEW ========== */
+.poly-overview { margin-bottom: 8px; }
+
+.overview-summary-row {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 28px;
+}
+.overview-card {
+  background: rgba(15,15,20,0.8); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius);
+  padding: 20px 22px; position: relative; overflow: hidden; transition: all .25s;
+}
+.overview-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+.overview-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.overview-card.border-green::before { background: #22c55e; }
+.overview-card.border-blue::before { background: #3b82f6; }
+.overview-card.border-red::before { background: #ef4444; }
+.overview-card.border-yellow::before { background: #eab308; }
+.overview-card.border-white::before { background: rgba(255,255,255,0.4); }
+.overview-card .ov-label {
+  font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.2px;
+  margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 8px;
+}
+.overview-card .ov-value {
+  font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 700;
+}
+.overview-card .ov-sub { font-size: 11px; color: var(--text-dim); margin-top: 6px; }
+.overview-card .ov-badge {
+  font-size: 10px; padding: 2px 8px; border-radius: 8px;
+  background: rgba(255,255,255,0.06); color: var(--text-dim); font-weight: 600;
+}
+
+/* Win rate circular indicator */
+.win-rate-circle {
+  width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: var(--text);
+  margin-bottom: 4px;
+}
+
+/* Strategy Leaderboard */
+.leaderboard-wrap { background: rgba(15,15,20,0.8); }
+.leaderboard-wrap table td { padding: 14px 16px; }
+.strategy-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 10px; flex-shrink: 0; }
+.strategy-dot.mirror { background: #a855f7; box-shadow: 0 0 8px rgba(168,85,247,0.3); }
+.strategy-dot.monsoon { background: #14b8a6; box-shadow: 0 0 8px rgba(20,184,166,0.3); }
+.strategy-dot.paper { background: #3b82f6; box-shadow: 0 0 8px rgba(59,130,246,0.3); }
+.status-pill {
+  font-size: 10px; padding: 3px 10px; border-radius: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.status-pill.active { background: rgba(34,197,94,0.12); color: #22c55e; }
+.status-pill.disabled { background: rgba(239,68,68,0.12); color: #ef4444; }
+.wr-bar { width: 120px; height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; display: inline-block; vertical-align: middle; margin-left: 8px; }
+.wr-bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+.wr-bar-fill.wr-green { background: #22c55e; }
+.wr-bar-fill.wr-yellow { background: #eab308; }
+.wr-bar-fill.wr-red { background: #ef4444; }
+.score-val { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; }
+.score-green { color: #22c55e; }
+.score-yellow { color: #eab308; }
+.score-red { color: #ef4444; }
+
+/* P&L by Strategy cards */
+.pnl-strategy-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px; }
+.pnl-strat-card {
+  background: rgba(15,15,20,0.8); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius); padding: 20px; position: relative; overflow: hidden;
+}
+.pnl-strat-card .psc-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; font-weight: 600; }
+.pnl-strat-card .psc-value { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+.pnl-strat-card .psc-bar { height: 4px; border-radius: 2px; width: 100%; }
+
+/* P&L History */
+.pnl-history-wrap {
+  background: rgba(15,15,20,0.8); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius); margin-bottom: 28px;
+}
+.pnl-history { display: flex; align-items: flex-end; gap: 4px; height: 120px; padding: 16px; }
+.pnl-bar { flex: 1; min-width: 8px; border-radius: 2px 2px 0 0; transition: height 0.3s; }
+.pnl-bar.win { background: #22c55e; }
+.pnl-bar.loss { background: #ef4444; }
+
+/* Side pills for sub-tab tables */
+.side-pill {
+  display: inline-block; padding: 3px 10px; border-radius: 8px; font-size: 11px; font-weight: 700;
+}
+.side-pill.yes { background: rgba(34,197,94,0.15); color: #22c55e; }
+.side-pill.no { background: rgba(239,68,68,0.15); color: #ef4444; }
+
 @media (max-width: 768px) {
   .sidebar { transform: translateX(-100%); width: 260px; }
   .sidebar.open { transform: translateX(0); }
@@ -372,6 +461,8 @@ h3.sub-title {
   .top-header { left: 0; padding: 0 16px; }
   .card-grid { grid-template-columns: 1fr; }
   .summary-cards { grid-template-columns: 1fr 1fr; }
+  .overview-summary-row { grid-template-columns: 1fr 1fr; }
+  .pnl-strategy-cards { grid-template-columns: 1fr; }
   .city-grid { grid-template-columns: 1fr 1fr; }
   .kanban { grid-template-columns: 1fr; }
   .section-header { flex-direction: column; align-items: flex-start; gap: 12px; }

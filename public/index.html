@@ -110,8 +110,29 @@
             <button class="btn btn-primary" onclick="showModal('poly-position')">+ Add Position</button>
           </div>
 
+          <!-- Overview (always visible) -->
+          <div class="poly-overview">
+            <div class="overview-summary-row" id="poly-overview-cards"></div>
+
+            <h2 class="section-title">📋 Strategy Leaderboard</h2>
+            <div class="table-wrap leaderboard-wrap">
+              <table id="strategy-leaderboard">
+                <thead><tr><th>#</th><th>Strategy</th><th>Status</th><th>Trades</th><th>Win Rate</th><th>P&L</th><th>Last Run</th><th>Score</th></tr></thead>
+                <tbody id="strategy-leaderboard-body"></tbody>
+              </table>
+            </div>
+
+            <h2 class="section-title">💰 P&L by Strategy</h2>
+            <div class="pnl-strategy-cards" id="pnl-by-strategy"></div>
+
+            <h2 class="section-title">📊 P&L History</h2>
+            <div class="pnl-history-wrap">
+              <div class="pnl-history" id="pnl-history-chart"></div>
+            </div>
+          </div>
+
           <!-- Sub-Tab Navigation -->
-          <div class="sub-tabs" id="poly-sub-tabs">
+          <div class="sub-tabs" id="poly-sub-tabs" style="margin-top:28px">
             <button class="sub-tab active" data-tab="paper" onclick="switchPolyTab('paper')">
               <span class="tab-icon">📄</span> Paper Portfolio
             </button>
@@ -125,7 +146,7 @@
 
           <!-- TAB 1: Paper Portfolio -->
           <div class="sub-tab-panel active" id="poly-tab-paper">
-            <div class="summary-cards" id="poly-summary"></div>
+            <div class="summary-cards" id="poly-summary" style="display:none"></div>
             <h2 class="section-title">Open Positions</h2>
             <div class="table-wrap"><table id="poly-open-table"><thead><tr><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th><th>P&L</th><th></th></tr></thead><tbody></tbody></table></div>
             <h3 class="sub-title">Trade Log</h3>

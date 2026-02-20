@@ -91,6 +91,155 @@ function switchPolyTab(tab) {
   document.querySelectorAll('.sub-tab-panel').forEach(p => p.classList.toggle('active', p.id === `poly-tab-${tab}`));
 }
 
+// ========== POLY OVERVIEW ==========
+let _polyData = { paper: null, weather: null, whale: null };
+
+function computeStrategyStats(positions, strategyName) {
+  if (!positions || !positions.length) return { open: 0, closed: 0, wins: 0, losses: 0, totalPnl: 0, realizedPnl: 0, unrealizedPnl: 0, deployed: 0, winRate: 0, avgPnl: 0, lastRun: null, trades: [] };
+  positions.forEach(p => {
+    if (p.pnl == null || p.pnl === 0) {
+      if (p.entryPrice != null && p.currentPrice != null && p.shares) {
+        const isNo = (p.side || p.position || '').toLowerCase() === 'no';
+        p.pnl = isNo ? (p.entryPrice - p.currentPrice) * p.shares : (p.currentPrice - p.entryPrice) * p.shares;
+      } else p.pnl = 0;
+    }
+  });
+  const open = positions.filter(p => p.status === 'open');
+  const closed = positions.filter(p => p.status !== 'open');
+  const wins = closed.filter(p => /win/.test(p.status)).length;
+  const losses = closed.filter(p => /loss/.test(p.status)).length;
+  const scored = wins + losses;
+  const realizedPnl = closed.reduce((s, p) => s + (p.pnl || 0), 0);
+  const unrealizedPnl = open.reduce((s, p) => s + (p.pnl || 0), 0);
+  const deployed = open.reduce((s, p) => s + ((p.entryPrice || 0) * (p.shares || 0)), 0);
+  const timestamps = positions.map(p => p.updatedAt || p.createdAt).filter(Boolean).sort().reverse();
+  return {
+    open: open.length, closed: closed.length, wins, losses, scored,
+    totalPnl: realizedPnl + unrealizedPnl, realizedPnl, unrealizedPnl,
+    deployed, winRate: scored ? (wins / scored * 100) : 0,
+    avgPnl: scored ? realizedPnl / scored : 0,
+    lastRun: timestamps[0] || null,
+    closedTrades: closed
+  };
+}
+
+function renderPolyOverview() {
+  const paperStats = computeStrategyStats(_polyData.paper || [], 'Paper');
+  const weatherStats = computeStrategyStats(_polyData.weather || [], 'Weather');
+  const whaleStats = computeStrategyStats(_polyData.whale || [], 'Whale');
+
+  const bankroll = 500;
+  const totalDeployed = paperStats.deployed + weatherStats.deployed + whaleStats.deployed;
+  const totalOpenPos = paperStats.open + weatherStats.open + whaleStats.open;
+  const totalPnl = paperStats.totalPnl + weatherStats.totalPnl + whaleStats.totalPnl;
+  const totalReal = paperStats.realizedPnl + weatherStats.realizedPnl + whaleStats.realizedPnl;
+  const totalUnreal = paperStats.unrealizedPnl + weatherStats.unrealizedPnl + whaleStats.unrealizedPnl;
+  const totalWins = paperStats.wins + weatherStats.wins + whaleStats.wins;
+  const totalLosses = paperStats.losses + weatherStats.losses + whaleStats.losses;
+  const totalScored = totalWins + totalLosses;
+  const overallWinRate = totalScored ? (totalWins / totalScored * 100) : 0;
+  const totalTrades = (paperStats.closed + paperStats.open) + (weatherStats.closed + weatherStats.open) + (whaleStats.closed + whaleStats.open);
+  const totalClosed = paperStats.closed + weatherStats.closed + whaleStats.closed;
+  const avgPnl = totalClosed ? totalReal / totalClosed : 0;
+
+  const pnlColor = n => n >= 0 ? '#22c55e' : '#ef4444';
+  const pnlBorder = totalPnl >= 0 ? 'border-green' : 'border-red';
+  const avgBorder = avgPnl >= 0 ? 'border-green' : 'border-red';
+
+  // Win rate conic gradient
+  const wrPct = Math.round(overallWinRate);
+  const wrColor = wrPct > 55 ? '#22c55e' : wrPct >= 45 ? '#eab308' : '#ef4444';
+
+  document.getElementById('poly-overview-cards').innerHTML = `
+    <div class="overview-card border-green">
+      <div class="ov-label">Balance <span class="ov-badge">📄 Paper</span></div>
+      <div class="ov-value" style="color:#22c55e">${fmtMoney(bankroll + totalPnl)}</div>
+      <div class="ov-sub">$${bankroll} bankroll</div>
+    </div>
+    <div class="overview-card border-blue">
+      <div class="ov-label">Deployed</div>
+      <div class="ov-value">${fmtMoney(totalDeployed)}</div>
+      <div class="ov-sub">${totalOpenPos} open positions</div>
+    </div>
+    <div class="overview-card ${pnlBorder}">
+      <div class="ov-label">Total P&L</div>
+      <div class="ov-value" style="color:${pnlColor(totalPnl)}">${fmtMoney(totalPnl)}</div>
+      <div class="ov-sub">Real: <span style="color:${pnlColor(totalReal)}">${fmtMoney(totalReal)}</span> · Unreal: <span style="color:${pnlColor(totalUnreal)}">${fmtMoney(totalUnreal)}</span></div>
+    </div>
+    <div class="overview-card border-yellow">
+      <div class="ov-label">Win Rate</div>
+      <div class="win-rate-circle" style="background:conic-gradient(${wrColor} ${wrPct}%, rgba(255,255,255,0.08) ${wrPct}%)">${wrPct}%</div>
+      <div class="ov-sub">${totalWins}W / ${totalLosses}L</div>
+    </div>
+    <div class="overview-card border-white">
+      <div class="ov-label">Total Trades</div>
+      <div class="ov-value">${totalTrades}</div>
+      <div class="ov-sub">${totalClosed} closed</div>
+    </div>
+    <div class="overview-card ${avgBorder}">
+      <div class="ov-label">Avg P&L</div>
+      <div class="ov-value" style="color:${pnlColor(avgPnl)}">${fmtMoney(avgPnl)}</div>
+      <div class="ov-sub">per closed trade</div>
+    </div>
+  `;
+
+  // Strategy Leaderboard
+  const strategies = [
+    { key: 'whale', name: '🐋 Mirror', dotClass: 'mirror', stats: whaleStats, active: true },
+    { key: 'weather', name: '🌡️ Monsoon', dotClass: 'monsoon', stats: weatherStats, active: true },
+    { key: 'paper', name: '📊 Paper', dotClass: 'paper', stats: paperStats, active: true },
+  ];
+
+  document.getElementById('strategy-leaderboard-body').innerHTML = strategies.map((s, i) => {
+    const st = s.stats;
+    const wr = st.winRate.toFixed(0);
+    const wrBarClass = wr > 55 ? 'wr-green' : wr >= 45 ? 'wr-yellow' : 'wr-red';
+    const consistency = st.scored ? Math.min(100, st.scored * 5) : 0; // rough consistency proxy
+    const score = Math.round((st.winRate / 100) * consistency);
+    const scoreClass = score > 70 ? 'score-green' : score >= 50 ? 'score-yellow' : 'score-red';
+    return `<tr>
+      <td class="mono">${i + 1}</td>
+      <td><span class="strategy-dot ${s.dotClass}"></span><strong>${s.name}</strong></td>
+      <td><span class="status-pill ${s.active ? 'active' : 'disabled'}">${s.active ? 'Active' : 'Disabled'}</span></td>
+      <td class="mono">${st.open + st.closed}</td>
+      <td class="mono">${wr}% <span class="wr-bar"><span class="wr-bar-fill ${wrBarClass}" style="width:${wr}%"></span></span></td>
+      <td class="mono ${pnlClass(st.totalPnl)}" style="font-weight:700">${fmtMoney(st.totalPnl)}</td>
+      <td>${st.lastRun ? timeAgo(st.lastRun) : '—'}</td>
+      <td><span class="score-val ${scoreClass}">${score}</span></td>
+    </tr>`;
+  }).join('');
+
+  // P&L by Strategy
+  document.getElementById('pnl-by-strategy').innerHTML = strategies.map(s => {
+    const pnl = s.stats.totalPnl;
+    const barColor = pnl >= 0 ? '#22c55e' : '#ef4444';
+    return `<div class="pnl-strat-card">
+      <div class="psc-header"><span class="strategy-dot ${s.dotClass}"></span>${s.name}</div>
+      <div class="psc-value" style="color:${pnlColor(pnl)}">${fmtMoney(pnl)}</div>
+      <div class="psc-bar" style="background:${barColor}"></div>
+    </div>`;
+  }).join('');
+
+  // P&L History - last 20 closed trades across all strategies
+  const allClosed = [
+    ...(paperStats.closedTrades || []).map(t => ({ ...t, strategy: 'paper' })),
+    ...(weatherStats.closedTrades || []).map(t => ({ ...t, strategy: 'weather' })),
+    ...(whaleStats.closedTrades || []).map(t => ({ ...t, strategy: 'whale' })),
+  ].sort((a, b) => new Date(a.updatedAt || a.createdAt || 0) - new Date(b.updatedAt || b.createdAt || 0)).slice(-20);
+
+  const chart = document.getElementById('pnl-history-chart');
+  if (allClosed.length === 0) {
+    chart.innerHTML = '<div style="color:var(--text-dim);display:flex;align-items:center;justify-content:center;height:100%;font-size:13px">No closed trades yet</div>';
+  } else {
+    const maxAbs = Math.max(...allClosed.map(t => Math.abs(t.pnl || 0)), 1);
+    chart.innerHTML = allClosed.map(t => {
+      const isWin = (t.pnl || 0) >= 0;
+      const h = Math.max(4, Math.round((Math.abs(t.pnl || 0) / maxAbs) * 100));
+      return `<div class="pnl-bar ${isWin ? 'win' : 'loss'}" style="height:${h}px" title="${fmtMoney(t.pnl)}"></div>`;
+    }).join('');
+  }
+}
+
 // ========== HELPERS ==========
 function timeAgo(ts) {
   if (!ts) return '—';
@@ -369,7 +518,9 @@ async function loadPolymarket() {
       <div class="summary-card poly-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
 
-    const sideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? 'var(--green)' : 'var(--red)'};color:#000;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700">${(s||'—').toUpperCase()}</span>`;
+    _polyData.paper = positions;
+
+    const sideBadge = s => `<span class="side-pill ${(s||'').toLowerCase() === 'yes' ? 'yes' : 'no'}">${(s||'—').toUpperCase()}</span>`;
 
     document.querySelector('#poly-open-table tbody').innerHTML = open.map(p => `<tr>
       <td style="max-width:250px"><a href="${p.marketUrl || '#'}" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">${p.market || ''}</a></td>
@@ -470,6 +621,7 @@ async function loadWeatherTrades() {
       <div class="summary-card weather-card ${pnlCardClass}"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctW)}">${dailyPctW >= 0 ? '+' : ''}${dailyPctW.toFixed(1)}%</div></div>
       <div class="summary-card weather-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
+    _polyData.weather = trades;
     loadNoaaForecasts(open);
 
     const confBadge = c => {
@@ -628,6 +780,8 @@ async function loadWhaleTrades() {
       <div class="summary-card whale-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
 
+    _polyData.whale = all;
+    renderPolyOverview();
     loadWhaleScorecard();
 
     // Consensus
