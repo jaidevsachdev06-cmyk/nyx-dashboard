@@ -8,7 +8,7 @@
     "side": "yes",
     "bucket": "76-77°F",
     "entryPrice": 0.115,
-    "currentPrice": 0,
+    "currentPrice": 1,
     "shares": 86.3,
     "status": "closed-win",
     "noaaForecast": "77°F",
@@ -23,10 +23,11 @@
       "miami"
     ],
     "createdAt": "2026-02-17T08:28:40.142Z",
-    "updatedAt": "2026-02-18T23:02:54.990Z",
+    "updatedAt": "2026-02-20T10:09:37.582Z",
     "result": "loss",
     "pnl": 76.3755,
-    "pnlPercent": 769.5652173913044
+    "pnlPercent": 769.5652173913044,
+    "exitPrice": 1
   },
   {
     "id": "42ea2859-d865-499f-a195-35e90538442d",
