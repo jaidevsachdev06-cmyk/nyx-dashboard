@@ -642,13 +642,14 @@
     "avgWinRate": 68.8,
     "reasoning": "Consensus: 4 whales (avg score 83.8, avg WR 68.8%) on Yes. Whales: elucidate, Ozi, Car, GollumGekko",
     "endDate": "2026-07-31",
-    "conditionId": "",
+    "conditionId": "0x807a5bd3d52942c2d8b58bf71a583d4aa03a637f3fd9ff7a7c4a1ad818003067",
     "createdAt": "2026-02-19T16:02:51.025Z",
     "invested": 6.35,
     "currentValue": 6.35,
     "pnl": 0,
     "pnlPercent": 0,
-    "entryDate": "2026-02-19T16:02:51.025Z"
+    "entryDate": "2026-02-19T16:02:51.025Z",
+    "updatedAt": "2026-02-20T02:21:25.998Z"
   },
   {
     "id": "def3541e-711c-47e6-aab9-ff359a8abd0d",
