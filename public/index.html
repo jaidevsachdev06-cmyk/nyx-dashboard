@@ -25,6 +25,20 @@
   <!-- Main App -->
   <div id="app">
     <button class="hamburger" id="hamburger">☰</button>
+
+    <!-- Top Header Bar -->
+    <div class="top-header">
+      <div class="header-left">
+        <span style="font-weight:700;color:var(--text)">Nyx</span>
+        <span style="color:var(--text-muted)">·</span>
+        <span id="header-section-label">Dashboard</span>
+      </div>
+      <div class="header-right">
+        <div class="refresh-indicator"><span class="dot"></span> <span id="last-refreshed">—</span></div>
+        <div class="clock" id="header-clock">--:--</div>
+      </div>
+    </div>
+
     <div class="layout">
       <nav class="sidebar" id="sidebar">
         <div class="sidebar-logo"><span>🌑</span> Nyx</div>
@@ -47,9 +61,9 @@
             <button class="btn btn-primary" onclick="showModal('task')">+ Add Task</button>
             <button class="btn" onclick="showModal('activity')">+ Log Activity</button>
           </div>
-          <h2 style="font-size:16px;margin-bottom:12px">Recent Activity</h2>
+          <h2 class="section-title">Recent Activity</h2>
           <div class="activity-feed" id="dash-activity"></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">Agent Status</h2>
+          <h2 class="section-title" style="margin-top:28px">Agent Status</h2>
           <div class="card-grid" id="dash-agents"></div>
         </div>
 
@@ -59,7 +73,6 @@
             <div><h1>🏢 The Office</h1><div class="subtitle">Sub-agent management</div></div>
             <button class="btn btn-primary" onclick="showModal('agent')">+ Add Agent</button>
           </div>
-          <!-- Office Floor -->
           <div class="office-wrapper">
             <div class="office-floor" id="office-floor"></div>
             <div class="office-activity">
@@ -67,8 +80,7 @@
               <div class="activity-feed" id="agents-activity-side"></div>
             </div>
           </div>
-          <!-- Agent Breakdown -->
-          <h2 style="font-size:16px;margin:28px 0 14px;display:flex;align-items:center;gap:8px">🔍 Agent Breakdown</h2>
+          <h2 class="section-title">🔍 Agent Breakdown</h2>
           <div class="agent-breakdown" id="agents-breakdown"></div>
         </div>
 
@@ -81,59 +93,81 @@
               <button class="btn" onclick="showModal('schedule')">+ Add Class</button>
             </div>
           </div>
-          <h2 style="font-size:16px;margin-bottom:12px">📋 Upcoming Checklist</h2>
+          <h2 class="section-title">📋 Upcoming Checklist</h2>
           <div id="school-checklist"></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">Kanban</h2>
+          <h2 class="section-title">Kanban</h2>
           <div class="kanban" id="school-kanban"></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">Weekly Schedule</h2>
+          <h2 class="section-title">Weekly Schedule</h2>
           <div id="school-schedule"></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">💼 Internships — Cover Letters</h2>
+          <h2 class="section-title">💼 Internships — Cover Letters</h2>
           <div id="internship-cards"></div>
         </div>
 
-        <!-- Polymarket Section -->
+        <!-- Polymarket Section (with sub-tabs) -->
         <div class="section" id="sec-polymarket">
           <div class="section-header">
-            <div><h1>Polymarket</h1><div class="subtitle">Prediction market positions</div></div>
+            <div><h1>Polymarket</h1><div class="subtitle">Prediction market positions & strategies</div></div>
             <button class="btn btn-primary" onclick="showModal('poly-position')">+ Add Position</button>
           </div>
-          <div class="summary-cards" id="poly-summary"></div>
-          <h2 style="font-size:16px;margin-bottom:12px">Open Positions</h2>
-          <div class="table-wrap"><table id="poly-open-table"><thead><tr><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th><th>P&L</th><th></th></tr></thead><tbody></tbody></table></div>
-          <h3 style="font-size:14px;margin:16px 0 8px">Trade Log</h3>
-          <div class="activity-feed" id="poly-trade-log"></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">Watchlist</h2>
-          <div class="table-wrap"><table id="poly-watch-table"><thead><tr><th>Market</th><th>Current</th><th>Target Entry</th><th>Notes</th><th></th></tr></thead><tbody></tbody></table></div>
 
-          <h2 style="font-size:16px;margin:24px 0 12px">🌡️ Weather Trading</h2>
-          <div class="summary-cards" id="weather-summary"></div>
-          <div style="display:flex;gap:8px;margin-bottom:12px">
-            <button class="btn btn-primary" onclick="scanWeatherMarkets()">🔍 Scan Markets</button>
-            <button class="btn" onclick="showModal('weather-trade')">+ Manual Trade</button>
+          <!-- Sub-Tab Navigation -->
+          <div class="sub-tabs" id="poly-sub-tabs">
+            <button class="sub-tab active" data-tab="paper" onclick="switchPolyTab('paper')">
+              <span class="tab-icon">📄</span> Paper Portfolio
+            </button>
+            <button class="sub-tab" data-tab="weather" onclick="switchPolyTab('weather')">
+              <span class="tab-icon">🌡️</span> Weather Trading
+            </button>
+            <button class="sub-tab" data-tab="whales" onclick="switchPolyTab('whales')">
+              <span class="tab-icon">🐋</span> Whale Copytrading
+            </button>
           </div>
-          <h3 style="font-size:14px;margin-bottom:8px">Active Weather Positions</h3>
-          <div class="table-wrap"><table id="weather-open-table"><thead><tr><th>City</th><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>NOAA Forecast</th><th>Shares</th><th>P&L</th><th></th></tr></thead><tbody></tbody></table></div>
-          <h3 style="font-size:14px;margin:16px 0 8px">Trade Log</h3>
-          <div class="activity-feed" id="weather-trade-log"></div>
-          <h3 style="font-size:14px;margin:16px 0 8px">Available Weather Markets</h3>
-          <div class="table-wrap"><table id="weather-scan-table"><thead><tr><th>Market</th><th>Current Price</th><th>Divergence</th><th>Resolves</th><th>Volume 24h</th><th></th></tr></thead><tbody></tbody></table></div>
 
-          <h3 style="font-size:14px;margin:16px 0 8px">📡 NOAA Forecasts (Tier 1)</h3>
-          <div class="card-grid" id="noaa-forecasts"><div style="color:var(--text-dim);padding:12px">Loading forecasts...</div></div>
+          <!-- TAB 1: Paper Portfolio -->
+          <div class="sub-tab-panel active" id="poly-tab-paper">
+            <div class="summary-cards" id="poly-summary"></div>
+            <h2 class="section-title">Open Positions</h2>
+            <div class="table-wrap"><table id="poly-open-table"><thead><tr><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th><th>P&L</th><th></th></tr></thead><tbody></tbody></table></div>
+            <h3 class="sub-title">Trade Log</h3>
+            <div class="activity-feed" id="poly-trade-log"></div>
+            <h2 class="section-title">Watchlist</h2>
+            <div class="table-wrap"><table id="poly-watch-table"><thead><tr><th>Market</th><th>Current</th><th>Target Entry</th><th>Notes</th><th></th></tr></thead><tbody></tbody></table></div>
+          </div>
 
-          <h2 style="font-size:16px;margin:24px 0 12px">🐋 Whale Copytrading</h2>
-          <div class="summary-cards" id="whale-summary"></div>
+          <!-- TAB 2: Weather Trading -->
+          <div class="sub-tab-panel" id="poly-tab-weather">
+            <div class="summary-cards" id="weather-summary"></div>
+            <div style="display:flex;gap:8px;margin-bottom:16px">
+              <button class="btn btn-primary" onclick="scanWeatherMarkets()">🔍 Scan Markets</button>
+              <button class="btn" onclick="showModal('weather-trade')">+ Manual Trade</button>
+            </div>
 
-          <h3 style="font-size:14px;margin-bottom:8px">🤝 Consensus Trades (3+ Whales)</h3>
-          <div class="table-wrap"><table id="whale-consensus-table"><thead><tr><th>Market</th><th>Side</th><th>Whales</th><th>Avg Entry</th><th>Current</th><th>P&L %</th><th>Confidence</th></tr></thead><tbody></tbody></table></div>
+            <h2 class="section-title">📡 City Forecasts</h2>
+            <div class="city-grid" id="noaa-forecasts"></div>
 
-          <h3 style="font-size:14px;margin:16px 0 8px;cursor:pointer;user-select:none" onclick="toggleScorecard()">📊 Whale Scorecard <span style="font-size:11px;color:var(--text-dim)" id="scorecard-meta">(loading...)</span> <span id="scorecard-toggle">▶</span></h3>
-          <div id="scorecard-wrap" style="display:none"><div class="table-wrap"><table id="whale-scorecard-table"><thead><tr><th>#</th><th>Whale</th><th>Tier</th><th>Score</th><th>Win Rate</th><th>W/L</th><th>Sharpe</th><th>Max DD</th><th>Profit Factor</th><th>Total Return</th><th>🔥 Streak</th></tr></thead><tbody id="whale-scorecard-body"></tbody></table></div></div>
+            <h3 class="sub-title">Active Weather Positions</h3>
+            <div class="table-wrap"><table id="weather-open-table"><thead><tr><th>City</th><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>NOAA</th><th>Shares</th><th>P&L</th><th></th></tr></thead><tbody></tbody></table></div>
+            <h3 class="sub-title">Trade Log</h3>
+            <div class="activity-feed" id="weather-trade-log"></div>
+            <h3 class="sub-title">Available Markets</h3>
+            <div class="table-wrap"><table id="weather-scan-table"><thead><tr><th>Market</th><th>Price</th><th>Divergence</th><th>Resolves</th><th>Vol 24h</th><th></th></tr></thead><tbody></tbody></table></div>
+          </div>
 
-          <h3 style="font-size:14px;margin:16px 0 8px">Active Positions</h3>
-          <div class="table-wrap"><table id="whale-open-table"><thead><tr><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th><th>P&L</th><th></th></tr></thead><tbody></tbody></table></div>
-          <h3 style="font-size:14px;margin:16px 0 8px">Trade Log</h3>
-          <div class="activity-feed" id="whale-trade-log"></div>
+          <!-- TAB 3: Whale Copytrading -->
+          <div class="sub-tab-panel" id="poly-tab-whales">
+            <div class="summary-cards" id="whale-summary"></div>
+
+            <h3 class="sub-title">🤝 Consensus Trades (3+ Whales)</h3>
+            <div class="table-wrap"><table id="whale-consensus-table"><thead><tr><th>Market</th><th>Side</th><th>Whales</th><th>Avg Entry</th><th>Current</th><th>P&L %</th><th>Confidence</th></tr></thead><tbody></tbody></table></div>
+
+            <h3 class="sub-title" style="cursor:pointer;user-select:none" onclick="toggleScorecard()">📊 Whale Scorecard <span style="font-size:11px;color:var(--text-dim)" id="scorecard-meta">(loading...)</span> <span id="scorecard-toggle">▶</span></h3>
+            <div id="scorecard-wrap" style="display:none"><div class="table-wrap"><table id="whale-scorecard-table"><thead><tr><th>#</th><th>Whale</th><th>Tier</th><th>Score</th><th>Win Rate</th><th>W/L</th><th>Sharpe</th><th>Max DD</th><th>Profit Factor</th><th>Total Return</th><th>🔥 Streak</th></tr></thead><tbody id="whale-scorecard-body"></tbody></table></div></div>
+
+            <h3 class="sub-title">Active Positions</h3>
+            <div class="table-wrap"><table id="whale-open-table"><thead><tr><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th><th>P&L</th><th></th></tr></thead><tbody></tbody></table></div>
+            <h3 class="sub-title">Trade Log</h3>
+            <div class="activity-feed" id="whale-trade-log"></div>
+          </div>
         </div>
 
         <!-- Trading Section -->
@@ -143,13 +177,13 @@
             <button class="btn btn-primary" onclick="showModal('trade-position')">+ Add Position</button>
           </div>
           <div class="summary-cards" id="trade-summary"></div>
-          <h2 style="font-size:16px;margin-bottom:12px">Open Positions</h2>
+          <h2 class="section-title">Open Positions</h2>
           <div class="table-wrap"><table id="trade-open-table"><thead><tr><th>Ticker</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th><th>Stop</th><th>Target</th><th>P&L</th><th>P&L %</th><th></th></tr></thead><tbody></tbody></table></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">Closed</h2>
+          <h2 class="section-title">Closed</h2>
           <div class="table-wrap"><table id="trade-closed-table"><thead><tr><th>Ticker</th><th>Side</th><th>Entry</th><th>Exit</th><th>P&L</th><th>Status</th></tr></thead><tbody></tbody></table></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">Watchlist</h2>
+          <h2 class="section-title">Watchlist</h2>
           <div class="table-wrap"><table id="trade-watch-table"><thead><tr><th>Ticker</th><th>Current</th><th>Target</th><th>Thesis</th><th></th></tr></thead><tbody></tbody></table></div>
-          <h2 style="font-size:16px;margin:24px 0 12px">Journal</h2>
+          <h2 class="section-title">Journal</h2>
           <div class="activity-feed" id="trade-journal"></div>
         </div>
       </div>

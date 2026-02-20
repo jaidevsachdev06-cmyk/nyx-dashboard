@@ -18,7 +18,7 @@ const del = (p) => api(p, { method: 'DELETE' });
 
 // ========== AUTH ==========
 function checkAuth() {
-  if (TOKEN) { document.getElementById('login-screen').style.display = 'none'; document.getElementById('app').style.display = 'block'; loadCurrentSection(); }
+  if (TOKEN) { document.getElementById('login-screen').style.display = 'none'; document.getElementById('app').style.display = 'block'; startHeaderClock(); loadCurrentSection(); }
 }
 function logout() { TOKEN = ''; sessionStorage.removeItem('nyx-token'); location.reload(); }
 document.getElementById('login-form').addEventListener('submit', async (e) => {
@@ -32,8 +32,25 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
   } catch (e) { document.getElementById('login-error').textContent = 'Connection error'; }
 });
 
+// ========== HEADER CLOCK ==========
+function startHeaderClock() {
+  function update() {
+    const now = new Date();
+    const el = document.getElementById('header-clock');
+    if (el) el.textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+  }
+  update();
+  setInterval(update, 1000);
+}
+function updateLastRefreshed() {
+  const el = document.getElementById('last-refreshed');
+  if (el) el.textContent = 'Updated ' + new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
+}
+
 // ========== NAVIGATION ==========
 let currentSection = 'dashboard';
+const sectionLabels = { dashboard: 'Dashboard', agents: 'The Office', school: 'School', polymarket: 'Polymarket', trading: 'Swing Trading' };
+
 document.querySelectorAll('.sidebar a').forEach(a => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
@@ -51,6 +68,8 @@ function switchSection(sec) {
   document.querySelectorAll('.sidebar a').forEach(a => a.classList.toggle('active', a.dataset.section === sec));
   document.querySelectorAll('.section').forEach(s => s.classList.toggle('active', s.id === `sec-${sec}`));
   window.location.hash = sec;
+  const label = document.getElementById('header-section-label');
+  if (label) label.textContent = sectionLabels[sec] || sec;
   loadCurrentSection();
 }
 
@@ -62,6 +81,14 @@ function loadCurrentSection() {
     case 'polymarket': loadPolymarket(); break;
     case 'trading': loadTrading(); break;
   }
+}
+
+// ========== POLYMARKET SUB-TABS ==========
+let currentPolyTab = 'paper';
+function switchPolyTab(tab) {
+  currentPolyTab = tab;
+  document.querySelectorAll('#poly-sub-tabs .sub-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  document.querySelectorAll('.sub-tab-panel').forEach(p => p.classList.toggle('active', p.id === `poly-tab-${tab}`));
 }
 
 // ========== HELPERS ==========
@@ -91,14 +118,13 @@ function priorityBadge(p) { return `<span class="badge badge-${p || 'low'}">${p 
 async function loadDashboard() {
   try {
     const d = await get('/api/dashboard');
-    // Summary cards
+    updateLastRefreshed();
     document.getElementById('dash-summary').innerHTML = `
-      <div class="summary-card"><div class="label">Agents</div><div class="value">${d.agents.online}/${d.agents.total}</div><div class="detail">online</div></div>
-      <div class="summary-card"><div class="label">School</div><div class="value">${d.school.pendingTasks}</div><div class="detail">pending tasks${d.school.overdueTasks ? ` · <span style="color:var(--red)">${d.school.overdueTasks} overdue</span>` : ''}</div></div>
-      <div class="summary-card"><div class="label">Polymarket</div><div class="value">${d.polymarket.openPositions}</div><div class="detail">${fmtMoney(d.polymarket.totalExposure)} exposure</div></div>
-      <div class="summary-card"><div class="label">Weather</div><div class="value">${d.weather?.openPositions || 0}</div><div class="detail">${fmtMoney(d.weather?.totalExposure || 0)} exposure</div></div>
+      <div class="summary-card gradient-agents"><div class="label">Agents</div><div class="value">${d.agents.online}/${d.agents.total}</div><div class="detail">online</div></div>
+      <div class="summary-card gradient-school"><div class="label">School</div><div class="value">${d.school.pendingTasks}</div><div class="detail">pending tasks${d.school.overdueTasks ? ` · <span style="color:var(--red)">${d.school.overdueTasks} overdue</span>` : ''}</div></div>
+      <div class="summary-card gradient-poly"><div class="label">Polymarket</div><div class="value">${d.polymarket.openPositions}</div><div class="detail">${fmtMoney(d.polymarket.totalExposure)} exposure</div></div>
+      <div class="summary-card gradient-weather"><div class="label">Weather</div><div class="value">${d.weather?.openPositions || 0}</div><div class="detail">${fmtMoney(d.weather?.totalExposure || 0)} exposure</div></div>
     `;
-    // Activity
     document.getElementById('dash-activity').innerHTML = (d.activity || []).map(a => `
       <div class="activity-item">
         <div class="activity-dot ${a.status || 'success'}"></div>
@@ -108,7 +134,6 @@ async function loadDashboard() {
         </div>
       </div>
     `).join('') || '<div style="color:var(--text-dim);padding:20px">No activity yet</div>';
-    // Agents
     document.getElementById('dash-agents').innerHTML = (d.agents.list || []).map(a => `
       <div class="agent-card" onclick="switchSection('agents')">
         <div class="agent-avatar">${a.avatar || '🤖'}</div>
@@ -124,8 +149,8 @@ async function loadDashboard() {
 async function loadAgents() {
   try {
     const [agents, activity] = await Promise.all([get('/api/agents'), get('/api/activity')]);
+    updateLastRefreshed();
 
-    // Office floor - agent figures
     document.getElementById('office-floor').innerHTML = agents.map(a => {
       const s = a.status || 'offline';
       const statusLabel = s === 'online' ? '● Working' : s === 'idle' ? '● Idle' : s === 'error' ? '● Error' : '● Offline';
@@ -143,7 +168,6 @@ async function loadAgents() {
       `;
     }).join('') || '<div style="color:var(--text-dim);font-size:13px;padding:40px">No agents yet. Add your first agent!</div>';
 
-    // Side activity feed
     document.getElementById('agents-activity-side').innerHTML = activity.slice(0, 20).map(a => `
       <div class="activity-item">
         <div class="activity-dot ${a.status || 'success'}"></div>
@@ -154,7 +178,6 @@ async function loadAgents() {
       </div>
     `).join('') || '<div style="color:var(--text-dim);padding:16px;font-size:12px">No activity yet</div>';
 
-    // Agent breakdown cards
     document.getElementById('agents-breakdown').innerHTML = agents.map(a => {
       const s = a.status || 'offline';
       const capabilities = (a.tools || []);
@@ -228,6 +251,7 @@ async function editAgent(id) {
 async function loadSchool() {
   try {
     const [tasks, schedule] = await Promise.all([get('/api/school?type=tasks'), get('/api/school?type=schedule')]);
+    updateLastRefreshed();
     const cols = { todo: [], 'in-progress': [], done: [], overdue: [] };
     tasks.forEach(t => { const s = t.status || 'todo'; if (cols[s]) cols[s].push(t); else cols.todo.push(t); });
     const renderCol = (title, items, color) => `
@@ -248,7 +272,6 @@ async function loadSchool() {
     document.getElementById('school-kanban').innerHTML =
       renderCol('Overdue 🔴', cols.overdue) + renderCol('To Do', cols.todo) + renderCol('In Progress', cols['in-progress']) + renderCol('Done ✓', cols.done);
 
-    // Checklist — upcoming tasks sorted by due date
     const now = new Date();
     const upcoming = tasks
       .filter(t => t.status !== 'done' && t.dueDate)
@@ -265,15 +288,14 @@ async function loadSchool() {
     };
 
     document.getElementById('school-checklist').innerHTML = upcoming.length ? `
-      <div style="display:flex;flex-direction:column;gap:2px">
+      <div style="display:flex;flex-direction:column;gap:4px">
         ${upcoming.map(t => {
           const isOverdue = new Date(t.dueDate) < now;
-          const checked = t.status === 'in-progress' ? 'style="opacity:0.6"' : '';
-          return `<div class="checklist-item" ${checked} style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;background:${isOverdue ? 'rgba(239,68,68,0.1)' : 'rgba(255,255,255,0.03)'};cursor:pointer" onclick="toggleTaskDone('${t.id}','${t.status}')">
-            <input type="checkbox" ${t.status === 'done' ? 'checked' : ''} style="width:18px;height:18px;accent-color:var(--accent);cursor:pointer" onclick="event.stopPropagation();toggleTaskDone('${t.id}','${t.status}')">
+          return `<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:var(--radius-sm);background:${isOverdue ? 'rgba(239,68,68,0.06)' : 'rgba(255,255,255,0.02)'};border:1px solid ${isOverdue ? 'rgba(239,68,68,0.1)' : 'var(--border)'};cursor:pointer;transition:all .15s" onclick="toggleTaskDone('${t.id}','${t.status}')" onmouseenter="this.style.background='rgba(255,255,255,0.04)'" onmouseleave="this.style.background='${isOverdue ? 'rgba(239,68,68,0.06)' : 'rgba(255,255,255,0.02)'}'">
+            <input type="checkbox" ${t.status === 'done' ? 'checked' : ''} style="width:18px;height:18px;accent-color:var(--accent);cursor:pointer;flex-shrink:0" onclick="event.stopPropagation();toggleTaskDone('${t.id}','${t.status}')">
             <div style="flex:1;min-width:0">
-              <div style="font-size:14px;${t.status === 'in-progress' ? 'color:var(--accent)' : ''}">${t.title}</div>
-              <div style="font-size:11px;color:var(--text-dim);display:flex;gap:12px;margin-top:2px">
+              <div style="font-size:14px;font-weight:500;${t.status === 'in-progress' ? 'color:var(--accent)' : ''}">${t.title}</div>
+              <div style="font-size:12px;color:var(--text-dim);display:flex;gap:12px;margin-top:3px">
                 <span>${t.course || ''}</span>
                 <span>${t.dueDate ? fmtDate(t.dueDate) : ''}</span>
               </div>
@@ -283,9 +305,8 @@ async function loadSchool() {
           </div>`;
         }).join('')}
       </div>
-    ` : '<div style="color:var(--text-dim);padding:12px">No upcoming tasks 🎉</div>';
+    ` : '<div style="color:var(--text-dim);padding:16px">No upcoming tasks 🎉</div>';
 
-    // Schedule
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
     const times = ['08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'];
     let html = '<div class="schedule-grid"><div class="schedule-header"></div>';
@@ -320,7 +341,7 @@ async function toggleTaskDone(id, currentStatus) {
 async function loadPolymarket() {
   try {
     const [positions, watchlist] = await Promise.all([get('/api/polymarket?type=positions'), get('/api/polymarket?type=watchlist')]);
-    // Client-side P&L (side-aware: NO profits when price drops, YES when rises)
+    updateLastRefreshed();
     positions.forEach(p => {
       if (p.pnl != null && p.pnl !== 0) { /* keep server pnl */ }
       else if (p.entryPrice != null && p.currentPrice != null && p.shares) {
@@ -340,46 +361,46 @@ async function loadPolymarket() {
     const winRate = scored ? ((wins / scored) * 100).toFixed(0) : '—';
 
     const dailyPctP = totalInvested > 0 ? (totalPnl / totalInvested * 100) : 0;
+    const pnlCardClass = totalPnl > 0 ? 'pnl-positive' : totalPnl < 0 ? 'pnl-negative' : '';
     document.getElementById('poly-summary').innerHTML = `
-      <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
-      <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
-      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctP)}">${dailyPctP >= 0 ? '+' : ''}${dailyPctP.toFixed(1)}%</div></div>
-      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
+      <div class="summary-card poly-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card poly-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
+      <div class="summary-card poly-card ${pnlCardClass}"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctP)}">${dailyPctP >= 0 ? '+' : ''}${dailyPctP.toFixed(1)}%</div></div>
+      <div class="summary-card poly-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
 
-    const sideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? '#22c55e' : '#ef4444'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(s||'—').toUpperCase()}</span>`;
+    const sideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? 'var(--green)' : 'var(--red)'};color:#000;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700">${(s||'—').toUpperCase()}</span>`;
 
     document.querySelector('#poly-open-table tbody').innerHTML = open.map(p => `<tr>
-      <td style="max-width:250px"><a href="${p.marketUrl || '#'}" target="_blank" style="color:var(--accent)">${p.market || ''}</a></td>
+      <td style="max-width:250px"><a href="${p.marketUrl || '#'}" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">${p.market || ''}</a></td>
       <td>${sideBadge(p.position)}</td>
       <td class="mono">${fmtMoney(p.entryPrice)}</td>
       <td class="mono">${fmtMoney(p.currentPrice)}</td>
       <td class="mono">${p.shares || ''}</td>
-      <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td>
+      <td class="mono ${pnlClass(p.pnl)}" style="font-weight:700">${fmtMoney(p.pnl)}</td>
       <td><button class="btn btn-sm" onclick="editPolyPosition('${p.id}')">Edit</button></td>
     </tr>
-    <tr class="evidence-row"><td colspan="7" style="padding:4px 12px 12px;border-top:none;background:rgba(255,255,255,0.02)">
+    <tr class="evidence-row"><td colspan="7" style="padding:6px 16px 14px;border-top:none">
       <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
         <span>${sideBadge(p.position)}</span>
-        <span>📊 ${(p.tags || []).map(t => `<span style="background:var(--surface);padding:1px 5px;border-radius:3px;font-size:11px">${t}</span>`).join(' ') || '—'}</span>
+        <span>📊 ${(p.tags || []).map(t => `<span style="background:rgba(255,255,255,0.04);padding:2px 8px;border-radius:6px;font-size:11px">${t}</span>`).join(' ') || '—'}</span>
         <span>⏱️ ${p.createdAt ? timeAgo(p.createdAt) : '—'}</span>
       </div>
-      <div style="font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.4">💡 ${p.notes || 'No reasoning recorded'}</div>
-    </td></tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim)">No open positions</td></tr>';
+      <div style="font-size:12px;color:var(--text-dim);margin-top:6px;line-height:1.5">💡 ${p.notes || 'No reasoning recorded'}</div>
+    </td></tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim);padding:20px">No open positions</td></tr>';
 
-    // Trade log for closed
     document.getElementById('poly-trade-log').innerHTML = closed.length ? closed.map(p => `
       <div class="activity-item">
         <div class="activity-dot ${p.status === 'closed-win' ? 'success' : 'error'}"></div>
         <div class="activity-content">
           <div class="activity-action">
             <strong>${p.market}</strong> — ${p.status === 'closed-win' ? '✅ WIN' : '❌ LOSS'}
-            <span class="mono ${pnlClass(p.pnl)}" style="margin-left:8px">${fmtMoney(p.pnl)}</span>
+            <span class="mono ${pnlClass(p.pnl)}" style="margin-left:8px;font-weight:700">${fmtMoney(p.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
             ${p.position || ''} · Entry ${fmtMoney(p.entryPrice)} → Exit ${fmtMoney(p.exitPrice || p.currentPrice)} · ${p.shares || 0} shares
           </div>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.4">💡 ${p.notes || 'No reasoning'}</div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${p.notes || 'No reasoning'}</div>
           <div class="activity-meta"><span>${p.updatedAt ? timeAgo(p.updatedAt) : '—'}</span></div>
         </div>
       </div>
@@ -401,14 +422,13 @@ async function deletePolyWatch(id) { await del(`/api/polymarket?type=watchlist&i
 async function loadWeatherTrades() {
   try {
     const trades = await get('/api/weather');
-    // P&L: use server pnl if set, otherwise compute client-side (side-aware)
     trades.forEach(t => {
       if (t.pnl != null && t.pnl !== 0) { /* keep server pnl */ }
       else if (t.entryPrice != null && t.currentPrice != null && t.shares) {
         const isNo = (t.side || '').toLowerCase() === 'no';
         t.pnl = isNo
-          ? (t.entryPrice - t.currentPrice) * t.shares   // NO: profit when price drops
-          : (t.currentPrice - t.entryPrice) * t.shares;  // YES: profit when price rises
+          ? (t.entryPrice - t.currentPrice) * t.shares
+          : (t.currentPrice - t.entryPrice) * t.shares;
       } else { t.pnl = 0; }
     });
     const open = trades.filter(t => t.status === 'open');
@@ -420,19 +440,19 @@ async function loadWeatherTrades() {
     const winRate = scored ? ((wins / scored) * 100).toFixed(0) : '—';
 
     const totalInvestedW = open.reduce((s, t) => s + ((t.entryPrice || 0) * (t.shares || 0)), 0);
-
     const dailyPctW = totalInvestedW > 0 ? (totalPnl / totalInvestedW * 100) : 0;
+    const pnlCardClass = totalPnl > 0 ? 'pnl-positive' : totalPnl < 0 ? 'pnl-negative' : '';
     document.getElementById('weather-summary').innerHTML = `
-      <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
-      <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvestedW)}</div></div>
-      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctW)}">${dailyPctW >= 0 ? '+' : ''}${dailyPctW.toFixed(1)}%</div></div>
-      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
+      <div class="summary-card weather-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card weather-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvestedW)}</div></div>
+      <div class="summary-card weather-card ${pnlCardClass}"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctW)}">${dailyPctW >= 0 ? '+' : ''}${dailyPctW.toFixed(1)}%</div></div>
+      <div class="summary-card weather-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
-    loadNoaaForecasts();
+    loadNoaaForecasts(open);
 
     const confBadge = c => {
-      const colors = { high: '#22c55e', 'medium-high': '#84cc16', medium: '#eab308', low: '#ef4444' };
-      return `<span style="background:${colors[c] || '#666'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(c||'—').toUpperCase()}</span>`;
+      const colors = { high: 'var(--green)', 'medium-high': '#84cc16', medium: 'var(--yellow)', low: 'var(--red)' };
+      return `<span style="background:${colors[c] || '#666'};color:#000;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700">${(c||'—').toUpperCase()}</span>`;
     };
     const edgePct = t => {
       if (!t.entryPrice || !t.currentPrice) return '—';
@@ -442,16 +462,16 @@ async function loadWeatherTrades() {
 
     document.querySelector('#weather-open-table tbody').innerHTML = open.map(t => `<tr>
       <td>${t.city || ''}</td>
-      <td style="max-width:200px"><a href="${t.marketUrl || '#'}" target="_blank" style="color:var(--accent)">${t.market || ''}</a></td>
+      <td style="max-width:200px"><a href="${t.marketUrl || '#'}" target="_blank" style="color:var(--teal);text-decoration:none;font-weight:500">${t.market || ''}</a></td>
       <td>${t.side || ''}</td>
       <td class="mono">${fmtMoney(t.entryPrice)}</td>
       <td class="mono">${fmtMoney(t.currentPrice)}</td>
       <td class="mono">${t.noaaForecast || '—'}</td>
       <td class="mono">${t.shares || ''}</td>
-      <td class="mono ${pnlClass(t.pnl)}">${fmtMoney(t.pnl)}</td>
+      <td class="mono ${pnlClass(t.pnl)}" style="font-weight:700">${fmtMoney(t.pnl)}</td>
       <td><button class="btn btn-sm" onclick="editWeatherTrade('${t.id}')">Edit</button></td>
     </tr>
-    <tr class="evidence-row"><td colspan="9" style="padding:4px 12px 12px;border-top:none;background:rgba(255,255,255,0.02)">
+    <tr class="evidence-row"><td colspan="9" style="padding:6px 16px 14px;border-top:none">
       <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
         <span>🎯 Bucket: <strong>${t.bucket || '—'}</strong></span>
         <span>🌡️ NOAA: <strong>${t.noaaForecast || '—'}</strong></span>
@@ -459,10 +479,9 @@ async function loadWeatherTrades() {
         <span>📈 Edge: ${edgePct(t)}</span>
         <span>⏱️ ${t.createdAt ? timeAgo(t.createdAt) : '—'}</span>
       </div>
-      <div style="font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.4">💡 ${t.reasoning || t.notes || 'No reasoning recorded'}</div>
-    </td></tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim)">No open weather positions</td></tr>';
+      <div style="font-size:12px;color:var(--text-dim);margin-top:6px;line-height:1.5">💡 ${t.reasoning || t.notes || 'No reasoning recorded'}</div>
+    </td></tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim);padding:20px">No open weather positions</td></tr>';
 
-    // Closed trades with outcome evidence
     document.getElementById('weather-trade-log').innerHTML = closed.length ? closed.map(t => {
       const label = t.city || t.market || 'Unknown';
       const shortLabel = label.length > 60 ? label.substring(0, 57) + '...' : label;
@@ -476,12 +495,12 @@ async function loadWeatherTrades() {
         <div class="activity-content">
           <div class="activity-action">
             <strong>${shortLabel}</strong> ${t.bucket || t.side || ''} — ${outcomeLabel}
-            <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px">${fmtMoney(t.pnl)}</span>
+            <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px;font-weight:700">${fmtMoney(t.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
             Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.currentPrice)} · ${t.shares || '—'} shares
           </div>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.4">💡 ${reason}</div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${reason}</div>
           <div class="activity-meta"><span>${t.updatedAt ? timeAgo(t.updatedAt) : '—'}</span></div>
         </div>
       </div>`;
@@ -494,11 +513,20 @@ async function editWeatherTrade(id) {
   showModal('weather-trade', t);
 }
 
-// ========== NOAA FORECASTS ==========
-async function loadNoaaForecasts() {
+// ========== NOAA FORECASTS (City Grid) ==========
+async function loadNoaaForecasts(openPositions) {
   const cities = ['NYC', 'Chicago', 'Miami', 'Dallas', 'Atlanta', 'Seattle'];
   const container = document.getElementById('noaa-forecasts');
-  container.innerHTML = cities.map(c => `<div class="summary-card" id="noaa-${c}" style="min-width:150px"><div class="label">${c}</div><div class="value mono" style="font-size:14px">⏳</div></div>`).join('');
+  container.innerHTML = cities.map(c => `<div class="city-card" id="noaa-${c}"><div class="city-name">${c}</div><div class="city-temp mono" style="font-size:16px;color:var(--text-dim)">⏳ Loading...</div></div>`).join('');
+
+  // Count open positions per city
+  const posPerCity = {};
+  if (openPositions) {
+    openPositions.forEach(p => {
+      const c = p.city || '';
+      posPerCity[c] = (posPerCity[c] || 0) + 1;
+    });
+  }
 
   for (const city of cities) {
     try {
@@ -516,17 +544,18 @@ async function loadNoaaForecasts() {
                      short.toLowerCase().includes('thunder') ? '⛈️' :
                      short.toLowerCase().includes('fog') ? '🌫️' :
                      short.toLowerCase().includes('sunny') || short.toLowerCase().includes('clear') ? '☀️' : '🌤️';
+        const posCount = posPerCity[city] || 0;
         el.innerHTML = `
-          <div class="label">${city}</div>
-          <div class="value mono" style="font-size:22px">${icon} ${temp}°${unit}</div>
-          <div class="detail" style="margin-top:4px">${short}</div>
-          <div class="detail">Wind: ${wind}</div>
-          <div class="detail" style="font-size:10px;opacity:0.5">${now.name || ''}</div>
+          <div class="city-name">${city} ${posCount > 0 ? `<span style="font-size:11px;background:rgba(20,184,166,0.12);color:var(--teal);padding:2px 8px;border-radius:8px;font-weight:600;margin-left:6px">${posCount} pos</span>` : ''}</div>
+          <div class="city-temp">${icon} ${temp}°${unit}</div>
+          <div class="city-detail">${short}</div>
+          <div class="city-detail">💨 ${wind}</div>
+          <div class="city-detail" style="font-size:10px;opacity:0.5;margin-top:4px">${now.name || ''}</div>
         `;
       }
     } catch (e) {
       const el = document.getElementById(`noaa-${city}`);
-      if (el) el.innerHTML = `<div class="label">${city}</div><div class="value mono" style="font-size:12px;color:var(--red)">Error</div>`;
+      if (el) el.innerHTML = `<div class="city-name">${city}</div><div class="city-temp mono" style="font-size:14px;color:var(--red)">Error</div>`;
     }
   }
 }
@@ -543,14 +572,13 @@ function tierColor(tier) {
 
 function tierBadge(tier) {
   const c = tierColor(tier);
-  return `<span style="color:${c};font-weight:600">${tier}</span>`;
+  return `<span style="color:${c};font-weight:700">${tier}</span>`;
 }
 
 async function loadWhaleTrades() {
   try {
     const trades = await get('/api/whale');
     const all = Array.isArray(trades) ? trades : [];
-    // Client-side P&L (side-aware)
     all.forEach(t => {
       if (t.pnl != null && t.pnl !== 0) { /* keep server pnl */ }
       else if (t.entryPrice != null && t.currentPrice != null && t.shares) {
@@ -570,17 +598,17 @@ async function loadWhaleTrades() {
     const winRate = scored ? ((wins / scored) * 100).toFixed(0) : '—';
 
     const dailyPctWh = totalInvested > 0 ? (totalPnl / totalInvested * 100) : 0;
+    const pnlCardClass = totalPnl > 0 ? 'pnl-positive' : totalPnl < 0 ? 'pnl-negative' : '';
     document.getElementById('whale-summary').innerHTML = `
-      <div class="summary-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
-      <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
-      <div class="summary-card"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctWh)}">${dailyPctWh >= 0 ? '+' : ''}${dailyPctWh.toFixed(1)}%</div></div>
-      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
+      <div class="summary-card whale-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card whale-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
+      <div class="summary-card whale-card ${pnlCardClass}"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctWh)}">${dailyPctWh >= 0 ? '+' : ''}${dailyPctWh.toFixed(1)}%</div></div>
+      <div class="summary-card whale-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
 
-    // === WHALE SCORECARD (from predicting.top live data) ===
     loadWhaleScorecard();
 
-    // === CONSENSUS TRADES (3+ whales on same market+side) ===
+    // Consensus
     const consensusMap = {};
     open.forEach(t => {
       const whaleList = (t.whales || '').split(',').map(w => w.trim()).filter(Boolean);
@@ -608,45 +636,43 @@ async function loadWhaleTrades() {
       </tr>`;
     }).join('') : '<tr><td colspan="7" style="color:var(--text-dim)">No consensus trades yet (need 3+ whales on same position)</td></tr>';
 
-    // === ACTIVE POSITIONS with evidence rows ===
     const whaleConfBadge = c => {
-      const colors = { high: '#22c55e', 'medium-high': '#84cc16', medium: '#eab308', low: '#ef4444' };
-      return `<span style="background:${colors[c] || '#666'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(c||'—').toUpperCase()}</span>`;
+      const colors = { high: 'var(--green)', 'medium-high': '#84cc16', medium: 'var(--yellow)', low: 'var(--red)' };
+      return `<span style="background:${colors[c] || '#666'};color:#000;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700">${(c||'—').toUpperCase()}</span>`;
     };
-    const whaleSideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? '#22c55e' : '#ef4444'};color:#000;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:600">${(s||'—').toUpperCase()}</span>`;
+    const whaleSideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? 'var(--green)' : 'var(--red)'};color:#000;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700">${(s||'—').toUpperCase()}</span>`;
 
     document.querySelector('#whale-open-table tbody').innerHTML = open.map(t => `<tr>
-      <td style="max-width:220px"><a href="${t.marketUrl || '#'}" target="_blank" style="color:var(--accent)">${t.market || ''}</a></td>
+      <td style="max-width:220px"><a href="${t.marketUrl || '#'}" target="_blank" style="color:var(--purple);text-decoration:none;font-weight:500">${t.market || ''}</a></td>
       <td>${whaleSideBadge(t.side)}</td>
       <td class="mono">${fmtMoney(t.entryPrice)}</td>
       <td class="mono">${fmtMoney(t.currentPrice)}</td>
       <td class="mono">${t.shares || ''}</td>
-      <td class="mono ${pnlClass(t.pnl)}">${fmtMoney(t.pnl)}</td>
+      <td class="mono ${pnlClass(t.pnl)}" style="font-weight:700">${fmtMoney(t.pnl)}</td>
       <td><button class="btn btn-sm" onclick="editWhalePosition('${t.id}')">Edit</button></td>
     </tr>
-    <tr class="evidence-row"><td colspan="7" style="padding:4px 12px 12px;border-top:none;background:rgba(255,255,255,0.02)">
+    <tr class="evidence-row"><td colspan="7" style="padding:6px 16px 14px;border-top:none">
       <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
         <span>🐋 Whales: <strong>${t.whales || '—'}</strong></span>
         <span>📊 Confidence: ${whaleConfBadge(t.confidence)}</span>
         <span>📡 ${t.source || 'predicting.top'}</span>
         <span>⏱️ ${t.createdAt ? timeAgo(t.createdAt) : '—'}</span>
       </div>
-      <div style="font-size:12px;color:var(--text-dim);margin-top:4px;line-height:1.4">💡 ${t.reasoning || t.notes || 'No reasoning recorded'}</div>
-    </td></tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim)">No open whale positions</td></tr>';
+      <div style="font-size:12px;color:var(--text-dim);margin-top:6px;line-height:1.5">💡 ${t.reasoning || t.notes || 'No reasoning recorded'}</div>
+    </td></tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim);padding:20px">No open whale positions</td></tr>';
 
-    // === TRADE LOG for closed ===
     document.getElementById('whale-trade-log').innerHTML = closed.length ? closed.map(t => `
       <div class="activity-item">
         <div class="activity-dot ${t.status === 'closed-win' ? 'success' : 'error'}"></div>
         <div class="activity-content">
           <div class="activity-action">
             <strong>${t.market}</strong> — ${(t.status === 'closed-win' || t.status === 'resolved-win') ? '✅ WIN' : (t.status === 'closed-loss' || t.status === 'resolved-loss') ? '❌ LOSS' : '⚪ CLOSED'}
-            <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px">${fmtMoney(t.pnl)}</span>
+            <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px;font-weight:700">${fmtMoney(t.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
             ${t.side || ''} · Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.currentPrice)} · ${t.shares || 0} shares · Whales: ${t.whales || '—'}
           </div>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.4">💡 ${t.reasoning || t.notes || 'No reasoning'}</div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${t.reasoning || t.notes || 'No reasoning'}</div>
           <div class="activity-meta"><span>${t.updatedAt ? timeAgo(t.updatedAt) : '—'}</span></div>
         </div>
       </div>
@@ -666,7 +692,6 @@ async function loadWhaleScorecard() {
   const tbody = document.getElementById('whale-scorecard-body');
   const meta = document.getElementById('scorecard-meta');
 
-  // Check cache (refresh once per day)
   const cached = localStorage.getItem('whale-scorecard');
   const cacheTime = localStorage.getItem('whale-scorecard-ts');
   const ONE_DAY = 24 * 60 * 60 * 1000;
@@ -756,6 +781,7 @@ async function loadTrading() {
     const [positions, watchlist, journal] = await Promise.all([
       get('/api/trading?type=positions'), get('/api/trading?type=watchlist'), get('/api/trading?type=journal')
     ]);
+    updateLastRefreshed();
     const open = positions.filter(p => p.status === 'open');
     const closed = positions.filter(p => p.status !== 'open');
     const totalInvested = open.reduce((s, p) => s + (p.invested || 0), 0);
@@ -763,32 +789,33 @@ async function loadTrading() {
     const totalPnl = totalValue - totalInvested;
     const wins = closed.filter(p => p.status === 'closed-profit').length;
     const winRate = closed.length ? ((wins / closed.length) * 100).toFixed(0) : '—';
+    const pnlCardClass = totalPnl > 0 ? 'pnl-positive' : totalPnl < 0 ? 'pnl-negative' : '';
 
     document.getElementById('trade-summary').innerHTML = `
-      <div class="summary-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
-      <div class="summary-card"><div class="label">Current Value</div><div class="value mono">${fmtMoney(totalValue)}</div></div>
-      <div class="summary-card"><div class="label">Total P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
-      <div class="summary-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
+      <div class="summary-card trading-card"><div class="label">Invested</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
+      <div class="summary-card trading-card"><div class="label">Current Value</div><div class="value mono">${fmtMoney(totalValue)}</div></div>
+      <div class="summary-card trading-card ${pnlCardClass}"><div class="label">Total P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div></div>
+      <div class="summary-card trading-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${closed.length} trades</div></div>
     `;
     document.querySelector('#trade-open-table tbody').innerHTML = open.map(p => `<tr>
-      <td class="mono" style="font-weight:600">${p.ticker}</td>
+      <td class="mono" style="font-weight:700">${p.ticker}</td>
       <td>${p.side || 'long'}</td>
       <td class="mono">${fmtMoney(p.entryPrice)}</td>
       <td class="mono">${fmtMoney(p.currentPrice)}</td>
       <td class="mono">${p.shares}</td>
       <td class="mono" style="color:var(--red)">${fmtMoney(p.stopLoss)}</td>
       <td class="mono" style="color:var(--green)">${fmtMoney(p.takeProfit)}</td>
-      <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td>
+      <td class="mono ${pnlClass(p.pnl)}" style="font-weight:700">${fmtMoney(p.pnl)}</td>
       <td class="mono ${pnlClass(p.pnlPercent)}">${fmtPct(p.pnlPercent)}</td>
       <td><button class="btn btn-sm" onclick="editTradePosition('${p.id}')">Edit</button></td>
     </tr>`).join('') || '<tr><td colspan="10" style="color:var(--text-dim)">No open positions</td></tr>';
     document.querySelector('#trade-closed-table tbody').innerHTML = closed.map(p => `<tr>
-      <td class="mono" style="font-weight:600">${p.ticker}</td><td>${p.side || 'long'}</td>
+      <td class="mono" style="font-weight:700">${p.ticker}</td><td>${p.side || 'long'}</td>
       <td class="mono">${fmtMoney(p.entryPrice)}</td><td class="mono">${fmtMoney(p.exitPrice)}</td>
-      <td class="mono ${pnlClass(p.pnl)}">${fmtMoney(p.pnl)}</td><td>${p.status}</td>
+      <td class="mono ${pnlClass(p.pnl)}" style="font-weight:700">${fmtMoney(p.pnl)}</td><td>${p.status}</td>
     </tr>`).join('') || '<tr><td colspan="6" style="color:var(--text-dim)">No closed positions</td></tr>';
     document.querySelector('#trade-watch-table tbody').innerHTML = watchlist.map(w => `<tr>
-      <td class="mono" style="font-weight:600">${w.ticker}</td><td class="mono">${fmtMoney(w.currentPrice)}</td>
+      <td class="mono" style="font-weight:700">${w.ticker}</td><td class="mono">${fmtMoney(w.currentPrice)}</td>
       <td class="mono">${fmtMoney(w.targetEntry)}</td><td>${w.thesis || ''}</td>
       <td><button class="btn btn-sm" onclick="deleteTradeWatch('${w.id}')" style="color:var(--red)">✕</button></td>
     </tr>`).join('') || '<tr><td colspan="5" style="color:var(--text-dim)">Watchlist empty</td></tr>';
@@ -796,7 +823,7 @@ async function loadTrading() {
       <div class="activity-item">
         <div class="activity-dot success"></div>
         <div class="activity-content">
-          <div class="activity-action"><span class="mono" style="color:var(--accent)">${j.ticker}</span> ${j.note}</div>
+          <div class="activity-action"><span class="mono" style="color:var(--accent);font-weight:600">${j.ticker}</span> ${j.note}</div>
           <div class="activity-meta"><span>${timeAgo(j.timestamp)}</span><span>${j.type || ''}</span></div>
         </div>
       </div>
@@ -988,17 +1015,17 @@ function loadInternships() {
   if (!wrap) return;
   const priorityColor = { HIGH: '#22c55e', MEDIUM: '#eab308', LOW: '#6b7280' };
   wrap.innerHTML = INTERNSHIPS.map((it, i) => `
-    <div class="card" style="margin-bottom:16px;cursor:pointer" onclick="this.querySelector('.cl-body').style.display=this.querySelector('.cl-body').style.display==='none'?'block':'none'">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-        <h3 style="font-size:15px;margin:0">${it.company}</h3>
-        <span style="font-size:11px;padding:2px 8px;border-radius:8px;background:${priorityColor[it.priority]}22;color:${priorityColor[it.priority]};font-weight:600">${it.priority}</span>
+    <div class="card" style="margin-bottom:14px;cursor:pointer;border-left:3px solid ${priorityColor[it.priority]}" onclick="this.querySelector('.cl-body').style.display=this.querySelector('.cl-body').style.display==='none'?'block':'none'">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+        <h3 style="font-size:15px;margin:0;font-weight:700">${it.company}</h3>
+        <span style="font-size:11px;padding:3px 10px;border-radius:10px;background:${priorityColor[it.priority]}18;color:${priorityColor[it.priority]};font-weight:700">${it.priority}</span>
       </div>
-      <div style="font-size:13px;color:var(--text-dim);margin-bottom:8px">${it.role}</div>
-      <div style="display:flex;gap:8px;margin-bottom:8px">
-        <a href="${it.link}" target="_blank" class="btn" style="font-size:12px;padding:4px 10px" onclick="event.stopPropagation()">LinkedIn ↗</a>
-        <button class="btn" style="font-size:12px;padding:4px 10px" onclick="event.stopPropagation();navigator.clipboard.writeText(INTERNSHIPS[${i}].letter);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Letter',1500)">Copy Letter</button>
+      <div style="font-size:13px;color:var(--text-dim);margin-bottom:10px">${it.role}</div>
+      <div style="display:flex;gap:8px;margin-bottom:10px">
+        <a href="${it.link}" target="_blank" class="btn btn-sm" onclick="event.stopPropagation()">LinkedIn ↗</a>
+        <button class="btn btn-sm" onclick="event.stopPropagation();navigator.clipboard.writeText(INTERNSHIPS[${i}].letter);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Letter',1500)">Copy Letter</button>
       </div>
-      <div class="cl-body" style="display:none;white-space:pre-wrap;font-size:13px;line-height:1.6;color:var(--text-dim);border-top:1px solid var(--border);padding-top:12px;margin-top:4px">${it.letter}</div>
+      <div class="cl-body" style="display:none;white-space:pre-wrap;font-size:13px;line-height:1.7;color:var(--text-dim);border-top:1px solid var(--border);padding-top:14px;margin-top:4px">${it.letter}</div>
     </div>
   `).join('');
 }
