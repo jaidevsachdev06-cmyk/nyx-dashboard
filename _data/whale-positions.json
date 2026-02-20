@@ -225,7 +225,7 @@
     "market": "7.0+ earthquake by March 31",
     "side": "YES",
     "entryPrice": 0.74,
-    "currentPrice": 0.74,
+    "currentPrice": 0.35,
     "shares": 40.5,
     "whales": "gopfan2, EltonMa",
     "whaleCount": 2,
@@ -233,16 +233,18 @@
     "thesis": "Base rate ~15/year. High prob in 6-week window.",
     "category": "consensus",
     "endDate": "2026-03-31",
-    "createdAt": "2026-02-17T16:20:09.686Z",
+    "createdAt": "2026-02-20T02:20:14.374Z",
     "invested": 29.97,
-    "currentValue": 29.97,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 14.174999999999999,
+    "pnl": -15.795,
+    "pnlPercent": -52.70270270270271,
     "status": "open",
-    "entryDate": "2026-02-17T16:20:09.686Z",
+    "entryDate": "2026-02-20T02:20:14.374Z",
     "tags": [
       "legacy"
-    ]
+    ],
+    "conditionId": "0x897a2f88e1b65776ac5af0440833eea638395f0af0df4bed47e83f64c9b9a1e3",
+    "updatedAt": "2026-02-20T02:25:35.289Z"
   },
   {
     "id": "70476dd9-f0d7-49b6-95e8-d4ea8f7365d0",
