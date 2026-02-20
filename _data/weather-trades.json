@@ -592,12 +592,14 @@
     "entryPrice": 0.49,
     "currentPrice": 0.961,
     "shares": 6.12,
-    "status": "open",
+    "status": "resolved-win",
     "source": "polymarket-paper",
     "date": "2026-02-19",
     "conditionId": "0xfa56748c82ffe0a1e17546dec339615da3be6a0c7e5a7bdf9ba0dd25902f16e5",
     "notes": "edge=0.41, kelly=80.4%→capped 5%, p_model=0.90, p_mkt=0.49, forecast=40.9°F, spread=0.2°F",
     "createdAt": "2026-02-19T14:01:25.716Z",
-    "updatedAt": "2026-02-20T01:30:03.686Z"
+    "updatedAt": "2026-02-20T02:10:00.444Z",
+    "result": "NO wins — max 37°F, never hit 38°F floor",
+    "pnl": 5.52
   }
 ]
