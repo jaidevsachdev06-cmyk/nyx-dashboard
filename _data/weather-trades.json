@@ -627,5 +627,11 @@
     "pnl": 3.12,
     "currentPrice": 1,
     "createdAt": "2026-02-20T02:31:10.821Z"
+  },
+  {
+    "id": "b040ba80-2812-4dca-b0fc-bdb7499c232b",
+    "conditionId": "0xNYC-40-41-feb20-no",
+    "currentPrice": 1,
+    "createdAt": "2026-02-20T02:31:11.626Z"
   }
 ]
