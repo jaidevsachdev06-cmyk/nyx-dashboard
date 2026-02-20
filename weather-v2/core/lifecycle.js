@@ -89,7 +89,36 @@ async function checkAndResolve(tradeId) {
 
   const resolution = await polymarket.checkResolution(trade.conditionId);
   if (!resolution.resolved) {
-    console.log(`[lifecycle] ${tradeId} — market not yet resolved`);
+    // Fallback: if date is >24h past and price is near 0 or 1, infer resolution from price
+    const tradeDateEnd = trade.date ? new Date(trade.date + 'T23:59:59Z') : null;
+    const hoursPast = tradeDateEnd ? (Date.now() - tradeDateEnd.getTime()) / 3600000 : 0;
+    const price = trade.currentPrice;
+
+    if (hoursPast > 24 && price != null) {
+      const side = (trade.side || 'YES').toUpperCase();
+      let inferredResult = null;
+      if (side === 'YES' && price > 0.95) inferredResult = 'win';
+      else if (side === 'YES' && price < 0.03) inferredResult = 'loss';
+      else if (side === 'NO' && price > 0.95) inferredResult = 'win';
+      else if (side === 'NO' && price < 0.03) inferredResult = 'loss';
+
+      if (inferredResult) {
+        const sizeUSDC = trade.sizeUSDC || 0;
+        const pnlUSDC = inferredResult === 'win'
+          ? Math.round(sizeUSDC / price * (1 - price) * 100) / 100
+          : -Math.round(sizeUSDC * 100) / 100;
+        console.log(`[lifecycle] ${tradeId} — PRICE-INFERRED ${inferredResult} (price ${price}, ${hoursPast.toFixed(0)}h past date)`);
+        store.transition(tradeId, 'resolved', {
+          result: inferredResult, pnlUSDC,
+          resolutionPrice: price, resolutionSource: 'price-inferred',
+          resolvedAt: new Date().toISOString()
+        });
+        return store.transition(tradeId, 'closed');
+      }
+    }
+
+    if (hoursPast > 0) console.log(`[lifecycle] ${tradeId} — market not yet resolved (${hoursPast.toFixed(0)}h past date)`);
+    else console.log(`[lifecycle] ${tradeId} — market not yet resolved`);
     return null;
   }
 
