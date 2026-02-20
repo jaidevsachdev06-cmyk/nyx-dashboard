@@ -28,7 +28,7 @@
     "market": "Will Trump nominate Kevin Warsh as the next Fed chair?",
     "side": "Yes",
     "entryPrice": 0.944,
-    "currentPrice": 0.9455,
+    "currentPrice": 0.9405,
     "shares": 42.4,
     "whales": "Roflan, debased, Thonker, Brokie, scottilicious, JAHODA",
     "whaleCount": 6,
@@ -38,14 +38,14 @@
     "endDate": "2026-12-31",
     "createdAt": "2026-02-17T16:19:37.258Z",
     "invested": 40.0256,
-    "currentValue": 40.0892,
-    "pnl": 0.06360000000000099,
-    "pnlPercent": 0.15889830508474825,
+    "currentValue": 39.8772,
+    "pnl": -0.1483999999999952,
+    "pnlPercent": -0.3707627118643948,
     "status": "open",
     "entryDate": "2026-02-17T16:19:37.258Z",
     "ep": "whale",
     "conditionId": "0x61b66d02793b4a68ab0cc25be60d65f517fe18c7d654041281bb130341244fcc",
-    "updatedAt": "2026-02-19T10:52:05.742Z"
+    "updatedAt": "2026-02-20T05:30:05.529Z"
   },
   {
     "id": "f4c4a53b-d9f9-4e06-854e-305854a25b03",
