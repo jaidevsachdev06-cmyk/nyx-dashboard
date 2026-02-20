@@ -854,5 +854,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T08:34:54.694Z"
+  },
+  {
+    "id": "c0f97555-58dc-461f-b078-52d3cd366208",
+    "market": "Will the Iranian regime fall by June 30?",
+    "side": "No",
+    "entryPrice": 0.725,
+    "currentPrice": 0.725,
+    "shares": 7.86,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Roflan, archaic",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 91.6,
+    "avgWinRate": 74.1,
+    "reasoning": "Consensus: 3 whales (avg score 91.6, WR 74.1%) No. bet=$5.70, shares=7.86. Whales: Car, Roflan, archaic",
+    "endDate": "2026-06-30",
+    "conditionId": "0x9352c559e9648ab4cab236087b64ca85c5b7123a4c7d9d7d4efde4a39c18056f",
+    "createdAt": "2026-02-20T08:35:30.939Z",
+    "invested": 5.6985,
+    "currentValue": 5.6985,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T08:35:30.939Z"
   }
 ]
