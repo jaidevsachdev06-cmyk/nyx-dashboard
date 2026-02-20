@@ -835,14 +835,14 @@
     "avgWinRate": 68.6,
     "reasoning": "Consensus: 4 whales (avg score 83.3, avg WR 68.6%) on Yes. Whales: Car, kekkone, gopfan2, GollumGekko",
     "endDate": "2026-09-30",
-    "conditionId": "0x502a94e5c525766d5e",
+    "conditionId": "0x502a94e5c525766d5ee7f16c6568131ba1b2cbadb69c703af05a6ef00336ed64",
     "createdAt": "2026-02-19T20:01:36.445Z",
     "invested": 7.55,
     "currentValue": 7.55,
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-19T20:01:36.445Z",
-    "updatedAt": "2026-02-20T02:20:35.797Z"
+    "updatedAt": "2026-02-20T02:21:01.702Z"
   },
   {
     "id": "f1e078b8-e843-48db-9a10-3424b0787c18",
