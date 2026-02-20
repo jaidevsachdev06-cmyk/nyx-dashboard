@@ -722,5 +722,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T04:01:35.501Z"
+  },
+  {
+    "id": "a53612ea-04c6-4215-9565-5465b0a99faa",
+    "market": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+    "side": "Yes",
+    "entryPrice": 0.9275,
+    "currentPrice": 0.9275,
+    "shares": 5.12,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "elucidate, Mombil, JAHODA, wkmfa57",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 79.1,
+    "avgWinRate": 61.7,
+    "reasoning": "Consensus: 4 whales (avg score 79.1, avg WR 61.7%) on Yes. tier=1%, wrScale=0.95, bet=$4.75, shares=5.12. Whales: elucidate, Mombil, JAHODA, wkmfa57",
+    "endDate": "2026-03-18",
+    "conditionId": "",
+    "createdAt": "2026-02-20T04:01:39.366Z",
+    "invested": 4.7488,
+    "currentValue": 4.7488,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T04:01:39.366Z"
   }
 ]
