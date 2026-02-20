@@ -1191,5 +1191,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-20T08:36:50.006Z"
+  },
+  {
+    "id": "450e2eaa-7823-43e3-89ed-b79ec25730b2",
+    "market": "Will GTA 6 cost $100+?",
+    "side": "No",
+    "entryPrice": 0.9955,
+    "currentPrice": 0.9955,
+    "shares": 4.85,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "kekkone, Brokie, Thonker",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78,
+    "avgWinRate": 62.8,
+    "reasoning": "Consensus: 3 whales (avg score 78, WR 62.8%) No. bet=$4.83, shares=4.85. Whales: kekkone, Brokie, Thonker",
+    "endDate": "2026-02-28",
+    "conditionId": "0xae5584fbb57f23c1c608d544b656f23d8bf12340cef70811cf31bb0cb4fc2115",
+    "createdAt": "2026-02-20T08:36:59.917Z",
+    "invested": 4.828175,
+    "currentValue": 4.828175,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-20T08:36:59.917Z"
   }
 ]
