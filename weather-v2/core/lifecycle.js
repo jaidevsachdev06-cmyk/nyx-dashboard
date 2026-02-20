@@ -11,13 +11,17 @@ const config = require('../config.json');
 async function registerCandidate(candidateTrade) {
   console.log(`[lifecycle] Registering candidate: ${candidateTrade.city} ${candidateTrade.date} ${candidateTrade.bucket} ${candidateTrade.side}`);
 
-  const validation = await polymarket.validateConditionId(candidateTrade.conditionId);
-  if (!validation.valid) {
-    console.error(`[lifecycle] REJECTED candidate — conditionId validation failed: ${validation.error}`);
-    throw new Error(`Candidate rejected: ${validation.error}`);
+  // Skip Dome re-validation if conditionId is well-formed (scanner already sourced it from Dome)
+  if (candidateTrade.conditionId?.match(/^0x[a-fA-F0-9]{64}$/) && candidateTrade.tokenId) {
+    console.log(`[lifecycle] conditionId format valid, skipping re-validation (scanner-sourced)`);
+  } else {
+    const validation = await polymarket.validateConditionId(candidateTrade.conditionId);
+    if (!validation.valid) {
+      console.error(`[lifecycle] REJECTED candidate — conditionId validation failed: ${validation.error}`);
+      throw new Error(`Candidate rejected: ${validation.error}`);
+    }
+    console.log(`[lifecycle] conditionId confirmed on Polymarket: ${validation.market.question || validation.market.title || candidateTrade.conditionId}`);
   }
-
-  console.log(`[lifecycle] conditionId confirmed on Polymarket: ${validation.market.question || validation.market.title || candidateTrade.conditionId}`);
   const trade = store.add(candidateTrade);
   return trade;
 }

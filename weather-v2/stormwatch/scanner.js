@@ -215,15 +215,15 @@ async function scan() {
           const modelProb = bucketProbability(bucket, forecast.mean, forecast.sd);
           if (modelProb === null) continue;
 
-          // Skip extreme probabilities — no actionable edge
-          if (modelProb < 0.03 || modelProb > 0.97) continue;
+          // Skip extreme probabilities — no edge possible regardless of price
+          if (modelProb < 0.05 || modelProb > 0.95) continue;
 
-          // Get market price
+          // Get market identifiers
           const conditionId = market.condition_id || market.conditionId;
-          // Dome returns side_a (Yes) and side_b (No) with id fields
           const tokenId = market.side_a?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'yes')?.token_id || '';
+          
+          // Fetch price only for markets with potential edge (probability filter already applied)
           let marketPrice = null;
-
           if (tokenId) {
             try {
               marketPrice = await polymarket.getMidpointPrice(tokenId);
@@ -232,7 +232,7 @@ async function scan() {
             }
           }
 
-          if (!marketPrice || marketPrice <= 0.03 || marketPrice >= 0.97) continue;
+          if (!marketPrice || marketPrice <= 0.05 || marketPrice >= 0.95) continue;
 
           // Step 4: Calculate edge
           const side = modelProb > marketPrice ? 'YES' : 'NO';
