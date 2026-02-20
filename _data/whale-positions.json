@@ -226,7 +226,7 @@
     "invested": 49.995,
     "whales": "Roflan, debased, Qualitative",
     "whaleCount": 3,
-    "status": "open",
+    "status": "closed-exit",
     "createdAt": "2026-02-18T03:10:28.559Z",
     "currentValue": 45.45,
     "pnl": -4.544999999999995,
@@ -234,7 +234,8 @@
     "entryDate": "2026-02-18T03:10:28.559Z",
     "currentPrice": 0.75,
     "conditionId": "0x569d909807a5d032aac3cbb3971c503f72552bb49378636fc2812820158c7a64",
-    "updatedAt": "2026-02-20T04:30:06.385Z"
+    "updatedAt": "2026-02-20T08:01:21.899Z",
+    "notes": "Dropped from whale consensus entirely"
   },
   {
     "id": "0eaca637-2bfc-4690-a89a-ee519e4810d0",
