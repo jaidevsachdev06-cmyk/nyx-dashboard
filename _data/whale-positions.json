@@ -714,13 +714,14 @@
     "avgWinRate": 68.9,
     "reasoning": "Consensus: 4 whales (avg score 79.3, avg WR 68.9%) on Yes. Whales: Brokie, Influenz, TheWolfOfPoly, GollumGekko",
     "endDate": "2028-11-07",
-    "conditionId": "",
+    "conditionId": "0x24258776d0a926b4550b0f213267b95ba0a7741fc972d0b3c2b5f6bf8ced2c50",
     "createdAt": "2026-02-19T16:03:02.734Z",
     "invested": 0.135,
     "currentValue": 0.135,
     "pnl": 0,
     "pnlPercent": 0,
-    "entryDate": "2026-02-19T16:03:02.734Z"
+    "entryDate": "2026-02-19T16:03:02.734Z",
+    "updatedAt": "2026-02-20T02:21:00.914Z"
   },
   {
     "id": "27aac9c6-883f-4ee9-bcdf-0f9a5582b2cf",
