@@ -256,7 +256,7 @@ function fmtDate(ts) {
   if (!ts) return '—';
   return new Date(ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 }
-function fmtMoney(n) { if (n == null) return '—'; if (n !== 0 && Math.abs(n) < 0.01) return `$${n.toPrecision(2)}`; return `$${n.toFixed(2)}`; }
+function fmtMoney(n) { if (n == null) return '—'; const r = Math.round((n || 0) * 100) / 100; return `$${r.toFixed(2)}`; }
 function fmtCountdown(ts) {
   if (!ts) return '';
   const ms = new Date(ts).getTime() - Date.now();

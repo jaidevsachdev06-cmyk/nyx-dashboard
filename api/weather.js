@@ -62,7 +62,7 @@ module.exports = async (req, res) => {
         entryPrice: t.entryPrice,
         currentPrice: t.currentPrice ?? t.entryPrice,
         sizeUSDC: t.sizeUSDC,
-        pnlUSDC: t.pnlUSDC ?? 0,
+        pnlUSDC: Math.round((t.pnlUSDC ?? 0) * 100) / 100,
         signal: t.signal,
         conditionId: t.conditionId,
         tokenId: t.tokenId,
