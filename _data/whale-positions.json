@@ -2274,5 +2274,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-21T12:01:49.463Z"
+  },
+  {
+    "id": "0edaae8a-071a-4e19-9b40-cbbfcf5086b0",
+    "market": "Will Lighter reach $10 before 2027?",
+    "side": "No",
+    "entryPrice": 0.9199999999999999,
+    "currentPrice": 0.9199999999999999,
+    "shares": 5.57,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "x.compolymarketbet, XieGuangKun, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 80,
+    "avgWinRate": 66.6,
+    "reasoning": "Consensus: 3 whales (avg score 80, WR 66.6%) No. bet=$5.12, shares=5.57. Whales: x.compolymarketbet, XieGuangKun, GollumGekko",
+    "endDate": "2027-01-01",
+    "conditionId": "0x3392d482621c56ea88b671505df166ab696f540e35f775f459cd1531e9175855",
+    "createdAt": "2026-02-21T12:01:54.457Z",
+    "invested": 5.1244,
+    "currentValue": 5.1244,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T12:01:54.457Z"
   }
 ]
