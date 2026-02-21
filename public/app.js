@@ -550,7 +550,8 @@ async function loadPolymarket() {
       <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px">
         <span>${sideBadge(p.position)}</span>
         <span>📊 ${(p.tags || []).map(t => `<span style="background:rgba(255,255,255,0.04);padding:2px 8px;border-radius:6px;font-size:11px">${t}</span>`).join(' ') || '—'}</span>
-        <span>⏱️ ${p.createdAt ? timeAgo(p.createdAt) : '—'}</span>
+        <span>📅 Entered: <strong>${p.createdAt ? fmtDate(p.createdAt) : '—'}</strong></span>
+        <span>🏁 Resolves: <strong>${p.endDate || p.resolutionDate ? fmtDate(p.endDate || p.resolutionDate) : '—'}</strong></span>
       </div>
       <div style="font-size:12px;color:var(--text-dim);margin-top:6px;line-height:1.5">💡 ${p.notes || 'No reasoning recorded'}</div>
     </td></tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim);padding:20px">No open positions</td></tr>';
@@ -567,7 +568,10 @@ async function loadPolymarket() {
             ${p.position || ''} · Entry ${fmtMoney(p.entryPrice)} → Exit ${fmtMoney(p.exitPrice || p.currentPrice)} · ${p.shares || 0} shares
           </div>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${p.notes || 'No reasoning'}</div>
-          <div class="activity-meta"><span>${p.updatedAt ? timeAgo(p.updatedAt) : '—'}</span></div>
+          <div class="activity-meta">
+            <span>📅 Entered: ${p.createdAt ? fmtDate(p.createdAt) : '—'}</span>
+            <span style="margin-left:12px">🏁 Closed: ${p.updatedAt ? fmtDate(p.updatedAt) : '—'}</span>
+          </div>
         </div>
       </div>
     `).join('') : '<div style="color:var(--text-dim);padding:20px">No closed trades yet</div>';
@@ -595,7 +599,7 @@ async function loadWeatherTrades() {
     } else {
       // Map v2 openPositions to the format the frontend expects
       const openPos = (raw.openPositions || []).map(t => ({
-        ...t, status: 'open', market: `${t.city} ${t.date} ${t.bucket}`,
+        ...t, status: 'open', market: t.market || t.question || `${t.city} ${t.date} ${t.bucket}`,
         shares: t.sizeUSDC && t.entryPrice ? t.sizeUSDC / t.entryPrice : 0,
         currentPrice: t.currentPrice ?? t.entryPrice,
         pnl: t.pnlUSDC ?? 0,
@@ -607,7 +611,7 @@ async function loadWeatherTrades() {
       }));
       const closedPos = (raw.recentTrades || []).map(t => ({
         ...t, status: t.result === 'win' ? 'closed-win' : 'closed-loss',
-        market: `${t.city} ${t.date} ${t.bucket}`, pnl: t.pnlUSDC || 0,
+        market: t.market || t.question || `${t.city} ${t.date} ${t.bucket}`, pnl: t.pnlUSDC || 0,
         shares: t.sizeUSDC && t.entryPrice ? Math.round(t.sizeUSDC / t.entryPrice) : 0,
       }));
       trades = [...openPos, ...closedPos];
@@ -669,7 +673,8 @@ async function loadWeatherTrades() {
         <span>🌡️ NOAA: <strong>${t.noaaForecast || '—'}</strong></span>
         <span>📊 Confidence: ${confBadge(t.forecastConfidence)}</span>
         <span>📈 Edge: ${edgePct(t)}</span>
-        <span>⏱️ ${t.createdAt ? timeAgo(t.createdAt) : '—'}</span>
+        <span>📅 Entered: <strong>${t.createdAt ? fmtDate(t.createdAt) : '—'}</strong></span>
+        <span>🏁 Resolves: <strong>${t.date ? fmtDate(t.date + 'T23:59:59Z') : t.endDate ? fmtDate(t.endDate) : '—'}</strong></span>
       </div>
       <div style="font-size:12px;color:var(--text-dim);margin-top:6px;line-height:1.5">💡 ${t.reasoning || t.notes || 'No reasoning recorded'}</div>
     </td></tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim);padding:20px">No open weather positions</td></tr>';
@@ -693,7 +698,10 @@ async function loadWeatherTrades() {
             Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.currentPrice)} · ${t.shares || '—'} shares
           </div>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${reason}</div>
-          <div class="activity-meta"><span>${t.updatedAt ? timeAgo(t.updatedAt) : '—'}</span></div>
+          <div class="activity-meta">
+            <span>📅 Entered: ${t.createdAt ? fmtDate(t.createdAt) : '—'}</span>
+            <span style="margin-left:12px">🏁 Closed: ${t.updatedAt ? fmtDate(t.updatedAt) : '—'}</span>
+          </div>
         </div>
       </div>`;
     }).join('') : '<div style="color:var(--text-dim);padding:20px">No resolved trades yet</div>';
@@ -774,10 +782,8 @@ async function loadWhaleTrades() {
     all.forEach(t => {
       if (t.pnl != null && t.pnl !== 0) { /* keep server pnl */ }
       else if (t.entryPrice != null && t.currentPrice != null && t.shares) {
-        const isNo = (t.side || '').toLowerCase() === 'no';
-        t.pnl = isNo
-          ? (t.entryPrice - t.currentPrice) * t.shares
-          : (t.currentPrice - t.entryPrice) * t.shares;
+        // Both YES and NO prices are stored as their own token price, so formula is same for both
+        t.pnl = (t.currentPrice - t.entryPrice) * t.shares;
       } else { t.pnl = t.pnl || 0; }
     });
     const open = all.filter(t => t.status === 'open');
@@ -851,7 +857,8 @@ async function loadWhaleTrades() {
         <span>🐋 Whales: <strong>${t.whales || '—'}</strong></span>
         <span>📊 Confidence: ${whaleConfBadge(t.confidence)}</span>
         <span>📡 ${t.source || 'predicting.top'}</span>
-        <span>⏱️ ${t.createdAt ? timeAgo(t.createdAt) : '—'}</span>
+        <span>📅 Entered: <strong>${t.createdAt ? fmtDate(t.createdAt) : '—'}</strong></span>
+        <span>🏁 Resolves: <strong>${t.endDate ? fmtDate(t.endDate) : '—'}</strong></span>
       </div>
       <div style="font-size:12px;color:var(--text-dim);margin-top:6px;line-height:1.5">💡 ${t.reasoning || t.notes || 'No reasoning recorded'}</div>
     </td></tr>`).join('') || '<tr><td colspan="7" style="color:var(--text-dim);padding:20px">No open whale positions</td></tr>';
@@ -868,7 +875,10 @@ async function loadWhaleTrades() {
             ${t.side || ''} · Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.currentPrice)} · ${t.shares || 0} shares · Whales: ${t.whales || '—'}
           </div>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${t.reasoning || t.notes || 'No reasoning'}</div>
-          <div class="activity-meta"><span>${t.updatedAt ? timeAgo(t.updatedAt) : '—'}</span></div>
+          <div class="activity-meta">
+            <span>📅 Entered: ${t.createdAt ? fmtDate(t.createdAt) : '—'}</span>
+            <span style="margin-left:12px">🏁 Closed: ${t.updatedAt ? fmtDate(t.updatedAt) : '—'}</span>
+          </div>
         </div>
       </div>
     `).join('') : '<div style="color:var(--text-dim);padding:20px">No closed whale trades yet</div>';
@@ -1093,12 +1103,13 @@ function showModal(type, existing = null) {
         <label>Entry Price</label><input type="number" step="0.01" id="m-entry" value="${existing?.entryPrice || ''}">
         <label>Current Price</label><input type="number" step="0.01" id="m-current" value="${existing?.currentPrice || ''}">
         <label>Shares</label><input type="number" id="m-shares" value="${existing?.shares || ''}">
+        <label>Entry Date</label><input type="datetime-local" id="m-entrydate" value="${(existing?.entryDate || existing?.createdAt ? new Date(existing.entryDate || existing.createdAt) : new Date()).toISOString().slice(0,16)}">
         <label>Status</label><select id="m-status"><option value="open">Open</option><option value="closed-win" ${existing?.status==='closed-win'?'selected':''}>Closed (Win)</option><option value="closed-loss" ${existing?.status==='closed-loss'?'selected':''}>Closed (Loss)</option></select>
         <label>Notes</label><textarea id="m-notes">${existing?.notes || ''}</textarea>
         <label>Tags (comma-separated)</label><input id="m-tags" value="${(existing?.tags || []).join(', ')}">
       `;
       onSubmit = async () => {
-        const data = { market: v('m-market'), marketUrl: v('m-url'), position: v('m-position'), entryPrice: parseFloat(v('m-entry')), currentPrice: parseFloat(v('m-current') || v('m-entry')), shares: parseFloat(v('m-shares')), status: v('m-status'), notes: v('m-notes'), tags: v('m-tags').split(',').map(s=>s.trim()).filter(Boolean) };
+        const data = { market: v('m-market'), marketUrl: v('m-url'), position: v('m-position'), entryPrice: parseFloat(v('m-entry')), currentPrice: parseFloat(v('m-current') || v('m-entry')), shares: parseFloat(v('m-shares')), entryDate: new Date(v('m-entrydate')).toISOString(), status: v('m-status'), notes: v('m-notes'), tags: v('m-tags').split(',').map(s=>s.trim()).filter(Boolean) };
         data.invested = data.entryPrice * data.shares;
         data.currentValue = data.currentPrice * data.shares;
         data.pnl = data.currentValue - data.invested;
@@ -1145,11 +1156,12 @@ function showModal(type, existing = null) {
         <label>Bucket (temp range)</label><input id="m-bucket" value="${existing?.bucket || ''}" placeholder="e.g. 30-35°F">
         <label>Entry Price</label><input type="number" step="0.01" id="m-entry" value="${existing?.entryPrice || ''}">
         <label>Shares</label><input type="number" id="m-shares" value="${existing?.shares || ''}">
+        <label>Entry Date</label><input type="datetime-local" id="m-entrydate" value="${(existing?.entryDate || existing?.createdAt ? new Date(existing.entryDate || existing.createdAt) : new Date()).toISOString().slice(0,16)}">
         <label>Status</label><select id="m-status"><option value="open">Open</option><option value="closed-win" ${existing?.status==='closed-win'?'selected':''}>Closed (Win)</option><option value="closed-loss" ${existing?.status==='closed-loss'?'selected':''}>Closed (Loss)</option></select>
         <label>Reasoning</label><textarea id="m-reasoning">${existing?.reasoning || ''}</textarea>
       `;
       onSubmit = async () => {
-        const data = { city: v('m-city'), market: v('m-market'), marketId: v('m-marketid'), marketUrl: v('m-url'), side: v('m-side'), bucket: v('m-bucket'), entryPrice: parseFloat(v('m-entry')) || 0, shares: parseFloat(v('m-shares')) || 0, status: v('m-status'), reasoning: v('m-reasoning'), source: 'manual' };
+        const data = { city: v('m-city'), market: v('m-market'), marketId: v('m-marketid'), marketUrl: v('m-url'), side: v('m-side'), bucket: v('m-bucket'), entryPrice: parseFloat(v('m-entry')) || 0, shares: parseFloat(v('m-shares')) || 0, entryDate: new Date(v('m-entrydate')).toISOString(), status: v('m-status'), reasoning: v('m-reasoning'), source: 'manual' };
         data.currentPrice = data.entryPrice;
         data.pnl = 0;
         data.pnlPercent = 0;

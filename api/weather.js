@@ -53,21 +53,38 @@ module.exports = async (req, res) => {
       },
       byCity,
       bySide,
-      openPositions: open.map(t => ({
-        id: t.id,
-        city: t.city,
-        date: t.date,
-        bucket: t.bucket,
-        side: t.side,
-        entryPrice: t.entryPrice,
-        currentPrice: t.currentPrice ?? t.entryPrice,
-        sizeUSDC: t.sizeUSDC,
-        pnlUSDC: Math.round((t.pnlUSDC ?? 0) * 100) / 100,
-        signal: t.signal,
-        conditionId: t.conditionId,
-        tokenId: t.tokenId,
-        updatedAt: t.updatedAt
-      })),
+      openPositions: open.map(t => {
+        const currentPrice = t.currentPrice ?? t.entryPrice;
+        const entryPrice = t.entryPrice ?? 0;
+        const size = t.size ?? 0;
+        // Always compute live P&L from current market price (not lifecycle inference)
+        const livePnl = (currentPrice - entryPrice) * size;
+        return {
+          id: t.id,
+          city: t.city,
+          date: t.date,
+          bucket: t.bucket,
+          side: t.side,
+          entryPrice,
+          currentPrice,
+          shares: size,
+          sizeUSDC: t.sizeUSDC,
+          pnl: Math.round(livePnl * 100) / 100,
+          pnlUSDC: Math.round(livePnl * 100) / 100,
+          signal: t.signal,
+          conditionId: t.conditionId,
+          tokenId: t.tokenId,
+          market: t.question || t.market || `${t.city} ${t.bucket} ${t.side}`,
+          marketUrl: t.marketUrl || null,
+          createdAt: t.createdAt || t.enteredAt || null,
+          entryDate: t.enteredAt || t.createdAt || null,
+          endDate: t.date ? t.date + 'T23:59:59Z' : null,
+          updatedAt: t.updatedAt,
+          noaaForecast: t.signal?.forecastTemp ?? null,
+          forecastConfidence: t.signal?.confidence || null,
+          reasoning: t.signal ? `Model: ${Math.round((t.signal.modelProb||0)*100)}% vs Market: ${Math.round((t.signal.impliedProb||0)*100)}% | Edge: ${Math.round((t.signal.edge||0)*100)}%` : null
+        };
+      }),
       recentTrades: closed
         .sort((a, b) => (b.closedAt || '').localeCompare(a.closedAt || ''))
         .slice(0, 20)
@@ -78,8 +95,15 @@ module.exports = async (req, res) => {
           bucket: t.bucket,
           side: t.side,
           result: t.result,
+          status: t.result === 'win' ? 'closed-win' : t.result === 'loss' ? 'closed-loss' : 'closed-exit',
+          pnl: t.pnlUSDC,
           pnlUSDC: t.pnlUSDC,
           entryPrice: t.entryPrice,
+          currentPrice: t.currentPrice ?? t.entryPrice,
+          shares: t.size ?? 0,
+          market: t.question || `${t.city} ${t.bucket} ${t.side}`,
+          createdAt: t.createdAt || t.enteredAt || null,
+          updatedAt: t.closedAt || t.updatedAt || null,
           closedAt: t.closedAt
         })),
       statusCounts: {
