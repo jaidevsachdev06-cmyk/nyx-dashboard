@@ -2094,7 +2094,7 @@
     "market": "Will anyone be charged over Daycare fraud in Minnesota by June 30?",
     "side": "Yes",
     "entryPrice": 0.44,
-    "currentPrice": 0.9755,
+    "currentPrice": 0.9935,
     "shares": 12.23,
     "status": "open",
     "source": "consensus-scanner",
@@ -2108,15 +2108,15 @@
     "conditionId": "0x10ecabab35de595bc59ac8f038fa5e12f30b0c3b1b8c59438184ccc221b66165",
     "createdAt": "2026-02-21T12:00:42.432Z",
     "invested": 5.381200000000001,
-    "currentValue": 11.930365,
-    "pnl": 6.5491649999999995,
-    "pnlPercent": 121.70454545454544,
+    "currentValue": 12.150505,
+    "pnl": 6.769305,
+    "pnlPercent": 125.79545454545453,
     "entryDate": "2026-02-21T12:00:42.432Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T19:04:10.187Z"
+    "updatedAt": "2026-02-21T19:34:29.341Z"
   },
   {
     "id": "b3e4a630-e648-4b42-9412-d16c6435a345",
