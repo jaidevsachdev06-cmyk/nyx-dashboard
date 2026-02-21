@@ -1537,5 +1537,29 @@
     "pnlPercent": 0,
     "entryDate": "2026-02-21T04:07:21.469Z",
     "updatedAt": "2026-02-21T04:07:24.475Z"
+  },
+  {
+    "id": "ef5e96bd-702c-4280-add7-e66d1906c3a7",
+    "market": "US strikes Iran by February 20, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.0005,
+    "currentPrice": 0.0005,
+    "shares": 11620,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, Car, debased",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 87,
+    "avgWinRate": 75.5,
+    "reasoning": "Consensus: 3 whales (avg score 87, WR 75.5%) Yes. bet=$5.81, shares=11620. Whales: Roflan, Car, debased",
+    "endDate": "2026-01-31",
+    "conditionId": "0xe1c67f75aac5b10dc28f1a2fbb79b079fc7f7320abfbd6a950a50c372979569b",
+    "createdAt": "2026-02-21T04:07:26.825Z",
+    "invested": 5.8100000000000005,
+    "currentValue": 5.8100000000000005,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T04:07:26.825Z"
   }
 ]
