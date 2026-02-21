@@ -1512,5 +1512,29 @@
     "pnlPercent": 0,
     "entryDate": "2026-02-21T04:07:16.569Z",
     "updatedAt": "2026-02-21T04:07:19.542Z"
+  },
+  {
+    "id": "9d676e38-743b-4419-a776-064113b54eda",
+    "market": "Will Khamenei leave Iran by February 28, 2026?",
+    "side": "No",
+    "entryPrice": 0.9824999999999999,
+    "currentPrice": 0.9824999999999999,
+    "shares": 6.31,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "debased, GollumGekko, archaic",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 88,
+    "avgWinRate": 80.6,
+    "reasoning": "Consensus: 3 whales (avg score 88, WR 80.6%) No. bet=$6.20, shares=6.31. Whales: debased, GollumGekko, archaic",
+    "endDate": "2026-01-09",
+    "conditionId": "0xbcd0df4a902df08f0d355349a4f407319cbc7953fc58fd1f96d746c5ad5a42ff",
+    "createdAt": "2026-02-21T04:07:21.469Z",
+    "invested": 6.199574999999999,
+    "currentValue": 6.199574999999999,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T04:07:21.469Z"
   }
 ]
