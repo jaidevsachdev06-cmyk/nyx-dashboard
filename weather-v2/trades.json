@@ -260,9 +260,9 @@
       "bucket": "40-41°F",
       "question": "Will the highest temperature in Seattle be between 40-41°F on February 20?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.44,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.48,
       "createdAt": "2026-02-20T11:19:55.020Z",
       "signal": {
         "forecastTemp": 41.6,
@@ -278,7 +278,11 @@
       "orderId": "paper-mlussqz1-ypdn",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T01:30:09.993Z"
+      "updatedAt": "2026-02-21T01:30:09.993Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T02:05:07.319Z",
+      "closedAt": "2026-02-21T02:05:07.323Z"
     },
     {
       "id": "oc-mlussqz2-ma57x1",
@@ -741,7 +745,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T00:12:03.263Z",
+    "lastUpdated": "2026-02-21T02:05:07.323Z",
     "lastPriceSync": "2026-02-21T02:00:24.941Z"
   }
 }
