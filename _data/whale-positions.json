@@ -1413,5 +1413,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-21T04:06:56.911Z"
+  },
+  {
+    "id": "cec890f7-2bd4-41c6-ab21-19ae88770fd3",
+    "market": "Will Gavin Newsom win the 2028 US Presidential Election?",
+    "side": "Yes",
+    "entryPrice": 0.1785,
+    "currentPrice": 0.1785,
+    "shares": 28.52,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, Car, gopfan2, kekkone",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 84.6,
+    "avgWinRate": 66.2,
+    "reasoning": "Consensus: 4 whales (avg score 84.6, WR 66.2%) Yes. bet=$5.09, shares=28.52. Whales: scottilicious, Car, gopfan2, kekkone",
+    "endDate": "2028-11-07",
+    "conditionId": "0x4567b275e6b667a6217f5cb4f06a797d3a1eaf1d0281fb5bc8c75e2046ae7e57",
+    "createdAt": "2026-02-21T04:07:01.814Z",
+    "invested": 5.09082,
+    "currentValue": 5.09082,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T04:07:01.814Z"
   }
 ]
