@@ -206,9 +206,9 @@
       "bucket": "80-81°F",
       "question": "Will the highest temperature in Miami be between 80-81°F on February 21?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.27,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.3,
       "createdAt": "2026-02-20T11:19:55.017Z",
       "signal": {
         "forecastTemp": 81.2,
@@ -224,7 +224,11 @@
       "orderId": "paper-mlussqyy-d92e",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T21:00:05.352Z"
+      "updatedAt": "2026-02-21T21:00:05.352Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T22:05:03.777Z",
+      "closedAt": "2026-02-21T22:05:03.781Z"
     },
     {
       "id": "oc-mlussqyy-ve3kzn",
@@ -2539,11 +2543,34 @@
         "modelProb": 0.0994,
         "edge": 0.0144
       }
+    },
+    {
+      "id": "oc-mlwv8y00-0yro5c",
+      "conditionId": "0xcb215838ec8be47a65af34186bfc321b1e79643b8e02ee9859756afdda54ef58",
+      "tokenId": "36469853810532946570153645955711015425897822567819334387907245727444405979374",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-february-21-2026-46-47f",
+      "city": "Seattle",
+      "date": "2026-02-21",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in Seattle be between 46-47°F on February 21?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T22:04:02.208Z",
+      "signal": {
+        "forecastTemp": 45.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.4,
+        "modelProb": 0.5116,
+        "edge": 0.1116
+      }
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T20:11:51.190Z",
+    "lastUpdated": "2026-02-21T22:05:03.782Z",
     "lastPriceSync": "2026-02-21T22:00:31.982Z"
   }
 }
