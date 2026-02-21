@@ -28,7 +28,7 @@
       "orderId": "paper-mlussqyo-wc04",
       "txHash": null,
       "currentPrice": 0.405,
-      "updatedAt": "2026-02-21T02:08:11.375Z"
+      "updatedAt": "2026-02-21T02:12:23.060Z"
     },
     {
       "id": "oc-mlussqyp-o8heja",
@@ -76,7 +76,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -17.83,
+      "pnlUSDC": 17.84,
       "createdAt": "2026-02-20T11:19:55.011Z",
       "signal": {
         "forecastTemp": 80.4,
@@ -92,7 +92,7 @@
       "orderId": "paper-mlussqys-mkkx",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-21T02:08:12.937Z"
+      "updatedAt": "2026-02-21T02:12:24.647Z"
     },
     {
       "id": "oc-mlussqys-vhroa6",
@@ -122,7 +122,7 @@
       "orderId": "paper-mlussqyu-ibpd",
       "txHash": null,
       "currentPrice": 0.20500000000000002,
-      "updatedAt": "2026-02-21T02:08:14.500Z"
+      "updatedAt": "2026-02-21T02:12:26.212Z"
     },
     {
       "id": "oc-mlussqyu-ljqdv4",
@@ -136,7 +136,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 11.97,
+      "pnlUSDC": -11.88,
       "createdAt": "2026-02-20T11:19:55.014Z",
       "signal": {
         "forecastTemp": 1.6,
@@ -151,8 +151,8 @@
       "enteredAt": "2026-02-20T11:19:55.015Z",
       "orderId": "paper-mlussqyv-z8l2",
       "txHash": null,
-      "currentPrice": 0.01,
-      "updatedAt": "2026-02-21T02:08:16.065Z"
+      "currentPrice": 0.014499999999999999,
+      "updatedAt": "2026-02-21T02:12:27.799Z"
     },
     {
       "id": "oc-mlussqyw-e09rb2",
@@ -216,7 +216,7 @@
       "orderId": "paper-mlussqyy-d92e",
       "txHash": null,
       "currentPrice": 0.065,
-      "updatedAt": "2026-02-21T02:08:17.703Z"
+      "updatedAt": "2026-02-21T02:12:29.361Z"
     },
     {
       "id": "oc-mlussqyy-ve3kzn",
@@ -312,7 +312,7 @@
       "orderId": "paper-mlussqz3-o8i9",
       "txHash": null,
       "currentPrice": 0.525,
-      "updatedAt": "2026-02-21T02:08:19.273Z"
+      "updatedAt": "2026-02-21T02:12:30.943Z"
     },
     {
       "id": "oc-mlussqz4-i4gyvi",
@@ -326,7 +326,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -7.02,
+      "pnlUSDC": 7.02,
       "createdAt": "2026-02-20T11:19:55.024Z",
       "signal": {
         "forecastTemp": 10.5,
@@ -342,7 +342,7 @@
       "orderId": "paper-mlussqz5-hc8g",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-21T02:08:20.831Z"
+      "updatedAt": "2026-02-21T02:12:32.508Z"
     },
     {
       "id": "oc-mlussqz6-po8tut",
@@ -372,7 +372,7 @@
       "orderId": "paper-mlussqz7-d5qr",
       "txHash": null,
       "currentPrice": 0.995,
-      "updatedAt": "2026-02-21T02:08:22.413Z"
+      "updatedAt": "2026-02-21T02:12:34.072Z"
     },
     {
       "id": "oc-mlussqz7-szsbrf",
@@ -386,7 +386,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -8.55,
+      "pnlUSDC": -4.42,
       "createdAt": "2026-02-20T11:19:55.027Z",
       "signal": {
         "forecastTemp": 12,
@@ -401,8 +401,8 @@
       "enteredAt": "2026-02-20T11:19:55.028Z",
       "orderId": "paper-mlussqz9-9gr4",
       "txHash": null,
-      "currentPrice": 0.065,
-      "updatedAt": "2026-02-21T02:08:23.972Z"
+      "currentPrice": 0.135,
+      "updatedAt": "2026-02-21T02:12:35.637Z"
     },
     {
       "id": "oc-mlussqz9-wuyo8z",
@@ -416,7 +416,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.36,
+      "pnlUSDC": -2.65,
       "createdAt": "2026-02-20T11:19:55.029Z",
       "signal": {
         "forecastTemp": 69.5,
@@ -431,8 +431,8 @@
       "enteredAt": "2026-02-20T11:19:55.030Z",
       "orderId": "paper-mlussqza-jzve",
       "txHash": null,
-      "currentPrice": 0.16999999999999998,
-      "updatedAt": "2026-02-21T02:08:25.541Z"
+      "currentPrice": 0.165,
+      "updatedAt": "2026-02-21T02:12:37.220Z"
     },
     {
       "id": "oc-mlussqzb-fc5fi3",
@@ -518,7 +518,7 @@
       "orderId": "paper-mlv7j1tu-69dx",
       "txHash": null,
       "currentPrice": 0.14,
-      "updatedAt": "2026-02-21T02:08:27.102Z"
+      "updatedAt": "2026-02-21T02:12:38.814Z"
     },
     {
       "id": "oc-mlv7j1tv-cos48z",
@@ -576,7 +576,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 12.34,
+      "pnlUSDC": -12.34,
       "createdAt": "2026-02-20T22:11:49.312Z",
       "signal": {
         "forecastTemp": 38.8,
@@ -592,7 +592,7 @@
       "orderId": "paper-mlvg33r8-1u05",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T02:08:28.662Z"
+      "updatedAt": "2026-02-21T02:12:40.415Z"
     },
     {
       "id": "oc-mlvg33ra-sfvkjo",
@@ -650,7 +650,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -8.74,
+      "pnlUSDC": -8.83,
       "createdAt": "2026-02-20T22:11:49.319Z",
       "signal": {
         "forecastTemp": 30.2,
@@ -665,8 +665,8 @@
       "enteredAt": "2026-02-20T22:11:49.321Z",
       "orderId": "paper-mlvg33rd-82ij",
       "txHash": null,
-      "currentPrice": 0.039,
-      "updatedAt": "2026-02-21T02:08:30.657Z"
+      "currentPrice": 0.038,
+      "updatedAt": "2026-02-21T02:12:41.987Z"
     },
     {
       "id": "oc-mlvg33rf-4f888n",
@@ -696,7 +696,7 @@
       "orderId": "paper-mlvg33rh-ukol",
       "txHash": null,
       "currentPrice": 0.055,
-      "updatedAt": "2026-02-21T02:08:32.326Z"
+      "updatedAt": "2026-02-21T02:12:43.558Z"
     },
     {
       "id": "oc-mlvg33ri-lbvzs0",
@@ -741,11 +741,107 @@
         "modelProb": 0.5542,
         "edge": 0.4187
       }
+    },
+    {
+      "id": "oc-mlvonw1n-0l1jlv",
+      "conditionId": "0xd7d3c1dfd8b8a07f231c28a4177cfd7c56d623e0180a3bc1584911e07d8d4581",
+      "tokenId": "82536596683756376152610230278194942347033596151805238195033021816291746809603",
+      "marketSlug": "highest-temperature-in-toronto-on-february-22-2026-1c",
+      "city": "Toronto",
+      "date": "2026-02-22",
+      "bucket": "1°C",
+      "question": "Will the highest temperature in Toronto be 1°C on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T02:11:56.027Z",
+      "signal": {
+        "forecastTemp": 1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.16,
+        "modelProb": 0.9044,
+        "edge": 0.7444
+      }
+    },
+    {
+      "id": "oc-mlvonw1r-zy2syl",
+      "conditionId": "0x83fe384f1ab44aada3f98ef88a9724848133dd41ae80617654af07f9f018fdd8",
+      "tokenId": "50615438674373674375712188061198676374567577808576905936344445817359459865963",
+      "marketSlug": "highest-temperature-in-miami-on-february-21-2026-84-85f",
+      "city": "Miami",
+      "date": "2026-02-21",
+      "bucket": "84-85°F",
+      "question": "Will the highest temperature in Miami be between 84-85°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T02:11:56.031Z",
+      "signal": {
+        "forecastTemp": 81.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.655,
+        "modelProb": 0.8996,
+        "edge": 0.2446
+      }
+    },
+    {
+      "id": "oc-mlvonw1s-ny3ckq",
+      "conditionId": "0x2a69c1c785667a4182f82c75df04bfdb653158bf5d95530aa338f29fe8742055",
+      "tokenId": "39556504182331432554352548994143247757829695518850651279630848531151104745458",
+      "marketSlug": "highest-temperature-in-seattle-on-february-22-2026-52-53f",
+      "city": "Seattle",
+      "date": "2026-02-22",
+      "bucket": "52-53°F",
+      "question": "Will the highest temperature in Seattle be between 52-53°F on February 22?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": 0,
+      "createdAt": "2026-02-21T02:11:56.032Z",
+      "signal": {
+        "forecastTemp": 51.6,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.345,
+        "modelProb": 0.5792,
+        "edge": 0.2342
+      },
+      "entryPrice": 0.345,
+      "size": 36,
+      "sizeUSDC": 12.419999999999998,
+      "enteredAt": "2026-02-21T02:11:56.034Z",
+      "orderId": "paper-mlvonw1u-309w",
+      "txHash": null,
+      "currentPrice": 0.345,
+      "updatedAt": "2026-02-21T02:12:45.176Z"
+    },
+    {
+      "id": "oc-mlvonw1v-eapc6p",
+      "conditionId": "0xbe6a6b0841cc9f59f1f19b5b90ba8b4f9395e52963aaca6712510158b149c5c8",
+      "tokenId": "102038675905253404180788771816034770670922765911530181769254455768379170863423",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-21-2026-66-67f",
+      "city": "Atlanta",
+      "date": "2026-02-21",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Atlanta be between 66-67°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T02:11:56.035Z",
+      "signal": {
+        "forecastTemp": 69.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.625,
+        "modelProb": 0.8474,
+        "edge": 0.2224
+      }
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T02:05:07.323Z",
-    "lastPriceSync": "2026-02-21T02:08:33.526Z"
+    "lastUpdated": "2026-02-21T02:11:56.036Z",
+    "lastPriceSync": "2026-02-21T02:12:46.376Z"
   }
 }
