@@ -166,7 +166,7 @@
       "side": "YES",
       "status": "closed",
       "result": "loss",
-      "pnlUSDC": -12.4415,
+      "pnlUSDC": -12.44,
       "createdAt": "2026-02-20T11:19:55.016Z",
       "signal": {
         "forecastTemp": 10.5,
@@ -446,7 +446,7 @@
       "side": "NO",
       "status": "closed",
       "result": "win",
-      "pnlUSDC": 12.625,
+      "pnlUSDC": 12.63,
       "createdAt": "2026-02-20T11:19:55.031Z",
       "signal": {
         "forecastTemp": 74.8,
