@@ -1221,7 +1221,7 @@
     "market": "Russia x Ukraine ceasefire by end of 2026?",
     "side": "Yes",
     "entryPrice": 0.385,
-    "currentPrice": 0.375,
+    "currentPrice": 0.5,
     "shares": 13.04,
     "status": "open",
     "source": "consensus-scanner",
@@ -1235,15 +1235,15 @@
     "conditionId": "0xaeea5f917fc5746387b5f9c0a4263dba035dbb3f0ac6ad72bf92183d21e26739",
     "createdAt": "2026-02-20T08:36:44.901Z",
     "invested": 5.0203999999999995,
-    "currentValue": 4.89,
-    "pnl": -0.13039999999999985,
-    "pnlPercent": -2.5974025974025947,
+    "currentValue": 6.52,
+    "pnl": 1.4996,
+    "pnlPercent": 29.870129870129876,
     "entryDate": "2026-02-20T08:36:44.901Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T10:32:21.190Z"
+    "updatedAt": "2026-02-21T10:53:30.745Z"
   },
   {
     "id": "793af810-3d21-4b1f-a8e6-a856e8adc949",
