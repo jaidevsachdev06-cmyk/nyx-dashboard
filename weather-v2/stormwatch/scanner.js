@@ -220,13 +220,14 @@ async function scan() {
 
           // Get market identifiers
           const conditionId = market.condition_id || market.conditionId;
-          const tokenId = market.side_a?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'yes')?.token_id || '';
+          const yesTokenId = market.side_a?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'yes')?.token_id || '';
+          const noTokenId = market.side_b?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'no')?.token_id || '';
           
           // Fetch price only for markets with potential edge (probability filter already applied)
           let marketPrice = null;
-          if (tokenId) {
+          if (yesTokenId) {
             try {
-              marketPrice = await polymarket.getMidpointPrice(tokenId);
+              marketPrice = await polymarket.getMidpointPrice(yesTokenId);
             } catch (e) {
               console.warn(`[scanner] Price fetch failed: ${e.message}`);
             }
@@ -252,7 +253,7 @@ async function scan() {
             bucket: bucketLabel,
             question,
             conditionId: conditionId || '',
-            tokenId: tokenId || '',
+            tokenId: side === 'YES' ? (yesTokenId || '') : (noTokenId || ''),
             marketSlug: market.market_slug || market.slug || '',
             side,
             forecastTemp: forecast.mean,
