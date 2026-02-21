@@ -2379,7 +2379,7 @@
     "market": "Opinion FDV above $1B one day after launch?",
     "side": "No",
     "entryPrice": 0.9,
-    "currentPrice": 0.88,
+    "currentPrice": 0.875,
     "shares": 5.69,
     "status": "open",
     "source": "consensus-scanner",
@@ -2393,15 +2393,15 @@
     "conditionId": "0x170e907f54cd05c3f181067798610feb95f590d5d4be2bdda699c83249e2666e",
     "createdAt": "2026-02-21T12:02:06.038Z",
     "invested": 5.121,
-    "currentValue": 5.0072,
-    "pnl": -0.11380000000000035,
-    "pnlPercent": -2.222222222222229,
+    "currentValue": 4.978750000000001,
+    "pnl": -0.14224999999999977,
+    "pnlPercent": -2.7777777777777732,
     "entryDate": "2026-02-21T12:02:06.038Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T18:04:49.009Z"
+    "updatedAt": "2026-02-21T18:35:36.607Z"
   },
   {
     "id": "788dbb8a-9b69-426a-929e-f9aa1e43d210",
