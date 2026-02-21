@@ -12,7 +12,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 7.2,
+      "pnlUSDC": 6.3,
       "createdAt": "2026-02-20T11:19:55.005Z",
       "signal": {
         "forecastTemp": 60.3,
@@ -27,8 +27,8 @@
       "enteredAt": "2026-02-20T11:19:55.008Z",
       "orderId": "paper-mlussqyo-wc04",
       "txHash": null,
-      "currentPrice": 0.435,
-      "updatedAt": "2026-02-21T04:09:41.241Z"
+      "currentPrice": 0.415,
+      "updatedAt": "2026-02-21T04:30:01.879Z"
     },
     {
       "id": "oc-mlussqyp-o8heja",
@@ -92,7 +92,7 @@
       "orderId": "paper-mlussqys-mkkx",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-21T04:09:42.995Z"
+      "updatedAt": "2026-02-21T04:30:03.447Z"
     },
     {
       "id": "oc-mlussqys-vhroa6",
@@ -106,7 +106,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.1,
+      "pnlUSDC": 3,
       "createdAt": "2026-02-20T11:19:55.012Z",
       "signal": {
         "forecastTemp": 2.8,
@@ -121,8 +121,8 @@
       "enteredAt": "2026-02-20T11:19:55.013Z",
       "orderId": "paper-mlussqyu-ibpd",
       "txHash": null,
-      "currentPrice": 0.24,
-      "updatedAt": "2026-02-21T04:09:44.586Z"
+      "currentPrice": 0.255,
+      "updatedAt": "2026-02-21T04:30:05.067Z"
     },
     {
       "id": "oc-mlussqyu-ljqdv4",
@@ -152,7 +152,7 @@
       "orderId": "paper-mlussqyv-z8l2",
       "txHash": null,
       "currentPrice": 0.0025,
-      "updatedAt": "2026-02-21T04:09:46.172Z"
+      "updatedAt": "2026-02-21T04:30:06.644Z"
     },
     {
       "id": "oc-mlussqyw-e09rb2",
@@ -200,7 +200,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -8.4,
+      "pnlUSDC": -7.8,
       "createdAt": "2026-02-20T11:19:55.017Z",
       "signal": {
         "forecastTemp": 81.2,
@@ -215,8 +215,8 @@
       "enteredAt": "2026-02-20T11:19:55.018Z",
       "orderId": "paper-mlussqyy-d92e",
       "txHash": null,
-      "currentPrice": 0.065,
-      "updatedAt": "2026-02-21T04:09:47.745Z"
+      "currentPrice": 0.075,
+      "updatedAt": "2026-02-21T04:30:08.207Z"
     },
     {
       "id": "oc-mlussqyy-ve3kzn",
@@ -296,7 +296,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.2,
+      "pnlUSDC": 2.72,
       "createdAt": "2026-02-20T11:19:55.022Z",
       "signal": {
         "forecastTemp": 13.9,
@@ -311,8 +311,8 @@
       "enteredAt": "2026-02-20T11:19:55.023Z",
       "orderId": "paper-mlussqz3-o8i9",
       "txHash": null,
-      "currentPrice": 0.49,
-      "updatedAt": "2026-02-21T04:09:49.337Z"
+      "currentPrice": 0.47500000000000003,
+      "updatedAt": "2026-02-21T04:30:09.779Z"
     },
     {
       "id": "oc-mlussqz4-i4gyvi",
@@ -376,7 +376,7 @@
       "orderId": "paper-mlussqz7-d5qr",
       "txHash": null,
       "currentPrice": 0.9944999999999999,
-      "updatedAt": "2026-02-21T04:09:50.924Z"
+      "updatedAt": "2026-02-21T04:30:11.351Z"
     },
     {
       "id": "oc-mlussqz7-szsbrf",
@@ -406,7 +406,7 @@
       "orderId": "paper-mlussqz9-9gr4",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T04:09:52.509Z"
+      "updatedAt": "2026-02-21T04:30:12.909Z"
     },
     {
       "id": "oc-mlussqz9-wuyo8z",
@@ -420,7 +420,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -6.78,
+      "pnlUSDC": -5.6,
       "createdAt": "2026-02-20T11:19:55.029Z",
       "signal": {
         "forecastTemp": 69.5,
@@ -435,8 +435,8 @@
       "enteredAt": "2026-02-20T11:19:55.030Z",
       "orderId": "paper-mlussqza-jzve",
       "txHash": null,
-      "currentPrice": 0.095,
-      "updatedAt": "2026-02-21T04:09:54.147Z"
+      "currentPrice": 0.11499999999999999,
+      "updatedAt": "2026-02-21T04:30:14.569Z"
     },
     {
       "id": "oc-mlussqzb-fc5fi3",
@@ -500,7 +500,7 @@
       "orderId": "paper-mlv7j1tu-69dx",
       "txHash": null,
       "currentPrice": 0.265,
-      "updatedAt": "2026-02-21T04:09:55.808Z"
+      "updatedAt": "2026-02-21T04:30:16.130Z"
     },
     {
       "id": "oc-mlvg33r4-nslh9y",
@@ -530,7 +530,7 @@
       "orderId": "paper-mlvg33r8-1u05",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T04:09:57.376Z"
+      "updatedAt": "2026-02-21T04:30:17.709Z"
     },
     {
       "id": "oc-mlvg33rb-e7p2fq",
@@ -544,7 +544,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -8.41,
+      "pnlUSDC": -4.7,
       "createdAt": "2026-02-20T22:11:49.319Z",
       "signal": {
         "forecastTemp": 30.2,
@@ -559,8 +559,8 @@
       "enteredAt": "2026-02-20T22:11:49.321Z",
       "orderId": "paper-mlvg33rd-82ij",
       "txHash": null,
-      "currentPrice": 0.042499999999999996,
-      "updatedAt": "2026-02-21T04:09:58.949Z"
+      "currentPrice": 0.0815,
+      "updatedAt": "2026-02-21T04:30:19.345Z"
     },
     {
       "id": "oc-mlvg33rf-4f888n",
@@ -590,7 +590,7 @@
       "orderId": "paper-mlvg33rh-ukol",
       "txHash": null,
       "currentPrice": 0.06,
-      "updatedAt": "2026-02-21T04:10:00.518Z"
+      "updatedAt": "2026-02-21T04:30:20.911Z"
     },
     {
       "id": "oc-mlvonw1s-ny3ckq",
@@ -604,7 +604,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.36,
+      "pnlUSDC": -0.18,
       "createdAt": "2026-02-21T02:11:56.032Z",
       "signal": {
         "forecastTemp": 51.6,
@@ -619,13 +619,795 @@
       "enteredAt": "2026-02-21T02:11:56.034Z",
       "orderId": "paper-mlvonw1u-309w",
       "txHash": null,
-      "currentPrice": 0.335,
-      "updatedAt": "2026-02-21T04:10:02.090Z"
+      "currentPrice": 0.33999999999999997,
+      "updatedAt": "2026-02-21T04:30:22.486Z"
+    },
+    {
+      "id": "oc-mlvsy62u-frumjw",
+      "conditionId": "0xd7d3c1dfd8b8a07f231c28a4177cfd7c56d623e0180a3bc1584911e07d8d4581",
+      "tokenId": "82536596683756376152610230278194942347033596151805238195033021816291746809603",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-toronto-on-february-22-2026-1c",
+      "city": "Toronto",
+      "date": "2026-02-22",
+      "bucket": "1°C",
+      "question": "Will the highest temperature in Toronto be 1°C on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.054Z",
+      "signal": {
+        "forecastTemp": 0.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.18,
+        "modelProb": 0.645,
+        "edge": 0.465
+      }
+    },
+    {
+      "id": "oc-mlvsy62x-q9vvts",
+      "conditionId": "0xb4d3df9702555c515395f52eda011794c1b3b535afb89345e2d8dfcfca1be6a9",
+      "tokenId": "18258445685096944853963164507313461909631202565181267156166731064870398066665",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-toronto-on-february-21-2026-2c",
+      "city": "Toronto",
+      "date": "2026-02-21",
+      "bucket": "2°C",
+      "question": "Will the highest temperature in Toronto be 2°C on February 21?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.057Z",
+      "signal": {
+        "forecastTemp": 2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.5,
+        "modelProb": 0.7887,
+        "edge": 0.2887
+      }
+    },
+    {
+      "id": "oc-mlvsy62y-063v8l",
+      "conditionId": "0x00b78c3b55e908b9659bf1b75883e119ab50389715da6852096df8cc9aec37c9",
+      "tokenId": "61274073909506390344017555720709401191116853330240502123922723798745827393159",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-dallas-on-february-22-2026-57forbelow",
+      "city": "Dallas",
+      "date": "2026-02-22",
+      "bucket": "≤57°F",
+      "question": "Will the highest temperature in Dallas be 57°F or below on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.058Z",
+      "signal": {
+        "forecastTemp": 57,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.365,
+        "modelProb": 0.6395,
+        "edge": 0.2745
+      }
+    },
+    {
+      "id": "oc-mlvsy630-29rf0e",
+      "conditionId": "0xcb215838ec8be47a65af34186bfc321b1e79643b8e02ee9859756afdda54ef58",
+      "tokenId": "39662688978034666853341049291297062826481767402763880469360254279887447372153",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-february-21-2026-46-47f",
+      "city": "Seattle",
+      "date": "2026-02-21",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in Seattle be between 46-47°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.060Z",
+      "signal": {
+        "forecastTemp": 45.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.46,
+        "modelProb": 0.6817,
+        "edge": 0.2217
+      }
+    },
+    {
+      "id": "oc-mlvsy631-00m3h4",
+      "conditionId": "0x7efdc3b9ccbe894a79aba599d9b506d753f6ff89bfddb9a8e42e92b9a0afa3fa",
+      "tokenId": "79255124785525415108018860976895208423217304906985616575713435545201294414000",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-london-on-february-21-2026-14c",
+      "city": "London",
+      "date": "2026-02-21",
+      "bucket": "14°C",
+      "question": "Will the highest temperature in London be 14°C on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.061Z",
+      "signal": {
+        "forecastTemp": 13.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.54,
+        "modelProb": 0.7499,
+        "edge": 0.2099
+      }
+    },
+    {
+      "id": "oc-mlvsy632-catuy9",
+      "conditionId": "0x4001699be350606ae39805cb8b59df5f2b1046460b080ae626c3f2f4a331a600",
+      "tokenId": "88027314013198883858540641349074221799428138661171050811940931409416146557499",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-february-22-2026-9c",
+      "city": "Seoul",
+      "date": "2026-02-22",
+      "bucket": "9°C",
+      "question": "Will the highest temperature in Seoul be 9°C on February 22?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.062Z",
+      "signal": {
+        "forecastTemp": 10.6,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.64,
+        "modelProb": 0.8491,
+        "edge": 0.2091
+      }
+    },
+    {
+      "id": "oc-mlvsy633-ckxb9j",
+      "conditionId": "0x83fe384f1ab44aada3f98ef88a9724848133dd41ae80617654af07f9f018fdd8",
+      "tokenId": "29820864239238242964818361988116807250226366815842000990967301800412711595773",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-miami-on-february-21-2026-84-85f",
+      "city": "Miami",
+      "date": "2026-02-21",
+      "bucket": "84-85°F",
+      "question": "Will the highest temperature in Miami be between 84-85°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.063Z",
+      "signal": {
+        "forecastTemp": 82,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.605,
+        "modelProb": 0.8134,
+        "edge": 0.2084
+      }
+    },
+    {
+      "id": "oc-mlvsy634-s3ps7m",
+      "conditionId": "0x365c5e3a556bb7531368e8eb9dca8667b3d7c36380d60952d43fbf22b4a3ed76",
+      "tokenId": "17893343815924054951380451927958068348458517324273887283454033272931114186212",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-february-21-2026-34-35f",
+      "city": "Chicago",
+      "date": "2026-02-21",
+      "bucket": "34-35°F",
+      "question": "Will the highest temperature in Chicago be between 34-35°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.064Z",
+      "signal": {
+        "forecastTemp": 31.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.65,
+        "modelProb": 0.857,
+        "edge": 0.207
+      }
+    },
+    {
+      "id": "oc-mlvsy635-hklj2a",
+      "conditionId": "0x52bb5cee12c6cf6df3fc1488db685ac79bc202372609435709cff02aed90737e",
+      "tokenId": "42590353031101186860229407320654020584818846341097147741902470381564839138878",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-february-22-2026-32-33f",
+      "city": "Chicago",
+      "date": "2026-02-22",
+      "bucket": "32-33°F",
+      "question": "Will the highest temperature in Chicago be between 32-33°F on February 22?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.065Z",
+      "signal": {
+        "forecastTemp": 29.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.73,
+        "modelProb": 0.9362,
+        "edge": 0.2062
+      }
+    },
+    {
+      "id": "oc-mlvsy637-rh8mz3",
+      "conditionId": "0x2b36294e3460406f2e2fab1624a56c92f4a210ebcd2328c4dadc7d0dfdd81ef6",
+      "tokenId": "49324430484233862233052398594976075478624413609964257028171974267026519113781",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-february-21-2026-44-45f",
+      "city": "Seattle",
+      "date": "2026-02-21",
+      "bucket": "44-45°F",
+      "question": "Will the highest temperature in Seattle be between 44-45°F on February 21?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.067Z",
+      "signal": {
+        "forecastTemp": 45.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.125,
+        "modelProb": 0.3183,
+        "edge": 0.1933
+      }
+    },
+    {
+      "id": "oc-mlvsy638-ti3kzo",
+      "conditionId": "0xf654a61b4dc4797da22955b9f07f34137a24f4113ef4bb5c817d8a182ef994ec",
+      "tokenId": "13226238544856086377795398708857809849705397067025815259028503564331515231108",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-london-on-february-22-2026-15c",
+      "city": "London",
+      "date": "2026-02-21",
+      "bucket": "15°C",
+      "question": "Will the highest temperature in London be 15°C on February 22?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.068Z",
+      "signal": {
+        "forecastTemp": 13.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.69,
+        "modelProb": 0.8798,
+        "edge": 0.1898
+      }
+    },
+    {
+      "id": "oc-mlvsy639-de48zi",
+      "conditionId": "0x61a59234c48bf042ffac407cc83fbc732e9a6dffeeff3e67a324364af88022eb",
+      "tokenId": "15542096587269839116183365349573367124227986729037475300194546596300609780682",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-february-21-2026-48-49f",
+      "city": "Seattle",
+      "date": "2026-02-21",
+      "bucket": "48-49°F",
+      "question": "Will the highest temperature in Seattle be between 48-49°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.069Z",
+      "signal": {
+        "forecastTemp": 45.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.665,
+        "modelProb": 0.8529,
+        "edge": 0.1879
+      }
+    },
+    {
+      "id": "oc-mlvsy63a-iilazi",
+      "conditionId": "0x498e720b331e5cfddda17f2042dff870803ca4a75f58929ae1ed55ecf7667c6a",
+      "tokenId": "48298970355167457333708007766575258342592562122296488144161794138198515374434",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seoul-on-february-22-2026-11c",
+      "city": "Seoul",
+      "date": "2026-02-22",
+      "bucket": "11°C",
+      "question": "Will the highest temperature in Seoul be 11°C on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.070Z",
+      "signal": {
+        "forecastTemp": 10.6,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.066,
+        "modelProb": 0.2523,
+        "edge": 0.1863
+      }
+    },
+    {
+      "id": "oc-mlvsy63b-apvuyz",
+      "conditionId": "0x3986d905b6b4da7ca70e0b8518ced7c40b9e3895bbb65cce16cc550aa48bce14",
+      "tokenId": "3772250419412266380307491201521022023139763378610553103269186957084938374675",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-paris-on-february-22-2026-14c",
+      "city": "Paris",
+      "date": "2026-02-22",
+      "bucket": "14°C",
+      "question": "Will the highest temperature in Paris be 14°C on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.071Z",
+      "signal": {
+        "forecastTemp": 13.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.315,
+        "modelProb": 0.4996,
+        "edge": 0.1846
+      }
+    },
+    {
+      "id": "oc-mlvsy63c-rhr0cs",
+      "conditionId": "0x1b5a63dbb800a84624dd40c0517822168cde495f65ca4221ddc9decb7690f128",
+      "tokenId": "424584906376939008473971870384230591064388179147215896726604327596644622561",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-chicago-on-february-22-2026-28-29f",
+      "city": "Chicago",
+      "date": "2026-02-22",
+      "bucket": "28-29°F",
+      "question": "Will the highest temperature in Chicago be between 28-29°F on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.072Z",
+      "signal": {
+        "forecastTemp": 29.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.26,
+        "modelProb": 0.4401,
+        "edge": 0.1801
+      }
+    },
+    {
+      "id": "oc-mlvsy63d-9qds4f",
+      "conditionId": "0xbe6a6b0841cc9f59f1f19b5b90ba8b4f9395e52963aaca6712510158b149c5c8",
+      "tokenId": "47677590121067496429823225495070645302801705131351281495882494923287617035638",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-21-2026-66-67f",
+      "city": "Atlanta",
+      "date": "2026-02-21",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Atlanta be between 66-67°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.073Z",
+      "signal": {
+        "forecastTemp": 69.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.68,
+        "modelProb": 0.851,
+        "edge": 0.171
+      }
+    },
+    {
+      "id": "oc-mlvsy63e-71jejn",
+      "conditionId": "0x691ff86f54586cf96730b04f7dee8298f60b372a5ae52cbf5568b35bed3a5d25",
+      "tokenId": "26615550573452025857975884281116756573069708513825219395504614160105413773164",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-february-22-2026-8c",
+      "city": "Seoul",
+      "date": "2026-02-22",
+      "bucket": "8°C",
+      "question": "Will the highest temperature in Seoul be 8°C on February 22?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.074Z",
+      "signal": {
+        "forecastTemp": 10.6,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.77,
+        "modelProb": 0.9386,
+        "edge": 0.1686
+      }
+    },
+    {
+      "id": "oc-mlvsy63f-fwn2ne",
+      "conditionId": "0xe9653378076a73653b3e7d9cc21775ea6d22218ceff21ef8acb7f2b4afd31e6e",
+      "tokenId": "39836999515213241742623926038024673103451573524239449483249986512674836052089",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seoul-on-february-22-2026-12corhigher",
+      "city": "Seoul",
+      "date": "2026-02-22",
+      "bucket": "≥12°C",
+      "question": "Will the highest temperature in Seoul be 12°C or higher on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.075Z",
+      "signal": {
+        "forecastTemp": 10.6,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.1095,
+        "modelProb": 0.2743,
+        "edge": 0.1648
+      }
+    },
+    {
+      "id": "oc-mlvsy63g-dm5n9s",
+      "conditionId": "0xc7deb85da08e222cbfe9a04009db87a267c305361576e507e9ceae2bc1389b2d",
+      "tokenId": "99104484894847154300346019881886993627064295350773483988776695950072638102108",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-nyc-on-february-22-2026-40-41f",
+      "city": "New York City",
+      "date": "2026-02-22",
+      "bucket": "40-41°F",
+      "question": "Will the highest temperature in New York City be between 40-41°F on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.076Z",
+      "signal": {
+        "forecastTemp": 39.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.18,
+        "modelProb": 0.3295,
+        "edge": 0.1495
+      }
+    },
+    {
+      "id": "oc-mlvsy63h-obzn38",
+      "conditionId": "0xeffa88c1744334b7cbd3c1f825f177adaa19d07d88da59da3b263b9ce7675310",
+      "tokenId": "10409643514660735725429226904845517051120536298249210107233614976147198052992",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-london-on-february-21-2026-15c",
+      "city": "London",
+      "date": "2026-02-21",
+      "bucket": "15°C",
+      "question": "Will the highest temperature in London be 15°C on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.077Z",
+      "signal": {
+        "forecastTemp": 13.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.735,
+        "modelProb": 0.8798,
+        "edge": 0.1448
+      }
+    },
+    {
+      "id": "oc-mlvsy63j-mmt03j",
+      "conditionId": "0xf80c9ced835b192575aa23d2078433592b5bcef0a4d06e6564b01ed0d5c3643d",
+      "tokenId": "100154843853297209955668872822836473260359297135914078989958285876657911109720",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-toronto-on-february-21-2026-3c",
+      "city": "Toronto",
+      "date": "2026-02-21",
+      "bucket": "3°C",
+      "question": "Will the highest temperature in Toronto be 3°C on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.079Z",
+      "signal": {
+        "forecastTemp": 2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.76,
+        "modelProb": 0.8944,
+        "edge": 0.1344
+      }
+    },
+    {
+      "id": "oc-mlvsy63k-iy0b03",
+      "conditionId": "0xd878c1793a12bc307a6ba6a016c3153701f368f46abf3c7d23f77a3428bad6c4",
+      "tokenId": "34532700361126184795409489052933650451277410036780496118336392789683498326057",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-february-22-2026-36-37f",
+      "city": "New York City",
+      "date": "2026-02-22",
+      "bucket": "36-37°F",
+      "question": "Will the highest temperature in New York City be between 36-37°F on February 22?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.080Z",
+      "signal": {
+        "forecastTemp": 39.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.725,
+        "modelProb": 0.858,
+        "edge": 0.133
+      }
+    },
+    {
+      "id": "oc-mlvsy63l-vpspr5",
+      "conditionId": "0x519e9bb95e6c65611c8aa3a465f5489d0d8bda1c98f348b488d98f3aa48804fc",
+      "tokenId": "2707111055640098210468872822940941193881359458238601642928291296015121312026",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-february-21-2026-62-63f",
+      "city": "Dallas",
+      "date": "2026-02-21",
+      "bucket": "62-63°F",
+      "question": "Will the highest temperature in Dallas be between 62-63°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.081Z",
+      "signal": {
+        "forecastTemp": 60.6,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.665,
+        "modelProb": 0.7976,
+        "edge": 0.1326
+      }
+    },
+    {
+      "id": "oc-mlvsy63m-qkikqk",
+      "conditionId": "0x5f5636a8090e9742340223cacf552536ace5144df1f3adf175fee1c0beebfff0",
+      "tokenId": "39388522133278031087164551533332905695253893231591735155611867125165254146232",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-miami-on-february-22-2026-86-87f",
+      "city": "Miami",
+      "date": "2026-02-22",
+      "bucket": "86-87°F",
+      "question": "Will the highest temperature in Miami be between 86-87°F on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.082Z",
+      "signal": {
+        "forecastTemp": 86.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.315,
+        "modelProb": 0.4436,
+        "edge": 0.1286
+      }
+    },
+    {
+      "id": "oc-mlvsy63n-l374ap",
+      "conditionId": "0x8982ca9241eef8fd90984b6321ea6d040b261ac4abcfef67a6e122fda4df8ff7",
+      "tokenId": "73181608373973014227415256735428242558225975889283577513660104188059501976608",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-paris-on-february-22-2026-13c",
+      "city": "Paris",
+      "date": "2026-02-22",
+      "bucket": "13°C",
+      "question": "Will the highest temperature in Paris be 13°C on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.083Z",
+      "signal": {
+        "forecastTemp": 13.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.375,
+        "modelProb": 0.4996,
+        "edge": 0.1246
+      }
+    },
+    {
+      "id": "oc-mlvsy63p-sdl3gg",
+      "conditionId": "0xa001589e8179292bc576ab9e0eb02361036a44b372216c43e0e1dd7372338cb7",
+      "tokenId": "92879486483994905278577661325313570030259619311718644224383144381360401203792",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-london-on-february-22-2026-14c",
+      "city": "London",
+      "date": "2026-02-22",
+      "bucket": "14°C",
+      "question": "Will the highest temperature in London be 14°C on February 22?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.085Z",
+      "signal": {
+        "forecastTemp": 13.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.565,
+        "modelProb": 0.6817,
+        "edge": 0.1167
+      }
+    },
+    {
+      "id": "oc-mlvsy63q-ldoi7t",
+      "conditionId": "0xaa6cfdef1437a247fd362d1e220b4fb0261d2c217f97ab3e6328dcf58d87d852",
+      "tokenId": "106818396395087994926864304423523923300888385737596276652725232681135671398419",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-february-21-2026-32-33f",
+      "city": "Chicago",
+      "date": "2026-02-21",
+      "bucket": "32-33°F",
+      "question": "Will the highest temperature in Chicago be between 32-33°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.086Z",
+      "signal": {
+        "forecastTemp": 31.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.605,
+        "modelProb": 0.7213,
+        "edge": 0.1163
+      }
+    },
+    {
+      "id": "oc-mlvsy63r-odvdt2",
+      "conditionId": "0xc86d069d5d7988476caaad6ea7078cba96f08aec88fc582840e773bca21ea90e",
+      "tokenId": "33615353960734351991465149046377806852350888315751278914586440725632795006188",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-london-on-february-22-2026-13c",
+      "city": "London",
+      "date": "2026-02-22",
+      "bucket": "13°C",
+      "question": "Will the highest temperature in London be 13°C on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.087Z",
+      "signal": {
+        "forecastTemp": 13.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.215,
+        "modelProb": 0.3183,
+        "edge": 0.1033
+      }
+    },
+    {
+      "id": "oc-mlvsy63s-9fivl2",
+      "conditionId": "0x368c4d4ce0b8d64c640ab78441362afe1841f520e72274dcd81c1459c411cfeb",
+      "tokenId": "305566649280116889970313465062604210803552727960400825527736210538879205427",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-february-21-2026-42-43f",
+      "city": "Seattle",
+      "date": "2026-02-21",
+      "bucket": "42-43°F",
+      "question": "Will the highest temperature in Seattle be between 42-43°F on February 21?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.088Z",
+      "signal": {
+        "forecastTemp": 45.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.063,
+        "modelProb": 0.1471,
+        "edge": 0.0841
+      }
+    },
+    {
+      "id": "oc-mlvsy63u-j3yp9g",
+      "conditionId": "0xb7614df98706d9e007553870aab00616ce1c1107a92007c78439c959b86e2f81",
+      "tokenId": "74722382643836893319584813279160707459892473641313239274301988043975528620337",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-nyc-on-february-22-2026-42-43f",
+      "city": "New York City",
+      "date": "2026-02-22",
+      "bucket": "42-43°F",
+      "question": "Will the highest temperature in New York City be between 42-43°F on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.090Z",
+      "signal": {
+        "forecastTemp": 39.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.07,
+        "modelProb": 0.142,
+        "edge": 0.072
+      }
+    },
+    {
+      "id": "oc-mlvsy63v-4kgvvm",
+      "conditionId": "0xf55cfbfea543263ffccbd41eef36b11bdd4d84109a39c05563079dbee9939bfb",
+      "tokenId": "76041067694228417427550942787183440486777537916120442252023293106013060531361",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-nyc-on-february-21-2026-42-43f",
+      "city": "New York City",
+      "date": "2026-02-21",
+      "bucket": "42-43°F",
+      "question": "Will the highest temperature in New York City be between 42-43°F on February 21?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.091Z",
+      "signal": {
+        "forecastTemp": 45.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.095,
+        "modelProb": 0.1597,
+        "edge": 0.0647
+      }
+    },
+    {
+      "id": "oc-mlvsy63w-t5o27m",
+      "conditionId": "0xb94379154fba7e79c8c4b6b370cd89be24b4775200d142a55ecc01a09b08268f",
+      "tokenId": "75528600089547890076877472798638270536686588467789113037024246112730987248806",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-london-on-february-21-2026-13c",
+      "city": "London",
+      "date": "2026-02-22",
+      "bucket": "13°C",
+      "question": "Will the highest temperature in London be 13°C on February 21?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.092Z",
+      "signal": {
+        "forecastTemp": 13.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.26,
+        "modelProb": 0.3183,
+        "edge": 0.0583
+      }
+    },
+    {
+      "id": "oc-mlvsy63x-2359mb",
+      "conditionId": "0xb10d2ff6470a1e0007e16badfe57955073f484a6243d17d259e06c5dd4f1a111",
+      "tokenId": "3764073438347686582985398568569163178382277043874752040313223430786186907691",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-toronto-on-february-22-2026-0c",
+      "city": "Toronto",
+      "date": "2026-02-22",
+      "bucket": "0°C",
+      "question": "Will the highest temperature in Toronto be 0°C on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.094Z",
+      "signal": {
+        "forecastTemp": 0.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.22,
+        "modelProb": 0.2696,
+        "edge": 0.0496
+      }
+    },
+    {
+      "id": "oc-mlvsy63z-5baal4",
+      "conditionId": "0x907d74a66dfd21f04f660f347f9645731afad78b948d4fead12d50bbf8341f7f",
+      "tokenId": "89360631571901424647850697391729693655808237097018030342244888919617417341651",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-chicago-on-february-22-2026-26-27f",
+      "city": "Chicago",
+      "date": "2026-02-22",
+      "bucket": "26-27°F",
+      "question": "Will the highest temperature in Chicago be between 26-27°F on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T04:11:54.095Z",
+      "signal": {
+        "forecastTemp": 29.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.11,
+        "modelProb": 0.1464,
+        "edge": 0.0364
+      }
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T04:05:08.286Z",
-    "lastPriceSync": "2026-02-21T04:10:03.290Z"
+    "lastUpdated": "2026-02-21T04:11:54.095Z",
+    "lastPriceSync": "2026-02-21T04:30:23.687Z"
   }
 }
