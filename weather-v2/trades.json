@@ -74,9 +74,9 @@
       "bucket": "82-83°F",
       "question": "Will the highest temperature in Miami be between 82-83°F on February 20?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.14,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.15,
       "createdAt": "2026-02-20T11:19:55.011Z",
       "signal": {
         "forecastTemp": 80.4,
@@ -92,7 +92,11 @@
       "orderId": "paper-mlussqys-mkkx",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T09:30:03.291Z"
+      "updatedAt": "2026-02-21T09:30:03.291Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T10:04:59.061Z",
+      "closedAt": "2026-02-21T10:04:59.064Z"
     },
     {
       "id": "oc-mlussqys-vhroa6",
@@ -1741,11 +1745,80 @@
         "modelProb": 0.0668,
         "edge": 0.0143
       }
+    },
+    {
+      "id": "oc-mlw5izb6-44ldeu",
+      "conditionId": "0xb4d3df9702555c515395f52eda011794c1b3b535afb89345e2d8dfcfca1be6a9",
+      "tokenId": "106378839556500376521741407131470777093469452734974238174812273100781145858282",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-toronto-on-february-21-2026-2c",
+      "city": "Toronto",
+      "date": "2026-02-22",
+      "bucket": "2°C",
+      "question": "Will the highest temperature in Toronto be 2°C on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T10:04:00.450Z",
+      "signal": {
+        "forecastTemp": 1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.29,
+        "modelProb": 0.7585,
+        "edge": 0.4685
+      }
+    },
+    {
+      "id": "oc-mlw5izbk-19avhe",
+      "conditionId": "0xe3213f564f6f83d850285170ea8df95fc34dad228d9bee9a85b83bc55c536584",
+      "tokenId": "71396615687693541749612918174057428985870807162336034140568820020614900679020",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-february-22-2026-38-39f",
+      "city": "New York City",
+      "date": "2026-02-22",
+      "bucket": "38-39°F",
+      "question": "Will the highest temperature in New York City be between 38-39°F on February 22?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T10:04:00.464Z",
+      "signal": {
+        "forecastTemp": 40.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.66,
+        "modelProb": 0.7758,
+        "edge": 0.1158
+      }
+    },
+    {
+      "id": "oc-mlw5izbn-jhnsue",
+      "conditionId": "0x6d1fadfef50a78026a46bbb3afdf5f374c78e2ab2b721131b9c3dd79bad886a4",
+      "tokenId": "114858693534907736515626299189907617940459999721135414234883444031500007268600",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-toronto-on-february-22-2026-2corhigher",
+      "city": "Toronto",
+      "date": "2026-02-22",
+      "bucket": "≥2°C",
+      "question": "Will the highest temperature in Toronto be 2°C or higher on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T10:04:00.467Z",
+      "signal": {
+        "forecastTemp": 1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.195,
+        "modelProb": 0.2893,
+        "edge": 0.0943
+      }
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T09:05:04.310Z",
+    "lastUpdated": "2026-02-21T10:04:59.065Z",
     "lastPriceSync": "2026-02-21T10:00:17.396Z"
   }
 }
