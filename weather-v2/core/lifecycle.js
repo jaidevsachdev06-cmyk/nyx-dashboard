@@ -41,8 +41,9 @@ async function enterTrade(tradeId, { price, size }) {
     throw new Error(`Risk limit: "${trade.city}" ${trade.date} already has a position (${sameCityDate[0].bucket} ${sameCityDate[0].side}). Same city+date = 1 position only.`);
   }
 
-  const cityExposure = cityPositions
-    .reduce((sum, t) => sum + (t.sizeUSDC || 0), 0);
+  // Compute exposure for this city across all open positions
+  const cityPositions = openPositions.filter(t => t.city === trade.city);
+  const cityExposure = cityPositions.reduce((sum, t) => sum + (t.sizeUSDC || 0), 0);
   if (cityExposure + sizeUSDC > config.risk.maxExposurePerCity) {
     throw new Error(`Risk limit: city "${trade.city}" exposure exceeds max $${config.risk.maxExposurePerCity}`);
   }
