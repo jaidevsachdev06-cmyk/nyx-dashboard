@@ -10,9 +10,9 @@
       "bucket": "60-61°F",
       "question": "Will the highest temperature in Dallas be between 60-61°F on February 21?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.35,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.375,
       "createdAt": "2026-02-20T11:19:55.005Z",
       "signal": {
         "forecastTemp": 60.3,
@@ -28,7 +28,11 @@
       "orderId": "paper-mlussqyo-wc04",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T22:00:02.066Z"
+      "updatedAt": "2026-02-21T22:00:02.066Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T23:04:59.819Z",
+      "closedAt": "2026-02-21T23:04:59.825Z"
     },
     {
       "id": "oc-mlussqyp-o8heja",
@@ -2570,7 +2574,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T22:05:03.782Z",
+    "lastUpdated": "2026-02-21T23:04:59.827Z",
     "lastPriceSync": "2026-02-21T23:00:29.646Z"
   }
 }
