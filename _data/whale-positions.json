@@ -929,7 +929,7 @@
     "market": "Any country withdraws from EU before 2027?",
     "side": "No",
     "entryPrice": 0.955,
-    "currentPrice": 0.955,
+    "currentPrice": 0.5,
     "shares": 6.05,
     "status": "open",
     "source": "consensus-scanner",
@@ -943,15 +943,15 @@
     "conditionId": "0xffb0723660bcaa860192fe58e950e3a54157093c84083180e77893499f405d18",
     "createdAt": "2026-02-20T08:35:40.914Z",
     "invested": 5.777749999999999,
-    "currentValue": 5.777749999999999,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 3.025,
+    "pnl": -2.7527499999999994,
+    "pnlPercent": -47.643979057591615,
     "entryDate": "2026-02-20T08:35:40.914Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T10:31:48.884Z"
+    "updatedAt": "2026-02-21T10:52:49.160Z"
   },
   {
     "id": "80467dac-b626-4384-ba5a-bd0e3b53c589",
