@@ -2181,7 +2181,7 @@
     "market": "Will Norway win the 2026 FIFA World Cup?",
     "side": "Yes",
     "entryPrice": 0.027,
-    "currentPrice": 0.0275,
+    "currentPrice": 0.027,
     "shares": 193.7,
     "status": "open",
     "source": "consensus-scanner",
@@ -2195,15 +2195,15 @@
     "conditionId": "0x7b52405ad0e0d31bfe970940b67d77f24ecedeab8a2361c11148c02a006e325c",
     "createdAt": "2026-02-21T12:01:08.439Z",
     "invested": 5.2299,
-    "currentValue": 5.32675,
-    "pnl": 0.09684999999999988,
-    "pnlPercent": 1.8518518518518496,
+    "currentValue": 5.2299,
+    "pnl": 0,
+    "pnlPercent": 0,
     "entryDate": "2026-02-21T12:01:08.440Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T19:34:41.316Z"
+    "updatedAt": "2026-02-21T20:04:32.784Z"
   },
   {
     "id": "38914df2-ff1d-4432-a983-b3014e14de02",
