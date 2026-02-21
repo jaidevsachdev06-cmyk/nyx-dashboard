@@ -1248,7 +1248,7 @@
     "market": "Will Trump meet with Delcy Rodríguez by March 31?",
     "side": "No",
     "entryPrice": 0.665,
-    "currentPrice": 0.675,
+    "currentPrice": 0.67,
     "shares": 7.37,
     "status": "open",
     "source": "consensus-scanner",
@@ -1262,15 +1262,15 @@
     "conditionId": "0x6cbd4d03c07e511e1cd839afac09445deda560142530a082ab51d33352bab8a7",
     "createdAt": "2026-02-20T08:36:50.006Z",
     "invested": 4.901050000000001,
-    "currentValue": 4.97475,
-    "pnl": 0.07369999999999965,
-    "pnlPercent": 1.5037593984962334,
+    "currentValue": 4.9379,
+    "pnl": 0.03684999999999938,
+    "pnlPercent": 0.7518796992481076,
     "entryDate": "2026-02-20T08:36:50.006Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T00:02:38.715Z"
+    "updatedAt": "2026-02-21T00:32:40.830Z"
   },
   {
     "id": "450e2eaa-7823-43e3-89ed-b79ec25730b2",
