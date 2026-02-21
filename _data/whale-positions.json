@@ -2154,5 +2154,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-21T12:01:02.158Z"
+  },
+  {
+    "id": "bf2aa847-7c49-4bf4-99b2-ea094f0bbec1",
+    "market": "Will Norway win the 2026 FIFA World Cup?",
+    "side": "Yes",
+    "entryPrice": 0.027,
+    "currentPrice": 0.027,
+    "shares": 193.7,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "gopfan2, failstober, archaic",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 85.9,
+    "avgWinRate": 68,
+    "reasoning": "Consensus: 3 whales (avg score 85.9, WR 68%) Yes. bet=$5.23, shares=193.7. Whales: gopfan2, failstober, archaic",
+    "endDate": "2026-07-20",
+    "conditionId": "0x7b52405ad0e0d31bfe970940b67d77f24ecedeab8a2361c11148c02a006e325c",
+    "createdAt": "2026-02-21T12:01:08.439Z",
+    "invested": 5.2299,
+    "currentValue": 5.2299,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T12:01:08.440Z"
   }
 ]
