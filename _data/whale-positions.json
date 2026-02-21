@@ -2082,5 +2082,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-21T12:00:31.821Z"
+  },
+  {
+    "id": "fb09ee47-c0f2-4e09-8ca4-239394a5a374",
+    "market": "Will anyone be charged over Daycare fraud in Minnesota by June 30?",
+    "side": "Yes",
+    "entryPrice": 0.44,
+    "currentPrice": 0.44,
+    "shares": 12.23,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, scottilicious, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 88.2,
+    "avgWinRate": 69.9,
+    "reasoning": "Consensus: 3 whales (avg score 88.2, WR 69.9%) Yes. bet=$5.38, shares=12.23. Whales: Car, scottilicious, GollumGekko",
+    "endDate": "2026-01-31",
+    "conditionId": "0x10ecabab35de595bc59ac8f038fa5e12f30b0c3b1b8c59438184ccc221b66165",
+    "createdAt": "2026-02-21T12:00:42.432Z",
+    "invested": 5.381200000000001,
+    "currentValue": 5.381200000000001,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T12:00:42.432Z"
   }
 ]
