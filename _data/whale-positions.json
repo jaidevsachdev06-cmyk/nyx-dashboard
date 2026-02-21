@@ -2152,7 +2152,7 @@
     "market": "Will SpaceX's public ticker be $SEX?",
     "side": "No",
     "entryPrice": 0.962,
-    "currentPrice": 0.9555,
+    "currentPrice": 0.9635,
     "shares": 5.78,
     "status": "open",
     "source": "consensus-scanner",
@@ -2166,15 +2166,15 @@
     "conditionId": "0xafb67293d7e12d87cf4ba22e4eb89f1eea353b11c6febaf6b9832213c4529367",
     "createdAt": "2026-02-21T12:01:02.158Z",
     "invested": 5.56036,
-    "currentValue": 5.5227900000000005,
-    "pnl": -0.03756999999999966,
-    "pnlPercent": -0.6756756756756696,
+    "currentValue": 5.569030000000001,
+    "pnl": 0.0086700000000004,
+    "pnlPercent": 0.15592515592516312,
     "entryDate": "2026-02-21T12:01:02.158Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T22:04:29.024Z"
+    "updatedAt": "2026-02-21T22:34:19.286Z"
   },
   {
     "id": "bf2aa847-7c49-4bf4-99b2-ea094f0bbec1",
