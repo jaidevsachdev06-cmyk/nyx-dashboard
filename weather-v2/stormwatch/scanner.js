@@ -254,6 +254,7 @@ async function scan() {
             question,
             conditionId: conditionId || '',
             tokenId: side === 'YES' ? (yesTokenId || '') : (noTokenId || ''),
+            tokenSide: side, // E029: track which side the tokenId belongs to
             marketSlug: market.market_slug || market.slug || '',
             side,
             forecastTemp: forecast.mean,

@@ -76,7 +76,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 17.84,
+      "pnlUSDC": -12.14,
       "createdAt": "2026-02-20T11:19:55.011Z",
       "signal": {
         "forecastTemp": 80.4,
@@ -136,7 +136,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -11.88,
+      "pnlUSDC": 8.52,
       "createdAt": "2026-02-20T11:19:55.014Z",
       "signal": {
         "forecastTemp": 1.6,
@@ -326,7 +326,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 7.02,
+      "pnlUSDC": -11.96,
       "createdAt": "2026-02-20T11:19:55.024Z",
       "signal": {
         "forecastTemp": 10.5,
@@ -576,7 +576,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -12.34,
+      "pnlUSDC": 62.59,
       "createdAt": "2026-02-20T22:11:49.312Z",
       "signal": {
         "forecastTemp": 38.8,
@@ -842,6 +842,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-02-21T02:11:56.036Z",
-    "lastPriceSync": "2026-02-21T02:12:46.376Z"
+    "lastPriceSync": "2026-02-21T02:19:41.517Z"
   }
 }
