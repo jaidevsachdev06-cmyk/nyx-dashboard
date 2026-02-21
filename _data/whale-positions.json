@@ -2239,7 +2239,7 @@
     "market": "Will Norway win the most medals in the 2026 Winter Olympics?",
     "side": "No",
     "entryPrice": 0.002,
-    "currentPrice": 0.0025,
+    "currentPrice": 0.002,
     "shares": 2465,
     "status": "open",
     "source": "consensus-scanner",
@@ -2253,15 +2253,15 @@
     "conditionId": "0xdeaa7932b51ce74186dc0fb1af2c20294d58d6ace29e4c15e0f8ad13a2d5191d",
     "createdAt": "2026-02-21T12:01:21.115Z",
     "invested": 4.93,
-    "currentValue": 6.1625000000000005,
-    "pnl": 1.2325000000000008,
-    "pnlPercent": 25.000000000000018,
+    "currentValue": 4.93,
+    "pnl": 0,
+    "pnlPercent": 0,
     "entryDate": "2026-02-21T12:01:21.115Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T22:34:30.400Z"
+    "updatedAt": "2026-02-21T23:04:32.005Z"
   },
   {
     "id": "5893d0ae-cc3e-479e-b6dc-0bc675f54875",
