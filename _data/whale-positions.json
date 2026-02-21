@@ -1047,7 +1047,7 @@
     "entryPrice": 0.255,
     "currentPrice": 0.0005,
     "shares": 21.45,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Rooke Brollins, nicoco89, Snoorrason",
     "whaleCount": 3,
@@ -1067,7 +1067,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-20T17:02:17.880Z"
+    "updatedAt": "2026-02-21T04:08:56.503Z",
+    "exitPrice": 0.0005,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "44ec72b3-f8b2-427f-8e21-c99202662e3e",
