@@ -2130,5 +2130,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-21T12:00:52.250Z"
+  },
+  {
+    "id": "7ce5432b-7995-43c8-ac7a-3115753df7dc",
+    "market": "Will SpaceX's public ticker be $SEX?",
+    "side": "No",
+    "entryPrice": 0.962,
+    "currentPrice": 0.962,
+    "shares": 5.78,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "aenews, archaic, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 86.2,
+    "avgWinRate": 72.3,
+    "reasoning": "Consensus: 3 whales (avg score 86.2, WR 72.3%) No. bet=$5.56, shares=5.78. Whales: aenews, archaic, GollumGekko",
+    "endDate": "2027-12-31",
+    "conditionId": "0xafb67293d7e12d87cf4ba22e4eb89f1eea353b11c6febaf6b9832213c4529367",
+    "createdAt": "2026-02-21T12:01:02.158Z",
+    "invested": 5.56036,
+    "currentValue": 5.56036,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T12:01:02.158Z"
   }
 ]
