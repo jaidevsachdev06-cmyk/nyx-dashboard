@@ -38,6 +38,22 @@ module.exports = async (req, res) => {
       bySide[s].pnlUSDC += t.pnlUSDC || 0;
     }
 
+    function computeShares(t) {
+      if (typeof t.size === 'number' && t.size > 0) return t.size;
+      if (typeof t.sizeUSDC === 'number' && typeof t.entryPrice === 'number' && t.entryPrice > 0) {
+        return Math.round((t.sizeUSDC / t.entryPrice) * 10000) / 10000;
+      }
+      return 0;
+    }
+
+    function computeExitPrice(t) {
+      if (typeof t.resolutionPrice === 'number') {
+        // Convert Polymarket resolution price (YES=1, NO=0) to held-side exit
+        return (t.side === 'YES') ? t.resolutionPrice : (1 - t.resolutionPrice);
+      }
+      return null;
+    }
+
     return res.json({
       system: 'weather-v2',
       paper: true,
@@ -54,11 +70,10 @@ module.exports = async (req, res) => {
       byCity,
       bySide,
       openPositions: open.map(t => {
-        const currentPrice = t.currentPrice ?? t.entryPrice;
         const entryPrice = t.entryPrice ?? 0;
-        const size = t.size ?? 0;
-        // Always compute live P&L from current market price (not lifecycle inference)
-        const livePnl = (currentPrice - entryPrice) * size;
+        const currentPrice = t.currentPrice ?? entryPrice;
+        const shares = computeShares(t);
+        const livePnl = (currentPrice - entryPrice) * shares;
         return {
           id: t.id,
           city: t.city,
@@ -67,7 +82,7 @@ module.exports = async (req, res) => {
           side: t.side,
           entryPrice,
           currentPrice,
-          shares: size,
+          shares,
           sizeUSDC: t.sizeUSDC,
           pnl: Math.round(livePnl * 100) / 100,
           pnlUSDC: Math.round(livePnl * 100) / 100,
@@ -88,24 +103,28 @@ module.exports = async (req, res) => {
       recentTrades: closed
         .sort((a, b) => (b.closedAt || '').localeCompare(a.closedAt || ''))
         .slice(0, 20)
-        .map(t => ({
-          id: t.id,
-          city: t.city,
-          date: t.date,
-          bucket: t.bucket,
-          side: t.side,
-          result: t.result,
-          status: t.result === 'win' ? 'closed-win' : t.result === 'loss' ? 'closed-loss' : 'closed-exit',
-          pnl: t.pnlUSDC,
-          pnlUSDC: t.pnlUSDC,
-          entryPrice: t.entryPrice,
-          currentPrice: t.currentPrice ?? t.entryPrice,
-          shares: t.size ?? 0,
-          market: t.question || `${t.city} ${t.bucket} ${t.side}`,
-          createdAt: t.createdAt || t.enteredAt || null,
-          updatedAt: t.closedAt || t.updatedAt || null,
-          closedAt: t.closedAt
-        })),
+        .map(t => {
+          const shares = computeShares(t);
+          return ({
+            id: t.id,
+            city: t.city,
+            date: t.date,
+            bucket: t.bucket,
+            side: t.side,
+            result: t.result,
+            status: t.result === 'win' ? 'closed-win' : t.result === 'loss' ? 'closed-loss' : 'closed-exit',
+            pnl: t.pnlUSDC,
+            pnlUSDC: t.pnlUSDC,
+            entryPrice: t.entryPrice,
+            exitPrice: computeExitPrice(t),
+            currentPrice: t.currentPrice ?? t.entryPrice,
+            shares,
+            market: t.question || `${t.city} ${t.bucket} ${t.side}`,
+            createdAt: t.createdAt || t.enteredAt || null,
+            updatedAt: t.closedAt || t.updatedAt || null,
+            closedAt: t.closedAt
+          });
+        }),
       statusCounts: {
         open: open.length,
         closed: closed.length,
