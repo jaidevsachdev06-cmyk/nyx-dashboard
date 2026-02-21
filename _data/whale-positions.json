@@ -1637,5 +1637,29 @@
     "pnlPercent": 0,
     "entryDate": "2026-02-21T04:07:46.594Z",
     "updatedAt": "2026-02-21T04:07:49.338Z"
+  },
+  {
+    "id": "eecea7d8-9a9a-47cf-aeb2-49a90c69c592",
+    "market": "Will Rachida Dati win the Paris mayor election?",
+    "side": "Yes",
+    "entryPrice": 0.255,
+    "currentPrice": 0.255,
+    "shares": 21.53,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "elucidate, Influenz, nicoco89",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 85.5,
+    "avgWinRate": 71.4,
+    "reasoning": "Consensus: 3 whales (avg score 85.5, WR 71.4%) Yes. bet=$5.49, shares=21.53. Whales: elucidate, Influenz, nicoco89",
+    "endDate": "1970-01-01",
+    "conditionId": "0x9a57653d64d44bf591f13dcd3953b7be367e6167f5e8d0a2ee0a2e1e92307831",
+    "createdAt": "2026-02-21T04:07:51.658Z",
+    "invested": 5.490150000000001,
+    "currentValue": 5.490150000000001,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T04:07:51.658Z"
   }
 ]
