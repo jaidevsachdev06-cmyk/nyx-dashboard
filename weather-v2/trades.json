@@ -469,28 +469,6 @@
       "closedAt": "2026-02-20T22:05:15.573Z"
     },
     {
-      "id": "oc-mlussqzd-tbyhrh",
-      "conditionId": "0xdf1b4f9254fccbdf19955175ff66689dfd33812da96702f0d41c052db877f3c9",
-      "tokenId": "15883277218962787511897959099446570447999220953298613316213906706621928401982",
-      "marketSlug": "highest-temperature-in-toronto-on-february-20-2026-4c",
-      "city": "Toronto",
-      "date": "2026-02-20",
-      "bucket": "4°C",
-      "question": "Will the highest temperature in Toronto be 4°C on February 20?",
-      "side": "NO",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-20T11:19:55.033Z",
-      "signal": {
-        "forecastTemp": 2.8,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.66,
-        "modelProb": 0.8806,
-        "edge": 0.2206
-      }
-    },
-    {
       "id": "oc-mlv7j1mp-hcyn08",
       "conditionId": "0x617e52a626ac62326ddaf57e1ff25b3d5dea30fa1830e3c9dfc26df4668cfc80",
       "tokenId": "73586060711550775879796948749876873302099065554554393480159296619285829963030",
@@ -521,50 +499,6 @@
       "updatedAt": "2026-02-21T02:20:54.206Z"
     },
     {
-      "id": "oc-mlv7j1tv-cos48z",
-      "conditionId": "0xb4d3df9702555c515395f52eda011794c1b3b535afb89345e2d8dfcfca1be6a9",
-      "tokenId": "18258445685096944853963164507313461909631202565181267156166731064870398066665",
-      "marketSlug": "highest-temperature-in-toronto-on-february-21-2026-2c",
-      "city": "Toronto",
-      "date": "2026-02-21",
-      "bucket": "2°C",
-      "question": "Will the highest temperature in Toronto be 2°C on February 21?",
-      "side": "YES",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-20T18:12:16.771Z",
-      "signal": {
-        "forecastTemp": 2.1,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.425,
-        "modelProb": 0.886,
-        "edge": 0.461
-      }
-    },
-    {
-      "id": "oc-mlvbsw9l-s7kjbl",
-      "conditionId": "0x524283c7fede1a6768003aa9054dfd59732b455974f487ce4373d09782c3a9ec",
-      "tokenId": "20344770453925967155775112065659923612671645757771807056613844393244852368091",
-      "marketSlug": "highest-temperature-in-atlanta-on-february-20-2026-78-79f",
-      "city": "Atlanta",
-      "date": "2026-02-20",
-      "bucket": "78-79°F",
-      "question": "Will the highest temperature in Atlanta be between 78-79°F on February 20?",
-      "side": "NO",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-20T20:11:54.585Z",
-      "signal": {
-        "forecastTemp": 75.8,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.165,
-        "modelProb": 0.9393,
-        "edge": 0.7743
-      }
-    },
-    {
       "id": "oc-mlvg33r4-nslh9y",
       "conditionId": "0x281f0206b3b85a6de1bf12ad88d9056fb04c91e1f685ba28c7635539d297fc50",
       "tokenId": "30564361124234620087383695611474625409295476050282899095907465313926223128030",
@@ -593,50 +527,6 @@
       "txHash": null,
       "currentPrice": 0.0015,
       "updatedAt": "2026-02-21T02:20:55.802Z"
-    },
-    {
-      "id": "oc-mlvg33ra-sfvkjo",
-      "conditionId": "0x1a5f3b0a158988c48c89943452a1d680a440fcc4053dfd023f104f49fa043014",
-      "tokenId": "94122462302476713177631663512407913873292916652477944782759421987166619792524",
-      "marketSlug": "highest-temperature-in-toronto-on-february-20-2026-2c",
-      "city": "Toronto",
-      "date": "2026-02-20",
-      "bucket": "2°C",
-      "question": "Will the highest temperature in Toronto be 2°C on February 20?",
-      "side": "NO",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-20T22:11:49.318Z",
-      "signal": {
-        "forecastTemp": 2.5,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.075,
-        "modelProb": 0.5,
-        "edge": 0.425
-      }
-    },
-    {
-      "id": "oc-mlvg33rb-t0nzaa",
-      "conditionId": "0x05fe17252de1996c7cf2bd0cb43b9aca2b763b61e6f15d82fe2bcbbf8bfc5181",
-      "tokenId": "10059777089880890231154039294857114989436314379709796751636334372677468555011",
-      "marketSlug": "highest-temperature-in-nyc-on-february-20-2026-38-39f",
-      "city": "New York City",
-      "date": "2026-02-20",
-      "bucket": "38-39°F",
-      "question": "Will the highest temperature in New York City be between 38-39°F on February 20?",
-      "side": "YES",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-20T22:11:49.319Z",
-      "signal": {
-        "forecastTemp": 38.8,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.16,
-        "modelProb": 0.5462,
-        "edge": 0.3862
-      }
     },
     {
       "id": "oc-mlvg33rb-e7p2fq",
@@ -699,94 +589,6 @@
       "updatedAt": "2026-02-21T02:20:58.948Z"
     },
     {
-      "id": "oc-mlvg33ri-lbvzs0",
-      "conditionId": "0x8982ca9241eef8fd90984b6321ea6d040b261ac4abcfef67a6e122fda4df8ff7",
-      "tokenId": "73181608373973014227415256735428242558225975889283577513660104188059501976608",
-      "marketSlug": "highest-temperature-in-paris-on-february-22-2026-13c",
-      "city": "Paris",
-      "date": "2026-02-20",
-      "bucket": "13°C",
-      "question": "Will the highest temperature in Paris be 13°C on February 22?",
-      "side": "NO",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-20T22:11:49.326Z",
-      "signal": {
-        "forecastTemp": 11.2,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.65,
-        "modelProb": 0.931,
-        "edge": 0.281
-      }
-    },
-    {
-      "id": "oc-mlvkdq2m-6vm81m",
-      "conditionId": "0x61e00bf5ddb2bc1499b1f04f09c967c7531e123b9ae608ecda6dcf86bd098664",
-      "tokenId": "57382770208437517116020336322511146635225028528175927299245408074688011187383",
-      "marketSlug": "highest-temperature-in-atlanta-on-february-22-2026-62forhigher",
-      "city": "Atlanta",
-      "date": "2026-02-22",
-      "bucket": "≥62°F",
-      "question": "Will the highest temperature in Atlanta be 62°F or higher on February 22?",
-      "side": "YES",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-21T00:12:03.262Z",
-      "signal": {
-        "forecastTemp": 61.8,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.1355,
-        "modelProb": 0.5542,
-        "edge": 0.4187
-      }
-    },
-    {
-      "id": "oc-mlvonw1n-0l1jlv",
-      "conditionId": "0xd7d3c1dfd8b8a07f231c28a4177cfd7c56d623e0180a3bc1584911e07d8d4581",
-      "tokenId": "82536596683756376152610230278194942347033596151805238195033021816291746809603",
-      "marketSlug": "highest-temperature-in-toronto-on-february-22-2026-1c",
-      "city": "Toronto",
-      "date": "2026-02-22",
-      "bucket": "1°C",
-      "question": "Will the highest temperature in Toronto be 1°C on February 22?",
-      "side": "YES",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-21T02:11:56.027Z",
-      "signal": {
-        "forecastTemp": 1,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.16,
-        "modelProb": 0.9044,
-        "edge": 0.7444
-      }
-    },
-    {
-      "id": "oc-mlvonw1r-zy2syl",
-      "conditionId": "0x83fe384f1ab44aada3f98ef88a9724848133dd41ae80617654af07f9f018fdd8",
-      "tokenId": "50615438674373674375712188061198676374567577808576905936344445817359459865963",
-      "marketSlug": "highest-temperature-in-miami-on-february-21-2026-84-85f",
-      "city": "Miami",
-      "date": "2026-02-21",
-      "bucket": "84-85°F",
-      "question": "Will the highest temperature in Miami be between 84-85°F on February 21?",
-      "side": "NO",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-21T02:11:56.031Z",
-      "signal": {
-        "forecastTemp": 81.4,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.655,
-        "modelProb": 0.8996,
-        "edge": 0.2446
-      }
-    },
-    {
       "id": "oc-mlvonw1s-ny3ckq",
       "conditionId": "0x2a69c1c785667a4182f82c75df04bfdb653158bf5d95530aa338f29fe8742055",
       "tokenId": "39556504182331432554352548994143247757829695518850651279630848531151104745458",
@@ -815,33 +617,11 @@
       "txHash": null,
       "currentPrice": 0.345,
       "updatedAt": "2026-02-21T02:21:00.530Z"
-    },
-    {
-      "id": "oc-mlvonw1v-eapc6p",
-      "conditionId": "0xbe6a6b0841cc9f59f1f19b5b90ba8b4f9395e52963aaca6712510158b149c5c8",
-      "tokenId": "102038675905253404180788771816034770670922765911530181769254455768379170863423",
-      "marketSlug": "highest-temperature-in-atlanta-on-february-21-2026-66-67f",
-      "city": "Atlanta",
-      "date": "2026-02-21",
-      "bucket": "66-67°F",
-      "question": "Will the highest temperature in Atlanta be between 66-67°F on February 21?",
-      "side": "NO",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-02-21T02:11:56.035Z",
-      "signal": {
-        "forecastTemp": 69.2,
-        "forecastSource": "open-meteo",
-        "impliedProb": 0.625,
-        "modelProb": 0.8474,
-        "edge": 0.2224
-      }
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T02:11:56.036Z",
+    "lastUpdated": "2026-02-21T02:28:12.142Z",
     "lastPriceSync": "2026-02-21T02:21:01.729Z"
   }
 }
