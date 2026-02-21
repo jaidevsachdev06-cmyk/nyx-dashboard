@@ -134,9 +134,9 @@
       "bucket": "3°C",
       "question": "Will the highest temperature in Toronto be 3°C on February 20?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.17,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 8.82,
       "createdAt": "2026-02-20T11:19:55.014Z",
       "signal": {
         "forecastTemp": 1.6,
@@ -152,7 +152,11 @@
       "orderId": "paper-mlussqyv-z8l2",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T08:30:06.639Z"
+      "updatedAt": "2026-02-21T08:30:06.639Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T09:05:00.899Z",
+      "closedAt": "2026-02-21T09:05:00.903Z"
     },
     {
       "id": "oc-mlussqyw-e09rb2",
@@ -358,9 +362,9 @@
       "bucket": "2°C",
       "question": "Will the highest temperature in Toronto be 2°C on February 20?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 52.62,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 52.65,
       "createdAt": "2026-02-20T11:19:55.026Z",
       "signal": {
         "forecastTemp": 1.6,
@@ -376,7 +380,11 @@
       "orderId": "paper-mlussqz7-d5qr",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-21T08:41:51.943Z"
+      "updatedAt": "2026-02-21T08:41:51.943Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T09:05:04.307Z",
+      "closedAt": "2026-02-21T09:05:04.309Z"
     },
     {
       "id": "oc-mlussqz7-szsbrf",
@@ -1737,7 +1745,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T08:08:03.809Z",
+    "lastUpdated": "2026-02-21T09:05:04.310Z",
     "lastPriceSync": "2026-02-21T09:00:20.461Z"
   }
 }
