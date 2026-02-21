@@ -302,9 +302,9 @@
       "bucket": "14°C",
       "question": "Will the highest temperature in Paris be 14°C on February 21?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.46,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.48,
       "createdAt": "2026-02-20T11:19:55.022Z",
       "signal": {
         "forecastTemp": 13.9,
@@ -320,7 +320,11 @@
       "orderId": "paper-mlussqz3-o8i9",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T15:00:07.103Z"
+      "updatedAt": "2026-02-21T15:00:07.103Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T16:05:04.679Z",
+      "closedAt": "2026-02-21T16:05:04.684Z"
     },
     {
       "id": "oc-mlussqz4-i4gyvi",
@@ -498,9 +502,9 @@
       "bucket": "15°C",
       "question": "Will the highest temperature in Paris be 15°C on February 21?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.36,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.4,
       "createdAt": "2026-02-20T18:12:16.513Z",
       "signal": {
         "forecastTemp": 14.6,
@@ -516,7 +520,11 @@
       "orderId": "paper-mlv7j1tu-69dx",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T15:30:09.065Z"
+      "updatedAt": "2026-02-21T15:30:09.065Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T16:05:06.830Z",
+      "closedAt": "2026-02-21T16:05:06.833Z"
     },
     {
       "id": "oc-mlvg33r4-nslh9y",
@@ -2003,7 +2011,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T14:11:57.309Z",
+    "lastUpdated": "2026-02-21T16:05:06.834Z",
     "lastPriceSync": "2026-02-21T16:00:19.837Z"
   }
 }
