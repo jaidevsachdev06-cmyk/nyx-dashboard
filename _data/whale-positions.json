@@ -1612,5 +1612,29 @@
     "pnlPercent": 0,
     "entryDate": "2026-02-21T04:07:41.722Z",
     "updatedAt": "2026-02-21T04:07:44.317Z"
+  },
+  {
+    "id": "ae408004-7976-4dce-939c-f50399f313ff",
+    "market": "Will Emmanuel Grégoire win the Paris mayor election?",
+    "side": "Yes",
+    "entryPrice": 0.71,
+    "currentPrice": 0.71,
+    "shares": 7.27,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "elucidate, gopfan2, nicoco89",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 85.7,
+    "avgWinRate": 67.1,
+    "reasoning": "Consensus: 3 whales (avg score 85.7, WR 67.1%) Yes. bet=$5.16, shares=7.27. Whales: elucidate, gopfan2, nicoco89",
+    "endDate": "1970-01-01",
+    "conditionId": "0x65bb9abb6f004f3cffa792bea6ea8f3ccb9067a308627ae159cada2a7291c5c6",
+    "createdAt": "2026-02-21T04:07:46.594Z",
+    "invested": 5.1617,
+    "currentValue": 5.1617,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T04:07:46.594Z"
   }
 ]
