@@ -14,6 +14,15 @@ function authenticate(req) {
   return token === config.dashboard.token;
 }
 
+function computeShares(t) {
+  // Prefer explicit size if present; otherwise derive from sizeUSDC/entryPrice
+  if (typeof t.size === 'number' && t.size > 0) return t.size;
+  if (typeof t.sizeUSDC === 'number' && typeof t.entryPrice === 'number' && t.entryPrice > 0) {
+    return Math.round((t.sizeUSDC / t.entryPrice) * 10000) / 10000;
+  }
+  return null;
+}
+
 function getWeatherData() {
   const trades = store.getAll();
   const open = store.getOpenPositions();
@@ -36,6 +45,8 @@ function getWeatherData() {
       side: t.side,
       entryPrice: t.entryPrice,
       sizeUSDC: t.sizeUSDC,
+      shares: computeShares(t),
+      currentPrice: t.currentPrice ?? null,
       signal: t.signal
     })),
     recentTrades: trades
@@ -51,6 +62,8 @@ function getWeatherData() {
         result: t.result,
         pnlUSDC: t.pnlUSDC,
         entryPrice: t.entryPrice,
+        exitPrice: typeof t.resolutionPrice === 'number' ? ((t.side === 'YES') ? t.resolutionPrice : (1 - t.resolutionPrice)) : null,
+        shares: computeShares(t),
         closedAt: t.closedAt
       })),
     statusCounts: store.statusCounts()
