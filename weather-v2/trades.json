@@ -388,9 +388,9 @@
       "bucket": "12°C",
       "question": "Will the highest temperature in Seoul be 12°C on February 21?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.36,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.39,
       "createdAt": "2026-02-20T11:19:55.027Z",
       "signal": {
         "forecastTemp": 12,
@@ -406,7 +406,11 @@
       "orderId": "paper-mlussqz9-9gr4",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T05:00:12.585Z"
+      "updatedAt": "2026-02-21T05:00:12.585Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T06:05:09.115Z",
+      "closedAt": "2026-02-21T06:05:09.118Z"
     },
     {
       "id": "oc-mlussqz9-wuyo8z",
@@ -512,9 +516,9 @@
       "bucket": "36-37°F",
       "question": "Will the highest temperature in New York City be between 36-37°F on February 20?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 62.59,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 62.625,
       "createdAt": "2026-02-20T22:11:49.312Z",
       "signal": {
         "forecastTemp": 38.8,
@@ -530,7 +534,11 @@
       "orderId": "paper-mlvg33r8-1u05",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T05:30:17.210Z"
+      "updatedAt": "2026-02-21T05:30:17.210Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-21T06:05:12.416Z",
+      "closedAt": "2026-02-21T06:05:12.419Z"
     },
     {
       "id": "oc-mlvg33rb-e7p2fq",
@@ -1407,7 +1415,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T04:11:54.095Z",
+    "lastUpdated": "2026-02-21T06:05:12.420Z",
     "lastPriceSync": "2026-02-21T06:00:22.653Z"
   }
 }
