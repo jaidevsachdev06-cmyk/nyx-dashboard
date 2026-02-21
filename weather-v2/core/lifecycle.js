@@ -30,19 +30,9 @@ async function enterTrade(tradeId, { price, size }) {
   const trade = store.getById(tradeId);
 
   const openPositions = store.getOpenPositions();
-  if (openPositions.length >= config.risk.maxOpenPositions) {
-    throw new Error(`Risk limit: max ${config.risk.maxOpenPositions} open positions (currently ${openPositions.length})`);
-  }
-
   const sizeUSDC = price * size;
   if (sizeUSDC > config.risk.maxPositionSizeUSDC) {
     throw new Error(`Risk limit: position size $${sizeUSDC.toFixed(2)} exceeds max $${config.risk.maxPositionSizeUSDC}`);
-  }
-
-  const cityPositions = openPositions.filter(t => t.city === trade.city);
-  const maxPerCity = config.risk.maxPositionsPerCity || 3;
-  if (cityPositions.length >= maxPerCity) {
-    throw new Error(`Risk limit: city "${trade.city}" already has ${cityPositions.length} open positions (max ${maxPerCity})`);
   }
 
   // E027: Same city + same date = 1 position only (correlated bet protection)
