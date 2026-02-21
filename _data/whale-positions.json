@@ -958,7 +958,7 @@
     "market": "Will Rafael López Aliaga win the 2026 Peruvian presidential election?",
     "side": "Yes",
     "entryPrice": 0.43,
-    "currentPrice": 0.425,
+    "currentPrice": 0.43,
     "shares": 12.79,
     "status": "open",
     "source": "consensus-scanner",
@@ -972,15 +972,15 @@
     "conditionId": "0xae6d3d20bc8f742922dc40880cd8a8671c10385a9912fa7cd670fba0643dfe96",
     "createdAt": "2026-02-20T08:35:45.799Z",
     "invested": 5.4997,
-    "currentValue": 5.43575,
-    "pnl": -0.06395000000000017,
-    "pnlPercent": -1.1627906976744218,
+    "currentValue": 5.4997,
+    "pnl": 0,
+    "pnlPercent": 0,
     "entryDate": "2026-02-20T08:35:45.799Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T23:02:06.746Z"
+    "updatedAt": "2026-02-21T23:32:07.915Z"
   },
   {
     "id": "05649677-f186-4406-95c3-69244e2195d9",
