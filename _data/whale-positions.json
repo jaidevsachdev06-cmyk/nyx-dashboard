@@ -2226,5 +2226,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-21T12:01:21.115Z"
+  },
+  {
+    "id": "5893d0ae-cc3e-479e-b6dc-0bc675f54875",
+    "market": "Will James Talarico win the 2028 Democratic presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.0095,
+    "currentPrice": 0.0095,
+    "shares": 591.58,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Influenz, Qualitative, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.5,
+    "avgWinRate": 73.1,
+    "reasoning": "Consensus: 3 whales (avg score 82.5, WR 73.1%) Yes. bet=$5.62, shares=591.58. Whales: Influenz, Qualitative, GollumGekko",
+    "endDate": "2028-11-07",
+    "conditionId": "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089",
+    "createdAt": "2026-02-21T12:01:41.436Z",
+    "invested": 5.620010000000001,
+    "currentValue": 5.620010000000001,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-21T12:01:41.436Z"
   }
 ]
