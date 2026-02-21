@@ -12,7 +12,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 6.75,
+      "pnlUSDC": 7.42,
       "createdAt": "2026-02-20T11:19:55.005Z",
       "signal": {
         "forecastTemp": 60.3,
@@ -27,8 +27,8 @@
       "enteredAt": "2026-02-20T11:19:55.008Z",
       "orderId": "paper-mlussqyo-wc04",
       "txHash": null,
-      "currentPrice": 0.425,
-      "updatedAt": "2026-02-21T06:00:02.016Z"
+      "currentPrice": 0.43999999999999995,
+      "updatedAt": "2026-02-21T06:30:02.182Z"
     },
     {
       "id": "oc-mlussqyp-o8heja",
@@ -92,7 +92,7 @@
       "orderId": "paper-mlussqys-mkkx",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-21T06:00:03.617Z"
+      "updatedAt": "2026-02-21T06:30:03.765Z"
     },
     {
       "id": "oc-mlussqys-vhroa6",
@@ -106,7 +106,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 6.9,
+      "pnlUSDC": 7.5,
       "createdAt": "2026-02-20T11:19:55.012Z",
       "signal": {
         "forecastTemp": 2.8,
@@ -121,8 +121,8 @@
       "enteredAt": "2026-02-20T11:19:55.013Z",
       "orderId": "paper-mlussqyu-ibpd",
       "txHash": null,
-      "currentPrice": 0.32,
-      "updatedAt": "2026-02-21T06:00:05.183Z"
+      "currentPrice": 0.32999999999999996,
+      "updatedAt": "2026-02-21T06:30:05.329Z"
     },
     {
       "id": "oc-mlussqyu-ljqdv4",
@@ -152,7 +152,7 @@
       "orderId": "paper-mlussqyv-z8l2",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-21T06:00:06.825Z"
+      "updatedAt": "2026-02-21T06:30:06.888Z"
     },
     {
       "id": "oc-mlussqyw-e09rb2",
@@ -216,7 +216,7 @@
       "orderId": "paper-mlussqyy-d92e",
       "txHash": null,
       "currentPrice": 0.08,
-      "updatedAt": "2026-02-21T06:00:08.403Z"
+      "updatedAt": "2026-02-21T06:30:08.444Z"
     },
     {
       "id": "oc-mlussqyy-ve3kzn",
@@ -296,7 +296,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.68,
+      "pnlUSDC": 5.76,
       "createdAt": "2026-02-20T11:19:55.022Z",
       "signal": {
         "forecastTemp": 13.9,
@@ -311,8 +311,8 @@
       "enteredAt": "2026-02-20T11:19:55.023Z",
       "orderId": "paper-mlussqz3-o8i9",
       "txHash": null,
-      "currentPrice": 0.505,
-      "updatedAt": "2026-02-21T06:00:10.004Z"
+      "currentPrice": 0.5700000000000001,
+      "updatedAt": "2026-02-21T06:30:10.009Z"
     },
     {
       "id": "oc-mlussqz4-i4gyvi",
@@ -376,7 +376,7 @@
       "orderId": "paper-mlussqz7-d5qr",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-21T06:00:11.575Z"
+      "updatedAt": "2026-02-21T06:30:11.573Z"
     },
     {
       "id": "oc-mlussqz7-szsbrf",
@@ -424,7 +424,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.18,
+      "pnlUSDC": -4.72,
       "createdAt": "2026-02-20T11:19:55.029Z",
       "signal": {
         "forecastTemp": 69.5,
@@ -439,8 +439,8 @@
       "enteredAt": "2026-02-20T11:19:55.030Z",
       "orderId": "paper-mlussqza-jzve",
       "txHash": null,
-      "currentPrice": 0.19,
-      "updatedAt": "2026-02-21T06:00:14.176Z"
+      "currentPrice": 0.13,
+      "updatedAt": "2026-02-21T06:30:13.181Z"
     },
     {
       "id": "oc-mlussqzb-fc5fi3",
@@ -504,7 +504,7 @@
       "orderId": "paper-mlv7j1tu-69dx",
       "txHash": null,
       "currentPrice": 0.265,
-      "updatedAt": "2026-02-21T06:00:15.765Z"
+      "updatedAt": "2026-02-21T06:30:14.777Z"
     },
     {
       "id": "oc-mlvg33r4-nslh9y",
@@ -552,7 +552,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.18,
+      "pnlUSDC": -5.08,
       "createdAt": "2026-02-20T22:11:49.319Z",
       "signal": {
         "forecastTemp": 30.2,
@@ -567,8 +567,8 @@
       "enteredAt": "2026-02-20T22:11:49.321Z",
       "orderId": "paper-mlvg33rd-82ij",
       "txHash": null,
-      "currentPrice": 0.0975,
-      "updatedAt": "2026-02-21T06:00:18.340Z"
+      "currentPrice": 0.0775,
+      "updatedAt": "2026-02-21T06:30:16.365Z"
     },
     {
       "id": "oc-mlvg33rf-4f888n",
@@ -598,7 +598,7 @@
       "orderId": "paper-mlvg33rh-ukol",
       "txHash": null,
       "currentPrice": 0.06,
-      "updatedAt": "2026-02-21T06:00:19.898Z"
+      "updatedAt": "2026-02-21T06:30:17.936Z"
     },
     {
       "id": "oc-mlvonw1s-ny3ckq",
@@ -612,7 +612,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.08,
+      "pnlUSDC": 0.72,
       "createdAt": "2026-02-21T02:11:56.032Z",
       "signal": {
         "forecastTemp": 51.6,
@@ -627,8 +627,8 @@
       "enteredAt": "2026-02-21T02:11:56.034Z",
       "orderId": "paper-mlvonw1u-309w",
       "txHash": null,
-      "currentPrice": 0.375,
-      "updatedAt": "2026-02-21T06:00:21.453Z"
+      "currentPrice": 0.365,
+      "updatedAt": "2026-02-21T06:30:19.499Z"
     },
     {
       "id": "oc-mlvsy62u-frumjw",
@@ -1411,11 +1411,195 @@
         "modelProb": 0.1464,
         "edge": 0.0364
       }
+    },
+    {
+      "id": "oc-mlvx8u7u-g9riwd",
+      "conditionId": "0x61e00bf5ddb2bc1499b1f04f09c967c7531e123b9ae608ecda6dcf86bd098664",
+      "tokenId": "57382770208437517116020336322511146635225028528175927299245408074688011187383",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-22-2026-62forhigher",
+      "city": "Atlanta",
+      "date": "2026-02-22",
+      "bucket": "≥62°F",
+      "question": "Will the highest temperature in Atlanta be 62°F or higher on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T06:12:10.362Z",
+      "signal": {
+        "forecastTemp": 64.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.156,
+        "modelProb": 0.8922,
+        "edge": 0.7362
+      }
+    },
+    {
+      "id": "oc-mlvx8u7z-6t8x45",
+      "conditionId": "0x8110d45db97551641ee7d5a2721b53297a6b80e00e1a07eb6325f280c87ea9c8",
+      "tokenId": "11456609164315980524710012228987924643526686593521931537170635893664036172466",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-paris-on-february-21-2026-14c",
+      "city": "Paris",
+      "date": "2026-02-21",
+      "bucket": "14°C",
+      "question": "Will the highest temperature in Paris be 14°C on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T06:12:10.367Z",
+      "signal": {
+        "forecastTemp": 15,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.385,
+        "modelProb": 0.8944,
+        "edge": 0.5094
+      }
+    },
+    {
+      "id": "oc-mlvx8u88-ns35za",
+      "conditionId": "0xc2a9875fbf49950b3b28ccf721ea51d2e3b74781e449ba62e50343238fb01994",
+      "tokenId": "55226027150625179007510918863751530023510240736999241789241866702086409591758",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-february-22-2026-58-59f",
+      "city": "Dallas",
+      "date": "2026-02-22",
+      "bucket": "58-59°F",
+      "question": "Will the highest temperature in Dallas be between 58-59°F on February 22?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T06:12:10.376Z",
+      "signal": {
+        "forecastTemp": 56.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.68,
+        "modelProb": 0.8469,
+        "edge": 0.1669
+      }
+    },
+    {
+      "id": "oc-mlvx8u8b-c6pk17",
+      "conditionId": "0xd2f61eed4d2075839bb6c59223dcc7ff7abe48dd39022d26086f0b6f44abc4ab",
+      "tokenId": "25925941224033898017062505399411451779004509082307072399163490623211159575696",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-february-21-2026-46-47f",
+      "city": "New York City",
+      "date": "2026-02-21",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in New York City be between 46-47°F on February 21?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T06:12:10.379Z",
+      "signal": {
+        "forecastTemp": 44.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.615,
+        "modelProb": 0.7596,
+        "edge": 0.1446
+      }
+    },
+    {
+      "id": "oc-mlvx8u8d-kdpcne",
+      "conditionId": "0x1c22a52a5df662a28d7b0ce6f484c0f944e6e2ca148b0454a7ca245037b5512b",
+      "tokenId": "82936258421404910476974210190932570678677982317057990088359099447164469899974",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-february-22-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-02-22",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T06:12:10.381Z",
+      "signal": {
+        "forecastTemp": 51.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.23,
+        "modelProb": 0.3674,
+        "edge": 0.1374
+      }
+    },
+    {
+      "id": "oc-mlvx8u8g-sefjgo",
+      "conditionId": "0x11b7295a74de7dd9c8d0822dfd9d2e727ff8b908c63104a11aaa5a4a593c7852",
+      "tokenId": "94037421434046664516523329709846724898568168099269579780950370140045162186409",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-dallas-on-february-21-2026-59forbelow",
+      "city": "Dallas",
+      "date": "2026-02-21",
+      "bucket": "≤59°F",
+      "question": "Will the highest temperature in Dallas be 59°F or below on February 21?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T06:12:10.384Z",
+      "signal": {
+        "forecastTemp": 60.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.075,
+        "modelProb": 0.1587,
+        "edge": 0.0837
+      }
+    },
+    {
+      "id": "oc-mlvx8u8i-bw04vm",
+      "conditionId": "0x8993677f97d42f1992142f98877fa724e115f99c2711857deb12298fff0cf35f",
+      "tokenId": "69407237184134160985515613663180478846383598589161321414994845810364680694004",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-chicago-on-february-22-2026-30-31f",
+      "city": "Chicago",
+      "date": "2026-02-22",
+      "bucket": "30-31°F",
+      "question": "Will the highest temperature in Chicago be between 30-31°F on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T06:12:10.386Z",
+      "signal": {
+        "forecastTemp": 29.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.285,
+        "modelProb": 0.365,
+        "edge": 0.08
+      }
+    },
+    {
+      "id": "oc-mlvx8u8k-eljnsq",
+      "conditionId": "0x77df897cc7e8103d63943e784c69cfc2d0e3d9b904aecc2a828daa302a373dd8",
+      "tokenId": "113247939746799582397983869010629040778849256768557675549956108063719206600606",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-21-2026-68-69f",
+      "city": "Atlanta",
+      "date": "2026-02-21",
+      "bucket": "68-69°F",
+      "question": "Will the highest temperature in Atlanta be between 68-69°F on February 21?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-21T06:12:10.388Z",
+      "signal": {
+        "forecastTemp": 70,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.235,
+        "modelProb": 0.289,
+        "edge": 0.054
+      }
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T06:05:12.420Z",
-    "lastPriceSync": "2026-02-21T06:00:22.653Z"
+    "lastUpdated": "2026-02-21T06:12:10.388Z",
+    "lastPriceSync": "2026-02-21T06:30:20.699Z"
   }
 }
