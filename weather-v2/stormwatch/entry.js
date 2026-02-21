@@ -57,6 +57,7 @@ async function processCandidate(signal) {
     candidateTrade = createCandidate({
       conditionId: signal.conditionId,
       tokenId: signal.tokenId,
+      tokenSide: signal.tokenSide || signal.side, // which side the tokenId belongs to
       marketSlug: signal.marketSlug || '',
       city: signal.city,
       date: signal.date,

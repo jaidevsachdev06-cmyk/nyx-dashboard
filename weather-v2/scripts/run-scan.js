@@ -30,16 +30,11 @@ async function main() {
 
   // Enter trades for passing candidates (stop when position cap hit)
   let entered = 0;
-  let capHit = false;
   for (const candidate of result.passing) {
-    if (capHit) break;
     try {
       const res = await processCandidate(candidate);
       if (res.entered) entered++;
-      else {
-        console.log(`[run-scan] Skipped: ${res.reason}`);
-        if (res.reason?.includes('Risk limit: max')) { capHit = true; console.log('[run-scan] Position cap reached, stopping entries.'); }
-      }
+      else console.log(`[run-scan] Skipped: ${res.reason}`);
     } catch (err) {
       console.error(`[run-scan] Error processing candidate: ${err.message}`);
     }

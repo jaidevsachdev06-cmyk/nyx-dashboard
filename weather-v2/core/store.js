@@ -147,8 +147,8 @@ class TradeStore {
         if (!updates.result) {
           throw new Error(`Cannot transition to "resolved" without result`);
         }
-        if (updates.resolutionSource !== 'polymarket') {
-          throw new Error(`resolutionSource must be "polymarket" — we don't resolve from weather data`);
+        if (!['polymarket', 'price-inferred'].includes(updates.resolutionSource)) {
+          throw new Error(`resolutionSource must be "polymarket" or "price-inferred"`);
         }
         if (!updates.resolvedAt) updates.resolvedAt = new Date().toISOString();
         break;

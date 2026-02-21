@@ -27,6 +27,7 @@ const TRADE_SCHEMA = {
   id:            { type: 'string',  required: true  },
   conditionId:   { type: 'string',  required: true,  pattern: /^0x[a-fA-F0-9]{64}$/ },
   tokenId:       { type: 'string',  required: true  },
+  tokenSide:     { type: 'string',  required: false, enum: ['YES', 'NO'] }, // which side the tokenId belongs to
   marketSlug:    { type: 'string',  required: true  },
 
   // Market context
@@ -235,11 +236,12 @@ function generateTradeId() {
  * Create a new candidate trade with required fields.
  * This is the ONLY way to create a trade object.
  */
-function createCandidate({ conditionId, tokenId, marketSlug, city, date, bucket, question, side, signal }) {
+function createCandidate({ conditionId, tokenId, tokenSide, marketSlug, city, date, bucket, question, side, signal }) {
   const trade = {
     id: generateTradeId(),
     conditionId,
     tokenId,
+    tokenSide: tokenSide || side, // default to position side if not specified
     marketSlug,
     city,
     date,
