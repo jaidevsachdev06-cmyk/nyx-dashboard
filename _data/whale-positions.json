@@ -2445,7 +2445,7 @@
     "entryPrice": 0.9755,
     "currentPrice": 0.9864999999999999,
     "shares": 5.15,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "aenews, The-Joker, GollumGekko",
     "whaleCount": 3,
@@ -2465,7 +2465,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T23:34:55.793Z"
+    "updatedAt": "2026-02-22T00:02:18.738Z",
+    "exitPrice": 0.9864999999999999,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "955c961e-da87-4e89-a582-310f57692cec",
