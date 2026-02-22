@@ -2460,7 +2460,7 @@
     "market": "Will Zootopia 2 be the 2025 film with the highest domestic gross on March 15?",
     "side": "Yes",
     "entryPrice": 0.9755,
-    "currentPrice": 0.988,
+    "currentPrice": 0.9884999999999999,
     "shares": 5.15,
     "status": "open",
     "source": "consensus-scanner",
@@ -2474,15 +2474,15 @@
     "conditionId": "0xf562feabe9922f78e99b488df4fcef6be8cbc831605388751538d178585007aa",
     "createdAt": "2026-02-21T12:02:10.915Z",
     "invested": 5.023825,
-    "currentValue": 5.0882000000000005,
-    "pnl": 0.06437500000000007,
-    "pnlPercent": 1.2813941568426461,
+    "currentValue": 5.090775,
+    "pnl": 0.0669499999999994,
+    "pnlPercent": 1.3326499231163385,
     "entryDate": "2026-02-21T12:02:10.915Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T13:34:08.697Z",
+    "updatedAt": "2026-02-22T14:04:05.340Z",
     "exitPrice": 0.9864999999999999,
     "notes": "Dropped from whale consensus"
   },
