@@ -2704,7 +2704,7 @@
     "market": "Nuclear weapon detonation by March 31?",
     "side": "No",
     "entryPrice": 0.968,
-    "currentPrice": 0.968,
+    "currentPrice": 0.9684999999999999,
     "shares": 5.25,
     "status": "open",
     "source": "consensus-scanner",
@@ -2718,15 +2718,15 @@
     "conditionId": "0x4afb076c5d9dfe1c33bf300cfd9fb93a5a8d9bfce8fe2beaeccbde5f8c269fc1",
     "createdAt": "2026-02-22T12:00:45.619Z",
     "invested": 5.082,
-    "currentValue": 5.082,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 5.084625,
+    "pnl": 0.0026250000000000995,
+    "pnlPercent": 0.051652892561985436,
     "entryDate": "2026-02-22T12:00:45.619Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T15:34:22.272Z"
+    "updatedAt": "2026-02-22T16:03:35.233Z"
   },
   {
     "id": "c2e30a05-852c-46de-b40f-4da3fcc4cdd4",
