@@ -2110,9 +2110,9 @@
     "market": "Will Google have the best AI model at the end of February 2026?",
     "side": "Yes",
     "entryPrice": 0.095,
-    "currentPrice": 0.028,
+    "currentPrice": 0.027,
     "shares": 48.95,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "elucidate, failstober, The-Joker, duderr",
     "whaleCount": 4,
@@ -2124,16 +2124,16 @@
     "conditionId": "0x6995678ed5f481941cc4de37512cfe77b1b20e6fd9ba35e284360061d2687d8f",
     "createdAt": "2026-02-21T12:00:31.821Z",
     "invested": 4.650250000000001,
-    "currentValue": 1.3706,
-    "pnl": -3.2796500000000006,
-    "pnlPercent": -70.5263157894737,
+    "currentValue": 1.32165,
+    "pnl": -3.3286000000000007,
+    "pnlPercent": -71.57894736842105,
     "entryDate": "2026-02-21T12:00:31.821Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T15:33:14.506Z",
-    "exitPrice": 0.055,
+    "updatedAt": "2026-02-22T15:42:40.499Z",
+    "exitPrice": 0.027,
     "notes": "Dropped from whale consensus"
   },
   {
