@@ -1148,7 +1148,7 @@
     "market": "Will Graham Platner be the Democratic nominee for Senate in Maine?",
     "side": "Yes",
     "entryPrice": 0.63,
-    "currentPrice": 0.645,
+    "currentPrice": 0.64,
     "shares": 8.14,
     "status": "open",
     "source": "consensus-scanner",
@@ -1162,15 +1162,15 @@
     "conditionId": "0x807a5bd3d52942c2d8b58bf71a583d4aa03a637f3fd9ff7a7c4a1ad818003067",
     "createdAt": "2026-02-20T08:36:29.766Z",
     "invested": 5.1282000000000005,
-    "currentValue": 5.2503,
-    "pnl": 0.12209999999999965,
-    "pnlPercent": 2.380952380952374,
+    "currentValue": 5.209600000000001,
+    "pnl": 0.08140000000000036,
+    "pnlPercent": 1.587301587301594,
     "entryDate": "2026-02-20T08:36:29.766Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T12:02:02.902Z"
+    "updatedAt": "2026-02-22T12:32:06.529Z"
   },
   {
     "id": "9ef72898-4a8b-43df-9bfc-56489a8dfbf3",
