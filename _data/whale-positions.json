@@ -995,7 +995,7 @@
     "entryPrice": 0.835,
     "currentPrice": 0.865,
     "shares": 6.67,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, kekkone, Thonker",
     "whaleCount": 3,
@@ -1011,7 +1011,7 @@
     "pnl": 0.20009999999999994,
     "pnlPercent": 3.592814371257484,
     "entryDate": "2026-02-20T08:36:02.538Z",
-    "updatedAt": "2026-02-22T00:02:09.590Z",
+    "updatedAt": "2026-02-22T00:03:09.655Z",
     "priceHistory": [
       {},
       {}
