@@ -2576,5 +2576,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-22T04:00:34.358Z"
+  },
+  {
+    "id": "a1796084-a194-4432-b9df-ad7d96016e33",
+    "market": "Will Ron DeSantis win the 2028 US Presidential Election?",
+    "side": "Yes",
+    "entryPrice": 0.0135,
+    "currentPrice": 0.0135,
+    "shares": 382.96,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "GollumGekko, Brokie, Car",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 85.4,
+    "avgWinRate": 67.2,
+    "reasoning": "Consensus: 3 whales (avg score 85.4, WR 67.2%) Yes. bet=$5.17, shares=382.96. Whales: GollumGekko, Brokie, Car",
+    "endDate": "2028-11-07",
+    "conditionId": "0x3367d22cd2a673014f1960742afdf8601040a8ad856dc0a98bd1a44ee99504e2",
+    "createdAt": "2026-02-22T04:00:40.769Z",
+    "invested": 5.16996,
+    "currentValue": 5.16996,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-22T04:00:40.769Z"
   }
 ]
