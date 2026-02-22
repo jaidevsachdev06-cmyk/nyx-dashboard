@@ -933,7 +933,7 @@
     "entryPrice": 0.955,
     "currentPrice": 0.955,
     "shares": 6.05,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "kekkone, nicoco89, archaic",
     "whaleCount": 3,
@@ -953,7 +953,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T23:32:04.041Z"
+    "updatedAt": "2026-02-22T00:01:15.004Z",
+    "exitPrice": 0.955,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "80467dac-b626-4384-ba5a-bd0e3b53c589",
