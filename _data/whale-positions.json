@@ -2431,5 +2431,29 @@
       {}
     ],
     "updatedAt": "2026-02-21T23:34:55.793Z"
+  },
+  {
+    "id": "955c961e-da87-4e89-a582-310f57692cec",
+    "market": "Epstein client list released by June 30?",
+    "side": "No",
+    "entryPrice": 0.815,
+    "currentPrice": 0.815,
+    "shares": 7.28,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Thonker, Dropper, Michael5289",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 83,
+    "avgWinRate": 77.1,
+    "reasoning": "Consensus: 3 whales (avg score 83, WR 77.1%) No. bet=$5.93, shares=7.28. Whales: Thonker, Dropper, Michael5289",
+    "endDate": "2026-06-30",
+    "conditionId": "0xa08bf5e2acca8cf3f85209795cf278128a30869c5a8bfb97851e19fd21d0d21e",
+    "createdAt": "2026-02-22T00:00:49.875Z",
+    "invested": 5.9332,
+    "currentValue": 5.9332,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-22T00:00:49.875Z"
   }
 ]
