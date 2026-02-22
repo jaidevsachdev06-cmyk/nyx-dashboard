@@ -1981,7 +1981,7 @@
     "entryPrice": 0.9995,
     "currentPrice": 1,
     "shares": 4.97,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Xeny, GollumGekko, duderr",
     "whaleCount": 3,
@@ -1997,11 +1997,13 @@
     "pnl": 0.0024850000000000705,
     "pnlPercent": 0.05002501250625455,
     "entryDate": "2026-02-21T04:08:36.659Z",
-    "updatedAt": "2026-02-21T23:34:00.430Z",
+    "updatedAt": "2026-02-22T00:01:59.141Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "c6106c17-576a-4863-98f4-7092a4565f40",
