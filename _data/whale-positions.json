@@ -2012,7 +2012,7 @@
     "market": "Will Russia capture Sloviansk by June 30?",
     "side": "No",
     "entryPrice": 0.89,
-    "currentPrice": 0.89,
+    "currentPrice": 0.895,
     "shares": 5.55,
     "status": "open",
     "source": "consensus-scanner",
@@ -2026,11 +2026,11 @@
     "conditionId": "0x1e5efe84a9a890e61044d77ea6e182f39b06d5b382c851b926cad54cb4972e68",
     "createdAt": "2026-02-21T04:08:41.943Z",
     "invested": 4.9395,
-    "currentValue": 4.9395,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 4.96725,
+    "pnl": 0.027750000000000163,
+    "pnlPercent": 0.5617977528089921,
     "entryDate": "2026-02-21T04:08:41.943Z",
-    "updatedAt": "2026-02-21T04:08:44.093Z"
+    "updatedAt": "2026-02-22T05:03:16.514Z"
   },
   {
     "id": "81c0e4b0-8c90-42b1-9d19-f28adb6ac4ac",
