@@ -2479,5 +2479,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-22T00:00:56.675Z"
+  },
+  {
+    "id": "628d52e0-72d2-4430-94cb-9975a7b5f946",
+    "market": "Will António José Seguro win the second round by 20–30%?",
+    "side": "Yes",
+    "entryPrice": 0.0005,
+    "currentPrice": 0.0005,
+    "shares": 10060,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "gopfan2, aenews, Influenz",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 76.4,
+    "avgWinRate": 65.4,
+    "reasoning": "Consensus: 3 whales (avg score 76.4, WR 65.4%) Yes. bet=$5.03, shares=10060. Whales: gopfan2, aenews, Influenz",
+    "endDate": "2026-02-08",
+    "conditionId": "0x4cea84452e21e87128fd4a0983cdacaa4d3f4fbab9dbf98117a661e77d7616d6",
+    "createdAt": "2026-02-22T00:01:03.793Z",
+    "invested": 5.03,
+    "currentValue": 5.03,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-22T00:01:03.793Z"
   }
 ]
