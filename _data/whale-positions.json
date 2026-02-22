@@ -1685,7 +1685,7 @@
     "entryPrice": 0.71,
     "currentPrice": 0.72,
     "shares": 7.27,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "elucidate, gopfan2, nicoco89",
     "whaleCount": 3,
@@ -1701,11 +1701,13 @@
     "pnl": 0.07270000000000021,
     "pnlPercent": 1.4084507042253562,
     "entryDate": "2026-02-21T04:07:46.594Z",
-    "updatedAt": "2026-02-21T23:33:23.533Z",
+    "updatedAt": "2026-02-22T00:01:49.452Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.72,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "eecea7d8-9a9a-47cf-aeb2-49a90c69c592",
