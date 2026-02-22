@@ -2600,5 +2600,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-22T04:00:40.769Z"
+  },
+  {
+    "id": "73f1b2de-697f-4ad5-b62d-0270a66ea442",
+    "market": "Will Eric Trump win the 2028 Republican presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.0085,
+    "currentPrice": 0.0085,
+    "shares": 620,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Influenz, GollumGekko, Brokie",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.2,
+    "avgWinRate": 68.5,
+    "reasoning": "Consensus: 3 whales (avg score 78.2, WR 68.5%) Yes. bet=$5.27, shares=620. Whales: Influenz, GollumGekko, Brokie",
+    "endDate": "2028-11-07",
+    "conditionId": "0xca68152902c3581ab42feb04921b8b1cd3c4e80d06f255ae077259fca0bba15c",
+    "createdAt": "2026-02-22T04:00:47.049Z",
+    "invested": 5.2700000000000005,
+    "currentValue": 5.2700000000000005,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-22T04:00:47.049Z"
   }
 ]
