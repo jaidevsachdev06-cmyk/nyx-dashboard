@@ -586,9 +586,9 @@
       "bucket": "30-31°F",
       "question": "Will the highest temperature in Chicago be between 30-31°F on February 21?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.4,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.445,
       "createdAt": "2026-02-20T22:11:49.319Z",
       "signal": {
         "forecastTemp": 30.2,
@@ -604,7 +604,11 @@
       "orderId": "paper-mlvg33rd-82ij",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-22T09:00:03.171Z"
+      "updatedAt": "2026-02-22T09:00:03.171Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-22T10:04:58.038Z",
+      "closedAt": "2026-02-22T10:04:58.044Z"
     },
     {
       "id": "oc-mlvg33rf-4f888n",
@@ -3314,11 +3318,35 @@
         "edge": 0.0197
       },
       "notes": "Forecast: 86.4°F | Model: 13% vs Market: 12% | Edge: 17.1%"
+    },
+    {
+      "id": "oc-mlxkygqs-44h4rc",
+      "conditionId": "0xcc46cb39acb62b2316311ca906045cd70d873b0e4ebf72e6af893f401c2a6239",
+      "tokenId": "102978764857995247574054146900893718330656042330791745686505629595858471306952",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-february-23-2026-28-29f",
+      "city": "Chicago",
+      "date": "2026-02-23",
+      "bucket": "28-29°F",
+      "question": "Will the highest temperature in Chicago be between 28-29°F on February 23?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-22T10:03:43.300Z",
+      "signal": {
+        "forecastTemp": 26,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.74,
+        "modelProb": 0.9144,
+        "edge": 0.1744
+      },
+      "notes": "Forecast: 26.0°F | Model: 91% vs Market: 74% | Edge: 23.6%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-22T09:04:58.477Z",
+    "lastUpdated": "2026-02-22T10:04:58.046Z",
     "lastPriceSync": "2026-02-22T10:00:35.707Z"
   }
 }
