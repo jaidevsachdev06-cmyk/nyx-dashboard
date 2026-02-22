@@ -2668,5 +2668,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-22T12:00:39.337Z"
+  },
+  {
+    "id": "8f593984-e359-4d08-99e0-8d06182b9dab",
+    "market": "Nuclear weapon detonation by March 31?",
+    "side": "No",
+    "entryPrice": 0.968,
+    "currentPrice": 0.968,
+    "shares": 5.25,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "GollumGekko, Thonker, x.compolymarketbet",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.4,
+    "avgWinRate": 66.1,
+    "reasoning": "Consensus: 3 whales (avg score 78.4, WR 66.1%) No. bet=$5.08, shares=5.25. Whales: GollumGekko, Thonker, x.compolymarketbet",
+    "endDate": "2026-03-31",
+    "conditionId": "0x4afb076c5d9dfe1c33bf300cfd9fb93a5a8d9bfce8fe2beaeccbde5f8c269fc1",
+    "createdAt": "2026-02-22T12:00:45.619Z",
+    "invested": 5.082,
+    "currentValue": 5.082,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-22T12:00:45.619Z"
   }
 ]
