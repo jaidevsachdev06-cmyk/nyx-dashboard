@@ -2534,7 +2534,7 @@
     "entryPrice": 0.0005,
     "currentPrice": 0.0005,
     "shares": 9140,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "gopfan2, Iabvek, Polar",
     "whaleCount": 3,
@@ -2549,7 +2549,10 @@
     "currentValue": 4.57,
     "pnl": 0,
     "pnlPercent": 0,
-    "entryDate": "2026-02-22T00:00:56.675Z"
+    "entryDate": "2026-02-22T00:00:56.675Z",
+    "exitPrice": 0.0005,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-02-22T15:43:06.244Z"
   },
   {
     "id": "628d52e0-72d2-4430-94cb-9975a7b5f946",
