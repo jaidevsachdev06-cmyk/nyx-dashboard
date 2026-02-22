@@ -2412,9 +2412,9 @@
     "market": "Opinion FDV above $1B one day after launch?",
     "side": "No",
     "entryPrice": 0.9,
-    "currentPrice": 0.855,
+    "currentPrice": 0.865,
     "shares": 5.69,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "gopfan2, XieGuangKun, GollumGekko",
     "whaleCount": 3,
@@ -2426,15 +2426,17 @@
     "conditionId": "0x170e907f54cd05c3f181067798610feb95f590d5d4be2bdda699c83249e2666e",
     "createdAt": "2026-02-21T12:02:06.038Z",
     "invested": 5.121,
-    "currentValue": 4.86495,
-    "pnl": -0.2560500000000001,
-    "pnlPercent": -5.000000000000002,
+    "currentValue": 4.92185,
+    "pnl": -0.19915000000000038,
+    "pnlPercent": -3.888888888888896,
     "entryDate": "2026-02-21T12:02:06.038Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T23:34:52.307Z"
+    "updatedAt": "2026-02-22T00:02:15.461Z",
+    "exitPrice": 0.865,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "788dbb8a-9b69-426a-929e-f9aa1e43d210",
