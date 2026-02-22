@@ -1596,7 +1596,7 @@
     "entryPrice": 0.9995,
     "currentPrice": 1,
     "shares": 4.95,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Anjun, Car, LinaBell",
     "whaleCount": 3,
@@ -1612,7 +1612,7 @@
     "pnl": 0.002474999999999561,
     "pnlPercent": 0.05002501250624424,
     "entryDate": "2026-02-21T04:07:26.825Z",
-    "updatedAt": "2026-02-22T03:32:48.532Z",
+    "updatedAt": "2026-02-22T04:00:55.037Z",
     "priceHistory": [
       {},
       {}
