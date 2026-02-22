@@ -1086,9 +1086,9 @@
     "market": "Will Khamenei visit Russia by March 31?",
     "side": "No",
     "entryPrice": 0.9824999999999999,
-    "currentPrice": 0.96,
+    "currentPrice": 0.9604999999999999,
     "shares": 6.31,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "kekkone, archaic, Michael5289",
     "whaleCount": 3,
@@ -1100,16 +1100,16 @@
     "conditionId": "0x444f181da82f6a9ed38f9a702f52a0a2c744a7dd942fcd3ca2a7b6bea827c6aa",
     "createdAt": "2026-02-20T08:36:19.638Z",
     "invested": 6.199574999999999,
-    "currentValue": 6.057599999999999,
-    "pnl": -0.1419750000000004,
-    "pnlPercent": -2.2900763358778695,
+    "currentValue": 6.0607549999999994,
+    "pnl": -0.13881999999999994,
+    "pnlPercent": -2.2391857506361315,
     "entryDate": "2026-02-20T08:36:19.638Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T00:02:17.360Z",
-    "exitPrice": 0.96,
+    "updatedAt": "2026-02-22T00:03:15.535Z",
+    "exitPrice": 0.9604999999999999,
     "notes": "Dropped from whale consensus"
   },
   {
