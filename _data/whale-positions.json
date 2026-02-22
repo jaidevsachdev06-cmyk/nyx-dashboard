@@ -2294,7 +2294,7 @@
     "entryPrice": 0.002,
     "currentPrice": 0.0005,
     "shares": 2465,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "gopfan2, Car, failstober",
     "whaleCount": 3,
@@ -2314,7 +2314,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T15:33:36.929Z"
+    "updatedAt": "2026-02-22T15:42:50.519Z",
+    "exitPrice": 0.0005,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "5893d0ae-cc3e-479e-b6dc-0bc675f54875",
