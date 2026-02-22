@@ -1505,7 +1505,7 @@
     "entryPrice": 0.6285000000000001,
     "currentPrice": 1,
     "shares": 8.56,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, Car, GollumGekko",
     "whaleCount": 3,
@@ -1521,11 +1521,13 @@
     "pnl": 3.18004,
     "pnlPercent": 59.108989657915664,
     "entryDate": "2026-02-21T04:07:11.681Z",
-    "updatedAt": "2026-02-21T23:33:00.197Z",
+    "updatedAt": "2026-02-22T00:01:40.260Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "6a3c7692-c23d-48ea-aa53-2a44b3fa58cd",
