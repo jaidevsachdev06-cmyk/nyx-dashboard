@@ -272,10 +272,11 @@
     "type": "reading",
     "dueDate": "2026-02-22T15:59:00Z",
     "priority": "medium",
-    "status": "todo",
+    "status": "done",
     "notes": "SSAS Ch 10. LAMS 7 due Mar 8. PA 6 due Mar 15.",
     "createdBy": "ScholarNyx",
-    "createdAt": "2026-02-17T07:33:17.270Z"
+    "createdAt": "2026-02-17T07:33:17.270Z",
+    "completedAt": "2026-02-22T06:27:19.737Z"
   },
   {
     "id": "920da7f1-97f0-4235-a66a-a496c2ad0fc6",
