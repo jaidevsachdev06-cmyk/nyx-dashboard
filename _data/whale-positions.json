@@ -2068,7 +2068,7 @@
     "entryPrice": 0.868,
     "currentPrice": 0.929,
     "shares": 5.73,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Influenz, Xeny, duderr",
     "whaleCount": 3,
@@ -2084,7 +2084,7 @@
     "pnl": 0.34953000000000056,
     "pnlPercent": 7.027649769585265,
     "entryDate": "2026-02-21T04:08:51.928Z",
-    "updatedAt": "2026-02-22T00:03:27.996Z",
+    "updatedAt": "2026-02-22T00:04:06.201Z",
     "priceHistory": [
       {},
       {}
