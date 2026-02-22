@@ -468,7 +468,7 @@
       "orderId": "paper-mlussqza-jzve",
       "txHash": null,
       "currentPrice": 0.001,
-      "updatedAt": "2026-02-22T04:00:01.589Z"
+      "updatedAt": "2026-02-22T04:30:02.428Z"
     },
     {
       "id": "oc-mlussqzb-fc5fi3",
@@ -600,7 +600,7 @@
       "orderId": "paper-mlvg33rd-82ij",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-22T04:00:03.143Z"
+      "updatedAt": "2026-02-22T04:30:04.009Z"
     },
     {
       "id": "oc-mlvg33rf-4f888n",
@@ -664,7 +664,7 @@
       "orderId": "paper-mlvonw1u-309w",
       "txHash": null,
       "currentPrice": 0.19,
-      "updatedAt": "2026-02-22T04:00:04.734Z"
+      "updatedAt": "2026-02-22T04:30:05.572Z"
     },
     {
       "id": "oc-mlvsy62u-frumjw",
@@ -1875,7 +1875,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.36,
+      "pnlUSDC": 0.55,
       "createdAt": "2026-02-21T14:11:57.262Z",
       "signal": {
         "forecastTemp": 2.1,
@@ -1890,8 +1890,8 @@
       "enteredAt": "2026-02-21T14:11:57.267Z",
       "orderId": "paper-mlweduc5-bq0x",
       "txHash": null,
-      "currentPrice": 0.0705,
-      "updatedAt": "2026-02-22T04:00:06.394Z"
+      "currentPrice": 0.0715,
+      "updatedAt": "2026-02-22T04:30:07.140Z"
     },
     {
       "id": "oc-mlweduc9-bxtn5s",
@@ -1906,7 +1906,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.43,
+      "pnlUSDC": -1.1,
       "createdAt": "2026-02-21T14:11:57.273Z",
       "signal": {
         "forecastTemp": 13.8,
@@ -1921,8 +1921,8 @@
       "enteredAt": "2026-02-21T14:11:57.277Z",
       "orderId": "paper-mlweducg-xlhr",
       "txHash": null,
-      "currentPrice": 0.485,
-      "updatedAt": "2026-02-22T04:00:08.060Z"
+      "currentPrice": 0.5,
+      "updatedAt": "2026-02-22T04:30:08.714Z"
     },
     {
       "id": "oc-mlweduco-nu56oj",
@@ -1937,7 +1937,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.17,
+      "pnlUSDC": 1.11,
       "createdAt": "2026-02-21T14:11:57.288Z",
       "signal": {
         "forecastTemp": 29.3,
@@ -1952,8 +1952,8 @@
       "enteredAt": "2026-02-21T14:11:57.291Z",
       "orderId": "paper-mlweduct-qlre",
       "txHash": null,
-      "currentPrice": 0.71,
-      "updatedAt": "2026-02-22T04:00:09.654Z"
+      "currentPrice": 0.785,
+      "updatedAt": "2026-02-22T04:30:10.282Z"
     },
     {
       "id": "oc-mlweducv-4y0e01",
@@ -2060,7 +2060,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 16.31,
+      "pnlUSDC": 15.96,
       "createdAt": "2026-02-21T16:06:06.675Z",
       "signal": {
         "forecastTemp": 10.6,
@@ -2075,8 +2075,8 @@
       "enteredAt": "2026-02-21T16:06:06.678Z",
       "orderId": "paper-mlwigndl-dghq",
       "txHash": null,
-      "currentPrice": 0.986,
-      "updatedAt": "2026-02-22T04:00:11.244Z"
+      "currentPrice": 0.974,
+      "updatedAt": "2026-02-22T04:30:11.862Z"
     },
     {
       "id": "oc-mlwigndo-0ez4us",
@@ -2114,7 +2114,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.21,
+      "pnlUSDC": 2.98,
       "createdAt": "2026-02-21T16:06:06.686Z",
       "signal": {
         "forecastTemp": 63.8,
@@ -2129,8 +2129,8 @@
       "enteredAt": "2026-02-21T16:06:06.690Z",
       "orderId": "paper-mlwigndw-1ivo",
       "txHash": null,
-      "currentPrice": 0.825,
-      "updatedAt": "2026-02-22T04:00:12.840Z"
+      "currentPrice": 0.87,
+      "updatedAt": "2026-02-22T04:30:13.562Z"
     },
     {
       "id": "oc-mlwigne5-jzvcva",
@@ -2161,7 +2161,7 @@
       "orderId": "paper-mlwigneb-9xqs",
       "txHash": null,
       "currentPrice": 0.53,
-      "updatedAt": "2026-02-22T04:00:14.405Z"
+      "updatedAt": "2026-02-22T04:30:15.336Z"
     },
     {
       "id": "oc-mlwignef-yszrgj",
@@ -2176,7 +2176,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.42,
+      "pnlUSDC": -1.23,
       "createdAt": "2026-02-21T16:06:06.711Z",
       "signal": {
         "forecastTemp": 0.9,
@@ -2191,8 +2191,8 @@
       "enteredAt": "2026-02-21T16:06:06.715Z",
       "orderId": "paper-mlwignel-qr1t",
       "txHash": null,
-      "currentPrice": 0.56,
-      "updatedAt": "2026-02-22T04:00:16.081Z"
+      "currentPrice": 0.57,
+      "updatedAt": "2026-02-22T04:30:16.924Z"
     },
     {
       "id": "oc-mlwigneo-e1du2q",
@@ -2223,7 +2223,7 @@
       "orderId": "paper-mlwignet-vc5r",
       "txHash": null,
       "currentPrice": 0.47,
-      "updatedAt": "2026-02-22T04:00:17.666Z"
+      "updatedAt": "2026-02-22T04:30:18.573Z"
     },
     {
       "id": "oc-mlwignex-w01scd",
@@ -2284,7 +2284,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.22,
+      "pnlUSDC": -2.79,
       "createdAt": "2026-02-21T18:03:58.014Z",
       "signal": {
         "forecastTemp": 15.5,
@@ -2299,8 +2299,8 @@
       "enteredAt": "2026-02-21T18:03:58.019Z",
       "orderId": "paper-mlwmo7no-sbl5",
       "txHash": null,
-      "currentPrice": 0.215,
-      "updatedAt": "2026-02-22T04:00:19.221Z"
+      "currentPrice": 0.225,
+      "updatedAt": "2026-02-22T04:30:20.212Z"
     },
     {
       "id": "oc-mlwmo7ns-9enmi2",
@@ -2412,7 +2412,7 @@
       "orderId": "paper-mlwmo7ol-lnbf",
       "txHash": null,
       "currentPrice": 0.315,
-      "updatedAt": "2026-02-22T04:00:20.896Z"
+      "updatedAt": "2026-02-22T04:30:21.771Z"
     },
     {
       "id": "oc-mlwr8oad-46bn7e",
@@ -2473,7 +2473,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 4.19,
+      "pnlUSDC": 2.97,
       "createdAt": "2026-02-21T20:11:51.170Z",
       "signal": {
         "forecastTemp": 45.5,
@@ -2488,8 +2488,8 @@
       "enteredAt": "2026-02-21T20:11:51.174Z",
       "orderId": "paper-mlwr8oaw-o75t",
       "txHash": null,
-      "currentPrice": 0.61,
-      "updatedAt": "2026-02-22T04:00:22.480Z"
+      "currentPrice": 0.565,
+      "updatedAt": "2026-02-22T04:30:23.384Z"
     },
     {
       "id": "oc-mlwr8ob2-vbbrdn",
@@ -2612,7 +2612,7 @@
       "orderId": "paper-mlwzmc19-fxet",
       "txHash": null,
       "currentPrice": 0.225,
-      "updatedAt": "2026-02-22T04:00:24.067Z"
+      "updatedAt": "2026-02-22T04:30:24.961Z"
     },
     {
       "id": "oc-mlwzmc1f-6tbtwn",
@@ -2627,7 +2627,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 4.41,
+      "pnlUSDC": 4.65,
       "createdAt": "2026-02-22T00:06:25.395Z",
       "signal": {
         "forecastTemp": 12.3,
@@ -2642,8 +2642,8 @@
       "enteredAt": "2026-02-22T00:06:25.401Z",
       "orderId": "paper-mlwzmc1n-pi5i",
       "txHash": null,
-      "currentPrice": 0.345,
-      "updatedAt": "2026-02-22T04:00:25.920Z"
+      "currentPrice": 0.35,
+      "updatedAt": "2026-02-22T04:30:26.521Z"
     },
     {
       "id": "oc-mlwzmc1q-exw3u7",
@@ -2674,7 +2674,7 @@
       "orderId": "paper-mlwzmc1w-5fl5",
       "txHash": null,
       "currentPrice": 0.21,
-      "updatedAt": "2026-02-22T04:00:27.494Z"
+      "updatedAt": "2026-02-22T04:30:28.104Z"
     },
     {
       "id": "oc-mlwzmc1y-3a2kgj",
@@ -2689,7 +2689,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0,
+      "pnlUSDC": -1.48,
       "createdAt": "2026-02-22T00:06:25.414Z",
       "signal": {
         "forecastTemp": 38.1,
@@ -2704,8 +2704,8 @@
       "enteredAt": "2026-02-22T00:06:25.418Z",
       "orderId": "paper-mlwzmc24-txr6",
       "txHash": null,
-      "currentPrice": 0.45,
-      "updatedAt": "2026-02-22T04:00:29.063Z"
+      "currentPrice": 0.395,
+      "updatedAt": "2026-02-22T04:30:29.927Z"
     },
     {
       "id": "oc-mlwzmc27-0gktdt",
@@ -2736,7 +2736,7 @@
       "orderId": "paper-mlwzmc2d-oj8x",
       "txHash": null,
       "currentPrice": 0.175,
-      "updatedAt": "2026-02-22T04:00:30.619Z"
+      "updatedAt": "2026-02-22T04:30:31.503Z"
     },
     {
       "id": "oc-mlwzmc2f-nc2djz",
@@ -2751,7 +2751,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.17,
+      "pnlUSDC": 0.17,
       "createdAt": "2026-02-22T00:06:25.431Z",
       "signal": {
         "forecastTemp": 49.2,
@@ -2766,8 +2766,8 @@
       "enteredAt": "2026-02-22T00:06:25.435Z",
       "orderId": "paper-mlwzmc2l-8st0",
       "txHash": null,
-      "currentPrice": 0.365,
-      "updatedAt": "2026-02-22T04:00:32.180Z"
+      "currentPrice": 0.375,
+      "updatedAt": "2026-02-22T04:30:33.151Z"
     },
     {
       "id": "oc-mlwzmc2r-dyz3t1",
@@ -2828,7 +2828,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.84,
+      "pnlUSDC": 1.02,
       "createdAt": "2026-02-22T00:06:25.452Z",
       "signal": {
         "forecastTemp": 34.5,
@@ -2843,8 +2843,8 @@
       "enteredAt": "2026-02-22T00:06:25.457Z",
       "orderId": "paper-mlwzmc37-dojs",
       "txHash": null,
-      "currentPrice": 0.345,
-      "updatedAt": "2026-02-22T04:00:33.759Z"
+      "currentPrice": 0.325,
+      "updatedAt": "2026-02-22T04:30:34.820Z"
     },
     {
       "id": "oc-mlwzmc3b-j2dzou",
@@ -3013,7 +3013,7 @@
       "orderId": "paper-mlwzmc45-putf",
       "txHash": null,
       "currentPrice": 0.05,
-      "updatedAt": "2026-02-22T04:00:35.323Z"
+      "updatedAt": "2026-02-22T04:30:36.390Z"
     },
     {
       "id": "oc-mlx43iho-y7saom",
@@ -3106,11 +3106,115 @@
         "modelProb": 0.1605,
         "edge": 0.068
       }
+    },
+    {
+      "id": "oc-mlx838qh-uqofc4",
+      "conditionId": "0x466be88c1e6ae35ebcd362c04a580188f721856c2406698c57a4f114e59eff83",
+      "tokenId": "67914160383496576469558768268757652872817020575423122628285395583573358775976",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-february-23-2026-3c",
+      "city": "Seoul",
+      "date": "2026-02-23",
+      "bucket": "3°C",
+      "question": "Will the highest temperature in Seoul be 3°C on February 23?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-22T04:03:31.193Z",
+      "signal": {
+        "forecastTemp": 4.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.6,
+        "modelProb": 0.934,
+        "edge": 0.334
+      },
+      "notes": "Forecast: 4.4°F | Model: 93% vs Market: 60% | Edge: 55.7%"
+    },
+    {
+      "id": "oc-mlx838r4-sh5zju",
+      "conditionId": "0xc1830dc5cc1ab990c74f2581d28dd662cc3639c5c2825ca7ce0bb14af76a36cb",
+      "tokenId": "12606957476499672834172714402920860354817000090271496227583465320907592025645",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-dallas-on-february-23-2026-59forbelow",
+      "city": "Dallas",
+      "date": "2026-02-23",
+      "bucket": "≤59°F",
+      "question": "Will the highest temperature in Dallas be 59°F or below on February 23?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -0.76,
+      "createdAt": "2026-02-22T04:03:31.216Z",
+      "signal": {
+        "forecastTemp": 57.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.695,
+        "modelProb": 0.9154,
+        "edge": 0.2204
+      },
+      "notes": "Forecast: 57.3°F | Model: 92% vs Market: 70% | Edge: 31.7%",
+      "entryPrice": 0.695,
+      "size": 17,
+      "sizeUSDC": 11.815,
+      "enteredAt": "2026-02-22T04:03:31.221Z",
+      "orderId": "paper-mlx838rc-r3wy",
+      "txHash": null,
+      "currentPrice": 0.65,
+      "updatedAt": "2026-02-22T04:30:38.051Z"
+    },
+    {
+      "id": "oc-mlx838rg-220izy",
+      "conditionId": "0x159b9cf1fd2a116de3d18f47ed6137eebcfb88a17ae58838b7afd9d998ba136b",
+      "tokenId": "68201215950853249213637071745558888595316122484320205659910709216459785210270",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seoul-on-february-23-2026-5c",
+      "city": "Seoul",
+      "date": "2026-02-23",
+      "bucket": "5°C",
+      "question": "Will the highest temperature in Seoul be 5°C on February 23?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-22T04:03:31.228Z",
+      "signal": {
+        "forecastTemp": 4.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.19,
+        "modelProb": 0.4004,
+        "edge": 0.2104
+      },
+      "notes": "Forecast: 4.4°F | Model: 40% vs Market: 19% | Edge: 110.7%"
+    },
+    {
+      "id": "oc-mlx838rk-d8d232",
+      "conditionId": "0xdea2a9bb72f4c08c70881af8b62ebafeb5ba83a8f25c9502658e1060c38e7087",
+      "tokenId": "54837237959859159169518703727334986379316104661643160672005061890025650039153",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-february-23-2026-60-61f",
+      "city": "Dallas",
+      "date": "2026-02-23",
+      "bucket": "60-61°F",
+      "question": "Will the highest temperature in Dallas be between 60-61°F on February 23?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-22T04:03:31.232Z",
+      "signal": {
+        "forecastTemp": 57.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.735,
+        "modelProb": 0.9198,
+        "edge": 0.1848
+      },
+      "notes": "Forecast: 57.3°F | Model: 92% vs Market: 74% | Edge: 25.1%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-22T02:11:45.390Z",
-    "lastPriceSync": "2026-02-22T04:00:36.524Z"
+    "lastUpdated": "2026-02-22T04:03:31.234Z",
+    "lastPriceSync": "2026-02-22T04:30:39.251Z"
   }
 }
