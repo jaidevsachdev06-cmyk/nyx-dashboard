@@ -2137,7 +2137,7 @@
     "entryPrice": 0.44,
     "currentPrice": 1,
     "shares": 12.23,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Car, scottilicious, GollumGekko",
     "whaleCount": 3,
@@ -2157,7 +2157,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T12:01:08.600Z",
+    "updatedAt": "2026-02-22T12:03:23.206Z",
     "exitPrice": 1,
     "notes": "Dropped from whale consensus"
   },
