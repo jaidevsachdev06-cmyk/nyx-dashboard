@@ -222,12 +222,12 @@
     "market": "Will there be no change in Fed interest rates after the March 2026 meeting?",
     "position": "Yes",
     "entryPrice": 0.925,
-    "currentPrice": 0.9584999999999999,
+    "currentPrice": 1,
     "shares": 10.81,
     "invested": 9.999250000000002,
-    "currentValue": 10.361385,
-    "pnl": 0.36213499999999854,
-    "pnlPercent": 3.621621621621606,
+    "currentValue": 10.81,
+    "pnl": 0.8107499999999987,
+    "pnlPercent": 8.108108108108095,
     "status": "open",
     "notes": "CME FedWatch 97% no change. Near-certain.",
     "tags": [
@@ -244,6 +244,6 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T23:00:51.051Z"
+    "updatedAt": "2026-02-22T23:31:26.066Z"
   }
 ]
