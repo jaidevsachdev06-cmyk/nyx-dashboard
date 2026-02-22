@@ -450,9 +450,9 @@
       "bucket": "70-71°F",
       "question": "Will the highest temperature in Atlanta be between 70-71°F on February 21?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.36,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.39,
       "createdAt": "2026-02-20T11:19:55.029Z",
       "signal": {
         "forecastTemp": 69.5,
@@ -468,7 +468,11 @@
       "orderId": "paper-mlussqza-jzve",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-22T08:00:02.376Z"
+      "updatedAt": "2026-02-22T08:00:02.376Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-22T09:04:58.468Z",
+      "closedAt": "2026-02-22T09:04:58.474Z"
     },
     {
       "id": "oc-mlussqzb-fc5fi3",
@@ -3314,7 +3318,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-22T08:05:13.127Z",
+    "lastUpdated": "2026-02-22T09:04:58.477Z",
     "lastPriceSync": "2026-02-22T09:00:36.278Z"
   }
 }
