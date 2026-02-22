@@ -2644,5 +2644,29 @@
       {}
     ],
     "updatedAt": "2026-02-22T11:34:33.064Z"
+  },
+  {
+    "id": "46f50e70-4169-448a-aaf4-7a5f302de564",
+    "market": "Will the Fed decrease interest rates by 25 bps after the March 2026 meeting?",
+    "side": "Yes",
+    "entryPrice": 0.0295,
+    "currentPrice": 0.0295,
+    "shares": 175.93,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Mombil, debased, x.compolymarketbet",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.5,
+    "avgWinRate": 67.5,
+    "reasoning": "Consensus: 3 whales (avg score 78.5, WR 67.5%) Yes. bet=$5.19, shares=175.93. Whales: Mombil, debased, x.compolymarketbet",
+    "endDate": "2026-03-18",
+    "conditionId": "0xd6c49a94948e365aa74c09eef54d907b7ca534b243c387c375305d5cdd1afef3",
+    "createdAt": "2026-02-22T12:00:39.337Z",
+    "invested": 5.189935,
+    "currentValue": 5.189935,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-22T12:00:39.337Z"
   }
 ]
