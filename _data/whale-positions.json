@@ -2660,7 +2660,7 @@
     "market": "Will the Fed decrease interest rates by 25 bps after the March 2026 meeting?",
     "side": "Yes",
     "entryPrice": 0.0295,
-    "currentPrice": 0.0285,
+    "currentPrice": 0.028999999999999998,
     "shares": 175.93,
     "status": "open",
     "source": "consensus-scanner",
@@ -2674,15 +2674,15 @@
     "conditionId": "0xd6c49a94948e365aa74c09eef54d907b7ca534b243c387c375305d5cdd1afef3",
     "createdAt": "2026-02-22T12:00:39.337Z",
     "invested": 5.189935,
-    "currentValue": 5.014005,
-    "pnl": -0.17593000000000014,
-    "pnlPercent": -3.3898305084745792,
+    "currentValue": 5.10197,
+    "pnl": -0.08796500000000052,
+    "pnlPercent": -1.6949152542372978,
     "entryDate": "2026-02-22T12:00:39.337Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T13:34:33.052Z"
+    "updatedAt": "2026-02-22T14:04:30.752Z"
   },
   {
     "id": "8f593984-e359-4d08-99e0-8d06182b9dab",
