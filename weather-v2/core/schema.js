@@ -78,7 +78,10 @@ const TRADE_SCHEMA = {
       modelProb:      { type: 'number', min: 0, max: 1 },
       edge:           { type: 'number' }
     }
-  }
+  },
+
+  // Human-readable reasoning (for dashboard display)
+  notes: { type: 'string', required: false }
 };
 
 /**
@@ -236,7 +239,7 @@ function generateTradeId() {
  * Create a new candidate trade with required fields.
  * This is the ONLY way to create a trade object.
  */
-function createCandidate({ conditionId, tokenId, tokenSide, marketSlug, city, date, bucket, question, side, signal }) {
+function createCandidate({ conditionId, tokenId, tokenSide, marketSlug, city, date, bucket, question, side, signal, notes }) {
   const trade = {
     id: generateTradeId(),
     conditionId,
@@ -252,7 +255,8 @@ function createCandidate({ conditionId, tokenId, tokenSide, marketSlug, city, da
     result: null,
     pnlUSDC: null,
     createdAt: new Date().toISOString(),
-    signal: signal || null
+    signal: signal || null,
+    notes: notes || null
   };
 
   const validation = validateTrade(trade);

@@ -54,6 +54,17 @@ async function processCandidate(signal) {
   // Create candidate
   let candidateTrade;
   try {
+    const signalData = {
+      forecastTemp: signal.forecastTemp,
+      forecastSource: 'open-meteo',
+      impliedProb: currentPrice,
+      modelProb: signal.modelProb,
+      edge: parseFloat(edge.toFixed(4))
+    };
+
+    // Human-readable reasoning summary
+    const notes = `Forecast: ${signal.forecastTemp.toFixed(1)}°F | Model: ${(signal.modelProb * 100).toFixed(0)}% vs Market: ${(currentPrice * 100).toFixed(0)}% | Edge: ${edgePct.toFixed(1)}%`;
+
     candidateTrade = createCandidate({
       conditionId: signal.conditionId,
       tokenId: signal.tokenId,
@@ -64,13 +75,8 @@ async function processCandidate(signal) {
       bucket: signal.bucket,
       question: signal.question || `${signal.city} temp ${signal.date} ${signal.bucket}`,
       side: signal.side,
-      signal: {
-        forecastTemp: signal.forecastTemp,
-        forecastSource: 'open-meteo',
-        impliedProb: currentPrice,
-        modelProb: signal.modelProb,
-        edge: parseFloat(edge.toFixed(4))
-      }
+      signal: signalData,
+      notes: notes
     });
   } catch (err) {
     return { entered: false, trade: null, reason: `Schema validation failed: ${err.message}` };
