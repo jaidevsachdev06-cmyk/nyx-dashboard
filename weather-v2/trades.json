@@ -112,9 +112,9 @@
       "bucket": "3°C",
       "question": "Will the highest temperature in Toronto be 3°C on February 21?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -10.8,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.3,
       "createdAt": "2026-02-20T11:19:55.012Z",
       "signal": {
         "forecastTemp": 2.8,
@@ -130,7 +130,11 @@
       "orderId": "paper-mlussqyu-ibpd",
       "txHash": null,
       "currentPrice": 0.025,
-      "updatedAt": "2026-02-22T00:00:02.749Z"
+      "updatedAt": "2026-02-22T00:00:02.749Z",
+      "resolutionPrice": 0.025,
+      "resolutionSource": "price-inferred",
+      "resolvedAt": "2026-02-22T00:05:01.606Z",
+      "closedAt": "2026-02-22T00:05:01.610Z"
     },
     {
       "id": "oc-mlussqyu-ljqdv4",
@@ -608,9 +612,9 @@
       "bucket": "11°C",
       "question": "Will the highest temperature in Paris be 11°C on February 22?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.38,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.48,
       "createdAt": "2026-02-20T22:11:49.323Z",
       "signal": {
         "forecastTemp": 11.2,
@@ -626,7 +630,11 @@
       "orderId": "paper-mlvg33rh-ukol",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-22T00:00:07.530Z"
+      "updatedAt": "2026-02-22T00:00:07.530Z",
+      "resolutionPrice": 0.0005,
+      "resolutionSource": "price-inferred",
+      "resolvedAt": "2026-02-22T00:05:04.850Z",
+      "closedAt": "2026-02-22T00:05:04.853Z"
     },
     {
       "id": "oc-mlvonw1s-ny3ckq",
@@ -2305,9 +2313,9 @@
       "bucket": "44-45°F",
       "question": "Will the highest temperature in New York City be between 44-45°F on February 21?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 36.48,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 36.505,
       "createdAt": "2026-02-21T18:03:58.024Z",
       "signal": {
         "forecastTemp": 45,
@@ -2323,7 +2331,11 @@
       "orderId": "paper-mlwmo7ny-31vo",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-21T23:30:24.495Z"
+      "updatedAt": "2026-02-21T23:30:24.495Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-22T00:05:16.945Z",
+      "closedAt": "2026-02-22T00:05:16.949Z"
     },
     {
       "id": "oc-mlwmo7o4-kuijci",
@@ -2574,7 +2586,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-21T23:04:59.827Z",
+    "lastUpdated": "2026-02-22T00:05:16.950Z",
     "lastPriceSync": "2026-02-22T00:00:29.565Z"
   }
 }
