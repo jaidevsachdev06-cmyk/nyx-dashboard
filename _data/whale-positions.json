@@ -2785,5 +2785,29 @@
       {}
     ],
     "updatedAt": "2026-02-22T19:33:39.458Z"
+  },
+  {
+    "id": "7f62c0de-6a9f-4b93-a10c-14157b2e539c",
+    "market": "New \"Stranger Things\" episode released by December 31? ",
+    "side": "No",
+    "entryPrice": 0.915,
+    "currentPrice": 0.915,
+    "shares": 5.84,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Qualitative, Thonker, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.9,
+    "avgWinRate": 69.4,
+    "reasoning": "Consensus: 3 whales (avg score 82.9, WR 69.4%) No. bet=$5.34, shares=5.84. Whales: Qualitative, Thonker, GollumGekko",
+    "endDate": "2026-01-07",
+    "conditionId": "0xbafb642f421ed7b46654936a9fb85adc1b278fa5388a47364da7e67a8df15eca",
+    "createdAt": "2026-02-22T20:00:28.948Z",
+    "invested": 5.3436,
+    "currentValue": 5.3436,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-22T20:00:28.948Z"
   }
 ]
