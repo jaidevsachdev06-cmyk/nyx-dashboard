@@ -2471,9 +2471,9 @@
       "bucket": "44-45°F",
       "question": "Will the highest temperature in Seattle be between 44-45°F on February 21?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 14.7,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 14.715,
       "createdAt": "2026-02-21T20:11:51.170Z",
       "signal": {
         "forecastTemp": 45.5,
@@ -2489,7 +2489,11 @@
       "orderId": "paper-mlwr8oaw-o75t",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-22T07:00:23.266Z"
+      "updatedAt": "2026-02-22T07:00:23.266Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-22T08:05:13.120Z",
+      "closedAt": "2026-02-22T08:05:13.126Z"
     },
     {
       "id": "oc-mlwr8ob2-vbbrdn",
@@ -3258,11 +3262,59 @@
         "edge": 0.1557
       },
       "notes": "Forecast: 50.4°F | Model: 90% vs Market: 75% | Edge: 20.9%"
+    },
+    {
+      "id": "oc-mlxgo59h-miq1wk",
+      "conditionId": "0xcc2efde4cea4ceb037aed24670f38eac87590d65fa6eb2be027bce3015666ea2",
+      "tokenId": "58790971867153211897797764182536169624335130597444756187877274548928778614430",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-toronto-on-february-23-2026-1c",
+      "city": "Toronto",
+      "date": "2026-02-22",
+      "bucket": "1°C",
+      "question": "Will the highest temperature in Toronto be 1°C on February 23?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-22T08:03:43.397Z",
+      "signal": {
+        "forecastTemp": 0.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.09,
+        "modelProb": 0.886,
+        "edge": 0.796
+      },
+      "notes": "Forecast: 0.9°F | Model: 89% vs Market: 9% | Edge: 884.4%"
+    },
+    {
+      "id": "oc-mlxgo5ah-35qrsy",
+      "conditionId": "0xf9ed9cadfa2f1082d6f4097397cbf9938305762f0a910270288748bf9b2c1bfc",
+      "tokenId": "37305356551232639869034857906884715612024517914239369153758668755494474280308",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-miami-on-february-22-2026-88-89f",
+      "city": "Miami",
+      "date": "2026-02-22",
+      "bucket": "88-89°F",
+      "question": "Will the highest temperature in Miami be between 88-89°F on February 22?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-22T08:03:43.433Z",
+      "signal": {
+        "forecastTemp": 86.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.115,
+        "modelProb": 0.1347,
+        "edge": 0.0197
+      },
+      "notes": "Forecast: 86.4°F | Model: 13% vs Market: 12% | Edge: 17.1%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-22T06:03:30.034Z",
+    "lastUpdated": "2026-02-22T08:05:13.127Z",
     "lastPriceSync": "2026-02-22T08:00:37.689Z"
   }
 }
