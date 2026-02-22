@@ -2410,9 +2410,9 @@
       "bucket": "84-85°F",
       "question": "Will the highest temperature in Miami be between 84-85°F on February 22?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -5.39,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -5.405,
       "createdAt": "2026-02-21T18:03:58.048Z",
       "signal": {
         "forecastTemp": 86,
@@ -2428,7 +2428,11 @@
       "orderId": "paper-mlwmo7ol-lnbf",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-22T20:00:15.318Z"
+      "updatedAt": "2026-02-22T20:00:15.318Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-22T21:05:10.432Z",
+      "closedAt": "2026-02-22T21:05:10.438Z"
     },
     {
       "id": "oc-mlwr8oad-46bn7e",
@@ -3642,7 +3646,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-22T20:03:51.007Z",
+    "lastUpdated": "2026-02-22T21:05:10.440Z",
     "lastPriceSync": "2026-02-22T21:00:30.596Z"
   }
 }
