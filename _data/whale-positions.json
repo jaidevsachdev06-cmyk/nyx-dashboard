@@ -2019,7 +2019,7 @@
     "entryPrice": 0.89,
     "currentPrice": 0.895,
     "shares": 5.55,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Roflan, gopfan2, x.compolymarketbet",
     "whaleCount": 3,
@@ -2035,11 +2035,13 @@
     "pnl": 0.027750000000000163,
     "pnlPercent": 0.5617977528089921,
     "entryDate": "2026-02-21T04:08:41.943Z",
-    "updatedAt": "2026-02-22T15:33:04.150Z",
+    "updatedAt": "2026-02-22T15:42:34.341Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.895,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "81c0e4b0-8c90-42b1-9d19-f28adb6ac4ac",
