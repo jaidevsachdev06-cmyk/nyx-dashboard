@@ -1926,7 +1926,7 @@
     "entryPrice": 0.69,
     "currentPrice": 0.685,
     "shares": 7.19,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "elucidate, LinaBell, GollumGekko",
     "whaleCount": 3,
@@ -1942,12 +1942,12 @@
     "pnl": -0.035949999999999704,
     "pnlPercent": -0.7246376811594143,
     "entryDate": "2026-02-21T04:08:26.653Z",
-    "updatedAt": "2026-02-22T11:33:12.026Z",
+    "updatedAt": "2026-02-22T12:00:56.361Z",
     "priceHistory": [
       {},
       {}
     ],
-    "exitPrice": 0.695,
+    "exitPrice": 0.685,
     "notes": "Dropped from whale consensus"
   },
   {
