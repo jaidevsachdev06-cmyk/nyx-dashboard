@@ -2066,9 +2066,9 @@
     "market": "Will Anthropic have the best AI model at the end of February 2026?",
     "side": "Yes",
     "entryPrice": 0.868,
-    "currentPrice": 0.928,
+    "currentPrice": 0.929,
     "shares": 5.73,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Influenz, Xeny, duderr",
     "whaleCount": 3,
@@ -2080,15 +2080,17 @@
     "conditionId": "0xcbf9e16f0ad8bef39c3860dda598df8c4906f737bbed4dc1c65f7e0c07675ab3",
     "createdAt": "2026-02-21T04:08:51.928Z",
     "invested": 4.9736400000000005,
-    "currentValue": 5.31744,
-    "pnl": 0.3437999999999999,
-    "pnlPercent": 6.91244239631336,
+    "currentValue": 5.323170000000001,
+    "pnl": 0.34953000000000056,
+    "pnlPercent": 7.027649769585265,
     "entryDate": "2026-02-21T04:08:51.928Z",
-    "updatedAt": "2026-02-21T23:34:09.547Z",
+    "updatedAt": "2026-02-22T00:03:27.996Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.929,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "a971686d-d8b4-4199-b719-1cdb57428584",
