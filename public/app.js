@@ -11,7 +11,7 @@ async function api(path, opts = {}) {
   if (res.status === 401) { logout(); throw new Error('Unauthorized'); }
   return res.json();
 }
-const get = (p) => api(p);
+const get = (p) => api(p + (p.includes('?') ? '&' : '?') + 'v=' + Date.now()); // cache-bust with timestamp
 const post = (p, d) => api(p, { method: 'POST', body: JSON.stringify(d) });
 const put = (p, d) => api(p, { method: 'PUT', body: JSON.stringify(d) });
 const del = (p) => api(p, { method: 'DELETE' });
@@ -565,7 +565,7 @@ async function loadPolymarket() {
             <span class="mono ${pnlClass(p.pnl)}" style="margin-left:8px;font-weight:700">${fmtMoney(p.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
-            ${p.position || ''} · Entry ${fmtMoney(p.entryPrice)} → Exit ${fmtMoney(p.exitPrice || p.currentPrice)} · ${p.shares || 0} shares
+            ${p.position || ''} · Entry ${fmtMoney(p.entryPrice)} → Exit ${fmtMoney(p.exitPrice || p.resolutionPrice || p.currentPrice)} · ${p.shares || 0} shares
           </div>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${p.notes || 'No reasoning'}</div>
           <div class="activity-meta">
@@ -695,7 +695,7 @@ async function loadWeatherTrades() {
             <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px;font-weight:700">${fmtMoney(t.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
-            Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.currentPrice)} · ${t.shares || '—'} shares
+            Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.resolutionPrice || t.currentPrice)} · ${t.shares || '—'} shares
           </div>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${reason}</div>
           <div class="activity-meta">
@@ -872,7 +872,7 @@ async function loadWhaleTrades() {
             <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px;font-weight:700">${fmtMoney(t.pnl)}</span>
           </div>
           <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
-            ${t.side || ''} · Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.currentPrice)} · ${t.shares || 0} shares · Whales: ${t.whales || '—'}
+            ${t.side || ''} · Entry ${fmtMoney(t.entryPrice)} → Exit ${fmtMoney(t.exitPrice || t.resolutionPrice || t.currentPrice)} · ${t.shares || 0} shares · Whales: ${t.whales || '—'}
           </div>
           <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💡 ${t.reasoning || t.notes || 'No reasoning'}</div>
           <div class="activity-meta">
