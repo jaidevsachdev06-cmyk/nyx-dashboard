@@ -902,7 +902,7 @@
     "entryPrice": 0.9546,
     "currentPrice": 0.9019999999999999,
     "shares": 6.27,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, kekkone, archaic",
     "whaleCount": 3,
@@ -918,8 +918,8 @@
     "pnl": -0.32980199999999993,
     "pnlPercent": -5.510161324114812,
     "entryDate": "2026-02-20T08:35:35.872Z",
-    "notes": "Entry corrected via Dome historical audit (was 0.9015)",
-    "updatedAt": "2026-02-22T00:01:58.391Z",
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-02-22T00:02:59.774Z",
     "priceHistory": [
       {},
       {}
