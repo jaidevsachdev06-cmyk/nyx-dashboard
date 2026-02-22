@@ -2323,7 +2323,7 @@
     "market": "Will James Talarico win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.0095,
-    "currentPrice": 1,
+    "currentPrice": 0.0095,
     "shares": 591.58,
     "status": "open",
     "source": "consensus-scanner",
@@ -2337,15 +2337,15 @@
     "conditionId": "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089",
     "createdAt": "2026-02-21T12:01:41.436Z",
     "invested": 5.620010000000001,
-    "currentValue": 591.58,
-    "pnl": 585.9599900000001,
-    "pnlPercent": 10426.315789473683,
+    "currentValue": 5.620010000000001,
+    "pnl": 0,
+    "pnlPercent": 0,
     "entryDate": "2026-02-21T12:01:41.436Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T18:03:14.586Z"
+    "updatedAt": "2026-02-22T18:33:08.399Z"
   },
   {
     "id": "081c9346-0839-4b8b-9e2a-c0974e88a624",
