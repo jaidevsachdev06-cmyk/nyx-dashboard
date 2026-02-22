@@ -2677,7 +2677,7 @@
     "entryPrice": 0.0295,
     "currentPrice": 0.0295,
     "shares": 175.93,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Mombil, debased, x.compolymarketbet",
     "whaleCount": 3,
@@ -2697,7 +2697,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T19:33:28.068Z"
+    "updatedAt": "2026-02-22T20:00:39.427Z",
+    "exitPrice": 0.0295,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "8f593984-e359-4d08-99e0-8d06182b9dab",
