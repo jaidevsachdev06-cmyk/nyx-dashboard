@@ -2099,7 +2099,7 @@
     "entryPrice": 0.095,
     "currentPrice": 0.055,
     "shares": 48.95,
-    "status": "closed-loss",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "elucidate, failstober, The-Joker, duderr",
     "whaleCount": 4,
@@ -2119,7 +2119,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T00:03:31.051Z",
+    "updatedAt": "2026-02-22T00:04:09.920Z",
     "exitPrice": 0.055,
     "notes": "Dropped from whale consensus"
   },
