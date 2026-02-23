@@ -2194,9 +2194,9 @@
       "bucket": "0°C",
       "question": "Will the highest temperature in Toronto be 0°C on February 22?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.06,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.065,
       "createdAt": "2026-02-21T16:06:06.711Z",
       "signal": {
         "forecastTemp": 0.9,
@@ -2212,7 +2212,11 @@
       "orderId": "paper-mlwignel-qr1t",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-23T07:00:08.440Z"
+      "updatedAt": "2026-02-23T07:00:08.440Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-23T08:05:06.425Z",
+      "closedAt": "2026-02-23T08:05:06.434Z"
     },
     {
       "id": "oc-mlwigneo-e1du2q",
@@ -4722,11 +4726,83 @@
         "edge": 0.0416
       },
       "notes": "Forecast: 64.7°F | Model: 27% vs Market: 23% | Edge: 18.5%"
+    },
+    {
+      "id": "oc-mlyw4hox-ta8tu7",
+      "conditionId": "0x57de79e1052d00afc7328abd594b49de51b2b9374682842b4f18957bafcf7ee5",
+      "tokenId": "63826845477427292594829254746101730129363705627133043750271337772533144853184",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-february-24-2026-30-31f",
+      "city": "New York City",
+      "date": "2026-02-24",
+      "bucket": "30-31°F",
+      "question": "Will the highest temperature in New York City be between 30-31°F on February 24?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-23T08:04:06.417Z",
+      "signal": {
+        "forecastTemp": 32.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.635,
+        "modelProb": 0.7739,
+        "edge": 0.1389
+      },
+      "notes": "Forecast: 32.1°F | Model: 77% vs Market: 64% | Edge: 21.9%"
+    },
+    {
+      "id": "oc-mlyw4hp9-48axxr",
+      "conditionId": "0x776dfb3296f2a09cc7f388c55f5ca32c1c478b6e36636dd9a5a1fca34209e5f5",
+      "tokenId": "91975702915313411029385566675701125774335170059311516521411976965561960415974",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-paris-on-february-24-2026-15c",
+      "city": "Paris",
+      "date": "2026-02-24",
+      "bucket": "15°C",
+      "question": "Will the highest temperature in Paris be 15°C on February 24?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-23T08:04:06.429Z",
+      "signal": {
+        "forecastTemp": 15.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.67,
+        "modelProb": 0.7805,
+        "edge": 0.1105
+      },
+      "notes": "Forecast: 15.9°F | Model: 78% vs Market: 67% | Edge: 16.5%"
+    },
+    {
+      "id": "oc-mlyw4hpk-tiulek",
+      "conditionId": "0xfdb3e458f85d3cd99eb20a9138c873903eb6e8f47fa80fb03f43d6aaa74037f0",
+      "tokenId": "62297562973815238072967586313911984915351848089894770888147341066620626742432",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-paris-on-february-24-2026-18c",
+      "city": "Paris",
+      "date": "2026-02-24",
+      "bucket": "18°C",
+      "question": "Will the highest temperature in Paris be 18°C on February 24?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-23T08:04:06.440Z",
+      "signal": {
+        "forecastTemp": 15.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.065,
+        "modelProb": 0.1015,
+        "edge": 0.0365
+      },
+      "notes": "Forecast: 15.9°F | Model: 10% vs Market: 7% | Edge: 56.2%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-23T06:12:02.118Z",
+    "lastUpdated": "2026-02-23T08:05:06.436Z",
     "lastPriceSync": "2026-02-23T08:00:44.533Z"
   }
 }
