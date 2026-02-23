@@ -1663,9 +1663,9 @@
     "market": "US strikes Iran by February 21, 2026?",
     "side": "Yes",
     "entryPrice": 0.0205,
-    "currentPrice": 1,
+    "currentPrice": 0,
     "shares": 268.78,
-    "status": "closed-win",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Roflan, Car, GollumGekko",
     "whaleCount": 3,
@@ -1678,16 +1678,16 @@
     "createdAt": "2026-02-21T04:07:41.722Z",
     "invested": 5.509989999999999,
     "currentValue": 268.78,
-    "pnl": 263.27000999999996,
+    "pnl": -5.51,
     "pnlPercent": 4778.048780487805,
     "entryDate": "2026-02-21T04:07:41.722Z",
-    "updatedAt": "2026-02-22T12:00:50.340Z",
+    "updatedAt": "2026-02-23T02:52:25.702Z",
     "priceHistory": [
       {},
       {}
     ],
-    "exitPrice": 1,
-    "notes": "Dropped from whale consensus"
+    "exitPrice": 0,
+    "notes": "Correction: market resolved NO on-chain/Dome; YES position is a loss. Previous close used invalid exitPrice=1 from missing Dome price for closed market."
   },
   {
     "id": "ae408004-7976-4dce-939c-f50399f313ff",
