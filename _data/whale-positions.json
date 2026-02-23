@@ -2193,7 +2193,7 @@
     "entryPrice": 0.485,
     "currentPrice": 0.505,
     "shares": 9.9,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Car, failstober, duderr",
     "whaleCount": 3,
@@ -2213,7 +2213,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T20:01:02.277Z",
+    "updatedAt": "2026-02-23T20:02:45.334Z",
     "exitPrice": 0.505,
     "notes": "Dropped from whale consensus"
   },
