@@ -2646,9 +2646,9 @@
       "bucket": "4°C",
       "question": "Will the highest temperature in Seoul be 4°C on February 23?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 42.6,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 42.625,
       "createdAt": "2026-02-22T00:06:25.378Z",
       "signal": {
         "forecastTemp": 4.1,
@@ -2664,7 +2664,11 @@
       "orderId": "paper-mlwzmc19-fxet",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-23T17:00:04.711Z"
+      "updatedAt": "2026-02-23T17:00:04.711Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-23T18:04:59.594Z",
+      "closedAt": "2026-02-23T18:04:59.605Z"
     },
     {
       "id": "oc-mlwzmc1f-6tbtwn",
@@ -4885,7 +4889,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-23T16:13:28.877Z",
+    "lastUpdated": "2026-02-23T18:04:59.608Z",
     "lastPriceSync": "2026-02-23T18:00:34.000Z"
   }
 }
