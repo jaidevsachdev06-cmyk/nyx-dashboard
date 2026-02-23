@@ -1239,7 +1239,7 @@
     "entryPrice": 0.385,
     "currentPrice": 0.385,
     "shares": 13.04,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Mombil, Roflan",
     "whaleCount": 3,
@@ -1259,7 +1259,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-22T23:33:06.675Z"
+    "updatedAt": "2026-02-23T00:00:41.486Z",
+    "exitPrice": 0.385,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "793af810-3d21-4b1f-a8e6-a856e8adc949",
