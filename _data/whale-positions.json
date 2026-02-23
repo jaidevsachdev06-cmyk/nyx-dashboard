@@ -2768,7 +2768,7 @@
     "entryPrice": 0.9875,
     "currentPrice": 1,
     "shares": 5.04,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "aenews, Car, Thonker",
     "whaleCount": 3,
@@ -2788,7 +2788,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T19:33:29.692Z"
+    "updatedAt": "2026-02-23T20:01:25.325Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "96a8e897-ae43-438d-ad64-2619d4d7a51b",
