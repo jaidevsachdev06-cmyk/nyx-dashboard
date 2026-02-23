@@ -2675,7 +2675,7 @@
     "entryPrice": 0.0085,
     "currentPrice": 0.0085,
     "shares": 620,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Influenz, GollumGekko, Brokie",
     "whaleCount": 3,
@@ -2695,7 +2695,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T19:33:21.562Z",
+    "updatedAt": "2026-02-23T20:01:18.498Z",
     "exitPrice": 0.0085,
     "notes": "Dropped from whale consensus"
   },
