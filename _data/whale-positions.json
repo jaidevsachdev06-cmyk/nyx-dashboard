@@ -2667,7 +2667,7 @@
     "market": "Will Eric Trump win the 2028 Republican presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.0085,
-    "currentPrice": 0.0075,
+    "currentPrice": 0.0085,
     "shares": 620,
     "status": "open",
     "source": "consensus-scanner",
@@ -2681,15 +2681,15 @@
     "conditionId": "0xca68152902c3581ab42feb04921b8b1cd3c4e80d06f255ae077259fca0bba15c",
     "createdAt": "2026-02-22T04:00:47.049Z",
     "invested": 5.2700000000000005,
-    "currentValue": 4.6499999999999995,
-    "pnl": -0.620000000000001,
-    "pnlPercent": -11.76470588235296,
+    "currentValue": 5.2700000000000005,
+    "pnl": 0,
+    "pnlPercent": 0,
     "entryDate": "2026-02-22T04:00:47.049Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T05:33:22.935Z",
+    "updatedAt": "2026-02-23T06:03:26.370Z",
     "exitPrice": 0.0085,
     "notes": "Dropped from whale consensus"
   },
