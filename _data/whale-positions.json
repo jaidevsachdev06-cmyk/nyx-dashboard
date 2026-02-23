@@ -1190,7 +1190,7 @@
     "entryPrice": 0.915,
     "currentPrice": 1,
     "shares": 5.72,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Car, Parz1vaI, Roflan",
     "whaleCount": 3,
@@ -1210,7 +1210,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T20:00:56.031Z",
+    "updatedAt": "2026-02-23T20:02:01.028Z",
     "exitPrice": 1,
     "notes": "Dropped from whale consensus"
   },
