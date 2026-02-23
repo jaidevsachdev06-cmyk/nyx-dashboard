@@ -1,60 +1,168 @@
 /**
- * core/polymarket.js — Dome API Interface (Polymarket data layer)
- * 
- * ALL market data flows through Dome API. Zero Gamma/CLOB references.
- * Resolution truth comes from Dome's winning_side field.
+ * core/polymarket.js — Polymarket data interface
+ *
+ * Primary: Dome API (official Polymarket data layer)
+ * Fallbacks (when Dome 5xx / timeouts):
+ *   - Prices: Polymarket CLOB `/midpoint?token_id=...` (public)
+ *   - Market metadata + soft-resolution checks: Gamma `/markets?condition_ids=...` (public)
+ *
+ * NOTE: Resolution truth is still best from Dome (winning_side). Gamma fallback is best-effort
+ * (uses `closed` + extreme outcomePrices to infer YES/NO).
  */
 
 const config = require('../config.json');
 
 const DOME_URL = config.dome.apiUrl;
 const API_KEY = config.dome.apiKey;
+
+const GAMMA_URL = config.gamma?.apiUrl || 'https://gamma-api.polymarket.com';
+const CLOB_URL = config.clob?.apiUrl || 'https://clob.polymarket.com';
+
 const RATE_LIMIT_MS = config.dome.rateLimitMs || 700;
 
 let lastCallTime = 0;
 
-async function rateLimitedFetch(url, opts = {}, retries = 2) {
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function isRetryableDomeFailure(err) {
+  const m = String(err?.message || err);
+  return (
+    m.includes('Dome API 500') ||
+    m.includes('Dome API 502') ||
+    m.includes('Dome API 503') ||
+    m.includes('Dome API 504') ||
+    m.includes('fetch failed') ||
+    m.includes('ETIMEDOUT') ||
+    m.includes('ECONNRESET')
+  );
+}
+
+async function fetchJSON(url, opts = {}, timeoutMs = 15000) {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const r = await fetch(url, { ...opts, signal: ctrl.signal });
+    if (!r.ok) {
+      const body = await r.text().catch(() => '');
+      throw new Error(`${url}: ${r.status} ${body.slice(0, 200)}`);
+    }
+    return r.json();
+  } finally {
+    clearTimeout(t);
+  }
+}
+
+async function rateLimitedDomeFetch(url, opts = {}, retries = 2) {
   const now = Date.now();
   const wait = RATE_LIMIT_MS - (now - lastCallTime);
-  if (wait > 0) await new Promise(r => setTimeout(r, wait));
+  if (wait > 0) await sleep(wait);
   lastCallTime = Date.now();
 
   const headers = { 'X-Api-Key': API_KEY, ...opts.headers };
-  const res = await fetch(url, { ...opts, headers });
-  if (res.status === 429 && retries > 0) {
-    await new Promise(r => setTimeout(r, 2000));
-    lastCallTime = Date.now();
-    return rateLimitedFetch(url, opts, retries - 1);
+
+  let res;
+  try {
+    res = await fetch(url, { ...opts, headers });
+  } catch (e) {
+    // network error / aborted / dns — treat as retryable
+    if (retries > 0) {
+      await sleep(1200);
+      lastCallTime = Date.now();
+      return rateLimitedDomeFetch(url, opts, retries - 1);
+    }
+    throw new Error(`Dome API fetch failed: ${e.message}`);
   }
+
+  if (res.status === 429 && retries > 0) {
+    await sleep(2000);
+    lastCallTime = Date.now();
+    return rateLimitedDomeFetch(url, opts, retries - 1);
+  }
+
   if (!res.ok) {
     const body = await res.text().catch(() => '');
     throw new Error(`Dome API ${res.status}: ${body.slice(0, 200)}`);
   }
+
   return res.json();
 }
 
-/**
- * Search for markets on Polymarket via Dome.
- */
+// ---- Gamma fallback helpers ----
+
+async function gammaGetMarket(conditionId) {
+  const url = `${GAMMA_URL}/markets?condition_ids=${encodeURIComponent(conditionId)}`;
+  const data = await fetchJSON(url, { headers: { 'User-Agent': 'NyxWeatherV2/1.0' } });
+  return Array.isArray(data) && data.length > 0 ? data[0] : null;
+}
+
+function inferResolutionFromGammaMarket(market) {
+  if (!market) return { resolved: false, outcome: null, resolutionPrice: null, source: 'gamma', market: null };
+
+  // Gamma doesn't always expose a clean "winning outcome" field; we infer when closed + extreme prices.
+  const closed = !!market.closed;
+  const prices = Array.isArray(market.outcomePrices) ? market.outcomePrices.map(p => parseFloat(p)) : [];
+
+  if (!closed || prices.length < 2 || prices.some(p => Number.isNaN(p))) {
+    return {
+      resolved: false,
+      outcome: null,
+      resolutionPrice: null,
+      source: 'gamma',
+      market: { slug: market.slug, question: market.question }
+    };
+  }
+
+  const [yesP, noP] = prices;
+  const EPS = 0.02;
+  if (yesP >= 1 - EPS && noP <= EPS) {
+    return {
+      resolved: true,
+      outcome: 'YES',
+      resolutionPrice: 1.0,
+      source: 'gamma-inferred',
+      market: { slug: market.slug, question: market.question }
+    };
+  }
+  if (noP >= 1 - EPS && yesP <= EPS) {
+    return {
+      resolved: true,
+      outcome: 'NO',
+      resolutionPrice: 0.0,
+      source: 'gamma-inferred',
+      market: { slug: market.slug, question: market.question }
+    };
+  }
+
+  return {
+    resolved: false,
+    outcome: null,
+    resolutionPrice: null,
+    source: 'gamma',
+    market: { slug: market.slug, question: market.question }
+  };
+}
+
+// ---- Public API ----
+
 async function searchMarkets(query) {
   const params = new URLSearchParams({ search: query, status: 'open', limit: '30' });
-  const data = await rateLimitedFetch(`${DOME_URL}/polymarket/markets?${params}`);
+  const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/markets?${params}`);
   return Array.isArray(data) ? data : (data.markets || data.data || []);
 }
 
-/**
- * Get market by conditionId via Dome.
- */
 async function getMarket(conditionId) {
   const params = new URLSearchParams({ condition_id: conditionId });
-  const data = await rateLimitedFetch(`${DOME_URL}/polymarket/markets?${params}`);
-  const markets = Array.isArray(data) ? data : (data.markets || data.data || []);
-  return markets.length > 0 ? markets[0] : null;
+  try {
+    const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/markets?${params}`);
+    const markets = Array.isArray(data) ? data : (data.markets || data.data || []);
+    return markets.length > 0 ? markets[0] : null;
+  } catch (err) {
+    if (!isRetryableDomeFailure(err)) throw err;
+    // Fallback: Gamma
+    return gammaGetMarket(conditionId);
+  }
 }
 
-/**
- * Validate a conditionId exists on Polymarket.
- */
 async function validateConditionId(conditionId) {
   try {
     const market = await getMarket(conditionId);
@@ -65,49 +173,64 @@ async function validateConditionId(conditionId) {
   }
 }
 
-/**
- * Get midpoint price for a token via Dome.
- */
 async function getMidpointPrice(tokenId) {
-  const data = await rateLimitedFetch(`${DOME_URL}/polymarket/market-price/${tokenId}`);
-  return parseFloat(data.price || data.mid || data.midpoint || 0);
-}
-
-/**
- * Check if a market has resolved via Dome.
- * Uses winning_side.label for resolution outcome.
- */
-async function checkResolution(conditionId) {
-  const market = await getMarket(conditionId);
-  if (!market) return { resolved: false, outcome: null, resolutionPrice: null, error: 'Market not found' };
-
-  // Dome uses winning_side for resolved markets
-  if (market.winning_side && market.winning_side.label) {
-    const outcome = market.winning_side.label.toUpperCase(); // "Yes" → "YES"
-    return {
-      resolved: true,
-      outcome,
-      resolutionPrice: outcome === 'YES' ? 1.0 : 0.0,
-      source: 'polymarket',
-      market: { slug: market.slug, question: market.question }
-    };
+  // 1) Try Dome
+  try {
+    const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/market-price/${tokenId}`);
+    return parseFloat(data.price || data.mid || data.midpoint || 0);
+  } catch (err) {
+    if (!isRetryableDomeFailure(err)) throw err;
   }
 
-  return { resolved: false, outcome: null, resolutionPrice: null };
+  // 2) Fallback to CLOB midpoint
+  try {
+    const d = await fetchJSON(`${CLOB_URL}/midpoint?token_id=${encodeURIComponent(tokenId)}`, { headers: { 'User-Agent': 'NyxWeatherV2/1.0' } }, 15000);
+    const p = d?.midpoint ?? d?.price ?? d?.mid;
+    return p != null ? parseFloat(p) : 0;
+  } catch (err) {
+    // 3) Last resort: return 0 (caller can treat as unknown)
+    throw new Error(`Price fetch failed (Dome+CLOB): ${err.message}`);
+  }
 }
 
-/**
- * Paper order — no real execution. Just log and return mock.
- */
+async function checkResolution(conditionId) {
+  // 1) Dome truth
+  try {
+    const params = new URLSearchParams({ condition_id: conditionId });
+    const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/markets?${params}`);
+    const markets = Array.isArray(data) ? data : (data.markets || data.data || []);
+    const market = markets.length > 0 ? markets[0] : null;
+
+    if (!market) return { resolved: false, outcome: null, resolutionPrice: null, error: 'Market not found' };
+
+    if (market.winning_side && market.winning_side.label) {
+      const outcome = market.winning_side.label.toUpperCase();
+      return {
+        resolved: true,
+        outcome,
+        resolutionPrice: outcome === 'YES' ? 1.0 : 0.0,
+        source: 'dome',
+        market: { slug: market.slug || market.market_slug, question: market.question || market.title }
+      };
+    }
+
+    return { resolved: false, outcome: null, resolutionPrice: null, source: 'dome' };
+  } catch (err) {
+    if (!isRetryableDomeFailure(err)) throw err;
+  }
+
+  // 2) Gamma best-effort inference
+  const gammaMarket = await gammaGetMarket(conditionId);
+  const inferred = inferResolutionFromGammaMarket(gammaMarket);
+  return inferred;
+}
+
 async function paperOrder({ tokenId, side, price, size }) {
   const orderId = `paper-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
   console.log(`[polymarket] PAPER ORDER: ${side} ${size} @ ${price} | token: ${tokenId} | id: ${orderId}`);
   return { orderID: orderId, id: orderId, paper: true };
 }
 
-/**
- * Compute P&L from Polymarket resolution.
- */
 function computePnL(trade, resolution) {
   if (!resolution.resolved || resolution.outcome === null) {
     throw new Error('Cannot compute P&L: market not resolved');
@@ -126,7 +249,7 @@ function computePnL(trade, resolution) {
     pnlUSDC,
     result: won ? 'win' : 'loss',
     resolutionPrice: resolution.resolutionPrice,
-    resolutionSource: 'polymarket'
+    resolutionSource: resolution.source || resolution.resolutionSource || 'polymarket'
   };
 }
 
