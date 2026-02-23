@@ -441,9 +441,9 @@
     "market": "Will the United States win the most medals in the 2026 Winter Olympics?",
     "side": "Yes",
     "entryPrice": 0.008,
-    "currentPrice": 0.011,
+    "currentPrice": 0,
     "shares": 10,
-    "status": "closed-exit",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Influenz, Dropper, gopfan2, Euan",
     "whaleCount": 4,
@@ -455,12 +455,13 @@
     "createdAt": "2026-02-18T10:05:37.922Z",
     "invested": 0.08,
     "currentValue": 0.10999999999999999,
-    "pnl": 0.029999999999999985,
+    "pnl": -0.08,
     "pnlPercent": 37.49999999999998,
     "entryDate": "2026-02-18T10:05:37.922Z",
     "conditionId": "0x7d658ac249e3833231e2eb5375f0e6c57d7686a1208fa986bfb6aef99cdc9681",
-    "updatedAt": "2026-02-20T07:03:08.024Z",
-    "notes": "Dropped from whale consensus entirely"
+    "updatedAt": "2026-02-23T02:55:54.403Z",
+    "notes": "Dropped from whale consensus entirely\nAudit fix 2026-02-23T02:55:54Z: Dome winning_side=NO",
+    "exitPrice": 0
   },
   {
     "id": "c1b3c348-091c-401a-83b8-acd206e6794e",
