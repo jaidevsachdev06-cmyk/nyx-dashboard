@@ -386,7 +386,7 @@
     "entryPrice": 0.0005,
     "currentPrice": 0.002,
     "shares": 10,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Influenz, Roflan, Snoorrason, UbuntuTrading",
     "whaleCount": 4,
@@ -402,11 +402,13 @@
     "pnlPercent": 300,
     "entryDate": "2026-02-18T06:55:21.197Z",
     "conditionId": "0x5599856587ed77cf40cf20608448180f6abdcc512027016bcdd68ad73fca3e9f",
-    "updatedAt": "2026-02-22T23:31:54.324Z",
+    "updatedAt": "2026-02-23T00:00:38.459Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.002,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "089036f1-9735-434c-be9d-5bef5574abb5",
