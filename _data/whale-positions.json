@@ -2876,7 +2876,7 @@
     "market": "Will the US next strike Iran on February 22, 2026 (ET)?",
     "side": "No",
     "entryPrice": 0.9924999999999999,
-    "currentPrice": 0.9955,
+    "currentPrice": 0.994,
     "shares": 5.22,
     "status": "open",
     "source": "consensus-scanner",
@@ -2890,14 +2890,14 @@
     "conditionId": "0x05ecb044518b08a7423aa61cc76597029963e7d8e98d3f5b52b731d379951376",
     "createdAt": "2026-02-23T00:00:33.515Z",
     "invested": 5.1808499999999995,
-    "currentValue": 5.19651,
-    "pnl": 0.01566000000000045,
-    "pnlPercent": 0.30226700251890043,
+    "currentValue": 5.18868,
+    "pnl": 0.007830000000000226,
+    "pnlPercent": 0.15113350125945021,
     "entryDate": "2026-02-23T00:00:33.515Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T02:33:54.728Z"
+    "updatedAt": "2026-02-23T03:03:47.373Z"
   }
 ]
