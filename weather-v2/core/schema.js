@@ -13,7 +13,7 @@ const VALID_RESULTS = ['win', 'loss', 'push', null];
 const VALID_TRANSITIONS = {
   candidate: ['entered', 'closed'],   // closed = abandoned candidate
   entered:   ['open', 'closed'],       // closed = order rejected/cancelled
-  open:      ['resolved'],
+  open:      ['resolved', 'closed'],
   resolved:  ['closed'],
   closed:    []                        // terminal state
 };
@@ -185,7 +185,7 @@ function validateTrade(trade) {
   // Both are valid
 
   // Cross-field: resolutionSource must be "polymarket" or "price-inferred"
-  if (trade.resolutionSource && !['polymarket', 'price-inferred'].includes(trade.resolutionSource)) {
+  if (trade.resolutionSource && !['polymarket', 'price-inferred', 'manual-exit'].includes(trade.resolutionSource)) {
     errors.push(`resolutionSource must be "polymarket" or "price-inferred", got "${trade.resolutionSource}"`);
   }
 

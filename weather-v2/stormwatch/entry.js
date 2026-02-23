@@ -43,6 +43,17 @@ async function processCandidate(signal) {
     return { entered: false, trade: null, reason: `Insufficient edge: ${edgePct.toFixed(1)}% (min: ${config.risk.minEdgePct}%)` };
   }
 
+
+
+  // Confidence gates (redundant safety)
+  const minModelProb = config.risk.minModelProb || 0.6;
+  if (signal.modelProb < minModelProb) {
+    return { entered: false, trade: null, reason: `Low model confidence: ${(signal.modelProb*100).toFixed(1)}% (<${(minModelProb*100).toFixed(0)}%)` };
+  }
+  const minDist = config.risk.minDistanceFromLine || 2;
+  if (signal.distFromLine != null && signal.distFromLine < minDist) {
+    return { entered: false, trade: null, reason: `Too close to line: ${signal.distFromLine.toFixed(2)} (<${minDist})` };
+  }
   // Size the position — Kelly with multiplier
   const kellyFraction = Math.max(0, Math.min(config.risk.kellyMultiplier, edge / (1 - currentPrice)));
   const maxSize = config.risk.maxPositionSizeUSDC;

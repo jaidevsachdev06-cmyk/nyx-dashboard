@@ -36,9 +36,62 @@ async function enterTrade(tradeId, { price, size }) {
   }
 
   // E027: Same city + same date = 1 position only (correlated bet protection)
+  // OPTIMIZATION: allow automatic SWAP when a strictly better candidate appears.
   const sameCityDate = openPositions.filter(t => t.city === trade.city && t.date === trade.date);
   if (sameCityDate.length > 0) {
-    throw new Error(`Risk limit: "${trade.city}" ${trade.date} already has a position (${sameCityDate[0].bucket} ${sameCityDate[0].side}). Same city+date = 1 position only.`);
+    const existing = sameCityDate[0];
+
+    // If it's literally the same condition, it's a duplicate.
+    if (existing.conditionId === trade.conditionId) {
+      throw new Error(`Duplicate: already open for conditionId ${trade.conditionId}`);
+    }
+
+    const swapCfg = (config.risk && config.risk.swap) || {};
+    if (!swapCfg.enabled) {
+      throw new Error(`Risk limit: "${trade.city}" ${trade.date} already has a position (${existing.bucket} ${existing.side}). Same city+date = 1 position only.`);
+    }
+
+    // Compute edge (percentage points) using stored signal if available
+    const newEdgePP = (trade.signal && trade.signal.modelProb != null && trade.signal.impliedProb != null)
+      ? (trade.signal.modelProb - trade.signal.impliedProb)
+      : null;
+    const oldEdgePP = (existing.signal && existing.signal.modelProb != null && existing.signal.impliedProb != null)
+      ? (existing.signal.modelProb - existing.signal.impliedProb)
+      : null;
+
+    const minImprovePP = (swapCfg.minEdgePPImprove != null ? swapCfg.minEdgePPImprove : 10) / 100; // 10pp -> 0.10
+
+    // Minimum holding time (avoid churn)
+    const minHoldMin = swapCfg.minHoldMinutes != null ? swapCfg.minHoldMinutes : 30;
+    const heldMin = existing.enteredAt ? (Date.now() - new Date(existing.enteredAt).getTime()) / 60000 : 1e9;
+
+    const canSwap = (heldMin >= minHoldMin) && (newEdgePP != null) && (oldEdgePP != null) && ((newEdgePP - oldEdgePP) >= minImprovePP);
+
+    if (!canSwap) {
+      throw new Error(`Risk limit: city+date already open; swap criteria not met (held ${heldMin.toFixed(0)}m, ΔedgePP ${(newEdgePP!=null&&oldEdgePP!=null)?((newEdgePP-oldEdgePP)*100).toFixed(1):'n/a'}pp)`);
+    }
+
+    // Execute SWAP: close existing at current midpoint price (paper exit), then proceed.
+    let exitPrice = null;
+    try {
+      exitPrice = await polymarket.getMidpointPrice(existing.tokenId);
+    } catch (e) {
+      exitPrice = existing.currentPrice ?? existing.entryPrice ?? null;
+    }
+    if (exitPrice == null) {
+      throw new Error('Swap failed: could not determine exitPrice for existing position');
+    }
+
+    const oldEntry = existing.entryPrice ?? 0;
+    const oldSize = existing.size ?? 0;
+    const pnlUSDC = parseFloat(((exitPrice - oldEntry) * oldSize).toFixed(4));
+
+    store.transition(existing.id, 'closed', {
+      resolutionPrice: exitPrice,
+      resolutionSource: 'manual-exit',
+      pnlUSDC,
+      notes: (existing.notes ? existing.notes + ' | ' : '') + `SWAP: replaced by better edge candidate (ΔedgePP ${((newEdgePP-oldEdgePP)*100).toFixed(1)}pp)`
+    });
   }
 
   // Compute exposure for this city across all open positions

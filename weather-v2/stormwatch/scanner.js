@@ -154,6 +154,27 @@ function bucketProbability(bucket, forecastMean, forecastSD) {
   }
 }
 
+
+
+/**
+ * Distance (in degrees) from forecast mean to the nearest decision boundary.
+ * Used to avoid coinflips near the line.
+ */
+function bucketDistance(bucket, forecastMean) {
+  if (!bucket) return null;
+  switch (bucket.type) {
+    case 'exact':
+      return Math.abs(forecastMean - bucket.low);
+    case 'range':
+      return Math.min(Math.abs(forecastMean - bucket.low), Math.abs(forecastMean - bucket.high));
+    case 'above':
+      return Math.abs(forecastMean - bucket.low);
+    case 'below':
+      return Math.abs(forecastMean - bucket.high);
+    default:
+      return null;
+  }
+}
 // ── Main scan ──
 
 /**
@@ -242,6 +263,13 @@ async function scan() {
           const edge = effectiveModelProb - effectivePrice;
           const edgePct = (edge / effectivePrice) * 100;
 
+          // Confidence gates
+          const distFromLine = bucketDistance(bucket, forecast.mean);
+          const minModelProb = config.risk.minModelProb || 0.6;
+          const minDist = config.risk.minDistanceFromLine || 2;
+          const confident = (effectiveModelProb >= minModelProb) && (distFromLine == null || distFromLine >= minDist);
+
+
           const bucketLabel = bucket.type === 'exact' ? `${bucket.low}°${bucket.unit}` :
                               bucket.type === 'range' ? `${bucket.low}-${bucket.high}°${bucket.unit}` :
                               bucket.type === 'above' ? `≥${bucket.low}°${bucket.unit}` :
@@ -264,8 +292,10 @@ async function scan() {
             marketPrice: parseFloat(effectivePrice.toFixed(4)),
             edge: parseFloat(edge.toFixed(4)),
             edgePct: parseFloat(edgePct.toFixed(1)),
+            distFromLine: distFromLine == null ? null : parseFloat(distFromLine.toFixed(2)),
             lowConfidence,
-            passesThreshold: edgePct >= config.risk.minEdgePct && !lowConfidence
+            confident,
+            passesThreshold: edgePct >= config.risk.minEdgePct && !lowConfidence && confident
           };
 
           candidates.push(candidate);
