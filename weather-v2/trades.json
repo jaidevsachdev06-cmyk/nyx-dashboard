@@ -2716,9 +2716,9 @@
       "bucket": "≤25°F",
       "question": "Will the highest temperature in Chicago be 25°F or below on February 23?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.43,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.47,
       "createdAt": "2026-02-22T00:06:25.406Z",
       "signal": {
         "forecastTemp": 25.5,
@@ -2734,7 +2734,11 @@
       "orderId": "paper-mlwzmc1w-5fl5",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-23T21:00:03.527Z"
+      "updatedAt": "2026-02-23T21:00:03.527Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-23T22:04:59.272Z",
+      "closedAt": "2026-02-23T22:04:59.283Z"
     },
     {
       "id": "oc-mlwzmc1y-3a2kgj",
@@ -4889,7 +4893,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-23T18:04:59.608Z",
+    "lastUpdated": "2026-02-23T22:04:59.286Z",
     "lastPriceSync": "2026-02-23T22:00:30.667Z"
   }
 }
