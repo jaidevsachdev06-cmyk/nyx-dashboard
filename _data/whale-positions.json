@@ -2899,5 +2899,29 @@
       {}
     ],
     "updatedAt": "2026-02-23T19:33:44.339Z"
+  },
+  {
+    "id": "e6d7f11b-283a-4cca-bbfc-e1f8d39bef50",
+    "market": "Starmer out by February 28, 2026?",
+    "side": "No",
+    "entryPrice": 0.99,
+    "currentPrice": 0.99,
+    "shares": 5.66,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, Qualitative, archaic",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 92.3,
+    "avgWinRate": 72.8,
+    "reasoning": "Consensus: 3 whales (avg score 92.3, WR 72.8%) No. bet=$5.60, shares=5.66. Whales: scottilicious, Qualitative, archaic",
+    "endDate": "2026-06-30",
+    "conditionId": "0xb957e0c6ec337b15a9d93e1ba19a48b410fc1594f022e3bb734e958a4978cdaf",
+    "createdAt": "2026-02-23T20:00:27.547Z",
+    "invested": 5.6034,
+    "currentValue": 5.6034,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-23T20:00:27.547Z"
   }
 ]
