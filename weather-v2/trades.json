@@ -2177,7 +2177,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -11.72,
+      "pnlUSDC": -11.67,
       "createdAt": "2026-02-21T16:06:06.701Z",
       "signal": {
         "forecastTemp": 13.7,
@@ -2192,8 +2192,8 @@
       "enteredAt": "2026-02-21T16:06:06.705Z",
       "orderId": "paper-mlwigneb-9xqs",
       "txHash": null,
-      "currentPrice": 0.014,
-      "updatedAt": "2026-02-23T18:00:01.624Z"
+      "currentPrice": 0.0165,
+      "updatedAt": "2026-02-23T18:30:02.562Z"
     },
     {
       "id": "oc-mlwignef-yszrgj",
@@ -2718,7 +2718,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -6.92,
+      "pnlUSDC": -8.21,
       "createdAt": "2026-02-22T00:06:25.406Z",
       "signal": {
         "forecastTemp": 25.5,
@@ -2733,8 +2733,8 @@
       "enteredAt": "2026-02-22T00:06:25.410Z",
       "orderId": "paper-mlwzmc1w-5fl5",
       "txHash": null,
-      "currentPrice": 0.0645,
-      "updatedAt": "2026-02-23T18:00:04.271Z"
+      "currentPrice": 0.0495,
+      "updatedAt": "2026-02-23T18:30:04.206Z"
     },
     {
       "id": "oc-mlwzmc1y-3a2kgj",
@@ -2749,7 +2749,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -5.67,
+      "pnlUSDC": 0.13,
       "createdAt": "2026-02-22T00:06:25.414Z",
       "signal": {
         "forecastTemp": 38.1,
@@ -2764,8 +2764,8 @@
       "enteredAt": "2026-02-22T00:06:25.418Z",
       "orderId": "paper-mlwzmc24-txr6",
       "txHash": null,
-      "currentPrice": 0.24,
-      "updatedAt": "2026-02-23T18:00:06.118Z"
+      "currentPrice": 0.455,
+      "updatedAt": "2026-02-23T18:30:05.876Z"
     },
     {
       "id": "oc-mlwzmc27-0gktdt",
@@ -2796,7 +2796,7 @@
       "orderId": "paper-mlwzmc2d-oj8x",
       "txHash": null,
       "currentPrice": 0.002,
-      "updatedAt": "2026-02-23T18:00:07.791Z"
+      "updatedAt": "2026-02-23T18:30:07.480Z"
     },
     {
       "id": "oc-mlwzmc2f-nc2djz",
@@ -2811,7 +2811,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.16,
+      "pnlUSDC": 2.8,
       "createdAt": "2026-02-22T00:06:25.431Z",
       "signal": {
         "forecastTemp": 49.2,
@@ -2826,8 +2826,8 @@
       "enteredAt": "2026-02-22T00:06:25.435Z",
       "orderId": "paper-mlwzmc2l-8st0",
       "txHash": null,
-      "currentPrice": 0.405,
-      "updatedAt": "2026-02-23T18:00:11.168Z"
+      "currentPrice": 0.455,
+      "updatedAt": "2026-02-23T18:30:09.164Z"
     },
     {
       "id": "oc-mlwzmc2r-dyz3t1",
@@ -2888,7 +2888,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 7.79,
+      "pnlUSDC": 9.63,
       "createdAt": "2026-02-22T00:06:25.452Z",
       "signal": {
         "forecastTemp": 34.5,
@@ -2903,8 +2903,8 @@
       "enteredAt": "2026-02-22T00:06:25.457Z",
       "orderId": "paper-mlwzmc37-dojs",
       "txHash": null,
-      "currentPrice": 0.49,
-      "updatedAt": "2026-02-23T18:00:12.779Z"
+      "currentPrice": 0.535,
+      "updatedAt": "2026-02-23T18:30:10.750Z"
     },
     {
       "id": "oc-mlwzmc3b-j2dzou",
@@ -3208,7 +3208,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -6.46,
+      "pnlUSDC": -5.78,
       "createdAt": "2026-02-22T04:03:31.216Z",
       "signal": {
         "forecastTemp": 57.3,
@@ -3224,8 +3224,8 @@
       "enteredAt": "2026-02-22T04:03:31.221Z",
       "orderId": "paper-mlx838rc-r3wy",
       "txHash": null,
-      "currentPrice": 0.315,
-      "updatedAt": "2026-02-23T18:00:14.469Z"
+      "currentPrice": 0.355,
+      "updatedAt": "2026-02-23T18:30:12.372Z"
     },
     {
       "id": "oc-mlx838rg-220izy",
@@ -3696,7 +3696,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 4.38,
+      "pnlUSDC": 4.74,
       "createdAt": "2026-02-23T00:04:12.678Z",
       "signal": {
         "forecastTemp": 71,
@@ -3712,8 +3712,8 @@
       "enteredAt": "2026-02-23T00:04:12.686Z",
       "orderId": "paper-mlyezcb5-b03f",
       "txHash": null,
-      "currentPrice": 0.23,
-      "updatedAt": "2026-02-23T18:00:16.122Z"
+      "currentPrice": 0.235,
+      "updatedAt": "2026-02-23T18:30:14.095Z"
     },
     {
       "id": "oc-mlyezcbk-ft7e3t",
@@ -3745,7 +3745,7 @@
       "orderId": "paper-mlyezcbr-4qxh",
       "txHash": null,
       "currentPrice": 0.125,
-      "updatedAt": "2026-02-23T18:00:17.926Z"
+      "updatedAt": "2026-02-23T18:30:15.703Z"
     },
     {
       "id": "oc-mlyezcbu-v38848",
@@ -3760,7 +3760,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.95,
+      "pnlUSDC": 1.77,
       "createdAt": "2026-02-23T00:04:12.714Z",
       "signal": {
         "forecastTemp": 51,
@@ -3776,8 +3776,8 @@
       "enteredAt": "2026-02-23T00:04:12.719Z",
       "orderId": "paper-mlyezcc2-00xw",
       "txHash": null,
-      "currentPrice": 0.26,
-      "updatedAt": "2026-02-23T18:00:19.530Z"
+      "currentPrice": 0.24,
+      "updatedAt": "2026-02-23T18:30:17.319Z"
     },
     {
       "id": "oc-mlyezcc5-7oon0r",
@@ -3816,7 +3816,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.68,
+      "pnlUSDC": 3.79,
       "createdAt": "2026-02-23T00:04:12.731Z",
       "signal": {
         "forecastTemp": 13.4,
@@ -3832,8 +3832,8 @@
       "enteredAt": "2026-02-23T00:04:12.736Z",
       "orderId": "paper-mlyezcci-5fh1",
       "txHash": null,
-      "currentPrice": 0.69,
-      "updatedAt": "2026-02-23T18:00:21.156Z"
+      "currentPrice": 0.695,
+      "updatedAt": "2026-02-23T18:30:18.897Z"
     },
     {
       "id": "oc-mlyezccm-rorj7y",
@@ -3848,7 +3848,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.28,
+      "pnlUSDC": -1.52,
       "createdAt": "2026-02-23T00:04:12.742Z",
       "signal": {
         "forecastTemp": 36.4,
@@ -3864,8 +3864,8 @@
       "enteredAt": "2026-02-23T00:04:12.747Z",
       "orderId": "paper-mlyezcct-o6xo",
       "txHash": null,
-      "currentPrice": 0.67,
-      "updatedAt": "2026-02-23T18:00:22.756Z"
+      "currentPrice": 0.655,
+      "updatedAt": "2026-02-23T18:30:20.473Z"
     },
     {
       "id": "oc-mlyezccy-913z15",
@@ -3880,7 +3880,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -6.7,
+      "pnlUSDC": -6.36,
       "createdAt": "2026-02-23T00:04:12.754Z",
       "signal": {
         "forecastTemp": -6,
@@ -3896,8 +3896,8 @@
       "enteredAt": "2026-02-23T00:04:12.759Z",
       "orderId": "paper-mlyezcd5-prwm",
       "txHash": null,
-      "currentPrice": 0.05,
-      "updatedAt": "2026-02-23T18:00:24.390Z"
+      "currentPrice": 0.055,
+      "updatedAt": "2026-02-23T18:30:22.123Z"
     },
     {
       "id": "oc-mlyezcd9-xoppui",
@@ -4001,7 +4001,7 @@
       "orderId": "paper-mlyezcdt-7hq1",
       "txHash": null,
       "currentPrice": 0.365,
-      "updatedAt": "2026-02-23T18:00:25.991Z"
+      "updatedAt": "2026-02-23T18:30:23.726Z"
     },
     {
       "id": "oc-mlyezcdw-vpf7m7",
@@ -4195,7 +4195,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 4.16,
+      "pnlUSDC": 13.85,
       "createdAt": "2026-02-23T00:04:12.841Z",
       "signal": {
         "forecastTemp": 31.3,
@@ -4211,8 +4211,8 @@
       "enteredAt": "2026-02-23T00:04:12.849Z",
       "orderId": "paper-mlyezcfu-8dg8",
       "txHash": null,
-      "currentPrice": 0.105,
-      "updatedAt": "2026-02-23T18:00:27.625Z"
+      "currentPrice": 0.14,
+      "updatedAt": "2026-02-23T18:30:25.358Z"
     },
     {
       "id": "oc-mlyezcfy-ty3im1",
@@ -4371,7 +4371,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.24,
+      "pnlUSDC": -2.88,
       "createdAt": "2026-02-23T02:06:05.307Z",
       "signal": {
         "forecastTemp": 4.9,
@@ -4387,8 +4387,8 @@
       "enteredAt": "2026-02-23T02:06:05.313Z",
       "orderId": "paper-mlyjc2rn-1jde",
       "txHash": null,
-      "currentPrice": 0.505,
-      "updatedAt": "2026-02-23T18:00:29.278Z"
+      "currentPrice": 0.525,
+      "updatedAt": "2026-02-23T18:30:27.156Z"
     },
     {
       "id": "oc-mlyjc2ru-id7jnd",
@@ -4595,7 +4595,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 436.36,
+      "pnlUSDC": 436.82,
       "createdAt": "2026-02-23T04:12:06.077Z",
       "signal": {
         "forecastTemp": 14.5,
@@ -4611,8 +4611,8 @@
       "enteredAt": "2026-02-23T04:12:06.084Z",
       "orderId": "paper-mlynu4p3-hpxx",
       "txHash": null,
-      "currentPrice": 0.9985,
-      "updatedAt": "2026-02-23T18:00:31.206Z"
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-02-23T18:30:28.745Z"
     },
     {
       "id": "oc-mlyrucvp-ihcnvd",
@@ -4860,7 +4860,7 @@
       "orderId": "paper-mlyzzi2p-xnzv",
       "txHash": null,
       "currentPrice": 0.935,
-      "updatedAt": "2026-02-23T18:00:32.800Z"
+      "updatedAt": "2026-02-23T18:30:30.421Z"
     },
     {
       "id": "oc-mlzdltwr-41nn3n",
@@ -4890,6 +4890,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-02-23T18:04:59.608Z",
-    "lastPriceSync": "2026-02-23T18:00:34.000Z"
+    "lastPriceSync": "2026-02-23T18:30:31.621Z"
   }
 }
