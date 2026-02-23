@@ -2818,7 +2818,7 @@
     "market": "New \"Stranger Things\" episode released by December 31? ",
     "side": "No",
     "entryPrice": 0.915,
-    "currentPrice": 0.915,
+    "currentPrice": 0.91,
     "shares": 5.84,
     "status": "open",
     "source": "consensus-scanner",
@@ -2832,15 +2832,15 @@
     "conditionId": "0xbafb642f421ed7b46654936a9fb85adc1b278fa5388a47364da7e67a8df15eca",
     "createdAt": "2026-02-22T20:00:28.948Z",
     "invested": 5.3436,
-    "currentValue": 5.3436,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 5.3144,
+    "pnl": -0.029200000000000337,
+    "pnlPercent": -0.5464480874317003,
     "entryDate": "2026-02-22T20:00:28.948Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T05:33:37.218Z"
+    "updatedAt": "2026-02-23T06:03:40.841Z"
   },
   {
     "id": "65f55bc3-b3a6-4d5f-bc12-44a67a349e58",
