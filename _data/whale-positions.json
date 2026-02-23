@@ -175,7 +175,9 @@
     "status": "closed-win",
     "entryDate": "2026-02-17T16:20:01.523Z",
     "exitPrice": 0.745,
-    "reasoning": "Bitcoin stayed above $60k through Feb. NO side won. Flat P&L — exited at entry price."
+    "reasoning": "Bitcoin stayed above $60k through Feb. NO side won. Flat P&L — exited at entry price.",
+    "conditionId": "0xe00d6ce6106b54b8f13fbe935e529ea7aab9e3ace9ae3fcc4f7c65372eb0b8ef",
+    "updatedAt": "2026-02-23T03:00:39.402Z"
   },
   {
     "id": "b6142ed7-c2dd-446a-a3d5-165bdfaa703d",
