@@ -2947,5 +2947,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-23T20:00:34.044Z"
+  },
+  {
+    "id": "b60c7c02-5b41-486c-8679-1bc166397d36",
+    "market": "US strikes Iran by February 24, 2026?",
+    "side": "No",
+    "entryPrice": 0.9535,
+    "currentPrice": 0.9535,
+    "shares": 4.88,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "ProfessionalPunter, Parz1vaI, Mombil",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 73.9,
+    "avgWinRate": 60.4,
+    "reasoning": "Consensus: 3 whales (avg score 73.9, WR 60.4%) No. bet=$4.65, shares=4.88. Whales: ProfessionalPunter, Parz1vaI, Mombil",
+    "endDate": "2026-01-31",
+    "conditionId": "0xe5535e41e78edb730150ac1a497fbef7cef536022168771cb51a6b702705ebb1",
+    "createdAt": "2026-02-23T20:00:47.809Z",
+    "invested": 4.65308,
+    "currentValue": 4.65308,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-23T20:00:47.809Z"
   }
 ]
