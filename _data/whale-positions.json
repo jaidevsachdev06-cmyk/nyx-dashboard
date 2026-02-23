@@ -616,7 +616,7 @@
     "entryPrice": 0.945,
     "currentPrice": 0.964,
     "shares": 11.1,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Anjun, Car, kekkone, Thonker, Euan",
     "whaleCount": 5,
@@ -632,11 +632,13 @@
     "pnl": 0.21090000000000053,
     "pnlPercent": 2.010582010582016,
     "entryDate": "2026-02-20T03:12:48.835Z",
-    "updatedAt": "2026-02-23T19:31:27.810Z",
+    "updatedAt": "2026-02-23T20:00:52.476Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.964,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "52d59b72-5507-4011-89e5-10575ad22180",
