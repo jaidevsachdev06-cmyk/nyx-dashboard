@@ -198,7 +198,9 @@
     "status": "closed-loss",
     "entryDate": "2026-02-17T16:20:05.359Z",
     "exitPrice": 0.105,
-    "reasoning": "Barcelona CL odds dropped. Closed at small loss (-8.7%)."
+    "reasoning": "Barcelona CL odds dropped. Closed at small loss (-8.7%).",
+    "conditionId": "0x43268d56d65636311a1d8bc9eb14429f1fa2e3f908d7be91e5b137f602664d81",
+    "updatedAt": "2026-02-23T03:00:32.454Z"
   },
   {
     "id": "70476dd9-f0d7-49b6-95e8-d4ea8f7365d0",
