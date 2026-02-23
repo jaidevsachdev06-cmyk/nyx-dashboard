@@ -150,7 +150,9 @@
     "status": "closed-win",
     "entryDate": "2026-02-17T16:19:53.786Z",
     "exitPrice": 0.605,
-    "reasoning": "Iran strike probability rising — whales bet YES on strike by June 30. Position gained +19.8%."
+    "reasoning": "Iran strike probability rising — whales bet YES on strike by June 30. Position gained +19.8%.",
+    "conditionId": "0x797d586ad45522306490b0cc9b2f21bdf957f3843476fae99f3bcc2cec83b74b",
+    "updatedAt": "2026-02-23T03:00:31.000Z"
   },
   {
     "id": "adfe43b8-f5cb-45cc-b17d-25d4f32fd97b",
