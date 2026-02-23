@@ -1058,7 +1058,7 @@
     "market": "Supreme Court rules in favor of Trump's tariffs?",
     "side": "Yes",
     "entryPrice": 0.255,
-    "currentPrice": 0.0005,
+    "currentPrice": 0,
     "shares": 21.45,
     "status": "closed-loss",
     "source": "consensus-scanner",
@@ -1073,16 +1073,16 @@
     "createdAt": "2026-02-20T08:36:12.876Z",
     "invested": 5.46975,
     "currentValue": 0.010725,
-    "pnl": -5.4590250000000005,
+    "pnl": -5.4698,
     "pnlPercent": -99.80392156862746,
     "entryDate": "2026-02-20T08:36:12.876Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-21T04:08:58.551Z",
-    "exitPrice": 0.0005,
-    "notes": "Dropped from whale consensus"
+    "updatedAt": "2026-02-23T02:55:55.453Z",
+    "exitPrice": 0,
+    "notes": "Dropped from whale consensus\nAudit fix 2026-02-23T02:55:55Z: Dome winning_side=NO"
   },
   {
     "id": "44ec72b3-f8b2-427f-8e21-c99202662e3e",
