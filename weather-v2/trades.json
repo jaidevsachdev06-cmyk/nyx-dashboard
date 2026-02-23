@@ -2241,9 +2241,9 @@
       "bucket": "13°C",
       "question": "Will the highest temperature in London be 13°C on February 23?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 9.43,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 0.32,
       "createdAt": "2026-02-21T16:06:06.720Z",
       "signal": {
         "forecastTemp": 13.3,
@@ -2259,7 +2259,11 @@
       "orderId": "paper-mlwignet-vc5r",
       "txHash": null,
       "currentPrice": 0.955,
-      "updatedAt": "2026-02-23T15:00:04.052Z"
+      "updatedAt": "2026-02-23T15:00:04.052Z",
+      "resolutionPrice": 0.955,
+      "resolutionSource": "price-inferred",
+      "resolvedAt": "2026-02-23T15:05:03.396Z",
+      "closedAt": "2026-02-23T15:05:03.405Z"
     },
     {
       "id": "oc-mlwignex-w01scd",
@@ -2669,9 +2673,9 @@
       "bucket": "12°C",
       "question": "Will the highest temperature in London be 12°C on February 23?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.47,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.495,
       "createdAt": "2026-02-22T00:06:25.395Z",
       "signal": {
         "forecastTemp": 12.3,
@@ -2687,7 +2691,11 @@
       "orderId": "paper-mlwzmc1n-pi5i",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-23T14:00:08.180Z"
+      "updatedAt": "2026-02-23T14:00:08.180Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-23T15:05:06.707Z",
+      "closedAt": "2026-02-23T15:05:06.713Z"
     },
     {
       "id": "oc-mlwzmc1q-exw3u7",
@@ -4849,7 +4857,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-23T11:05:02.797Z",
+    "lastUpdated": "2026-02-23T15:05:06.715Z",
     "lastPriceSync": "2026-02-23T15:00:37.206Z"
   }
 }
