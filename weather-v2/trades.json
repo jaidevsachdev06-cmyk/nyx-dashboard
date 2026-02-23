@@ -654,9 +654,9 @@
       "bucket": "52-53°F",
       "question": "Will the highest temperature in Seattle be between 52-53°F on February 22?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.4,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.42,
       "createdAt": "2026-02-21T02:11:56.032Z",
       "signal": {
         "forecastTemp": 51.6,
@@ -672,7 +672,11 @@
       "orderId": "paper-mlvonw1u-309w",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-23T10:00:01.594Z"
+      "updatedAt": "2026-02-23T10:00:01.594Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-23T11:05:01.857Z",
+      "closedAt": "2026-02-23T11:05:01.868Z"
     },
     {
       "id": "oc-mlvsy62u-frumjw",
@@ -1951,9 +1955,9 @@
       "bucket": "26-27°F",
       "question": "Will the highest temperature in Chicago be between 26-27°F on February 22?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.23,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.24,
       "createdAt": "2026-02-21T14:11:57.288Z",
       "signal": {
         "forecastTemp": 29.3,
@@ -1969,7 +1973,11 @@
       "orderId": "paper-mlweduct-qlre",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-23T09:00:03.355Z"
+      "updatedAt": "2026-02-23T09:00:03.355Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-23T11:05:02.788Z",
+      "closedAt": "2026-02-23T11:05:02.795Z"
     },
     {
       "id": "oc-mlweducv-4y0e01",
@@ -4841,7 +4849,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-23T09:52:12.100Z",
+    "lastUpdated": "2026-02-23T11:05:02.797Z",
     "lastPriceSync": "2026-02-23T11:00:40.000Z"
   }
 }
