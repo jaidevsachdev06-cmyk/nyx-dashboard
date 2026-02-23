@@ -2132,9 +2132,9 @@
       "bucket": "58-59°F",
       "question": "Will the highest temperature in Atlanta be between 58-59°F on February 22?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 5.18,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.185,
       "createdAt": "2026-02-21T16:06:06.686Z",
       "signal": {
         "forecastTemp": 63.8,
@@ -2150,7 +2150,11 @@
       "orderId": "paper-mlwigndw-1ivo",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-23T08:00:05.854Z"
+      "updatedAt": "2026-02-23T08:00:05.854Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-23T09:05:04.082Z",
+      "closedAt": "2026-02-23T09:05:04.089Z"
     },
     {
       "id": "oc-mlwigne5-jzvcva",
@@ -4802,7 +4806,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-23T08:05:06.436Z",
+    "lastUpdated": "2026-02-23T09:05:04.091Z",
     "lastPriceSync": "2026-02-23T09:00:40.496Z"
   }
 }
