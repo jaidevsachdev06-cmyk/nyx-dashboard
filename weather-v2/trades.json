@@ -2322,9 +2322,9 @@
       "bucket": "15°C",
       "question": "Will the highest temperature in Paris be 15°C on February 23?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.45,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.47,
       "createdAt": "2026-02-21T18:03:58.014Z",
       "signal": {
         "forecastTemp": 15.5,
@@ -2340,7 +2340,11 @@
       "orderId": "paper-mlwmo7no-sbl5",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-23T16:00:04.008Z"
+      "updatedAt": "2026-02-23T16:00:04.008Z",
+      "resolutionPrice": 0.0005,
+      "resolutionSource": "price-inferred",
+      "resolvedAt": "2026-02-23T16:05:02.795Z",
+      "closedAt": "2026-02-23T16:05:02.803Z"
     },
     {
       "id": "oc-mlwmo7ns-9enmi2",
@@ -4857,7 +4861,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-23T15:05:06.715Z",
+    "lastUpdated": "2026-02-23T16:05:02.806Z",
     "lastPriceSync": "2026-02-23T16:00:36.983Z"
   }
 }
