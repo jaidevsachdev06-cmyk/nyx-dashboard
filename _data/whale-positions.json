@@ -2513,7 +2513,7 @@
     "market": "Epstein client list released by June 30?",
     "side": "No",
     "entryPrice": 0.815,
-    "currentPrice": 0.845,
+    "currentPrice": 1,
     "shares": 7.28,
     "status": "open",
     "source": "consensus-scanner",
@@ -2527,15 +2527,15 @@
     "conditionId": "0xa08bf5e2acca8cf3f85209795cf278128a30869c5a8bfb97851e19fd21d0d21e",
     "createdAt": "2026-02-22T00:00:49.875Z",
     "invested": 5.9332,
-    "currentValue": 6.1516,
-    "pnl": 0.21839999999999993,
-    "pnlPercent": 3.6809815950920233,
+    "currentValue": 7.28,
+    "pnl": 1.3468,
+    "pnlPercent": 22.699386503067483,
     "entryDate": "2026-02-22T00:00:49.875Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T02:06:03.417Z"
+    "updatedAt": "2026-02-23T02:33:13.048Z"
   },
   {
     "id": "9a201375-f0a7-49d4-bfb0-ac9852958243",
