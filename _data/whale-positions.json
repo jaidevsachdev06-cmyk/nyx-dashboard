@@ -1572,7 +1572,7 @@
     "entryPrice": 0.9824999999999999,
     "currentPrice": 0.989,
     "shares": 6.31,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, GollumGekko, archaic",
     "whaleCount": 3,
@@ -1588,11 +1588,13 @@
     "pnl": 0.0410149999999998,
     "pnlPercent": 0.6615776081424906,
     "entryDate": "2026-02-21T04:07:21.469Z",
-    "updatedAt": "2026-02-22T23:33:24.859Z",
+    "updatedAt": "2026-02-23T00:00:44.781Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.989,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "ef5e96bd-702c-4280-add7-e66d1906c3a7",
