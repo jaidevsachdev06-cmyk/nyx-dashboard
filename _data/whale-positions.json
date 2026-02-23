@@ -2753,7 +2753,7 @@
     "market": "Will Dick Schoof be the next leader out before 2027?",
     "side": "Yes",
     "entryPrice": 0.9875,
-    "currentPrice": 0.9895,
+    "currentPrice": 0.993,
     "shares": 5.04,
     "status": "open",
     "source": "consensus-scanner",
@@ -2767,15 +2767,15 @@
     "conditionId": "0x832487c7bd61066f19d823e2077d0cf08adf6554cf910b2760242d3bb12979a9",
     "createdAt": "2026-02-22T15:42:14.255Z",
     "invested": 4.977,
-    "currentValue": 4.987080000000001,
-    "pnl": 0.010080000000000311,
-    "pnlPercent": 0.20253164556962647,
+    "currentValue": 5.00472,
+    "pnl": 0.027719999999999523,
+    "pnlPercent": 0.5569620253164461,
     "entryDate": "2026-02-22T15:42:14.255Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T00:33:28.829Z"
+    "updatedAt": "2026-02-23T01:03:30.413Z"
   },
   {
     "id": "96a8e897-ae43-438d-ad64-2619d4d7a51b",
