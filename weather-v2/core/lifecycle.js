@@ -86,9 +86,10 @@ async function enterTrade(tradeId, { price, size }) {
     const oldSize = existing.size ?? 0;
     const pnlUSDC = parseFloat(((exitPrice - oldEntry) * oldSize).toFixed(4));
 
-    store.transition(existing.id, 'closed', {
-      resolutionPrice: exitPrice,
-      resolutionSource: 'manual-exit',
+    store.transition(existing.id, 'exited', {
+      exitPrice,
+      exitSource: 'swap',
+      exitReason: `SWAP: replaced by better edge candidate (ΔedgePP ${((newEdgePP-oldEdgePP)*100).toFixed(1)}pp)`,
       pnlUSDC,
       notes: (existing.notes ? existing.notes + ' | ' : '') + `SWAP: replaced by better edge candidate (ΔedgePP ${((newEdgePP-oldEdgePP)*100).toFixed(1)}pp)`
     });

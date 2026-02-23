@@ -5,7 +5,7 @@
  * This is the single enforcement point for data integrity.
  */
 
-const VALID_STATUSES = ['candidate', 'entered', 'open', 'resolved', 'closed'];
+const VALID_STATUSES = ['candidate', 'entered', 'open', 'resolved', 'exited', 'closed'];
 const VALID_SIDES = ['YES', 'NO'];
 const VALID_RESULTS = ['win', 'loss', 'push', null];
 
@@ -13,8 +13,9 @@ const VALID_RESULTS = ['win', 'loss', 'push', null];
 const VALID_TRANSITIONS = {
   candidate: ['entered', 'closed'],   // closed = abandoned candidate
   entered:   ['open', 'closed'],       // closed = order rejected/cancelled
-  open:      ['resolved', 'closed'],
+  open:      ['resolved', 'exited', 'closed'],
   resolved:  ['closed'],
+  exited:    [],
   closed:    []                        // terminal state
 };
 
@@ -50,6 +51,12 @@ const TRADE_SCHEMA = {
   resolutionPrice:  { type: 'number',  required: false, min: 0, max: 1 },
   resolutionSource: { type: 'string',  required: false },  // always "polymarket"
   resolvedAt:       { type: 'string',  required: false },
+
+  // Exit (manual close before resolution, used for swaps)
+  exitPrice:     { type: 'number', required: false, min: 0, max: 1 },
+  exitSource:    { type: 'string', required: false },
+  exitReason:    { type: 'string', required: false },
+  exitedAt:      { type: 'string', required: false },
 
   // P&L (computed from resolution, not weather)
   pnlUSDC:       { type: 'number',  required: false, nullable: true },
@@ -179,6 +186,13 @@ function validateTrade(trade) {
   // Cross-field: resolved/closed must have result
   if (trade.status === 'resolved' && !trade.result) {
     errors.push('Resolved trades must have a result (win/loss/push)');
+  }
+
+  // Cross-field: exited trades are manually closed before market resolution
+  if (trade.status === 'exited') {
+    if (trade.result) errors.push('Exited trades must not have a result');
+    if (trade.exitPrice === undefined || trade.exitPrice === null) errors.push('Exited trades must have exitPrice');
+    if (!trade.exitedAt) errors.push('Exited trades must have exitedAt');
   }
 
   // Cross-field: P&L on open trades = unrealized (from price sync), on resolved/closed = realized

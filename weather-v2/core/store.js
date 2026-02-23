@@ -152,6 +152,9 @@ class TradeStore {
         }
         if (!updates.resolvedAt) updates.resolvedAt = new Date().toISOString();
         break;
+      case 'exited':
+                if (!updates.exitedAt) updates.exitedAt = new Date().toISOString();
+        break;
       case 'closed':
         if (!updates.closedAt) updates.closedAt = new Date().toISOString();
         break;

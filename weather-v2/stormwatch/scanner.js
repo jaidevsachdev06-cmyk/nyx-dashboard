@@ -244,22 +244,38 @@ async function scan() {
           const yesTokenId = market.side_a?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'yes')?.token_id || '';
           const noTokenId = market.side_b?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'no')?.token_id || '';
           
-          // Fetch price only for markets with potential edge (probability filter already applied)
-          let marketPrice = null;
-          if (yesTokenId) {
-            try {
-              marketPrice = await polymarket.getMidpointPrice(yesTokenId);
-            } catch (e) {
-              console.warn(`[scanner] Price fetch failed: ${e.message}`);
-            }
+          // Fetch midpoint prices for both outcomes (when available)
+          let yesPrice = null;
+          let noPrice = null;
+
+          try {
+            if (yesTokenId) yesPrice = await polymarket.getMidpointPrice(yesTokenId);
+          } catch (e) {
+            console.warn(`[scanner] YES price fetch failed: ${e.message}`);
           }
 
-          if (!marketPrice || marketPrice <= 0.05 || marketPrice >= 0.95) continue;
+          try {
+            if (noTokenId) noPrice = await polymarket.getMidpointPrice(noTokenId);
+          } catch (e) {
+            console.warn(`[scanner] NO price fetch failed: ${e.message}`);
+          }
 
-          // Step 4: Calculate edge
-          const side = modelProb > marketPrice ? 'YES' : 'NO';
+          // Require at least one usable price
+          const hasYes = (yesPrice != null && yesPrice > 0.05 && yesPrice < 0.95);
+          const hasNo = (noPrice != null && noPrice > 0.05 && noPrice < 0.95);
+          if (!hasYes && !hasNo) continue;
+
+          // Compute EV for both sides and pick the better one.
+          const evYes = hasYes ? (modelProb - yesPrice) : -1e9;
+          const evNo  = hasNo  ? ((1 - modelProb) - noPrice) : -1e9;
+
+          const side = evYes >= evNo ? 'YES' : 'NO';
+          const tokenId = side === 'YES' ? (yesTokenId || '') : (noTokenId || '');
           const effectiveModelProb = side === 'YES' ? modelProb : (1 - modelProb);
-          const effectivePrice = side === 'YES' ? marketPrice : (1 - marketPrice);
+          const effectivePrice = side === 'YES' ? yesPrice : noPrice;
+
+          if (!tokenId || effectivePrice == null) continue;
+          // Step 4: Calculate edge
           const edge = effectiveModelProb - effectivePrice;
           const edgePct = (edge / effectivePrice) * 100;
 
@@ -281,7 +297,7 @@ async function scan() {
             bucket: bucketLabel,
             question,
             conditionId: conditionId || '',
-            tokenId: side === 'YES' ? (yesTokenId || '') : (noTokenId || ''),
+            tokenId: tokenId,
             tokenSide: side, // E029: track which side the tokenId belongs to
             marketSlug: market.market_slug || market.slug || '',
             side,
