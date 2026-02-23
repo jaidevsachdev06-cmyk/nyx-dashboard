@@ -2830,7 +2830,7 @@
     "entryPrice": 0.915,
     "currentPrice": 0.915,
     "shares": 5.84,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Qualitative, Thonker, GollumGekko",
     "whaleCount": 3,
@@ -2850,7 +2850,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-23T20:01:32.275Z",
+    "updatedAt": "2026-02-23T20:03:28.241Z",
     "exitPrice": 0.915,
     "notes": "Dropped from whale consensus"
   },
