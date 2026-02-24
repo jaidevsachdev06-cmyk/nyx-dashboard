@@ -799,7 +799,7 @@
     "entryPrice": 0.9275,
     "currentPrice": 0.9624999999999999,
     "shares": 5.12,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "elucidate, Mombil, JAHODA, wkmfa57",
     "whaleCount": 4,
@@ -819,7 +819,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T16:01:24.979Z"
+    "updatedAt": "2026-02-24T16:01:36.008Z",
+    "exitPrice": 0.9624999999999999,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "9acc4e04-664d-40cf-8e26-d9b21f7f4fe4",
