@@ -3633,7 +3633,7 @@
     "market": "Will World Liberty Financial be accused of insider trading?",
     "side": "No",
     "entryPrice": 0.9675,
-    "currentPrice": 0.967,
+    "currentPrice": 0.963,
     "shares": 5.16,
     "status": "open",
     "source": "consensus-scanner",
@@ -3647,15 +3647,15 @@
     "conditionId": "0x78854a5e0aec69888ae017a6e0aba22f26a4425153e27833a8ab2414cdc3c7ff",
     "createdAt": "2026-02-24T16:01:00.577Z",
     "invested": 4.9923,
-    "currentValue": 4.98972,
-    "pnl": -0.0025800000000000267,
-    "pnlPercent": -0.05167958656330803,
+    "currentValue": 4.96908,
+    "pnl": -0.02322000000000024,
+    "pnlPercent": -0.4651162790697722,
     "entryDate": "2026-02-24T16:01:00.577Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T22:03:52.833Z"
+    "updatedAt": "2026-02-24T22:33:59.568Z"
   },
   {
     "id": "0d5bd6a8-c784-4a1a-874f-da2405c97c7f",
