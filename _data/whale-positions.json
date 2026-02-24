@@ -1839,7 +1839,7 @@
     "entryPrice": 0.9964999999999999,
     "currentPrice": 0.997,
     "shares": 5.46,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, debased, x.compolymarketbet",
     "whaleCount": 3,
@@ -1855,11 +1855,13 @@
     "pnl": 0.0027300000000005653,
     "pnlPercent": 0.05017561465128987,
     "entryDate": "2026-02-21T04:08:06.485Z",
-    "updatedAt": "2026-02-24T15:32:11.869Z",
+    "updatedAt": "2026-02-24T16:01:49.531Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.997,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "9cf605a9-59f9-43a9-bb06-8bf151baf26b",
