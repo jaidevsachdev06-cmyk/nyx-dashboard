@@ -2921,7 +2921,7 @@
     "market": "Starmer out by February 28, 2026?",
     "side": "No",
     "entryPrice": 0.99,
-    "currentPrice": 0.9915,
+    "currentPrice": 0.9904999999999999,
     "shares": 5.66,
     "status": "open",
     "source": "consensus-scanner",
@@ -2935,15 +2935,15 @@
     "conditionId": "0xb957e0c6ec337b15a9d93e1ba19a48b410fc1594f022e3bb734e958a4978cdaf",
     "createdAt": "2026-02-23T20:00:27.547Z",
     "invested": 5.6034,
-    "currentValue": 5.611890000000001,
-    "pnl": 0.008490000000000997,
-    "pnlPercent": 0.1515151515151693,
+    "currentValue": 5.60623,
+    "pnl": 0.0028300000000003322,
+    "pnlPercent": 0.05050505050505644,
     "entryDate": "2026-02-23T20:00:27.547Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T08:32:54.738Z"
+    "updatedAt": "2026-02-24T09:03:05.204Z"
   },
   {
     "id": "b944cb40-7af3-4c80-8d64-30e22d223bc0",
