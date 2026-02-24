@@ -659,7 +659,7 @@
     "entryPrice": 0.611285407967498,
     "currentPrice": 0.635,
     "shares": 28.65,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Anjun, Car, Roflan, kekkone, archaic",
     "whaleCount": 5,
@@ -675,12 +675,12 @@
     "pnl": 0.6794230617311854,
     "pnlPercent": 3.879463131853953,
     "entryDate": "2026-02-20T04:01:20.223Z",
-    "updatedAt": "2026-02-24T20:00:57.621Z",
+    "updatedAt": "2026-02-24T20:01:06.630Z",
     "priceHistory": [
       {},
       {}
     ],
-    "notes": "Dropped from whale consensus",
+    "notes": "Entry corrected from YES to NO price (bug fix 2026-02-20)",
     "exitPrice": 0.635
   },
   {
