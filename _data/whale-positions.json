@@ -3143,7 +3143,7 @@
     "market": "Will Axiom be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.1305,
-    "currentPrice": 0.0725,
+    "currentPrice": 0.068,
     "shares": 74.48,
     "status": "open",
     "source": "consensus-scanner",
@@ -3157,15 +3157,15 @@
     "conditionId": "0x804bc34275d7d610dea3293c06105e925ebfcd6e454813aa27d59a882d50e86d",
     "createdAt": "2026-02-24T08:00:27.121Z",
     "invested": 9.71964,
-    "currentValue": 5.3998,
-    "pnl": -4.31984,
-    "pnlPercent": -44.44444444444445,
+    "currentValue": 5.064640000000001,
+    "pnl": -4.654999999999999,
+    "pnlPercent": -47.892720306513404,
     "entryDate": "2026-02-24T08:00:27.121Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T21:02:42.509Z"
+    "updatedAt": "2026-02-24T21:32:33.554Z"
   },
   {
     "id": "0b5e13ff-1e85-42bd-a134-c315f4b45c93",
