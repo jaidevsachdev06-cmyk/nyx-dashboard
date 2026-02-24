@@ -1059,7 +1059,7 @@
     "entryPrice": 0.0575,
     "currentPrice": 0.06,
     "shares": 106.96,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "debased, Rooke Brollins, nicoco89",
     "whaleCount": 3,
@@ -1079,8 +1079,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T20:01:13.425Z",
-    "exitPrice": 0.06,
+    "updatedAt": "2026-02-24T20:01:26.107Z",
+    "exitPrice": 0.058499999999999996,
     "notes": "Dropped from whale consensus"
   },
   {
