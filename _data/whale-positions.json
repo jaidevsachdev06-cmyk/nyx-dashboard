@@ -1801,7 +1801,7 @@
     "entryPrice": 0.025500000000000002,
     "currentPrice": 0.0245,
     "shares": 208.63,
-    "status": "closed-loss",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Anjun, scottilicious, GollumGekko",
     "whaleCount": 3,
@@ -1817,7 +1817,7 @@
     "pnl": -0.20863000000000032,
     "pnlPercent": -3.921568627450986,
     "entryDate": "2026-02-21T04:07:56.690Z",
-    "updatedAt": "2026-02-24T20:01:35.995Z",
+    "updatedAt": "2026-02-24T20:01:51.490Z",
     "priceHistory": [
       {},
       {}
