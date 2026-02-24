@@ -2328,7 +2328,7 @@
     "entryPrice": 0.274,
     "currentPrice": 0.269,
     "shares": 19.27,
-    "status": "closed-loss",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "failstober, Qualitative, GollumGekko",
     "whaleCount": 3,
@@ -2348,7 +2348,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T20:01:58.392Z",
+    "updatedAt": "2026-02-24T20:02:16.137Z",
     "exitPrice": 0.269,
     "notes": "Dropped from whale consensus"
   },
