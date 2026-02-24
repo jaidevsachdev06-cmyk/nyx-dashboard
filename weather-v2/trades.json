@@ -4237,9 +4237,9 @@
       "bucket": "34-35°F",
       "question": "Will the highest temperature in New York City be between 34-35°F on February 24?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -22.3,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -24.93,
       "createdAt": "2026-02-23T00:04:12.841Z",
       "signal": {
         "forecastTemp": 31.3,
@@ -4256,7 +4256,11 @@
       "orderId": "paper-mlyezcfu-8dg8",
       "txHash": null,
       "currentPrice": 0.0095,
-      "updatedAt": "2026-02-24T23:00:07.326Z"
+      "updatedAt": "2026-02-24T23:00:07.326Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-24T23:05:02.660Z",
+      "closedAt": "2026-02-24T23:05:02.670Z"
     },
     {
       "id": "oc-mlyezcfy-ty3im1",
@@ -5245,7 +5249,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-24T22:05:03.715Z",
+    "lastUpdated": "2026-02-24T23:05:02.672Z",
     "lastPriceSync": "2026-02-24T23:00:13.446Z"
   }
 }
