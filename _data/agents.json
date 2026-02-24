@@ -2,9 +2,9 @@
   {
     "id": "950700d4-c5a6-4ecf-8bfa-8d43c9fadae0",
     "name": "Oracle",
-    "role": "Prediction markets tracker — positions, watchlist, P&L, trade history, market research. Paper trading on Simmer Markets. Manages Stormwatch 🌪️ as subagent for automated weather scanning.",
+    "role": "Prediction markets tracker — positions, watchlist, P&L, trade history, market research. Paper trading on Simmer Markets. Manages Stormwatch 🌪️ and Copycat 🐋 as subagents.",
     "status": "online",
-    "currentTask": "Monitoring 5 open weather positions (Feb 18 resolution)",
+    "currentTask": "Monitoring open weather positions",
     "accessList": [
       "polymarket",
       "trading",
@@ -13,34 +13,29 @@
     "tools": [
       "Dashboard API",
       "Simmer Markets",
-      "Aviation Weather Center",
-      "NOAA",
-      "Tropical Tidbits",
-      "CPC",
-      "ECMWF Models",
-      "Pilot Forums",
-      "Maritime Sources",
-      "Mesonet Data"
+      "CLOB API",
+      "Dome API",
+      "Polymarket Gamma"
     ],
     "avatar": "🔮",
-    "lastActive": "2026-02-17T08:29:47Z",
+    "lastActive": "2026-02-24T02:05:11Z",
     "createdAt": "2026-02-17T08:23:38.943Z",
     "files": [
       {
-        "name": "polymarket-strategy.md",
-        "desc": "Trading framework, risk rules, EV calculations"
-      },
-      {
         "name": "weather-trading-journal.md",
-        "desc": "Lessons learned from resolved weather trades"
+        "desc": "Trade reviews and lessons from resolved weather positions"
       },
       {
-        "name": "polymarket-agent.md",
-        "desc": "Agent config and Simmer API credentials"
+        "name": "memory/items.md",
+        "desc": "Long-term trading lessons and pattern library"
       },
       {
-        "name": "polymarket-paper.md",
-        "desc": "Paper trading positions and history"
+        "name": "TOOLS.md",
+        "desc": "Simmer API key, Dome API key, dashboard token"
+      },
+      {
+        "name": "_data/agents.json",
+        "desc": "Agent registry — Oracle reads/writes status"
       }
     ]
   },
@@ -50,7 +45,7 @@
     "avatar": "🌑",
     "role": "Primary AI assistant — orchestrates all sub-agents, manages comms, calendar, email, research, and daily operations.",
     "status": "online",
-    "currentTask": "Active — managing dashboard and weather trading setup",
+    "currentTask": "Active — monitoring crons and managing system",
     "tools": [
       "Telegram",
       "Email (AgentMail)",
@@ -69,28 +64,48 @@
       "trading",
       "activity"
     ],
-    "lastActive": "2026-02-17T08:29:50Z",
+    "lastActive": "2026-02-24T02:07:00Z",
     "createdAt": "2026-02-17T08:29:50.966Z",
     "files": [
       {
         "name": "SOUL.md",
-        "desc": "Identity and personality"
+        "desc": "Identity, personality, and operating principles"
       },
       {
-        "name": "MEMORY.md",
-        "desc": "Long-term curated memory"
+        "name": "IDENTITY.md",
+        "desc": "Name, avatar, and creature definition"
       },
       {
         "name": "USER.md",
-        "desc": "Jaidev's profile, preferences, schedule"
+        "desc": "Jaidev's profile, schedule, preferences, and trading framework"
+      },
+      {
+        "name": "AGENTS.md",
+        "desc": "Workspace rules and session procedures"
+      },
+      {
+        "name": "BRAIN.md",
+        "desc": "Live operational state — active projects, blockers, priorities"
       },
       {
         "name": "HEARTBEAT.md",
-        "desc": "Periodic check-in tasks"
+        "desc": "Periodic check-in tasks and alert thresholds"
       },
       {
         "name": "TOOLS.md",
-        "desc": "API keys and local config"
+        "desc": "API keys, service config, and local notes"
+      },
+      {
+        "name": "ERRORS.md",
+        "desc": "Error log with root causes and fixes"
+      },
+      {
+        "name": "DECISIONS.md",
+        "desc": "Key architectural and operational decisions"
+      },
+      {
+        "name": "memory/items.md",
+        "desc": "Long-term curated memory — facts, lessons, preferences"
       }
     ]
   },
@@ -98,30 +113,34 @@
     "id": "e8857789-6d61-4920-9af5-c30a6addbe06",
     "name": "Herald",
     "avatar": "📯",
-    "role": "Daily morning briefing — calendar, portfolio movers, action items. Runs at 10am SGT.",
+    "role": "Daily morning briefing — calendar, portfolio movers, action items. Runs at 9:45 AM SGT (7:50 AM SGT on Tuesdays).",
     "status": "idle",
-    "currentTask": "Next run: 10:00 AM SGT",
+    "currentTask": "Next run: 7:50 AM SGT (Tuesday)",
     "tools": [
       "Google Calendar",
       "Web Search",
-      "Tavily",
-      "Tiger Trade Data"
+      "Dashboard API",
+      "Telegram"
     ],
     "accessList": [
       "school",
       "trading",
       "activity"
     ],
-    "lastActive": "2026-02-17T08:29:55Z",
+    "lastActive": "2026-02-24T01:45:00Z",
     "createdAt": "2026-02-17T08:29:55.348Z",
     "files": [
       {
-        "name": "Google Calendar",
-        "desc": "Jaidev's class schedule and events"
+        "name": "USER.md",
+        "desc": "Jaidev's schedule, classes, and preferences"
       },
       {
-        "name": "heartbeat-state.json",
-        "desc": "Last check timestamps"
+        "name": "memory/heartbeat-state.json",
+        "desc": "Tracks last briefing sent and check timestamps"
+      },
+      {
+        "name": "Google Calendar",
+        "desc": "Jaidev's live calendar (gog tool)"
       }
     ]
   },
@@ -129,30 +148,45 @@
     "id": "3dd10cb4-d27d-4771-8040-25e0603d9e51",
     "name": "Stormwatch",
     "avatar": "🌪️",
-    "role": "Oracle's subagent — automated weather market scanner. Pulls NWS hourly forecasts, aviation TAFs, and Simmer markets. Trades when edge ≥10%. Runs 4x daily at optimal US market times.",
+    "role": "Oracle's subagent — automated weather market scanner. Pulls Open-Meteo forecasts, checks Polymarket CLOB prices, enters when relative edge ≥25% and modelProb 5–10%. Runs every ~2h.",
     "status": "idle",
-    "currentTask": "Next scan: 2:00 PM SGT",
+    "currentTask": "Next scan: ~2h",
     "tools": [
-      "Simmer Markets",
-      "NOAA/NWS",
-      "Aviation Weather Center",
-      "Mesonet Data"
+      "Open-Meteo API",
+      "Polymarket CLOB API",
+      "Dashboard API"
     ],
     "accessList": [
       "polymarket",
       "activity"
     ],
-    "lastActive": "2026-02-17T08:29:58Z",
+    "lastActive": "2026-02-24T02:02:00Z",
     "createdAt": "2026-02-17T08:29:58.697Z",
     "description": "Subagent of Oracle 🔮. Handles the automated scanning and execution loop for weather prediction markets.",
     "files": [
       {
-        "name": "weather-trading-journal.md",
-        "desc": "Cumulative lessons from resolved weather trades"
+        "name": "weather-v2/trades.json",
+        "desc": "All open and closed weather positions with full signal data"
       },
       {
-        "name": "polymarket-strategy.md",
-        "desc": "Trading framework and risk rules"
+        "name": "weather-v2/config.json",
+        "desc": "Scanner config — cities, thresholds, circuit breakers"
+      },
+      {
+        "name": "weather-trading-journal.md",
+        "desc": "Lessons from resolved trades — informs edge thresholds"
+      },
+      {
+        "name": "memory/items.md",
+        "desc": "Pattern library — replicable weather trade setups"
+      },
+      {
+        "name": "logs/weather-scan.log",
+        "desc": "Scan run history and signal debug output"
+      },
+      {
+        "name": "logs/weather-resolve.log",
+        "desc": "Resolution run history and settlement records"
       }
     ]
   },
@@ -174,7 +208,11 @@
     "files": [
       {
         "name": "AgentMail inbox",
-        "desc": "nyx-ai@agentmail.to — incoming emails"
+        "desc": "nyx-ai@agentmail.to — live incoming email stream"
+      },
+      {
+        "name": "TOOLS.md",
+        "desc": "AgentMail API credentials"
       }
     ]
   },
@@ -188,9 +226,8 @@
     "currentTask": "Awaiting whale wallet configuration",
     "tools": [
       "Simmer Markets",
-      "Polymarket Data API",
-      "Predicting.top",
-      "AlphaWhale"
+      "Dome API",
+      "Predicting.top"
     ],
     "accessList": [
       "polymarket",
@@ -198,15 +235,60 @@
     ],
     "files": [
       {
-        "name": "polymarket-copytrading/",
-        "desc": "Copytrading skill with trader script"
+        "name": "skills/polymarket-copytrading/",
+        "desc": "Copytrading skill — trader tracking and mirror logic"
       },
       {
-        "name": "config.json",
-        "desc": "Target wallets and position sizing config"
+        "name": "_data/whale-positions.json",
+        "desc": "Live whale wallet positions pulled from Dome API"
+      },
+      {
+        "name": "TOOLS.md",
+        "desc": "Simmer API key and Dome API key"
       }
     ],
     "lastActive": "2026-02-17T10:35:34Z",
     "createdAt": "2026-02-17T10:35:34.420Z"
+  },
+  {
+    "id": "d65f0a86-72df-40f4-ab46-bc40bd473b02",
+    "name": "Quartermaster",
+    "avatar": "🛠️",
+    "role": "Nightly system maintenance — audits cron health, checks BlockRun wallet balance, counts recent errors, flags broken script references. Runs at 3:00 AM SGT.",
+    "status": "idle",
+    "currentTask": "Next run: 3:00 AM SGT",
+    "tools": [
+      "openclaw CLI",
+      "Base blockchain RPC",
+      "GitHub"
+    ],
+    "accessList": [
+      "dashboard",
+      "activity"
+    ],
+    "lastActive": "2026-02-24T00:00:00Z",
+    "createdAt": "2026-02-24T00:00:00.000Z",
+    "files": [
+      {
+        "name": "scripts/quartermaster.sh",
+        "desc": "Main audit script — outputs JSON health report"
+      },
+      {
+        "name": "ERRORS.md",
+        "desc": "Error log — Quartermaster reads for 7-day error count"
+      },
+      {
+        "name": "BRAIN.md",
+        "desc": "Operational state — updated after each run"
+      },
+      {
+        "name": "memory/heartbeat-state.json",
+        "desc": "Tracks last security scan and system check timestamps"
+      },
+      {
+        "name": "memory/items.md",
+        "desc": "Long-term memory — Quartermaster consolidates daily logs here"
+      }
+    ]
   }
 ]
