@@ -307,7 +307,7 @@
     "entryPrice": 0.825,
     "currentPrice": 0.855,
     "shares": 10,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "nicoco89, XieGuangKun, scottilicious, Qualitative",
     "whaleCount": 4,
@@ -323,7 +323,7 @@
     "pnlPercent": 3.636363636363645,
     "entryDate": "2026-02-18T06:55:09.829Z",
     "conditionId": "0xd5d9fc47718bd553592d126b1fa5e87183d27f3936975b0c04cc0f2dec1f1bb4",
-    "updatedAt": "2026-02-24T20:00:38.066Z",
+    "updatedAt": "2026-02-24T20:00:43.821Z",
     "priceHistory": [
       {},
       {}
