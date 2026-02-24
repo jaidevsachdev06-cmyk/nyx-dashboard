@@ -3022,5 +3022,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-24T00:02:17.130Z"
+  },
+  {
+    "id": "263b05fa-afd0-437c-9fb7-bae2059d3ccf",
+    "market": "Will Hyperliquid be accused of insider trading?",
+    "side": "No",
+    "entryPrice": 0.9795,
+    "currentPrice": 0.9795,
+    "shares": 5.31,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Anjun, Parz1vaI, Car",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 86,
+    "avgWinRate": 67.6,
+    "reasoning": "Consensus: 3 whales (avg score 86, WR 67.6%) No. bet=$5.20, shares=5.31. Whales: Anjun, Parz1vaI, Car",
+    "endDate": "1970-01-01",
+    "conditionId": "0x55b33a16797631390658be907329d39fcc6cce046b554f96aeb16b84797f1f49",
+    "createdAt": "2026-02-24T00:02:23.467Z",
+    "invested": 5.2011449999999995,
+    "currentValue": 5.2011449999999995,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-24T00:02:23.467Z"
   }
 ]
