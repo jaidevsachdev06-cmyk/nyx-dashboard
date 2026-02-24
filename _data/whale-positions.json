@@ -1183,7 +1183,7 @@
     "entryPrice": 0.63,
     "currentPrice": 0.735,
     "shares": 8.14,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "elucidate, Car, Ozi",
     "whaleCount": 3,
@@ -1203,7 +1203,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T19:31:43.425Z"
+    "updatedAt": "2026-02-24T20:01:16.683Z",
+    "exitPrice": 0.735,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "9ef72898-4a8b-43df-9bfc-56489a8dfbf3",
