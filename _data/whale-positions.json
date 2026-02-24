@@ -2805,7 +2805,7 @@
     "entryPrice": 0.96,
     "currentPrice": 1,
     "shares": 5.04,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Thonker, Roflan, Mombil",
     "whaleCount": 3,
@@ -2825,8 +2825,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T12:02:51.991Z",
-    "exitPrice": 0.9835,
+    "updatedAt": "2026-02-24T12:03:10.083Z",
+    "exitPrice": 1,
     "notes": "Dropped from whale consensus"
   },
   {
