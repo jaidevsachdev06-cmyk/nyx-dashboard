@@ -5093,9 +5093,9 @@
       "bucket": "16°C",
       "question": "Will the highest temperature in London be 16°C on February 24?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.08,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.36,
       "createdAt": "2026-02-24T14:05:41.257Z",
       "signal": {
         "forecastTemp": 14,
@@ -5112,12 +5112,16 @@
       "orderId": "paper-mm0ohc7r-2602",
       "txHash": null,
       "currentPrice": 0.0035,
-      "updatedAt": "2026-02-24T16:00:19.844Z"
+      "updatedAt": "2026-02-24T16:00:19.844Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-24T16:05:14.863Z",
+      "closedAt": "2026-02-24T16:05:14.871Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-24T14:05:41.274Z",
+    "lastUpdated": "2026-02-24T16:05:14.873Z",
     "lastPriceSync": "2026-02-24T16:00:21.044Z"
   }
 }
