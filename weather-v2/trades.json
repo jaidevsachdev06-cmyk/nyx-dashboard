@@ -3790,9 +3790,9 @@
       "bucket": "50-51°F",
       "question": "Will the highest temperature in Atlanta be between 50-51°F on February 24?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.36,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.39,
       "createdAt": "2026-02-23T00:04:12.714Z",
       "signal": {
         "forecastTemp": 51,
@@ -3809,7 +3809,11 @@
       "orderId": "paper-mlyezcc2-00xw",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-24T21:00:03.270Z"
+      "updatedAt": "2026-02-24T21:00:03.270Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-24T21:05:01.679Z",
+      "closedAt": "2026-02-24T21:05:01.687Z"
     },
     {
       "id": "oc-mlyezcc5-7oon0r",
@@ -5237,7 +5241,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-24T20:13:08.230Z",
+    "lastUpdated": "2026-02-24T21:05:01.689Z",
     "lastPriceSync": "2026-02-24T21:00:15.815Z"
   }
 }
