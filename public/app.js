@@ -645,7 +645,6 @@ async function loadWeatherTrades() {
     `;
     _polyData.weather = trades;
     renderPolyOverview();
-    loadNoaaForecasts(open);
 
     const confBadge = c => {
       const colors = { high: 'var(--green)', 'medium-high': '#84cc16', medium: 'var(--yellow)', low: 'var(--red)' };
@@ -713,53 +712,6 @@ async function loadWeatherTrades() {
 async function editWeatherTrade(id) {
   const t = await get(`/api/weather?id=${id}`);
   showModal('weather-trade', t);
-}
-
-// ========== NOAA FORECASTS (City Grid) ==========
-async function loadNoaaForecasts(openPositions) {
-  const cities = ['NYC', 'Chicago', 'Miami', 'Dallas', 'Atlanta', 'Seattle'];
-  const container = document.getElementById('noaa-forecasts');
-  container.innerHTML = cities.map(c => `<div class="city-card" id="noaa-${c}"><div class="city-name">${c}</div><div class="city-temp mono" style="font-size:16px;color:var(--text-dim)">⏳ Loading...</div></div>`).join('');
-
-  // Count open positions per city
-  const posPerCity = {};
-  if (openPositions) {
-    openPositions.forEach(p => {
-      const c = p.city || '';
-      posPerCity[c] = (posPerCity[c] || 0) + 1;
-    });
-  }
-
-  for (const city of cities) {
-    try {
-      const data = await get(`/api/weather?type=noaa&city=${city}`);
-      const el = document.getElementById(`noaa-${city}`);
-      if (data.forecast && data.forecast.length > 0) {
-        const now = data.forecast[0];
-        const temp = now.temperature;
-        const unit = now.temperatureUnit || 'F';
-        const short = now.shortForecast || '';
-        const wind = now.windSpeed || '';
-        const icon = short.toLowerCase().includes('rain') ? '🌧️' :
-                     short.toLowerCase().includes('cloud') ? '☁️' :
-                     short.toLowerCase().includes('snow') ? '🌨️' :
-                     short.toLowerCase().includes('thunder') ? '⛈️' :
-                     short.toLowerCase().includes('fog') ? '🌫️' :
-                     short.toLowerCase().includes('sunny') || short.toLowerCase().includes('clear') ? '☀️' : '🌤️';
-        const posCount = posPerCity[city] || 0;
-        el.innerHTML = `
-          <div class="city-name">${city} ${posCount > 0 ? `<span style="font-size:11px;background:rgba(20,184,166,0.12);color:var(--teal);padding:2px 8px;border-radius:8px;font-weight:600;margin-left:6px">${posCount} pos</span>` : ''}</div>
-          <div class="city-temp">${icon} ${temp}°${unit}</div>
-          <div class="city-detail">${short}</div>
-          <div class="city-detail">💨 ${wind}</div>
-          <div class="city-detail" style="font-size:10px;opacity:0.5;margin-top:4px">${now.name || ''}</div>
-        `;
-      }
-    } catch (e) {
-      const el = document.getElementById(`noaa-${city}`);
-      if (el) el.innerHTML = `<div class="city-name">${city}</div><div class="city-temp mono" style="font-size:14px;color:var(--red)">Error</div>`;
-    }
-  }
 }
 
 // ========== WHALE COPYTRADING ==========
