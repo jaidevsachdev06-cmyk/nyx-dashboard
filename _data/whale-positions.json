@@ -3305,5 +3305,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-24T08:01:30.751Z"
+  },
+  {
+    "id": "34a24837-3a18-43b8-89f4-97cebc51ed34",
+    "market": "Will Flashbots be accused of insider trading?",
+    "side": "Yes",
+    "entryPrice": 0.0015,
+    "currentPrice": 0.0015,
+    "shares": 3306.67,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "esports095, Influenz, x.compolymarketbet",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75.6,
+    "avgWinRate": 64.5,
+    "reasoning": "Consensus: 3 whales (avg score 75.6, WR 64.5%) Yes. bet=$4.96, shares=3306.67. Whales: esports095, Influenz, x.compolymarketbet",
+    "endDate": "1970-01-01",
+    "conditionId": "0xae06fdd1a0f5e982683a1bfc1963587f77d5edd60bd5ac29ce4c12fc22442e97",
+    "createdAt": "2026-02-24T08:01:42.728Z",
+    "invested": 4.960005,
+    "currentValue": 4.960005,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-24T08:01:42.728Z"
   }
 ]
