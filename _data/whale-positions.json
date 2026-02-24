@@ -2867,7 +2867,7 @@
     "entryPrice": 0.525,
     "currentPrice": 0.595,
     "shares": 8.74,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "gopfan2, aenews, Brokie",
     "whaleCount": 3,
@@ -2887,8 +2887,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T12:02:56.244Z",
-    "exitPrice": 0.585,
+    "updatedAt": "2026-02-24T12:03:13.275Z",
+    "exitPrice": 0.595,
     "notes": "Dropped from whale consensus"
   },
   {
