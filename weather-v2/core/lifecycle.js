@@ -140,12 +140,18 @@ async function checkAndResolve(tradeId) {
 
   const resolution = await polymarket.checkResolution(trade.conditionId);
   if (!resolution.resolved) {
-    // Fallback: if date is >24h past and price is near 0 or 1, infer resolution from price
+    // Fallback: if oracle is slow, infer from price with tiered confidence thresholds:
+    // - Very high confidence (>0.99 or <0.01): trigger at 6h past date
+    // - High confidence   (>0.95 or <0.03): trigger at 24h past date
     const tradeDateEnd = trade.date ? new Date(trade.date + 'T23:59:59Z') : null;
     const hoursPast = tradeDateEnd ? (Date.now() - tradeDateEnd.getTime()) / 3600000 : 0;
     const price = trade.currentPrice;
 
-    if (hoursPast > 24 && price != null) {
+    const veryHighConf = price != null && (price > 0.99 || price < 0.01);
+    const highConf     = price != null && (price > 0.95 || price < 0.03);
+    const shouldInfer  = (veryHighConf && hoursPast > 6) || (highConf && hoursPast > 24);
+
+    if (shouldInfer) {
       const side = (trade.side || 'YES').toUpperCase();
       let inferredResult = null;
       if (side === 'YES' && price > 0.95) inferredResult = 'win';
@@ -154,10 +160,12 @@ async function checkAndResolve(tradeId) {
       else if (side === 'NO' && price < 0.03) inferredResult = 'loss';
 
       if (inferredResult) {
-        const sizeUSDC = trade.sizeUSDC || 0;
+        // Use same formula as computePnL: (1.0 - entryPrice) * size for win, (-entryPrice * size) for loss
+        const entryPrice = trade.entryPrice || 0;
+        const size = trade.size || 0;
         const pnlUSDC = inferredResult === 'win'
-          ? Math.round(sizeUSDC / price * (1 - price) * 100) / 100
-          : -Math.round(sizeUSDC * 100) / 100;
+          ? parseFloat(((1.0 - entryPrice) * size).toFixed(4))
+          : parseFloat((-entryPrice * size).toFixed(4));
         console.log(`[lifecycle] ${tradeId} — PRICE-INFERRED ${inferredResult} (price ${price}, ${hoursPast.toFixed(0)}h past date)`);
         store.transition(tradeId, 'resolved', {
           result: inferredResult, pnlUSDC,
