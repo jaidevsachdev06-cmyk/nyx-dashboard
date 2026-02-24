@@ -3754,9 +3754,9 @@
       "bucket": "≤63°F",
       "question": "Will the highest temperature in Miami be 63°F or below on February 24?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.35,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.375,
       "createdAt": "2026-02-23T00:04:12.704Z",
       "signal": {
         "forecastTemp": 63.6,
@@ -3773,7 +3773,11 @@
       "orderId": "paper-mlyezcbr-4qxh",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-24T19:00:04.557Z"
+      "updatedAt": "2026-02-24T19:00:04.557Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-24T19:05:00.748Z",
+      "closedAt": "2026-02-24T19:05:00.757Z"
     },
     {
       "id": "oc-mlyezcbu-v38848",
@@ -5205,7 +5209,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-24T16:13:35.865Z",
+    "lastUpdated": "2026-02-24T19:05:00.759Z",
     "lastPriceSync": "2026-02-24T19:00:21.027Z"
   }
 }
