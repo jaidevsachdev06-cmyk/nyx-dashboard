@@ -3084,7 +3084,7 @@
     "market": "Will the winner of Beast Games: Season 2 be Strong or Smart?",
     "side": "Strong",
     "entryPrice": 0.956,
-    "currentPrice": 0.985,
+    "currentPrice": 0.9844999999999999,
     "shares": 5.05,
     "status": "open",
     "source": "consensus-scanner",
@@ -3098,15 +3098,15 @@
     "conditionId": "0x4bcc87902241ab0ffcbe9eeb3668c51bcdb218e157b1f8390a639272c54d2def",
     "createdAt": "2026-02-24T00:02:37.068Z",
     "invested": 4.8278,
-    "currentValue": 4.97425,
-    "pnl": 0.14644999999999975,
-    "pnlPercent": 3.033472803347275,
+    "currentValue": 4.971724999999999,
+    "pnl": 0.14392499999999941,
+    "pnlPercent": 2.981171548117143,
     "entryDate": "2026-02-24T00:02:37.068Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T18:33:07.887Z"
+    "updatedAt": "2026-02-24T19:02:57.571Z"
   },
   {
     "id": "f6ef06ee-6f53-4447-b9da-2802f351074d",
