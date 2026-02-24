@@ -2861,7 +2861,7 @@
     "market": "Will there be 8 or more earthquakes of magnitude 7.0 or higher worldwide by June 30?",
     "side": "Yes",
     "entryPrice": 0.525,
-    "currentPrice": 0.585,
+    "currentPrice": 0.575,
     "shares": 8.74,
     "status": "open",
     "source": "consensus-scanner",
@@ -2875,15 +2875,15 @@
     "conditionId": "0x897a2f88e1b65776ac5af0440833eea638395f0af0df4bed47e83f64c9b9a1e3",
     "createdAt": "2026-02-22T20:00:34.868Z",
     "invested": 4.588500000000001,
-    "currentValue": 5.1129,
-    "pnl": 0.5243999999999991,
-    "pnlPercent": 11.428571428571408,
+    "currentValue": 5.0255,
+    "pnl": 0.4369999999999994,
+    "pnlPercent": 9.52380952380951,
     "entryDate": "2026-02-22T20:00:34.868Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T02:02:57.246Z",
+    "updatedAt": "2026-02-24T02:32:54.879Z",
     "exitPrice": 0.585,
     "notes": "Dropped from whale consensus"
   },
