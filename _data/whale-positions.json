@@ -1584,7 +1584,7 @@
     "entryPrice": 0.026000000000000002,
     "currentPrice": 0.0275,
     "shares": 212.31,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, nicoco89, GollumGekko",
     "whaleCount": 3,
@@ -1600,7 +1600,7 @@
     "pnl": 0.3184649999999989,
     "pnlPercent": 5.769230769230748,
     "entryDate": "2026-02-21T04:07:16.569Z",
-    "updatedAt": "2026-02-24T19:32:02.091Z",
+    "updatedAt": "2026-02-24T20:01:32.826Z",
     "priceHistory": [
       {},
       {}
