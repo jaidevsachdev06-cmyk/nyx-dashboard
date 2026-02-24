@@ -2950,7 +2950,7 @@
     "market": "Will Opinion launch a token by March 31, 2026?",
     "side": "No",
     "entryPrice": 0.132,
-    "currentPrice": 0.1405,
+    "currentPrice": 0.14150000000000001,
     "shares": 38.79,
     "status": "open",
     "source": "consensus-scanner",
@@ -2964,15 +2964,15 @@
     "conditionId": "0x7fac4826b3560d396be9918b1f43c6d81ab50cb7bafbf2be59f20330ea911fa1",
     "createdAt": "2026-02-23T20:00:34.044Z",
     "invested": 5.12028,
-    "currentValue": 5.449995,
-    "pnl": 0.3297150000000002,
-    "pnlPercent": 6.439393939393943,
+    "currentValue": 5.488785,
+    "pnl": 0.36850499999999986,
+    "pnlPercent": 7.196969696969694,
     "entryDate": "2026-02-23T20:00:34.044Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T02:33:05.786Z"
+    "updatedAt": "2026-02-24T03:02:58.656Z"
   },
   {
     "id": "b60c7c02-5b41-486c-8679-1bc166397d36",
