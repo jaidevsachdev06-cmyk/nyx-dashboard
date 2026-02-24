@@ -2018,7 +2018,7 @@
     "entryPrice": 0.0155,
     "currentPrice": 0.014499999999999999,
     "shares": 353.55,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "scottilicious, Influenz, GollumGekko",
     "whaleCount": 3,
@@ -2034,11 +2034,13 @@
     "pnl": -0.35355000000000025,
     "pnlPercent": -6.4516129032258105,
     "entryDate": "2026-02-21T04:08:31.739Z",
-    "updatedAt": "2026-02-24T19:32:23.824Z",
+    "updatedAt": "2026-02-24T20:01:49.312Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.014499999999999999,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "8b94cf7f-cdd3-4cc2-aa30-630cbbbb567f",
