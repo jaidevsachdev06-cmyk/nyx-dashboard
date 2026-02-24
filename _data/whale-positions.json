@@ -3230,7 +3230,7 @@
     "market": "Will Meteora be accused of insider trading?",
     "side": "No",
     "entryPrice": 0.61,
-    "currentPrice": 0.705,
+    "currentPrice": 0.715,
     "shares": 8.87,
     "status": "open",
     "source": "consensus-scanner",
@@ -3244,15 +3244,15 @@
     "conditionId": "0xb1195b23733dfbc75364d8a46f49f18a612cadeb2b5eeba35b8a8ae62b2c2598",
     "createdAt": "2026-02-24T08:00:53.715Z",
     "invested": 5.410699999999999,
-    "currentValue": 6.253349999999999,
-    "pnl": 0.8426499999999999,
-    "pnlPercent": 15.573770491803279,
+    "currentValue": 6.3420499999999995,
+    "pnl": 0.9313500000000001,
+    "pnlPercent": 17.213114754098367,
     "entryDate": "2026-02-24T08:00:53.715Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T19:33:26.838Z"
+    "updatedAt": "2026-02-24T20:03:01.534Z"
   },
   {
     "id": "8076d2d9-16e9-434f-bb77-cb09b9549288",
