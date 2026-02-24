@@ -3379,5 +3379,29 @@
       {}
     ],
     "updatedAt": "2026-02-24T11:34:29.204Z"
+  },
+  {
+    "id": "da826630-c0f4-434e-a08b-c9632526910c",
+    "market": "Will Elon Musk post 560-579 tweets from February 17 to February 24, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.0005,
+    "currentPrice": 0.0005,
+    "shares": 10160,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Influenz, failstober, Prexpect",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75.9,
+    "avgWinRate": 66,
+    "reasoning": "Consensus: 3 whales (avg score 75.9, WR 66%) Yes. bet=$5.08, shares=10160. Whales: Influenz, failstober, Prexpect",
+    "endDate": "2026-02-24",
+    "conditionId": "0x1af6f29db127d45aa22959628bd13e700b4e84a23607ceadedfc7a1c8601d788",
+    "createdAt": "2026-02-24T12:02:16.662Z",
+    "invested": 5.08,
+    "currentValue": 5.08,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-24T12:02:16.662Z"
   }
 ]
