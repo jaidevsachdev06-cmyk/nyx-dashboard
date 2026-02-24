@@ -2572,7 +2572,7 @@
     "entryPrice": 0.815,
     "currentPrice": 0.835,
     "shares": 7.28,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Thonker, Dropper, Michael5289",
     "whaleCount": 3,
@@ -2592,7 +2592,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T20:02:01.615Z",
+    "updatedAt": "2026-02-24T20:02:19.980Z",
     "exitPrice": 0.835,
     "notes": "Dropped from whale consensus"
   },
