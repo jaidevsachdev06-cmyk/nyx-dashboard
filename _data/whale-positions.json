@@ -3690,7 +3690,7 @@
     "market": "Will Elon Musk post 420-439 tweets from February 17 to February 24, 2026?",
     "side": "Yes",
     "entryPrice": 0.0005,
-    "currentPrice": 0.0005,
+    "currentPrice": 1,
     "shares": 10160,
     "status": "open",
     "source": "consensus-scanner",
@@ -3704,15 +3704,15 @@
     "conditionId": "0x97e1ae8befc8632f845726b15ff41f966667261b8ac83f2732e5b7326713882f",
     "createdAt": "2026-02-24T16:01:18.786Z",
     "invested": 5.08,
-    "currentValue": 5.08,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 10160,
+    "pnl": 10154.92,
+    "pnlPercent": 199900,
     "entryDate": "2026-02-24T16:01:18.786Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T20:34:05.049Z"
+    "updatedAt": "2026-02-24T21:03:58.255Z"
   },
   {
     "id": "d886a4be-69da-4643-b476-69075d81e416",
