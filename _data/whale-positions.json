@@ -3089,5 +3089,29 @@
       {}
     ],
     "updatedAt": "2026-02-24T07:33:16.412Z"
+  },
+  {
+    "id": "f6ef06ee-6f53-4447-b9da-2802f351074d",
+    "market": "Will Axiom be accused of insider trading?",
+    "side": "Yes",
+    "entryPrice": 0.1305,
+    "currentPrice": 0.1305,
+    "shares": 74.48,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "esports095, Dropper, Parz1vaI, duderr, x.compolymarketbet",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 79.7,
+    "avgWinRate": 63.2,
+    "reasoning": "Consensus: 5 whales (avg score 79.7, WR 63.2%) Yes. bet=$9.72, shares=74.48. Whales: esports095, Dropper, Parz1vaI, duderr, x.compolymarketbet",
+    "endDate": "1970-01-01",
+    "conditionId": "0x804bc34275d7d610dea3293c06105e925ebfcd6e454813aa27d59a882d50e86d",
+    "createdAt": "2026-02-24T08:00:27.121Z",
+    "invested": 9.71964,
+    "currentValue": 9.71964,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-24T08:00:27.121Z"
   }
 ]
