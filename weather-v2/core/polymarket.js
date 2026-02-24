@@ -3,13 +3,14 @@
  *
  * Primary: Dome API (official Polymarket data layer)
  * Fallbacks (when Dome 5xx / timeouts):
- *   - Prices: Polymarket CLOB `/midpoint?token_id=...` (public)
+ *   - Prices: polymarket CLI (`polymarket clob midpoint <tokenId>`) → CLOB HTTP `/midpoint?token_id=...`
  *   - Market metadata + soft-resolution checks: Gamma `/markets?condition_ids=...` (public)
  *
  * NOTE: Resolution truth is still best from Dome (winning_side). Gamma fallback is best-effort
  * (uses `closed` + extreme outcomePrices to infer YES/NO).
  */
 
+const { spawnSync } = require('child_process');
 const config = require('../config.json');
 
 const DOME_URL = config.dome.apiUrl;
@@ -23,6 +24,22 @@ const RATE_LIMIT_MS = config.dome.rateLimitMs || 700;
 let lastCallTime = 0;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// ---- polymarket CLI helper ----
+// Runs the official Polymarket CLI binary and returns parsed JSON.
+// Throws on failure — callers must have an HTTP fallback.
+function execPolymarketCLI(args, timeoutMs = 5000) {
+  const result = spawnSync('polymarket', args, {
+    timeout: timeoutMs,
+    encoding: 'utf8',
+    env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') },
+  });
+  if (result.error) throw new Error(`CLI spawn error: ${result.error.message}`);
+  if (result.status !== 0) throw new Error(`CLI exit ${result.status}: ${(result.stderr || '').slice(0, 200)}`);
+  const out = (result.stdout || '').trim();
+  if (!out) throw new Error('CLI returned empty output');
+  return JSON.parse(out);
+}
 
 function isRetryableDomeFailure(err) {
   const m = String(err?.message || err);
@@ -182,14 +199,22 @@ async function getMidpointPrice(tokenId) {
     if (!isRetryableDomeFailure(err)) throw err;
   }
 
-  // 2) Fallback to CLOB midpoint
+  // 2) Try polymarket CLI (official binary — faster and more reliable than raw HTTP on flaky networks)
+  try {
+    const result = execPolymarketCLI(['-o', 'json', 'clob', 'midpoint', tokenId]);
+    const p = result?.midpoint ?? result?.price ?? result?.mid;
+    if (p != null && !isNaN(parseFloat(p))) return parseFloat(p);
+  } catch (_cliErr) {
+    // CLI unavailable or failed — fall through to HTTP
+  }
+
+  // 3) Fallback to CLOB HTTP midpoint
   try {
     const d = await fetchJSON(`${CLOB_URL}/midpoint?token_id=${encodeURIComponent(tokenId)}`, { headers: { 'User-Agent': 'NyxWeatherV2/1.0' } }, 15000);
     const p = d?.midpoint ?? d?.price ?? d?.mid;
     return p != null ? parseFloat(p) : 0;
   } catch (err) {
-    // 3) Last resort: return 0 (caller can treat as unknown)
-    throw new Error(`Price fetch failed (Dome+CLOB): ${err.message}`);
+    throw new Error(`Price fetch failed (Dome+CLI+CLOB): ${err.message}`);
   }
 }
 
@@ -230,7 +255,15 @@ async function checkResolution(conditionId, tokenId = null, tokenSide = 'YES') {
   if (tokenId) {
     try {
       const yesTokenPrice = await (async () => {
-        // Fetch via CLOB directly (most up-to-date price)
+        // Try CLI first
+        try {
+          const result = execPolymarketCLI(['-o', 'json', 'clob', 'midpoint', tokenId]);
+          const p = result?.midpoint ?? result?.price ?? result?.mid;
+          if (p != null && !isNaN(parseFloat(p))) return parseFloat(p);
+        } catch (_cliErr) {
+          // CLI failed — fall through to HTTP
+        }
+        // Fallback: fetch via CLOB HTTP directly
         const d = await fetchJSON(
           `${CLOB_URL}/midpoint?token_id=${encodeURIComponent(tokenId)}`,
           { headers: { 'User-Agent': 'NyxWeatherV2/1.0' } },
