@@ -3375,7 +3375,7 @@
     "market": "Will Base be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.004,
-    "currentPrice": 0.006,
+    "currentPrice": 0.0055,
     "shares": 1240,
     "status": "open",
     "source": "consensus-scanner",
@@ -3389,15 +3389,15 @@
     "conditionId": "0x37d26b10b03e63c2e4b70f721fcc5ffd56a3d76153f6480b0e2b5199702655a0",
     "createdAt": "2026-02-24T08:01:30.750Z",
     "invested": 4.96,
-    "currentValue": 7.44,
-    "pnl": 2.4800000000000004,
-    "pnlPercent": 50.000000000000014,
+    "currentValue": 6.819999999999999,
+    "pnl": 1.8599999999999994,
+    "pnlPercent": 37.499999999999986,
     "entryDate": "2026-02-24T08:01:30.751Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T23:03:13.875Z"
+    "updatedAt": "2026-02-24T23:33:09.312Z"
   },
   {
     "id": "34a24837-3a18-43b8-89f4-97cebc51ed34",
