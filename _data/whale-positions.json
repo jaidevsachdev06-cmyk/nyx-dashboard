@@ -3161,5 +3161,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-24T08:00:40.588Z"
+  },
+  {
+    "id": "dd69cac6-5bb1-4719-8fc3-f9c48a82e133",
+    "market": "Will Meteora be accused of insider trading?",
+    "side": "No",
+    "entryPrice": 0.61,
+    "currentPrice": 0.61,
+    "shares": 8.87,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Dropper, Parz1vaI, Car",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 87.7,
+    "avgWinRate": 70.3,
+    "reasoning": "Consensus: 3 whales (avg score 87.7, WR 70.3%) No. bet=$5.41, shares=8.87. Whales: Dropper, Parz1vaI, Car",
+    "endDate": "1970-01-01",
+    "conditionId": "0xb1195b23733dfbc75364d8a46f49f18a612cadeb2b5eeba35b8a8ae62b2c2598",
+    "createdAt": "2026-02-24T08:00:53.715Z",
+    "invested": 5.410699999999999,
+    "currentValue": 5.410699999999999,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-24T08:00:53.715Z"
   }
 ]
