@@ -138,7 +138,7 @@ async function checkAndResolve(tradeId) {
   const trade = store.getById(tradeId);
   if (trade.status !== 'open') return null;
 
-  const resolution = await polymarket.checkResolution(trade.conditionId);
+  const resolution = await polymarket.checkResolution(trade.conditionId, trade.tokenId, trade.tokenSide || trade.side);
   if (!resolution.resolved) {
     // Fallback: if oracle is slow, infer from price with tiered confidence thresholds:
     // - Very high confidence (>0.99 or <0.01): trigger at 6h past date

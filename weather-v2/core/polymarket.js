@@ -193,8 +193,10 @@ async function getMidpointPrice(tokenId) {
   }
 }
 
-async function checkResolution(conditionId) {
-  // 1) Dome truth
+async function checkResolution(conditionId, tokenId = null, tokenSide = 'YES') {
+  const EPS_RESOLVED = 0.01; // price within 1% of 0 or 1 = resolved
+
+  // 1) Dome truth (most authoritative)
   try {
     const params = new URLSearchParams({ condition_id: conditionId });
     const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/markets?${params}`);
@@ -213,8 +215,7 @@ async function checkResolution(conditionId) {
         market: { slug: market.slug || market.market_slug, question: market.question || market.title }
       };
     }
-
-    return { resolved: false, outcome: null, resolutionPrice: null, source: 'dome' };
+    // Dome says open — fall through to Gamma + CLOB fallbacks
   } catch (err) {
     if (!isRetryableDomeFailure(err)) throw err;
   }
@@ -222,7 +223,42 @@ async function checkResolution(conditionId) {
   // 2) Gamma best-effort inference
   const gammaMarket = await gammaGetMarket(conditionId);
   const inferred = inferResolutionFromGammaMarket(gammaMarket);
-  return inferred;
+  if (inferred.resolved) return inferred;
+
+  // 3) CLOB price inference — YES token price near 0 or 1 means market resolved
+  // tokenId is the YES token id (or whatever side the trade holds; caller passes it)
+  if (tokenId) {
+    try {
+      const yesTokenPrice = await (async () => {
+        // Fetch via CLOB directly (most up-to-date price)
+        const d = await fetchJSON(
+          `${CLOB_URL}/midpoint?token_id=${encodeURIComponent(tokenId)}`,
+          { headers: { 'User-Agent': 'NyxWeatherV2/1.0' } },
+          15000
+        );
+        const p = d?.midpoint ?? d?.price ?? d?.mid;
+        return p != null ? parseFloat(p) : null;
+      })();
+
+      if (yesTokenPrice != null) {
+        // Interpret based on which token we fetched
+        const tokenIsYes = (tokenSide || 'YES').toUpperCase() === 'YES';
+        const yesWon = tokenIsYes ? (yesTokenPrice >= 1 - EPS_RESOLVED) : (yesTokenPrice <= EPS_RESOLVED);
+        const noWon  = tokenIsYes ? (yesTokenPrice <= EPS_RESOLVED)      : (yesTokenPrice >= 1 - EPS_RESOLVED);
+
+        if (yesWon) {
+          return { resolved: true, outcome: 'YES', resolutionPrice: 1.0, source: 'clob-inferred' };
+        }
+        if (noWon) {
+          return { resolved: true, outcome: 'NO', resolutionPrice: 0.0, source: 'clob-inferred' };
+        }
+      }
+    } catch (err) {
+      // CLOB unavailable — fall through to unresolved
+    }
+  }
+
+  return inferred; // resolved: false from Gamma
 }
 
 async function paperOrder({ tokenId, side, price, size }) {
