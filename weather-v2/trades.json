@@ -2808,7 +2808,7 @@
       "orderId": "paper-mlwzmc2d-oj8x",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-02-24T04:00:02.134Z"
+      "updatedAt": "2026-02-24T04:30:01.971Z"
     },
     {
       "id": "oc-mlwzmc2f-nc2djz",
@@ -2839,7 +2839,7 @@
       "orderId": "paper-mlwzmc2l-8st0",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-24T04:00:03.745Z"
+      "updatedAt": "2026-02-24T04:30:03.550Z"
     },
     {
       "id": "oc-mlwzmc2r-dyz3t1",
@@ -3733,7 +3733,7 @@
       "orderId": "paper-mlyezcb5-b03f",
       "txHash": null,
       "currentPrice": 0.105,
-      "updatedAt": "2026-02-24T04:00:05.319Z"
+      "updatedAt": "2026-02-24T04:30:05.212Z"
     },
     {
       "id": "oc-mlyezcbk-ft7e3t",
@@ -3748,7 +3748,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -8.8,
+      "pnlUSDC": -9.08,
       "createdAt": "2026-02-23T00:04:12.704Z",
       "signal": {
         "forecastTemp": 63.6,
@@ -3764,8 +3764,8 @@
       "enteredAt": "2026-02-23T00:04:12.709Z",
       "orderId": "paper-mlyezcbr-4qxh",
       "txHash": null,
-      "currentPrice": 0.065,
-      "updatedAt": "2026-02-24T04:00:06.884Z"
+      "currentPrice": 0.06,
+      "updatedAt": "2026-02-24T04:30:06.810Z"
     },
     {
       "id": "oc-mlyezcbu-v38848",
@@ -3780,7 +3780,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -6.19,
+      "pnlUSDC": -3.54,
       "createdAt": "2026-02-23T00:04:12.714Z",
       "signal": {
         "forecastTemp": 51,
@@ -3796,8 +3796,8 @@
       "enteredAt": "2026-02-23T00:04:12.719Z",
       "orderId": "paper-mlyezcc2-00xw",
       "txHash": null,
-      "currentPrice": 0.105,
-      "updatedAt": "2026-02-24T04:00:08.458Z"
+      "currentPrice": 0.15,
+      "updatedAt": "2026-02-24T04:30:08.467Z"
     },
     {
       "id": "oc-mlyezcc5-7oon0r",
@@ -3836,7 +3836,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 5.4,
+      "pnlUSDC": 5.06,
       "createdAt": "2026-02-23T00:04:12.731Z",
       "signal": {
         "forecastTemp": 13.4,
@@ -3852,8 +3852,8 @@
       "enteredAt": "2026-02-23T00:04:12.736Z",
       "orderId": "paper-mlyezcci-5fh1",
       "txHash": null,
-      "currentPrice": 0.765,
-      "updatedAt": "2026-02-24T04:00:10.048Z"
+      "currentPrice": 0.75,
+      "updatedAt": "2026-02-24T04:30:10.067Z"
     },
     {
       "id": "oc-mlyezccm-rorj7y",
@@ -3885,7 +3885,7 @@
       "orderId": "paper-mlyezcct-o6xo",
       "txHash": null,
       "currentPrice": 0.695,
-      "updatedAt": "2026-02-24T04:00:11.867Z"
+      "updatedAt": "2026-02-24T04:30:11.656Z"
     },
     {
       "id": "oc-mlyezccy-913z15",
@@ -3917,7 +3917,7 @@
       "orderId": "paper-mlyezcd5-prwm",
       "txHash": null,
       "currentPrice": 0.0365,
-      "updatedAt": "2026-02-24T04:00:13.476Z"
+      "updatedAt": "2026-02-24T04:30:13.281Z"
     },
     {
       "id": "oc-mlyezcd9-xoppui",
@@ -4004,7 +4004,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.72,
+      "pnlUSDC": 3.36,
       "createdAt": "2026-02-23T00:04:12.777Z",
       "signal": {
         "forecastTemp": 46.3,
@@ -4020,8 +4020,8 @@
       "enteredAt": "2026-02-23T00:04:12.782Z",
       "orderId": "paper-mlyezcdt-7hq1",
       "txHash": null,
-      "currentPrice": 0.37,
-      "updatedAt": "2026-02-24T04:00:15.065Z"
+      "currentPrice": 0.39,
+      "updatedAt": "2026-02-24T04:30:14.852Z"
     },
     {
       "id": "oc-mlyezcdw-vpf7m7",
@@ -4215,7 +4215,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -4.57,
+      "pnlUSDC": -15.23,
       "createdAt": "2026-02-23T00:04:12.841Z",
       "signal": {
         "forecastTemp": 31.3,
@@ -4231,8 +4231,8 @@
       "enteredAt": "2026-02-23T00:04:12.849Z",
       "orderId": "paper-mlyezcfu-8dg8",
       "txHash": null,
-      "currentPrice": 0.0735,
-      "updatedAt": "2026-02-24T04:00:16.653Z"
+      "currentPrice": 0.035,
+      "updatedAt": "2026-02-24T04:30:16.423Z"
     },
     {
       "id": "oc-mlyezcfy-ty3im1",
@@ -4391,7 +4391,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.09,
+      "pnlUSDC": 2.88,
       "createdAt": "2026-02-23T02:06:05.307Z",
       "signal": {
         "forecastTemp": 4.9,
@@ -4407,8 +4407,8 @@
       "enteredAt": "2026-02-23T02:06:05.313Z",
       "orderId": "paper-mlyjc2rn-1jde",
       "txHash": null,
-      "currentPrice": 0.68,
-      "updatedAt": "2026-02-24T04:00:18.226Z"
+      "currentPrice": 0.845,
+      "updatedAt": "2026-02-24T04:30:18.147Z"
     },
     {
       "id": "oc-mlyjc2ru-id7jnd",
@@ -4884,7 +4884,7 @@
       "orderId": "paper-mlyzzi2p-xnzv",
       "txHash": null,
       "currentPrice": 0.9835,
-      "updatedAt": "2026-02-24T04:00:19.798Z"
+      "updatedAt": "2026-02-24T04:30:19.723Z"
     },
     {
       "id": "oc-mlzdltwr-41nn3n",
@@ -4909,11 +4909,43 @@
         "edge": 0.1279
       },
       "notes": "Forecast: 32.4°F | Model: 91% vs Market: 79% | Edge: 16.3%"
+    },
+    {
+      "id": "oc-mm032gn0-slqm2n",
+      "conditionId": "0x6b062de83f5e84843e3f121bcc44004a50b8a8088f1b98513521412ceff2d73a",
+      "tokenId": "72418079594765516266243709739713110439621233860695942952347879514628931963896",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-february-24-2026-42-43f",
+      "city": "Chicago",
+      "date": "2026-02-25",
+      "bucket": "42-43°F",
+      "question": "Will the highest temperature in Chicago be between 42-43°F on February 24?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": 0.16,
+      "createdAt": "2026-02-24T04:06:15.228Z",
+      "signal": {
+        "forecastTemp": 36.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.775,
+        "modelProb": 0.9435,
+        "edge": 0.1685
+      },
+      "notes": "Forecast: 36.4°F | Model: 94% vs Market: 78% | Edge: 21.7%",
+      "entryPrice": 0.775,
+      "size": 16,
+      "sizeUSDC": 12.4,
+      "enteredAt": "2026-02-24T04:06:15.238Z",
+      "orderId": "paper-mm032gnd-k9cx",
+      "txHash": null,
+      "currentPrice": 0.785,
+      "updatedAt": "2026-02-24T04:30:21.304Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-24T03:05:01.602Z",
-    "lastPriceSync": "2026-02-24T04:00:20.999Z"
+    "lastUpdated": "2026-02-24T04:06:15.244Z",
+    "lastPriceSync": "2026-02-24T04:30:22.504Z"
   }
 }
