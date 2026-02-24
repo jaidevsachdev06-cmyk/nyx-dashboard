@@ -3356,7 +3356,7 @@
     "market": "Will Flashbots be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.0015,
-    "currentPrice": 0.0015,
+    "currentPrice": 0.0025,
     "shares": 3306.67,
     "status": "open",
     "source": "consensus-scanner",
@@ -3370,9 +3370,14 @@
     "conditionId": "0xae06fdd1a0f5e982683a1bfc1963587f77d5edd60bd5ac29ce4c12fc22442e97",
     "createdAt": "2026-02-24T08:01:42.728Z",
     "invested": 4.960005,
-    "currentValue": 4.960005,
-    "pnl": 0,
-    "pnlPercent": 0,
-    "entryDate": "2026-02-24T08:01:42.728Z"
+    "currentValue": 8.266675000000001,
+    "pnl": 3.3066700000000013,
+    "pnlPercent": 66.6666666666667,
+    "entryDate": "2026-02-24T08:01:42.728Z",
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-02-24T08:33:56.354Z"
   }
 ]
