@@ -3493,7 +3493,12 @@
     "currentValue": 5.08,
     "pnl": 0,
     "pnlPercent": 0,
-    "entryDate": "2026-02-24T12:02:41.535Z"
+    "entryDate": "2026-02-24T12:02:41.535Z",
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-02-24T12:33:46.074Z"
   },
   {
     "id": "444819af-af08-46a5-94e3-17be8fbd5679",
