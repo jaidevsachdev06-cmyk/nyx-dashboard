@@ -3211,7 +3211,7 @@
     "market": "Will Wintermute be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.0225,
-    "currentPrice": 0.011,
+    "currentPrice": 0.0115,
     "shares": 223.11,
     "status": "open",
     "source": "consensus-scanner",
@@ -3225,15 +3225,15 @@
     "conditionId": "0x198da1d5fbf5da58c24f50ea81eeb6fa9c2b5c6e9ff95c6d229419fafc24e5e0",
     "createdAt": "2026-02-24T08:01:00.612Z",
     "invested": 5.0199750000000005,
-    "currentValue": 2.4542100000000002,
-    "pnl": -2.5657650000000003,
-    "pnlPercent": -51.11111111111111,
+    "currentValue": 2.5657650000000003,
+    "pnl": -2.4542100000000002,
+    "pnlPercent": -48.888888888888886,
     "entryDate": "2026-02-24T08:01:00.612Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T09:03:42.571Z"
+    "updatedAt": "2026-02-24T09:33:38.280Z"
   },
   {
     "id": "5dc2d4ab-cbc1-4aef-b878-04ccd39926e2",
