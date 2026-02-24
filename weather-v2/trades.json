@@ -3914,9 +3914,9 @@
       "bucket": "-6°C",
       "question": "Will the highest temperature in Toronto be -6°C on February 24?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -7.27,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -10.05,
       "createdAt": "2026-02-23T00:04:12.754Z",
       "signal": {
         "forecastTemp": -6,
@@ -3933,7 +3933,11 @@
       "orderId": "paper-mlyezcd5-prwm",
       "txHash": null,
       "currentPrice": 0.0415,
-      "updatedAt": "2026-02-24T20:00:06.897Z"
+      "updatedAt": "2026-02-24T20:00:06.897Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-24T20:05:02.772Z",
+      "closedAt": "2026-02-24T20:05:02.779Z"
     },
     {
       "id": "oc-mlyezcd9-xoppui",
@@ -5209,7 +5213,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-24T19:05:00.759Z",
+    "lastUpdated": "2026-02-24T20:05:02.781Z",
     "lastPriceSync": "2026-02-24T20:00:17.874Z"
   }
 }
