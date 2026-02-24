@@ -752,7 +752,7 @@
     "entryPrice": 0.919851696767493,
     "currentPrice": 0.945,
     "shares": 65.65,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Roflan, kekkone, archaic",
     "whaleCount": 4,
@@ -768,12 +768,13 @@
     "pnl": 1.6509861072140808,
     "pnlPercent": 2.733951931695308,
     "entryDate": "2026-02-20T04:01:31.558Z",
-    "updatedAt": "2026-02-24T19:31:22.614Z",
+    "updatedAt": "2026-02-24T20:01:00.922Z",
     "priceHistory": [
       {},
       {}
     ],
-    "notes": "Entry corrected from YES to NO price (bug fix 2026-02-20)"
+    "notes": "Dropped from whale consensus",
+    "exitPrice": 0.945
   },
   {
     "id": "ea213e63-a461-4372-9fc9-7e348bfe1ba6",
