@@ -597,7 +597,7 @@
     "entryPrice": 0.461,
     "currentPrice": 0.4205,
     "shares": 10,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "XPredicter1, Mombil, Brokie, GollumGekko",
     "whaleCount": 4,
@@ -613,11 +613,13 @@
     "pnl": -0.40500000000000025,
     "pnlPercent": -8.785249457700656,
     "entryDate": "2026-02-19T16:03:06.809Z",
-    "updatedAt": "2026-02-24T19:31:13.258Z",
+    "updatedAt": "2026-02-24T20:00:54.245Z",
     "priceHistory": [
       {},
       {}
-    ]
+    ],
+    "exitPrice": 0.4205,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "4674fdfc-8d68-4400-afea-a72d98a23fb1",
