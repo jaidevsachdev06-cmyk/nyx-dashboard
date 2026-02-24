@@ -904,7 +904,7 @@
     "entryPrice": 0.725,
     "currentPrice": 0.765,
     "shares": 7.86,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Roflan, archaic",
     "whaleCount": 3,
@@ -924,7 +924,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T19:31:33.544Z"
+    "updatedAt": "2026-02-24T20:01:10.006Z",
+    "exitPrice": 0.765,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "3cd88201-d1f2-4c94-b195-fd77f247e04f",
