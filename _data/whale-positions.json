@@ -3427,5 +3427,29 @@
     "pnl": 0,
     "pnlPercent": 0,
     "entryDate": "2026-02-24T12:02:22.583Z"
+  },
+  {
+    "id": "9387f0e0-d3b8-449e-8024-f8a0e54da60a",
+    "market": "Will Elon Musk post 500-519 tweets from February 17 to February 24, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.0005,
+    "currentPrice": 0.0005,
+    "shares": 10160,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Influenz, failstober, Prexpect",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75.9,
+    "avgWinRate": 66,
+    "reasoning": "Consensus: 3 whales (avg score 75.9, WR 66%) Yes. bet=$5.08, shares=10160. Whales: Influenz, failstober, Prexpect",
+    "endDate": "2026-02-24",
+    "conditionId": "0x2b3abe2b45c00b5e4f6da5836fed658b550dc28a2add711e82dcce21a1851585",
+    "createdAt": "2026-02-24T12:02:34.915Z",
+    "invested": 5.08,
+    "currentValue": 5.08,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-24T12:02:34.915Z"
   }
 ]
