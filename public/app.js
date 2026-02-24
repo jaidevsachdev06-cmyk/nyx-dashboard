@@ -533,6 +533,7 @@ async function loadPolymarket() {
     `;
 
     _polyData.paper = positions;
+    renderPolyOverview();
 
     const sideBadge = s => `<span class="side-pill ${(s||'').toLowerCase() === 'yes' ? 'yes' : 'no'}">${(s||'—').toUpperCase()}</span>`;
 
@@ -643,6 +644,7 @@ async function loadWeatherTrades() {
       <div class="summary-card weather-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
     _polyData.weather = trades;
+    renderPolyOverview();
     loadNoaaForecasts(open);
 
     const confBadge = c => {
