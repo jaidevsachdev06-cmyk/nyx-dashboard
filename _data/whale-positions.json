@@ -3748,7 +3748,7 @@
     "market": "Will Club Atlético de Madrid win on 2026-02-24?",
     "side": "No",
     "entryPrice": 0.0005,
-    "currentPrice": 0.0005,
+    "currentPrice": 1,
     "shares": 9240,
     "status": "open",
     "source": "consensus-scanner",
@@ -3762,14 +3762,14 @@
     "conditionId": "0x68c1ae541d9c767a1dca43bae533131c2d34ea32763869529cce270283662efa",
     "createdAt": "2026-02-24T20:00:27.401Z",
     "invested": 4.62,
-    "currentValue": 4.62,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 9240,
+    "pnl": 9235.38,
+    "pnlPercent": 199899.99999999997,
     "entryDate": "2026-02-24T20:00:27.401Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T23:04:07.405Z"
+    "updatedAt": "2026-02-24T23:34:04.605Z"
   }
 ]
