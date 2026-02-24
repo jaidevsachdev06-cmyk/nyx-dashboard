@@ -3716,5 +3716,29 @@
       {}
     ],
     "updatedAt": "2026-02-24T19:34:31.247Z"
+  },
+  {
+    "id": "f874b908-8cea-4c16-a9a5-a469d0588acb",
+    "market": "Will Club Atlético de Madrid win on 2026-02-24?",
+    "side": "No",
+    "entryPrice": 0.0005,
+    "currentPrice": 0.0005,
+    "shares": 9240,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "DrPufferfish, GamblingIsAllYouNeed, 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75,
+    "avgWinRate": 60,
+    "reasoning": "Consensus: 3 whales (avg score 75, WR 60%) No. bet=$4.62, shares=9240. Whales: DrPufferfish, GamblingIsAllYouNeed, 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+    "endDate": "",
+    "conditionId": "0x68c1ae541d9c767a1dca43bae533131c2d34ea32763869529cce270283662efa",
+    "createdAt": "2026-02-24T20:00:27.401Z",
+    "invested": 4.62,
+    "currentValue": 4.62,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-24T20:00:27.401Z"
   }
 ]
