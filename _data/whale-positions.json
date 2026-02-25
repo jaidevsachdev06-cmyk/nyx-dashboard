@@ -3787,5 +3787,29 @@
       {}
     ],
     "updatedAt": "2026-02-25T06:33:23.846Z"
+  },
+  {
+    "id": "69ec4716-763c-46d6-982c-a12ea9c4fcec",
+    "market": "Thunder vs. Raptors",
+    "side": "Thunder",
+    "entryPrice": 0.9995,
+    "currentPrice": 0.9995,
+    "shares": 4.62,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "DrPufferfish, GamblingIsAllYouNeed, hotdogcat",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75,
+    "avgWinRate": 60,
+    "reasoning": "Consensus: 3 whales (avg score 75, WR 60%) Thunder. bet=$4.62, shares=4.62. Whales: DrPufferfish, GamblingIsAllYouNeed, hotdogcat",
+    "endDate": "",
+    "conditionId": "0xff7e78f7a66c8b2ee3f68b1b298ad77817f98f7c692d3405db276e8ac961b52b",
+    "createdAt": "2026-02-25T06:47:25.610Z",
+    "invested": 4.6176900000000005,
+    "currentValue": 4.6176900000000005,
+    "pnl": 0,
+    "pnlPercent": 0,
+    "entryDate": "2026-02-25T06:47:25.610Z"
   }
 ]
