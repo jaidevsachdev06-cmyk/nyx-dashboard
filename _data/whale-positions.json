@@ -3362,7 +3362,7 @@
     "market": "Will Jito be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.007,
-    "currentPrice": 0.012,
+    "currentPrice": 0.005,
     "shares": 708.57,
     "status": "open",
     "source": "consensus-scanner",
@@ -3376,15 +3376,15 @@
     "conditionId": "0x39c2451895dfda410be0d1b98fdf704ff33def737e838a30d1079dcb11c207a1",
     "createdAt": "2026-02-24T08:01:25.071Z",
     "invested": 4.95999,
-    "currentValue": 8.50284,
-    "pnl": 3.5428500000000005,
-    "pnlPercent": 71.42857142857143,
+    "currentValue": 3.5428500000000005,
+    "pnl": -1.4171399999999998,
+    "pnlPercent": -28.571428571428566,
     "entryDate": "2026-02-24T08:01:25.071Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T01:32:30.869Z"
+    "updatedAt": "2026-02-25T02:03:08.834Z"
   },
   {
     "id": "39f91d40-a40c-4c52-a870-06bb029e06d4",
