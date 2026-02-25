@@ -3097,7 +3097,7 @@
     "market": "Will Hyperliquid be accused of insider trading?",
     "side": "No",
     "entryPrice": 0.9795,
-    "currentPrice": 0.9804999999999999,
+    "currentPrice": 0.981,
     "shares": 5.31,
     "status": "open",
     "source": "consensus-scanner",
@@ -3111,15 +3111,15 @@
     "conditionId": "0x55b33a16797631390658be907329d39fcc6cce046b554f96aeb16b84797f1f49",
     "createdAt": "2026-02-24T00:02:23.467Z",
     "invested": 5.2011449999999995,
-    "currentValue": 5.206454999999999,
-    "pnl": 0.005309999999999704,
-    "pnlPercent": 0.10209290454312858,
+    "currentValue": 5.20911,
+    "pnl": 0.007965000000000444,
+    "pnlPercent": 0.15313935681470991,
     "entryDate": "2026-02-24T00:02:23.467Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T01:02:00.518Z",
+    "updatedAt": "2026-02-25T01:31:58.131Z",
     "exitPrice": 0.984,
     "notes": "Dropped from whale consensus"
   },
