@@ -3381,7 +3381,7 @@
     "entryPrice": 0.007,
     "currentPrice": 0.0025,
     "shares": 708.57,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "esports095, Influenz, x.compolymarketbet",
     "whaleCount": 3,
@@ -3401,7 +3401,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:32:27.358Z"
+    "updatedAt": "2026-02-25T06:49:31.259Z",
+    "exitPrice": 0.0025,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "39f91d40-a40c-4c52-a870-06bb029e06d4",
