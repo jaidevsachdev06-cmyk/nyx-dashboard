@@ -3624,9 +3624,9 @@
     "market": "Will Elon Musk post 440-459 tweets from February 17 to February 24, 2026?",
     "side": "Yes",
     "entryPrice": 0.0005,
-    "currentPrice": 1,
+    "currentPrice": 0,
     "shares": 10160,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Influenz, failstober, Prexpect",
     "whaleCount": 3,
@@ -3646,7 +3646,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:33:00.267Z"
+    "updatedAt": "2026-02-25T06:49:58.904Z",
+    "exitPrice": 0,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "99953b5d-1e1c-492a-90c7-32735367341a",
