@@ -236,8 +236,8 @@ async function scan() {
           const modelProb = bucketProbability(bucket, forecast.mean, forecast.sd);
           if (modelProb === null) continue;
 
-          // Skip extreme probabilities — no edge possible regardless of price
-          if (modelProb < 0.05 || modelProb > 0.95) continue;
+          // NOTE: do NOT filter on modelProb here — high-confidence NO trades
+          // (YES prob <5%) are often the best trades. Let effectiveModelProb + minModelProb handle filtering.
 
           // Get market identifiers
           const conditionId = market.condition_id || market.conditionId;

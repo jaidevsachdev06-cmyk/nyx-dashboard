@@ -1,10 +1,11 @@
 /**
  * core/polymarket.js — Polymarket data interface
  *
- * Primary: Dome API (official Polymarket data layer)
- * Fallbacks (when Dome 5xx / timeouts):
- *   - Prices: polymarket CLI (`polymarket clob midpoint <tokenId>`) → CLOB HTTP `/midpoint?token_id=...`
- *   - Market metadata + soft-resolution checks: Gamma `/markets?condition_ids=...` (public)
+ * Primary: polymarket CLI (`/usr/local/bin/polymarket`) — official binary, no rate limit issues
+ * Fallbacks:
+ *   - Prices: CLOB HTTP `/midpoint?token_id=...`
+ *   - Market search: Dome API (if CLI fails)
+ *   - Resolution checks: Gamma `/markets?condition_ids=...` (public)
  *
  * NOTE: Resolution truth is still best from Dome (winning_side). Gamma fallback is best-effort
  * (uses `closed` + extreme outcomePrices to infer YES/NO).
@@ -162,6 +163,42 @@ function inferResolutionFromGammaMarket(market) {
 // ---- Public API ----
 
 async function searchMarkets(query) {
+  // Primary: polymarket CLI (official, no rate limit concerns, no Dome auth needed)
+  try {
+    const results = execPolymarketCLI(['-o', 'json', 'markets', 'search', query, '--limit', '20'], 10000);
+    if (Array.isArray(results) && results.length > 0) {
+      const enriched = [];
+      for (const m of results) {
+        const cid = m.conditionId || m.condition_id;
+        if (!cid) continue;
+        // Skip already-closed markets
+        if (m.closed || m.active === false) continue;
+        try {
+          const clob = execPolymarketCLI(['-o', 'json', 'clob', 'market', cid], 8000);
+          // Skip if CLOB says closed
+          if (clob.closed) continue;
+          enriched.push({
+            ...m,
+            condition_id: cid,
+            conditionId: cid,
+            tokens: (clob.tokens || []).map(t => ({
+              token_id: t.token_id,
+              outcome: t.outcome,
+              price: parseFloat(t.price) || 0
+            }))
+          });
+        } catch (e) {
+          enriched.push({ ...m, condition_id: cid, conditionId: cid, tokens: [] });
+        }
+        await sleep(150);
+      }
+      return enriched;
+    }
+  } catch (err) {
+    console.warn(`[polymarket] CLI search failed: ${err.message}, falling back to Dome`);
+  }
+
+  // Fallback: Dome
   const params = new URLSearchParams({ search: query, status: 'open', limit: '30' });
   const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/markets?${params}`);
   return Array.isArray(data) ? data : (data.markets || data.data || []);
@@ -191,30 +228,22 @@ async function validateConditionId(conditionId) {
 }
 
 async function getMidpointPrice(tokenId) {
-  // 1) Try Dome
-  try {
-    const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/market-price/${tokenId}`);
-    return parseFloat(data.price || data.mid || data.midpoint || 0);
-  } catch (err) {
-    if (!isRetryableDomeFailure(err)) throw err;
-  }
-
-  // 2) Try polymarket CLI (official binary — faster and more reliable than raw HTTP on flaky networks)
+  // 1) Primary: polymarket CLI
   try {
     const result = execPolymarketCLI(['-o', 'json', 'clob', 'midpoint', tokenId]);
     const p = result?.midpoint ?? result?.price ?? result?.mid;
     if (p != null && !isNaN(parseFloat(p))) return parseFloat(p);
   } catch (_cliErr) {
-    // CLI unavailable or failed — fall through to HTTP
+    // CLI failed — fall through
   }
 
-  // 3) Fallback to CLOB HTTP midpoint
+  // 2) Fallback: CLOB HTTP
   try {
     const d = await fetchJSON(`${CLOB_URL}/midpoint?token_id=${encodeURIComponent(tokenId)}`, { headers: { 'User-Agent': 'NyxWeatherV2/1.0' } }, 15000);
     const p = d?.midpoint ?? d?.price ?? d?.mid;
     return p != null ? parseFloat(p) : 0;
   } catch (err) {
-    throw new Error(`Price fetch failed (Dome+CLI+CLOB): ${err.message}`);
+    throw new Error(`Price fetch failed (CLI+CLOB): ${err.message}`);
   }
 }
 
