@@ -3068,7 +3068,7 @@
     "entryPrice": 0.92,
     "currentPrice": 0.92,
     "shares": 5.71,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Anjun, LinaBell, archaic",
     "whaleCount": 3,
@@ -3088,7 +3088,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-24T23:32:29.303Z"
+    "updatedAt": "2026-02-25T00:02:14.619Z",
+    "exitPrice": 0.92,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "263b05fa-afd0-437c-9fb7-bae2059d3ccf",
