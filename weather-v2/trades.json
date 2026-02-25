@@ -3892,7 +3892,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.38,
+      "pnlUSDC": 3.92,
       "createdAt": "2026-02-23T00:04:12.742Z",
       "signal": {
         "forecastTemp": 36.4,
@@ -3908,8 +3908,8 @@
       "enteredAt": "2026-02-23T00:04:12.747Z",
       "orderId": "paper-mlyezcct-o6xo",
       "txHash": null,
-      "currentPrice": 0.9615,
-      "updatedAt": "2026-02-25T02:00:02.426Z"
+      "currentPrice": 0.995,
+      "updatedAt": "2026-02-25T02:30:02.506Z"
     },
     {
       "id": "oc-mlyezccy-913z15",
@@ -5003,7 +5003,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.25,
+      "pnlUSDC": -1.98,
       "createdAt": "2026-02-24T12:11:55.438Z",
       "signal": {
         "forecastTemp": 49.5,
@@ -5019,8 +5019,8 @@
       "enteredAt": "2026-02-24T12:11:55.450Z",
       "orderId": "paper-mm0kf1dp-2bla",
       "txHash": null,
-      "currentPrice": 0.565,
-      "updatedAt": "2026-02-25T02:00:05.691Z"
+      "currentPrice": 0.58,
+      "updatedAt": "2026-02-25T02:30:04.081Z"
     },
     {
       "id": "oc-mm0kf1du-8et3uz",
@@ -5095,7 +5095,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.84,
+      "pnlUSDC": -1.76,
       "createdAt": "2026-02-24T12:11:55.479Z",
       "signal": {
         "forecastTemp": 61,
@@ -5111,8 +5111,8 @@
       "enteredAt": "2026-02-24T12:11:55.486Z",
       "orderId": "paper-mm0kf1ep-ow0f",
       "txHash": null,
-      "currentPrice": 0.635,
-      "updatedAt": "2026-02-25T02:00:07.316Z"
+      "currentPrice": 0.64,
+      "updatedAt": "2026-02-25T02:30:05.657Z"
     },
     {
       "id": "oc-mm0ohc7d-dlf246",
@@ -5163,7 +5163,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 8.39,
+      "pnlUSDC": 8.4,
       "createdAt": "2026-02-24T16:07:03.771Z",
       "signal": {
         "forecastTemp": 40.2,
@@ -5179,8 +5179,8 @@
       "enteredAt": "2026-02-24T16:07:04.274Z",
       "orderId": "paper-mm0stfth-xrcc",
       "txHash": null,
-      "currentPrice": 0.9695,
-      "updatedAt": "2026-02-25T02:00:08.919Z"
+      "currentPrice": 0.97,
+      "updatedAt": "2026-02-25T02:30:08.954Z"
     },
     {
       "id": "oc-mm0t1tyl-yv884r",
@@ -5284,7 +5284,7 @@
       "orderId": "paper-mm1a6x0x-sock",
       "txHash": null,
       "currentPrice": 0.715,
-      "updatedAt": "2026-02-25T02:00:10.534Z"
+      "updatedAt": "2026-02-25T02:30:10.539Z"
     },
     {
       "id": "oc-mm1a6x11-v7gk42",
@@ -5299,7 +5299,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.51,
+      "pnlUSDC": -0.59,
       "createdAt": "2026-02-25T00:13:26.581Z",
       "signal": {
         "forecastTemp": 77.8,
@@ -5315,13 +5315,69 @@
       "enteredAt": "2026-02-25T00:13:26.589Z",
       "orderId": "paper-mm1a6x1c-mxwl",
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-02-25T02:00:12.211Z"
+      "currentPrice": 0.66,
+      "updatedAt": "2026-02-25T02:30:12.217Z"
+    },
+    {
+      "id": "oc-mm1eh811-zc91tq",
+      "conditionId": "0xee81d7398084e0dec481a40e2ed746c855f197364b9171e8169050c4c708dec9",
+      "tokenId": "55004496248296994624385978525172505352154390975705353679889262302448652467243",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-february-25-2026-42-43f",
+      "city": "New York City",
+      "date": "2026-02-25",
+      "bucket": "42-43°F",
+      "question": "Will the highest temperature in New York City be between 42-43°F on February 25?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-25T02:13:25.861Z",
+      "signal": {
+        "forecastTemp": 39.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.645,
+        "modelProb": 0.8357,
+        "edge": 0.1907
+      },
+      "notes": "Forecast: 39.8°F | Model: 84% vs Market: 65% | Edge: 29.6%"
+    },
+    {
+      "id": "oc-mm1eh817-3o4w9h",
+      "conditionId": "0x163c1cf727a35203e0b9fdaacdd8c757706393be78593f84afc4d570d03791dd",
+      "tokenId": "35945512811395782765939925795964536600949156085726857077337394956568466797709",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-february-26-2026-40-41f",
+      "city": "New York City",
+      "date": "2026-02-26",
+      "bucket": "40-41°F",
+      "question": "Will the highest temperature in New York City be between 40-41°F on February 26?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": 0.09,
+      "createdAt": "2026-02-25T02:13:25.867Z",
+      "signal": {
+        "forecastTemp": 37.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.72,
+        "modelProb": 0.8427,
+        "edge": 0.1227
+      },
+      "notes": "Forecast: 37.5°F | Model: 84% vs Market: 72% | Edge: 17.0%",
+      "entryPrice": 0.72,
+      "size": 17,
+      "sizeUSDC": 12.24,
+      "enteredAt": "2026-02-25T02:13:25.874Z",
+      "orderId": "paper-mm1eh81h-zgx8",
+      "txHash": null,
+      "currentPrice": 0.725,
+      "updatedAt": "2026-02-25T02:30:13.804Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-25T02:05:03.056Z",
-    "lastPriceSync": "2026-02-25T02:00:13.412Z"
+    "lastUpdated": "2026-02-25T02:13:25.880Z",
+    "lastPriceSync": "2026-02-25T02:30:15.004Z"
   }
 }
