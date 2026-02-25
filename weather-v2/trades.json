@@ -3890,9 +3890,9 @@
       "bucket": "40-41°F",
       "question": "Will the highest temperature in Chicago be between 40-41°F on February 24?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 3.92,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4,
       "createdAt": "2026-02-23T00:04:12.742Z",
       "signal": {
         "forecastTemp": 36.4,
@@ -3909,7 +3909,11 @@
       "orderId": "paper-mlyezcct-o6xo",
       "txHash": null,
       "currentPrice": 0.995,
-      "updatedAt": "2026-02-25T03:00:02.070Z"
+      "updatedAt": "2026-02-25T03:00:02.070Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-25T03:05:02.005Z",
+      "closedAt": "2026-02-25T03:05:02.015Z"
     },
     {
       "id": "oc-mlyezccy-913z15",
@@ -5377,7 +5381,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-25T02:13:25.880Z",
+    "lastUpdated": "2026-02-25T03:05:02.016Z",
     "lastPriceSync": "2026-02-25T03:00:13.009Z"
   }
 }
