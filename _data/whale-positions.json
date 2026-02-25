@@ -369,7 +369,7 @@
     "entryPrice": 0.335,
     "currentPrice": 0.325,
     "shares": 10,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Roflan, debased, Qualitative, kfkNBApro1",
     "whaleCount": 4,
@@ -385,12 +385,12 @@
     "pnlPercent": -2.9850746268656745,
     "entryDate": "2026-02-18T06:55:17.409Z",
     "conditionId": "0x2e94bb8dd09931d12e6e656fe4fe6ceb3922bc3d6eab864bb6cd24773cf67269",
-    "updatedAt": "2026-02-25T06:30:39.895Z",
+    "updatedAt": "2026-02-25T06:47:33.210Z",
     "priceHistory": [
       {},
       {}
     ],
-    "exitPrice": 0.345,
+    "exitPrice": 0.325,
     "notes": "Dropped from whale consensus"
   },
   {
