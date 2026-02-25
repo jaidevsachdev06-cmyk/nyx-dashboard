@@ -338,7 +338,7 @@
     "entryPrice": 0.885,
     "currentPrice": 0.8895,
     "shares": 10,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, Thonker, Gr33d, Qualitative",
     "whaleCount": 4,
@@ -358,8 +358,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:30:36.281Z",
-    "exitPrice": 0.8915,
+    "updatedAt": "2026-02-25T06:47:30.041Z",
+    "exitPrice": 0.8895,
     "notes": "Dropped from whale consensus"
   },
   {
