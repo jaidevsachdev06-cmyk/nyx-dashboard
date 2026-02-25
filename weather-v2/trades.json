@@ -3724,7 +3724,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 58.69,
+      "pnlUSDC": 59.75,
       "createdAt": "2026-02-23T00:04:12.678Z",
       "signal": {
         "forecastTemp": 71,
@@ -3740,8 +3740,8 @@
       "enteredAt": "2026-02-23T00:04:12.686Z",
       "orderId": "paper-mlyezcb5-b03f",
       "txHash": null,
-      "currentPrice": 0.974,
-      "updatedAt": "2026-02-25T00:00:02.308Z"
+      "currentPrice": 0.9885,
+      "updatedAt": "2026-02-25T00:30:02.123Z"
     },
     {
       "id": "oc-mlyezcbk-ft7e3t",
@@ -3888,7 +3888,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.66,
+      "pnlUSDC": 3.76,
       "createdAt": "2026-02-23T00:04:12.742Z",
       "signal": {
         "forecastTemp": 36.4,
@@ -3904,8 +3904,8 @@
       "enteredAt": "2026-02-23T00:04:12.747Z",
       "orderId": "paper-mlyezcct-o6xo",
       "txHash": null,
-      "currentPrice": 0.979,
-      "updatedAt": "2026-02-25T00:00:03.896Z"
+      "currentPrice": 0.985,
+      "updatedAt": "2026-02-25T00:30:03.702Z"
     },
     {
       "id": "oc-mlyezccy-913z15",
@@ -4028,7 +4028,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 16.32,
+      "pnlUSDC": 18.88,
       "createdAt": "2026-02-23T00:04:12.777Z",
       "signal": {
         "forecastTemp": 46.3,
@@ -4044,8 +4044,8 @@
       "enteredAt": "2026-02-23T00:04:12.782Z",
       "orderId": "paper-mlyezcdt-7hq1",
       "txHash": null,
-      "currentPrice": 0.795,
-      "updatedAt": "2026-02-25T00:00:05.505Z"
+      "currentPrice": 0.875,
+      "updatedAt": "2026-02-25T00:30:05.274Z"
     },
     {
       "id": "oc-mlyezcdw-vpf7m7",
@@ -4995,7 +4995,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.33,
+      "pnlUSDC": -2.52,
       "createdAt": "2026-02-24T12:11:55.438Z",
       "signal": {
         "forecastTemp": 49.5,
@@ -5011,8 +5011,8 @@
       "enteredAt": "2026-02-24T12:11:55.450Z",
       "orderId": "paper-mm0kf1dp-2bla",
       "txHash": null,
-      "currentPrice": 0.505,
-      "updatedAt": "2026-02-25T00:00:07.113Z"
+      "currentPrice": 0.55,
+      "updatedAt": "2026-02-25T00:30:06.849Z"
     },
     {
       "id": "oc-mm0kf1du-8et3uz",
@@ -5087,7 +5087,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.84,
+      "pnlUSDC": -2,
       "createdAt": "2026-02-24T12:11:55.479Z",
       "signal": {
         "forecastTemp": 61,
@@ -5103,8 +5103,8 @@
       "enteredAt": "2026-02-24T12:11:55.486Z",
       "orderId": "paper-mm0kf1ep-ow0f",
       "txHash": null,
-      "currentPrice": 0.635,
-      "updatedAt": "2026-02-25T00:00:08.688Z"
+      "currentPrice": 0.625,
+      "updatedAt": "2026-02-25T00:30:08.457Z"
     },
     {
       "id": "oc-mm0ohc7d-dlf246",
@@ -5155,7 +5155,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 8.46,
+      "pnlUSDC": 8.39,
       "createdAt": "2026-02-24T16:07:03.771Z",
       "signal": {
         "forecastTemp": 40.2,
@@ -5171,8 +5171,8 @@
       "enteredAt": "2026-02-24T16:07:04.274Z",
       "orderId": "paper-mm0stfth-xrcc",
       "txHash": null,
-      "currentPrice": 0.973,
-      "updatedAt": "2026-02-25T00:00:10.286Z"
+      "currentPrice": 0.9695,
+      "updatedAt": "2026-02-25T00:30:10.032Z"
     },
     {
       "id": "oc-mm0t1tyl-yv884r",
@@ -5245,11 +5245,75 @@
         "edge": 0.1661
       },
       "notes": "Forecast: 35.0°F | Model: 90% vs Market: 73% | Edge: 22.8%"
+    },
+    {
+      "id": "oc-mm1a6x0k-k579h5",
+      "conditionId": "0xa86cdac74e0024bf8d2ed81fdf881f43b17c218455afd904c846eb56df8d88c1",
+      "tokenId": "5438712400632003743987589976903038082191253104213374873887422551208053509951",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-26-2026-66-67f",
+      "city": "Atlanta",
+      "date": "2026-02-26",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Atlanta be between 66-67°F on February 26?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -0.54,
+      "createdAt": "2026-02-25T00:13:26.564Z",
+      "signal": {
+        "forecastTemp": 62.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.69,
+        "modelProb": 0.9002,
+        "edge": 0.2102
+      },
+      "notes": "Forecast: 62.4°F | Model: 90% vs Market: 69% | Edge: 30.5%",
+      "entryPrice": 0.69,
+      "size": 18,
+      "sizeUSDC": 12.419999999999998,
+      "enteredAt": "2026-02-25T00:13:26.574Z",
+      "orderId": "paper-mm1a6x0x-sock",
+      "txHash": null,
+      "currentPrice": 0.66,
+      "updatedAt": "2026-02-25T00:30:11.618Z"
+    },
+    {
+      "id": "oc-mm1a6x11-v7gk42",
+      "conditionId": "0xae223c0b9f521058bc9b30123033f9b7f12eb67fd7fe09ddff4e3d06d0081759",
+      "tokenId": "9115375257697531328258435991883485692710711692244755527660072738861518412576",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-miami-on-february-26-2026-80-81f",
+      "city": "Miami",
+      "date": "2026-02-26",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Miami be between 80-81°F on February 26?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": 0,
+      "createdAt": "2026-02-25T00:13:26.581Z",
+      "signal": {
+        "forecastTemp": 77.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.695,
+        "modelProb": 0.8664,
+        "edge": 0.1714
+      },
+      "notes": "Forecast: 77.8°F | Model: 87% vs Market: 70% | Edge: 24.7%",
+      "entryPrice": 0.695,
+      "size": 17,
+      "sizeUSDC": 11.815,
+      "enteredAt": "2026-02-25T00:13:26.589Z",
+      "orderId": "paper-mm1a6x1c-mxwl",
+      "txHash": null,
+      "currentPrice": 0.695,
+      "updatedAt": "2026-02-25T00:30:13.209Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-24T23:05:02.672Z",
-    "lastPriceSync": "2026-02-25T00:00:11.487Z"
+    "lastUpdated": "2026-02-25T00:13:26.594Z",
+    "lastPriceSync": "2026-02-25T00:30:14.410Z"
   }
 }
