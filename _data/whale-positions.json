@@ -2023,9 +2023,9 @@
     "market": "Will Ruben Gallego win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.0155,
-    "currentPrice": 0.015,
+    "currentPrice": 0.0155,
     "shares": 353.55,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, Influenz, GollumGekko",
     "whaleCount": 3,
@@ -2037,16 +2037,16 @@
     "conditionId": "0x98933c78b5e277b62d91a6c174b412218de000b54c4c67ec8673bf561cec6e81",
     "createdAt": "2026-02-21T04:08:31.739Z",
     "invested": 5.480025,
-    "currentValue": 5.30325,
-    "pnl": -0.17677500000000013,
-    "pnlPercent": -3.2258064516129052,
+    "currentValue": 5.480025,
+    "pnl": 0,
+    "pnlPercent": 0,
     "entryDate": "2026-02-21T04:08:31.739Z",
-    "updatedAt": "2026-02-25T06:31:19.342Z",
+    "updatedAt": "2026-02-25T06:48:30.648Z",
     "priceHistory": [
       {},
       {}
     ],
-    "exitPrice": 0.014499999999999999,
+    "exitPrice": 0.0155,
     "notes": "Dropped from whale consensus"
   },
   {
