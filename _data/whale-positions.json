@@ -3037,7 +3037,7 @@
     "entryPrice": 0.9535,
     "currentPrice": 0.9844999999999999,
     "shares": 4.88,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "ProfessionalPunter, Parz1vaI, Mombil",
     "whaleCount": 3,
@@ -3057,7 +3057,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T00:02:11.521Z",
+    "updatedAt": "2026-02-25T00:02:19.557Z",
     "exitPrice": 0.9844999999999999,
     "notes": "Dropped from whale consensus"
   },
