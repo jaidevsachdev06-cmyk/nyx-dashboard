@@ -3007,9 +3007,9 @@
     "market": "Will Opinion launch a token by March 31, 2026?",
     "side": "No",
     "entryPrice": 0.132,
-    "currentPrice": 0.064,
+    "currentPrice": 0.063,
     "shares": 38.79,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "XieGuangKun, Parz1vaI, Car",
     "whaleCount": 3,
@@ -3021,16 +3021,16 @@
     "conditionId": "0x7fac4826b3560d396be9918b1f43c6d81ab50cb7bafbf2be59f20330ea911fa1",
     "createdAt": "2026-02-23T20:00:34.044Z",
     "invested": 5.12028,
-    "currentValue": 2.48256,
-    "pnl": -2.6377200000000003,
-    "pnlPercent": -51.515151515151516,
+    "currentValue": 2.4437699999999998,
+    "pnl": -2.6765100000000004,
+    "pnlPercent": -52.27272727272728,
     "entryDate": "2026-02-23T20:00:34.044Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:31:43.717Z",
-    "exitPrice": 0.07450000000000001,
+    "updatedAt": "2026-02-25T06:48:53.089Z",
+    "exitPrice": 0.063,
     "notes": "Dropped from whale consensus"
   },
   {
