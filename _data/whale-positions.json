@@ -783,9 +783,9 @@
     "market": "Israel strikes Iran by February 28, 2026?",
     "side": "No",
     "entryPrice": 0.8073482194546382,
-    "currentPrice": 0.875,
+    "currentPrice": 0.885,
     "shares": 28.62,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Roflan, kekkone, archaic",
     "whaleCount": 4,
@@ -797,16 +797,17 @@
     "conditionId": "0x291f0f6023efa933d36cc80fd55f9d176309a92b61b9567fd4f044a8b21873fb",
     "createdAt": "2026-02-20T04:01:35.501Z",
     "invested": 23.106306040791747,
-    "currentValue": 25.0425,
-    "pnl": 1.9361939592082535,
-    "pnlPercent": 8.37950452049803,
+    "currentValue": 25.3287,
+    "pnl": 2.2223939592082544,
+    "pnlPercent": 9.618127429303724,
     "entryDate": "2026-02-20T04:01:35.501Z",
-    "updatedAt": "2026-02-25T06:30:57.983Z",
+    "updatedAt": "2026-02-25T06:47:48.750Z",
     "priceHistory": [
       {},
       {}
     ],
-    "notes": "Entry corrected from YES to NO price (bug fix 2026-02-20)"
+    "notes": "Dropped from whale consensus",
+    "exitPrice": 0.885
   },
   {
     "id": "a53612ea-04c6-4215-9565-5465b0a99faa",
