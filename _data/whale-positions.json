@@ -3657,7 +3657,7 @@
     "entryPrice": 0.127,
     "currentPrice": 0.123,
     "shares": 36.22,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, dontshowmyname, LinaBell",
     "whaleCount": 3,
@@ -3677,7 +3677,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:33:03.810Z"
+    "updatedAt": "2026-02-25T06:50:02.272Z",
+    "exitPrice": 0.123,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "8d950a37-2276-404c-b29d-70b96a8666f3",
