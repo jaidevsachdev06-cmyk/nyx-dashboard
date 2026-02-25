@@ -4030,9 +4030,9 @@
       "bucket": "46-47°F",
       "question": "Will the highest temperature in Seattle be between 46-47°F on February 24?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 22.75,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 22.88,
       "createdAt": "2026-02-23T00:04:12.777Z",
       "signal": {
         "forecastTemp": 46.3,
@@ -4049,7 +4049,11 @@
       "orderId": "paper-mlyezcdt-7hq1",
       "txHash": null,
       "currentPrice": 0.996,
-      "updatedAt": "2026-02-25T02:00:04.042Z"
+      "updatedAt": "2026-02-25T02:00:04.042Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-25T02:05:03.047Z",
+      "closedAt": "2026-02-25T02:05:03.054Z"
     },
     {
       "id": "oc-mlyezcdw-vpf7m7",
@@ -5317,7 +5321,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-25T01:04:59.792Z",
+    "lastUpdated": "2026-02-25T02:05:03.056Z",
     "lastPriceSync": "2026-02-25T02:00:13.412Z"
   }
 }
