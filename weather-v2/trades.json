@@ -5007,7 +5007,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.63,
+      "pnlUSDC": -0.45,
       "createdAt": "2026-02-24T12:11:55.438Z",
       "signal": {
         "forecastTemp": 49.5,
@@ -5023,8 +5023,8 @@
       "enteredAt": "2026-02-24T12:11:55.450Z",
       "orderId": "paper-mm0kf1dp-2bla",
       "txHash": null,
-      "currentPrice": 0.655,
-      "updatedAt": "2026-02-25T08:00:03.044Z"
+      "currentPrice": 0.665,
+      "updatedAt": "2026-02-25T08:30:02.652Z"
     },
     {
       "id": "oc-mm0kf1du-8et3uz",
@@ -5099,7 +5099,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.16,
+      "pnlUSDC": -1.84,
       "createdAt": "2026-02-24T12:11:55.479Z",
       "signal": {
         "forecastTemp": 61,
@@ -5115,8 +5115,8 @@
       "enteredAt": "2026-02-24T12:11:55.486Z",
       "orderId": "paper-mm0kf1ep-ow0f",
       "txHash": null,
-      "currentPrice": 0.615,
-      "updatedAt": "2026-02-25T08:00:04.645Z"
+      "currentPrice": 0.635,
+      "updatedAt": "2026-02-25T08:30:04.212Z"
     },
     {
       "id": "oc-mm0ohc7d-dlf246",
@@ -5275,7 +5275,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.09,
+      "pnlUSDC": 0.18,
       "createdAt": "2026-02-25T00:13:26.564Z",
       "signal": {
         "forecastTemp": 62.4,
@@ -5291,8 +5291,8 @@
       "enteredAt": "2026-02-25T00:13:26.574Z",
       "orderId": "paper-mm1a6x0x-sock",
       "txHash": null,
-      "currentPrice": 0.695,
-      "updatedAt": "2026-02-25T08:00:06.304Z"
+      "currentPrice": 0.7,
+      "updatedAt": "2026-02-25T08:30:05.930Z"
     },
     {
       "id": "oc-mm1a6x11-v7gk42",
@@ -5307,7 +5307,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.45,
+      "pnlUSDC": 1.11,
       "createdAt": "2026-02-25T00:13:26.581Z",
       "signal": {
         "forecastTemp": 77.8,
@@ -5323,8 +5323,8 @@
       "enteredAt": "2026-02-25T00:13:26.589Z",
       "orderId": "paper-mm1a6x1c-mxwl",
       "txHash": null,
-      "currentPrice": 0.78,
-      "updatedAt": "2026-02-25T08:00:07.994Z"
+      "currentPrice": 0.76,
+      "updatedAt": "2026-02-25T08:30:07.494Z"
     },
     {
       "id": "oc-mm1eh811-zc91tq",
@@ -5363,7 +5363,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.85,
+      "pnlUSDC": -0.68,
       "createdAt": "2026-02-25T02:13:25.867Z",
       "signal": {
         "forecastTemp": 37.5,
@@ -5379,8 +5379,8 @@
       "enteredAt": "2026-02-25T02:13:25.874Z",
       "orderId": "paper-mm1eh81h-zgx8",
       "txHash": null,
-      "currentPrice": 0.67,
-      "updatedAt": "2026-02-25T08:00:09.553Z"
+      "currentPrice": 0.68,
+      "updatedAt": "2026-02-25T08:30:09.132Z"
     },
     {
       "id": "oc-mm1n1tnq-3b9ard",
@@ -5395,7 +5395,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.53,
+      "pnlUSDC": -1.78,
       "createdAt": "2026-02-25T06:13:23.942Z",
       "signal": {
         "forecastTemp": 38.7,
@@ -5411,13 +5411,187 @@
       "enteredAt": "2026-02-25T06:13:23.955Z",
       "orderId": "paper-mm1n1to8-r30z",
       "txHash": null,
-      "currentPrice": 0.61,
-      "updatedAt": "2026-02-25T08:00:11.124Z"
+      "currentPrice": 0.595,
+      "updatedAt": "2026-02-25T08:30:10.706Z"
+    },
+    {
+      "id": "oc-mm1r40ru-uxmked",
+      "conditionId": "0xe271b5e29f3509295c7ae1786d2314f1475cb3ac39177e551524ff5c8de38c1b",
+      "tokenId": "0x6458ec8ef40167ed54432ee0c99733a4b69300f16dcdda8bb38fe653b248ca24",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-february-26-2026-78-79f",
+      "city": "Dallas",
+      "date": "2026-02-26",
+      "bucket": "78-79°F",
+      "question": "Will the highest temperature in Dallas be between 78-79°F on February 26?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-25T08:07:04.938Z",
+      "signal": {
+        "forecastTemp": 82.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.685,
+        "modelProb": 0.9689,
+        "edge": 0.2839
+      },
+      "notes": "Forecast: 82.1°F | Model: 97% vs Market: 69% | Edge: 41.4%",
+      "entryPrice": 0.685,
+      "size": 18,
+      "sizeUSDC": 12.330000000000002,
+      "enteredAt": "2026-02-25T08:07:04.954Z",
+      "orderId": "paper-mm1r40sf-c17b",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm1r40sk-bij3az",
+      "conditionId": "0x9313861dc021f86a8092556fff7f0e786bd1a75acca9f0e53d7e38488b14ebc0",
+      "tokenId": "0x961804fd12b2e70e87f683cef891bdf7d64abc25c7f0128e2afe59cc114339a9",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-london-on-february-25-2026-19c",
+      "city": "London",
+      "date": "2026-02-25",
+      "bucket": "19°C",
+      "question": "Will the highest temperature in London be 19°C on February 25?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-25T08:07:04.964Z",
+      "signal": {
+        "forecastTemp": 17,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.75,
+        "modelProb": 0.9987,
+        "edge": 0.2487
+      },
+      "notes": "Forecast: 17.0°F | Model: 100% vs Market: 75% | Edge: 33.2%",
+      "entryPrice": 0.75,
+      "size": 16,
+      "sizeUSDC": 12,
+      "enteredAt": "2026-02-25T08:07:04.972Z",
+      "orderId": "paper-mm1r40sv-2u8v",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm1r40t0-n4o4ba",
+      "conditionId": "0x646960a87b1014409c2e80b11f506afb7e192374ec99373cc34136573279baca",
+      "tokenId": "0xedf641636afb37a98474c66b74efb907acddac39b38c6051988cba31d0f9b5a3",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-february-26-2026-9c",
+      "city": "Seoul",
+      "date": "2026-02-26",
+      "bucket": "9°C",
+      "question": "Will the highest temperature in Seoul be 9°C on February 26?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-25T08:07:04.980Z",
+      "signal": {
+        "forecastTemp": 12.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.785,
+        "modelProb": 0.9987,
+        "edge": 0.2137
+      },
+      "notes": "Forecast: 12.2°F | Model: 100% vs Market: 79% | Edge: 27.2%",
+      "entryPrice": 0.785,
+      "size": 15,
+      "sizeUSDC": 11.775,
+      "enteredAt": "2026-02-25T08:07:04.988Z",
+      "orderId": "paper-mm1r40tb-owbi",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm1r40th-n9mobb",
+      "conditionId": "0x22385295c19510217ce0abfcfb2b0c4060d0865125d5f0e640c306fd25e6cfa4",
+      "tokenId": "0x8d104829e64c3efe887070850f25083e3081989fe2efe564189a111c6fb98a6c",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-february-26-2026-10c",
+      "city": "Seoul",
+      "date": "2026-02-26",
+      "bucket": "10°C",
+      "question": "Will the highest temperature in Seoul be 10°C on February 26?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-25T08:07:04.997Z",
+      "signal": {
+        "forecastTemp": 12.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.79,
+        "modelProb": 0.9719,
+        "edge": 0.1819
+      },
+      "notes": "Forecast: 12.2°F | Model: 97% vs Market: 79% | Edge: 23.0%"
+    },
+    {
+      "id": "oc-mm1r40to-xm1r01",
+      "conditionId": "0x4b01381194b957c7eec3ddaafe66b8e70e90eb67396cbc7b732435cd76d776d4",
+      "tokenId": "0x82aafcfabb24c8c438e7939baf92415a5b0ceea08fdd8c158bc7a606b2ff5daa",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-miami-on-february-25-2026-76forhigher",
+      "city": "Miami",
+      "date": "2026-02-25",
+      "bucket": "≥76°F",
+      "question": "Will the highest temperature in Miami be 76°F or higher on February 25?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-25T08:07:05.004Z",
+      "signal": {
+        "forecastTemp": 72.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.845,
+        "modelProb": 0.9987,
+        "edge": 0.1537
+      },
+      "notes": "Forecast: 72.5°F | Model: 100% vs Market: 85% | Edge: 18.2%",
+      "entryPrice": 0.845,
+      "size": 14,
+      "sizeUSDC": 11.83,
+      "enteredAt": "2026-02-25T08:07:05.012Z",
+      "orderId": "paper-mm1r40tz-0p10",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm1r40u4-3wwwrk",
+      "conditionId": "0x959ddf06421a635eca47b2d7eb4eecccfc780cffdb140a5795d7b3d77edf65eb",
+      "tokenId": "0xb7b80a6f2d5f99c2495297ccc083846bfba2b323bcc8ff82c4394d7e6e0b2830",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-toronto-on-february-26-2026-neg-1c",
+      "city": "Toronto",
+      "date": "2026-02-26",
+      "bucket": "-1°C",
+      "question": "Will the highest temperature in Toronto be -1°C on February 26?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-25T08:07:05.020Z",
+      "signal": {
+        "forecastTemp": -3.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.84,
+        "modelProb": 0.9782,
+        "edge": 0.1382
+      },
+      "notes": "Forecast: -3.3°F | Model: 98% vs Market: 84% | Edge: 16.5%",
+      "entryPrice": 0.84,
+      "size": 14,
+      "sizeUSDC": 11.76,
+      "enteredAt": "2026-02-25T08:07:05.028Z",
+      "orderId": "paper-mm1r40uf-uf6l",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-25T06:13:23.963Z",
-    "lastPriceSync": "2026-02-25T08:00:12.325Z"
+    "lastUpdated": "2026-02-25T08:07:05.034Z",
+    "lastPriceSync": "2026-02-25T08:30:17.103Z"
   }
 }
