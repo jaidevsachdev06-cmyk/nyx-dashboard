@@ -1498,7 +1498,7 @@
     "entryPrice": 0.1785,
     "currentPrice": 0.1735,
     "shares": 28.52,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "scottilicious, Car, gopfan2, kekkone",
     "whaleCount": 4,
@@ -1518,8 +1518,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:31:01.746Z",
-    "exitPrice": 0.173,
+    "updatedAt": "2026-02-25T06:47:52.521Z",
+    "exitPrice": 0.1735,
     "notes": "Dropped from whale consensus"
   },
   {
