@@ -5455,9 +5455,9 @@
       "bucket": "19°C",
       "question": "Will the highest temperature in London be 19°C on February 25?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12,
       "createdAt": "2026-02-25T08:07:04.964Z",
       "signal": {
         "forecastTemp": 17,
@@ -5472,7 +5472,11 @@
       "sizeUSDC": 12,
       "enteredAt": "2026-02-25T08:07:04.972Z",
       "orderId": "paper-mm1r40sv-2u8v",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-25T16:05:07.114Z",
+      "closedAt": "2026-02-25T16:05:07.123Z"
     },
     {
       "id": "oc-mm1r40t0-n4o4ba",
@@ -5649,7 +5653,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-25T14:14:10.074Z",
+    "lastUpdated": "2026-02-25T16:05:07.125Z",
     "lastPriceSync": "2026-02-25T16:00:18.133Z"
   }
 }
