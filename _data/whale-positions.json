@@ -3333,7 +3333,7 @@
     "market": "Will Dexscreener be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.015,
-    "currentPrice": 0.025,
+    "currentPrice": 0.0235,
     "shares": 330.67,
     "status": "open",
     "source": "consensus-scanner",
@@ -3347,15 +3347,15 @@
     "conditionId": "0xf4992699d2ad8dba988b0f83f67b1ca5cf46df61b4f520669fd0ab4c9bc418be",
     "createdAt": "2026-02-24T08:01:12.771Z",
     "invested": 4.96005,
-    "currentValue": 8.26675,
-    "pnl": 3.3067,
-    "pnlPercent": 66.66666666666667,
+    "currentValue": 7.770745000000001,
+    "pnl": 2.810695000000001,
+    "pnlPercent": 56.666666666666686,
     "entryDate": "2026-02-24T08:01:12.771Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T04:02:34.391Z"
+    "updatedAt": "2026-02-25T04:32:37.172Z"
   },
   {
     "id": "5bf5773b-8cb0-4d31-a5cd-f87e7457db8f",
