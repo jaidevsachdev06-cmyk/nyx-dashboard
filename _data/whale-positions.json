@@ -3217,7 +3217,7 @@
     "market": "Will Jupiter be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.10300000000000001,
-    "currentPrice": 0.0275,
+    "currentPrice": 0.027999999999999997,
     "shares": 48.54,
     "status": "open",
     "source": "consensus-scanner",
@@ -3231,15 +3231,15 @@
     "conditionId": "0x79dbae2810fa8ac0df5fa82c2bbbec9c266d4e1213305d7e9173635d11045fdf",
     "createdAt": "2026-02-24T08:00:40.588Z",
     "invested": 4.99962,
-    "currentValue": 1.33485,
-    "pnl": -3.66477,
-    "pnlPercent": -73.3009708737864,
+    "currentValue": 1.3591199999999999,
+    "pnl": -3.6405000000000003,
+    "pnlPercent": -72.81553398058253,
     "entryDate": "2026-02-24T08:00:40.588Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T05:02:11.998Z"
+    "updatedAt": "2026-02-25T05:32:16.449Z"
   },
   {
     "id": "dd69cac6-5bb1-4719-8fc3-f9c48a82e133",
