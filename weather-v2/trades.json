@@ -5007,7 +5007,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.53,
+      "pnlUSDC": -1.08,
       "createdAt": "2026-02-24T12:11:55.438Z",
       "signal": {
         "forecastTemp": 49.5,
@@ -5023,8 +5023,8 @@
       "enteredAt": "2026-02-24T12:11:55.450Z",
       "orderId": "paper-mm0kf1dp-2bla",
       "txHash": null,
-      "currentPrice": 0.605,
-      "updatedAt": "2026-02-25T04:00:02.121Z"
+      "currentPrice": 0.63,
+      "updatedAt": "2026-02-25T04:30:02.312Z"
     },
     {
       "id": "oc-mm0kf1du-8et3uz",
@@ -5116,7 +5116,7 @@
       "orderId": "paper-mm0kf1ep-ow0f",
       "txHash": null,
       "currentPrice": 0.62,
-      "updatedAt": "2026-02-25T04:00:03.685Z"
+      "updatedAt": "2026-02-25T04:30:04.013Z"
     },
     {
       "id": "oc-mm0ohc7d-dlf246",
@@ -5292,7 +5292,7 @@
       "orderId": "paper-mm1a6x0x-sock",
       "txHash": null,
       "currentPrice": 0.69,
-      "updatedAt": "2026-02-25T04:00:06.932Z"
+      "updatedAt": "2026-02-25T04:30:05.588Z"
     },
     {
       "id": "oc-mm1a6x11-v7gk42",
@@ -5307,7 +5307,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.51,
+      "pnlUSDC": -0.43,
       "createdAt": "2026-02-25T00:13:26.581Z",
       "signal": {
         "forecastTemp": 77.8,
@@ -5323,8 +5323,8 @@
       "enteredAt": "2026-02-25T00:13:26.589Z",
       "orderId": "paper-mm1a6x1c-mxwl",
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-02-25T04:00:08.501Z"
+      "currentPrice": 0.67,
+      "updatedAt": "2026-02-25T04:30:07.186Z"
     },
     {
       "id": "oc-mm1eh811-zc91tq",
@@ -5380,12 +5380,12 @@
       "orderId": "paper-mm1eh81h-zgx8",
       "txHash": null,
       "currentPrice": 0.695,
-      "updatedAt": "2026-02-25T04:00:10.113Z"
+      "updatedAt": "2026-02-25T04:30:08.749Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-02-25T04:05:04.110Z",
-    "lastPriceSync": "2026-02-25T04:00:11.314Z"
+    "lastPriceSync": "2026-02-25T04:30:09.949Z"
   }
 }
