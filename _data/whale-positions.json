@@ -510,7 +510,7 @@
     "entryPrice": 0.225,
     "currentPrice": 0.11499999999999999,
     "shares": 10,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Dropper, aenews, Roflan, ProfessionalPunter",
     "whaleCount": 4,
@@ -527,12 +527,12 @@
     "entryDate": "2026-02-19T00:00:24.079Z",
     "conditionId": "0x3488f31e6449f9803f99a8b5dd232c7ad883637f1c86e6953305a2ef19c77f20",
     "ep": "whale",
-    "updatedAt": "2026-02-25T06:30:43.470Z",
+    "updatedAt": "2026-02-25T06:47:36.404Z",
     "priceHistory": [
       {},
       {}
     ],
-    "exitPrice": 0.175,
+    "exitPrice": 0.11499999999999999,
     "notes": "Dropped from whale consensus"
   },
   {
