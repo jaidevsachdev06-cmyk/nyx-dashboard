@@ -3099,7 +3099,7 @@
     "entryPrice": 0.9795,
     "currentPrice": 0.984,
     "shares": 5.31,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "Anjun, Parz1vaI, Car",
     "whaleCount": 3,
@@ -3119,7 +3119,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T00:02:17.745Z",
+    "updatedAt": "2026-02-25T00:02:26.989Z",
     "exitPrice": 0.984,
     "notes": "Dropped from whale consensus"
   },
