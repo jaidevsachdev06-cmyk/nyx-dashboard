@@ -3722,9 +3722,9 @@
       "bucket": "70-71°F",
       "question": "Will the highest temperature in Dallas be between 70-71°F on February 24?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 60.26,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 60.59,
       "createdAt": "2026-02-23T00:04:12.678Z",
       "signal": {
         "forecastTemp": 71,
@@ -3741,7 +3741,11 @@
       "orderId": "paper-mlyezcb5-b03f",
       "txHash": null,
       "currentPrice": 0.9955,
-      "updatedAt": "2026-02-25T01:00:01.901Z"
+      "updatedAt": "2026-02-25T01:00:01.901Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-25T01:04:59.780Z",
+      "closedAt": "2026-02-25T01:04:59.790Z"
     },
     {
       "id": "oc-mlyezcbk-ft7e3t",
@@ -5313,7 +5317,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-25T00:13:26.594Z",
+    "lastUpdated": "2026-02-25T01:04:59.792Z",
     "lastPriceSync": "2026-02-25T01:00:14.257Z"
   }
 }
