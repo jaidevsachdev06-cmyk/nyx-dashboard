@@ -3130,7 +3130,7 @@
     "entryPrice": 0.956,
     "currentPrice": 0.984,
     "shares": 5.05,
-    "status": "closed-win",
+    "status": "open",
     "source": "consensus-scanner",
     "whales": "aenews, Parz1vaI, Xeny",
     "whaleCount": 3,
@@ -3150,7 +3150,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T00:02:20.907Z",
+    "updatedAt": "2026-02-25T00:02:30.572Z",
     "exitPrice": 0.984,
     "notes": "Dropped from whale consensus"
   },
