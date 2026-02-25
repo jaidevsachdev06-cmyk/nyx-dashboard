@@ -5631,9 +5631,9 @@
       "bucket": "74-75°F",
       "question": "Will the highest temperature in Miami be between 74-75°F on February 25?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 8,
       "createdAt": "2026-02-25T14:14:09.791Z",
       "signal": {
         "forecastTemp": 71.9,
@@ -5648,7 +5648,11 @@
       "sizeUSDC": 12,
       "enteredAt": "2026-02-25T14:14:10.066Z",
       "orderId": "paper-mm2483h2-ranl",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-25T23:05:09.024Z",
+      "closedAt": "2026-02-25T23:05:09.042Z"
     },
     {
       "id": "oc-mm2l39cf-qd1x9r",
@@ -5715,7 +5719,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-25T22:06:17.914Z",
+    "lastUpdated": "2026-02-25T23:05:09.045Z",
     "lastPriceSync": "2026-02-25T23:00:18.373Z"
   }
 }
