@@ -3639,14 +3639,14 @@
     "createdAt": "2026-02-24T12:02:55.254Z",
     "invested": 5.08,
     "currentValue": 10160,
-    "pnl": 10154.92,
+    "pnl": -5.08,
     "pnlPercent": 199900,
     "entryDate": "2026-02-24T12:02:55.254Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:49:58.904Z",
+    "updatedAt": "2026-02-25T07:25:17.955Z",
     "exitPrice": 0,
     "notes": "Dropped from whale consensus"
   },
