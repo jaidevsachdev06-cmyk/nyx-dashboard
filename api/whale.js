@@ -1,5 +1,47 @@
 const { cors, checkAuth, readFile, writeFile, uuid } = require('./_github');
 
+// ── Write-time validation ──────────────────────────────────────────────────
+function validatePosition(body, method = 'POST') {
+  const errors = [];
+  if (method === 'POST') {
+    if (!body.market || typeof body.market !== 'string' || !body.market.trim())
+      errors.push('market is required');
+    if (!body.side)
+      errors.push('side is required');
+    const entry = parseFloat(body.entryPrice);
+    if (isNaN(entry) || entry <= 0)
+      errors.push('entryPrice must be a positive number');
+    else if (entry < 0.01)
+      errors.push(`entryPrice $${entry} < $0.01 — market is near-settled, refusing entry`);
+    const shares = parseFloat(body.shares);
+    if (isNaN(shares) || shares <= 0)
+      errors.push('shares must be a positive number');
+  }
+  // P&L sanity: |pnl| cannot exceed shares (each share worth max $1)
+  if (body.pnl !== undefined && body.shares !== undefined) {
+    const pnl = parseFloat(body.pnl);
+    const shares = parseFloat(body.shares);
+    if (!isNaN(pnl) && !isNaN(shares) && Math.abs(pnl) > shares * 1.05)
+      errors.push(`pnl $${pnl.toFixed(2)} exceeds maximum possible for ${shares} shares ($${shares.toFixed(2)})`);
+  }
+  return errors;
+}
+
+// Force-recompute P&L from first principles when we have the required fields.
+// Prevents raw pnl overrides from corrupting the ledger.
+function recomputePnl(position) {
+  const entry = parseFloat(position.entryPrice);
+  const current = parseFloat(position.currentPrice ?? position.exitPrice);
+  const shares = parseFloat(position.shares);
+  if (!isNaN(entry) && !isNaN(current) && !isNaN(shares) && shares > 0) {
+    position.invested = parseFloat((entry * shares).toFixed(4));
+    position.currentValue = parseFloat((current * shares).toFixed(4));
+    position.pnl = parseFloat(((current - entry) * shares).toFixed(4));
+    position.pnlPercent = entry > 0 ? parseFloat(((position.pnl / position.invested) * 100).toFixed(2)) : 0;
+  }
+  return position;
+}
+
 module.exports = async (req, res) => {
   cors(res);
   if (req.method === 'OPTIONS') return res.status(200).end();
@@ -29,37 +71,29 @@ module.exports = async (req, res) => {
     }
 
     if (req.method === 'POST') {
+      const errs = validatePosition(req.body, 'POST');
+      if (errs.length) return res.status(400).json({ error: 'Validation failed', details: errs });
+
       // UPSERT: if conditionId exists AND position is open, update instead of duplicate
       if (req.body.conditionId) {
         const existing = data.findIndex(d => d.conditionId === req.body.conditionId && d.status === 'open');
         if (existing !== -1) {
-          // Update existing position
           const updates = { ...req.body };
-          delete updates.id; // don't overwrite id
-          delete updates.createdAt; // don't overwrite creation date
-          data[existing] = { ...data[existing], ...updates, updatedAt: new Date().toISOString() };
-          if (data[existing].currentPrice && data[existing].entryPrice && data[existing].shares) {
-            data[existing].currentValue = data[existing].currentPrice * data[existing].shares;
-            data[existing].invested = data[existing].entryPrice * data[existing].shares;
-            data[existing].pnl = data[existing].currentValue - data[existing].invested;
-            data[existing].pnlPercent = ((data[existing].pnl / data[existing].invested) * 100);
-          }
+          delete updates.id;
+          delete updates.createdAt;
+          data[existing] = recomputePnl({ ...data[existing], ...updates, updatedAt: new Date().toISOString() });
           await writeFile(FILE, data, sha);
           return res.status(200).json({ ...data[existing], _upsert: 'updated' });
         }
       }
       // New position
-      const item = {
+      const item = recomputePnl({
         id: uuid(),
         ...req.body,
         createdAt: new Date().toISOString(),
-        invested: req.body.invested || (req.body.entryPrice * req.body.shares),
-        currentValue: req.body.currentValue || (req.body.entryPrice * req.body.shares),
-        pnl: req.body.pnl || 0,
-        pnlPercent: req.body.pnlPercent || 0,
         status: req.body.status || 'open',
         entryDate: req.body.entryDate || new Date().toISOString(),
-      };
+      });
       data.push(item);
       await writeFile(FILE, data, sha);
       return res.status(201).json({ ...item, _upsert: 'created' });
@@ -72,13 +106,9 @@ module.exports = async (req, res) => {
       else if (conditionId) idx = data.findIndex(d => d.conditionId === conditionId);
       else return res.status(400).json({ error: 'id or conditionId required' });
       if (idx === -1) return res.status(404).json({ error: 'Not found' });
-      data[idx] = { ...data[idx], ...req.body, updatedAt: new Date().toISOString() };
-      if (data[idx].currentPrice && data[idx].entryPrice && data[idx].shares) {
-        data[idx].currentValue = data[idx].currentPrice * data[idx].shares;
-        data[idx].invested = data[idx].entryPrice * data[idx].shares;
-        data[idx].pnl = data[idx].currentValue - data[idx].invested;
-        data[idx].pnlPercent = ((data[idx].pnl / data[idx].invested) * 100);
-      }
+      const putErrs = validatePosition(req.body, 'PUT');
+      if (putErrs.length) return res.status(400).json({ error: 'Validation failed', details: putErrs });
+      data[idx] = recomputePnl({ ...data[idx], ...req.body, updatedAt: new Date().toISOString() });
       await writeFile(FILE, data, sha);
       return res.json(data[idx]);
     }
