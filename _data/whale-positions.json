@@ -3224,9 +3224,9 @@
     "market": "Will Jupiter be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.10300000000000001,
-    "currentPrice": 0.026000000000000002,
+    "currentPrice": 0.0235,
     "shares": 48.54,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "esports095, Dropper, Parz1vaI, x.compolymarketbet",
     "whaleCount": 4,
@@ -3238,15 +3238,17 @@
     "conditionId": "0x79dbae2810fa8ac0df5fa82c2bbbec9c266d4e1213305d7e9173635d11045fdf",
     "createdAt": "2026-02-24T08:00:40.588Z",
     "invested": 4.99962,
-    "currentValue": 1.26204,
-    "pnl": -3.7375800000000003,
-    "pnlPercent": -74.75728155339806,
+    "currentValue": 1.14069,
+    "pnl": -3.85893,
+    "pnlPercent": -77.18446601941747,
     "entryDate": "2026-02-24T08:00:40.588Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:32:09.067Z"
+    "updatedAt": "2026-02-25T06:49:15.037Z",
+    "exitPrice": 0.0235,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "dd69cac6-5bb1-4719-8fc3-f9c48a82e133",
