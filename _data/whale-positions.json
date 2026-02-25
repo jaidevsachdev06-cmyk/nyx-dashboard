@@ -3348,9 +3348,9 @@
     "market": "Will Dexscreener be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.015,
-    "currentPrice": 0.0115,
+    "currentPrice": 0.010499999999999999,
     "shares": 330.67,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "esports095, Influenz, x.compolymarketbet",
     "whaleCount": 3,
@@ -3362,15 +3362,17 @@
     "conditionId": "0xf4992699d2ad8dba988b0f83f67b1ca5cf46df61b4f520669fd0ab4c9bc418be",
     "createdAt": "2026-02-24T08:01:12.771Z",
     "invested": 4.96005,
-    "currentValue": 3.802705,
-    "pnl": -1.1573449999999998,
-    "pnlPercent": -23.333333333333332,
+    "currentValue": 3.472035,
+    "pnl": -1.4880149999999999,
+    "pnlPercent": -30,
     "entryDate": "2026-02-24T08:01:12.771Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T06:32:23.515Z"
+    "updatedAt": "2026-02-25T06:49:27.997Z",
+    "exitPrice": 0.010499999999999999,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "5bf5773b-8cb0-4d31-a5cd-f87e7457db8f",
