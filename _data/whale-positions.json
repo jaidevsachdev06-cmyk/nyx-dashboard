@@ -3188,7 +3188,7 @@
     "market": "Will MEXC be accused of insider trading?",
     "side": "Yes",
     "entryPrice": 0.08,
-    "currentPrice": 0.14500000000000002,
+    "currentPrice": 0.155,
     "shares": 61,
     "status": "open",
     "source": "consensus-scanner",
@@ -3202,15 +3202,15 @@
     "conditionId": "0x752e842d6fce18dcd1e62de06455ab05bc55471860da376223c8a811e0106b2c",
     "createdAt": "2026-02-24T08:00:33.331Z",
     "invested": 4.88,
-    "currentValue": 8.845,
-    "pnl": 3.9650000000000007,
-    "pnlPercent": 81.25000000000003,
+    "currentValue": 9.455,
+    "pnl": 4.575,
+    "pnlPercent": 93.75000000000001,
     "entryDate": "2026-02-24T08:00:33.331Z",
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-25T00:32:16.681Z"
+    "updatedAt": "2026-02-25T01:02:11.404Z"
   },
   {
     "id": "2f74a0f6-b953-4e48-bbc3-fff0627e7087",
