@@ -5489,9 +5489,9 @@
       "bucket": "9°C",
       "question": "Will the highest temperature in Seoul be 9°C on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 3.225,
       "createdAt": "2026-02-25T08:07:04.980Z",
       "signal": {
         "forecastTemp": 12.2,
@@ -5506,7 +5506,11 @@
       "sizeUSDC": 11.775,
       "enteredAt": "2026-02-25T08:07:04.988Z",
       "orderId": "paper-mm1r40tb-owbi",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-26T03:05:06.806Z",
+      "closedAt": "2026-02-26T03:05:06.817Z"
     },
     {
       "id": "oc-mm1r40th-n9mobb",
@@ -5895,7 +5899,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-26T02:06:32.963Z",
+    "lastUpdated": "2026-02-26T03:05:06.820Z",
     "lastPriceSync": "2026-02-26T03:00:19.267Z"
   }
 }
