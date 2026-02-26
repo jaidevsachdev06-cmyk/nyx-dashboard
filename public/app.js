@@ -93,6 +93,7 @@ function switchPolyTab(tab) {
 
 // ========== POLY OVERVIEW ==========
 let _polyData = { paper: null, weather: null, whale: null };
+let _weatherApiStats = null; // Store weather API stats separately
 
 function computeStrategyStats(positions, strategyName) {
   if (!positions || !positions.length) return { open: 0, closed: 0, wins: 0, losses: 0, totalPnl: 0, realizedPnl: 0, unrealizedPnl: 0, deployed: 0, winRate: 0, avgPnl: 0, lastRun: null, trades: [] };
@@ -125,7 +126,22 @@ function computeStrategyStats(positions, strategyName) {
 
 function renderPolyOverview() {
   const paperStats = computeStrategyStats(_polyData.paper || [], 'Paper');
-  const weatherStats = computeStrategyStats(_polyData.weather || [], 'Weather');
+  // Use API stats for weather if available (contains all trades, not just recent 20)
+  const weatherStats = _weatherApiStats ? {
+    open: (_polyData.weather || []).filter(t => t.status === 'open').length,
+    closed: _weatherApiStats.totalTrades,
+    wins: _weatherApiStats.wins,
+    losses: _weatherApiStats.losses,
+    scored: _weatherApiStats.wins + _weatherApiStats.losses,
+    totalPnl: _weatherApiStats.totalPnlUSDC,
+    realizedPnl: _weatherApiStats.totalPnlUSDC,
+    unrealizedPnl: (_polyData.weather || []).filter(t => t.status === 'open').reduce((s, p) => s + (p.pnl || 0), 0),
+    deployed: (_polyData.weather || []).filter(t => t.status === 'open').reduce((s, p) => s + ((p.entryPrice || 0) * (p.shares || 0)), 0),
+    winRate: _weatherApiStats.wins + _weatherApiStats.losses > 0 ? (_weatherApiStats.wins / (_weatherApiStats.wins + _weatherApiStats.losses) * 100) : 0,
+    avgPnl: _weatherApiStats.wins + _weatherApiStats.losses > 0 ? _weatherApiStats.totalPnlUSDC / (_weatherApiStats.wins + _weatherApiStats.losses) : 0,
+    lastRun: null,
+    closedTrades: (_polyData.weather || []).filter(p => p.status !== 'open')
+  } : computeStrategyStats(_polyData.weather || [], 'Weather');
   const whaleStats = computeStrategyStats(_polyData.whale || [], 'Whale');
 
   const bankroll = 500;
@@ -628,9 +644,10 @@ async function loadWeatherTrades() {
     });
     const open = trades.filter(t => t.status === 'open');
     const closed = trades.filter(t => t.status !== 'open');
-    const totalPnl = closed.reduce((s, t) => s + (t.pnl || 0), 0);
-    const wins = closed.filter(t => t.status === 'closed-win' || t.status === 'resolved-win').length;
-    const losses = closed.filter(t => t.status === 'closed-loss' || t.status === 'resolved-loss').length;
+    // Use the total P&L from API stats (all trades), not just from recentTrades slice
+    const totalPnl = raw.stats?.totalPnlUSDC ?? closed.reduce((s, t) => s + (t.pnl || 0), 0);
+    const wins = raw.stats?.wins ?? closed.filter(t => t.status === 'closed-win' || t.status === 'resolved-win').length;
+    const losses = raw.stats?.losses ?? closed.filter(t => t.status === 'closed-loss' || t.status === 'resolved-loss').length;
     const scored = wins + losses;
     const winRate = scored ? ((wins / scored) * 100).toFixed(0) : '—';
 
@@ -644,6 +661,7 @@ async function loadWeatherTrades() {
       <div class="summary-card weather-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} trades</div></div>
     `;
     _polyData.weather = trades;
+    _weatherApiStats = raw.stats; // Store API stats for overview
     renderPolyOverview();
 
     const confBadge = c => {
