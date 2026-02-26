@@ -5701,9 +5701,9 @@
       "bucket": "44-45°F",
       "question": "Will the highest temperature in New York City be between 44-45°F on February 25?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 2.9925,
       "createdAt": "2026-02-25T22:06:17.894Z",
       "signal": {
         "forecastTemp": 39.6,
@@ -5718,7 +5718,11 @@
       "sizeUSDC": 12.0075,
       "enteredAt": "2026-02-25T22:06:17.905Z",
       "orderId": "paper-mm2l39di-xtbc",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-26T01:05:10.845Z",
+      "closedAt": "2026-02-26T01:05:10.855Z"
     },
     {
       "id": "oc-mm2pe3rz-qgq4b8",
@@ -5783,7 +5787,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-26T00:14:33.120Z",
+    "lastUpdated": "2026-02-26T01:05:10.857Z",
     "lastPriceSync": "2026-02-26T01:00:17.919Z"
   }
 }
