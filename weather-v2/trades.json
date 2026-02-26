@@ -5007,7 +5007,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.43,
+      "pnlUSDC": -1.17,
       "createdAt": "2026-02-24T12:11:55.438Z",
       "signal": {
         "forecastTemp": 49.5,
@@ -5023,8 +5023,8 @@
       "enteredAt": "2026-02-24T12:11:55.450Z",
       "orderId": "paper-mm0kf1dp-2bla",
       "txHash": null,
-      "currentPrice": 0.555,
-      "updatedAt": "2026-02-26T00:00:02.967Z"
+      "currentPrice": 0.625,
+      "updatedAt": "2026-02-26T00:30:02.155Z"
     },
     {
       "id": "oc-mm0kf1du-8et3uz",
@@ -5099,7 +5099,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.88,
+      "pnlUSDC": -2.72,
       "createdAt": "2026-02-24T12:11:55.479Z",
       "signal": {
         "forecastTemp": 61,
@@ -5115,8 +5115,8 @@
       "enteredAt": "2026-02-24T12:11:55.486Z",
       "orderId": "paper-mm0kf1ep-ow0f",
       "txHash": null,
-      "currentPrice": 0.57,
-      "updatedAt": "2026-02-26T00:00:04.548Z"
+      "currentPrice": 0.58,
+      "updatedAt": "2026-02-26T00:30:03.779Z"
     },
     {
       "id": "oc-mm0ohc7d-dlf246",
@@ -5275,7 +5275,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.26,
+      "pnlUSDC": 1.71,
       "createdAt": "2026-02-25T00:13:26.564Z",
       "signal": {
         "forecastTemp": 62.4,
@@ -5291,8 +5291,8 @@
       "enteredAt": "2026-02-25T00:13:26.574Z",
       "orderId": "paper-mm1a6x0x-sock",
       "txHash": null,
-      "currentPrice": 0.76,
-      "updatedAt": "2026-02-26T00:00:06.221Z"
+      "currentPrice": 0.785,
+      "updatedAt": "2026-02-26T00:30:05.404Z"
     },
     {
       "id": "oc-mm1a6x11-v7gk42",
@@ -5307,7 +5307,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.87,
+      "pnlUSDC": 1.79,
       "createdAt": "2026-02-25T00:13:26.581Z",
       "signal": {
         "forecastTemp": 77.8,
@@ -5323,8 +5323,8 @@
       "enteredAt": "2026-02-25T00:13:26.589Z",
       "orderId": "paper-mm1a6x1c-mxwl",
       "txHash": null,
-      "currentPrice": 0.805,
-      "updatedAt": "2026-02-26T00:00:07.798Z"
+      "currentPrice": 0.8,
+      "updatedAt": "2026-02-26T00:30:07.001Z"
     },
     {
       "id": "oc-mm1eh811-zc91tq",
@@ -5363,7 +5363,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.47,
+      "pnlUSDC": -2.72,
       "createdAt": "2026-02-25T02:13:25.867Z",
       "signal": {
         "forecastTemp": 37.5,
@@ -5379,8 +5379,8 @@
       "enteredAt": "2026-02-25T02:13:25.874Z",
       "orderId": "paper-mm1eh81h-zgx8",
       "txHash": null,
-      "currentPrice": 0.575,
-      "updatedAt": "2026-02-26T00:00:09.377Z"
+      "currentPrice": 0.56,
+      "updatedAt": "2026-02-26T00:30:08.576Z"
     },
     {
       "id": "oc-mm1n1tnq-3b9ard",
@@ -5395,7 +5395,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -7.39,
+      "pnlUSDC": -7.22,
       "createdAt": "2026-02-25T06:13:23.942Z",
       "signal": {
         "forecastTemp": 38.7,
@@ -5411,8 +5411,8 @@
       "enteredAt": "2026-02-25T06:13:23.955Z",
       "orderId": "paper-mm1n1to8-r30z",
       "txHash": null,
-      "currentPrice": 0.265,
-      "updatedAt": "2026-02-26T00:00:11.063Z"
+      "currentPrice": 0.275,
+      "updatedAt": "2026-02-26T00:30:10.181Z"
     },
     {
       "id": "oc-mm1r40ru-uxmked",
@@ -5719,11 +5719,71 @@
       "enteredAt": "2026-02-25T22:06:17.905Z",
       "orderId": "paper-mm2l39di-xtbc",
       "txHash": null
+    },
+    {
+      "id": "oc-mm2pe3rz-qgq4b8",
+      "conditionId": "0xf5bb1e12103ac936d485be1726e967689a1b73e727b38b255f09d57318749b01",
+      "tokenId": "0x2d8cc82639e6acc326b16bbf56c5a0e25fb986f5f02c26060fe726f9fa27c95e",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-miami-on-february-27-2026-84-85f",
+      "city": "Miami",
+      "date": "2026-02-27",
+      "bucket": "84-85°F",
+      "question": "Will the highest temperature in Miami be between 84-85°F on February 27?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-26T00:06:42.335Z",
+      "signal": {
+        "forecastTemp": 80.6,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.76,
+        "modelProb": 0.9071,
+        "edge": 0.1471
+      },
+      "notes": "Forecast: 80.6°F | Model: 91% vs Market: 76% | Edge: 19.4%",
+      "entryPrice": 0.76,
+      "size": 16,
+      "sizeUSDC": 12.16,
+      "enteredAt": "2026-02-26T00:06:42.346Z",
+      "orderId": "paper-mm2pe3se-jft7",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm2po70v-j7qv0l",
+      "conditionId": "0xa9afef420eba858df49e790ffbb3e3eb7166649e75bd56dd2b99b22e60148d12",
+      "tokenId": "0xfd560e235e75d0e065e821c0f45efb704d59f2af0925475a0faaa768df60489e",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-february-27-2026-10c",
+      "city": "Seoul",
+      "date": "2026-02-27",
+      "bucket": "10°C",
+      "question": "Will the highest temperature in Seoul be 10°C on February 27?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-26T00:14:33.103Z",
+      "signal": {
+        "forecastTemp": 12.7,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.825,
+        "modelProb": 0.9992,
+        "edge": 0.1742
+      },
+      "notes": "Forecast: 12.7°F | Model: 100% vs Market: 83% | Edge: 21.1%",
+      "entryPrice": 0.825,
+      "size": 15,
+      "sizeUSDC": 12.375,
+      "enteredAt": "2026-02-26T00:14:33.113Z",
+      "orderId": "paper-mm2po719-2hy0",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-26T00:05:13.028Z",
-    "lastPriceSync": "2026-02-26T00:00:17.948Z"
+    "lastUpdated": "2026-02-26T00:14:33.120Z",
+    "lastPriceSync": "2026-02-26T00:30:17.611Z"
   }
 }
