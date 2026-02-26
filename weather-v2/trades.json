@@ -5007,7 +5007,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.53,
+      "pnlUSDC": -1.89,
       "createdAt": "2026-02-24T12:11:55.438Z",
       "signal": {
         "forecastTemp": 49.5,
@@ -5023,8 +5023,8 @@
       "enteredAt": "2026-02-24T12:11:55.450Z",
       "orderId": "paper-mm0kf1dp-2bla",
       "txHash": null,
-      "currentPrice": 0.605,
-      "updatedAt": "2026-02-26T02:00:02.775Z"
+      "currentPrice": 0.585,
+      "updatedAt": "2026-02-26T02:30:03.108Z"
     },
     {
       "id": "oc-mm0kf1du-8et3uz",
@@ -5116,7 +5116,7 @@
       "orderId": "paper-mm0kf1ep-ow0f",
       "txHash": null,
       "currentPrice": 0.59,
-      "updatedAt": "2026-02-26T02:00:04.372Z"
+      "updatedAt": "2026-02-26T02:30:04.699Z"
     },
     {
       "id": "oc-mm0ohc7d-dlf246",
@@ -5275,7 +5275,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.27,
+      "pnlUSDC": 0.72,
       "createdAt": "2026-02-25T00:13:26.564Z",
       "signal": {
         "forecastTemp": 62.4,
@@ -5291,8 +5291,8 @@
       "enteredAt": "2026-02-25T00:13:26.574Z",
       "orderId": "paper-mm1a6x0x-sock",
       "txHash": null,
-      "currentPrice": 0.705,
-      "updatedAt": "2026-02-26T02:00:06.044Z"
+      "currentPrice": 0.73,
+      "updatedAt": "2026-02-26T02:30:06.292Z"
     },
     {
       "id": "oc-mm1a6x11-v7gk42",
@@ -5307,7 +5307,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.38,
+      "pnlUSDC": 2.72,
       "createdAt": "2026-02-25T00:13:26.581Z",
       "signal": {
         "forecastTemp": 77.8,
@@ -5323,8 +5323,8 @@
       "enteredAt": "2026-02-25T00:13:26.589Z",
       "orderId": "paper-mm1a6x1c-mxwl",
       "txHash": null,
-      "currentPrice": 0.835,
-      "updatedAt": "2026-02-26T02:00:07.661Z"
+      "currentPrice": 0.855,
+      "updatedAt": "2026-02-26T02:30:07.872Z"
     },
     {
       "id": "oc-mm1eh811-zc91tq",
@@ -5380,7 +5380,7 @@
       "orderId": "paper-mm1eh81h-zgx8",
       "txHash": null,
       "currentPrice": 0.545,
-      "updatedAt": "2026-02-26T02:00:09.262Z"
+      "updatedAt": "2026-02-26T02:30:09.444Z"
     },
     {
       "id": "oc-mm1n1tnq-3b9ard",
@@ -5395,7 +5395,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -7.22,
+      "pnlUSDC": -7.39,
       "createdAt": "2026-02-25T06:13:23.942Z",
       "signal": {
         "forecastTemp": 38.7,
@@ -5411,8 +5411,8 @@
       "enteredAt": "2026-02-25T06:13:23.955Z",
       "orderId": "paper-mm1n1to8-r30z",
       "txHash": null,
-      "currentPrice": 0.275,
-      "updatedAt": "2026-02-26T02:00:10.878Z"
+      "currentPrice": 0.265,
+      "updatedAt": "2026-02-26T02:30:11.129Z"
     },
     {
       "id": "oc-mm1r40ru-uxmked",
@@ -5783,11 +5783,119 @@
       "enteredAt": "2026-02-26T00:14:33.113Z",
       "orderId": "paper-mm2po719-2hy0",
       "txHash": null
+    },
+    {
+      "id": "oc-mm2to826-0w2pqb",
+      "conditionId": "0x9e03b9620653ef681f9fa669adf957379c5957932c5bd1b98eea8866ee66edc4",
+      "tokenId": "0x29575489d49e9e149d9652fc773147fdba2def29b94e7aa1e282c21d92427925",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-27-2026-66-67f",
+      "city": "Atlanta",
+      "date": "2026-02-27",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Atlanta be between 66-67°F on February 27?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-26T02:06:32.910Z",
+      "signal": {
+        "forecastTemp": 62.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.685,
+        "modelProb": 0.8694,
+        "edge": 0.1844
+      },
+      "notes": "Forecast: 62.8°F | Model: 87% vs Market: 69% | Edge: 26.9%",
+      "entryPrice": 0.685,
+      "size": 18,
+      "sizeUSDC": 12.330000000000002,
+      "enteredAt": "2026-02-26T02:06:32.922Z",
+      "orderId": "paper-mm2to82m-lj6q",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm2to82r-k8z8dq",
+      "conditionId": "0x55fef33b1b98631725156d793b637200cca4944395c59037bab81defbc93d43e",
+      "tokenId": "0x3daf327cb21b58bfc237fed66dc1035524c0e061b086f87a2e65c5c6e536456b",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-27-2026-70-71f",
+      "city": "Atlanta",
+      "date": "2026-02-27",
+      "bucket": "70-71°F",
+      "question": "Will the highest temperature in Atlanta be between 70-71°F on February 27?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-26T02:06:32.931Z",
+      "signal": {
+        "forecastTemp": 62.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.815,
+        "modelProb": 0.9787,
+        "edge": 0.1637
+      },
+      "notes": "Forecast: 62.8°F | Model: 98% vs Market: 82% | Edge: 20.1%"
+    },
+    {
+      "id": "oc-mm2to830-v3vysj",
+      "conditionId": "0x45b19a4b48cea3fb1960c0cda18575510657b28136149a2490391910657cac02",
+      "tokenId": "0x9c68290a4fb956d82a56e43e3ab11a38bf469e9e55d9073b7700aa66bdaf8bdf",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-27-2026-68-69f",
+      "city": "Atlanta",
+      "date": "2026-02-27",
+      "bucket": "68-69°F",
+      "question": "Will the highest temperature in Atlanta be between 68-69°F on February 27?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-26T02:06:32.940Z",
+      "signal": {
+        "forecastTemp": 62.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.785,
+        "modelProb": 0.9381,
+        "edge": 0.1531
+      },
+      "notes": "Forecast: 62.8°F | Model: 94% vs Market: 79% | Edge: 19.5%"
+    },
+    {
+      "id": "oc-mm2to837-33g5ik",
+      "conditionId": "0x548edc5223181e75303e04bdd0c5e0fda9d86e92ffca2692e8f7963a818396f7",
+      "tokenId": "0xef0056e5b3e1becb0823eab6aa86a86eb114d047a84b437c4a28af6c839ffa90",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-february-27-2026-52-53f",
+      "city": "Seattle",
+      "date": "2026-02-27",
+      "bucket": "52-53°F",
+      "question": "Will the highest temperature in Seattle be between 52-53°F on February 27?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-26T02:06:32.948Z",
+      "signal": {
+        "forecastTemp": 50,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.7,
+        "modelProb": 0.8065,
+        "edge": 0.1065
+      },
+      "notes": "Forecast: 50.0°F | Model: 81% vs Market: 70% | Edge: 15.2%",
+      "entryPrice": 0.7,
+      "size": 17,
+      "sizeUSDC": 11.899999999999999,
+      "enteredAt": "2026-02-26T02:06:32.955Z",
+      "orderId": "paper-mm2to83j-40lk",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-26T01:05:10.857Z",
-    "lastPriceSync": "2026-02-26T02:00:17.115Z"
+    "lastUpdated": "2026-02-26T02:06:32.963Z",
+    "lastPriceSync": "2026-02-26T02:30:20.291Z"
   }
 }
