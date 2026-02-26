@@ -5665,9 +5665,9 @@
       "bucket": "38-39°F",
       "question": "Will the highest temperature in Chicago be between 38-39°F on February 25?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 2.8,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 2.895,
       "createdAt": "2026-02-25T22:06:17.871Z",
       "signal": {
         "forecastTemp": 35.8,
@@ -5684,7 +5684,11 @@
       "orderId": "paper-mm2l39cv-u5ny",
       "txHash": null,
       "currentPrice": 0.994,
-      "updatedAt": "2026-02-26T00:00:15.720Z"
+      "updatedAt": "2026-02-26T00:00:15.720Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-26T00:05:13.016Z",
+      "closedAt": "2026-02-26T00:05:13.026Z"
     },
     {
       "id": "oc-mm2l39d2-a3m7x2",
@@ -5719,7 +5723,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-25T23:05:09.045Z",
+    "lastUpdated": "2026-02-26T00:05:13.028Z",
     "lastPriceSync": "2026-02-26T00:00:17.948Z"
   }
 }
