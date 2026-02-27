@@ -4461,5 +4461,29 @@
     "currentValue": 5.0499,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "48d10c49-d619-4ae4-8188-1e706525ea96",
+    "market": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+    "side": "Yes",
+    "entryPrice": 0.9735,
+    "currentPrice": 0.9735,
+    "shares": 4.64,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Mombil, elucidate, x.compolymarketbet",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.6,
+    "avgWinRate": 58.7,
+    "reasoning": "Consensus: 3 whales (avg score 78.6, WR 58.7%) Yes. bet=$4.52, shares=4.64. Whales: Mombil, elucidate, x.compolymarketbet",
+    "endDate": "",
+    "conditionId": "0x257b18205f908aef01ef2d1d50e6fea7d29cf5486fe04031d8b101394476faed",
+    "createdAt": "2026-02-27T22:05:25.621Z",
+    "entryDate": "2026-02-27T22:05:25.621Z",
+    "invested": 4.517,
+    "currentValue": 4.517,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
