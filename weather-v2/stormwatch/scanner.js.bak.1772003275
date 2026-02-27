@@ -71,67 +71,23 @@ async function fetchForecasts(city) {
   return results;
 }
 
-// ── Empirical forecast error and city bias corrections ──
-// Derived from backtesting 15 verified forecast-vs-actual events (Feb 20-25, 2026).
-// Inter-model spread only captures model disagreement, NOT systematic forecast error.
-// We blend model spread with empirical base error: sd = sqrt(spread² + baseError²)
-
-const EMPIRICAL_BASE_ERROR = {
-  F: 1.5,  // °F — from MAE 1.1° with outliers up to 2.8°
-  C: 0.8   // °C — equivalent (~1.5°F / 1.8)
-};
-
-const EMPIRICAL_SD_FLOOR = {
-  F: 2.0,  // minimum σ even when all models agree perfectly
-  C: 1.0
-};
-
-// City-specific bias corrections (forecast - actual). Positive = model runs hot.
-// From backtesting: London consistently underforecast, Miami underforecast.
-const CITY_BIAS = {
-  'London':  -1.0,  // n=5, model underforecasts by ~1.0°C
-  'Miami':   -2.0,  // n=1, model underforecasts by ~2.1°F (limited data, conservative)
-  'Chicago':  1.5,  // n=1, model overforecasts by ~2.8°F (limited data, conservative)
-  // Others: insufficient data or bias ≈ 0; will be added as more trades resolve
-};
-
 /**
  * Aggregate multi-model forecasts into mean + stddev per date.
- * Applies empirical error blending, SD floor, and city bias correction.
  */
-function aggregateForecasts(forecasts, cityName, unit) {
+function aggregateForecasts(forecasts) {
   const byDate = {};
   for (const f of forecasts) {
     if (!byDate[f.date]) byDate[f.date] = [];
     byDate[f.date].push(f.highTemp);
   }
 
-  const baseError = EMPIRICAL_BASE_ERROR[unit] || EMPIRICAL_BASE_ERROR.F;
-  const sdFloor = EMPIRICAL_SD_FLOOR[unit] || EMPIRICAL_SD_FLOOR.F;
-  const bias = CITY_BIAS[cityName] || 0;
-
   const result = {};
   for (const [date, temps] of Object.entries(byDate)) {
     const n = temps.length;
-    const rawMean = temps.reduce((s, t) => s + t, 0) / n;
-    const modelVariance = n > 1 ? temps.reduce((s, t) => s + (t - rawMean) ** 2, 0) / (n - 1) : 4;
-    const modelSpread = Math.sqrt(modelVariance);
-
-    // Blend: effective σ = sqrt(modelSpread² + baseError²), then floor
-    const blendedSD = Math.sqrt(modelSpread * modelSpread + baseError * baseError);
-    const sd = Math.max(blendedSD, sdFloor);
-
-    // Bias-correct the mean (subtract bias since bias = forecast - actual)
-    const mean = rawMean - bias;
-
-    result[date] = {
-      mean: Math.round(mean * 10) / 10,
-      sd: Math.round(sd * 10) / 10,
-      rawMean: Math.round(rawMean * 10) / 10,
-      modelSpread: Math.round(modelSpread * 10) / 10,
-      biasAdj: bias,
-      models: n
-    };
+    const mean = temps.reduce((s, t) => s + t, 0) / n;
+    const variance = n > 1 ? temps.reduce((s, t) => s + (t - mean) ** 2, 0) / (n - 1) : 4; // default sd=2 if single model
+    const sd = Math.sqrt(variance);
+    result[date] = { mean: Math.round(mean * 10) / 10, sd: Math.round(sd * 10) / 10, models: n };
   }
   return result;
 }
@@ -239,7 +195,7 @@ async function scan() {
       continue;
     }
 
-    const aggregated = aggregateForecasts(forecasts, city.name, city.unit);
+    const aggregated = aggregateForecasts(forecasts);
     console.log(`[scanner] ${city.name} forecasts:`, JSON.stringify(aggregated));
 
     // Step 2: Search Dome for matching markets
@@ -263,33 +219,13 @@ async function scan() {
           return q.includes(city.name.toLowerCase()) || q.includes(city.name.split(' ')[0].toLowerCase());
         }).slice(0, 10);
 
-        // Build date match strings: "2026-02-26" → ["february 26", "feb 26", "feb. 26", "02/26", "2/26"]
-        const dateObj = new Date(date + 'T12:00:00Z');
-        const monthNames = ['january','february','march','april','may','june','july','august','september','october','november','december'];
-        const monthShort = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
-        const monthIdx = dateObj.getUTCMonth();
-        const dayNum = dateObj.getUTCDate();
-        const datePatterns = [
-          `${monthNames[monthIdx]} ${dayNum}`,
-          `${monthShort[monthIdx]} ${dayNum}`,
-          `${String(monthIdx + 1).padStart(2,'0')}/${String(dayNum).padStart(2,'0')}`,
-          `${monthIdx + 1}/${dayNum}`,
-        ];
-
         for (const market of relevantMarkets) {
           const question = market.question || market.title || market.name || '';
-          const qLow = question.toLowerCase();
-
-          // Verify it's actually about this city AND this date
-          const cityMatch = qLow.includes(city.name.toLowerCase()) || 
-                           qLow.includes(city.name.split(' ')[0].toLowerCase());
+          
+          // Verify it's actually about this city and date
+          const cityMatch = question.toLowerCase().includes(city.name.toLowerCase()) || 
+                           question.toLowerCase().includes(city.name.split(' ')[0].toLowerCase());
           if (!cityMatch) continue;
-
-          const dateMatch = datePatterns.some(p => qLow.includes(p));
-          if (!dateMatch) {
-            console.log(`[scanner] Skip (date mismatch for ${date}): "${question.slice(0, 70)}"`);
-            continue;
-          }
 
           const bucket = parseBucket(question);
           if (!bucket) {
@@ -300,8 +236,8 @@ async function scan() {
           const modelProb = bucketProbability(bucket, forecast.mean, forecast.sd);
           if (modelProb === null) continue;
 
-          // NOTE: do NOT filter on modelProb here — high-confidence NO trades
-          // (YES prob <5%) are often the best trades. Let effectiveModelProb + minModelProb handle filtering.
+          // Skip extreme probabilities — no edge possible regardless of price
+          if (modelProb < 0.05 || modelProb > 0.95) continue;
 
           // Get market identifiers
           const conditionId = market.condition_id || market.conditionId;
@@ -325,10 +261,7 @@ async function scan() {
           }
 
           // Require at least one usable price
-          // YES floor is 0.01 (not 0.05) — cheap YES on extreme weather IS the alpha.
-          // The Paris win was a YES trade at ~$0.03 where the market underpriced extreme heat.
-          // NO floor stays 0.05 to avoid near-settled (YES near 1.0 → NO near 0) markets.
-          const hasYes = (yesPrice != null && yesPrice > 0.01 && yesPrice < 0.95);
+          const hasYes = (yesPrice != null && yesPrice > 0.05 && yesPrice < 0.95);
           const hasNo = (noPrice != null && noPrice > 0.05 && noPrice < 0.95);
           if (!hasYes && !hasNo) continue;
 
@@ -346,17 +279,11 @@ async function scan() {
           const edge = effectiveModelProb - effectivePrice;
           const edgePct = (edge / effectivePrice) * 100;
 
-          // Confidence gates — asymmetric by side:
-          // NO trades: require high model confidence (effectiveModelProb ≥ 0.6) — we need to be sure YES won't happen
-          // YES trades: either model is genuinely confident (≥0.6), OR model sees ≥3× what the market sees
-          //   (e.g. market 3%, model 10% = 3× — the edge is in mispriced extreme-weather YES)
+          // Confidence gates
           const distFromLine = bucketDistance(bucket, forecast.mean);
           const minModelProb = config.risk.minModelProb || 0.6;
           const minDist = config.risk.minDistanceFromLine || 2;
-          const modelConfident = side === 'YES'
-            ? (effectiveModelProb >= minModelProb || (yesPrice > 0 && modelProb >= 3 * yesPrice && modelProb >= 0.08))
-            : (effectiveModelProb >= minModelProb);
-          const confident = modelConfident && (distFromLine == null || distFromLine >= minDist);
+          const confident = (effectiveModelProb >= minModelProb) && (distFromLine == null || distFromLine >= minDist);
 
 
           const bucketLabel = bucket.type === 'exact' ? `${bucket.low}°${bucket.unit}` :

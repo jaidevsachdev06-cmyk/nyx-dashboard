@@ -60,6 +60,10 @@ async function processCandidate(signal) {
   let sizeUSDC = kellyFraction * maxSize;
   if (sizeUSDC < 5) sizeUSDC = config.risk.defaultSizeUSDC;
   sizeUSDC = Math.min(sizeUSDC, maxSize);
+  // Reduce size on cheap bets (<$0.20) — lottery tickets get half size
+  if (currentPrice < 0.20) {
+    sizeUSDC = Math.min(sizeUSDC, maxSize * 0.5);
+  }
   const size = Math.max(1, Math.floor(sizeUSDC / currentPrice));
 
   // Create candidate

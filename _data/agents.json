@@ -2,9 +2,9 @@
   {
     "id": "950700d4-c5a6-4ecf-8bfa-8d43c9fadae0",
     "name": "Oracle",
-    "role": "Prediction markets tracker — positions, watchlist, P&L, trade history, market research. Paper trading on Simmer Markets. Manages Stormwatch 🌪️ and Copycat 🐋 as subagents.",
+    "role": "Prediction markets tracker \u2014 positions, watchlist, P&L, trade history, market research. Paper trading on Simmer Markets. Manages Stormwatch \ud83c\udf2a\ufe0f and Copycat \ud83d\udc0b as subagents.",
     "status": "online",
-    "currentTask": "Monitoring open weather positions",
+    "currentTask": "Weather-v2: 13 open, 60 closed, $336 P&L",
     "accessList": [
       "polymarket",
       "trading",
@@ -14,11 +14,11 @@
       "Dashboard API",
       "Simmer Markets",
       "CLOB API",
-      "Dome API",
-      "Polymarket Gamma"
+      "Polymarket Gamma",
+      "Polymarket CLI"
     ],
-    "avatar": "🔮",
-    "lastActive": "2026-02-24T02:05:11Z",
+    "avatar": "\ud83d\udd2e",
+    "lastActive": "2026-02-26T02:09:22Z",
     "createdAt": "2026-02-17T08:23:38.943Z",
     "files": [
       {
@@ -35,17 +35,17 @@
       },
       {
         "name": "_data/agents.json",
-        "desc": "Agent registry — Oracle reads/writes status"
+        "desc": "Agent registry \u2014 Oracle reads/writes status"
       }
     ]
   },
   {
     "id": "db5777b9-f232-49f7-abdb-b027e9912ea1",
     "name": "Nyx",
-    "avatar": "🌑",
-    "role": "Primary AI assistant — orchestrates all sub-agents, manages comms, calendar, email, research, and daily operations.",
+    "avatar": "\ud83c\udf11",
+    "role": "Primary AI assistant \u2014 orchestrates all sub-agents, manages comms, calendar, email, research, and daily operations.",
     "status": "online",
-    "currentTask": "Active — monitoring crons and managing system",
+    "currentTask": "Active \u2014 managing system, Phase 3 memory complete",
     "tools": [
       "Telegram",
       "Email (AgentMail)",
@@ -64,7 +64,7 @@
       "trading",
       "activity"
     ],
-    "lastActive": "2026-02-24T02:07:00Z",
+    "lastActive": "2026-02-26T02:09:22Z",
     "createdAt": "2026-02-17T08:29:50.966Z",
     "files": [
       {
@@ -85,7 +85,7 @@
       },
       {
         "name": "BRAIN.md",
-        "desc": "Live operational state — active projects, blockers, priorities"
+        "desc": "Live operational state \u2014 active projects, blockers, priorities"
       },
       {
         "name": "HEARTBEAT.md",
@@ -105,17 +105,17 @@
       },
       {
         "name": "memory/items.md",
-        "desc": "Long-term curated memory — facts, lessons, preferences"
+        "desc": "Long-term curated memory \u2014 facts, lessons, preferences"
       }
     ]
   },
   {
     "id": "e8857789-6d61-4920-9af5-c30a6addbe06",
     "name": "Herald",
-    "avatar": "📯",
-    "role": "Daily morning briefing — calendar, portfolio movers, action items. Runs at 9:45 AM SGT (7:50 AM SGT on Tuesdays).",
+    "avatar": "\ud83d\udcef",
+    "role": "Daily morning briefing \u2014 calendar, portfolio movers, action items. Runs at 9:45 AM SGT (7:50 AM SGT on Tuesdays).",
     "status": "idle",
-    "currentTask": "Next run: 7:50 AM SGT (Tuesday)",
+    "currentTask": "Next run: 9:45 AM SGT (Wed)",
     "tools": [
       "Google Calendar",
       "Web Search",
@@ -147,10 +147,10 @@
   {
     "id": "3dd10cb4-d27d-4771-8040-25e0603d9e51",
     "name": "Stormwatch",
-    "avatar": "🌪️",
-    "role": "Oracle's subagent — automated weather market scanner. Pulls Open-Meteo forecasts, checks Polymarket CLOB prices, enters when relative edge ≥25% and modelProb 5–10%. Runs every ~2h.",
+    "avatar": "\ud83c\udf2a\ufe0f",
+    "role": "Oracle's subagent \u2014 automated weather market scanner. Pulls Open-Meteo forecasts, checks Polymarket CLOB prices, enters when relative edge \u226525% and modelProb 5\u201310%. Runs every ~2h.",
     "status": "idle",
-    "currentTask": "Next scan: ~2h",
+    "currentTask": "13 open weather positions, scanning every ~2h",
     "tools": [
       "Open-Meteo API",
       "Polymarket CLOB API",
@@ -160,9 +160,9 @@
       "polymarket",
       "activity"
     ],
-    "lastActive": "2026-02-24T02:02:00Z",
+    "lastActive": "2026-02-26T02:09:22Z",
     "createdAt": "2026-02-17T08:29:58.697Z",
-    "description": "Subagent of Oracle 🔮. Handles the automated scanning and execution loop for weather prediction markets.",
+    "description": "Subagent of Oracle \ud83d\udd2e. Handles the automated scanning and execution loop for weather prediction markets.",
     "files": [
       {
         "name": "weather-v2/trades.json",
@@ -170,15 +170,15 @@
       },
       {
         "name": "weather-v2/config.json",
-        "desc": "Scanner config — cities, thresholds, circuit breakers"
+        "desc": "Scanner config \u2014 cities, thresholds, circuit breakers"
       },
       {
         "name": "weather-trading-journal.md",
-        "desc": "Lessons from resolved trades — informs edge thresholds"
+        "desc": "Lessons from resolved trades \u2014 informs edge thresholds"
       },
       {
         "name": "memory/items.md",
-        "desc": "Pattern library — replicable weather trade setups"
+        "desc": "Pattern library \u2014 replicable weather trade setups"
       },
       {
         "name": "logs/weather-scan.log",
@@ -193,8 +193,8 @@
   {
     "id": "92c0f02c-2b39-4078-8956-6256c4683b3c",
     "name": "Courier",
-    "avatar": "📬",
-    "role": "Email inbox monitor — checks AgentMail (nyx-ai@agentmail.to) for incoming messages. Runs periodically.",
+    "avatar": "\ud83d\udcec",
+    "role": "Email inbox monitor \u2014 checks AgentMail (nyx-ai@agentmail.to) for incoming messages. Runs periodically.",
     "status": "idle",
     "currentTask": "Last check: no new emails",
     "tools": [
@@ -203,12 +203,12 @@
     "accessList": [
       "activity"
     ],
-    "lastActive": "2026-02-17T08:30:01Z",
+    "lastActive": "2026-02-26T02:09:22Z",
     "createdAt": "2026-02-17T08:30:01.727Z",
     "files": [
       {
         "name": "AgentMail inbox",
-        "desc": "nyx-ai@agentmail.to — live incoming email stream"
+        "desc": "nyx-ai@agentmail.to \u2014 live incoming email stream"
       },
       {
         "name": "TOOLS.md",
@@ -219,15 +219,15 @@
   {
     "id": "f3566b1f-3c8f-42e6-9e8a-bf644553a82d",
     "name": "Copycat",
-    "avatar": "🐋",
-    "role": "Oracle's subagent — mirrors positions from top Polymarket whale wallets using Simmer SDK. Size-weighted aggregation, conflict detection, auto-rebalancing.",
-    "description": "Subagent of Oracle 🔮. Tracks and copies high-performing whale traders on Polymarket via paper trading.",
+    "avatar": "\ud83d\udc0b",
+    "role": "Oracle's subagent \u2014 mirrors positions from top Polymarket whale wallets using Simmer SDK. Size-weighted aggregation, conflict detection, auto-rebalancing.",
+    "description": "Subagent of Oracle \ud83d\udd2e. Tracks and copies high-performing whale traders on Polymarket via paper trading.",
     "status": "idle",
-    "currentTask": "Awaiting whale wallet configuration",
+    "currentTask": "Mirror P&L: -$25.23",
     "tools": [
       "Simmer Markets",
-      "Dome API",
-      "Predicting.top"
+      "Predicting.top",
+      "Polymarket CLI"
     ],
     "accessList": [
       "polymarket",
@@ -236,7 +236,7 @@
     "files": [
       {
         "name": "skills/polymarket-copytrading/",
-        "desc": "Copytrading skill — trader tracking and mirror logic"
+        "desc": "Copytrading skill \u2014 trader tracking and mirror logic"
       },
       {
         "name": "_data/whale-positions.json",
@@ -247,14 +247,14 @@
         "desc": "Simmer API key and Dome API key"
       }
     ],
-    "lastActive": "2026-02-17T10:35:34Z",
+    "lastActive": "2026-02-26T02:09:22Z",
     "createdAt": "2026-02-17T10:35:34.420Z"
   },
   {
     "id": "d65f0a86-72df-40f4-ab46-bc40bd473b02",
     "name": "Quartermaster",
-    "avatar": "🛠️",
-    "role": "Nightly system maintenance — audits cron health, checks BlockRun wallet balance, counts recent errors, flags broken script references. Runs at 3:00 AM SGT.",
+    "avatar": "\ud83d\udee0\ufe0f",
+    "role": "Nightly system maintenance \u2014 audits cron health, checks BlockRun wallet balance, counts recent errors, flags broken script references. Runs at 3:00 AM SGT.",
     "status": "idle",
     "currentTask": "Next run: 3:00 AM SGT",
     "tools": [
@@ -266,20 +266,20 @@
       "dashboard",
       "activity"
     ],
-    "lastActive": "2026-02-24T00:00:00Z",
+    "lastActive": "2026-02-26T02:09:22Z",
     "createdAt": "2026-02-24T00:00:00.000Z",
     "files": [
       {
         "name": "scripts/quartermaster.sh",
-        "desc": "Main audit script — outputs JSON health report"
+        "desc": "Main audit script \u2014 outputs JSON health report"
       },
       {
         "name": "ERRORS.md",
-        "desc": "Error log — Quartermaster reads for 7-day error count"
+        "desc": "Error log \u2014 Quartermaster reads for 7-day error count"
       },
       {
         "name": "BRAIN.md",
-        "desc": "Operational state — updated after each run"
+        "desc": "Operational state \u2014 updated after each run"
       },
       {
         "name": "memory/heartbeat-state.json",
@@ -287,7 +287,77 @@
       },
       {
         "name": "memory/items.md",
-        "desc": "Long-term memory — Quartermaster consolidates daily logs here"
+        "desc": "Long-term memory \u2014 Quartermaster consolidates daily logs here"
+      }
+    ]
+  },
+  {
+    "id": "99453502-425f-4e13-86fe-476d5770edbe",
+    "name": "ScholarlNyx",
+    "avatar": "\ud83d\udcd6",
+    "role": "Academic research assistant \u2014 literature reviews, paper summaries, citation management, study aid.",
+    "status": "idle",
+    "currentTask": "Awaiting research tasks",
+    "tools": [
+      "Web Search",
+      "ArXiv",
+      "Google Scholar",
+      "Notion"
+    ],
+    "accessList": [
+      "school",
+      "activity"
+    ],
+    "lastActive": "2026-02-27T00:00:00Z",
+    "createdAt": "2026-02-27T02:56:00.000Z",
+    "description": "Handles academic and research tasks \u2014 finding papers, summarising readings, building literature reviews.",
+    "files": [
+      {
+        "name": "IDENTITY.md",
+        "desc": "Agent identity and persona"
+      },
+      {
+        "name": "SOUL.md",
+        "desc": "Operating principles for research tasks"
+      },
+      {
+        "name": "courses/",
+        "desc": "Course materials and reading lists"
+      }
+    ]
+  },
+  {
+    "id": "14994ca9-e2a7-432a-aceb-1c069ed0dc7e",
+    "name": "YOLO Builder",
+    "avatar": "\ud83d\ude80",
+    "role": "Overnight prototype builder \u2014 ships MVPs, experiments, and proof-of-concepts while Jaidev sleeps.",
+    "status": "idle",
+    "currentTask": "Awaiting build tasks",
+    "tools": [
+      "GitHub",
+      "Vercel",
+      "exec",
+      "coding-agent"
+    ],
+    "accessList": [
+      "dashboard",
+      "activity"
+    ],
+    "lastActive": "2026-02-27T00:00:00Z",
+    "createdAt": "2026-02-27T02:56:00.000Z",
+    "description": "Spawns coding sub-agents to build overnight prototypes. Ships fast, iterates faster.",
+    "files": [
+      {
+        "name": "IDENTITY.md",
+        "desc": "Agent identity"
+      },
+      {
+        "name": "SOUL.md",
+        "desc": "Build philosophy \u2014 speed over perfection"
+      },
+      {
+        "name": "projects/",
+        "desc": "Active and completed prototype builds"
       }
     ]
   }

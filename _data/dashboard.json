@@ -1,1 +1,21 @@
-[]
+{
+  "lastUpdated": "2026-02-26T02:09:22Z",
+  "weather": {
+    "open": 13,
+    "closed": 60,
+    "candidates": 142,
+    "totalPnl": 336.25,
+    "openPnl": -11.63,
+    "winRate": 38.7
+  },
+  "whale": {
+    "mirrorPnl": -25.23
+  },
+  "system": {
+    "gateway": "running",
+    "crons": 43,
+    "cronModel": "anthropic/claude-haiku-4-5",
+    "memoryPhase": 3,
+    "memoryItems": 74
+  }
+}

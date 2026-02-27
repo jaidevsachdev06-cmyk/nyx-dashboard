@@ -1,11 +1,10 @@
 /**
  * core/polymarket.js — Polymarket data interface
  *
- * Primary: polymarket CLI (`/usr/local/bin/polymarket`) — official binary, no rate limit issues
- * Fallbacks:
- *   - Prices: CLOB HTTP `/midpoint?token_id=...`
- *   - Market search: Dome API (if CLI fails)
- *   - Resolution checks: Gamma `/markets?condition_ids=...` (public)
+ * Primary: Dome API (official Polymarket data layer)
+ * Fallbacks (when Dome 5xx / timeouts):
+ *   - Prices: polymarket CLI (`polymarket clob midpoint <tokenId>`) → CLOB HTTP `/midpoint?token_id=...`
+ *   - Market metadata + soft-resolution checks: Gamma `/markets?condition_ids=...` (public)
  *
  * NOTE: Resolution truth is still best from Dome (winning_side). Gamma fallback is best-effort
  * (uses `closed` + extreme outcomePrices to infer YES/NO).
@@ -17,6 +16,7 @@ const config = require('../config.json');
 const DOME_URL = config.dome.apiUrl;
 const API_KEY = config.dome.apiKey;
 
+const GAMMA_URL = config.gamma?.apiUrl || 'https://gamma-api.polymarket.com';
 const CLOB_URL = config.clob?.apiUrl || 'https://clob.polymarket.com';
 
 const RATE_LIMIT_MS = config.dome.rateLimitMs || 700;
@@ -104,80 +104,64 @@ async function rateLimitedDomeFetch(url, opts = {}, retries = 2) {
   return res.json();
 }
 
-// ---- CLI market helpers (replaces Gamma) ----
+// ---- Gamma fallback helpers ----
 
-function cliGetMarket(conditionId) {
-  try {
-    return execPolymarketCLI(['-o', 'json', 'clob', 'market', conditionId], 8000);
-  } catch { return null; }
+async function gammaGetMarket(conditionId) {
+  const url = `${GAMMA_URL}/markets?condition_ids=${encodeURIComponent(conditionId)}`;
+  const data = await fetchJSON(url, { headers: { 'User-Agent': 'NyxWeatherV2/1.0' } });
+  return Array.isArray(data) && data.length > 0 ? data[0] : null;
 }
 
-function inferResolutionFromCLIMarket(market) {
-  if (!market) return { resolved: false, outcome: null, resolutionPrice: null, source: 'cli', market: null };
+function inferResolutionFromGammaMarket(market) {
+  if (!market) return { resolved: false, outcome: null, resolutionPrice: null, source: 'gamma', market: null };
 
+  // Gamma doesn't always expose a clean "winning outcome" field; we infer when closed + extreme prices.
   const closed = !!market.closed;
-  const tokens = Array.isArray(market.tokens) ? market.tokens : [];
-  const yesToken = tokens.find(t => (t.outcome || '').toLowerCase() === 'yes');
-  const noToken  = tokens.find(t => (t.outcome || '').toLowerCase() === 'no');
-  const yesP = yesToken ? parseFloat(yesToken.price) : NaN;
-  const noP  = noToken  ? parseFloat(noToken.price)  : NaN;
+  const prices = Array.isArray(market.outcomePrices) ? market.outcomePrices.map(p => parseFloat(p)) : [];
 
-  const meta = { slug: market.market_slug || market.slug || '', question: market.question || '' };
-
-  if (!closed || isNaN(yesP) || isNaN(noP)) {
-    return { resolved: false, outcome: null, resolutionPrice: null, source: 'cli', market: meta };
+  if (!closed || prices.length < 2 || prices.some(p => Number.isNaN(p))) {
+    return {
+      resolved: false,
+      outcome: null,
+      resolutionPrice: null,
+      source: 'gamma',
+      market: { slug: market.slug, question: market.question }
+    };
   }
 
+  const [yesP, noP] = prices;
   const EPS = 0.02;
   if (yesP >= 1 - EPS && noP <= EPS) {
-    return { resolved: true, outcome: 'YES', resolutionPrice: 1.0, source: 'cli-inferred', market: meta };
+    return {
+      resolved: true,
+      outcome: 'YES',
+      resolutionPrice: 1.0,
+      source: 'gamma-inferred',
+      market: { slug: market.slug, question: market.question }
+    };
   }
   if (noP >= 1 - EPS && yesP <= EPS) {
-    return { resolved: true, outcome: 'NO',  resolutionPrice: 0.0, source: 'cli-inferred', market: meta };
+    return {
+      resolved: true,
+      outcome: 'NO',
+      resolutionPrice: 0.0,
+      source: 'gamma-inferred',
+      market: { slug: market.slug, question: market.question }
+    };
   }
 
-  return { resolved: false, outcome: null, resolutionPrice: null, source: 'cli', market: meta };
+  return {
+    resolved: false,
+    outcome: null,
+    resolutionPrice: null,
+    source: 'gamma',
+    market: { slug: market.slug, question: market.question }
+  };
 }
 
 // ---- Public API ----
 
 async function searchMarkets(query) {
-  // Primary: polymarket CLI (official, no rate limit concerns, no Dome auth needed)
-  try {
-    const results = execPolymarketCLI(['-o', 'json', 'markets', 'search', query, '--limit', '20'], 10000);
-    if (Array.isArray(results) && results.length > 0) {
-      const enriched = [];
-      for (const m of results) {
-        const cid = m.conditionId || m.condition_id;
-        if (!cid) continue;
-        // Skip already-closed markets
-        if (m.closed || m.active === false) continue;
-        try {
-          const clob = execPolymarketCLI(['-o', 'json', 'clob', 'market', cid], 8000);
-          // Skip if CLOB says closed
-          if (clob.closed) continue;
-          enriched.push({
-            ...m,
-            condition_id: cid,
-            conditionId: cid,
-            tokens: (clob.tokens || []).map(t => ({
-              token_id: t.token_id,
-              outcome: t.outcome,
-              price: parseFloat(t.price) || 0
-            }))
-          });
-        } catch (e) {
-          enriched.push({ ...m, condition_id: cid, conditionId: cid, tokens: [] });
-        }
-        await sleep(150);
-      }
-      return enriched;
-    }
-  } catch (err) {
-    console.warn(`[polymarket] CLI search failed: ${err.message}, falling back to Dome`);
-  }
-
-  // Fallback: Dome
   const params = new URLSearchParams({ search: query, status: 'open', limit: '30' });
   const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/markets?${params}`);
   return Array.isArray(data) ? data : (data.markets || data.data || []);
@@ -191,8 +175,8 @@ async function getMarket(conditionId) {
     return markets.length > 0 ? markets[0] : null;
   } catch (err) {
     if (!isRetryableDomeFailure(err)) throw err;
-    // Fallback: CLI
-    return cliGetMarket(conditionId);
+    // Fallback: Gamma
+    return gammaGetMarket(conditionId);
   }
 }
 
@@ -207,22 +191,30 @@ async function validateConditionId(conditionId) {
 }
 
 async function getMidpointPrice(tokenId) {
-  // 1) Primary: polymarket CLI
+  // 1) Try Dome
+  try {
+    const data = await rateLimitedDomeFetch(`${DOME_URL}/polymarket/market-price/${tokenId}`);
+    return parseFloat(data.price || data.mid || data.midpoint || 0);
+  } catch (err) {
+    if (!isRetryableDomeFailure(err)) throw err;
+  }
+
+  // 2) Try polymarket CLI (official binary — faster and more reliable than raw HTTP on flaky networks)
   try {
     const result = execPolymarketCLI(['-o', 'json', 'clob', 'midpoint', tokenId]);
     const p = result?.midpoint ?? result?.price ?? result?.mid;
     if (p != null && !isNaN(parseFloat(p))) return parseFloat(p);
   } catch (_cliErr) {
-    // CLI failed — fall through
+    // CLI unavailable or failed — fall through to HTTP
   }
 
-  // 2) Fallback: CLOB HTTP
+  // 3) Fallback to CLOB HTTP midpoint
   try {
     const d = await fetchJSON(`${CLOB_URL}/midpoint?token_id=${encodeURIComponent(tokenId)}`, { headers: { 'User-Agent': 'NyxWeatherV2/1.0' } }, 15000);
     const p = d?.midpoint ?? d?.price ?? d?.mid;
     return p != null ? parseFloat(p) : 0;
   } catch (err) {
-    throw new Error(`Price fetch failed (CLI+CLOB): ${err.message}`);
+    throw new Error(`Price fetch failed (Dome+CLI+CLOB): ${err.message}`);
   }
 }
 
@@ -253,9 +245,9 @@ async function checkResolution(conditionId, tokenId = null, tokenSide = 'YES') {
     if (!isRetryableDomeFailure(err)) throw err;
   }
 
-  // 2) CLI best-effort inference
-  const cliMarket = cliGetMarket(conditionId);
-  const inferred = inferResolutionFromCLIMarket(cliMarket);
+  // 2) Gamma best-effort inference
+  const gammaMarket = await gammaGetMarket(conditionId);
+  const inferred = inferResolutionFromGammaMarket(gammaMarket);
   if (inferred.resolved) return inferred;
 
   // 3) CLOB price inference — YES token price near 0 or 1 means market resolved
