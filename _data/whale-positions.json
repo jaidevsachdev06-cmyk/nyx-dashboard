@@ -3900,7 +3900,7 @@
     "entryPrice": 0.094,
     "currentPrice": 0.0925,
     "shares": 109.68,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Qualitative, Rooke Brollins, failstober, Car, Mombil",
     "whaleCount": 5,
@@ -3920,7 +3920,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-27T18:00:47.859Z"
+    "updatedAt": "2026-02-27T18:05:26.466Z",
+    "exitPrice": 0.0925,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "7421ad3c-b8a4-43af-aca5-895435d45368",
