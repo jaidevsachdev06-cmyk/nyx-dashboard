@@ -3956,7 +3956,7 @@
     "entryPrice": 0.8955,
     "currentPrice": 0.9175,
     "shares": 5.93,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Anjun, failstober, Car, Gr33d",
     "whaleCount": 4,
@@ -3976,7 +3976,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-27T08:02:36.935Z"
+    "updatedAt": "2026-02-27T08:05:42.647Z",
+    "exitPrice": 0.9175,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "4acbc270-035a-4551-baba-7d3d7acba45e",
