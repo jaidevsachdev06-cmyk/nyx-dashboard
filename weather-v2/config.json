@@ -2,7 +2,7 @@
   "dome": {
     "apiUrl": "https://api.domeapi.io/v1",
     "apiKey": "867efc19910c4ac75f280bf01c9835b42b1b8d05",
-    "rateLimitMs": 1100
+    "rateLimitMs": 700
   },
   "weather": {
     "provider": "open-meteo",
@@ -20,7 +20,7 @@
     "maxPositionSizeUSDC": 50,
     "maxOpenPositions": 15,
     "maxDailyLossUSDC": 100,
-    "minEdgePct": 35,
+    "minEdgePct": 25,
     "maxExposurePerCity": 150,
     "kellyMultiplier": 0.25,
     "defaultSizeUSDC": 25,
@@ -118,22 +118,6 @@
       "tz": "Europe/Paris",
       "station": "LFPG",
       "unit": "C"
-    },
-    {
-      "name": "Los Angeles",
-      "lat": 34.0522,
-      "lon": -118.2437,
-      "tz": "America/Los_Angeles",
-      "station": "KLAX",
-      "unit": "F"
-    },
-    {
-      "name": "Denver",
-      "lat": 39.7392,
-      "lon": -104.9903,
-      "tz": "America/Denver",
-      "station": "KDEN",
-      "unit": "F"
     }
   ],
   "dashboard": {

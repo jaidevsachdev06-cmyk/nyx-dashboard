@@ -6,6 +6,7 @@
 
 const store = require('./store');
 const polymarket = require('./polymarket');
+const circuitBreaker = require("./circuit-breaker");
 const config = require('../config.json');
 
 async function registerCandidate(candidateTrade) {
@@ -191,6 +192,7 @@ async function checkAndResolve(tradeId) {
     resolvedAt: new Date().toISOString()
   });
 
+  circuitBreaker.recordResult(pnl.result);
   console.log(`[lifecycle] Trade ${tradeId} RESOLVED: ${pnl.result} | P&L: $${pnl.pnlUSDC.toFixed(2)}`);
   const closed = store.transition(tradeId, 'closed');
   return closed;

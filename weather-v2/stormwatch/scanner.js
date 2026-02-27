@@ -1,12 +1,32 @@
 /**
  * stormwatch/scanner.js — Multi-model forecast + Dome market discovery + edge calc
  * 
- * The brain: fetches Open-Meteo forecasts, finds Polymarket weather markets via Dome,
- * and calculates edge using normal distribution probability.
+ * OPTIMIZED: Parallel forecast fetches, forecast caching, batched market evaluation.
  */
 
 const config = require('../config.json');
 const polymarket = require('../core/polymarket');
+const fs = require('fs');
+const path = require('path');
+
+// ── Forecast cache (15-min TTL) ──
+const CACHE_FILE = path.resolve(__dirname, '..', 'logs', '.forecast-cache.json');
+const CACHE_TTL_MS = 15 * 60 * 1000;
+
+function loadCache() {
+  try {
+    const data = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+    if (Date.now() - data.ts < CACHE_TTL_MS) return data.forecasts;
+  } catch {}
+  return null;
+}
+
+function saveCache(forecasts) {
+  try {
+    fs.mkdirSync(path.dirname(CACHE_FILE), { recursive: true });
+    fs.writeFileSync(CACHE_FILE, JSON.stringify({ ts: Date.now(), forecasts }));
+  } catch {}
+}
 
 // ── Normal distribution helpers ──
 
@@ -25,8 +45,6 @@ function normalCDF(x, mean, sd) {
   return 0.5 * (1 + erf(z / Math.sqrt(2)));
 }
 
-// ── Temperature conversion ──
-
 function cToF(c) { return c * 9 / 5 + 32; }
 
 // ── Open-Meteo multi-model forecast ──
@@ -35,7 +53,8 @@ async function fetchForecasts(city) {
   const models = config.weather.models;
   const results = [];
 
-  for (const model of models) {
+  // Parallel fetch all models for this city
+  const promises = models.map(async (model) => {
     try {
       const params = new URLSearchParams({
         latitude: city.lat.toString(),
@@ -47,58 +66,50 @@ async function fetchForecasts(city) {
       });
 
       const url = `${config.weather.forecastApi}?${params}`;
-      const res = await fetch(url);
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 10000);
+      const res = await fetch(url, { signal: ctrl.signal });
+      clearTimeout(t);
+      
       if (!res.ok) {
         console.warn(`[scanner] ${model} failed for ${city.name}: ${res.status}`);
-        continue;
+        return [];
       }
       const data = await res.json();
 
+      const modelResults = [];
       if (data.daily && data.daily.temperature_2m_max) {
         const dates = data.daily.time || [];
         const temps = data.daily.temperature_2m_max || [];
         for (let i = 0; i < dates.length; i++) {
           if (temps[i] !== null && temps[i] !== undefined) {
-            results.push({ model, date: dates[i], highTemp: temps[i] });
+            modelResults.push({ model, date: dates[i], highTemp: temps[i] });
           }
         }
       }
+      return modelResults;
     } catch (err) {
       console.warn(`[scanner] ${model} error for ${city.name}: ${err.message}`);
+      return [];
     }
-  }
+  });
 
+  const allResults = await Promise.all(promises);
+  for (const r of allResults) results.push(...r);
   return results;
 }
 
 // ── Empirical forecast error and city bias corrections ──
-// Derived from backtesting 15 verified forecast-vs-actual events (Feb 20-25, 2026).
-// Inter-model spread only captures model disagreement, NOT systematic forecast error.
-// We blend model spread with empirical base error: sd = sqrt(spread² + baseError²)
 
-const EMPIRICAL_BASE_ERROR = {
-  F: 1.5,  // °F — from MAE 1.1° with outliers up to 2.8°
-  C: 0.8   // °C — equivalent (~1.5°F / 1.8)
-};
+const EMPIRICAL_BASE_ERROR = { F: 1.5, C: 0.8 };
+const EMPIRICAL_SD_FLOOR = { F: 2.0, C: 1.0 };
 
-const EMPIRICAL_SD_FLOOR = {
-  F: 2.0,  // minimum σ even when all models agree perfectly
-  C: 1.0
-};
-
-// City-specific bias corrections (forecast - actual). Positive = model runs hot.
-// From backtesting: London consistently underforecast, Miami underforecast.
 const CITY_BIAS = {
-  'London':  -1.0,  // n=5, model underforecasts by ~1.0°C
-  'Miami':   -2.0,  // n=1, model underforecasts by ~2.1°F (limited data, conservative)
-  'Chicago':  1.5,  // n=1, model overforecasts by ~2.8°F (limited data, conservative)
-  // Others: insufficient data or bias ≈ 0; will be added as more trades resolve
+  'London':  -1.0,
+  'Miami':   -2.0,
+  'Chicago':  1.5,
 };
 
-/**
- * Aggregate multi-model forecasts into mean + stddev per date.
- * Applies empirical error blending, SD floor, and city bias correction.
- */
 function aggregateForecasts(forecasts, cityName, unit) {
   const byDate = {};
   for (const f of forecasts) {
@@ -116,12 +127,8 @@ function aggregateForecasts(forecasts, cityName, unit) {
     const rawMean = temps.reduce((s, t) => s + t, 0) / n;
     const modelVariance = n > 1 ? temps.reduce((s, t) => s + (t - rawMean) ** 2, 0) / (n - 1) : 4;
     const modelSpread = Math.sqrt(modelVariance);
-
-    // Blend: effective σ = sqrt(modelSpread² + baseError²), then floor
     const blendedSD = Math.sqrt(modelSpread * modelSpread + baseError * baseError);
     const sd = Math.max(blendedSD, sdFloor);
-
-    // Bias-correct the mean (subtract bias since bias = forecast - actual)
     const mean = rawMean - bias;
 
     result[date] = {
@@ -138,55 +145,41 @@ function aggregateForecasts(forecasts, cityName, unit) {
 
 // ── Bucket parsing from Polymarket questions ──
 
-/**
- * Parse a temperature bucket from a market question.
- * Returns { type: 'range'|'above'|'below', low, high, unit } or null.
- */
 function parseBucket(question) {
   if (!question) return null;
   const q = question.toLowerCase();
 
-  // "between X-Y°F" or "between X and Y"
   let m = q.match(/between\s+(\d+)\s*[-–]\s*(\d+)\s*°?\s*([fc])/i);
   if (m) return { type: 'range', low: parseInt(m[1]), high: parseInt(m[2]), unit: m[3].toUpperCase() };
 
   m = q.match(/between\s+(\d+)\s*°?\s*([fc])\s*(?:and|-|–)\s*(\d+)/i);
   if (m) return { type: 'range', low: parseInt(m[1]), high: parseInt(m[3]), unit: m[2].toUpperCase() };
 
-  // "X°F or higher" / "X°C or higher" / "above X"
   m = q.match(/(\d+)\s*°?\s*([fc])\s*or\s*(?:higher|more|above)/i);
   if (m) return { type: 'above', low: parseInt(m[1]), high: null, unit: m[2].toUpperCase() };
 
   m = q.match(/(?:above|over|higher than|at least)\s+(\d+)\s*°?\s*([fc])/i);
   if (m) return { type: 'above', low: parseInt(m[1]), high: null, unit: m[2].toUpperCase() };
 
-  // "X°F or lower" / "below X"
   m = q.match(/(\d+)\s*°?\s*([fc])\s*or\s*(?:lower|less|below|colder)/i);
   if (m) return { type: 'below', low: null, high: parseInt(m[1]), unit: m[2].toUpperCase() };
 
   m = q.match(/(?:below|under|lower than|at most)\s+(\d+)\s*°?\s*([fc])/i);
   if (m) return { type: 'below', low: null, high: parseInt(m[1]), unit: m[2].toUpperCase() };
 
-  // Exact temperature: "be X°C" or "be X°F" (Polymarket common format)
   m = q.match(/be\s+(-?\d+)\s*°\s*([fc])/i);
   if (m) return { type: 'exact', low: parseInt(m[1]), high: parseInt(m[1]), unit: m[2].toUpperCase() };
 
-  // Fallback exact: "X°C on" or "X°F on"  
   m = q.match(/(-?\d+)\s*°\s*([fc])\s+on/i);
   if (m) return { type: 'exact', low: parseInt(m[1]), high: parseInt(m[1]), unit: m[2].toUpperCase() };
 
   return null;
 }
 
-/**
- * Calculate model probability that actual temp falls in bucket.
- */
 function bucketProbability(bucket, forecastMean, forecastSD) {
   if (!bucket) return null;
-
   switch (bucket.type) {
     case 'range':
-      return normalCDF(bucket.high + 0.5, forecastMean, forecastSD) - normalCDF(bucket.low - 0.5, forecastMean, forecastSD);
     case 'exact':
       return normalCDF(bucket.high + 0.5, forecastMean, forecastSD) - normalCDF(bucket.low - 0.5, forecastMean, forecastSD);
     case 'above':
@@ -198,12 +191,6 @@ function bucketProbability(bucket, forecastMean, forecastSD) {
   }
 }
 
-
-
-/**
- * Distance (in degrees) from forecast mean to the nearest decision boundary.
- * Used to avoid coinflips near the line.
- */
 function bucketDistance(bucket, forecastMean) {
   if (!bucket) return null;
   switch (bucket.type) {
@@ -219,31 +206,49 @@ function bucketDistance(bucket, forecastMean) {
       return null;
   }
 }
+
 // ── Main scan ──
 
-/**
- * Scan all cities for trading candidates.
- * Returns array of candidate objects with edge calculations.
- */
 async function scan() {
+  const startTime = Date.now();
   console.log(`[scanner] Starting scan for ${config.cities.length} cities...`);
   const candidates = [];
 
-  for (const city of config.cities) {
-    console.log(`[scanner] Fetching forecasts for ${city.name}...`);
+  // Step 1: Fetch all forecasts in parallel (biggest speedup)
+  let allForecasts = loadCache();
+  
+  if (allForecasts) {
+    console.log(`[scanner] Using cached forecasts (${Object.keys(allForecasts).length} cities)`);
+  } else {
+    console.log(`[scanner] Fetching fresh forecasts (parallel)...`);
+    const forecastStart = Date.now();
+    
+    const forecastPromises = config.cities.map(async (city) => {
+      const forecasts = await fetchForecasts(city);
+      const aggregated = aggregateForecasts(forecasts, city.name, city.unit);
+      return { cityName: city.name, aggregated };
+    });
+    
+    const forecastResults = await Promise.all(forecastPromises);
+    allForecasts = {};
+    for (const r of forecastResults) {
+      allForecasts[r.cityName] = r.aggregated;
+    }
+    saveCache(allForecasts);
+    console.log(`[scanner] Forecasts fetched in ${((Date.now() - forecastStart) / 1000).toFixed(1)}s`);
+  }
 
-    // Step 1: Multi-model forecasts
-    const forecasts = await fetchForecasts(city);
-    if (forecasts.length === 0) {
+  // Step 2: For each city+date, search markets and evaluate
+  for (const city of config.cities) {
+    const forecasts = allForecasts[city.name];
+    if (!forecasts || Object.keys(forecasts).length === 0) {
       console.warn(`[scanner] No forecast data for ${city.name}`);
       continue;
     }
 
-    const aggregated = aggregateForecasts(forecasts, city.name, city.unit);
-    console.log(`[scanner] ${city.name} forecasts:`, JSON.stringify(aggregated));
+    console.log(`[scanner] ${city.name} forecasts:`, JSON.stringify(forecasts));
 
-    // Step 2: Search Dome for matching markets
-    for (const [date, forecast] of Object.entries(aggregated)) {
+    for (const [date, forecast] of Object.entries(forecasts)) {
       const lowConfidence = (city.unit === 'F' && forecast.sd > 5) || (city.unit === 'C' && forecast.sd > 3);
 
       try {
@@ -257,13 +262,11 @@ async function scan() {
 
         console.log(`[scanner] Found ${markets.length} markets for ${city.name} ${date}`);
 
-        // Step 3: Evaluate each market (limit to 10 most relevant to avoid rate limit burn)
         const relevantMarkets = markets.filter(m => {
           const q = (m.title || m.question || '').toLowerCase();
           return q.includes(city.name.toLowerCase()) || q.includes(city.name.split(' ')[0].toLowerCase());
         }).slice(0, 10);
 
-        // Build date match strings: "2026-02-26" → ["february 26", "feb 26", "feb. 26", "02/26", "2/26"]
         const dateObj = new Date(date + 'T12:00:00Z');
         const monthNames = ['january','february','march','april','may','june','july','august','september','october','november','december'];
         const monthShort = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
@@ -280,7 +283,6 @@ async function scan() {
           const question = market.question || market.title || market.name || '';
           const qLow = question.toLowerCase();
 
-          // Verify it's actually about this city AND this date
           const cityMatch = qLow.includes(city.name.toLowerCase()) || 
                            qLow.includes(city.name.split(' ')[0].toLowerCase());
           if (!cityMatch) continue;
@@ -300,15 +302,10 @@ async function scan() {
           const modelProb = bucketProbability(bucket, forecast.mean, forecast.sd);
           if (modelProb === null) continue;
 
-          // NOTE: do NOT filter on modelProb here — high-confidence NO trades
-          // (YES prob <5%) are often the best trades. Let effectiveModelProb + minModelProb handle filtering.
-
-          // Get market identifiers
           const conditionId = market.condition_id || market.conditionId;
           const yesTokenId = market.side_a?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'yes')?.token_id || '';
           const noTokenId = market.side_b?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'no')?.token_id || '';
           
-          // Fetch midpoint prices for both outcomes (when available)
           let yesPrice = null;
           let noPrice = null;
 
@@ -324,15 +321,10 @@ async function scan() {
             console.warn(`[scanner] NO price fetch failed: ${e.message}`);
           }
 
-          // Require at least one usable price
-          // YES floor is 0.01 (not 0.05) — cheap YES on extreme weather IS the alpha.
-          // The Paris win was a YES trade at ~$0.03 where the market underpriced extreme heat.
-          // NO floor stays 0.05 to avoid near-settled (YES near 1.0 → NO near 0) markets.
           const hasYes = (yesPrice != null && yesPrice > 0.01 && yesPrice < 0.95);
           const hasNo = (noPrice != null && noPrice > 0.05 && noPrice < 0.95);
           if (!hasYes && !hasNo) continue;
 
-          // Compute EV for both sides and pick the better one.
           const evYes = hasYes ? (modelProb - yesPrice) : -1e9;
           const evNo  = hasNo  ? ((1 - modelProb) - noPrice) : -1e9;
 
@@ -342,14 +334,10 @@ async function scan() {
           const effectivePrice = side === 'YES' ? yesPrice : noPrice;
 
           if (!tokenId || effectivePrice == null) continue;
-          // Step 4: Calculate edge
+
           const edge = effectiveModelProb - effectivePrice;
           const edgePct = (edge / effectivePrice) * 100;
 
-          // Confidence gates — asymmetric by side:
-          // NO trades: require high model confidence (effectiveModelProb ≥ 0.6) — we need to be sure YES won't happen
-          // YES trades: either model is genuinely confident (≥0.6), OR model sees ≥3× what the market sees
-          //   (e.g. market 3%, model 10% = 3× — the edge is in mispriced extreme-weather YES)
           const distFromLine = bucketDistance(bucket, forecast.mean);
           const minModelProb = config.risk.minModelProb || 0.6;
           const minDist = config.risk.minDistanceFromLine || 2;
@@ -357,7 +345,6 @@ async function scan() {
             ? (effectiveModelProb >= minModelProb || (yesPrice > 0 && modelProb >= 3 * yesPrice && modelProb >= 0.08))
             : (effectiveModelProb >= minModelProb);
           const confident = modelConfident && (distFromLine == null || distFromLine >= minDist);
-
 
           const bucketLabel = bucket.type === 'exact' ? `${bucket.low}°${bucket.unit}` :
                               bucket.type === 'range' ? `${bucket.low}-${bucket.high}°${bucket.unit}` :
@@ -371,7 +358,7 @@ async function scan() {
             question,
             conditionId: conditionId || '',
             tokenId: tokenId,
-            tokenSide: side, // E029: track which side the tokenId belongs to
+            tokenSide: side,
             marketSlug: market.market_slug || market.slug || '',
             side,
             forecastTemp: forecast.mean,
@@ -398,8 +385,9 @@ async function scan() {
   }
 
   const passing = candidates.filter(c => c.passesThreshold);
-  console.log(`[scanner] Scan complete: ${candidates.length} evaluated, ${passing.length} pass threshold`);
-  return { candidates, passing, timestamp: new Date().toISOString() };
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log(`[scanner] Scan complete: ${candidates.length} evaluated, ${passing.length} pass threshold (${elapsed}s)`);
+  return { candidates, passing, timestamp: new Date().toISOString(), elapsedSeconds: parseFloat(elapsed) };
 }
 
 module.exports = { scan, fetchForecasts, aggregateForecasts, parseBucket, bucketProbability, normalCDF, erf };

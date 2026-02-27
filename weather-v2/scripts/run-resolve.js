@@ -42,8 +42,9 @@ async function main() {
       const winners = result.resolved.filter(t => t.pnl > 0).length;
       const losers = result.resolved.filter(t => t.pnl <= 0).length;
       const totalPnL = result.resolved.reduce((sum, t) => sum + (t.pnl || 0), 0).toFixed(2);
-      const msg = `✅ Weather Resolver: ${result.resolved.length} position(s) resolved\n${winners}W ${losers}L | P&L: $${totalPnL}`;
-      execSync(`/usr/bin/node ${path.join(__dirname, 'notify.js')} "${msg}"`, { stdio: 'inherit' });
+      const winRate = ((winners / (winners + losers)) * 100).toFixed(1);
+      const msg = `🌪️ Weather Positions Resolved\n\n${winners}W / ${losers}L (${winRate}% WR)\n💰 Session P&L: ${totalPnL >= 0 ? '+' : ''}$${totalPnL}`;
+      execSync(`openclaw message send --channel telegram --to "-1003762193481:topic:2" --message "${msg.replace(/"/g, '\\"')}"`, { stdio: 'inherit' });
     } catch (err) {
       console.error('[run-resolve] Notification failed (non-fatal):', err.message);
     }
