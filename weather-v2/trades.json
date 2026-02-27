@@ -6366,11 +6366,100 @@
         "isLottery": true
       },
       "notes": "Forecast: 67.2°F | Model: 14% vs Market: 4% | Edge: 262.9% 🎰LOTTERY"
+    },
+    {
+      "id": "oc-mm5g62r4-5qxgtr",
+      "conditionId": "0x69358fa1f219fbcabb563871cc506d2dc14c74f1b47ab6e8ab96d38f47ea0f2c",
+      "tokenId": "82306614528637569209454358281149814855487548455194349056960309154920773110525",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-february-27-2026-64-65f",
+      "city": "Chicago",
+      "date": "2026-02-27",
+      "bucket": "64-65°F",
+      "question": "Will the highest temperature in Chicago be between 64-65°F on February 27?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -8.37,
+      "createdAt": "2026-02-27T22:11:49.744Z",
+      "signal": {
+        "forecastTemp": 61.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.2295,
+        "modelProb": 0.8639,
+        "edge": 0.6344,
+        "isLottery": false
+      },
+      "notes": "Forecast: 61.2°F | Model: 86% vs Market: 23% | Edge: 276.4%",
+      "entryPrice": 0.2295,
+      "size": 54,
+      "sizeUSDC": 12.393,
+      "enteredAt": "2026-02-27T22:11:49.756Z",
+      "orderId": "paper-mm5g62rk-8jh8",
+      "txHash": null,
+      "currentPrice": 0.0745,
+      "updatedAt": "2026-02-27T22:30:18.371Z"
+    },
+    {
+      "id": "oc-mm5g62rs-cbcmm4",
+      "conditionId": "0xd51f5aefdb4e460244fff9ada7536983ca267428244d7bd7fbf66146e42643d7",
+      "tokenId": "0xdccfe1d3ea9afe788ad75c71ce28f194f107c79ecfe0d7bc08b72f81d2d5c3d9",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-february-28-2026-84-85f",
+      "city": "Dallas",
+      "date": "2026-02-28",
+      "bucket": "84-85°F",
+      "question": "Will the highest temperature in Dallas be between 84-85°F on February 28?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T22:11:49.768Z",
+      "signal": {
+        "forecastTemp": 81.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.64,
+        "modelProb": 0.8639,
+        "edge": 0.2239,
+        "isLottery": false
+      },
+      "notes": "Forecast: 81.2°F | Model: 86% vs Market: 64% | Edge: 35.0%",
+      "entryPrice": 0.64,
+      "size": 19,
+      "sizeUSDC": 12.16,
+      "enteredAt": "2026-02-27T22:11:49.776Z",
+      "orderId": "paper-mm5g62s3-0ovu",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm5g62s8-yprcc6",
+      "conditionId": "0x99073d7b9ea1e7023c086bf0029120a6407ec8368868421b25fc094f3c5145c5",
+      "tokenId": "7432817810911219268853509842212506091409964007205395116159579486801826677501",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-february-27-2026-66-67f",
+      "city": "Chicago",
+      "date": "2026-02-27",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Chicago be between 66-67°F on February 27?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T22:11:49.784Z",
+      "signal": {
+        "forecastTemp": 61.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.7655,
+        "modelProb": 0.9632,
+        "edge": 0.1977,
+        "isLottery": false
+      },
+      "notes": "Forecast: 61.2°F | Model: 96% vs Market: 77% | Edge: 25.8%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-27T22:06:53.657Z",
-    "lastPriceSync": "2026-02-27T21:00:31.494Z"
+    "lastUpdated": "2026-02-27T22:11:49.786Z",
+    "lastPriceSync": "2026-02-27T22:30:20.635Z"
   }
 }
