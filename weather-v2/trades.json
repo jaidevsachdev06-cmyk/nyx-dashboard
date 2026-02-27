@@ -5992,7 +5992,7 @@
       "orderId": "paper-mm4sef98-ncfq",
       "txHash": null,
       "currentPrice": 0.575,
-      "updatedAt": "2026-02-27T15:00:11.583Z"
+      "updatedAt": "2026-02-27T15:30:17.802Z"
     },
     {
       "id": "oc-mm4z90e0-gom1yy",
@@ -6130,11 +6130,73 @@
         "isLottery": false
       },
       "notes": "Forecast: 56.5°F | Model: 94% vs Market: 74% | Edge: 28.4%"
+    },
+    {
+      "id": "oc-mm51rqvu-gufjyq",
+      "conditionId": "0xbc968f322cb34eee974fb0cc0e928fd251cac76a51c527bc81563121c401eba2",
+      "tokenId": "0x5e242000371f25595f0adf72488d31402e8d951941d469d23a5d76200ab518d9",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-miami-on-february-28-2026-88-89f",
+      "city": "Miami",
+      "date": "2026-02-28",
+      "bucket": "88-89°F",
+      "question": "Will the highest temperature in Miami be between 88-89°F on February 28?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T15:28:46.554Z",
+      "signal": {
+        "forecastTemp": 84.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.0345,
+        "modelProb": 0.1151,
+        "edge": 0.0806,
+        "isLottery": true
+      },
+      "notes": "Forecast: 84.3°F | Model: 12% vs Market: 3% | Edge: 233.6% 🎰LOTTERY",
+      "entryPrice": 0.0345,
+      "size": 289,
+      "sizeUSDC": 9.970500000000001,
+      "enteredAt": "2026-02-27T15:28:46.565Z",
+      "orderId": "paper-mm51rqw9-ccis",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm51rqwf-240wkc",
+      "conditionId": "0xa60788e130c3858d778321f3e358cf41f309addfc51f945390f0d1f06b8c05c8",
+      "tokenId": "0x5886e27a5a03dd1a0a0742206cffb03bd793e76a57e0bb826802ef9726624bf3",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-february-28-2026-46-47f",
+      "city": "Seattle",
+      "date": "2026-02-28",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in Seattle be between 46-47°F on February 28?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T15:28:46.575Z",
+      "signal": {
+        "forecastTemp": 50.7,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.0295,
+        "modelProb": 0.0949,
+        "edge": 0.0654,
+        "isLottery": true
+      },
+      "notes": "Forecast: 50.7°F | Model: 9% vs Market: 3% | Edge: 221.7% 🎰LOTTERY",
+      "entryPrice": 0.0295,
+      "size": 338,
+      "sizeUSDC": 9.971,
+      "enteredAt": "2026-02-27T15:28:46.584Z",
+      "orderId": "paper-mm51rqwr-1cn0",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-27T14:22:44.110Z",
-    "lastPriceSync": "2026-02-27T15:00:14.930Z"
+    "lastUpdated": "2026-02-27T15:28:46.590Z",
+    "lastPriceSync": "2026-02-27T15:30:23.133Z"
   }
 }
