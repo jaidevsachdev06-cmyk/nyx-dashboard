@@ -5975,7 +5975,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0,
+      "pnlUSDC": -0.7,
       "createdAt": "2026-02-27T11:06:28.400Z",
       "signal": {
         "forecastTemp": 56.9,
@@ -5991,8 +5991,8 @@
       "enteredAt": "2026-02-27T11:06:28.408Z",
       "orderId": "paper-mm4sef98-ncfq",
       "txHash": null,
-      "currentPrice": 0.61,
-      "updatedAt": "2026-02-27T20:00:14.162Z"
+      "currentPrice": 0.575,
+      "updatedAt": "2026-02-27T20:30:16.110Z"
     },
     {
       "id": "oc-mm4z90e0-gom1yy",
@@ -6217,11 +6217,148 @@
         "isLottery": true
       },
       "notes": "Forecast: 51.9°F | Model: 10% vs Market: 3% | Edge: 243.1% 🎰LOTTERY"
+    },
+    {
+      "id": "oc-mm5bwh25-30yha6",
+      "conditionId": "0x5c90ea17e9a6610d393c158c9f793b000c598f1d3b6e3061c90dca2ae52057c1",
+      "tokenId": "0xb9b8a2d359cf0e8795bd74d7c4791148b15f784852992bfe88e4b37c4beedb07",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-toronto-on-february-27-2026-7c",
+      "city": "Toronto",
+      "date": "2026-02-27",
+      "bucket": "7°C",
+      "question": "Will the highest temperature in Toronto be 7°C on February 27?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T20:12:23.261Z",
+      "signal": {
+        "forecastTemp": 4.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.26,
+        "modelProb": 0.9443,
+        "edge": 0.6843,
+        "isLottery": false
+      },
+      "notes": "Forecast: 4.2°F | Model: 94% vs Market: 26% | Edge: 263.2%",
+      "entryPrice": 0.26,
+      "size": 48,
+      "sizeUSDC": 12.48,
+      "enteredAt": "2026-02-27T20:12:23.271Z",
+      "orderId": "paper-mm5bwh2j-4o5x",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm5bwh2n-mvpprh",
+      "conditionId": "0xdd1320b2258a4ec92eb757630babf6430b3cf588546cfff8fb05c1444441dd2f",
+      "tokenId": "0xd2672817a241881a23e0598c7dfcc87fab07d60c16390874b84256219f7b9236",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-toronto-on-february-27-2026-8c",
+      "city": "Toronto",
+      "date": "2026-02-27",
+      "bucket": "8°C",
+      "question": "Will the highest temperature in Toronto be 8°C on February 27?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T20:12:23.279Z",
+      "signal": {
+        "forecastTemp": 4.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.7745,
+        "modelProb": 0.984,
+        "edge": 0.2095,
+        "isLottery": false
+      },
+      "notes": "Forecast: 4.2°F | Model: 98% vs Market: 77% | Edge: 27.0%"
+    },
+    {
+      "id": "oc-mm5bwh2t-mh04d5",
+      "conditionId": "0xea2e0dd9aabb3e99a80c1652d14ff73bed5241129c3f0f89ca3b069265cf48b4",
+      "tokenId": "0xcb13fd013cc55500acf4549f8c7c7588de7f23dbf78dcaad0dcedb77b7f50ba0",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-february-28-2026-13c",
+      "city": "Seoul",
+      "date": "2026-02-28",
+      "bucket": "13°C",
+      "question": "Will the highest temperature in Seoul be 13°C on February 28?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T20:12:23.285Z",
+      "signal": {
+        "forecastTemp": 15.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.705,
+        "modelProb": 0.8998,
+        "edge": 0.1948,
+        "isLottery": false
+      },
+      "notes": "Forecast: 15.4°F | Model: 90% vs Market: 71% | Edge: 27.6%",
+      "entryPrice": 0.705,
+      "size": 17,
+      "sizeUSDC": 11.985,
+      "enteredAt": "2026-02-27T20:12:23.293Z",
+      "orderId": "paper-mm5bwh35-dnrx",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm5bwh3b-c7q439",
+      "conditionId": "0xdb7e22f61a69b9839b5991911d15000a80df24fa39b3f03680d2a1e427914887",
+      "tokenId": "0xb1f7d0c56f07778dcd67aa2e4cdcc11a6307c66ededa7874d5029bdddb29df2c",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-27-2026-64-65f",
+      "city": "Atlanta",
+      "date": "2026-02-27",
+      "bucket": "64-65°F",
+      "question": "Will the highest temperature in Atlanta be between 64-65°F on February 27?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T20:12:23.303Z",
+      "signal": {
+        "forecastTemp": 67.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.055,
+        "modelProb": 0.1788,
+        "edge": 0.1238,
+        "isLottery": true
+      },
+      "notes": "Forecast: 67.2°F | Model: 18% vs Market: 6% | Edge: 225.1% 🎰LOTTERY"
+    },
+    {
+      "id": "oc-mm5bwh3i-gbtpak",
+      "conditionId": "0x55fef33b1b98631725156d793b637200cca4944395c59037bab81defbc93d43e",
+      "tokenId": "0x48d452a6f8c228ac921a98ea5ac54c04c3db16ec65ed6d8ffd5d0eb930cfa9c1",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-atlanta-on-february-27-2026-70-71f",
+      "city": "Atlanta",
+      "date": "2026-02-27",
+      "bucket": "70-71°F",
+      "question": "Will the highest temperature in Atlanta be between 70-71°F on February 27?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T20:12:23.310Z",
+      "signal": {
+        "forecastTemp": 67.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.0375,
+        "modelProb": 0.1361,
+        "edge": 0.0986,
+        "isLottery": true
+      },
+      "notes": "Forecast: 67.2°F | Model: 14% vs Market: 4% | Edge: 262.9% 🎰LOTTERY"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-27T16:11:27.640Z",
-    "lastPriceSync": "2026-02-27T20:00:19.600Z"
+    "lastUpdated": "2026-02-27T20:12:23.312Z",
+    "lastPriceSync": "2026-02-27T20:30:23.961Z"
   }
 }
