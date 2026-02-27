@@ -5931,11 +5931,73 @@
       "enteredAt": "2026-02-26T02:06:32.955Z",
       "orderId": "paper-mm2to83j-40lk",
       "txHash": null
+    },
+    {
+      "id": "oc-mm4sef89-01pyao",
+      "conditionId": "0xa88806e3bb910d9bab0a6646a19252959f9413f70fc5d4b6045d8799b38eadda",
+      "tokenId": "0x90d1ac7349a32332ac2fd5494e07ddd2cb8cd2339f3341ba243887caf4b872f4",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-chicago-on-february-28-2026-42forhigher",
+      "city": "Chicago",
+      "date": "2026-02-28",
+      "bucket": "≥42°F",
+      "question": "Will the highest temperature in Chicago be 42°F or higher on February 28?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T11:06:28.377Z",
+      "signal": {
+        "forecastTemp": 52.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.435,
+        "modelProb": 1,
+        "edge": 0.565
+      },
+      "notes": "Forecast: 52.3°F | Model: 100% vs Market: 44% | Edge: 129.9%",
+      "entryPrice": 0.435,
+      "size": 28,
+      "sizeUSDC": 12.18,
+      "enteredAt": "2026-02-27T11:06:28.392Z",
+      "orderId": "paper-mm4sef8s-irw7",
+      "txHash": null
+    },
+    {
+      "id": "oc-mm4sef8w-2821xg",
+      "conditionId": "0x5af6f159835974b4e7d149759f4027d1cd2e9f273f6fd5f0fc22e9fd2501f27a",
+      "tokenId": "534542728028837850374862327604850548425774401126358173464604876258215495973",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-february-27-2026-60-61f",
+      "city": "Chicago",
+      "date": "2026-02-27",
+      "bucket": "60-61°F",
+      "question": "Will the highest temperature in Chicago be between 60-61°F on February 27?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -0.2,
+      "createdAt": "2026-02-27T11:06:28.400Z",
+      "signal": {
+        "forecastTemp": 56.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.61,
+        "modelProb": 0.8656,
+        "edge": 0.2556
+      },
+      "notes": "Forecast: 56.9°F | Model: 87% vs Market: 61% | Edge: 41.9%",
+      "entryPrice": 0.61,
+      "size": 20,
+      "sizeUSDC": 12.2,
+      "enteredAt": "2026-02-27T11:06:28.408Z",
+      "orderId": "paper-mm4sef98-ncfq",
+      "txHash": null,
+      "currentPrice": 0.6,
+      "updatedAt": "2026-02-27T11:30:12.110Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-27T03:05:44.669Z",
-    "lastPriceSync": "2026-02-26T11:00:17.133Z"
+    "lastUpdated": "2026-02-27T11:06:28.415Z",
+    "lastPriceSync": "2026-02-27T11:30:13.311Z"
   }
 }
