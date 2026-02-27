@@ -50,6 +50,7 @@
         <a href="#school" data-section="school"><span class="icon">📚</span> School</a>
         <a href="#polymarket" data-section="polymarket"><span class="icon">📊</span> Polymarket</a>
         <a href="#trading" data-section="trading"><span class="icon">📈</span> Trading</a>
+        <a href="#yolo" data-section="yolo"><span class="icon">🚀</span> YOLO</a>
       </nav>
 
       <div class="main">
@@ -206,6 +207,17 @@
           <div class="table-wrap"><table id="trade-watch-table"><thead><tr><th>Ticker</th><th>Current</th><th>Target</th><th>Thesis</th><th></th></tr></thead><tbody></tbody></table></div>
           <h2 class="section-title">Journal</h2>
           <div class="activity-feed" id="trade-journal"></div>
+        </div>
+
+        <!-- YOLO Builder Section -->
+        <div class="section" id="sec-yolo">
+          <div class="section-header">
+            <div><h1>🚀 YOLO Builder</h1><div class="subtitle">Daily micro-projects — one build per day, every day</div></div>
+            <button class="btn" onclick="loadYolo()">↻ Refresh</button>
+          </div>
+          <div class="summary-cards" id="yolo-summary"></div>
+          <h2 class="section-title">Recent Builds</h2>
+          <div class="card-grid" id="yolo-builds"></div>
         </div>
       </div>
     </div>

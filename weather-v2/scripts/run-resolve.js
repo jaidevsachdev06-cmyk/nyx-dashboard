@@ -35,6 +35,18 @@ async function main() {
     } catch (e) {
       console.warn(`[run-resolve] Git push failed: ${e.message?.slice(0, 80)}`);
     }
+    
+    // Send notification
+    console.log('\n[run-resolve] Sending notification...');
+    try {
+      const winners = result.resolved.filter(t => t.pnl > 0).length;
+      const losers = result.resolved.filter(t => t.pnl <= 0).length;
+      const totalPnL = result.resolved.reduce((sum, t) => sum + (t.pnl || 0), 0).toFixed(2);
+      const msg = `✅ Weather Resolver: ${result.resolved.length} position(s) resolved\n${winners}W ${losers}L | P&L: $${totalPnL}`;
+      execSync(`/usr/bin/node ${path.join(__dirname, 'notify.js')} "${msg}"`, { stdio: 'inherit' });
+    } catch (err) {
+      console.error('[run-resolve] Notification failed (non-fatal):', err.message);
+    }
   }
   return result;
 }

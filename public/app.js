@@ -80,6 +80,7 @@ function loadCurrentSection() {
     case 'school': loadSchool(); loadInternships(); break;
     case 'polymarket': loadPolymarket(); break;
     case 'trading': loadTrading(); break;
+    case 'yolo': loadYolo(); break;
   }
 }
 
@@ -1207,6 +1208,42 @@ function loadInternships() {
       <div class="cl-body" style="display:none;white-space:pre-wrap;font-size:13px;line-height:1.7;color:var(--text-dim);border-top:1px solid var(--border);padding-top:14px;margin-top:4px">${it.letter}</div>
     </div>
   `).join('');
+}
+
+// ========== YOLO BUILDER ==========
+async function loadYolo() {
+  try {
+    const data = await get('/api/yolo');
+    const sumEl = document.getElementById('yolo-summary');
+    const buildsEl = document.getElementById('yolo-builds');
+    
+    sumEl.innerHTML = `
+      <div class="summary-card"><div class="card-value">${data.totalBuilds}</div><div class="card-label">Total Builds</div></div>
+      <div class="summary-card"><div class="card-value">${data.streak}🔥</div><div class="card-label">Day Streak</div></div>
+      <div class="summary-card"><div class="card-value">${Object.keys(data.categories || {}).length}</div><div class="card-label">Categories</div></div>
+    `;
+    
+    if (!data.builds || data.builds.length === 0) {
+      buildsEl.innerHTML = '<div class="empty-state">No builds yet. First build coming at 1 AM SGT! 🚀</div>';
+      return;
+    }
+    
+    buildsEl.innerHTML = data.builds.map(b => `
+      <div class="card">
+        <div class="card-header">
+          <span>${b.category || '🧪'}</span>
+          <span class="card-date">${b.date}</span>
+        </div>
+        <h3>${b.name || 'Untitled'}</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem">${b.description || ''}</p>
+        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted)">${b.lines || '?'} lines</div>
+      </div>
+    `).join('');
+    
+    updateLastRefreshed();
+  } catch (e) {
+    console.error('YOLO load error:', e);
+  }
 }
 
 // ========== INIT ==========
