@@ -4242,5 +4242,29 @@
     "currentValue": 4.4319,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "b4253c81-8ead-467c-b0d3-25e76b24fa01",
+    "market": "Russia x Ukraine ceasefire by end of 2026?",
+    "side": "No",
+    "entryPrice": 0.635,
+    "currentPrice": 0.635,
+    "shares": 8.19,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Qualitative, XieGuangKun, kekkone",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 84.1,
+    "avgWinRate": 67.6,
+    "reasoning": "Consensus: 3 whales (avg score 84.1, WR 67.6%) No. bet=$5.20, shares=8.19. Whales: Qualitative, XieGuangKun, kekkone",
+    "endDate": "",
+    "conditionId": "0xaeea5f917fc5746387b5f9c0a4263dba035dbb3f0ac6ad72bf92183d21e26739",
+    "createdAt": "2026-02-27T08:05:29.503Z",
+    "entryDate": "2026-02-27T08:05:29.503Z",
+    "invested": 5.2006,
+    "currentValue": 5.2006,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
