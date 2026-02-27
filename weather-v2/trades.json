@@ -5992,7 +5992,7 @@
       "orderId": "paper-mm4sef98-ncfq",
       "txHash": null,
       "currentPrice": 0.565,
-      "updatedAt": "2026-02-27T16:00:11.447Z"
+      "updatedAt": "2026-02-27T16:30:14.881Z"
     },
     {
       "id": "oc-mm4z90e0-gom1yy",
@@ -6192,11 +6192,36 @@
       "enteredAt": "2026-02-27T15:28:46.584Z",
       "orderId": "paper-mm51rqwr-1cn0",
       "txHash": null
+    },
+    {
+      "id": "oc-mm53an11-m6rik2",
+      "conditionId": "0x89981cb29d3c6e5fa47fe91ed745dbc6de2d671e370bd9f62b9dda61b975e76e",
+      "tokenId": "0xcd1904e030e8c78a056368e23386d416a13ce2896ed3eea115235b1c3cc03aa9",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-february-27-2026-48-49f",
+      "city": "Seattle",
+      "date": "2026-02-27",
+      "bucket": "48-49°F",
+      "question": "Will the highest temperature in Seattle be between 48-49°F on February 27?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-27T16:11:27.637Z",
+      "signal": {
+        "forecastTemp": 51.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.0295,
+        "modelProb": 0.1012,
+        "edge": 0.0717,
+        "isLottery": true
+      },
+      "notes": "Forecast: 51.9°F | Model: 10% vs Market: 3% | Edge: 243.1% 🎰LOTTERY"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-27T15:28:46.590Z",
-    "lastPriceSync": "2026-02-27T16:00:17.082Z"
+    "lastUpdated": "2026-02-27T16:11:27.640Z",
+    "lastPriceSync": "2026-02-27T16:30:22.427Z"
   }
 }
