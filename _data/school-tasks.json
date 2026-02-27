@@ -55,10 +55,11 @@
     "type": "exam",
     "dueDate": "2026-02-20T15:00:00Z",
     "priority": "critical",
-    "status": "todo",
+    "status": "done",
     "notes": "10 MCQ, 30 min, during Tutorial 6. Covers Lectures 1-6 (micro). Week 7.",
     "createdBy": "ScholarNyx",
-    "createdAt": "2026-02-17T07:31:57.001Z"
+    "createdAt": "2026-02-17T07:31:57.001Z",
+    "completedAt": "2026-02-27T02:57:44.417Z"
   },
   {
     "id": "603c6264-90c7-4a79-85e3-14c962557e60",
