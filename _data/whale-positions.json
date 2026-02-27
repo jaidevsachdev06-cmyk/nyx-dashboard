@@ -4099,5 +4099,29 @@
     "currentValue": 4.9075,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "9633df4b-d1d6-4f3d-a2e7-0aecb559365b",
+    "market": "U.S. anti-cartel ground operation in Mexico by March 31?",
+    "side": "Yes",
+    "entryPrice": 0.055,
+    "currentPrice": 0.055,
+    "shares": 91.82,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Snoorrason, Rooke Brollins, aenews",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.1,
+    "avgWinRate": 65.7,
+    "reasoning": "Consensus: 3 whales (avg score 82.1, WR 65.7%) Yes. bet=$5.05, shares=91.82. Whales: Snoorrason, Rooke Brollins, aenews",
+    "endDate": "",
+    "conditionId": "0xbff854d97ac4e37be63672f50e5e08b8ee7dc3e81b0e06dfe18231aab06b3c67",
+    "createdAt": "2026-02-27T04:06:41.639Z",
+    "entryDate": "2026-02-27T04:06:41.639Z",
+    "invested": 5.0501,
+    "currentValue": 5.0501,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
