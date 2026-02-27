@@ -5771,9 +5771,9 @@
       "bucket": "84-85°F",
       "question": "Will the highest temperature in Miami be between 84-85°F on February 27?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 3.84,
       "createdAt": "2026-02-26T00:06:42.335Z",
       "signal": {
         "forecastTemp": 80.6,
@@ -5788,7 +5788,11 @@
       "sizeUSDC": 12.16,
       "enteredAt": "2026-02-26T00:06:42.346Z",
       "orderId": "paper-mm2pe3se-jft7",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T22:06:52.836Z",
+      "closedAt": "2026-02-27T22:06:52.846Z"
     },
     {
       "id": "oc-mm2po70v-j7qv0l",
@@ -5835,9 +5839,9 @@
       "bucket": "66-67°F",
       "question": "Will the highest temperature in Atlanta be between 66-67°F on February 27?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.67,
       "createdAt": "2026-02-26T02:06:32.910Z",
       "signal": {
         "forecastTemp": 62.8,
@@ -5852,7 +5856,11 @@
       "sizeUSDC": 12.330000000000002,
       "enteredAt": "2026-02-26T02:06:32.922Z",
       "orderId": "paper-mm2to82m-lj6q",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T22:06:53.648Z",
+      "closedAt": "2026-02-27T22:06:53.656Z"
     },
     {
       "id": "oc-mm2to82r-k8z8dq",
@@ -6362,7 +6370,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-27T21:05:08.582Z",
+    "lastUpdated": "2026-02-27T22:06:53.657Z",
     "lastPriceSync": "2026-02-27T21:00:31.494Z"
   }
 }
