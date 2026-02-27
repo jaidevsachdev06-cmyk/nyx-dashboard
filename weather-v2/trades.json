@@ -5973,9 +5973,9 @@
       "bucket": "60-61°F",
       "question": "Will the highest temperature in Chicago be between 60-61°F on February 27?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 7.79,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 7.8,
       "createdAt": "2026-02-27T11:06:28.400Z",
       "signal": {
         "forecastTemp": 56.9,
@@ -5992,7 +5992,11 @@
       "orderId": "paper-mm4sef98-ncfq",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-02-27T21:00:22.990Z"
+      "updatedAt": "2026-02-27T21:00:22.990Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T21:05:08.572Z",
+      "closedAt": "2026-02-27T21:05:08.580Z"
     },
     {
       "id": "oc-mm4z90e0-gom1yy",
@@ -6358,7 +6362,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-27T20:12:23.312Z",
+    "lastUpdated": "2026-02-27T21:05:08.582Z",
     "lastPriceSync": "2026-02-27T21:00:31.494Z"
   }
 }
