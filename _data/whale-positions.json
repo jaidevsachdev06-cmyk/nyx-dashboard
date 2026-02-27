@@ -4207,9 +4207,9 @@
     "market": "Will J.D. Vance win the 2028 Republican presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.4205,
-    "currentPrice": 0.4205,
+    "currentPrice": 0.4195,
     "shares": 10.54,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "failstober, Brokie, Mombil",
     "whaleCount": 3,
@@ -4222,9 +4222,12 @@
     "createdAt": "2026-02-27T04:06:55.089Z",
     "entryDate": "2026-02-27T04:06:55.089Z",
     "invested": 4.4321,
-    "currentValue": 4.4321,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 4.4215,
+    "pnl": -0.0105,
+    "pnlPercent": -0.24,
+    "exitPrice": 0.4195,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-02-27T08:05:50.668Z"
   },
   {
     "id": "0e6df307-d36f-4f67-aa6b-ca6f79ef6401",
