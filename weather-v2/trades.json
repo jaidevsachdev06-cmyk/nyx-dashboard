@@ -5005,9 +5005,9 @@
       "bucket": "≥52°F",
       "question": "Will the highest temperature in Seattle be 52°F or higher on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -0.63,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.42,
       "createdAt": "2026-02-24T12:11:55.438Z",
       "signal": {
         "forecastTemp": 49.5,
@@ -5024,7 +5024,11 @@
       "orderId": "paper-mm0kf1dp-2bla",
       "txHash": null,
       "currentPrice": 0.655,
-      "updatedAt": "2026-02-26T11:00:02.089Z"
+      "updatedAt": "2026-02-26T11:00:02.089Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:34.429Z",
+      "closedAt": "2026-02-27T03:05:34.448Z"
     },
     {
       "id": "oc-mm0kf1du-8et3uz",
@@ -5097,9 +5101,9 @@
       "bucket": "64-65°F",
       "question": "Will the highest temperature in Atlanta be between 64-65°F on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -3.2,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4,
       "createdAt": "2026-02-24T12:11:55.479Z",
       "signal": {
         "forecastTemp": 61,
@@ -5116,7 +5120,11 @@
       "orderId": "paper-mm0kf1ep-ow0f",
       "txHash": null,
       "currentPrice": 0.55,
-      "updatedAt": "2026-02-26T11:00:03.669Z"
+      "updatedAt": "2026-02-26T11:00:03.669Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:36.034Z",
+      "closedAt": "2026-02-27T03:05:36.042Z"
     },
     {
       "id": "oc-mm0ohc7d-dlf246",
@@ -5273,9 +5281,9 @@
       "bucket": "66-67°F",
       "question": "Will the highest temperature in Atlanta be between 66-67°F on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 2.79,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.58,
       "createdAt": "2026-02-25T00:13:26.564Z",
       "signal": {
         "forecastTemp": 62.4,
@@ -5292,7 +5300,11 @@
       "orderId": "paper-mm1a6x0x-sock",
       "txHash": null,
       "currentPrice": 0.845,
-      "updatedAt": "2026-02-26T11:00:05.239Z"
+      "updatedAt": "2026-02-26T11:00:05.239Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:36.821Z",
+      "closedAt": "2026-02-27T03:05:36.835Z"
     },
     {
       "id": "oc-mm1a6x11-v7gk42",
@@ -5305,9 +5317,9 @@
       "bucket": "80-81°F",
       "question": "Will the highest temperature in Miami be between 80-81°F on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 2.38,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.185,
       "createdAt": "2026-02-25T00:13:26.581Z",
       "signal": {
         "forecastTemp": 77.8,
@@ -5324,7 +5336,11 @@
       "orderId": "paper-mm1a6x1c-mxwl",
       "txHash": null,
       "currentPrice": 0.835,
-      "updatedAt": "2026-02-26T11:00:06.792Z"
+      "updatedAt": "2026-02-26T11:00:06.792Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:37.943Z",
+      "closedAt": "2026-02-27T03:05:37.951Z"
     },
     {
       "id": "oc-mm1eh811-zc91tq",
@@ -5361,9 +5377,9 @@
       "bucket": "40-41°F",
       "question": "Will the highest temperature in New York City be between 40-41°F on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -0.17,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.76,
       "createdAt": "2026-02-25T02:13:25.867Z",
       "signal": {
         "forecastTemp": 37.5,
@@ -5380,7 +5396,11 @@
       "orderId": "paper-mm1eh81h-zgx8",
       "txHash": null,
       "currentPrice": 0.71,
-      "updatedAt": "2026-02-26T11:00:08.356Z"
+      "updatedAt": "2026-02-26T11:00:08.356Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:38.531Z",
+      "closedAt": "2026-02-27T03:05:38.538Z"
     },
     {
       "id": "oc-mm1n1tnq-3b9ard",
@@ -5393,9 +5413,9 @@
       "bucket": "≥42°F",
       "question": "Will the highest temperature in Chicago be 42°F or higher on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -8.75,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.1,
       "createdAt": "2026-02-25T06:13:23.942Z",
       "signal": {
         "forecastTemp": 38.7,
@@ -5412,7 +5432,11 @@
       "orderId": "paper-mm1n1to8-r30z",
       "txHash": null,
       "currentPrice": 0.185,
-      "updatedAt": "2026-02-26T11:00:09.917Z"
+      "updatedAt": "2026-02-26T11:00:09.917Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:40.139Z",
+      "closedAt": "2026-02-27T03:05:40.147Z"
     },
     {
       "id": "oc-mm1r40ru-uxmked",
@@ -5425,9 +5449,9 @@
       "bucket": "78-79°F",
       "question": "Will the highest temperature in Dallas be between 78-79°F on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.67,
       "createdAt": "2026-02-25T08:07:04.938Z",
       "signal": {
         "forecastTemp": 82.1,
@@ -5442,7 +5466,11 @@
       "sizeUSDC": 12.330000000000002,
       "enteredAt": "2026-02-25T08:07:04.954Z",
       "orderId": "paper-mm1r40sf-c17b",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:40.731Z",
+      "closedAt": "2026-02-27T03:05:40.737Z"
     },
     {
       "id": "oc-mm1r40sk-bij3az",
@@ -5581,9 +5609,9 @@
       "bucket": "-1°C",
       "question": "Will the highest temperature in Toronto be -1°C on February 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 2.24,
       "createdAt": "2026-02-25T08:07:05.020Z",
       "signal": {
         "forecastTemp": -3.3,
@@ -5598,7 +5626,11 @@
       "sizeUSDC": 11.76,
       "enteredAt": "2026-02-25T08:07:05.028Z",
       "orderId": "paper-mm1r40uf-uf6l",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:42.311Z",
+      "closedAt": "2026-02-27T03:05:42.319Z"
     },
     {
       "id": "oc-mm1znl98-vy5lrg",
@@ -5769,9 +5801,9 @@
       "bucket": "10°C",
       "question": "Will the highest temperature in Seoul be 10°C on February 27?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 2.625,
       "createdAt": "2026-02-26T00:14:33.103Z",
       "signal": {
         "forecastTemp": 12.7,
@@ -5786,7 +5818,11 @@
       "sizeUSDC": 12.375,
       "enteredAt": "2026-02-26T00:14:33.113Z",
       "orderId": "paper-mm2po719-2hy0",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-27T03:05:44.654Z",
+      "closedAt": "2026-02-27T03:05:44.661Z"
     },
     {
       "id": "oc-mm2to826-0w2pqb",
@@ -5899,7 +5935,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-26T03:05:06.820Z",
+    "lastUpdated": "2026-02-27T03:05:44.669Z",
     "lastPriceSync": "2026-02-26T11:00:17.133Z"
   }
 }
