@@ -4413,5 +4413,29 @@
     "currentValue": 4.8827,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "77df0361-4ea2-4623-b531-1ed680a039f8",
+    "market": "Will US or Israel strike Iran by February 28, 2026?",
+    "side": "No",
+    "entryPrice": 0.83,
+    "currentPrice": 0.83,
+    "shares": 6.41,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, Gr33d, jinsun1377",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 80.1,
+    "avgWinRate": 69.1,
+    "reasoning": "Consensus: 3 whales (avg score 80.1, WR 69.1%) No. bet=$5.32, shares=6.41. Whales: Roflan, Gr33d, jinsun1377",
+    "endDate": "",
+    "conditionId": "0xdc4b9ecbfac2c8e98fe18b35c4578a3c64e34ddfe16b1cf8a98ab3ad9d06c088",
+    "createdAt": "2026-02-27T20:05:28.294Z",
+    "entryDate": "2026-02-27T20:05:28.294Z",
+    "invested": 5.3203,
+    "currentValue": 5.3203,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
