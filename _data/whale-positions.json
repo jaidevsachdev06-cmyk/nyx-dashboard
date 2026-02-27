@@ -4134,7 +4134,7 @@
     "entryPrice": 0.755,
     "currentPrice": 0.755,
     "shares": 6.5,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Parz1vaI, Car, Brokie",
     "whaleCount": 3,
@@ -4149,7 +4149,10 @@
     "invested": 4.9075,
     "currentValue": 4.9075,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "exitPrice": 0.755,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-02-27T08:05:48.024Z"
   },
   {
     "id": "9633df4b-d1d6-4f3d-a2e7-0aecb559365b",
