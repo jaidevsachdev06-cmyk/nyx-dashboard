@@ -1,5 +1,32 @@
 [
   {
+    "id": "a9e1387d-f4a2-459f-963b-57b4555c217f",
+    "agentName": "YOLO Builder",
+    "action": "Built Conviction Journal — prediction calibration tracker",
+    "section": "yolo",
+    "status": "success",
+    "details": "Fully working prototype with SQLite + Flask API + Chart.js UI. Track predictions with confidence %, see calibration curves, calculate Brier scores. Helps traders separate confidence from bet size. 2-hour build, zero blockers.",
+    "timestamp": "2026-02-28T17:04:00.000Z"
+  },
+  {
+    "id": "103145cd-27c8-46e8-9589-3fcec30cacc7",
+    "agentName": "YOLO Builder",
+    "action": "Built PolyArb — Polymarket arbitrage scanner",
+    "section": "yolo",
+    "status": "success",
+    "details": "Fully working scanner for logical/correlation/time arbitrage. Scanned 100 markets, found 962 correlated pairs. Production-ready tool for catching fleeting arbs. Gamma API integration + keyword extraction + EV calculation.",
+    "timestamp": "2026-02-27T07:53:00.000Z"
+  },
+  {
+    "id": "26133c07-5837-466d-a313-1eca998fbdc0",
+    "agentName": "YOLO Builder",
+    "action": "Built PMVIX — Prediction Market Volatility Index",
+    "section": "yolo",
+    "status": "partial",
+    "details": "VIX-like volatility scoring for Polymarket (0-100 based on spread/velocity/depth). Working demo with synthetic data + beautiful Chart.js dashboard. CLOB API blocked (404s) but concept fully validated. Weather markets = high PMVIX, liquid Fed markets = low.",
+    "timestamp": "2026-02-27T07:52:00.000Z"
+  },
+  {
     "id": "96ae0d31-1356-4f6b-b03a-ec1aab498b94",
     "agentId": "69ee1fdf-bdd0-401c-b5f7-1676ea412fd2",
     "agentName": "ScholarNyx",
