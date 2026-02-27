@@ -188,10 +188,11 @@
     "type": "reading",
     "dueDate": "2026-02-20T23:59:00Z",
     "priority": "critical",
-    "status": "todo",
+    "status": "done",
     "notes": "FBAH Ch 15 & 16. QUIZ 1 this week during Tutorial 6!",
     "createdBy": "ScholarNyx",
-    "createdAt": "2026-02-17T07:33:02.835Z"
+    "createdAt": "2026-02-17T07:33:02.835Z",
+    "completedAt": "2026-02-27T02:57:51.779Z"
   },
   {
     "id": "92cdf946-cd68-4c13-8cba-e4f951783fef",
