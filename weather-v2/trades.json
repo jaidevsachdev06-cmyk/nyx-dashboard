@@ -6380,7 +6380,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -8.37,
+      "pnlUSDC": -10.21,
       "createdAt": "2026-02-27T22:11:49.744Z",
       "signal": {
         "forecastTemp": 61.2,
@@ -6397,8 +6397,8 @@
       "enteredAt": "2026-02-27T22:11:49.756Z",
       "orderId": "paper-mm5g62rk-8jh8",
       "txHash": null,
-      "currentPrice": 0.0745,
-      "updatedAt": "2026-02-27T22:30:18.371Z"
+      "currentPrice": 0.0405,
+      "updatedAt": "2026-02-27T23:00:20.871Z"
     },
     {
       "id": "oc-mm5g62rs-cbcmm4",
@@ -6460,6 +6460,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-02-27T22:11:49.786Z",
-    "lastPriceSync": "2026-02-27T22:30:20.635Z"
+    "lastPriceSync": "2026-02-27T23:00:23.085Z"
   }
 }
