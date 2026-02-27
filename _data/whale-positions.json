@@ -4123,5 +4123,29 @@
     "currentValue": 5.0501,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "1592f1c1-a50c-418b-9a48-4b705f4247d0",
+    "market": "US strikes Iran by March 31, 2026?",
+    "side": "No",
+    "entryPrice": 0.455,
+    "currentPrice": 0.455,
+    "shares": 10.7,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "failstober, GollumGekko, Mombil",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.4,
+    "avgWinRate": 63.3,
+    "reasoning": "Consensus: 3 whales (avg score 78.4, WR 63.3%) No. bet=$4.87, shares=10.7. Whales: failstober, GollumGekko, Mombil",
+    "endDate": "",
+    "conditionId": "0x4b02efe53e631ada84681303fd66d79ad615f3d2b6a28b4633d43d935f89af58",
+    "createdAt": "2026-02-27T04:06:49.729Z",
+    "entryDate": "2026-02-27T04:06:49.729Z",
+    "invested": 4.8685,
+    "currentValue": 4.8685,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
