@@ -19,10 +19,11 @@
     "type": "reading",
     "dueDate": "2026-02-27T23:59:00Z",
     "priority": "medium",
-    "status": "todo",
+    "status": "done",
     "notes": "Week 7 reading. Stocks and their Valuation + Stock Market Efficiency",
     "createdBy": "Nyx",
-    "createdAt": "2026-02-17T07:11:45.441Z"
+    "createdAt": "2026-02-17T07:11:45.441Z",
+    "completedAt": "2026-02-27T02:57:54.461Z"
   },
   {
     "id": "fb3ef803-c4c8-4957-a693-9dbdc4119ac1",
