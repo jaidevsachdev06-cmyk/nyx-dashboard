@@ -4014,7 +4014,7 @@
     "market": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
     "side": "Yes",
     "entryPrice": 0.75,
-    "currentPrice": 0.75,
+    "currentPrice": 0.745,
     "shares": 6.73,
     "status": "open",
     "source": "consensus-scanner",
@@ -4029,14 +4029,14 @@
     "createdAt": "2026-02-27T04:05:57.125Z",
     "entryDate": "2026-02-27T04:05:57.125Z",
     "invested": 5.0475,
-    "currentValue": 5.0475,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 5.0139,
+    "pnl": -0.0337,
+    "pnlPercent": -0.67,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-27T08:02:44.533Z"
+    "updatedAt": "2026-02-27T08:30:50.862Z"
   },
   {
     "id": "6bedcaf3-15cf-4b54-8b7a-587e31d84f49",
