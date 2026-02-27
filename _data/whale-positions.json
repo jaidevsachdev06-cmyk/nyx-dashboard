@@ -3883,5 +3883,29 @@
     "currentValue": 10.857,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "919e9412-c784-4d1b-82b0-a07979de1aba",
+    "market": "Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.094,
+    "currentPrice": 0.094,
+    "shares": 109.68,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Qualitative, Rooke Brollins, failstober, Car, Mombil",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 86,
+    "avgWinRate": 67,
+    "reasoning": "Consensus: 5 whales (avg score 86, WR 67%) Yes. bet=$10.31, shares=109.68. Whales: Qualitative, Rooke Brollins, failstober, Car, Mombil",
+    "endDate": "",
+    "conditionId": "0xe6bcc2f1dd025ce5e1833190f7c60a71171c94f805df55b9ab0ded695ec93565",
+    "createdAt": "2026-02-27T04:05:34.118Z",
+    "entryDate": "2026-02-27T04:05:34.118Z",
+    "invested": 10.3099,
+    "currentValue": 10.3099,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
