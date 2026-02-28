@@ -6116,7 +6116,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.17,
+      "pnlUSDC": -1.89,
       "createdAt": "2026-02-27T14:18:13.205Z",
       "signal": {
         "forecastTemp": 64.4,
@@ -6133,8 +6133,8 @@
       "enteredAt": "2026-02-27T14:18:13.214Z",
       "orderId": "paper-mm4z90f6-fvla",
       "txHash": null,
-      "currentPrice": 0.615,
-      "updatedAt": "2026-02-28T12:14:28.563Z"
+      "currentPrice": 0.575,
+      "updatedAt": "2026-02-28T14:30:04.265Z"
     },
     {
       "id": "oc-mm4zetfv-1azft9",
@@ -6172,9 +6172,9 @@
       "bucket": "88-89°F",
       "question": "Will the highest temperature in Miami be between 88-89°F on February 28?",
       "side": "YES",
-      "status": "open",
+      "status": "exited",
       "result": null,
-      "pnlUSDC": -5.06,
+      "pnlUSDC": -2.4565,
       "createdAt": "2026-02-27T15:28:46.554Z",
       "signal": {
         "forecastTemp": 84.3,
@@ -6184,7 +6184,7 @@
         "edge": 0.0806,
         "isLottery": true
       },
-      "notes": "Forecast: 84.3°F | Model: 12% vs Market: 3% | Edge: 233.6% 🎰LOTTERY",
+      "notes": "Forecast: 84.3°F | Model: 12% vs Market: 3% | Edge: 233.6% 🎰LOTTERY | SWAP: replaced by better edge candidate (ΔedgePP 20.3pp)",
       "entryPrice": 0.0345,
       "size": 289,
       "sizeUSDC": 9.970500000000001,
@@ -6192,7 +6192,11 @@
       "orderId": "paper-mm51rqw9-ccis",
       "txHash": null,
       "currentPrice": 0.017,
-      "updatedAt": "2026-02-28T12:14:29.131Z"
+      "updatedAt": "2026-02-28T12:14:29.131Z",
+      "exitPrice": 0.026,
+      "exitSource": "swap",
+      "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 20.3pp)",
+      "exitedAt": "2026-02-28T14:11:12.707Z"
     },
     {
       "id": "oc-mm51rqwf-240wkc",
@@ -6453,7 +6457,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.85,
+      "pnlUSDC": -2.47,
       "createdAt": "2026-02-27T22:11:49.768Z",
       "signal": {
         "forecastTemp": 81.2,
@@ -6470,8 +6474,8 @@
       "enteredAt": "2026-02-27T22:11:49.776Z",
       "orderId": "paper-mm5g62s3-0ovu",
       "txHash": null,
-      "currentPrice": 0.49,
-      "updatedAt": "2026-02-28T12:14:29.662Z"
+      "currentPrice": 0.51,
+      "updatedAt": "2026-02-28T14:30:04.849Z"
     },
     {
       "id": "oc-mm5g62s8-yprcc6",
@@ -6511,7 +6515,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.09,
+      "pnlUSDC": 0.45,
       "createdAt": "2026-02-28T00:12:07.199Z",
       "signal": {
         "forecastTemp": 26.9,
@@ -6528,8 +6532,8 @@
       "enteredAt": "2026-02-28T00:12:07.214Z",
       "orderId": "paper-mm5kgrsl-nw3c",
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-02-28T14:00:05.737Z"
+      "currentPrice": 0.685,
+      "updatedAt": "2026-02-28T14:30:05.472Z"
     },
     {
       "id": "oc-mm5kgrsv-5a2ccs",
@@ -6544,7 +6548,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -5.8,
+      "pnlUSDC": -4.4,
       "createdAt": "2026-02-28T00:12:07.231Z",
       "signal": {
         "forecastTemp": 52.1,
@@ -6561,8 +6565,8 @@
       "enteredAt": "2026-02-28T00:12:07.244Z",
       "orderId": "paper-mm5kgrtc-19b8",
       "txHash": null,
-      "currentPrice": 0.0105,
-      "updatedAt": "2026-02-28T14:00:07.424Z"
+      "currentPrice": 0.014,
+      "updatedAt": "2026-02-28T14:30:06.058Z"
     },
     {
       "id": "oc-mm5opint-1zw6c8",
@@ -6577,7 +6581,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.78,
+      "pnlUSDC": 3.8,
       "createdAt": "2026-02-28T02:10:53.753Z",
       "signal": {
         "forecastTemp": 78.4,
@@ -6594,8 +6598,8 @@
       "enteredAt": "2026-02-28T02:10:53.763Z",
       "orderId": "paper-mm5opio7-ctdw",
       "txHash": null,
-      "currentPrice": 0.0505,
-      "updatedAt": "2026-02-28T14:00:09.017Z"
+      "currentPrice": 0.0545,
+      "updatedAt": "2026-02-28T14:30:06.595Z"
     },
     {
       "id": "oc-mm5xau31-z3ao99",
@@ -6671,11 +6675,77 @@
         "isLottery": true
       },
       "notes": "Forecast: 84.1°F | Model: 9% vs Market: 2% | Edge: 277.8% 🎰LOTTERY"
+    },
+    {
+      "id": "oc-mm6efufi-esk90k",
+      "conditionId": "0x32515a11bdd5240323cbdec7f961623a69b931d1ee73a26efbc5c23c6107f864",
+      "tokenId": "59678159799475442844840039702659419208362804818884708556131317989075515964809",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-miami-on-february-28-2026-84-85f",
+      "city": "Miami",
+      "date": "2026-02-28",
+      "bucket": "84-85°F",
+      "question": "Will the highest temperature in Miami be between 84-85°F on February 28?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -3.22,
+      "createdAt": "2026-02-28T14:11:12.462Z",
+      "signal": {
+        "forecastTemp": 81.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.53,
+        "modelProb": 0.8138,
+        "edge": 0.2838,
+        "isLottery": false
+      },
+      "notes": "Forecast: 81.9°F | Model: 81% vs Market: 53% | Edge: 53.5%",
+      "entryPrice": 0.53,
+      "size": 23,
+      "sizeUSDC": 12.190000000000001,
+      "enteredAt": "2026-02-28T14:11:12.714Z",
+      "orderId": "paper-mm6efumn-js7p",
+      "txHash": null,
+      "currentPrice": 0.39,
+      "updatedAt": "2026-02-28T14:30:07.198Z"
+    },
+    {
+      "id": "oc-mm6efumt-5w28qj",
+      "conditionId": "0x961dbba0947deeac4ca5a6dc819b9fc5a1db966a3991a67d9ae6d03639129a28",
+      "tokenId": "0xad5399b2f538d77b61f1eb1269be5587ef2d06af54a52b95eeaccc923d62216",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-february-28-2026-54-55f",
+      "city": "Seattle",
+      "date": "2026-02-28",
+      "bucket": "54-55°F",
+      "question": "Will the highest temperature in Seattle be between 54-55°F on February 28?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -0.63,
+      "createdAt": "2026-02-28T14:11:12.725Z",
+      "signal": {
+        "forecastTemp": 51.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.0395,
+        "modelProb": 0.1267,
+        "edge": 0.0872,
+        "isLottery": true
+      },
+      "notes": "Forecast: 51.4°F | Model: 13% vs Market: 4% | Edge: 220.8% 🎰LOTTERY",
+      "entryPrice": 0.0395,
+      "size": 253,
+      "sizeUSDC": 9.993500000000001,
+      "enteredAt": "2026-02-28T14:11:12.734Z",
+      "orderId": "paper-mm6efun6-428n",
+      "txHash": null,
+      "currentPrice": 0.037,
+      "updatedAt": "2026-02-28T14:30:07.931Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-28T12:06:26.119Z",
-    "lastPriceSync": "2026-02-28T14:00:10.219Z"
+    "lastUpdated": "2026-02-28T14:11:12.741Z",
+    "lastPriceSync": "2026-02-28T14:30:08.231Z"
   }
 }
