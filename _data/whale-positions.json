@@ -5156,5 +5156,29 @@
       {}
     ],
     "updatedAt": "2026-02-28T20:01:25.929Z"
+  },
+  {
+    "id": "889b8f9c-ca42-4f08-bdd0-f51e8a37038b",
+    "market": "Khamenei out as Supreme Leader of Iran by June 30?",
+    "side": "Yes",
+    "entryPrice": 0.961,
+    "currentPrice": 0.961,
+    "shares": 6.4,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "cashy, kfkNBApro1, MuddyRC, Michael5289",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 80.7,
+    "avgWinRate": 80,
+    "reasoning": "Consensus: 4 whales (avg score 80.7, WR 80%) Yes. bet=$6.15, shares=6.4. Whales: cashy, kfkNBApro1, MuddyRC, Michael5289",
+    "endDate": "",
+    "conditionId": "0x2e94bb8dd09931d12e6e656fe4fe6ceb3922bc3d6eab864bb6cd24773cf67269",
+    "createdAt": "2026-02-28T20:05:23.633Z",
+    "entryDate": "2026-02-28T20:05:23.633Z",
+    "invested": 6.1504,
+    "currentValue": 6.1504,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
