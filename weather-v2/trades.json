@@ -6533,7 +6533,7 @@
       "orderId": "paper-mm5kgrsl-nw3c",
       "txHash": null,
       "currentPrice": 0.685,
-      "updatedAt": "2026-02-28T16:30:04.749Z"
+      "updatedAt": "2026-02-28T17:00:05.027Z"
     },
     {
       "id": "oc-mm5kgrsv-5a2ccs",
@@ -6548,7 +6548,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -4.8,
+      "pnlUSDC": -4.6,
       "createdAt": "2026-02-28T00:12:07.231Z",
       "signal": {
         "forecastTemp": 52.1,
@@ -6565,8 +6565,8 @@
       "enteredAt": "2026-02-28T00:12:07.244Z",
       "orderId": "paper-mm5kgrtc-19b8",
       "txHash": null,
-      "currentPrice": 0.013,
-      "updatedAt": "2026-02-28T16:30:06.377Z"
+      "currentPrice": 0.0135,
+      "updatedAt": "2026-02-28T17:00:06.611Z"
     },
     {
       "id": "oc-mm5opint-1zw6c8",
@@ -6581,7 +6581,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 7.84,
+      "pnlUSDC": 7.21,
       "createdAt": "2026-02-28T02:10:53.753Z",
       "signal": {
         "forecastTemp": 78.4,
@@ -6598,8 +6598,8 @@
       "enteredAt": "2026-02-28T02:10:53.763Z",
       "orderId": "paper-mm5opio7-ctdw",
       "txHash": null,
-      "currentPrice": 0.0705,
-      "updatedAt": "2026-02-28T16:30:08.078Z"
+      "currentPrice": 0.068,
+      "updatedAt": "2026-02-28T17:00:08.178Z"
     },
     {
       "id": "oc-mm5xau31-z3ao99",
@@ -6689,7 +6689,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.15,
+      "pnlUSDC": -2.87,
       "createdAt": "2026-02-28T14:11:12.462Z",
       "signal": {
         "forecastTemp": 81.9,
@@ -6706,8 +6706,8 @@
       "enteredAt": "2026-02-28T14:11:12.714Z",
       "orderId": "paper-mm6efumn-js7p",
       "txHash": null,
-      "currentPrice": 0.58,
-      "updatedAt": "2026-02-28T16:30:09.656Z"
+      "currentPrice": 0.405,
+      "updatedAt": "2026-02-28T17:00:09.751Z"
     },
     {
       "id": "oc-mm6efumt-5w28qj",
@@ -6744,6 +6744,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-02-28T14:11:12.741Z",
-    "lastPriceSync": "2026-02-28T16:30:11.878Z"
+    "lastPriceSync": "2026-02-28T17:00:12.124Z"
   }
 }
