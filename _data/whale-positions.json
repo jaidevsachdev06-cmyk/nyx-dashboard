@@ -4463,9 +4463,9 @@
     "market": "Will GTA 6 cost $100+?",
     "side": "No",
     "entryPrice": 0.998,
-    "currentPrice": 0.9995,
+    "currentPrice": 0.999,
     "shares": 5.06,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Brokie, Gr33d, Xeny",
     "whaleCount": 3,
@@ -4478,14 +4478,16 @@
     "createdAt": "2026-02-27T20:05:33.737Z",
     "entryDate": "2026-02-27T20:05:33.737Z",
     "invested": 5.0499,
-    "currentValue": 5.0575,
-    "pnl": 0.0076,
-    "pnlPercent": 0.15,
+    "currentValue": 5.0549,
+    "pnl": 0.0051,
+    "pnlPercent": 0.1,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T12:00:59.530Z"
+    "updatedAt": "2026-02-28T12:05:30.004Z",
+    "exitPrice": 0.999,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "48d10c49-d619-4ae4-8188-1e706525ea96",
