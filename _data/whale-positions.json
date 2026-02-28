@@ -4765,5 +4765,29 @@
     "currentValue": 4.8576,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "859715e1-e3d9-4399-ac64-2002cfeb931c",
+    "market": "US strikes Iran by March 14, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.9995,
+    "currentPrice": 0.9995,
+    "shares": 4.86,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Mombil, scottilicious, Roflan, 0xTactic",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 80.6,
+    "avgWinRate": 63.2,
+    "reasoning": "Consensus: 4 whales (avg score 80.6, WR 63.2%) Yes. bet=$4.86, shares=4.86. Whales: Mombil, scottilicious, Roflan, 0xTactic",
+    "endDate": "",
+    "conditionId": "0x88d15da5bbd95766495c0229da4dab1382cc81e313c6be925558f86b8b628d91",
+    "createdAt": "2026-02-28T08:05:28.131Z",
+    "entryDate": "2026-02-28T08:05:28.131Z",
+    "invested": 4.8576,
+    "currentValue": 4.8576,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
