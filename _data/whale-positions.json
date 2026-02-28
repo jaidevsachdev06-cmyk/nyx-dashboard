@@ -4939,7 +4939,7 @@
     "entryPrice": 0.9995,
     "currentPrice": 1,
     "shares": 4.7,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "elucidate, The-Joker, 0xTactic",
     "whaleCount": 3,
@@ -4959,7 +4959,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T10:02:00.776Z"
+    "updatedAt": "2026-02-28T10:05:42.739Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "5ba9bf4b-8e50-4356-89ed-874a094e7739",
