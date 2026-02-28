@@ -6467,11 +6467,77 @@
         "isLottery": false
       },
       "notes": "Forecast: 61.2°F | Model: 96% vs Market: 77% | Edge: 25.8%"
+    },
+    {
+      "id": "oc-mm5kgrrz-538y9n",
+      "conditionId": "0x7fca87ffd7d0328ba30b43fe7b2771e7a881b8417cad35b8a765853fc2485757",
+      "tokenId": "109732599562667918826800487245971337874173642934939324050437489399212705846787",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-1-2026-30-31f",
+      "city": "Chicago",
+      "date": "2026-03-01",
+      "bucket": "30-31°F",
+      "question": "Will the highest temperature in Chicago be between 30-31°F on March 1?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -0.09,
+      "createdAt": "2026-02-28T00:12:07.199Z",
+      "signal": {
+        "forecastTemp": 26.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.66,
+        "modelProb": 0.8695,
+        "edge": 0.2095,
+        "isLottery": false
+      },
+      "notes": "Forecast: 26.9°F | Model: 87% vs Market: 66% | Edge: 31.7%",
+      "entryPrice": 0.66,
+      "size": 18,
+      "sizeUSDC": 11.88,
+      "enteredAt": "2026-02-28T00:12:07.214Z",
+      "orderId": "paper-mm5kgrsl-nw3c",
+      "txHash": null,
+      "currentPrice": 0.655,
+      "updatedAt": "2026-02-28T00:30:09.529Z"
+    },
+    {
+      "id": "oc-mm5kgrsv-5a2ccs",
+      "conditionId": "0x1dca500b29257534a6ab38f27e23f9d5c4e85935bbf70d486d74f7e6080391fc",
+      "tokenId": "3598806920348077568653214245263817899247161952954403417126395854098187030084",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-march-1-2026-49forbelow",
+      "city": "Seattle",
+      "date": "2026-03-01",
+      "bucket": "≤49°F",
+      "question": "Will the highest temperature in Seattle be 49°F or below on March 1?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -1.6,
+      "createdAt": "2026-02-28T00:12:07.231Z",
+      "signal": {
+        "forecastTemp": 52.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.025,
+        "modelProb": 0.0968,
+        "edge": 0.0718,
+        "isLottery": true
+      },
+      "notes": "Forecast: 52.1°F | Model: 10% vs Market: 3% | Edge: 287.2% 🎰LOTTERY",
+      "entryPrice": 0.025,
+      "size": 400,
+      "sizeUSDC": 10,
+      "enteredAt": "2026-02-28T00:12:07.244Z",
+      "orderId": "paper-mm5kgrtc-19b8",
+      "txHash": null,
+      "currentPrice": 0.021,
+      "updatedAt": "2026-02-28T00:30:11.120Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-28T00:06:41.467Z",
-    "lastPriceSync": "2026-02-27T23:00:23.085Z"
+    "lastUpdated": "2026-02-28T00:12:07.251Z",
+    "lastPriceSync": "2026-02-28T00:30:12.321Z"
   }
 }
