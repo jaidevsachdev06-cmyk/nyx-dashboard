@@ -4837,5 +4837,29 @@
     "currentValue": 4.9026,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "4b13dd6d-4f57-4745-8c10-371975359cd4",
+    "market": "US strikes Iran by March 5, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.9985,
+    "currentPrice": 0.9985,
+    "shares": 4.91,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "elucidate, Roflan, 0xTactic",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.1,
+    "avgWinRate": 63.7,
+    "reasoning": "Consensus: 3 whales (avg score 82.1, WR 63.7%) Yes. bet=$4.90, shares=4.91. Whales: elucidate, Roflan, 0xTactic",
+    "endDate": "",
+    "conditionId": "0x7320a31f5b0babc0c2c99e8a14d120f577affb38793379307b6f56efdb849f49",
+    "createdAt": "2026-02-28T08:05:45.852Z",
+    "entryDate": "2026-02-28T08:05:45.852Z",
+    "invested": 4.9026,
+    "currentValue": 4.9026,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
