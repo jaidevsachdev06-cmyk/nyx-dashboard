@@ -6114,9 +6114,9 @@
       "bucket": "68-69°F",
       "question": "Will the highest temperature in Atlanta be between 68-69°F on February 28?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -0.63,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.76,
       "createdAt": "2026-02-27T14:18:13.205Z",
       "signal": {
         "forecastTemp": 64.4,
@@ -6134,7 +6134,11 @@
       "orderId": "paper-mm4z90f6-fvla",
       "txHash": null,
       "currentPrice": 0.645,
-      "updatedAt": "2026-02-28T17:06:01.210Z"
+      "updatedAt": "2026-02-28T17:06:01.210Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-28T22:06:55.364Z",
+      "closedAt": "2026-02-28T22:06:55.375Z"
     },
     {
       "id": "oc-mm4zetfv-1azft9",
@@ -6695,9 +6699,9 @@
       "bucket": "84-85°F",
       "question": "Will the highest temperature in Miami be between 84-85°F on February 28?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.05,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.19,
       "createdAt": "2026-02-28T14:11:12.462Z",
       "signal": {
         "forecastTemp": 81.9,
@@ -6715,7 +6719,11 @@
       "orderId": "paper-mm6efumn-js7p",
       "txHash": null,
       "currentPrice": 0.006,
-      "updatedAt": "2026-02-28T22:00:06.231Z"
+      "updatedAt": "2026-02-28T22:00:06.231Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-28T22:06:57.813Z",
+      "closedAt": "2026-02-28T22:06:57.824Z"
     },
     {
       "id": "oc-mm6efumt-5w28qj",
@@ -6960,7 +6968,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-28T20:12:26.899Z",
+    "lastUpdated": "2026-02-28T22:06:57.826Z",
     "lastPriceSync": "2026-02-28T22:00:14.823Z"
   }
 }
