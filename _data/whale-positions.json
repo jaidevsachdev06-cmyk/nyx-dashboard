@@ -4649,5 +4649,29 @@
     "currentValue": 5.4522,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "c5c0a27c-351a-4fe0-80ac-9256e308bf3d",
+    "market": "Khamenei out as Supreme Leader of Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.755,
+    "currentPrice": 0.755,
+    "shares": 7.39,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, Gr33d, Car",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 86.7,
+    "avgWinRate": 72.6,
+    "reasoning": "Consensus: 3 whales (avg score 86.7, WR 72.6%) No. bet=$5.58, shares=7.39. Whales: Roflan, Gr33d, Car",
+    "endDate": "",
+    "conditionId": "0x70909f0ba8256a89c301da58812ae47203df54957a07c7f8b10235e877ad63c2",
+    "createdAt": "2026-02-28T06:05:26.761Z",
+    "entryDate": "2026-02-28T06:05:26.761Z",
+    "invested": 5.5794,
+    "currentValue": 5.5794,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
