@@ -6042,9 +6042,9 @@
       "bucket": "42-43°F",
       "question": "Will the highest temperature in New York City be between 42-43°F on February 27?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 7.03,
       "createdAt": "2026-02-27T14:18:13.183Z",
       "signal": {
         "forecastTemp": 38.5,
@@ -6060,7 +6060,11 @@
       "sizeUSDC": 11.97,
       "enteredAt": "2026-02-27T14:18:13.191Z",
       "orderId": "paper-mm4z90ej-v4qb",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-28T00:06:38.099Z",
+      "closedAt": "2026-02-28T00:06:38.111Z"
     },
     {
       "id": "oc-mm4z90en-k8ejf5",
@@ -6241,9 +6245,9 @@
       "bucket": "7°C",
       "question": "Will the highest temperature in Toronto be 7°C on February 27?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.48,
       "createdAt": "2026-02-27T20:12:23.261Z",
       "signal": {
         "forecastTemp": 4.2,
@@ -6259,7 +6263,11 @@
       "sizeUSDC": 12.48,
       "enteredAt": "2026-02-27T20:12:23.271Z",
       "orderId": "paper-mm5bwh2j-4o5x",
-      "txHash": null
+      "txHash": null,
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-28T00:06:41.454Z",
+      "closedAt": "2026-02-28T00:06:41.464Z"
     },
     {
       "id": "oc-mm5bwh2n-mvpprh",
@@ -6463,7 +6471,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-27T23:05:12.125Z",
+    "lastUpdated": "2026-02-28T00:06:41.467Z",
     "lastPriceSync": "2026-02-27T23:00:23.085Z"
   }
 }
