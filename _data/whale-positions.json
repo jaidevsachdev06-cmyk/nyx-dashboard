@@ -4909,5 +4909,29 @@
     "currentValue": 4.6977,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "5ba9bf4b-8e50-4356-89ed-874a094e7739",
+    "market": "Will Iran close the Strait of Hormuz by March 31?",
+    "side": "No",
+    "entryPrice": 0.635,
+    "currentPrice": 0.635,
+    "shares": 8.19,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "LinaBell, Roflan, Gr33d",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 79.8,
+    "avgWinRate": 67.6,
+    "reasoning": "Consensus: 3 whales (avg score 79.8, WR 67.6%) No. bet=$5.20, shares=8.19. Whales: LinaBell, Roflan, Gr33d",
+    "endDate": "",
+    "conditionId": "0x561cd8d035bac38ed04e23d7882a126da38d7ead9d6679f722ad62c0c9d54ad2",
+    "createdAt": "2026-02-28T08:06:01.321Z",
+    "entryDate": "2026-02-28T08:06:01.321Z",
+    "invested": 5.2006,
+    "currentValue": 5.2006,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
