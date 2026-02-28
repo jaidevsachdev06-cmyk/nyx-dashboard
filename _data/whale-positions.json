@@ -4631,7 +4631,7 @@
     "market": "Will the Iranian regime fall before 2027?",
     "side": "No",
     "entryPrice": 0.585,
-    "currentPrice": 0.575,
+    "currentPrice": 0.485,
     "shares": 9.32,
     "status": "open",
     "source": "consensus-scanner",
@@ -4646,14 +4646,14 @@
     "createdAt": "2026-02-28T06:05:21.783Z",
     "entryDate": "2026-02-28T06:05:21.783Z",
     "invested": 5.4522,
-    "currentValue": 5.359,
-    "pnl": -0.0932,
-    "pnlPercent": -1.71,
+    "currentValue": 4.5202,
+    "pnl": -0.932,
+    "pnlPercent": -17.09,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T06:31:27.657Z"
+    "updatedAt": "2026-02-28T07:01:27.690Z"
   },
   {
     "id": "c5c0a27c-351a-4fe0-80ac-9256e308bf3d",
