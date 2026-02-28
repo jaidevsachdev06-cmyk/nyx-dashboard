@@ -4616,7 +4616,7 @@
     "entryPrice": 0.505,
     "currentPrice": 0.855,
     "shares": 10.5,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Roflan, Snoorrason, Gr33d",
     "whaleCount": 3,
@@ -4636,7 +4636,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T14:01:06.365Z"
+    "updatedAt": "2026-02-28T14:05:40.820Z",
+    "exitPrice": 0.855,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "bcdfecdc-6095-4703-b48d-45471c1a31bb",
