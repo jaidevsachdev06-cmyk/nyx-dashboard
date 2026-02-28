@@ -4877,7 +4877,7 @@
     "entryPrice": 0.9985,
     "currentPrice": 1,
     "shares": 4.91,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "elucidate, Roflan, 0xTactic",
     "whaleCount": 3,
@@ -4897,7 +4897,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T10:01:52.587Z"
+    "updatedAt": "2026-02-28T10:05:37.397Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "d8726ddd-8d35-4a41-a88d-c658904845ef",
