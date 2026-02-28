@@ -5959,7 +5959,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 5.18,
+      "pnlUSDC": 14.28,
       "createdAt": "2026-02-27T11:06:28.377Z",
       "signal": {
         "forecastTemp": 52.3,
@@ -5975,8 +5975,8 @@
       "enteredAt": "2026-02-27T11:06:28.392Z",
       "orderId": "paper-mm4sef8s-irw7",
       "txHash": null,
-      "currentPrice": 0.62,
-      "updatedAt": "2026-02-28T01:25:15.505Z"
+      "currentPrice": 0.945,
+      "updatedAt": "2026-02-28T06:30:04.235Z"
     },
     {
       "id": "oc-mm4sef8w-2821xg",
@@ -6112,7 +6112,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.36,
+      "pnlUSDC": 0.18,
       "createdAt": "2026-02-27T14:18:13.205Z",
       "signal": {
         "forecastTemp": 64.4,
@@ -6129,8 +6129,8 @@
       "enteredAt": "2026-02-27T14:18:13.214Z",
       "orderId": "paper-mm4z90f6-fvla",
       "txHash": null,
-      "currentPrice": 0.66,
-      "updatedAt": "2026-02-28T01:25:16.035Z"
+      "currentPrice": 0.69,
+      "updatedAt": "2026-02-28T06:30:04.801Z"
     },
     {
       "id": "oc-mm4zetfv-1azft9",
@@ -6188,7 +6188,7 @@
       "orderId": "paper-mm51rqw9-ccis",
       "txHash": null,
       "currentPrice": 0.0215,
-      "updatedAt": "2026-02-28T01:25:16.589Z"
+      "updatedAt": "2026-02-28T06:30:05.353Z"
     },
     {
       "id": "oc-mm51rqwf-240wkc",
@@ -6203,7 +6203,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.52,
+      "pnlUSDC": -6.08,
       "createdAt": "2026-02-27T15:28:46.575Z",
       "signal": {
         "forecastTemp": 50.7,
@@ -6220,8 +6220,8 @@
       "enteredAt": "2026-02-27T15:28:46.584Z",
       "orderId": "paper-mm51rqwr-1cn0",
       "txHash": null,
-      "currentPrice": 0.025,
-      "updatedAt": "2026-02-28T01:25:17.121Z"
+      "currentPrice": 0.0115,
+      "updatedAt": "2026-02-28T06:30:05.938Z"
     },
     {
       "id": "oc-mm53an11-m6rik2",
@@ -6321,7 +6321,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.68,
+      "pnlUSDC": 4.14,
       "createdAt": "2026-02-27T20:12:23.285Z",
       "signal": {
         "forecastTemp": 15.4,
@@ -6338,8 +6338,8 @@
       "enteredAt": "2026-02-27T20:12:23.293Z",
       "orderId": "paper-mm5bwh35-dnrx",
       "txHash": null,
-      "currentPrice": 0.745,
-      "updatedAt": "2026-02-28T01:25:17.699Z"
+      "currentPrice": 0.9485,
+      "updatedAt": "2026-02-28T06:30:06.534Z"
     },
     {
       "id": "oc-mm5bwh3b-c7q439",
@@ -6459,7 +6459,7 @@
       "orderId": "paper-mm5g62s3-0ovu",
       "txHash": null,
       "currentPrice": 0.64,
-      "updatedAt": "2026-02-28T01:25:18.259Z"
+      "updatedAt": "2026-02-28T06:30:07.070Z"
     },
     {
       "id": "oc-mm5g62s8-yprcc6",
@@ -6499,7 +6499,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.81,
+      "pnlUSDC": 0.99,
       "createdAt": "2026-02-28T00:12:07.199Z",
       "signal": {
         "forecastTemp": 26.9,
@@ -6516,8 +6516,8 @@
       "enteredAt": "2026-02-28T00:12:07.214Z",
       "orderId": "paper-mm5kgrsl-nw3c",
       "txHash": null,
-      "currentPrice": 0.705,
-      "updatedAt": "2026-02-28T06:00:12.207Z"
+      "currentPrice": 0.715,
+      "updatedAt": "2026-02-28T06:30:07.604Z"
     },
     {
       "id": "oc-mm5kgrsv-5a2ccs",
@@ -6550,7 +6550,7 @@
       "orderId": "paper-mm5kgrtc-19b8",
       "txHash": null,
       "currentPrice": 0.018,
-      "updatedAt": "2026-02-28T06:00:15.029Z"
+      "updatedAt": "2026-02-28T06:30:08.132Z"
     },
     {
       "id": "oc-mm5opint-1zw6c8",
@@ -6565,7 +6565,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.9,
+      "pnlUSDC": 3.16,
       "createdAt": "2026-02-28T02:10:53.753Z",
       "signal": {
         "forecastTemp": 78.4,
@@ -6582,13 +6582,88 @@
       "enteredAt": "2026-02-28T02:10:53.763Z",
       "orderId": "paper-mm5opio7-ctdw",
       "txHash": null,
-      "currentPrice": 0.047,
-      "updatedAt": "2026-02-28T06:00:16.588Z"
+      "currentPrice": 0.052,
+      "updatedAt": "2026-02-28T06:30:08.670Z"
+    },
+    {
+      "id": "oc-mm5xau31-z3ao99",
+      "conditionId": "0x880609e73b6f8fa883c8e4f2d6c6ac66aa0ffb2fa7d3865ed8a1e74467d2614c",
+      "tokenId": "106299679686754243327771566184925592905332313871351917148436403762669666992537",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-1-2026-28-29f",
+      "city": "Chicago",
+      "date": "2026-03-01",
+      "bucket": "28-29°F",
+      "question": "Will the highest temperature in Chicago be between 28-29°F on March 1?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-28T06:11:25.261Z",
+      "signal": {
+        "forecastTemp": 25.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.675,
+        "modelProb": 0.8707,
+        "edge": 0.1957,
+        "isLottery": false
+      },
+      "notes": "Forecast: 25.1°F | Model: 87% vs Market: 68% | Edge: 29.0%"
+    },
+    {
+      "id": "oc-mm5xau3a-oflhca",
+      "conditionId": "0x4a4f50bccee5e4f1a093285a91c7c6b2ea07eba7f41c4f1b13c3539e2a15d6e1",
+      "tokenId": "55517739501486643629403293984160265055199940642945509813729803591700989333070",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-miami-on-february-28-2026-80-81f",
+      "city": "Miami",
+      "date": "2026-02-28",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Miami be between 80-81°F on February 28?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-28T06:11:25.270Z",
+      "signal": {
+        "forecastTemp": 83.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.05,
+        "modelProb": 0.1728,
+        "edge": 0.1228,
+        "isLottery": true
+      },
+      "notes": "Forecast: 83.3°F | Model: 17% vs Market: 5% | Edge: 245.6% 🎰LOTTERY"
+    },
+    {
+      "id": "oc-mm5xau3i-k3nqkb",
+      "conditionId": "0xace93879b692f1245707ff97d916110a17bd4756c01d86e42ad45f49998f1516",
+      "tokenId": "0xd8bce994c78408e7cbaa5f143cdb6a2f6fb7d137c5d0460e9ce0fb2b54d4464f",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-dallas-on-february-28-2026-88forhigher",
+      "city": "Dallas",
+      "date": "2026-02-28",
+      "bucket": "≥88°F",
+      "question": "Will the highest temperature in Dallas be 88°F or higher on February 28?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-02-28T06:11:25.278Z",
+      "signal": {
+        "forecastTemp": 84.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.023,
+        "modelProb": 0.0869,
+        "edge": 0.0639,
+        "isLottery": true
+      },
+      "notes": "Forecast: 84.1°F | Model: 9% vs Market: 2% | Edge: 277.8% 🎰LOTTERY"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-28T02:10:53.770Z",
-    "lastPriceSync": "2026-02-28T06:00:17.788Z"
+    "lastUpdated": "2026-02-28T06:11:25.280Z",
+    "lastPriceSync": "2026-02-28T06:30:08.970Z"
   }
 }
