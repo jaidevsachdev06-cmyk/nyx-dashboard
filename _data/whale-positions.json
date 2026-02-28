@@ -4970,7 +4970,7 @@
     "entryPrice": 0.635,
     "currentPrice": 0.65,
     "shares": 8.19,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "LinaBell, Roflan, Gr33d",
     "whaleCount": 3,
@@ -4990,7 +4990,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T10:02:04.342Z"
+    "updatedAt": "2026-02-28T10:05:45.419Z",
+    "exitPrice": 0.65,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "25568324-7f7d-4181-bd4a-3e29894a0b79",
