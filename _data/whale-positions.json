@@ -4556,7 +4556,7 @@
     "market": "Will Wesley Hunt win the 2026 Texas Republican Primary?",
     "side": "No",
     "entryPrice": 0.982,
-    "currentPrice": 0.9884999999999999,
+    "currentPrice": 0.9904999999999999,
     "shares": 4.85,
     "status": "open",
     "source": "consensus-scanner",
@@ -4571,14 +4571,14 @@
     "createdAt": "2026-02-28T00:05:28.665Z",
     "entryDate": "2026-02-28T00:05:28.665Z",
     "invested": 4.7627,
-    "currentValue": 4.7942,
-    "pnl": 0.0315,
-    "pnlPercent": 0.66,
+    "currentValue": 4.8039,
+    "pnl": 0.0412,
+    "pnlPercent": 0.87,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T16:00:54.874Z"
+    "updatedAt": "2026-02-28T16:30:51.383Z"
   },
   {
     "id": "45a03bcd-e082-4184-9de6-920dc5299034",
