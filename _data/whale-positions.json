@@ -5001,7 +5001,7 @@
     "entryPrice": 0.9985,
     "currentPrice": 1,
     "shares": 4.43,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Mombil, elucidate, Brokie",
     "whaleCount": 3,
@@ -5021,7 +5021,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T10:02:08.428Z"
+    "updatedAt": "2026-02-28T10:05:48.080Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "ebcd78a1-e4a8-4ece-8e3c-16de668ca7a3",
