@@ -4593,7 +4593,7 @@
     "entryPrice": 0.775,
     "currentPrice": 0.71,
     "shares": 5.96,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Mombil, elucidate, scottilicious",
     "whaleCount": 3,
@@ -4613,7 +4613,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T22:00:58.121Z"
+    "updatedAt": "2026-02-28T22:05:47.644Z",
+    "exitPrice": 0.71,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "6ac9b0b1-c510-4859-be11-dc0479abca45",
