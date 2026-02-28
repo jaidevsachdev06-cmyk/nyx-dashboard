@@ -3929,9 +3929,9 @@
     "market": "Will Trump acquire Greenland before 2027?",
     "side": "No",
     "entryPrice": 0.8865,
-    "currentPrice": 0.8845000000000001,
+    "currentPrice": 0.8845,
     "shares": 11.03,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Qualitative, failstober, GollumGekko, Brokie, Mombil",
     "whaleCount": 5,
@@ -3951,7 +3951,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T12:00:39.350Z"
+    "updatedAt": "2026-02-28T12:05:26.992Z",
+    "exitPrice": 0.8845,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "57208901-1f71-40a0-aaa3-e158f398490f",
