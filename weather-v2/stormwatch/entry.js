@@ -56,7 +56,7 @@ async function processCandidate(signal) {
   }
 
   // Lottery trade classification: low model prob (<60%) + high edge (>100%) + cheap price (<$0.15)
-  const isLottery = signal.modelProb < 0.6 && edgePct > 100 && currentPrice < 0.15;
+  const isLottery = signal.modelProb < 0.6 && signal.modelProb >= 0.08 && edgePct > 100 && edgePct <= 250 && currentPrice < 0.15;
 
   if (isLottery) {
     // Count lottery trades entered today
@@ -68,11 +68,11 @@ async function processCandidate(signal) {
       t.entryPrice < 0.15
     );
 
-    if (lotteryToday.length >= 2) {
-      return { entered: false, trade: null, reason: `Lottery quota reached: ${lotteryToday.length}/2 today` };
+    if (lotteryToday.length >= 1) {
+      return { entered: false, trade: null, reason: `Lottery quota reached: ${lotteryToday.length}/1 today` };
     }
 
-    console.log(`${tag} 🎰 LOTTERY TRADE (${lotteryToday.length + 1}/2 today) | modelProb: ${(signal.modelProb*100).toFixed(1)}% | edge: ${edgePct.toFixed(0)}%`);
+    console.log(`${tag} 🎰 LOTTERY TRADE (${lotteryToday.length + 1}/1 today) | modelProb: ${(signal.modelProb*100).toFixed(1)}% | edge: ${edgePct.toFixed(0)}%`);
   } else {
     // Normal trade: apply confidence gates
     const minModelProb = config.risk.minModelProb || 0.6;
