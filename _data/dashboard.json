@@ -1,15 +1,15 @@
 {
-  "lastUpdated": "2026-02-27T23:28:40.586Z",
+  "lastUpdated": "2026-02-28T12:12:57.966Z",
   "weather": {
     "open": 13,
     "closed": 60,
-    "candidates": 142,
-    "totalPnl": 336.25,
-    "openPnl": -11.63,
-    "winRate": 38.7
+    "candidates": 74,
+    "totalPnl": 332.28,
+    "openPnl": -11.64,
+    "winRate": 40
   },
   "whale": {
-    "mirrorPnl": -25.23
+    "mirrorPnl": 0
   },
   "system": {
     "gateway": "running",
