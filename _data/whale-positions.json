@@ -4662,7 +4662,7 @@
     "market": "Khamenei out as Supreme Leader of Iran by March 31?",
     "side": "No",
     "entryPrice": 0.755,
-    "currentPrice": 0.535,
+    "currentPrice": 0.565,
     "shares": 7.39,
     "status": "open",
     "source": "consensus-scanner",
@@ -4677,14 +4677,14 @@
     "createdAt": "2026-02-28T06:05:26.761Z",
     "entryDate": "2026-02-28T06:05:26.761Z",
     "invested": 5.5794,
-    "currentValue": 3.9537,
-    "pnl": -1.6258,
-    "pnlPercent": -29.14,
+    "currentValue": 4.1753,
+    "pnl": -1.4041,
+    "pnlPercent": -25.17,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T09:01:22.886Z"
+    "updatedAt": "2026-02-28T09:31:22.578Z"
   },
   {
     "id": "6a9e965f-23e3-42f3-ac78-f5ee49da1f7f",
