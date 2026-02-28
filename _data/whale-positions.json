@@ -5059,5 +5059,29 @@
       {}
     ],
     "updatedAt": "2026-02-28T14:01:22.404Z"
+  },
+  {
+    "id": "db06dfc1-4f2c-4416-9016-4ce274cbf3ce",
+    "market": "Russia x Ukraine ceasefire by March 31, 2026?",
+    "side": "No",
+    "entryPrice": 0.965,
+    "currentPrice": 0.965,
+    "shares": 5.64,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "0xTactic, Gr33d, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82,
+    "avgWinRate": 70.7,
+    "reasoning": "Consensus: 3 whales (avg score 82, WR 70.7%) No. bet=$5.44, shares=5.64. Whales: 0xTactic, Gr33d, GollumGekko",
+    "endDate": "",
+    "conditionId": "0x1d54eb5eac2cee8f595f3097c65da7d07f8ab5dee63d7c0c6883eb70e1e9af30",
+    "createdAt": "2026-02-28T14:05:23.849Z",
+    "entryDate": "2026-02-28T14:05:23.849Z",
+    "invested": 5.4426,
+    "currentValue": 5.4426,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
