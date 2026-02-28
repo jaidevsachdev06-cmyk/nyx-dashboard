@@ -4368,7 +4368,7 @@
     "entryPrice": 0.9775,
     "currentPrice": 0.9695,
     "shares": 5.14,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Mombil, LinaBell, debased",
     "whaleCount": 3,
@@ -4388,7 +4388,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T00:00:58.512Z"
+    "updatedAt": "2026-02-28T00:05:38.690Z",
+    "exitPrice": 0.9695,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "0f86ea82-f411-4854-92a8-f35ebccff70a",
