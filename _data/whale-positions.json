@@ -4755,7 +4755,7 @@
     "entryPrice": 0.9995,
     "currentPrice": 1,
     "shares": 4.86,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Mombil, scottilicious, Roflan, 0xTactic",
     "whaleCount": 4,
@@ -4775,7 +4775,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T10:01:36.231Z"
+    "updatedAt": "2026-02-28T10:05:29.369Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "859715e1-e3d9-4399-ac64-2002cfeb931c",
