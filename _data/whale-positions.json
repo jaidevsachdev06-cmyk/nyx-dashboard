@@ -5122,5 +5122,29 @@
     "currentValue": 4.9493,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "ad45af31-b50a-4d31-b530-c4a810df593f",
+    "market": "Will Iran close the Strait of Hormuz by March 31?",
+    "side": "No",
+    "entryPrice": 0.275,
+    "currentPrice": 0.275,
+    "shares": 20.29,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "cashy, The-Joker, Michael5289",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.1,
+    "avgWinRate": 72.5,
+    "reasoning": "Consensus: 3 whales (avg score 78.1, WR 72.5%) No. bet=$5.58, shares=20.29. Whales: cashy, The-Joker, Michael5289",
+    "endDate": "",
+    "conditionId": "0x561cd8d035bac38ed04e23d7882a126da38d7ead9d6679f722ad62c0c9d54ad2",
+    "createdAt": "2026-02-28T18:05:38.339Z",
+    "entryDate": "2026-02-28T18:05:38.339Z",
+    "invested": 5.5798,
+    "currentValue": 5.5798,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
