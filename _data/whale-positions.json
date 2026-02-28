@@ -4815,7 +4815,7 @@
     "entryPrice": 0.998,
     "currentPrice": 1,
     "shares": 4.79,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "elucidate, scottilicious, 0xTactic",
     "whaleCount": 3,
@@ -4835,7 +4835,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T10:01:44.264Z"
+    "updatedAt": "2026-02-28T10:05:31.972Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "30f7be70-17b1-43f8-8e47-a8a268c9e8c2",
