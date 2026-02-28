@@ -4697,5 +4697,29 @@
     "currentValue": 5.0602,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "a397ee1c-9ed9-494c-80f7-b2190f3dac51",
+    "market": "US strikes Iran by March 1, 2026?",
+    "side": "No",
+    "entryPrice": 0.705,
+    "currentPrice": 0.705,
+    "shares": 7.89,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, debased, 0xTactic",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82,
+    "avgWinRate": 72.3,
+    "reasoning": "Consensus: 3 whales (avg score 82, WR 72.3%) No. bet=$5.56, shares=7.89. Whales: Roflan, debased, 0xTactic",
+    "endDate": "",
+    "conditionId": "0x15aa3c1259a716915e068a0d63c3885d2301d29e8982cbb1717ecb9b63d02d95",
+    "createdAt": "2026-02-28T06:05:36.818Z",
+    "entryDate": "2026-02-28T06:05:36.818Z",
+    "invested": 5.5624,
+    "currentValue": 5.5624,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
