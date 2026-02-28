@@ -6323,9 +6323,9 @@
       "bucket": "13°C",
       "question": "Will the highest temperature in Seoul be 13°C on February 28?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 4.92,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.015,
       "createdAt": "2026-02-27T20:12:23.285Z",
       "signal": {
         "forecastTemp": 15.4,
@@ -6343,7 +6343,11 @@
       "orderId": "paper-mm5bwh35-dnrx",
       "txHash": null,
       "currentPrice": 0.9945,
-      "updatedAt": "2026-02-28T09:00:13.726Z"
+      "updatedAt": "2026-02-28T09:00:13.726Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-02-28T10:07:06.581Z",
+      "closedAt": "2026-02-28T10:07:06.596Z"
     },
     {
       "id": "oc-mm5bwh3b-c7q439",
@@ -6667,7 +6671,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-28T08:07:28.062Z",
+    "lastUpdated": "2026-02-28T10:07:06.599Z",
     "lastPriceSync": "2026-02-28T10:00:12.173Z"
   }
 }
