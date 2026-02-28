@@ -4836,7 +4836,7 @@
     "market": "US strikes Iran by March 6, 2026?",
     "side": "Yes",
     "entryPrice": 0.9985,
-    "currentPrice": 0.9995,
+    "currentPrice": 1,
     "shares": 4.91,
     "status": "open",
     "source": "consensus-scanner",
@@ -4851,14 +4851,14 @@
     "createdAt": "2026-02-28T08:05:40.827Z",
     "entryDate": "2026-02-28T08:05:40.827Z",
     "invested": 4.9026,
-    "currentValue": 4.9075,
-    "pnl": 0.0049,
-    "pnlPercent": 0.1,
+    "currentValue": 4.91,
+    "pnl": 0.0074,
+    "pnlPercent": 0.15,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-02-28T09:31:44.069Z"
+    "updatedAt": "2026-02-28T10:01:48.271Z"
   },
   {
     "id": "4b13dd6d-4f57-4745-8c10-371975359cd4",
