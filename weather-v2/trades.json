@@ -6459,9 +6459,9 @@
       "bucket": "84-85°F",
       "question": "Will the highest temperature in Dallas be between 84-85°F on February 28?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 0,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 6.84,
       "createdAt": "2026-02-27T22:11:49.768Z",
       "signal": {
         "forecastTemp": 81.2,
@@ -6479,7 +6479,11 @@
       "orderId": "paper-mm5g62s3-0ovu",
       "txHash": null,
       "currentPrice": 0.64,
-      "updatedAt": "2026-02-28T17:06:01.800Z"
+      "updatedAt": "2026-02-28T17:06:01.800Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-01T00:06:42.062Z",
+      "closedAt": "2026-03-01T00:06:42.074Z"
     },
     {
       "id": "oc-mm5g62s8-yprcc6",
@@ -6736,9 +6740,9 @@
       "bucket": "54-55°F",
       "question": "Will the highest temperature in Seattle be between 54-55°F on February 28?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 11.26,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -9.9935,
       "createdAt": "2026-02-28T14:11:12.725Z",
       "signal": {
         "forecastTemp": 51.4,
@@ -6756,7 +6760,11 @@
       "orderId": "paper-mm6efun6-428n",
       "txHash": null,
       "currentPrice": 0.084,
-      "updatedAt": "2026-02-28T17:06:04.651Z"
+      "updatedAt": "2026-02-28T17:06:04.651Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-01T00:06:43.723Z",
+      "closedAt": "2026-03-01T00:06:43.733Z"
     },
     {
       "id": "oc-mm6n3boi-0zwpid",
@@ -6968,7 +6976,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-02-28T22:06:57.826Z",
+    "lastUpdated": "2026-03-01T00:06:43.735Z",
     "lastPriceSync": "2026-03-01T00:00:11.825Z"
   }
 }
