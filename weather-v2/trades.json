@@ -6777,9 +6777,9 @@
       "bucket": "≥76°F",
       "question": "Will the highest temperature in Atlanta be 76°F or higher on March 1?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -12.31,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.325,
       "createdAt": "2026-02-28T18:13:24.834Z",
       "signal": {
         "forecastTemp": 71.5,
@@ -6797,7 +6797,11 @@
       "orderId": "paper-mm6n3bp1-97ws",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-03-01T18:00:03.862Z"
+      "updatedAt": "2026-03-01T18:00:03.862Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-01T18:06:41.321Z",
+      "closedAt": "2026-03-01T18:06:41.333Z"
     },
     {
       "id": "oc-mm6n3bp8-ga9prd",
@@ -6893,9 +6897,9 @@
       "bucket": "80-81°F",
       "question": "Will the highest temperature in Miami be between 80-81°F on March 1?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 5.01,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.015,
       "createdAt": "2026-02-28T20:12:26.596Z",
       "signal": {
         "forecastTemp": 75,
@@ -6913,7 +6917,11 @@
       "orderId": "paper-mm6rceic-lfl1",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-01T18:00:07.172Z"
+      "updatedAt": "2026-03-01T18:00:07.172Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-01T18:06:43.151Z",
+      "closedAt": "2026-03-01T18:06:43.161Z"
     },
     {
       "id": "oc-mm6rceii-th8iu7",
@@ -7284,7 +7292,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-01T16:10:55.554Z",
+    "lastUpdated": "2026-03-01T18:06:43.164Z",
     "lastPriceSync": "2026-03-01T18:00:18.321Z"
   }
 }
