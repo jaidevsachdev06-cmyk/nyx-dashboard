@@ -6523,7 +6523,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.99,
+      "pnlUSDC": -0.27,
       "createdAt": "2026-02-28T00:12:07.199Z",
       "signal": {
         "forecastTemp": 26.9,
@@ -6540,8 +6540,8 @@
       "enteredAt": "2026-02-28T00:12:07.214Z",
       "orderId": "paper-mm5kgrsl-nw3c",
       "txHash": null,
-      "currentPrice": 0.715,
-      "updatedAt": "2026-03-01T08:00:02.096Z"
+      "currentPrice": 0.645,
+      "updatedAt": "2026-03-01T08:30:03.721Z"
     },
     {
       "id": "oc-mm5kgrsv-5a2ccs",
@@ -6797,7 +6797,7 @@
       "orderId": "paper-mm6n3bp1-97ws",
       "txHash": null,
       "currentPrice": 0.345,
-      "updatedAt": "2026-03-01T08:00:03.657Z"
+      "updatedAt": "2026-03-01T08:30:04.267Z"
     },
     {
       "id": "oc-mm6n3bp8-ga9prd",
@@ -6812,7 +6812,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -4.16,
+      "pnlUSDC": -3.57,
       "createdAt": "2026-02-28T18:13:24.860Z",
       "signal": {
         "forecastTemp": -3.4,
@@ -6829,8 +6829,8 @@
       "enteredAt": "2026-02-28T18:13:24.870Z",
       "orderId": "paper-mm6n3bpn-z5xx",
       "txHash": null,
-      "currentPrice": 0.49,
-      "updatedAt": "2026-03-01T08:00:05.257Z"
+      "currentPrice": 0.525,
+      "updatedAt": "2026-03-01T08:30:04.816Z"
     },
     {
       "id": "oc-mm6n3bpv-a4p2l7",
@@ -6895,7 +6895,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.97,
+      "pnlUSDC": -3.57,
       "createdAt": "2026-02-28T20:12:26.596Z",
       "signal": {
         "forecastTemp": 75,
@@ -6912,8 +6912,8 @@
       "enteredAt": "2026-02-28T20:12:26.863Z",
       "orderId": "paper-mm6rceic-lfl1",
       "txHash": null,
-      "currentPrice": 0.53,
-      "updatedAt": "2026-03-01T08:00:06.835Z"
+      "currentPrice": 0.495,
+      "updatedAt": "2026-03-01T08:30:05.380Z"
     },
     {
       "id": "oc-mm6rceii-th8iu7",
@@ -6928,7 +6928,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.3,
+      "pnlUSDC": -1.1,
       "createdAt": "2026-02-28T20:12:26.874Z",
       "signal": {
         "forecastTemp": 51.2,
@@ -6945,8 +6945,8 @@
       "enteredAt": "2026-02-28T20:12:26.884Z",
       "orderId": "paper-mm6rceix-2wpj",
       "txHash": null,
-      "currentPrice": 0.61,
-      "updatedAt": "2026-03-01T08:00:08.433Z"
+      "currentPrice": 0.57,
+      "updatedAt": "2026-03-01T08:30:05.938Z"
     },
     {
       "id": "oc-mm6rcej3-kske2g",
@@ -6986,7 +6986,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.28,
+      "pnlUSDC": 1.26,
       "createdAt": "2026-03-01T00:11:32.955Z",
       "signal": {
         "forecastTemp": 62.3,
@@ -7003,8 +7003,8 @@
       "enteredAt": "2026-03-01T00:11:32.967Z",
       "orderId": "paper-mm6zvw18-tik8",
       "txHash": null,
-      "currentPrice": 0.425,
-      "updatedAt": "2026-03-01T08:00:10.061Z"
+      "currentPrice": 0.48,
+      "updatedAt": "2026-03-01T08:30:06.511Z"
     },
     {
       "id": "oc-mm78gqjg-xk66x6",
@@ -7019,7 +7019,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": -2.41,
       "createdAt": "2026-03-01T04:11:42.556Z",
       "signal": {
         "forecastTemp": 34.4,
@@ -7035,7 +7035,9 @@
       "sizeUSDC": 12.18,
       "enteredAt": "2026-03-01T04:11:42.567Z",
       "orderId": "paper-mm78gqjv-qeb3",
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.465,
+      "updatedAt": "2026-03-01T08:30:07.069Z"
     },
     {
       "id": "oc-mm78gqk4-a3e2cq",
@@ -7061,11 +7063,36 @@
         "isLottery": false
       },
       "notes": "Forecast: 34.4°F | Model: 98% vs Market: 71% | Edge: 38.3%"
+    },
+    {
+      "id": "oc-mm7h0nfn-h3g9w2",
+      "conditionId": "0x1ebffbce82c272a042877750d29580b2f8b056b64a8cf888043066b26b380646",
+      "tokenId": "0x68d42e9aaeec631ddf3a376288c574a97b5046d6e97b6656b3f7afc3e77b6a5",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-nyc-on-march-1-2026-42-43f",
+      "city": "New York City",
+      "date": "2026-03-01",
+      "bucket": "42-43°F",
+      "question": "Will the highest temperature in New York City be between 42-43°F on March 1?",
+      "side": "YES",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-01T08:11:08.579Z",
+      "signal": {
+        "forecastTemp": 38.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.0415,
+        "modelProb": 0.1261,
+        "edge": 0.0846,
+        "isLottery": true
+      },
+      "notes": "Forecast: 38.8°F | Model: 13% vs Market: 4% | Edge: 203.9% 🎰LOTTERY"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-01T04:11:42.583Z",
-    "lastPriceSync": "2026-03-01T08:00:12.251Z"
+    "lastUpdated": "2026-03-01T08:11:08.583Z",
+    "lastPriceSync": "2026-03-01T08:30:07.369Z"
   }
 }
