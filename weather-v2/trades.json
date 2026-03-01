@@ -6521,9 +6521,9 @@
       "bucket": "30-31°F",
       "question": "Will the highest temperature in Chicago be between 30-31°F on March 1?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 6.11,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 6.12,
       "createdAt": "2026-02-28T00:12:07.199Z",
       "signal": {
         "forecastTemp": 26.9,
@@ -6541,7 +6541,11 @@
       "orderId": "paper-mm5kgrsl-nw3c",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-01T20:00:03.110Z"
+      "updatedAt": "2026-03-01T20:00:03.110Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-01T20:06:40.243Z",
+      "closedAt": "2026-03-01T20:06:40.256Z"
     },
     {
       "id": "oc-mm5kgrsv-5a2ccs",
@@ -7025,9 +7029,9 @@
       "bucket": "38-39°F",
       "question": "Will the highest temperature in New York City be between 38-39°F on March 1?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -5.25,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 8.82,
       "createdAt": "2026-03-01T04:11:42.556Z",
       "signal": {
         "forecastTemp": 34.4,
@@ -7045,7 +7049,11 @@
       "orderId": "paper-mm78gqjv-qeb3",
       "txHash": null,
       "currentPrice": 0.33,
-      "updatedAt": "2026-03-01T17:06:07.540Z"
+      "updatedAt": "2026-03-01T17:06:07.540Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-01T20:06:43.758Z",
+      "closedAt": "2026-03-01T20:06:43.768Z"
     },
     {
       "id": "oc-mm78gqk4-a3e2cq",
@@ -7292,7 +7300,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-01T18:06:43.164Z",
+    "lastUpdated": "2026-03-01T20:06:43.772Z",
     "lastPriceSync": "2026-03-01T20:00:16.084Z"
   }
 }
