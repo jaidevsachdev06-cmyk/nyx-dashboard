@@ -5577,5 +5577,29 @@
     "currentValue": 5.922,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "6fb03e05-3077-4d81-9e8a-b14085064f14",
+    "market": "Will the Iranian regime fall before 2027?",
+    "side": "No",
+    "entryPrice": 0.415,
+    "currentPrice": 0.415,
+    "shares": 12.46,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Parz1vaI, kekkone",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 83,
+    "avgWinRate": 67.2,
+    "reasoning": "Consensus: 3 whales (avg score 83, WR 67.2%) No. bet=$5.17, shares=12.46. Whales: Car, Parz1vaI, kekkone",
+    "endDate": "",
+    "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+    "createdAt": "2026-03-01T08:05:55.187Z",
+    "entryDate": "2026-03-01T08:05:55.187Z",
+    "invested": 5.1709,
+    "currentValue": 5.1709,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
