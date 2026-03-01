@@ -6541,7 +6541,7 @@
       "orderId": "paper-mm5kgrsl-nw3c",
       "txHash": null,
       "currentPrice": 0.645,
-      "updatedAt": "2026-03-01T08:30:03.721Z"
+      "updatedAt": "2026-03-01T08:30:02.405Z"
     },
     {
       "id": "oc-mm5kgrsv-5a2ccs",
@@ -6797,7 +6797,7 @@
       "orderId": "paper-mm6n3bp1-97ws",
       "txHash": null,
       "currentPrice": 0.345,
-      "updatedAt": "2026-03-01T08:30:04.267Z"
+      "updatedAt": "2026-03-01T08:30:04.016Z"
     },
     {
       "id": "oc-mm6n3bp8-ga9prd",
@@ -6830,7 +6830,7 @@
       "orderId": "paper-mm6n3bpn-z5xx",
       "txHash": null,
       "currentPrice": 0.525,
-      "updatedAt": "2026-03-01T08:30:04.816Z"
+      "updatedAt": "2026-03-01T08:30:05.594Z"
     },
     {
       "id": "oc-mm6n3bpv-a4p2l7",
@@ -6913,7 +6913,7 @@
       "orderId": "paper-mm6rceic-lfl1",
       "txHash": null,
       "currentPrice": 0.495,
-      "updatedAt": "2026-03-01T08:30:05.380Z"
+      "updatedAt": "2026-03-01T08:30:07.159Z"
     },
     {
       "id": "oc-mm6rceii-th8iu7",
@@ -6946,7 +6946,7 @@
       "orderId": "paper-mm6rceix-2wpj",
       "txHash": null,
       "currentPrice": 0.57,
-      "updatedAt": "2026-03-01T08:30:05.938Z"
+      "updatedAt": "2026-03-01T08:30:08.731Z"
     },
     {
       "id": "oc-mm6rcej3-kske2g",
@@ -7004,7 +7004,7 @@
       "orderId": "paper-mm6zvw18-tik8",
       "txHash": null,
       "currentPrice": 0.48,
-      "updatedAt": "2026-03-01T08:30:06.511Z"
+      "updatedAt": "2026-03-01T08:30:10.291Z"
     },
     {
       "id": "oc-mm78gqjg-xk66x6",
@@ -7019,7 +7019,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.41,
+      "pnlUSDC": null,
       "createdAt": "2026-03-01T04:11:42.556Z",
       "signal": {
         "forecastTemp": 34.4,
@@ -7035,9 +7035,7 @@
       "sizeUSDC": 12.18,
       "enteredAt": "2026-03-01T04:11:42.567Z",
       "orderId": "paper-mm78gqjv-qeb3",
-      "txHash": null,
-      "currentPrice": 0.465,
-      "updatedAt": "2026-03-01T08:30:07.069Z"
+      "txHash": null
     },
     {
       "id": "oc-mm78gqk4-a3e2cq",
@@ -7093,6 +7091,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-01T08:11:08.583Z",
-    "lastPriceSync": "2026-03-01T08:30:07.369Z"
+    "lastPriceSync": "2026-03-01T08:30:12.499Z"
   }
 }
