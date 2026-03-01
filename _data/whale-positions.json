@@ -5381,7 +5381,7 @@
     "market": "US forcibly removes Khamenei from power by March 31?",
     "side": "No",
     "entryPrice": 0.868,
-    "currentPrice": 0.997,
+    "currentPrice": 0.9984999999999999,
     "shares": 5.37,
     "status": "open",
     "source": "consensus-scanner",
@@ -5396,14 +5396,14 @@
     "createdAt": "2026-03-01T04:05:25.382Z",
     "entryDate": "2026-03-01T04:05:25.382Z",
     "invested": 4.6612,
-    "currentValue": 5.3539,
-    "pnl": 0.6927,
-    "pnlPercent": 14.86,
+    "currentValue": 5.3619,
+    "pnl": 0.7008,
+    "pnlPercent": 15.03,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T07:31:15.428Z"
+    "updatedAt": "2026-03-01T08:01:15.740Z"
   },
   {
     "id": "dda670b5-d403-4f0b-8d85-d995dd5cd96c",
