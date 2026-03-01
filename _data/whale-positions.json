@@ -5505,5 +5505,29 @@
     "currentValue": 5.2046,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "57723bac-89f0-4208-8d4d-cf1fd43d99a0",
+    "market": "Will Marco Rubio win the 2028 Republican presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.1625,
+    "currentPrice": 0.1625,
+    "shares": 31.82,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Brokie, Car, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 85.6,
+    "avgWinRate": 67.2,
+    "reasoning": "Consensus: 3 whales (avg score 85.6, WR 67.2%) Yes. bet=$5.17, shares=31.82. Whales: Brokie, Car, GollumGekko",
+    "endDate": "",
+    "conditionId": "0x21ad31a46bfaa51650766eff6dc69c866959e32d965ffb116020e37694b6317d",
+    "createdAt": "2026-03-01T08:05:37.570Z",
+    "entryDate": "2026-03-01T08:05:37.570Z",
+    "invested": 5.1707,
+    "currentValue": 5.1707,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
