@@ -5170,9 +5170,9 @@
     "market": "Khamenei out as Supreme Leader of Iran by June 30?",
     "side": "Yes",
     "entryPrice": 0.961,
-    "currentPrice": 0.9935,
+    "currentPrice": 0.996,
     "shares": 6.4,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "cashy, kfkNBApro1, MuddyRC, Michael5289",
     "whaleCount": 4,
@@ -5185,14 +5185,16 @@
     "createdAt": "2026-02-28T20:05:23.633Z",
     "entryDate": "2026-02-28T20:05:23.633Z",
     "invested": 6.1504,
-    "currentValue": 6.3584,
-    "pnl": 0.208,
-    "pnlPercent": 3.38,
+    "currentValue": 6.3744,
+    "pnl": 0.224,
+    "pnlPercent": 3.64,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T00:01:03.270Z"
+    "updatedAt": "2026-03-01T00:05:34.925Z",
+    "exitPrice": 0.996,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "5839cd35-e7c1-4560-8bc8-d0034734fe0a",
