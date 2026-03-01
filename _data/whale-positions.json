@@ -5112,7 +5112,7 @@
     "market": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
     "side": "Yes",
     "entryPrice": 0.336,
-    "currentPrice": 0.34,
+    "currentPrice": 0.342,
     "shares": 14.73,
     "status": "open",
     "source": "consensus-scanner",
@@ -5127,14 +5127,14 @@
     "createdAt": "2026-02-28T18:05:28.750Z",
     "entryDate": "2026-02-28T18:05:28.750Z",
     "invested": 4.9493,
-    "currentValue": 5.0082,
-    "pnl": 0.0589,
-    "pnlPercent": 1.19,
+    "currentValue": 5.0377,
+    "pnl": 0.0884,
+    "pnlPercent": 1.79,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T01:00:57.602Z"
+    "updatedAt": "2026-03-01T01:30:59.735Z"
   },
   {
     "id": "ad45af31-b50a-4d31-b530-c4a810df593f",
