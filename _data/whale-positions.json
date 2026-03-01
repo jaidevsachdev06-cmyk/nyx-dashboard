@@ -5366,5 +5366,29 @@
     "currentValue": 5.0812,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "d040c0dc-4cbf-413f-a72a-ec6a37322070",
+    "market": "US forcibly removes Khamenei from power by March 31?",
+    "side": "No",
+    "entryPrice": 0.868,
+    "currentPrice": 0.868,
+    "shares": 5.37,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Mombil, The-Joker, DOJ",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75.4,
+    "avgWinRate": 60.6,
+    "reasoning": "Consensus: 3 whales (avg score 75.4, WR 60.6%) No. bet=$4.66, shares=5.37. Whales: Mombil, The-Joker, DOJ",
+    "endDate": "",
+    "conditionId": "0x307a56c2575036f0e7dc5eb6ca4a291050a7ebcab5b0822ac48939eae0d4f8f5",
+    "createdAt": "2026-03-01T04:05:25.382Z",
+    "entryDate": "2026-03-01T04:05:25.382Z",
+    "invested": 4.6612,
+    "currentValue": 4.6612,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
