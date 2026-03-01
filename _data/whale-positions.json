@@ -5087,9 +5087,9 @@
     "market": "Russia x Ukraine ceasefire by March 31, 2026?",
     "side": "No",
     "entryPrice": 0.965,
-    "currentPrice": 1,
+    "currentPrice": 0.9615,
     "shares": 5.64,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "0xTactic, Gr33d, GollumGekko",
     "whaleCount": 3,
@@ -5102,14 +5102,16 @@
     "createdAt": "2026-02-28T14:05:23.849Z",
     "entryDate": "2026-02-28T14:05:23.849Z",
     "invested": 5.4426,
-    "currentValue": 5.64,
-    "pnl": 0.1974,
-    "pnlPercent": 3.63,
+    "currentValue": 5.4229,
+    "pnl": -0.0197,
+    "pnlPercent": -0.36,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T22:00:50.145Z"
+    "updatedAt": "2026-03-01T22:05:35.760Z",
+    "exitPrice": 0.9615,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "daf66a27-f2f9-4790-99d0-36d9f1769fc0",
