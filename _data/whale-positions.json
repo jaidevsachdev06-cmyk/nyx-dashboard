@@ -5677,7 +5677,7 @@
     "entryPrice": 0.9985,
     "currentPrice": 1,
     "shares": 4.74,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "cashy, LinaBell, Sonix, The-Joker",
     "whaleCount": 4,
@@ -5697,7 +5697,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T12:01:55.481Z"
+    "updatedAt": "2026-03-01T12:05:20.319Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "8d809d71-e8b1-480a-ab49-764dd50ebf0b",
