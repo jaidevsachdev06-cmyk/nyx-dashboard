@@ -5342,5 +5342,29 @@
       {}
     ],
     "updatedAt": "2026-03-01T04:01:14.796Z"
+  },
+  {
+    "id": "4e2c4a4d-e17c-4dcb-86b2-29b69fce1ddb",
+    "market": "Will US or Israel strike Iran first?",
+    "side": "US",
+    "entryPrice": 0.4065,
+    "currentPrice": 0.4065,
+    "shares": 12.5,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "aenews, The-Joker, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.4,
+    "avgWinRate": 66,
+    "reasoning": "Consensus: 3 whales (avg score 78.4, WR 66%) US. bet=$5.08, shares=12.5. Whales: aenews, The-Joker, GollumGekko",
+    "endDate": "",
+    "conditionId": "0x6f01b7736bea0faed4087b73e2ab3592446cef68ea9eef8d314b2484f682228a",
+    "createdAt": "2026-03-01T04:05:20.395Z",
+    "entryDate": "2026-03-01T04:05:20.395Z",
+    "invested": 5.0812,
+    "currentValue": 5.0812,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
