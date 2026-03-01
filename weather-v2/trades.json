@@ -6523,7 +6523,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.09,
+      "pnlUSDC": -1.53,
       "createdAt": "2026-02-28T00:12:07.199Z",
       "signal": {
         "forecastTemp": 26.9,
@@ -6540,8 +6540,8 @@
       "enteredAt": "2026-02-28T00:12:07.214Z",
       "orderId": "paper-mm5kgrsl-nw3c",
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-03-01T00:00:03.187Z"
+      "currentPrice": 0.575,
+      "updatedAt": "2026-03-01T00:30:04.104Z"
     },
     {
       "id": "oc-mm5kgrsv-5a2ccs",
@@ -6779,7 +6779,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.19,
+      "pnlUSDC": -2.75,
       "createdAt": "2026-02-28T18:13:24.834Z",
       "signal": {
         "forecastTemp": 71.5,
@@ -6796,8 +6796,8 @@
       "enteredAt": "2026-02-28T18:13:24.848Z",
       "orderId": "paper-mm6n3bp1-97ws",
       "txHash": null,
-      "currentPrice": 0.315,
-      "updatedAt": "2026-03-01T00:00:05.775Z"
+      "currentPrice": 0.33,
+      "updatedAt": "2026-03-01T00:30:04.663Z"
     },
     {
       "id": "oc-mm6n3bp8-ga9prd",
@@ -6812,7 +6812,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.26,
+      "pnlUSDC": 0,
       "createdAt": "2026-02-28T18:13:24.860Z",
       "signal": {
         "forecastTemp": -3.4,
@@ -6829,8 +6829,8 @@
       "enteredAt": "2026-02-28T18:13:24.870Z",
       "orderId": "paper-mm6n3bpn-z5xx",
       "txHash": null,
-      "currentPrice": 0.72,
-      "updatedAt": "2026-03-01T00:00:07.456Z"
+      "currentPrice": 0.735,
+      "updatedAt": "2026-03-01T00:30:05.233Z"
     },
     {
       "id": "oc-mm6n3bpv-a4p2l7",
@@ -6895,7 +6895,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.36,
+      "pnlUSDC": -1.27,
       "createdAt": "2026-02-28T20:12:26.596Z",
       "signal": {
         "forecastTemp": 75,
@@ -6912,8 +6912,8 @@
       "enteredAt": "2026-02-28T20:12:26.863Z",
       "orderId": "paper-mm6rceic-lfl1",
       "txHash": null,
-      "currentPrice": 0.625,
-      "updatedAt": "2026-03-01T00:00:09.017Z"
+      "currentPrice": 0.63,
+      "updatedAt": "2026-03-01T00:30:05.776Z"
     },
     {
       "id": "oc-mm6rceii-th8iu7",
@@ -6928,7 +6928,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.2,
+      "pnlUSDC": 0.7,
       "createdAt": "2026-02-28T20:12:26.874Z",
       "signal": {
         "forecastTemp": 51.2,
@@ -6945,8 +6945,8 @@
       "enteredAt": "2026-02-28T20:12:26.884Z",
       "orderId": "paper-mm6rceix-2wpj",
       "txHash": null,
-      "currentPrice": 0.635,
-      "updatedAt": "2026-03-01T00:00:10.624Z"
+      "currentPrice": 0.66,
+      "updatedAt": "2026-03-01T00:30:06.336Z"
     },
     {
       "id": "oc-mm6rcej3-kske2g",
@@ -6972,11 +6972,44 @@
         "isLottery": false
       },
       "notes": "Forecast: 51.2°F | Model: 96% vs Market: 76% | Edge: 26.7%"
+    },
+    {
+      "id": "oc-mm6zvw0r-vafejd",
+      "conditionId": "0x9bce0c9e6df525a888c75aeca7325d37cf265d0e576b9907e1ce5b6a7b1d08d3",
+      "tokenId": "43537896084713575605206098326470869362650020892329458208917883350065249848666",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-2-2026-66forhigher",
+      "city": "Atlanta",
+      "date": "2026-03-02",
+      "bucket": "≥66°F",
+      "question": "Will the highest temperature in Atlanta be 66°F or higher on March 2?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -0.28,
+      "createdAt": "2026-03-01T00:11:32.955Z",
+      "signal": {
+        "forecastTemp": 62.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.435,
+        "modelProb": 0.8997,
+        "edge": 0.4647,
+        "isLottery": false
+      },
+      "notes": "Forecast: 62.3°F | Model: 90% vs Market: 44% | Edge: 106.8%",
+      "entryPrice": 0.435,
+      "size": 28,
+      "sizeUSDC": 12.18,
+      "enteredAt": "2026-03-01T00:11:32.967Z",
+      "orderId": "paper-mm6zvw18-tik8",
+      "txHash": null,
+      "currentPrice": 0.425,
+      "updatedAt": "2026-03-01T00:30:06.878Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-01T00:06:43.735Z",
-    "lastPriceSync": "2026-03-01T00:00:11.825Z"
+    "lastUpdated": "2026-03-01T00:11:32.976Z",
+    "lastPriceSync": "2026-03-01T00:30:07.178Z"
   }
 }
