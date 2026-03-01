@@ -5457,5 +5457,29 @@
     "currentValue": 5.0516,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "68ee202d-236d-40b2-8809-08818688e342",
+    "market": "Will the US confirm that aliens exist before 2027?",
+    "side": "No",
+    "entryPrice": 0.815,
+    "currentPrice": 0.815,
+    "shares": 6.26,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Thonker, GollumGekko, x.compolymarketbet, kekkone",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 78.7,
+    "avgWinRate": 66.3,
+    "reasoning": "Consensus: 4 whales (avg score 78.7, WR 66.3%) No. bet=$5.10, shares=6.26. Whales: Thonker, GollumGekko, x.compolymarketbet, kekkone",
+    "endDate": "",
+    "conditionId": "0x747dc809fb79e1b05be09c42d6179459a58de2ef3e40f02484a4e1260f741f75",
+    "createdAt": "2026-03-01T08:05:27.535Z",
+    "entryDate": "2026-03-01T08:05:27.535Z",
+    "invested": 5.1019,
+    "currentValue": 5.1019,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
