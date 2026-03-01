@@ -5787,5 +5787,29 @@
       {}
     ],
     "updatedAt": "2026-03-01T18:02:01.413Z"
+  },
+  {
+    "id": "4d11a4cd-f5fe-48c1-acc1-6addc1de042e",
+    "market": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+    "side": "Yes",
+    "entryPrice": 0.9625,
+    "currentPrice": 0.9625,
+    "shares": 5.35,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "debased, Mombil, JAHODA",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78,
+    "avgWinRate": 67,
+    "reasoning": "Consensus: 3 whales (avg score 78, WR 67%) Yes. bet=$5.15, shares=5.35. Whales: debased, Mombil, JAHODA",
+    "endDate": "",
+    "conditionId": "0x257b18205f908aef01ef2d1d50e6fea7d29cf5486fe04031d8b101394476faed",
+    "createdAt": "2026-03-01T18:05:19.521Z",
+    "entryDate": "2026-03-01T18:05:19.521Z",
+    "invested": 5.1494,
+    "currentValue": 5.1494,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
