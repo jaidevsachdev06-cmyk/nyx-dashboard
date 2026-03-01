@@ -5304,5 +5304,29 @@
     "currentValue": 5.7905,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "b72b73bb-8f11-4213-a3d6-ca86556abd2b",
+    "market": "Will the US strike Iran next?",
+    "side": "No",
+    "entryPrice": 0.9395,
+    "currentPrice": 0.9395,
+    "shares": 5.84,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "The-Joker, GollumGekko, Gr33d",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 79.6,
+    "avgWinRate": 71.4,
+    "reasoning": "Consensus: 3 whales (avg score 79.6, WR 71.4%) No. bet=$5.49, shares=5.84. Whales: The-Joker, GollumGekko, Gr33d",
+    "endDate": "",
+    "conditionId": "0xd054d5a23d72e41369a4bdd3a7170b9a55ea1b8023cd579588692ec0a7601288",
+    "createdAt": "2026-03-01T00:05:30.178Z",
+    "entryDate": "2026-03-01T00:05:30.178Z",
+    "invested": 5.4867,
+    "currentValue": 5.4867,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
