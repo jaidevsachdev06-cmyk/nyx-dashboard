@@ -5383,9 +5383,9 @@
     "market": "US forcibly removes Khamenei from power by March 31?",
     "side": "No",
     "entryPrice": 0.868,
-    "currentPrice": 0.9984999999999999,
+    "currentPrice": 0.9985,
     "shares": 5.37,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Mombil, The-Joker, DOJ",
     "whaleCount": 3,
@@ -5405,7 +5405,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T08:01:15.740Z"
+    "updatedAt": "2026-03-01T08:06:07.214Z",
+    "exitPrice": 0.9985,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "dda670b5-d403-4f0b-8d85-d995dd5cd96c",
