@@ -5818,5 +5818,29 @@
       {}
     ],
     "updatedAt": "2026-03-01T20:02:01.660Z"
+  },
+  {
+    "id": "3477d686-6a77-47d5-a546-5484539e6c82",
+    "market": "Will the Iranian regime fall by June 30?",
+    "side": "No",
+    "entryPrice": 0.575,
+    "currentPrice": 0.575,
+    "shares": 9.77,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, archaic, kekkone",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 91.2,
+    "avgWinRate": 73.1,
+    "reasoning": "Consensus: 3 whales (avg score 91.2, WR 73.1%) No. bet=$5.62, shares=9.77. Whales: Car, archaic, kekkone",
+    "endDate": "",
+    "conditionId": "0x9352c559e9648ab4cab236087b64ca85c5b7123a4c7d9d7d4efde4a39c18056f",
+    "createdAt": "2026-03-01T20:05:20.859Z",
+    "entryDate": "2026-03-01T20:05:20.859Z",
+    "invested": 5.6177,
+    "currentValue": 5.6177,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
