@@ -4347,7 +4347,7 @@
     "entryPrice": 0.426,
     "currentPrice": 0.4135,
     "shares": 11.92,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Mombil, Brokie, debased",
     "whaleCount": 3,
@@ -4367,7 +4367,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T04:00:41.136Z"
+    "updatedAt": "2026-03-01T04:05:29.422Z",
+    "exitPrice": 0.4135,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "43e5da81-eeb5-42a2-b0ae-5fa9d7c25ae9",
