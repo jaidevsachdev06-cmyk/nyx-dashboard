@@ -5472,7 +5472,7 @@
     "market": "Will the US confirm that aliens exist before 2027?",
     "side": "No",
     "entryPrice": 0.815,
-    "currentPrice": 0.815,
+    "currentPrice": 0.805,
     "shares": 6.26,
     "status": "open",
     "source": "consensus-scanner",
@@ -5487,14 +5487,14 @@
     "createdAt": "2026-03-01T08:05:27.535Z",
     "entryDate": "2026-03-01T08:05:27.535Z",
     "invested": 5.1019,
-    "currentValue": 5.1019,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 5.0393,
+    "pnl": -0.0626,
+    "pnlPercent": -1.23,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T10:01:19.093Z"
+    "updatedAt": "2026-03-01T10:31:19.698Z"
   },
   {
     "id": "d541991e-b946-4281-bc37-e1f0d16e33e0",
