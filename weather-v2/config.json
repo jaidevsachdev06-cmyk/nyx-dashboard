@@ -88,14 +88,6 @@
       "unit": "F"
     },
     {
-      "name": "London",
-      "lat": 51.5074,
-      "lon": -0.1278,
-      "tz": "Europe/London",
-      "station": "EGLC",
-      "unit": "C"
-    },
-    {
       "name": "Toronto",
       "lat": 43.6532,
       "lon": -79.3832,
