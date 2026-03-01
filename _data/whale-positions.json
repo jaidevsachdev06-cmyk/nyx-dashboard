@@ -5900,5 +5900,29 @@
     "currentValue": 4.6777,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "2921a65e-af60-4674-aa2c-e83b4bf1d7b9",
+    "market": "US x Iran ceasefire by March 2?",
+    "side": "No",
+    "entryPrice": 0.974,
+    "currentPrice": 0.974,
+    "shares": 4.88,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "arjenw, scottilicious, cashy",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 79.4,
+    "avgWinRate": 61.8,
+    "reasoning": "Consensus: 3 whales (avg score 79.4, WR 61.8%) No. bet=$4.75, shares=4.88. Whales: arjenw, scottilicious, cashy",
+    "endDate": "",
+    "conditionId": "0x184f4a327edc0cd0af1f409980f6cc8d227fa96855625ce1ae9dad10e80057a1",
+    "createdAt": "2026-03-01T22:05:26.555Z",
+    "entryDate": "2026-03-01T22:05:26.555Z",
+    "invested": 4.7531,
+    "currentValue": 4.7531,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
