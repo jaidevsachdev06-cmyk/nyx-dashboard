@@ -5352,7 +5352,7 @@
     "market": "Will US or Israel strike Iran first?",
     "side": "US",
     "entryPrice": 0.4065,
-    "currentPrice": 0.433,
+    "currentPrice": 0.441,
     "shares": 12.5,
     "status": "open",
     "source": "consensus-scanner",
@@ -5367,14 +5367,14 @@
     "createdAt": "2026-03-01T04:05:20.395Z",
     "entryDate": "2026-03-01T04:05:20.395Z",
     "invested": 5.0812,
-    "currentValue": 5.4125,
-    "pnl": 0.3313,
-    "pnlPercent": 6.52,
+    "currentValue": 5.5125,
+    "pnl": 0.4313,
+    "pnlPercent": 8.49,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T07:01:13.513Z"
+    "updatedAt": "2026-03-01T07:31:11.836Z"
   },
   {
     "id": "d040c0dc-4cbf-413f-a72a-ec6a37322070",
