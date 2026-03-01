@@ -5325,7 +5325,7 @@
     "market": "Will the US strike Iran next?",
     "side": "No",
     "entryPrice": 0.9395,
-    "currentPrice": 0.97,
+    "currentPrice": 0.972,
     "shares": 5.84,
     "status": "open",
     "source": "consensus-scanner",
@@ -5340,14 +5340,14 @@
     "createdAt": "2026-03-01T00:05:30.178Z",
     "entryDate": "2026-03-01T00:05:30.178Z",
     "invested": 5.4867,
-    "currentValue": 5.6648,
-    "pnl": 0.1781,
-    "pnlPercent": 3.25,
+    "currentValue": 5.6765,
+    "pnl": 0.1898,
+    "pnlPercent": 3.46,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T08:01:07.964Z"
+    "updatedAt": "2026-03-01T08:31:03.603Z"
   },
   {
     "id": "4e2c4a4d-e17c-4dcb-86b2-29b69fce1ddb",
