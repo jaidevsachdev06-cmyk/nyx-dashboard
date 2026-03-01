@@ -5203,7 +5203,7 @@
     "entryPrice": 0.9865,
     "currentPrice": 1,
     "shares": 5.02,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Brokie, Snoorrason, Gr33d",
     "whaleCount": 3,
@@ -5223,7 +5223,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T02:01:03.450Z"
+    "updatedAt": "2026-03-01T02:05:23.196Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "41e1b3c4-15c6-4329-916a-433f9cc879c7",
