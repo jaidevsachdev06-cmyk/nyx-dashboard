@@ -5478,7 +5478,7 @@
     "entryPrice": 0.815,
     "currentPrice": 0.805,
     "shares": 6.26,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Thonker, GollumGekko, x.compolymarketbet, kekkone",
     "whaleCount": 4,
@@ -5498,7 +5498,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T22:01:20.889Z"
+    "updatedAt": "2026-03-01T22:05:38.453Z",
+    "exitPrice": 0.805,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "d541991e-b946-4281-bc37-e1f0d16e33e0",
