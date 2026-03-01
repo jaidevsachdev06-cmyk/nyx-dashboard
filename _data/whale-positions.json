@@ -5404,5 +5404,29 @@
       {}
     ],
     "updatedAt": "2026-03-01T06:01:17.688Z"
+  },
+  {
+    "id": "dda670b5-d403-4f0b-8d85-d995dd5cd96c",
+    "market": "Will Graham Platner be the Democratic nominee for Senate in Maine?",
+    "side": "Yes",
+    "entryPrice": 0.725,
+    "currentPrice": 0.725,
+    "shares": 6.9,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Mombil, Ozi, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75.7,
+    "avgWinRate": 65,
+    "reasoning": "Consensus: 3 whales (avg score 75.7, WR 65%) Yes. bet=$5.00, shares=6.9. Whales: Mombil, Ozi, GollumGekko",
+    "endDate": "",
+    "conditionId": "0x807a5bd3d52942c2d8b58bf71a583d4aa03a637f3fd9ff7a7c4a1ad818003067",
+    "createdAt": "2026-03-01T06:05:19.504Z",
+    "entryDate": "2026-03-01T06:05:19.504Z",
+    "invested": 5.0025,
+    "currentValue": 5.0025,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
