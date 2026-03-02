@@ -50,13 +50,14 @@ async function processCandidate(signal) {
     return { entered: false, trade: null, reason: `Insufficient edge: ${edgePct.toFixed(1)}% (min: ${config.risk.minEdgePct}%)` };
   }
 
-  // Sanity check: reject extreme edges (>300%) as likely model/data errors or illiquid markets
-  if (edgePct > 300) {
+  // Lottery trade classification: low model prob (<60%) + high edge (>100%) + cheap price (<$0.15)
+  // Check lottery BEFORE the 300% edge cap — lottery trades naturally have extreme edges
+  const isLottery = signal.modelProb < 0.6 && signal.modelProb >= 0.08 && edgePct > 100 && edgePct <= 250 && currentPrice < 0.15;
+
+  // Sanity check: reject extreme edges (>300%) for NON-lottery trades only
+  if (!isLottery && edgePct > 300) {
     return { entered: false, trade: null, reason: `Edge too extreme: ${edgePct.toFixed(0)}% (likely data error or illiquid market)` };
   }
-
-  // Lottery trade classification: low model prob (<60%) + high edge (>100%) + cheap price (<$0.15)
-  const isLottery = signal.modelProb < 0.6 && signal.modelProb >= 0.08 && edgePct > 100 && edgePct <= 250 && currentPrice < 0.15;
 
   if (isLottery) {
     // Count lottery trades entered today
