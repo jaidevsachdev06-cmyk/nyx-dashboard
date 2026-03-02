@@ -7054,5 +7054,29 @@
       {}
     ],
     "updatedAt": "2026-03-02T14:04:28.347Z"
+  },
+  {
+    "id": "82661ff5-fb06-4a72-af4c-26c25420503b",
+    "market": "Gemini 3.5 released by March 31?",
+    "side": "No",
+    "entryPrice": 0.971,
+    "currentPrice": 0.971,
+    "shares": 5.41,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Gr33d, Xeny, Parz1vaI",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 77.2,
+    "avgWinRate": 68.3,
+    "reasoning": "Consensus: 3 whales (avg score 77.2, WR 68.3%) No. bet=$5.25, shares=5.41, tierMult=1.00. Whales: Gr33d, Xeny, Parz1vaI",
+    "endDate": "",
+    "conditionId": "0x71a19e7e026a18226914d6d637c6ec3faba1cd792d8c0e5c9fea18260c37fe8f",
+    "createdAt": "2026-03-02T14:06:24.859Z",
+    "entryDate": "2026-03-02T14:06:24.859Z",
+    "invested": 5.2531,
+    "currentValue": 5.2531,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
