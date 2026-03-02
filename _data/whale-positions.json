@@ -5718,7 +5718,7 @@
     "market": "Will Alexandria Ocasio-Cortez win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.0905,
-    "currentPrice": 0.088,
+    "currentPrice": 1,
     "shares": 56.8,
     "status": "open",
     "source": "consensus-scanner",
@@ -5733,14 +5733,14 @@
     "createdAt": "2026-03-01T10:05:29.361Z",
     "entryDate": "2026-03-01T10:05:29.361Z",
     "invested": 5.1404,
-    "currentValue": 4.9984,
-    "pnl": -0.142,
-    "pnlPercent": -2.76,
+    "currentValue": 56.8,
+    "pnl": 51.6596,
+    "pnlPercent": 1004.97,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T19:01:24.968Z"
+    "updatedAt": "2026-03-02T19:31:28.826Z"
   },
   {
     "id": "c6f02ca9-3e53-461d-bc11-12ea1244446a",
