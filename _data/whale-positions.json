@@ -5770,9 +5770,9 @@
     "market": "Will Iran close the Strait of Hormuz before 2027?",
     "side": "Yes",
     "entryPrice": 0.7035,
-    "currentPrice": 0.41,
+    "currentPrice": 0.4005,
     "shares": 7.09,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "aenews, Car, Parz1vaI",
     "whaleCount": 3,
@@ -5785,14 +5785,16 @@
     "createdAt": "2026-03-01T16:05:21.983Z",
     "entryDate": "2026-03-01T16:05:21.983Z",
     "invested": 4.9878,
-    "currentValue": 2.9069,
-    "pnl": -2.0809,
-    "pnlPercent": -41.72,
+    "currentValue": 2.8395,
+    "pnl": -2.1483,
+    "pnlPercent": -43.07,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T00:01:42.253Z"
+    "updatedAt": "2026-03-02T00:05:23.970Z",
+    "exitPrice": 0.4005,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "4d11a4cd-f5fe-48c1-acc1-6addc1de042e",
