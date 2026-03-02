@@ -7190,9 +7190,9 @@
       "bucket": "82-83°F",
       "question": "Will the highest temperature in Miami be between 82-83°F on March 2?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 23.5,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 23.495,
       "createdAt": "2026-03-01T12:11:02.431Z",
       "signal": {
         "forecastTemp": 79.7,
@@ -7210,7 +7210,11 @@
       "orderId": "paper-mm7pl5tf-uf1y",
       "txHash": null,
       "currentPrice": 0.235,
-      "updatedAt": "2026-03-02T13:00:11.756Z"
+      "updatedAt": "2026-03-02T13:00:11.756Z",
+      "resolutionPrice": 0.235,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-02T13:10:30.047Z",
+      "closedAt": "2026-03-02T13:10:30.060Z"
     },
     {
       "id": "oc-mm7tvfmr-dktjfu",
@@ -7564,7 +7568,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-02T10:11:56.652Z",
+    "lastUpdated": "2026-03-02T13:10:30.063Z",
     "lastPriceSync": "2026-03-02T13:00:16.534Z"
   }
 }
