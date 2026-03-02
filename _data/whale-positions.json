@@ -6276,5 +6276,29 @@
     "currentValue": 9.9411,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "bd736ffe-c7c1-4dd0-b5c2-31a9b31a8067",
+    "market": "Russia x Ukraine ceasefire by end of 2026?",
+    "side": "Yes",
+    "entryPrice": 0.375,
+    "currentPrice": 0.375,
+    "shares": 14.37,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, UbuntuTrading, GollumGekko, dontshowmyname",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 85.4,
+    "avgWinRate": 70.1,
+    "reasoning": "Consensus: 4 whales (avg score 85.4, WR 70.1%) Yes. bet=$5.39, shares=14.37, tierMult=1.00. Whales: Car, UbuntuTrading, GollumGekko, dontshowmyname",
+    "endDate": "",
+    "conditionId": "0xaeea5f917fc5746387b5f9c0a4263dba035dbb3f0ac6ad72bf92183d21e26739",
+    "createdAt": "2026-03-02T10:57:27.296Z",
+    "entryDate": "2026-03-02T10:57:27.296Z",
+    "invested": 5.3887,
+    "currentValue": 5.3887,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
