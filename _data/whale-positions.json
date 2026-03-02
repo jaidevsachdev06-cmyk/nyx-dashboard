@@ -6852,5 +6852,29 @@
     "currentValue": 4.4094,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "dfdf99e5-76fc-46a4-9dc7-32d4602fbc06",
+    "market": "SpaceX (Space Exploration Technologies Corp.) IPO before 2027?",
+    "side": "No",
+    "entryPrice": 0.145,
+    "currentPrice": 0.145,
+    "shares": 30.21,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Thonker, LinaBell, dontshowmyname",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 74.3,
+    "avgWinRate": 57,
+    "reasoning": "Consensus: 3 whales (avg score 74.3, WR 57%) No. bet=$4.38, shares=30.21, tierMult=1.00. Whales: Thonker, LinaBell, dontshowmyname",
+    "endDate": "",
+    "conditionId": "0xc8a898fa8ce2121e3bba1ee52120ed8ab4f8ea7ed5a6dcd9b138fe7b9e454c0b",
+    "createdAt": "2026-03-02T11:00:13.813Z",
+    "entryDate": "2026-03-02T11:00:13.813Z",
+    "invested": 4.3804,
+    "currentValue": 4.3804,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
