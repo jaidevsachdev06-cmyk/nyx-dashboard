@@ -6770,7 +6770,7 @@
     "market": "Will Barcelona win the 2025–26 Champions League?",
     "side": "Yes",
     "entryPrice": 0.145,
-    "currentPrice": 0.145,
+    "currentPrice": 0.14500000000000002,
     "shares": 31.24,
     "status": "open",
     "source": "consensus-scanner",
@@ -6787,7 +6787,12 @@
     "invested": 4.5298,
     "currentValue": 4.5298,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-02T11:04:33.241Z"
   },
   {
     "id": "c78c40bf-4c56-4cf9-8478-d5d7b825c736",
