@@ -5540,7 +5540,7 @@
     "market": "Will Marco Rubio win the 2028 Republican presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.1625,
-    "currentPrice": 0.173,
+    "currentPrice": 0.17149999999999999,
     "shares": 31.82,
     "status": "open",
     "source": "consensus-scanner",
@@ -5555,14 +5555,14 @@
     "createdAt": "2026-03-01T08:05:37.570Z",
     "entryDate": "2026-03-01T08:05:37.570Z",
     "invested": 5.1707,
-    "currentValue": 5.5049,
-    "pnl": 0.3341,
-    "pnlPercent": 6.46,
+    "currentValue": 5.4571,
+    "pnl": 0.2864,
+    "pnlPercent": 5.54,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T19:31:12.009Z"
+    "updatedAt": "2026-03-02T20:01:13.579Z"
   },
   {
     "id": "32aa1a49-8a29-49c3-85b2-d79a06831cab",
