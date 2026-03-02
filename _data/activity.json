@@ -1,8 +1,17 @@
 [
   {
+    "id": "8d9fe0fc-0008-4329-8a80-8a98ee2b319b",
+    "agentName": "YOLO Builder",
+    "action": "Built CodeViz \u2014 animated code explainer",
+    "section": "yolo",
+    "status": "success",
+    "details": "Interactive animation demo fully working! Smart code analyzer for Python/JS/Java/C++. Beautiful dark-theme UI with line-by-line reveal, synchronized annotations, playback controls, timeline scrubbing. Hit 15-min rule on video deps (moviepy/ffmpeg), shipped browser-based demo instead. Frame timing engine ready for MP4 export once deps installed. Most ambitious multi-modal build yet.",
+    "timestamp": "2026-03-02T17:06:54.706748+00:00"
+  },
+  {
     "id": "a9e1387d-f4a2-459f-963b-57b4555c217f",
     "agentName": "YOLO Builder",
-    "action": "Built Conviction Journal — prediction calibration tracker",
+    "action": "Built Conviction Journal \u2014 prediction calibration tracker",
     "section": "yolo",
     "status": "success",
     "details": "Fully working prototype with SQLite + Flask API + Chart.js UI. Track predictions with confidence %, see calibration curves, calculate Brier scores. Helps traders separate confidence from bet size. 2-hour build, zero blockers.",
@@ -11,7 +20,7 @@
   {
     "id": "103145cd-27c8-46e8-9589-3fcec30cacc7",
     "agentName": "YOLO Builder",
-    "action": "Built PolyArb — Polymarket arbitrage scanner",
+    "action": "Built PolyArb \u2014 Polymarket arbitrage scanner",
     "section": "yolo",
     "status": "success",
     "details": "Fully working scanner for logical/correlation/time arbitrage. Scanned 100 markets, found 962 correlated pairs. Production-ready tool for catching fleeting arbs. Gamma API integration + keyword extraction + EV calculation.",
@@ -20,7 +29,7 @@
   {
     "id": "26133c07-5837-466d-a313-1eca998fbdc0",
     "agentName": "YOLO Builder",
-    "action": "Built PMVIX — Prediction Market Volatility Index",
+    "action": "Built PMVIX \u2014 Prediction Market Volatility Index",
     "section": "yolo",
     "status": "partial",
     "details": "VIX-like volatility scoring for Polymarket (0-100 based on spread/velocity/depth). Working demo with synthetic data + beautiful Chart.js dashboard. CLOB API blocked (404s) but concept fully validated. Weather markets = high PMVIX, liquid Fed markets = low.",
@@ -30,7 +39,7 @@
     "id": "96ae0d31-1356-4f6b-b03a-ec1aab498b94",
     "agentId": "69ee1fdf-bdd0-401c-b5f7-1676ea412fd2",
     "agentName": "ScholarNyx",
-    "action": "Initial data import complete — 6 exams, 4 presentations/projects, 22 readings & assignments across 5 courses",
+    "action": "Initial data import complete \u2014 6 exams, 4 presentations/projects, 22 readings & assignments across 5 courses",
     "section": "school",
     "status": "success",
     "details": "Imported from AB1201, AD1102, HE5091, AB0403 syllabi + Google Calendar timetable",
@@ -102,8 +111,8 @@
   },
   {
     "id": "536cee40-fb66-4194-9e2c-b4fe1358725c",
-    "agentName": "[UNNAMED — PENDING] 🔮",
-    "action": "Imported sim position: YES Miami 76-77°F",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
+    "action": "Imported sim position: YES Miami 76-77\u00b0F",
     "section": "polymarket",
     "status": "success",
     "details": "Platform: Simmer (sim) | Category: weather | Entry: $0.115 | Shares: 86.3 | Source: NWS hourly + Aviation TAFs",
@@ -111,8 +120,8 @@
   },
   {
     "id": "3faca570-3a2e-4425-a513-dc47c9972ffa",
-    "agentName": "[UNNAMED — PENDING] 🔮",
-    "action": "Imported sim position: YES Seattle 44-45°F",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
+    "action": "Imported sim position: YES Seattle 44-45\u00b0F",
     "section": "polymarket",
     "status": "success",
     "details": "Platform: Simmer (sim) | Category: weather | Entry: $0.29 | Shares: 48.2 | Source: NWS hourly + Aviation TAFs",
@@ -120,8 +129,8 @@
   },
   {
     "id": "c8ce7823-11c1-4a10-897d-b05d5a84bc1e",
-    "agentName": "[UNNAMED — PENDING] 🔮",
-    "action": "Imported sim position: YES Dallas 78-79°F",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
+    "action": "Imported sim position: YES Dallas 78-79\u00b0F",
     "section": "polymarket",
     "status": "success",
     "details": "Platform: Simmer (sim) | Category: weather | Entry: $0.35 | Shares: 45.4 | Source: NWS hourly + Aviation TAFs",
@@ -129,8 +138,8 @@
   },
   {
     "id": "68baaeb8-a98e-48ff-91e3-f9b7e71aceed",
-    "agentName": "[UNNAMED — PENDING] 🔮",
-    "action": "Imported sim position: YES Chicago 60-61°F",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
+    "action": "Imported sim position: YES Chicago 60-61\u00b0F",
     "section": "polymarket",
     "status": "success",
     "details": "Platform: Simmer (sim) | Category: weather | Entry: $0.155 | Shares: 48.8 | Source: NWS hourly + Aviation TAFs",
@@ -138,47 +147,47 @@
   },
   {
     "id": "563b07eb-bffb-452c-aa17-432de466ffe4",
-    "agentName": "[UNNAMED — PENDING] 🔮",
-    "action": "Added to watchlist: Atlanta 68°F+ YES at 74.5¢",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
+    "action": "Added to watchlist: Atlanta 68\u00b0F+ YES at 74.5\u00a2",
     "section": "polymarket",
     "status": "success",
-    "details": "Weather market watchlist item — monitoring for entry opportunity",
+    "details": "Weather market watchlist item \u2014 monitoring for entry opportunity",
     "timestamp": "2026-02-17T08:24:48.515Z"
   },
   {
     "id": "a555c777-9c0a-4caf-b95e-fd92bc0c8255",
-    "agentName": "[UNNAMED — PENDING] 🔮",
-    "action": "Added to watchlist: Atlanta 66-67°F at 13.5¢",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
+    "action": "Added to watchlist: Atlanta 66-67\u00b0F at 13.5\u00a2",
     "section": "polymarket",
     "status": "success",
-    "details": "Weather market watchlist item — monitoring for entry opportunity",
+    "details": "Weather market watchlist item \u2014 monitoring for entry opportunity",
     "timestamp": "2026-02-17T08:24:49.820Z"
   },
   {
     "id": "b39d3ad4-8c23-4ffc-a566-9274c8d8ed6d",
-    "agentName": "[UNNAMED — PENDING] 🔮",
-    "action": "Added to watchlist: Chicago 62-63°F at 24.5¢",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
+    "action": "Added to watchlist: Chicago 62-63\u00b0F at 24.5\u00a2",
     "section": "polymarket",
     "status": "success",
-    "details": "Weather market watchlist item — monitoring for entry opportunity",
+    "details": "Weather market watchlist item \u2014 monitoring for entry opportunity",
     "timestamp": "2026-02-17T08:24:51.117Z"
   },
   {
     "id": "4c4d5008-461b-4f55-b825-b9c9fe3e519d",
-    "agentName": "[UNNAMED — PENDING] 🔮",
-    "action": "Added to watchlist: Miami 78-79°F at 39¢",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
+    "action": "Added to watchlist: Miami 78-79\u00b0F at 39\u00a2",
     "section": "polymarket",
     "status": "success",
-    "details": "Weather market watchlist item — monitoring for entry opportunity",
+    "details": "Weather market watchlist item \u2014 monitoring for entry opportunity",
     "timestamp": "2026-02-17T08:24:52.467Z"
   },
   {
     "id": "bc1f1e2f-7be8-49cb-bc08-76b175e1bce5",
-    "agentName": "[UNNAMED — PENDING] 🔮",
+    "agentName": "[UNNAMED \u2014 PENDING] \ud83d\udd2e",
     "action": "Initialized weather trading strategy",
     "section": "polymarket",
     "status": "success",
-    "details": "Strategy: Compare NWS hourly forecasts + aviation TAFs to Polymarket weather bucket prices. Trade when edge ≥10%. Sources: NWS hourly (api.weather.gov), Aviation TAFs (aviationweather.gov), ECMWF ensembles, pilot forums. Cities: NYC, Chicago, Dallas, Atlanta, Miami, Seattle. Risk: max $20/trade, max 5 trades/scan. Paper trading on Simmer ($SIM). First batch: 5 positions totaling $76.07 exposure.",
+    "details": "Strategy: Compare NWS hourly forecasts + aviation TAFs to Polymarket weather bucket prices. Trade when edge \u226510%. Sources: NWS hourly (api.weather.gov), Aviation TAFs (aviationweather.gov), ECMWF ensembles, pilot forums. Cities: NYC, Chicago, Dallas, Atlanta, Miami, Seattle. Risk: max $20/trade, max 5 trades/scan. Paper trading on Simmer ($SIM). First batch: 5 positions totaling $76.07 exposure.",
     "timestamp": "2026-02-17T08:24:53.794Z"
   }
 ]
