@@ -5859,7 +5859,7 @@
     "market": "Will Reza Pahlavi enter Iran by June 30?",
     "side": "No",
     "entryPrice": 0.715,
-    "currentPrice": 0.685,
+    "currentPrice": 0.705,
     "shares": 7.86,
     "status": "open",
     "source": "consensus-scanner",
@@ -5874,14 +5874,14 @@
     "createdAt": "2026-03-01T20:05:26.014Z",
     "entryDate": "2026-03-01T20:05:26.014Z",
     "invested": 5.6199,
-    "currentValue": 5.3841,
-    "pnl": -0.2358,
-    "pnlPercent": -4.2,
+    "currentValue": 5.5413,
+    "pnl": -0.0786,
+    "pnlPercent": -1.4,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T02:01:49.018Z"
+    "updatedAt": "2026-03-02T02:31:49.131Z"
   },
   {
     "id": "83990b09-6b1e-423b-ac26-71a0156eaeb2",
