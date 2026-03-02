@@ -6068,7 +6068,7 @@
     "market": "Will Sarah Knafo win the Paris mayor election?",
     "side": "No",
     "entryPrice": 0.9845,
-    "currentPrice": 0.9804999999999999,
+    "currentPrice": 0.9795,
     "shares": 5.19,
     "status": "open",
     "source": "consensus-scanner",
@@ -6083,14 +6083,14 @@
     "createdAt": "2026-03-02T02:05:44.949Z",
     "entryDate": "2026-03-02T02:05:44.949Z",
     "invested": 5.1096,
-    "currentValue": 5.0888,
-    "pnl": -0.0208,
-    "pnlPercent": -0.41,
+    "currentValue": 5.0836,
+    "pnl": -0.026,
+    "pnlPercent": -0.51,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T09:02:07.954Z"
+    "updatedAt": "2026-03-02T09:32:16.076Z"
   },
   {
     "id": "a4b04dd3-9f34-4c12-91aa-c68286e62103",
