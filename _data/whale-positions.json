@@ -4175,7 +4175,7 @@
     "entryPrice": 0.055,
     "currentPrice": 0.065,
     "shares": 91.82,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Snoorrason, Rooke Brollins, aenews",
     "whaleCount": 3,
@@ -4195,7 +4195,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T03:00:38.137Z"
+    "updatedAt": "2026-03-02T03:22:59.452Z",
+    "exitPrice": 0.065,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "1592f1c1-a50c-418b-9a48-4b705f4247d0",
