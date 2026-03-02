@@ -6564,5 +6564,29 @@
     "currentValue": 5.01,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "69723fd4-71a5-4e8d-89e4-12c09b028c0c",
+    "market": "Will Kamala Harris win the 2028 Democratic presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.056,
+    "currentPrice": 0.056,
+    "shares": 91.25,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Rooke Brollins, XieGuangKun, failstober",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 81.4,
+    "avgWinRate": 66.4,
+    "reasoning": "Consensus: 3 whales (avg score 81.4, WR 66.4%) Yes. bet=$5.11, shares=91.25, tierMult=1.00. Whales: Rooke Brollins, XieGuangKun, failstober",
+    "endDate": "",
+    "conditionId": "0x909659c9436228e2be56d5582ba6188166f2f8bf3c596335512c8f2e380d01ec",
+    "createdAt": "2026-03-02T10:58:57.604Z",
+    "entryDate": "2026-03-02T10:58:57.604Z",
+    "invested": 5.11,
+    "currentValue": 5.11,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
