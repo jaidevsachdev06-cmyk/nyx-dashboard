@@ -5946,7 +5946,7 @@
     "market": "Will Iran name a successor to Khamenei by March 1?",
     "side": "No",
     "entryPrice": 0.966,
-    "currentPrice": 0.9855,
+    "currentPrice": 0.9884999999999999,
     "shares": 4.88,
     "status": "open",
     "source": "consensus-scanner",
@@ -5961,13 +5961,13 @@
     "createdAt": "2026-03-01T22:05:31.724Z",
     "entryDate": "2026-03-01T22:05:31.724Z",
     "invested": 4.7141,
-    "currentValue": 4.8092,
-    "pnl": 0.0952,
-    "pnlPercent": 2.02,
+    "currentValue": 4.8239,
+    "pnl": 0.1098,
+    "pnlPercent": 2.33,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T01:31:58.524Z"
+    "updatedAt": "2026-03-02T02:02:00.173Z"
   }
 ]
