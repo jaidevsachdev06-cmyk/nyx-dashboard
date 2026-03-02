@@ -7119,7 +7119,7 @@
     "market": "Will Iran close the Strait of Hormuz by June 30?",
     "side": "Yes",
     "entryPrice": 0.436,
-    "currentPrice": 0.73,
+    "currentPrice": 0.623,
     "shares": 12.5,
     "status": "open",
     "source": "consensus-scanner",
@@ -7134,13 +7134,13 @@
     "createdAt": "2026-03-02T20:06:15.921Z",
     "entryDate": "2026-03-02T20:06:15.921Z",
     "invested": 5.45,
-    "currentValue": 9.125,
-    "pnl": 3.675,
-    "pnlPercent": 67.43,
+    "currentValue": 7.7875,
+    "pnl": 2.3375,
+    "pnlPercent": 42.89,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T21:04:18.406Z"
+    "updatedAt": "2026-03-02T21:34:23.954Z"
   }
 ]
