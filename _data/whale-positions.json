@@ -6372,5 +6372,29 @@
     "currentValue": 5.6609,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "50d2a622-7dd2-421c-900e-51bd038bfdf1",
+    "market": "Will the US acquire part of Greenland in 2026?",
+    "side": "Yes",
+    "entryPrice": 0.155,
+    "currentPrice": 0.155,
+    "shares": 36.52,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, UbuntuTrading, TheWolfOfPoly",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 90.3,
+    "avgWinRate": 73.6,
+    "reasoning": "Consensus: 3 whales (avg score 90.3, WR 73.6%) Yes. bet=$5.66, shares=36.52, tierMult=1.00. Whales: Car, UbuntuTrading, TheWolfOfPoly",
+    "endDate": "",
+    "conditionId": "0x890fc3ba40458db0b67560691aa1597344c2a0560d18e80f586a4b35f510b4ce",
+    "createdAt": "2026-03-02T10:57:59.406Z",
+    "entryDate": "2026-03-02T10:57:59.406Z",
+    "invested": 5.6606,
+    "currentValue": 5.6606,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
