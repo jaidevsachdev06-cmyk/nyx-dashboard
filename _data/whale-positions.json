@@ -5509,7 +5509,7 @@
     "market": "Will the US officially declare war on Iran by March 31, 2026?",
     "side": "No",
     "entryPrice": 0.971,
-    "currentPrice": 0.9755,
+    "currentPrice": 0.979,
     "shares": 5.36,
     "status": "open",
     "source": "consensus-scanner",
@@ -5524,14 +5524,14 @@
     "createdAt": "2026-03-01T08:05:32.584Z",
     "entryDate": "2026-03-01T08:05:32.585Z",
     "invested": 5.2046,
-    "currentValue": 5.2287,
-    "pnl": 0.0241,
-    "pnlPercent": 0.46,
+    "currentValue": 5.2474,
+    "pnl": 0.0429,
+    "pnlPercent": 0.82,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T06:01:11.458Z"
+    "updatedAt": "2026-03-02T06:31:12.885Z"
   },
   {
     "id": "57723bac-89f0-4208-8d4d-cf1fd43d99a0",
