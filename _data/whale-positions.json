@@ -6516,5 +6516,29 @@
     "currentValue": 5.0499,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "e2775258-ce7a-4986-989a-0ef411838319",
+    "market": "Opinion FDV above $500M one day after launch?",
+    "side": "Yes",
+    "entryPrice": 0.706,
+    "currentPrice": 0.706,
+    "shares": 6.63,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "donjo, XieGuangKun, Winry",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 81.7,
+    "avgWinRate": 60.9,
+    "reasoning": "Consensus: 3 whales (avg score 81.7, WR 60.9%) Yes. bet=$4.68, shares=6.63, tierMult=1.00. Whales: donjo, XieGuangKun, Winry",
+    "endDate": "",
+    "conditionId": "0xc2a5288cfb90005abfbf15b5c5fd963a891a1f41373c9f52797e10a6274de37f",
+    "createdAt": "2026-03-02T10:58:47.218Z",
+    "entryDate": "2026-03-02T10:58:47.218Z",
+    "invested": 4.6808,
+    "currentValue": 4.6808,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
