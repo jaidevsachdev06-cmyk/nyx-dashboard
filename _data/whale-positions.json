@@ -6595,7 +6595,7 @@
     "market": "Opinion FDV above $500M one day after launch?",
     "side": "Yes",
     "entryPrice": 0.706,
-    "currentPrice": 0.646,
+    "currentPrice": 0.6655,
     "shares": 6.63,
     "status": "open",
     "source": "consensus-scanner",
@@ -6610,14 +6610,14 @@
     "createdAt": "2026-03-02T10:58:47.218Z",
     "entryDate": "2026-03-02T10:58:47.218Z",
     "invested": 4.6808,
-    "currentValue": 4.283,
-    "pnl": -0.3978,
-    "pnlPercent": -8.5,
+    "currentValue": 4.4123,
+    "pnl": -0.2685,
+    "pnlPercent": -5.74,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T18:03:12.243Z"
+    "updatedAt": "2026-03-02T18:33:07.793Z"
   },
   {
     "id": "e7092d61-975d-4908-8335-571bdc311288",
