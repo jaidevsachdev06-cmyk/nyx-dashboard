@@ -5656,9 +5656,9 @@
     "market": "Will the US officially declare war on Iran by December 31, 2026?",
     "side": "No",
     "entryPrice": 0.885,
-    "currentPrice": 1,
+    "currentPrice": 0.925,
     "shares": 6.03,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "LinaBell, x.compolymarketbet, Michael5289",
     "whaleCount": 3,
@@ -5671,14 +5671,16 @@
     "createdAt": "2026-03-01T08:06:00.605Z",
     "entryDate": "2026-03-01T08:06:00.606Z",
     "invested": 5.3365,
-    "currentValue": 6.03,
-    "pnl": 0.6935,
-    "pnlPercent": 13,
+    "currentValue": 5.5778,
+    "pnl": 0.2412,
+    "pnlPercent": 4.52,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T10:32:46.906Z"
+    "updatedAt": "2026-03-02T11:00:21.280Z",
+    "exitPrice": 0.925,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "8bfe7ca7-8011-4d33-bc95-4c514f206f18",
