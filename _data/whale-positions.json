@@ -7032,7 +7032,7 @@
     "market": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
     "side": "Yes",
     "entryPrice": 0.605,
-    "currentPrice": 0.625,
+    "currentPrice": 0.615,
     "shares": 9.29,
     "status": "open",
     "source": "consensus-scanner",
@@ -7047,14 +7047,14 @@
     "createdAt": "2026-03-02T12:06:11.173Z",
     "entryDate": "2026-03-02T12:06:11.173Z",
     "invested": 5.6204,
-    "currentValue": 5.8062,
-    "pnl": 0.1858,
-    "pnlPercent": 3.31,
+    "currentValue": 5.7133,
+    "pnl": 0.0929,
+    "pnlPercent": 1.65,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T18:34:01.347Z"
+    "updatedAt": "2026-03-02T19:03:54.577Z"
   },
   {
     "id": "82661ff5-fb06-4a72-af4c-26c25420503b",
