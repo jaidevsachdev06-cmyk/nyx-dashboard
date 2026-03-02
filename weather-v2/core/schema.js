@@ -49,7 +49,7 @@ const TRADE_SCHEMA = {
   
   // Resolution (filled by polymarket resolver, NOT weather data)
   resolutionPrice:  { type: 'number',  required: false, min: 0, max: 1 },
-  resolutionSource: { type: 'string',  required: false },  // always "polymarket"
+  resolutionSource: { type: 'string',  required: false },  // polymarket|price-inferred|manual-exit
   resolvedAt:       { type: 'string',  required: false },
 
   // Exit (manual close before resolution, used for swaps)
@@ -200,7 +200,7 @@ function validateTrade(trade) {
 
   // Cross-field: resolutionSource must be "polymarket" or "price-inferred"
   if (trade.resolutionSource && !['polymarket', 'price-inferred', 'manual-exit'].includes(trade.resolutionSource)) {
-    errors.push(`resolutionSource must be "polymarket" or "price-inferred", got "${trade.resolutionSource}"`);
+    errors.push(`resolutionSource must be "polymarket", "price-inferred", or "manual-exit", got "${trade.resolutionSource}"`);
   }
 
   // Placeholder detection — catch fake conditionIds
