@@ -7061,7 +7061,7 @@
     "market": "Gemini 3.5 released by March 31?",
     "side": "No",
     "entryPrice": 0.971,
-    "currentPrice": 0.9795,
+    "currentPrice": 0.976,
     "shares": 5.41,
     "status": "open",
     "source": "consensus-scanner",
@@ -7076,14 +7076,14 @@
     "createdAt": "2026-03-02T14:06:24.859Z",
     "entryDate": "2026-03-02T14:06:24.859Z",
     "invested": 5.2531,
-    "currentValue": 5.2991,
-    "pnl": 0.046,
-    "pnlPercent": 0.88,
+    "currentValue": 5.2802,
+    "pnl": 0.0271,
+    "pnlPercent": 0.52,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T23:04:04.819Z"
+    "updatedAt": "2026-03-02T23:34:07.924Z"
   },
   {
     "id": "afe9c17e-e7a1-4a63-a4d9-1cbe008b87b7",
