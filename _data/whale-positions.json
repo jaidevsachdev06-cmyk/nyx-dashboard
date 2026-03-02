@@ -6277,7 +6277,7 @@
     "market": "Will Iran strike Cyprus in March?",
     "side": "No",
     "entryPrice": 0.39,
-    "currentPrice": 0.735,
+    "currentPrice": 0.705,
     "shares": 25.49,
     "status": "open",
     "source": "consensus-scanner",
@@ -6292,14 +6292,14 @@
     "createdAt": "2026-03-02T10:57:20.018Z",
     "entryDate": "2026-03-02T10:57:20.018Z",
     "invested": 9.9411,
-    "currentValue": 18.7351,
-    "pnl": 8.794,
-    "pnlPercent": 88.46,
+    "currentValue": 17.9704,
+    "pnl": 8.0293,
+    "pnlPercent": 80.77,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T19:32:27.454Z"
+    "updatedAt": "2026-03-02T20:02:31.837Z"
   },
   {
     "id": "bd736ffe-c7c1-4dd0-b5c2-31a9b31a8067",
