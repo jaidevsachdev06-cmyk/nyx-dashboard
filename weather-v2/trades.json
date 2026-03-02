@@ -7394,9 +7394,9 @@
       "bucket": "-3°C",
       "question": "Will the highest temperature in Toronto be -3°C on March 2?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 5.51,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.58,
       "createdAt": "2026-03-02T02:11:49.573Z",
       "signal": {
         "forecastTemp": -5.2,
@@ -7414,7 +7414,11 @@
       "orderId": "paper-mm8jmf2u-l9jb",
       "txHash": null,
       "currentPrice": 0.996,
-      "updatedAt": "2026-03-02T22:00:08.710Z"
+      "updatedAt": "2026-03-02T22:00:08.710Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-02T22:08:10.328Z",
+      "closedAt": "2026-03-02T22:08:10.337Z"
     },
     {
       "id": "oc-mm8nwk4f-zqc91x",
@@ -7572,7 +7576,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-02T16:08:48.715Z",
+    "lastUpdated": "2026-03-02T22:08:10.340Z",
     "lastPriceSync": "2026-03-02T22:00:13.296Z"
   }
 }
