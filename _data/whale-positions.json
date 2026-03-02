@@ -6682,7 +6682,7 @@
     "market": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
     "side": "Yes",
     "entryPrice": 0.113,
-    "currentPrice": 0.1325,
+    "currentPrice": 0.132,
     "shares": 40.62,
     "status": "open",
     "source": "consensus-scanner",
@@ -6697,14 +6697,14 @@
     "createdAt": "2026-03-02T10:59:03.012Z",
     "entryDate": "2026-03-02T10:59:03.012Z",
     "invested": 4.5901,
-    "currentValue": 5.3822,
-    "pnl": 0.7921,
-    "pnlPercent": 17.26,
+    "currentValue": 5.3618,
+    "pnl": 0.7718,
+    "pnlPercent": 16.81,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T22:03:13.412Z"
+    "updatedAt": "2026-03-02T22:33:24.939Z"
   },
   {
     "id": "81b54bc3-4bd1-4c87-b7aa-8d57a609e6ce",
