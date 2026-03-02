@@ -6804,5 +6804,29 @@
     "currentValue": 4.6799,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "d784d364-f30f-4dfa-bce7-8a0b8a6453c9",
+    "market": "Will France strike Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.7985,
+    "currentPrice": 0.7985,
+    "shares": 5.72,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "kekkone, LinaBell, Mombil",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 76.3,
+    "avgWinRate": 59.4,
+    "reasoning": "Consensus: 3 whales (avg score 76.3, WR 59.4%) No. bet=$4.57, shares=5.72, tierMult=1.00. Whales: kekkone, LinaBell, Mombil",
+    "endDate": "",
+    "conditionId": "0x0942f5ee13a4cdb53b020d60766260a2e0f602af85804392f5c77f80ea9a9b0b",
+    "createdAt": "2026-03-02T10:59:58.690Z",
+    "entryDate": "2026-03-02T10:59:58.690Z",
+    "invested": 4.5674,
+    "currentValue": 4.5674,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
