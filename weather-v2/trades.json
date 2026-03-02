@@ -7130,7 +7130,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.52,
+      "pnlUSDC": 0.32,
       "createdAt": "2026-03-01T10:11:00.381Z",
       "signal": {
         "forecastTemp": 36.8,
@@ -7147,8 +7147,8 @@
       "enteredAt": "2026-03-01T10:11:00.397Z",
       "orderId": "paper-mm7lasoi-ctyv",
       "txHash": null,
-      "currentPrice": 0.655,
-      "updatedAt": "2026-03-02T04:00:02.697Z"
+      "currentPrice": 0.77,
+      "updatedAt": "2026-03-02T04:30:04.379Z"
     },
     {
       "id": "oc-mm7lasoq-64u36a",
@@ -7188,7 +7188,7 @@
       "side": "YES",
       "status": "open",
       "result": null,
-      "pnlUSDC": 14.22,
+      "pnlUSDC": 10.16,
       "createdAt": "2026-03-01T12:11:02.431Z",
       "signal": {
         "forecastTemp": 79.7,
@@ -7205,8 +7205,8 @@
       "enteredAt": "2026-03-01T12:11:02.445Z",
       "orderId": "paper-mm7pl5tf-uf1y",
       "txHash": null,
-      "currentPrice": 0.162,
-      "updatedAt": "2026-03-02T04:00:04.318Z"
+      "currentPrice": 0.13,
+      "updatedAt": "2026-03-02T04:30:04.931Z"
     },
     {
       "id": "oc-mm7tvfmr-dktjfu",
@@ -7221,7 +7221,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.99,
+      "pnlUSDC": -0.63,
       "createdAt": "2026-03-01T14:11:00.195Z",
       "signal": {
         "forecastTemp": 55.1,
@@ -7238,8 +7238,8 @@
       "enteredAt": "2026-03-01T14:11:00.209Z",
       "orderId": "paper-mm7tvfna-zuc9",
       "txHash": null,
-      "currentPrice": 0.605,
-      "updatedAt": "2026-03-02T04:00:05.938Z"
+      "currentPrice": 0.625,
+      "updatedAt": "2026-03-02T04:30:05.499Z"
     },
     {
       "id": "oc-mm7tvfng-3gc3nf",
@@ -7289,7 +7289,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.29,
+      "pnlUSDC": -0.67,
       "createdAt": "2026-03-01T16:10:55.278Z",
       "signal": {
         "forecastTemp": 24.4,
@@ -7306,8 +7306,8 @@
       "enteredAt": "2026-03-01T16:10:55.542Z",
       "orderId": "paper-mm7y5nlo-6hwy",
       "txHash": null,
-      "currentPrice": 0.66,
-      "updatedAt": "2026-03-02T01:49:06.881Z"
+      "currentPrice": 0.61,
+      "updatedAt": "2026-03-02T04:30:06.081Z"
     },
     {
       "id": "oc-mm8fb7c2-jnrk69",
@@ -7340,7 +7340,7 @@
       "orderId": "paper-mm8fb7ci-3vrg",
       "txHash": null,
       "currentPrice": 0.84,
-      "updatedAt": "2026-03-02T04:00:08.537Z"
+      "updatedAt": "2026-03-02T04:30:06.620Z"
     },
     {
       "id": "oc-mm8jmf1k-6vq0n6",
@@ -7355,7 +7355,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0,
+      "pnlUSDC": 0.57,
       "createdAt": "2026-03-02T02:11:49.544Z",
       "signal": {
         "forecastTemp": 56.2,
@@ -7372,8 +7372,8 @@
       "enteredAt": "2026-03-02T02:11:49.561Z",
       "orderId": "paper-mm8jmf26-cq3x",
       "txHash": null,
-      "currentPrice": 0.645,
-      "updatedAt": "2026-03-02T04:00:10.106Z"
+      "currentPrice": 0.675,
+      "updatedAt": "2026-03-02T04:30:07.205Z"
     },
     {
       "id": "oc-mm8jmf2d-ufusze",
@@ -7388,7 +7388,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.08,
+      "pnlUSDC": 2.25,
       "createdAt": "2026-03-02T02:11:49.573Z",
       "signal": {
         "forecastTemp": -5.2,
@@ -7405,13 +7405,79 @@
       "enteredAt": "2026-03-02T02:11:49.584Z",
       "orderId": "paper-mm8jmf2u-l9jb",
       "txHash": null,
-      "currentPrice": 0.75,
-      "updatedAt": "2026-03-02T04:00:11.679Z"
+      "currentPrice": 0.815,
+      "updatedAt": "2026-03-02T04:30:07.737Z"
+    },
+    {
+      "id": "oc-mm8nwk4f-zqc91x",
+      "conditionId": "0xddaeb5a2e7f153ac4539bd170ecbafb9941bb5547318ab5ac51bfdf2735b2a24",
+      "tokenId": "21084605748343032883870054421657106533842102898029472629597168988677757808112",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-toronto-on-march-3-2026-3c",
+      "city": "Toronto",
+      "date": "2026-03-03",
+      "bucket": "3°C",
+      "question": "Will the highest temperature in Toronto be 3°C on March 3?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-02T04:11:41.151Z",
+      "signal": {
+        "forecastTemp": 0.7,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.685,
+        "modelProb": 0.9666,
+        "edge": 0.2816,
+        "isLottery": false
+      },
+      "notes": "Forecast: 0.7°F | Model: 97% vs Market: 69% | Edge: 41.1%",
+      "entryPrice": 0.685,
+      "size": 18,
+      "sizeUSDC": 12.330000000000002,
+      "enteredAt": "2026-03-02T04:11:41.163Z",
+      "orderId": "paper-mm8nwk4x-m6l6",
+      "txHash": null,
+      "currentPrice": 0.685,
+      "updatedAt": "2026-03-02T04:30:08.293Z"
+    },
+    {
+      "id": "oc-mm8nwk59-b4ytn3",
+      "conditionId": "0xc4f81f483bebbbfe69aa02041bfa5d1feed0552cf5ad0c8121c2f964bba411fe",
+      "tokenId": "0x8dcbd0688d1fa7fd93aaef373ddd50fa041680722971d0463e412660b354d81f",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-paris-on-march-2-2026-19corhigher",
+      "city": "Paris",
+      "date": "2026-03-02",
+      "bucket": "≥19°C",
+      "question": "Will the highest temperature in Paris be 19°C or higher on March 2?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": -0.24,
+      "createdAt": "2026-03-02T04:11:41.181Z",
+      "signal": {
+        "forecastTemp": 16,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.042,
+        "modelProb": 0.1279,
+        "edge": 0.0859,
+        "isLottery": true
+      },
+      "notes": "Forecast: 16.0°F | Model: 13% vs Market: 4% | Edge: 204.5% 🎰LOTTERY",
+      "entryPrice": 0.042,
+      "size": 238,
+      "sizeUSDC": 9.996,
+      "enteredAt": "2026-03-02T04:11:41.194Z",
+      "orderId": "paper-mm8nwk5r-rccq",
+      "txHash": null,
+      "currentPrice": 0.041,
+      "updatedAt": "2026-03-02T04:30:08.874Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-02T02:11:49.595Z",
-    "lastPriceSync": "2026-03-02T04:00:12.879Z"
+    "lastUpdated": "2026-03-02T04:11:41.202Z",
+    "lastPriceSync": "2026-03-02T04:30:09.174Z"
   }
 }
