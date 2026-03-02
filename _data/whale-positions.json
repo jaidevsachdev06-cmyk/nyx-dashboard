@@ -5950,7 +5950,7 @@
     "entryPrice": 0.966,
     "currentPrice": 1,
     "shares": 4.88,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "arjenw, Parz1vaI, cashy",
     "whaleCount": 3,
@@ -5970,7 +5970,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T08:02:14.853Z"
+    "updatedAt": "2026-03-02T08:05:28.821Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "a8a60caa-0d02-4b7e-85c3-4201a3c65c61",
