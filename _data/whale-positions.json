@@ -6588,5 +6588,29 @@
     "currentValue": 5.11,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "5e9fd314-0911-4aa3-9887-b96067f4db1b",
+    "market": "Will Nicolás Maduro be the leader of Venezuela end of 2026?",
+    "side": "Yes",
+    "entryPrice": 0.113,
+    "currentPrice": 0.113,
+    "shares": 40.62,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, LinaBell, dontshowmyname",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 81,
+    "avgWinRate": 59.7,
+    "reasoning": "Consensus: 3 whales (avg score 81, WR 59.7%) Yes. bet=$4.59, shares=40.62, tierMult=1.00. Whales: Car, LinaBell, dontshowmyname",
+    "endDate": "",
+    "conditionId": "0x67f3f8d0a0ecdfc008c99650284a4674388a8c3029b0eb7ca0abd65dde8d996f",
+    "createdAt": "2026-03-02T10:59:03.012Z",
+    "entryDate": "2026-03-02T10:59:03.012Z",
+    "invested": 4.5901,
+    "currentValue": 4.5901,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
