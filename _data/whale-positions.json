@@ -6348,5 +6348,29 @@
     "currentValue": 4.8246,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "f72dca3f-b909-40f6-813e-8caa7981cc24",
+    "market": "Russia x Ukraine ceasefire by June 30, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.195,
+    "currentPrice": 0.195,
+    "shares": 29.03,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, UbuntuTrading, TheWolfOfPoly",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 90.3,
+    "avgWinRate": 73.6,
+    "reasoning": "Consensus: 3 whales (avg score 90.3, WR 73.6%) Yes. bet=$5.66, shares=29.03, tierMult=1.00. Whales: Car, UbuntuTrading, TheWolfOfPoly",
+    "endDate": "",
+    "conditionId": "0xe546672750517f62c45a5a00067481981e62b9c20fa8220203232c9dc8fd2093",
+    "createdAt": "2026-03-02T10:57:51.656Z",
+    "entryDate": "2026-03-02T10:57:51.656Z",
+    "invested": 5.6609,
+    "currentValue": 5.6609,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
