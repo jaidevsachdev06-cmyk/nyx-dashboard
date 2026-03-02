@@ -6204,5 +6204,29 @@
     "currentValue": 15.069,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "7f3f6318-bece-4fd9-8d3c-69895350a7c4",
+    "market": "Will Gavin Newsom win the 2028 Democratic presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.2525,
+    "currentPrice": 0.2525,
+    "shares": 63.96,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "FrancisSP8, UbuntuTrading, Qualitative, GollumGekko, failstober, Prexpect",
+    "whaleCount": 6,
+    "confidence": "Very High",
+    "avgScore": 84.2,
+    "avgWinRate": 70,
+    "reasoning": "Consensus: 6 whales (avg score 84.2, WR 70%) Yes. bet=$16.15, shares=63.96, tierMult=1.00. Whales: FrancisSP8, UbuntuTrading, Qualitative, GollumGekko, failstober, Prexpect",
+    "endDate": "",
+    "conditionId": "0x0f49db97f71c68b1e42a6d16e3de93d85dbf7d4148e3f018eb79e88554be9f75",
+    "createdAt": "2026-03-02T10:57:02.005Z",
+    "entryDate": "2026-03-02T10:57:02.006Z",
+    "invested": 16.1499,
+    "currentValue": 16.1499,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
