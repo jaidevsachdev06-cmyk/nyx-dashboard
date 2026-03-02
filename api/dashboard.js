@@ -6,13 +6,14 @@ module.exports = async (req, res) => {
   if (!checkAuth(req)) return res.status(401).json({ error: 'Unauthorized' });
 
   try {
-    const [agents, activity, schoolTasks, polyPositions, tradingPositions, weatherTrades] = await Promise.all([
+    const [agents, activity, schoolTasks, polyPositions, tradingPositions, weatherTrades, reaperPositions] = await Promise.all([
       readFile('_data/agents.json').catch(() => ({ data: [] })),
       readFile('_data/activity.json').catch(() => ({ data: [] })),
       readFile('_data/school-tasks.json').catch(() => ({ data: [] })),
       readFile('_data/polymarket-positions.json').catch(() => ({ data: [] })),
       readFile('_data/trading-positions.json').catch(() => ({ data: [] })),
-      readFile('_data/weather-trades.json').catch(() => ({ data: [] }))
+      readFile('_data/weather-trades.json').catch(() => ({ data: [] })),
+      readFile('_data/reaper-positions.json').catch(() => ({ data: [] }))
     ]);
 
     const now = new Date();
@@ -81,6 +82,20 @@ module.exports = async (req, res) => {
       });
     });
 
+    // From reaper (resolution arb) trades
+    const reaperData = reaperPositions.data || [];
+    const openReaper = reaperData.filter(r => r.status === 'open');
+    const totalReaperExposure = openReaper.reduce((s, r) => s + ((r.entryPrice || 0) * (r.shares || 0)), 0);
+    reaperData.forEach(r => {
+      allActivity.push({
+        agentName: 'Reaper 🪦',
+        action: `${r.status === 'open' ? 'Opened' : 'Closed'} ${(r.market || '').slice(0, 50)} ${r.side || ''} at ${r.entryPrice ? '$' + r.entryPrice.toFixed(2) : '?'} (${r.confidence || '?'}% conf)`,
+        timestamp: r.updatedAt || r.createdAt,
+        section: 'reaper',
+        status: r.status === 'settled-win' ? 'success' : r.status === 'settled-loss' ? 'error' : 'success'
+      });
+    });
+
     // Also include manual activity entries if any
     (activity.data || []).forEach(a => allActivity.push(a));
 
@@ -95,6 +110,7 @@ module.exports = async (req, res) => {
       polymarket: { openPositions: openPoly.length, totalExposure: totalPolyExposure },
       trading: { openPositions: openTrades.length, dailyPnl: totalTradePnl },
       weather: { openPositions: openWeather.length, totalExposure: totalWeatherExposure },
+      reaper: { openPositions: openReaper.length, totalExposure: totalReaperExposure },
       activity: recentActivity
     });
   } catch (e) {
