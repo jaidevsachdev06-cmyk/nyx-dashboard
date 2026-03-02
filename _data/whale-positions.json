@@ -6396,5 +6396,29 @@
     "currentValue": 5.6606,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "fe99582f-562e-4821-87d1-81c2e2626093",
+    "market": "US-Iran nuclear deal by March 31?",
+    "side": "No",
+    "entryPrice": 0.84,
+    "currentPrice": 0.84,
+    "shares": 6.19,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, scottilicious, MuddyRC",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 89.6,
+    "avgWinRate": 67.6,
+    "reasoning": "Consensus: 3 whales (avg score 89.6, WR 67.6%) No. bet=$5.20, shares=6.19, tierMult=1.00. Whales: Car, scottilicious, MuddyRC",
+    "endDate": "",
+    "conditionId": "0x2b1435f47a09615867ade05d314485b7603924199ba0982cf28678b88717b520",
+    "createdAt": "2026-03-02T10:58:05.362Z",
+    "entryDate": "2026-03-02T10:58:05.362Z",
+    "invested": 5.1996,
+    "currentValue": 5.1996,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
