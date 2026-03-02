@@ -6012,7 +6012,7 @@
     "market": "US recognizes Reza Pahlavi as leader of Iran in 2026?",
     "side": "No",
     "entryPrice": 0.75,
-    "currentPrice": 0.76,
+    "currentPrice": 0.75,
     "shares": 7.29,
     "status": "open",
     "source": "consensus-scanner",
@@ -6027,14 +6027,14 @@
     "createdAt": "2026-03-02T02:05:25.968Z",
     "entryDate": "2026-03-02T02:05:25.968Z",
     "invested": 5.4675,
-    "currentValue": 5.5404,
-    "pnl": 0.0729,
-    "pnlPercent": 1.33,
+    "currentValue": 5.4675,
+    "pnl": 0,
+    "pnlPercent": 0,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T20:02:03.229Z"
+    "updatedAt": "2026-03-02T20:31:52.596Z"
   },
   {
     "id": "1d4d2e4b-e3e0-44e7-bdbe-2b1f668ac5dc",
