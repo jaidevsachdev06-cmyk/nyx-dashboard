@@ -6537,7 +6537,7 @@
     "market": "Billionaire one-time wealth tax passes in California election 2026?",
     "side": "No",
     "entryPrice": 0.655,
-    "currentPrice": 0.675,
+    "currentPrice": 0.685,
     "shares": 7.92,
     "status": "open",
     "source": "consensus-scanner",
@@ -6552,14 +6552,14 @@
     "createdAt": "2026-03-02T10:58:32.287Z",
     "entryDate": "2026-03-02T10:58:32.287Z",
     "invested": 5.1876,
-    "currentValue": 5.346,
-    "pnl": 0.1584,
-    "pnlPercent": 3.05,
+    "currentValue": 5.4252,
+    "pnl": 0.2376,
+    "pnlPercent": 4.58,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T21:02:59.335Z"
+    "updatedAt": "2026-03-02T21:33:09.005Z"
   },
   {
     "id": "0e613594-9a7d-408f-b8ae-167d0bc44bc9",
