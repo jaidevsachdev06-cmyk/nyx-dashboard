@@ -6945,7 +6945,7 @@
     "market": "Will France strike Iran by March 31?",
     "side": "No",
     "entryPrice": 0.7985,
-    "currentPrice": 0.8294999999999999,
+    "currentPrice": 0.8394999999999999,
     "shares": 5.72,
     "status": "open",
     "source": "consensus-scanner",
@@ -6960,14 +6960,14 @@
     "createdAt": "2026-03-02T10:59:58.690Z",
     "entryDate": "2026-03-02T10:59:58.690Z",
     "invested": 4.5674,
-    "currentValue": 4.7447,
-    "pnl": 0.1773,
-    "pnlPercent": 3.88,
+    "currentValue": 4.8019,
+    "pnl": 0.2345,
+    "pnlPercent": 5.13,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T21:34:00.273Z"
+    "updatedAt": "2026-03-02T22:03:42.848Z"
   },
   {
     "id": "096cbde1-ae28-4e6e-a571-05900424f4b3",
