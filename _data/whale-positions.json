@@ -6017,5 +6017,29 @@
     "currentValue": 5.4675,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "1d4d2e4b-e3e0-44e7-bdbe-2b1f668ac5dc",
+    "market": "Hezbollah strike on Israel by March 31?",
+    "side": "Yes",
+    "entryPrice": 0.9975,
+    "currentPrice": 0.9975,
+    "shares": 5.78,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, cashy, Michael5289",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 85.4,
+    "avgWinRate": 75,
+    "reasoning": "Consensus: 3 whales (avg score 85.4, WR 75%) Yes. bet=$5.77, shares=5.78. Whales: Car, cashy, Michael5289",
+    "endDate": "",
+    "conditionId": "0x56b19b7b506bb1045e1b3449866b4e70fd37a8515ffb995c28445203823e37d8",
+    "createdAt": "2026-03-02T02:05:39.882Z",
+    "entryDate": "2026-03-02T02:05:39.882Z",
+    "invested": 5.7656,
+    "currentValue": 5.7656,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
