@@ -6033,7 +6033,7 @@
     "market": "Hezbollah strike on Israel by March 31?",
     "side": "Yes",
     "entryPrice": 0.9975,
-    "currentPrice": 0.9975,
+    "currentPrice": 0.9995,
     "shares": 5.78,
     "status": "open",
     "source": "consensus-scanner",
@@ -6048,9 +6048,14 @@
     "createdAt": "2026-03-02T02:05:39.882Z",
     "entryDate": "2026-03-02T02:05:39.882Z",
     "invested": 5.7656,
-    "currentValue": 5.7656,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 5.7771,
+    "pnl": 0.0116,
+    "pnlPercent": 0.2,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-02T02:32:11.884Z"
   },
   {
     "id": "dffedd9f-f344-42e9-9256-0515fbb6e016",
