@@ -6740,9 +6740,9 @@
     "market": "Will Iran strike Israel on March 2?",
     "side": "No",
     "entryPrice": 0.06,
-    "currentPrice": 0.0005,
+    "currentPrice": 0.001,
     "shares": 79.67,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "MuddyRC, Brokie, Thonker",
     "whaleCount": 3,
@@ -6755,14 +6755,16 @@
     "createdAt": "2026-03-02T10:59:17.797Z",
     "entryDate": "2026-03-02T10:59:17.797Z",
     "invested": 4.7802,
-    "currentValue": 0.0398,
-    "pnl": -4.7404,
-    "pnlPercent": -99.17,
+    "currentValue": 0.0797,
+    "pnl": -4.7005,
+    "pnlPercent": -98.33,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T18:03:31.627Z"
+    "updatedAt": "2026-03-02T18:06:21.687Z",
+    "exitPrice": 0.001,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "da9cb943-3cb7-418b-8d4d-d9558f9d5e54",
