@@ -6660,5 +6660,29 @@
     "currentValue": 4.7802,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "da9cb943-3cb7-418b-8d4d-d9558f9d5e54",
+    "market": "Will Barcelona win the 2025–26 Champions League?",
+    "side": "Yes",
+    "entryPrice": 0.145,
+    "currentPrice": 0.145,
+    "shares": 31.24,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Xplayer, gopfan2, failstober",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 79.6,
+    "avgWinRate": 58.9,
+    "reasoning": "Consensus: 3 whales (avg score 79.6, WR 58.9%) Yes. bet=$4.53, shares=31.24, tierMult=1.00. Whales: Xplayer, gopfan2, failstober",
+    "endDate": "",
+    "conditionId": "0x43268d56a20113679be36c84dd22550174c6d6bc9d0f4376e882ce61dac3c635",
+    "createdAt": "2026-03-02T10:59:24.065Z",
+    "entryDate": "2026-03-02T10:59:24.065Z",
+    "invested": 4.5298,
+    "currentValue": 4.5298,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
