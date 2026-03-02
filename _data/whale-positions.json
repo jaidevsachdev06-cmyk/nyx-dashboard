@@ -6037,7 +6037,7 @@
     "entryPrice": 0.9975,
     "currentPrice": 0.9995,
     "shares": 5.78,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, cashy, Michael5289",
     "whaleCount": 3,
@@ -6057,7 +6057,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-02T03:02:10.330Z"
+    "updatedAt": "2026-03-02T03:23:02.126Z",
+    "exitPrice": 0.9995,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "dffedd9f-f344-42e9-9256-0515fbb6e016",
