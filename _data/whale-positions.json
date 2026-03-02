@@ -7113,5 +7113,29 @@
       {}
     ],
     "updatedAt": "2026-03-02T20:04:21.250Z"
+  },
+  {
+    "id": "72e12f23-fe38-4c55-a756-2ca05ad09126",
+    "market": "Will Iran close the Strait of Hormuz by June 30?",
+    "side": "Yes",
+    "entryPrice": 0.436,
+    "currentPrice": 0.436,
+    "shares": 12.5,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "UbuntuTrading, Roflan, aenews",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 84.1,
+    "avgWinRate": 70.8,
+    "reasoning": "Consensus: 3 whales (avg score 84.1, WR 70.8%) Yes. bet=$5.45, shares=12.5, tierMult=1.00. Whales: UbuntuTrading, Roflan, aenews",
+    "endDate": "",
+    "conditionId": "0x43c7e8f73e867ebc035edf002617f67cf96b90c85eccac18090e553bfe7a8411",
+    "createdAt": "2026-03-02T20:06:15.921Z",
+    "entryDate": "2026-03-02T20:06:15.921Z",
+    "invested": 5.45,
+    "currentValue": 5.45,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
