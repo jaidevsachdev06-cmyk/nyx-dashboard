@@ -5770,7 +5770,7 @@
     "market": "Will Iran close the Strait of Hormuz before 2027?",
     "side": "Yes",
     "entryPrice": 0.7035,
-    "currentPrice": 0.506,
+    "currentPrice": 0.41,
     "shares": 7.09,
     "status": "open",
     "source": "consensus-scanner",
@@ -5785,14 +5785,14 @@
     "createdAt": "2026-03-01T16:05:21.983Z",
     "entryDate": "2026-03-01T16:05:21.983Z",
     "invested": 4.9878,
-    "currentValue": 3.5875,
-    "pnl": -1.4003,
-    "pnlPercent": -28.07,
+    "currentValue": 2.9069,
+    "pnl": -2.0809,
+    "pnlPercent": -41.72,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-01T23:31:44.836Z"
+    "updatedAt": "2026-03-02T00:01:42.253Z"
   },
   {
     "id": "4d11a4cd-f5fe-48c1-acc1-6addc1de042e",
