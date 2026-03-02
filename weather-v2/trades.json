@@ -7247,7 +7247,7 @@
       "orderId": "paper-mm7tvfna-zuc9",
       "txHash": null,
       "currentPrice": 0.535,
-      "updatedAt": "2026-03-02T20:00:05.650Z"
+      "updatedAt": "2026-03-02T20:00:03.019Z"
     },
     {
       "id": "oc-mm7tvfng-3gc3nf",
@@ -7297,7 +7297,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.7,
+      "pnlUSDC": -3.14,
       "createdAt": "2026-03-01T16:10:55.278Z",
       "signal": {
         "forecastTemp": 24.4,
@@ -7314,8 +7314,8 @@
       "enteredAt": "2026-03-01T16:10:55.542Z",
       "orderId": "paper-mm7y5nlo-6hwy",
       "txHash": null,
-      "currentPrice": 0.45,
-      "updatedAt": "2026-03-02T20:00:06.212Z"
+      "currentPrice": 0.48,
+      "updatedAt": "2026-03-02T19:00:10.621Z"
     },
     {
       "id": "oc-mm8fb7c2-jnrk69",
@@ -7348,7 +7348,7 @@
       "orderId": "paper-mm8fb7ci-3vrg",
       "txHash": null,
       "currentPrice": 0.845,
-      "updatedAt": "2026-03-02T20:00:06.770Z"
+      "updatedAt": "2026-03-02T20:00:05.981Z"
     },
     {
       "id": "oc-mm8jmf1k-6vq0n6",
@@ -7381,7 +7381,7 @@
       "orderId": "paper-mm8jmf26-cq3x",
       "txHash": null,
       "currentPrice": 0.6,
-      "updatedAt": "2026-03-02T20:00:07.334Z"
+      "updatedAt": "2026-03-02T20:00:07.734Z"
     },
     {
       "id": "oc-mm8jmf2d-ufusze",
@@ -7414,7 +7414,7 @@
       "orderId": "paper-mm8jmf2u-l9jb",
       "txHash": null,
       "currentPrice": 0.945,
-      "updatedAt": "2026-03-02T20:00:07.878Z"
+      "updatedAt": "2026-03-02T20:00:09.325Z"
     },
     {
       "id": "oc-mm8nwk4f-zqc91x",
@@ -7447,7 +7447,7 @@
       "orderId": "paper-mm8nwk4x-m6l6",
       "txHash": null,
       "currentPrice": 0.685,
-      "updatedAt": "2026-03-02T20:00:08.412Z"
+      "updatedAt": "2026-03-02T20:00:10.979Z"
     },
     {
       "id": "oc-mm8nwk59-b4ytn3",
@@ -7542,7 +7542,7 @@
       "orderId": "paper-mm90ruqk-ihx6",
       "txHash": null,
       "currentPrice": 0.275,
-      "updatedAt": "2026-03-02T20:00:08.956Z"
+      "updatedAt": "2026-03-02T20:00:12.662Z"
     },
     {
       "id": "oc-mm90ruqy-009ijc",
@@ -7573,6 +7573,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-02T16:08:48.715Z",
-    "lastPriceSync": "2026-03-02T20:00:09.255Z"
+    "lastPriceSync": "2026-03-02T20:00:13.862Z"
   }
 }
