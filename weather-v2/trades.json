@@ -7460,9 +7460,9 @@
       "bucket": "≥19°C",
       "question": "Will the highest temperature in Paris be 19°C or higher on March 2?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -8.57,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -9.996,
       "createdAt": "2026-03-02T04:11:41.181Z",
       "signal": {
         "forecastTemp": 16,
@@ -7480,7 +7480,11 @@
       "orderId": "paper-mm8nwk5r-rccq",
       "txHash": null,
       "currentPrice": 0.006,
-      "updatedAt": "2026-03-02T15:30:18.139Z"
+      "updatedAt": "2026-03-02T15:30:18.139Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-02T16:08:48.700Z",
+      "closedAt": "2026-03-02T16:08:48.711Z"
     },
     {
       "id": "oc-mm8whla1-24otgd",
@@ -7568,7 +7572,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-02T13:10:30.063Z",
+    "lastUpdated": "2026-03-02T16:08:48.715Z",
     "lastPriceSync": "2026-03-02T16:00:14.103Z"
   }
 }
