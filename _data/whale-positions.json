@@ -6337,7 +6337,7 @@
     "entryPrice": 0.412,
     "currentPrice": 0.4145,
     "shares": 13.01,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Rooke Brollins, debased, Brokie, failstober",
     "whaleCount": 4,
@@ -6357,7 +6357,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-03T02:02:30.943Z"
+    "updatedAt": "2026-03-03T02:06:22.899Z",
+    "exitPrice": 0.4145,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "f68bf8e5-41d4-4d83-bb5d-1231deb2b08d",
