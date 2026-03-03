@@ -6624,7 +6624,7 @@
     "market": "Will James Talarico be the Democratic nominee for Senate in Texas?",
     "side": "Yes",
     "entryPrice": 0.75,
-    "currentPrice": 0.835,
+    "currentPrice": 0.825,
     "shares": 6.68,
     "status": "open",
     "source": "consensus-scanner",
@@ -6639,14 +6639,14 @@
     "createdAt": "2026-03-02T10:58:52.511Z",
     "entryDate": "2026-03-02T10:58:52.511Z",
     "invested": 5.01,
-    "currentValue": 5.5778,
-    "pnl": 0.5678,
-    "pnlPercent": 11.33,
+    "currentValue": 5.511,
+    "pnl": 0.501,
+    "pnlPercent": 10,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-03T00:02:58.822Z"
+    "updatedAt": "2026-03-03T00:33:05.166Z"
   },
   {
     "id": "69723fd4-71a5-4e8d-89e4-12c09b028c0c",
