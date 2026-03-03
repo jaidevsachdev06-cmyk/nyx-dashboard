@@ -7142,5 +7142,29 @@
       {}
     ],
     "updatedAt": "2026-03-03T00:03:59.402Z"
+  },
+  {
+    "id": "2cec408f-b78f-4f31-8a6d-afee2b574ab3",
+    "market": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+    "side": "Yes",
+    "entryPrice": 0.815,
+    "currentPrice": 0.815,
+    "shares": 5.95,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "cashy, DOJ, Sonix, The-Joker",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 77.3,
+    "avgWinRate": 63,
+    "reasoning": "Consensus: 4 whales (avg score 77.3, WR 63%) Yes. bet=$4.85, shares=5.95, tierMult=1.00. Whales: cashy, DOJ, Sonix, The-Joker",
+    "endDate": "",
+    "conditionId": "0x24fb7c2d95c93a68018e6c4a90d88043bb67d32fd1454924cef8ebdd550228f3",
+    "createdAt": "2026-03-03T00:06:05.407Z",
+    "entryDate": "2026-03-03T00:06:05.407Z",
+    "invested": 4.8492,
+    "currentValue": 4.8492,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
