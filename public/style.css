@@ -118,6 +118,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; background: var(--bg); color: v
 .summary-card.poly-card::before { background: linear-gradient(90deg, var(--poly-color), #6366f1); opacity: 1; }
 .summary-card.weather-card::before { background: linear-gradient(90deg, var(--weather-color), var(--cyan)); opacity: 1; }
 .summary-card.whale-card::before { background: linear-gradient(90deg, var(--whale-color), #c084fc); opacity: 1; }
+.summary-card.reaper-card::before { background: linear-gradient(90deg, #78716c, #a8a29e); opacity: 1; }
 .summary-card.trading-card::before { background: linear-gradient(90deg, var(--trading-color), #4ade80); opacity: 1; }
 .summary-card.school-card::before { background: linear-gradient(90deg, var(--school-color), var(--amber)); opacity: 1; }
 
@@ -407,6 +408,7 @@ h3.sub-title {
 .strategy-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 10px; flex-shrink: 0; }
 .strategy-dot.mirror { background: #a855f7; box-shadow: 0 0 8px rgba(168,85,247,0.3); }
 .strategy-dot.monsoon { background: #14b8a6; box-shadow: 0 0 8px rgba(20,184,166,0.3); }
+.strategy-dot.reaper { background: #78716c; box-shadow: 0 0 8px rgba(120,113,108,0.3); }
 .strategy-dot.paper { background: #3b82f6; box-shadow: 0 0 8px rgba(59,130,246,0.3); }
 .status-pill {
   font-size: 10px; padding: 3px 10px; border-radius: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;

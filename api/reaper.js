@@ -38,7 +38,7 @@ module.exports = async (req, res) => {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (!checkAuth(req)) return res.status(401).json({ error: 'Unauthorized' });
 
-  const FILE = '_data/reaper-positions.json';
+  const FILE = '_data/polymarket-positions.json';
 
   try {
     const { data, sha } = await readFile(FILE);

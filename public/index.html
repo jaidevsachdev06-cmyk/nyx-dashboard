@@ -146,6 +146,9 @@
             <button class="sub-tab" data-tab="whales" onclick="switchPolyTab('whales')">
               <span class="tab-icon">🐋</span> Whale Copytrading
             </button>
+            <button class="sub-tab" data-tab="reaper" onclick="switchPolyTab('reaper')">
+              <span class="tab-icon">🪦</span> Resolution Arb
+            </button>
           </div>
 
           <!-- TAB 1: Paper Portfolio -->
@@ -189,6 +192,20 @@
             <div class="table-wrap"><table id="whale-open-table"><thead><tr><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th><th>P&L</th><th>⏱️ Resolves</th><th></th></tr></thead><tbody></tbody></table></div>
             <h3 class="sub-title">Trade Log</h3>
             <div class="activity-feed" id="whale-trade-log"></div>
+          </div>
+
+          <!-- TAB 4: Resolution Arb (Reaper) -->
+          <div class="sub-tab-panel" id="poly-tab-reaper">
+            <div class="summary-cards" id="reaper-summary"></div>
+
+            <h3 class="sub-title">🪦 Open Positions</h3>
+            <div class="table-wrap"><table id="reaper-open-table"><thead><tr><th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>Shares</th><th>P&L</th><th>Confidence</th><th>Reason</th><th></th></tr></thead><tbody></tbody></table></div>
+
+            <h3 class="sub-title">Settled Positions</h3>
+            <div class="table-wrap"><table id="reaper-closed-table"><thead><tr><th>Market</th><th>Side</th><th>Entry</th><th>Exit</th><th>P&L</th><th>Status</th><th>Settled</th></tr></thead><tbody></tbody></table></div>
+
+            <h3 class="sub-title">Scan Log</h3>
+            <div class="activity-feed" id="reaper-scan-log"></div>
           </div>
         </div>
 

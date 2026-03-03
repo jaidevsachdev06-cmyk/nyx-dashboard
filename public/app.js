@@ -144,19 +144,20 @@ function renderPolyOverview() {
     closedTrades: (_polyData.weather || []).filter(p => p.status !== 'open')
   } : computeStrategyStats(_polyData.weather || [], 'Weather');
   const whaleStats = computeStrategyStats(_polyData.whale || [], 'Whale');
+  const reaperStats = computeStrategyStats(_polyData.reaper || [], 'Reaper');
 
   const bankroll = 500;
-  const totalDeployed = paperStats.deployed + weatherStats.deployed + whaleStats.deployed;
-  const totalOpenPos = paperStats.open + weatherStats.open + whaleStats.open;
-  const totalPnl = paperStats.totalPnl + weatherStats.totalPnl + whaleStats.totalPnl;
-  const totalReal = paperStats.realizedPnl + weatherStats.realizedPnl + whaleStats.realizedPnl;
-  const totalUnreal = paperStats.unrealizedPnl + weatherStats.unrealizedPnl + whaleStats.unrealizedPnl;
-  const totalWins = paperStats.wins + weatherStats.wins + whaleStats.wins;
-  const totalLosses = paperStats.losses + weatherStats.losses + whaleStats.losses;
+  const totalDeployed = paperStats.deployed + weatherStats.deployed + whaleStats.deployed + reaperStats.deployed;
+  const totalOpenPos = paperStats.open + weatherStats.open + whaleStats.open + reaperStats.open;
+  const totalPnl = paperStats.totalPnl + weatherStats.totalPnl + whaleStats.totalPnl + reaperStats.totalPnl;
+  const totalReal = paperStats.realizedPnl + weatherStats.realizedPnl + whaleStats.realizedPnl + reaperStats.realizedPnl;
+  const totalUnreal = paperStats.unrealizedPnl + weatherStats.unrealizedPnl + whaleStats.unrealizedPnl + reaperStats.unrealizedPnl;
+  const totalWins = paperStats.wins + weatherStats.wins + whaleStats.wins + reaperStats.wins;
+  const totalLosses = paperStats.losses + weatherStats.losses + whaleStats.losses + reaperStats.losses;
   const totalScored = totalWins + totalLosses;
   const overallWinRate = totalScored ? (totalWins / totalScored * 100) : 0;
-  const totalTrades = (paperStats.closed + paperStats.open) + (weatherStats.closed + weatherStats.open) + (whaleStats.closed + whaleStats.open);
-  const totalClosed = paperStats.closed + weatherStats.closed + whaleStats.closed;
+  const totalTrades = (paperStats.closed + paperStats.open) + (weatherStats.closed + weatherStats.open) + (whaleStats.closed + whaleStats.open) + (reaperStats.closed + reaperStats.open);
+  const totalClosed = paperStats.closed + weatherStats.closed + whaleStats.closed + reaperStats.closed;
   const avgPnl = totalClosed ? totalReal / totalClosed : 0;
 
   const pnlColor = n => n >= 0 ? '#22c55e' : '#ef4444';
@@ -204,6 +205,7 @@ function renderPolyOverview() {
   const strategies = [
     { key: 'whale', name: '🐋 Mirror', dotClass: 'mirror', stats: whaleStats, active: true },
     { key: 'weather', name: '🌡️ Monsoon', dotClass: 'monsoon', stats: weatherStats, active: true },
+    { key: 'reaper', name: '🪦 Reaper', dotClass: 'reaper', stats: reaperStats, active: true },
     { key: 'paper', name: '📊 Paper', dotClass: 'paper', stats: paperStats, active: true },
   ];
 
@@ -242,6 +244,7 @@ function renderPolyOverview() {
     ...(paperStats.closedTrades || []).map(t => ({ ...t, strategy: 'paper' })),
     ...(weatherStats.closedTrades || []).map(t => ({ ...t, strategy: 'weather' })),
     ...(whaleStats.closedTrades || []).map(t => ({ ...t, strategy: 'whale' })),
+    ...(reaperStats.closedTrades || []).map(t => ({ ...t, strategy: 'reaper' })),
   ].sort((a, b) => new Date(a.updatedAt || a.createdAt || 0) - new Date(b.updatedAt || b.createdAt || 0)).slice(-20);
 
   const chart = document.getElementById('pnl-history-chart');
@@ -601,6 +604,7 @@ async function loadPolymarket() {
     </tr>`).join('') || '<tr><td colspan="5" style="color:var(--text-dim)">Watchlist empty</td></tr>';
     loadWeatherTrades();
     loadWhaleTrades();
+    loadReaperPositions();
   } catch (e) { console.error(e); }
 }
 async function editPolyPosition(id) { const p = await get(`/api/polymarket?type=positions&id=${id}`); showModal('poly-position', p); }
@@ -856,6 +860,96 @@ async function loadWhaleTrades() {
       </div>
     `).join('') : '<div style="color:var(--text-dim);padding:20px">No closed whale trades yet</div>';
   } catch (e) { console.error('Whale load error:', e); }
+}
+
+// ========== REAPER (RESOLUTION ARB) ==========
+async function loadReaperPositions() {
+  try {
+    const allPositions = await get('/api/polymarket?type=positions');
+    const trades = allPositions.filter(p => p.ep === 'reaper' || p.strategy === 'resolution');
+    
+    trades.forEach(t => {
+      if (t.pnl != null && t.pnl !== 0) { /* keep server pnl */ }
+      else if (t.entryPrice != null && t.currentPrice != null && t.shares) {
+        const isNo = (t.side || '').toLowerCase() === 'no';
+        t.pnl = isNo
+          ? (t.entryPrice - t.currentPrice) * t.shares
+          : (t.currentPrice - t.entryPrice) * t.shares;
+      } else { t.pnl = 0; }
+    });
+
+    const open = trades.filter(t => t.status === 'open');
+    const closed = trades.filter(t => t.status !== 'open');
+    const totalInvested = open.reduce((s, t) => s + ((t.entryPrice || 0) * (t.shares || 0)), 0);
+    const totalPnl = closed.reduce((s, t) => s + (t.pnl || 0), 0) + open.reduce((s, t) => s + (t.pnl || 0), 0);
+    const wins = closed.filter(t => t.status === 'settled-win' || t.status === 'closed-win' || t.status === 'resolved-win').length;
+    const losses = closed.filter(t => t.status === 'settled-loss' || t.status === 'closed-loss' || t.status === 'resolved-loss').length;
+    const scored = wins + losses;
+    const winRate = scored ? ((wins / scored) * 100).toFixed(0) : '—';
+
+    const dailyPctR = totalInvested > 0 ? (totalPnl / totalInvested * 100) : 0;
+    const pnlCardClass = totalPnl > 0 ? 'pnl-positive' : totalPnl < 0 ? 'pnl-negative' : '';
+    document.getElementById('reaper-summary').innerHTML = `
+      <div class="summary-card reaper-card"><div class="label">Positions</div><div class="value mono">${open.length}</div></div>
+      <div class="summary-card reaper-card"><div class="label">Locked Capital</div><div class="value mono">${fmtMoney(totalInvested)}</div></div>
+      <div class="summary-card reaper-card ${pnlCardClass}"><div class="label">P&L</div><div class="value mono ${pnlClass(totalPnl)}">${fmtMoney(totalPnl)}</div><div class="detail ${pnlClass(dailyPctR)}">${dailyPctR >= 0 ? '+' : ''}${dailyPctR.toFixed(1)}%</div></div>
+      <div class="summary-card reaper-card"><div class="label">Win Rate</div><div class="value mono">${winRate}%</div><div class="detail">${wins}/${scored} settled</div></div>
+    `;
+
+    _polyData.reaper = trades;
+    renderPolyOverview();
+
+    const reaperSideBadge = s => `<span style="background:${s === 'Yes' || s === 'yes' ? 'var(--green)' : 'var(--red)'};color:#000;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700">${(s||'—').toUpperCase()}</span>`;
+
+    document.querySelector('#reaper-open-table tbody').innerHTML = open.map(t => `<tr>
+      <td style="max-width:220px"><a href="${t.marketUrl || '#'}" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">${t.market || ''}</a></td>
+      <td>${reaperSideBadge(t.side)}</td>
+      <td class="mono">${fmtMoney(t.entryPrice)}</td>
+      <td class="mono">${fmtMoney(t.currentPrice)}</td>
+      <td class="mono">${t.shares || ''}</td>
+      <td class="mono ${pnlClass(t.pnl)}" style="font-weight:700">${fmtMoney(t.pnl)}</td>
+      <td class="mono" style="font-size:11px">${t.confidence || '—'}%</td>
+      <td style="font-size:11px;max-width:180px;overflow:hidden;text-overflow:ellipsis">${t.confidenceReason || t.notes || '—'}</td>
+      <td><button class="btn btn-sm" onclick="editPolyPosition('${t.id}')">Edit</button></td>
+    </tr>`).join('') || '<tr><td colspan="9" style="color:var(--text-dim);padding:20px">No open positions — waiting for dead markets</td></tr>';
+
+    document.querySelector('#reaper-closed-table tbody').innerHTML = closed.map(t => {
+      const isWin = t.status === 'settled-win' || t.status === 'closed-win' || t.status === 'resolved-win';
+      return `<tr>
+        <td style="max-width:220px">${t.market || ''}</td>
+        <td>${reaperSideBadge(t.side)}</td>
+        <td class="mono">${fmtMoney(t.entryPrice)}</td>
+        <td class="mono">${fmtMoney(t.exitPrice || t.resolutionPrice || t.currentPrice)}</td>
+        <td class="mono ${pnlClass(t.pnl)}" style="font-weight:700">${fmtMoney(t.pnl)}</td>
+        <td>${isWin ? '✅ WIN' : '❌ LOSS'}</td>
+        <td class="mono" style="font-size:11px">${t.settledAt ? fmtDate(t.settledAt) : t.updatedAt ? fmtDate(t.updatedAt) : '—'}</td>
+      </tr>`;
+    }).join('') || '<tr><td colspan="7" style="color:var(--text-dim);padding:20px">No settled positions yet</td></tr>';
+
+    document.getElementById('reaper-scan-log').innerHTML = trades.length ? trades.slice(0, 10).map(t => {
+      const isOpen = t.status === 'open';
+      return `
+        <div class="activity-item">
+          <div class="activity-dot ${isOpen ? 'pending' : t.status.includes('win') ? 'success' : 'error'}"></div>
+          <div class="activity-content">
+            <div class="activity-action">
+              <strong>${t.market}</strong> ${isOpen ? '⏳ WAITING' : t.status.includes('win') ? '✅ WIN' : '❌ LOSS'}
+              <span class="mono ${pnlClass(t.pnl)}" style="margin-left:8px;font-weight:700">${fmtMoney(t.pnl)}</span>
+            </div>
+            <div style="font-size:12px;margin:4px 0;color:var(--text-dim)">
+              ${t.side || ''} · Entry ${fmtMoney(t.entryPrice)} → ${isOpen ? 'Current' : 'Exit'} ${fmtMoney(t.currentPrice || t.exitPrice)} · ${t.shares || 0} shares · Confidence: ${t.confidence || '—'}%
+            </div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:1.5">💀 ${t.confidenceReason || t.notes || 'No reasoning recorded'}</div>
+            <div class="activity-meta">
+              <span>📅 Entered: ${t.entryDate || t.createdAt ? fmtDate(t.entryDate || t.createdAt) : '—'}</span>
+              ${!isOpen ? `<span style="margin-left:12px">🏁 Settled: ${t.settledAt || t.updatedAt ? fmtDate(t.settledAt || t.updatedAt) : '—'}</span>` : ''}
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('') : '<div style="color:var(--text-dim);padding:20px">No resolution arb activity yet</div>';
+
+  } catch (e) { console.error('Reaper load error:', e); }
 }
 
 function toggleScorecard() {
