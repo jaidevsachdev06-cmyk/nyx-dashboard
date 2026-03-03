@@ -50,9 +50,11 @@ async function processCandidate(signal) {
     return { entered: false, trade: null, reason: `Insufficient edge: ${edgePct.toFixed(1)}% (min: ${config.risk.minEdgePct}%)` };
   }
 
-  // Lottery trade classification: low model prob (<60%) + high edge (>100%) + cheap price (<$0.15)
-  // Check lottery BEFORE the 300% edge cap — lottery trades naturally have extreme edges
-  const isLottery = signal.modelProb < 0.6 && signal.modelProb >= 0.08 && edgePct > 100 && edgePct <= 250 && currentPrice < 0.15;
+  // Lottery trade classification — probability-ratio approach
+  // Instead of edge %, we check: cheap price + model thinks there's a real chance + model meaningfully disagrees with market
+  // This catches trades like Paris 16°C (7.4% model, 5.4¢ market) and Miami 82-83°F (17.2% model, 5¢ market)
+  const probRatio = signal.modelProb / currentPrice;  // How much does model disagree with market?
+  const isLottery = currentPrice < 0.15 && signal.modelProb >= 0.07 && probRatio >= 1.35;
 
   // Sanity check: reject extreme edges (>300%) for NON-lottery trades only
   if (!isLottery && edgePct > 300) {
@@ -73,7 +75,7 @@ async function processCandidate(signal) {
       return { entered: false, trade: null, reason: `Lottery quota reached: ${lotteryToday.length}/2 today` };
     }
 
-    console.log(`${tag} 🎰 LOTTERY TRADE (${lotteryToday.length + 1}/2 today) | modelProb: ${(signal.modelProb*100).toFixed(1)}% | edge: ${edgePct.toFixed(0)}%`);
+    console.log(`${tag} 🎰 LOTTERY TRADE (${lotteryToday.length + 1}/2 today) | modelProb: ${(signal.modelProb*100).toFixed(1)}% | price: ${(currentPrice*100).toFixed(1)}¢ | ratio: ${probRatio.toFixed(1)}x`);
   } else {
     // Normal trade: apply confidence gates
     const minModelProb = config.risk.minModelProb || 0.6;
