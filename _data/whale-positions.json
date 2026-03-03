@@ -7200,5 +7200,29 @@
       {}
     ],
     "updatedAt": "2026-03-03T02:04:20.202Z"
+  },
+  {
+    "id": "3035e26c-27a0-496d-9d94-fe2aafce2998",
+    "market": "DeepSeek V4 released by March 31?",
+    "side": "No",
+    "entryPrice": 0.22,
+    "currentPrice": 0.22,
+    "shares": 21.14,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "LinaBell, Xeny, The-Joker",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 74.8,
+    "avgWinRate": 60.4,
+    "reasoning": "Consensus: 3 whales (avg score 74.8, WR 60.4%) No. bet=$4.65, shares=21.14, tierMult=1.00. Whales: LinaBell, Xeny, The-Joker",
+    "endDate": "",
+    "conditionId": "0x9fa5a9291e907fa7bb271f7a130571236c2e4121d9f4a48db6172dea4ca03bc3",
+    "createdAt": "2026-03-03T02:06:18.573Z",
+    "entryDate": "2026-03-03T02:06:18.573Z",
+    "invested": 4.6508,
+    "currentValue": 4.6508,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
