@@ -252,7 +252,7 @@
     "slug": "us-strikes-iraq-by-february-28",
     "side": "No",
     "entryPrice": 0.8995,
-    "currentPrice": 0.906,
+    "currentPrice": 1,
     "shares": 8,
     "invested": 7.196,
     "expectedPayout": 8,
@@ -272,8 +272,13 @@
       "middle east"
     ],
     "createdAt": "2026-03-03T02:12:42.383Z",
-    "currentValue": 7.248,
-    "pnl": 0.052,
-    "pnlPercent": 0.72
+    "currentValue": 8,
+    "pnl": 0.804,
+    "pnlPercent": 11.17,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-06T06:30:27.822Z"
   }
 ]
