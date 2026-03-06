@@ -6919,7 +6919,7 @@
     "market": "Will SpaceX not IPO by December 31, 2027?",
     "side": "Yes",
     "entryPrice": 0.056,
-    "currentPrice": 0.039,
+    "currentPrice": 0.038,
     "shares": 83.57,
     "status": "open",
     "source": "consensus-scanner",
@@ -6934,14 +6934,14 @@
     "createdAt": "2026-03-02T10:59:53.532Z",
     "entryDate": "2026-03-02T10:59:53.532Z",
     "invested": 4.6799,
-    "currentValue": 3.2592,
-    "pnl": -1.4207,
-    "pnlPercent": -30.36,
+    "currentValue": 3.1757,
+    "pnl": -1.5043,
+    "pnlPercent": -32.14,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T09:34:18.007Z"
+    "updatedAt": "2026-03-06T10:04:20.044Z"
   },
   {
     "id": "d784d364-f30f-4dfa-bce7-8a0b8a6453c9",
