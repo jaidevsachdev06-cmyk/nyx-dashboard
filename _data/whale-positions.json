@@ -6879,7 +6879,7 @@
     "market": "Fed rate cut by March 2026 meeting?",
     "side": "No",
     "entryPrice": 0.9715,
-    "currentPrice": 0.989,
+    "currentPrice": 0.9895,
     "shares": 5.18,
     "status": "open",
     "source": "consensus-scanner",
@@ -6894,14 +6894,14 @@
     "createdAt": "2026-03-02T10:59:43.114Z",
     "entryDate": "2026-03-02T10:59:43.114Z",
     "invested": 5.0324,
-    "currentValue": 5.123,
-    "pnl": 0.0906,
-    "pnlPercent": 1.8,
+    "currentValue": 5.1256,
+    "pnl": 0.0932,
+    "pnlPercent": 1.85,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:03:53.151Z"
+    "updatedAt": "2026-03-06T12:33:26.519Z"
   },
   {
     "id": "1ffb26e2-4f30-4fee-89e4-c907fb7060f0",
