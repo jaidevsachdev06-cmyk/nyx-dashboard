@@ -7763,7 +7763,7 @@
     "market": "Will Chris Murphy win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.5,
+    "currentPrice": 0.010499999999999999,
     "shares": 14,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -7778,9 +7778,14 @@
     "createdAt": "2026-03-06T14:06:57.693Z",
     "entryDate": "2026-03-06T14:06:57.693Z",
     "invested": 7,
-    "currentValue": 7,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 0.147,
+    "pnl": -6.853,
+    "pnlPercent": -97.9,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-06T14:34:44.547Z"
   },
   {
     "id": "73b30b02-22eb-4436-a531-225f167a94f7",
