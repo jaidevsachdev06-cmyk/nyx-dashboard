@@ -7121,7 +7121,7 @@
     "entryPrice": 0.735,
     "currentPrice": 0.7,
     "shares": 6.52,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "kekkone, Mombil, Parz1vaI",
     "whaleCount": 3,
@@ -7141,7 +7141,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T14:03:52.474Z"
+    "updatedAt": "2026-03-06T14:06:44.966Z",
+    "exitPrice": 0.7,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "72e12f23-fe38-4c55-a756-2ca05ad09126",
