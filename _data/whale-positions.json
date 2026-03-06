@@ -7402,7 +7402,7 @@
     "entryPrice": 0.824,
     "currentPrice": 0.8185,
     "shares": 6.2,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, GollumGekko, XieGuangKun, esports095",
     "whaleCount": 4,
@@ -7422,7 +7422,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:04:25.850Z"
+    "updatedAt": "2026-03-06T20:06:44.750Z",
+    "exitPrice": 0.8185,
+    "notes": "Whale exodus: 2/4 whales remain (threshold: 50%)"
   },
   {
     "id": "72f852c4-655f-48b9-9117-c950c710618f",
