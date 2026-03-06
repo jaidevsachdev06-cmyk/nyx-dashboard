@@ -7671,7 +7671,7 @@
     "entryPrice": 0.97,
     "currentPrice": 0.97,
     "shares": 5.73,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "archaic, GollumGekko, aenews",
     "whaleCount": 3,
@@ -7691,7 +7691,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:04:54.377Z"
+    "updatedAt": "2026-03-06T20:06:50.155Z",
+    "exitPrice": 0.97,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "3c11dbfd-c7c2-4080-b515-2c39c74f9b21",
