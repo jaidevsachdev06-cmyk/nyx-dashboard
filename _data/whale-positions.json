@@ -7256,5 +7256,29 @@
     "currentValue": 14.539,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "65665bcb-af56-4f95-aa06-04c6665a4179",
+    "market": "US x Iran ceasefire by March 31?",
+    "side": "Yes",
+    "entryPrice": 0.295,
+    "currentPrice": 0.295,
+    "shares": 54.14,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, UbuntuTrading, MuddyRC, GollumGekko, Mombil, Parz1vaI",
+    "whaleCount": 6,
+    "confidence": "Very High",
+    "avgScore": 84,
+    "avgWinRate": 69.2,
+    "reasoning": "Consensus: 6 whales (avg score 84, WR 69.2%) Yes. bet=$15.97, shares=54.14, tierMult=1.00. Whales: Car, UbuntuTrading, MuddyRC, GollumGekko, Mombil, Parz1vaI",
+    "endDate": "",
+    "conditionId": "0x3c6bcb7da14ea576e5af25547dbd96f2bb24ac34e748e76aecff2ee9195dd1ac",
+    "createdAt": "2026-03-06T08:06:14.185Z",
+    "entryDate": "2026-03-06T08:06:14.185Z",
+    "invested": 15.9713,
+    "currentValue": 15.9713,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
