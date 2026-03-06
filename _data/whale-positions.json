@@ -7280,5 +7280,29 @@
     "currentValue": 15.9713,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "a1068dc5-6a0a-4d37-95de-f6e8e8d5455b",
+    "market": "Will Israel's Ben Gurion Airport reopen by March 7?",
+    "side": "No",
+    "entryPrice": 0.845,
+    "currentPrice": 0.845,
+    "shares": 12.76,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Gr33d, GollumGekko, cashy, Sonix",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 83.8,
+    "avgWinRate": 70.1,
+    "reasoning": "Consensus: 5 whales (avg score 83.8, WR 70.1%) No. bet=$10.78, shares=12.76, tierMult=1.00. Whales: Car, Gr33d, GollumGekko, cashy, Sonix",
+    "endDate": "2026-03-31",
+    "conditionId": "0x56ced25c1266e3bdb08450662d82a6361777ddd1de9c5c4572c33652d6dd1aaf",
+    "createdAt": "2026-03-06T08:06:22.006Z",
+    "entryDate": "2026-03-06T08:06:22.006Z",
+    "invested": 10.7822,
+    "currentValue": 10.7822,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
