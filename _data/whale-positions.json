@@ -6322,7 +6322,7 @@
     "entryPrice": 0.375,
     "currentPrice": 0.385,
     "shares": 14.37,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, UbuntuTrading, GollumGekko, dontshowmyname",
     "whaleCount": 4,
@@ -6342,7 +6342,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:02:26.924Z"
+    "updatedAt": "2026-03-06T20:06:40.856Z",
+    "exitPrice": 0.385,
+    "notes": "Whale exodus: 2/4 whales remain (threshold: 50%)"
   },
   {
     "id": "2fb30b10-b52b-4eb7-8c2e-2dd0d8e792de",
