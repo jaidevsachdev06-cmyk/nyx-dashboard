@@ -140,21 +140,39 @@ async function main() {
   msg += `• ${scanResult.scanned} markets scanned\n`;
   msg += `• ${scanResult.passing} met entry criteria (≥25% edge)\n`;
   
-  // Get open positions count from journal
+  // Get open positions count from trades.json
   const fs = require('fs');
-  const journalPath = '/docker/openclaw-uwzq/data/.openclaw/workspace/projects/nyx-dashboard/_data/trading-journal.json';
+  const path = require('path');
+  const tradesPath = path.resolve(__dirname, '..', 'trades.json');
   let openCount = 0;
   try {
-    const journal = JSON.parse(fs.readFileSync(journalPath, 'utf8'));
-    openCount = journal.filter(p => p.status === 'open').length;
+    const data = JSON.parse(fs.readFileSync(tradesPath, 'utf8'));
+    openCount = (data.trades || []).filter(p => p.status === 'open').length;
   } catch (err) {
-    console.error('[run-scan] Failed to read journal for open count:', err.message);
+    console.error('[run-scan] Failed to read trades for open count:', err.message);
   }
   msg += `• ${openCount} positions currently open\n`;
   
   msg += `\nNext scan: ~2h`;
   
   await sendTelegram(msg);
+  
+  // Auto-push if any trades were entered
+  if (entered > 0) {
+    try {
+      const { execSync } = require('child_process');
+      const path = require('path');
+      const GIT_DIR = path.resolve(__dirname, '..', '..');
+      execSync(`git -C ${GIT_DIR} add weather-v2/trades.json`, { stdio: 'pipe' });
+      try { execSync(`git -C ${GIT_DIR} commit -m "auto: ${entered} weather trade(s) entered"`, { stdio: 'pipe' }); } catch(e) { /* nothing to commit */ }
+      execSync(`git -C ${GIT_DIR} pull --rebase origin main`, { stdio: 'pipe' });
+      execSync(`git -C ${GIT_DIR} push origin main`, { stdio: 'pipe' });
+      console.log(`[run-scan] Pushed ${entered} new trade(s) to GitHub`);
+    } catch (e) {
+      console.warn(`[run-scan] Git push failed: ${e.message?.slice(0, 80)}`);
+    }
+  }
+  
   return scanResult;
 }
 
