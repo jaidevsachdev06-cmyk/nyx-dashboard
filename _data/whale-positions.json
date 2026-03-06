@@ -6140,7 +6140,7 @@
     "entryPrice": 0.669,
     "currentPrice": 0.777,
     "shares": 7.38,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, LinaBell, kekkone",
     "whaleCount": 3,
@@ -6160,7 +6160,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:02:20.045Z"
+    "updatedAt": "2026-03-06T12:06:49.655Z",
+    "exitPrice": 0.777,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "daa9fa24-9dab-4414-91cf-70fdc4828004",
