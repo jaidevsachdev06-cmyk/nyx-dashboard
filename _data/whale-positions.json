@@ -7976,7 +7976,7 @@
     "market": "Will Tom Brady win the 2028 Republican presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.010499999999999999,
+    "currentPrice": 1,
     "shares": 14,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -7991,14 +7991,14 @@
     "createdAt": "2026-03-06T16:06:53.408Z",
     "entryDate": "2026-03-06T16:06:53.408Z",
     "invested": 7,
-    "currentValue": 0.147,
-    "pnl": -6.853,
-    "pnlPercent": -97.9,
+    "currentValue": 14,
+    "pnl": 7,
+    "pnlPercent": 100,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T16:36:19.543Z"
+    "updatedAt": "2026-03-06T17:05:50.961Z"
   },
   {
     "id": "6a40c3e3-206b-4f5f-ac4b-8035d21b6aeb",
