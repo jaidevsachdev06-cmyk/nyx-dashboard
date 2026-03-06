@@ -7705,7 +7705,7 @@
     "market": "Will Ruben Gallego win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.020999999999999998,
+    "currentPrice": 0.0205,
     "shares": 14,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -7720,14 +7720,14 @@
     "createdAt": "2026-03-06T14:06:48.347Z",
     "entryDate": "2026-03-06T14:06:48.347Z",
     "invested": 7,
-    "currentValue": 0.294,
-    "pnl": -6.706,
-    "pnlPercent": -95.8,
+    "currentValue": 0.287,
+    "pnl": -6.713,
+    "pnlPercent": -95.9,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T15:35:21.712Z"
+    "updatedAt": "2026-03-06T16:05:01.799Z"
   },
   {
     "id": "bbd002d2-7e43-412e-aec1-2d58bd1a649f",
