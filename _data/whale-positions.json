@@ -6643,7 +6643,7 @@
     "entryPrice": 0.75,
     "currentPrice": 1,
     "shares": 6.68,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, TheWolfOfPoly, gopfan2",
     "whaleCount": 3,
@@ -6663,7 +6663,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T06:33:01.251Z"
+    "updatedAt": "2026-03-06T12:06:55.872Z",
+    "exitPrice": 1,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "69723fd4-71a5-4e8d-89e4-12c09b028c0c",
