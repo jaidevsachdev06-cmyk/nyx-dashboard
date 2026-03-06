@@ -301,6 +301,10 @@ async function scan() {
 
           const modelProb = bucketProbability(bucket, forecast.mean, forecast.sd);
           if (modelProb === null) continue;
+          
+          // CRITICAL: Filter extreme probabilities - model is overconfident at tails
+          // Feb 28-Mar 2 data: 3 trades with >95% bucket prob lost $36.40 (all wrong)
+          if (modelProb < 0.05 || modelProb > 0.95) continue;
 
           const conditionId = market.condition_id || market.conditionId;
           const yesTokenId = market.side_a?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'yes')?.token_id || '';
@@ -321,7 +325,7 @@ async function scan() {
             console.warn(`[scanner] NO price fetch failed: ${e.message}`);
           }
 
-          const hasYes = (yesPrice != null && yesPrice > 0.01 && yesPrice < 0.95);
+          const hasYes = (yesPrice != null && yesPrice > 0.05 && yesPrice < 0.95);
           const hasNo = (noPrice != null && noPrice > 0.05 && noPrice < 0.95);
           if (!hasYes && !hasNo) continue;
 

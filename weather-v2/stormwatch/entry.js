@@ -98,7 +98,7 @@ async function processCandidate(signal) {
 
   // Lottery sizing: cap at $10 (higher risk, lower capital at risk)
   if (isLottery) {
-    sizeUSDC = Math.min(sizeUSDC, 10);
+    sizeUSDC = Math.min(sizeUSDC, 3);
   } else if (currentPrice < 0.20) {
     // Regular cheap bets get half size
     sizeUSDC = Math.min(sizeUSDC, maxSize * 0.5);
