@@ -7921,5 +7921,29 @@
     "currentValue": 7,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "93c4efca-77c7-4df6-9522-ce3ae8322bf5",
+    "market": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 14,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Qualitative, scottilicious, Mombil",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 84.4,
+    "avgWinRate": 64.3,
+    "reasoning": "[FILTERED] Consensus: 3 whales (avg score 84.4, WR 64.3%) Yes. bet=$7.00, shares=14, tier=High. Whales: Qualitative, scottilicious, Mombil",
+    "endDate": "",
+    "conditionId": "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701",
+    "createdAt": "2026-03-06T16:06:49.978Z",
+    "entryDate": "2026-03-06T16:06:49.978Z",
+    "invested": 7,
+    "currentValue": 7,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
