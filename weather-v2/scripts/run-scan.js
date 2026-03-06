@@ -23,8 +23,8 @@ async function sendTelegram(text) {
       body: JSON.stringify({
         chat_id: CHAT_ID,
         message_thread_id: TOPIC_ID,
-        text
-        // No parse_mode - plain text for clean table rendering
+        text,
+        parse_mode: 'Markdown'
       })
     });
     if (!res.ok) {
@@ -156,7 +156,7 @@ async function main() {
     let totalUnrealized = 0;
     
     if (openTrades.length > 0) {
-      msg += `Open Positions:\n\n`;
+      msg += `Open Positions:\n\n\`\`\`\n`;
       msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
       msg += `|      | City     | Market   | Side  | Entry   | Now     | P&L      |\n`;
       msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
@@ -174,7 +174,7 @@ async function main() {
         msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
       }
       
-      msg += `\n`;
+      msg += `\`\`\`\n\n`;
     } else {
       msg += `No open positions.\n\n`;
     }
