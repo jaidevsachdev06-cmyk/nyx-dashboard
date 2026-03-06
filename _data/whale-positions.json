@@ -6970,7 +6970,7 @@
     "entryPrice": 0.7985,
     "currentPrice": 0.894,
     "shares": 5.72,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "kekkone, LinaBell, Mombil",
     "whaleCount": 3,
@@ -6990,7 +6990,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:04:11.415Z"
+    "updatedAt": "2026-03-06T12:07:01.415Z",
+    "exitPrice": 0.894,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "096cbde1-ae28-4e6e-a571-05900424f4b3",
