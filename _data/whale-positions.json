@@ -6891,7 +6891,7 @@
     "entryPrice": 0.9715,
     "currentPrice": 0.9804999999999999,
     "shares": 5.18,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, LinaBell, Mombil",
     "whaleCount": 3,
@@ -6911,7 +6911,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:03:30.102Z"
+    "updatedAt": "2026-03-06T20:06:42.701Z",
+    "exitPrice": 0.9804999999999999,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "1ffb26e2-4f30-4fee-89e4-c907fb7060f0",
