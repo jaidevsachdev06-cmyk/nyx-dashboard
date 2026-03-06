@@ -7536,5 +7536,29 @@
     "currentValue": 5.6705,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "4d2b7e8e-88ea-44e1-b381-ffc087d827d8",
+    "market": "Will Janet Mills be the Democratic nominee for Senate in Maine?",
+    "side": "Yes",
+    "entryPrice": 0.235,
+    "currentPrice": 0.235,
+    "shares": 23.19,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "archaic, nicoco89, Iabvek",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 89.4,
+    "avgWinRate": 70.9,
+    "reasoning": "Consensus: 3 whales (avg score 89.4, WR 70.9%) Yes. bet=$5.45, shares=23.19, tierMult=1.00. Whales: archaic, nicoco89, Iabvek",
+    "endDate": "2026-07-31",
+    "conditionId": "0x690d504367efdec61936e7dc1c572c1598281f3e91d30d3b6148f3f1f48642d5",
+    "createdAt": "2026-03-06T10:06:34.622Z",
+    "entryDate": "2026-03-06T10:06:34.622Z",
+    "invested": 5.4497,
+    "currentValue": 5.4497,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
