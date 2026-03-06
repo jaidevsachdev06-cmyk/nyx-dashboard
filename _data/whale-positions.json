@@ -7918,7 +7918,7 @@
     "market": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.5,
+    "currentPrice": 0.0115,
     "shares": 14,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -7933,9 +7933,14 @@
     "createdAt": "2026-03-06T16:06:47.047Z",
     "entryDate": "2026-03-06T16:06:47.047Z",
     "invested": 7,
-    "currentValue": 7,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 0.161,
+    "pnl": -6.839,
+    "pnlPercent": -97.7,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-06T16:36:09.953Z"
   },
   {
     "id": "93c4efca-77c7-4df6-9522-ce3ae8322bf5",
