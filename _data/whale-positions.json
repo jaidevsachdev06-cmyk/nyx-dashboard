@@ -6494,7 +6494,7 @@
     "entryPrice": 0.992,
     "currentPrice": 0.9995,
     "shares": 4.81,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, elucidate, Polar",
     "whaleCount": 3,
@@ -6514,7 +6514,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:03:04.254Z"
+    "updatedAt": "2026-03-06T12:06:53.650Z",
+    "exitPrice": 0.9995,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "b3e21a46-0a6a-4f30-872c-d51db5afcc63",
