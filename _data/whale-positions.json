@@ -7802,7 +7802,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.0115,
     "shares": 14,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner-filtered",
     "whales": "Qualitative, TheWolfOfPoly, GollumGekko",
     "whaleCount": 3,
@@ -7822,6 +7822,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T16:05:18.299Z"
+    "updatedAt": "2026-03-06T16:06:35.609Z",
+    "exitPrice": 0.0115,
+    "notes": "Stop-loss triggered: -97.7% (threshold: -15%)"
   }
 ]
