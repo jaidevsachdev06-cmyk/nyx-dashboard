@@ -6287,7 +6287,7 @@
     "entryPrice": 0.39,
     "currentPrice": 0.85,
     "shares": 25.49,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Gr33d, duderr, Sonix, Thonker, Parz1vaI",
     "whaleCount": 5,
@@ -6307,7 +6307,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:02:40.292Z"
+    "updatedAt": "2026-03-06T12:06:51.728Z",
+    "exitPrice": 0.85,
+    "notes": "Take-profit triggered: 117.9% (threshold: 100%)"
   },
   {
     "id": "bd736ffe-c7c1-4dd0-b5c2-31a9b31a8067",
