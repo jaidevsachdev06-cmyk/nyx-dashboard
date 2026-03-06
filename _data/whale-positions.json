@@ -7825,5 +7825,29 @@
     "updatedAt": "2026-03-06T16:06:35.609Z",
     "exitPrice": 0.0115,
     "notes": "Stop-loss triggered: -97.7% (threshold: -15%)"
+  },
+  {
+    "id": "afdd9e69-8544-414e-8f65-b4ec16f1a694",
+    "market": "Will Ruben Gallego win the 2028 Democratic presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 14,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Qualitative, scottilicious, GollumGekko, Mombil",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 83.7,
+    "avgWinRate": 66.9,
+    "reasoning": "[FILTERED] Consensus: 4 whales (avg score 83.7, WR 66.9%) Yes. bet=$7.00, shares=14, tier=High. Whales: Qualitative, scottilicious, GollumGekko, Mombil",
+    "endDate": "",
+    "conditionId": "0x98933c78b5e277b62d91a6c174b412218de000b54c4c67ec8673bf561cec6e81",
+    "createdAt": "2026-03-06T16:06:38.280Z",
+    "entryDate": "2026-03-06T16:06:38.280Z",
+    "invested": 7,
+    "currentValue": 7,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
