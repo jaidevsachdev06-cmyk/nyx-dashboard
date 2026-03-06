@@ -7578,7 +7578,7 @@
     "entryPrice": 0.235,
     "currentPrice": 0.19,
     "shares": 24.13,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, UbuntuTrading, kekkone",
     "whaleCount": 3,
@@ -7598,7 +7598,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:04:49.503Z"
+    "updatedAt": "2026-03-06T20:06:49.242Z",
+    "exitPrice": 0.19,
+    "notes": "Stop-loss triggered: -19.1% (threshold: -15%)"
   },
   {
     "id": "4d2b7e8e-88ea-44e1-b381-ffc087d827d8",
