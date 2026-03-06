@@ -7376,5 +7376,29 @@
     "currentValue": 5.6386,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "4d925d28-8ca6-40f1-bc40-be3a42e3ee81",
+    "market": "Zelenskyy out as Ukraine president by end of 2026?",
+    "side": "No",
+    "entryPrice": 0.755,
+    "currentPrice": 0.755,
+    "shares": 8.32,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, GollumGekko, jinsun1377, Thonker",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 80.1,
+    "avgWinRate": 65.3,
+    "reasoning": "Consensus: 4 whales (avg score 80.1, WR 65.3%) No. bet=$6.28, shares=8.32, tierMult=1.25. Whales: scottilicious, GollumGekko, jinsun1377, Thonker",
+    "endDate": "2026-12-31",
+    "conditionId": "0x51f624dbbf14f9edb575fef1be6f7a303751de70783fa144fce27b957452c803",
+    "createdAt": "2026-03-06T08:06:50.518Z",
+    "entryDate": "2026-03-06T08:06:50.518Z",
+    "invested": 6.2816,
+    "currentValue": 6.2816,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
