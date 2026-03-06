@@ -7979,7 +7979,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.027,
     "shares": 14,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner-filtered",
     "whales": "Qualitative, scottilicious, Mombil",
     "whaleCount": 3,
@@ -7999,7 +7999,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:05:24.263Z"
+    "updatedAt": "2026-03-06T20:06:57.460Z",
+    "exitPrice": 0.027,
+    "notes": "Stop-loss triggered: -94.6% (threshold: -15%)"
   },
   {
     "id": "4b9cf3b4-243f-4554-8b7a-da9c96fad172",
