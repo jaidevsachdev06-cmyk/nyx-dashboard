@@ -6803,7 +6803,7 @@
     "market": " Iran agrees to end enrichment of uranium by March 31?",
     "side": "No",
     "entryPrice": 0.8345,
-    "currentPrice": 0.9065000000000001,
+    "currentPrice": 0.9075,
     "shares": 6.26,
     "status": "open",
     "source": "consensus-scanner",
@@ -6818,14 +6818,14 @@
     "createdAt": "2026-03-02T10:59:29.870Z",
     "entryDate": "2026-03-02T10:59:29.870Z",
     "invested": 5.224,
-    "currentValue": 5.6747,
-    "pnl": 0.4507,
-    "pnlPercent": 8.63,
+    "currentValue": 5.6809,
+    "pnl": 0.457,
+    "pnlPercent": 8.75,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T07:03:43.154Z"
+    "updatedAt": "2026-03-06T07:33:19.972Z"
   },
   {
     "id": "98b26f80-77ad-483e-a18d-55f65b0686f5",
