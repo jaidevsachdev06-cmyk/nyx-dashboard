@@ -5929,7 +5929,7 @@
     "entryPrice": 0.974,
     "currentPrice": 0.9995,
     "shares": 4.88,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "arjenw, scottilicious, cashy",
     "whaleCount": 3,
@@ -5949,7 +5949,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-03T02:01:50.516Z"
+    "updatedAt": "2026-03-06T12:06:47.439Z",
+    "exitPrice": 0.9995,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "5abd832e-b109-4bf9-8596-8d0a3cb55048",
