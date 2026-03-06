@@ -7006,7 +7006,7 @@
     "market": "SpaceX (Space Exploration Technologies Corp.) IPO before 2027?",
     "side": "No",
     "entryPrice": 0.145,
-    "currentPrice": 0.10500000000000001,
+    "currentPrice": 0.11499999999999999,
     "shares": 30.21,
     "status": "open",
     "source": "consensus-scanner",
@@ -7021,14 +7021,14 @@
     "createdAt": "2026-03-02T11:00:13.813Z",
     "entryDate": "2026-03-02T11:00:13.813Z",
     "invested": 4.3804,
-    "currentValue": 3.1721,
-    "pnl": -1.2084,
-    "pnlPercent": -27.59,
+    "currentValue": 3.4741,
+    "pnl": -0.9063,
+    "pnlPercent": -20.69,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T07:33:52.908Z"
+    "updatedAt": "2026-03-06T08:03:51.195Z"
   },
   {
     "id": "77390d92-d15b-4f84-b97e-81e75e88739e",
