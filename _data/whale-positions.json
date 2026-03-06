@@ -8064,5 +8064,29 @@
     "updatedAt": "2026-03-06T22:06:42.921Z",
     "exitPrice": 0.0215,
     "notes": "Stop-loss triggered: -95.7% (threshold: -15%)"
+  },
+  {
+    "id": "e9c089ff-a0fc-4551-b8a7-3870f7d65b5a",
+    "market": "Will Kamala Harris win the 2028 US Presidential Election?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 6,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Car, UbuntuTrading, XieGuangKun, gopfan2",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 86.2,
+    "avgWinRate": 69.3,
+    "reasoning": "[FILTERED] Consensus: 4 whales (avg score 86.2, WR 69.3%) Yes. bet=$3.00, shares=6, tier=High. Whales: Car, UbuntuTrading, XieGuangKun, gopfan2",
+    "endDate": "",
+    "conditionId": "0xb3298af85e00aafad937c119444a5f2800a55343b7482eb75581f6e454432501",
+    "createdAt": "2026-03-06T22:06:45.489Z",
+    "entryDate": "2026-03-06T22:06:45.489Z",
+    "invested": 3,
+    "currentValue": 3,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
