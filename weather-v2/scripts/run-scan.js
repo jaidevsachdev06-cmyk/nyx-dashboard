@@ -7,6 +7,7 @@
 
 const { scan } = require('../stormwatch/scanner');
 const { processCandidate } = require('../stormwatch/entry');
+const { scanAll: runScalper } = require('../stormwatch/scalper');
 const config = require('../config.json');
 
 const BOT_TOKEN = '8550919932:AAEJrh5TX03LP7gXq_WiRnMNBUlPA6K1zC4';
@@ -22,8 +23,8 @@ async function sendTelegram(text) {
       body: JSON.stringify({
         chat_id: CHAT_ID,
         message_thread_id: TOPIC_ID,
-        text,
-        parse_mode: 'HTML'
+        text
+        // No parse_mode - plain text for clean table rendering
       })
     });
     if (!res.ok) {
@@ -40,6 +41,17 @@ async function sendTelegram(text) {
 async function main() {
   console.log(`[run-scan] Starting weather v2 scan | paper=${config.paper} | ${new Date().toISOString()}`);
 
+  // Step 0: Run scalper before scanning for new trades
+  console.log('[run-scan] Running scalper on open positions...');
+  let scalperResults = { scalps: [], exits: [], checked: 0 };
+  try {
+    scalperResults = await runScalper();
+    const actions = scalperResults.scalps.length + scalperResults.exits.length;
+    console.log(`[run-scan] Scalper: checked ${scalperResults.checked} positions, ${actions} actions taken`);
+  } catch (err) {
+    console.error('[run-scan] Scalper error (continuing to scan):', err.message);
+  }
+
   const result = await scan();
 
   console.log(`\n[run-scan] Found ${result.candidates.length} candidates, ${result.passing.length} pass threshold`);
@@ -55,7 +67,22 @@ async function main() {
   // Cap max edge to filter illiquid garbage (>500% usually means 3¢ market)
   result.passing = result.passing.filter(c => (c.edge || 0) <= 5.0);
 
-  console.log(`[run-scan] After sorting & filtering: ${result.passing.length} candidates`);
+  // Separate lottery vs normal trades
+  const lotteryTrades = result.passing.filter(c => c.marketPrice < 0.15 && c.modelProb >= 0.07);
+  const normalTrades = result.passing.filter(c => !(c.marketPrice < 0.15 && c.modelProb >= 0.07));
+
+  // Sort lottery trades by probability ratio (quality), take top 3
+  lotteryTrades.sort((a, b) => {
+    const ratioA = a.modelProb / a.marketPrice;
+    const ratioB = b.modelProb / b.marketPrice;
+    return ratioB - ratioA;
+  });
+  const topLottery = lotteryTrades.slice(0, 3);
+
+  // Recombine: normal trades + top 3 lottery trades
+  result.passing = [...normalTrades, ...topLottery];
+
+  console.log(`[run-scan] After sorting & filtering: ${result.passing.length} candidates (${normalTrades.length} normal, ${topLottery.length} lottery)`);
 
   // Enter trades
   let entered = 0;
@@ -86,11 +113,24 @@ async function main() {
   // Build notification
   let msg = `🌪️ Weather Scan Complete\n\n`;
   
+  // Scalper results first
+  if (scalperResults.scalps.length > 0 || scalperResults.exits.length > 0) {
+    msg += `Scalper actions:\n`;
+    for (const s of scalperResults.scalps) {
+      msg += `• Partial exit: ${s.city} ${s.bucket} ${s.side}, sold ${s.sharesSold} @ ${(s.currentPrice*100).toFixed(0)}¢ (+$${s.pnlOnSold.toFixed(2)})\n`;
+    }
+    for (const e of scalperResults.exits) {
+      msg += `• Full exit: ${e.city} ${e.bucket} ${e.side}, ${e.rule} ($${e.pnlUSDC.toFixed(2)})\n`;
+    }
+    msg += `\n`;
+  }
+  
   if (entered > 0) {
     msg += `${entered} trade${entered > 1 ? 's' : ''} entered.\n\n`;
     msg += `Positions:\n`;
     for (const t of enteredTrades) {
-      msg += `• ${t.city} ${t.bucket} ${t.side} @ ${(t.marketPrice*100).toFixed(0)}¢ (edge: ${t.edgePct.toFixed(0)}%)\n`;
+      const lottery = t.modelProb < 0.6 && t.edgePct > 100 ? ' 🎰' : '';
+      msg += `• ${t.city} ${t.bucket} ${t.side} @ ${(t.marketPrice*100).toFixed(0)}¢ (edge: ${t.edgePct.toFixed(0)}%)${lottery}\n`;
     }
   } else {
     msg += `No trades entered this cycle.\n`;
