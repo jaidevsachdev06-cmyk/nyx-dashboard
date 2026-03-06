@@ -6732,7 +6732,7 @@
     "entryPrice": 0.0815,
     "currentPrice": 0.0005,
     "shares": 61.96,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "UbuntuTrading, Winry, esports095",
     "whaleCount": 3,
@@ -6752,7 +6752,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:03:38.148Z"
+    "updatedAt": "2026-03-06T12:06:56.746Z",
+    "exitPrice": 0.0005,
+    "notes": "Stop-loss triggered: -99.4% (threshold: -15%)"
   },
   {
     "id": "300f60e9-77f2-4527-8e34-6b9d0e7c553f",
