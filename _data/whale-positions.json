@@ -8010,7 +8010,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.010499999999999999,
     "shares": 14,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner-filtered",
     "whales": "Rooke Brollins, GollumGekko, Brokie",
     "whaleCount": 3,
@@ -8030,7 +8030,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:05:28.213Z"
+    "updatedAt": "2026-03-06T20:07:01.544Z",
+    "exitPrice": 0.010499999999999999,
+    "notes": "Stop-loss triggered: -97.9% (threshold: -15%)"
   },
   {
     "id": "6a40c3e3-206b-4f5f-ac4b-8035d21b6aeb",
