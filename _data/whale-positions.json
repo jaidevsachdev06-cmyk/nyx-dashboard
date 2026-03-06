@@ -7232,5 +7232,29 @@
       {}
     ],
     "updatedAt": "2026-03-06T08:04:18.656Z"
+  },
+  {
+    "id": "fd977f5a-bd42-4009-9a87-cf1fb5090fb1",
+    "market": "Will Mojtaba Khamenei be the next Supreme Leader of Iran?",
+    "side": "Yes",
+    "entryPrice": 0.5285,
+    "currentPrice": 0.5285,
+    "shares": 27.51,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Polar, GollumGekko, duderr, cashy, kekkone, The-Joker, Mombil",
+    "whaleCount": 7,
+    "confidence": "Very High",
+    "avgScore": 78.8,
+    "avgWinRate": 63,
+    "reasoning": "Consensus: 7 whales (avg score 78.8, WR 63%) Yes. bet=$14.54, shares=27.51, tierMult=1.00. Whales: Polar, GollumGekko, duderr, cashy, kekkone, The-Joker, Mombil",
+    "endDate": "",
+    "conditionId": "0xbe6525eb1b615ba8a490abc915d76cdffabb2aad4f71e26aaee5f57c3b096a71",
+    "createdAt": "2026-03-06T08:06:08.800Z",
+    "entryDate": "2026-03-06T08:06:08.800Z",
+    "invested": 14.539,
+    "currentValue": 14.539,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
