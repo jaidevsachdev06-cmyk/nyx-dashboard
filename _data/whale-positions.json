@@ -7030,7 +7030,7 @@
     "entryPrice": 0.145,
     "currentPrice": 0.11499999999999999,
     "shares": 30.21,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Thonker, LinaBell, dontshowmyname",
     "whaleCount": 3,
@@ -7050,7 +7050,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:04:19.731Z"
+    "updatedAt": "2026-03-06T12:07:02.350Z",
+    "exitPrice": 0.11499999999999999,
+    "notes": "Stop-loss triggered: -20.7% (threshold: -15%)"
   },
   {
     "id": "77390d92-d15b-4f84-b97e-81e75e88739e",
