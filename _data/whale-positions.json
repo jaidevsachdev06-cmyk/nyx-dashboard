@@ -8112,5 +8112,29 @@
     "currentValue": 7,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "1844fa8d-0285-46bc-a151-ca30ad2856f1",
+    "market": "US x Iran ceasefire by June 30?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 21,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Car, UbuntuTrading, Parz1vaI",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 87.4,
+    "avgWinRate": 72.4,
+    "reasoning": "[FILTERED] Consensus: 3 whales (avg score 87.4, WR 72.4%) Yes. bet=$10.50, shares=21, tier=High. Whales: Car, UbuntuTrading, Parz1vaI",
+    "endDate": "",
+    "conditionId": "0x81b06cb917c9a2aabc67a7765bc3c640e88a699bbf451b29915049c0766cde04",
+    "createdAt": "2026-03-06T22:06:52.757Z",
+    "entryDate": "2026-03-06T22:06:52.757Z",
+    "invested": 10.5,
+    "currentValue": 10.5,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
