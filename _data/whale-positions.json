@@ -7595,7 +7595,7 @@
     "entryPrice": 0.235,
     "currentPrice": 0.235,
     "shares": 23.19,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "archaic, nicoco89, Iabvek",
     "whaleCount": 3,
@@ -7615,7 +7615,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T18:04:47.820Z"
+    "updatedAt": "2026-03-06T18:06:55.228Z",
+    "exitPrice": 0.235,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "0b4d495c-fbd7-4db3-a12b-bbfc08487820",
