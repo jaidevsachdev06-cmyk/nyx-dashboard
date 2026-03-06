@@ -7386,7 +7386,7 @@
     "market": "Will Reza Pahlavi lead Iran in 2026?",
     "side": "No",
     "entryPrice": 0.824,
-    "currentPrice": 0.822,
+    "currentPrice": 0.8225,
     "shares": 6.2,
     "status": "open",
     "source": "consensus-scanner",
@@ -7401,14 +7401,14 @@
     "createdAt": "2026-03-06T08:06:37.703Z",
     "entryDate": "2026-03-06T08:06:37.703Z",
     "invested": 5.1088,
-    "currentValue": 5.0964,
-    "pnl": -0.0124,
-    "pnlPercent": -0.24,
+    "currentValue": 5.0995,
+    "pnl": -0.0093,
+    "pnlPercent": -0.18,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T14:33:51.478Z"
+    "updatedAt": "2026-03-06T15:03:57.175Z"
   },
   {
     "id": "72f852c4-655f-48b9-9117-c950c710618f",
