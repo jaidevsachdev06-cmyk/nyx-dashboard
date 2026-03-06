@@ -6832,7 +6832,7 @@
     "market": "Trump out as President by March 31?",
     "side": "No",
     "entryPrice": 0.967,
-    "currentPrice": 0.9835,
+    "currentPrice": 0.9824999999999999,
     "shares": 5.13,
     "status": "open",
     "source": "consensus-scanner",
@@ -6847,14 +6847,14 @@
     "createdAt": "2026-03-02T10:59:37.911Z",
     "entryDate": "2026-03-02T10:59:37.911Z",
     "invested": 4.9607,
-    "currentValue": 5.0454,
-    "pnl": 0.0846,
-    "pnlPercent": 1.71,
+    "currentValue": 5.0402,
+    "pnl": 0.0795,
+    "pnlPercent": 1.6,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T09:34:05.796Z"
+    "updatedAt": "2026-03-06T10:04:08.741Z"
   },
   {
     "id": "28c4dc8d-83ac-41df-bb05-c00fff2fc698",
