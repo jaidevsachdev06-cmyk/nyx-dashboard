@@ -7488,5 +7488,29 @@
     "currentValue": 4.7524,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "1259ad08-06ce-4219-a07a-1399c5e322a4",
+    "market": "Will the next Prime Minister of Hungary be Péter Magyar?",
+    "side": "No",
+    "entryPrice": 0.375,
+    "currentPrice": 0.375,
+    "shares": 16.4,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "archaic, nicoco89, UbuntuTrading",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 95.1,
+    "avgWinRate": 80,
+    "reasoning": "Consensus: 3 whales (avg score 95.1, WR 80%) No. bet=$6.15, shares=16.4, tierMult=1.00. Whales: archaic, nicoco89, UbuntuTrading",
+    "endDate": "2026-04-12",
+    "conditionId": "0x1480b819d03d4b6388d70e848b0384adf38c38d955cb783cdbcf6d4a436dee14",
+    "createdAt": "2026-03-06T10:06:20.716Z",
+    "entryDate": "2026-03-06T10:06:20.716Z",
+    "invested": 6.15,
+    "currentValue": 6.15,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
