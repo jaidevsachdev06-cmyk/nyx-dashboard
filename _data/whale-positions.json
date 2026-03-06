@@ -6231,7 +6231,7 @@
     "entryPrice": 0.2525,
     "currentPrice": 0.2515,
     "shares": 63.96,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "FrancisSP8, UbuntuTrading, Qualitative, GollumGekko, failstober, Prexpect",
     "whaleCount": 6,
@@ -6251,7 +6251,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:02:19.463Z"
+    "updatedAt": "2026-03-06T20:06:39.630Z",
+    "exitPrice": 0.2515,
+    "notes": "Whale exodus: 3/6 whales remain (threshold: 50%)"
   },
   {
     "id": "e517e893-2c7e-434a-9ed8-b194db30ece0",
