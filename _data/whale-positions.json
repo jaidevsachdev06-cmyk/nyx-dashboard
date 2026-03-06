@@ -6413,7 +6413,7 @@
     "entryPrice": 0.195,
     "currentPrice": 0.155,
     "shares": 29.03,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, UbuntuTrading, TheWolfOfPoly",
     "whaleCount": 3,
@@ -6433,7 +6433,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:02:38.518Z"
+    "updatedAt": "2026-03-06T20:06:41.791Z",
+    "exitPrice": 0.155,
+    "notes": "Stop-loss triggered: -20.5% (threshold: -15%)"
   },
   {
     "id": "50d2a622-7dd2-421c-900e-51bd038bfdf1",
