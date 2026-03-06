@@ -8184,5 +8184,29 @@
     "currentValue": 3,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "bfe4f59e-ad4f-4462-b599-29d80d507988",
+    "market": "US strike on Cuba by March 31?",
+    "side": "No",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 35,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Car, LinaBell, Michael5289",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 83.9,
+    "avgWinRate": 72.6,
+    "reasoning": "[FILTERED] Consensus: 3 whales (avg score 83.9, WR 72.6%) No. bet=$17.50, shares=35, tier=High. Whales: Car, LinaBell, Michael5289",
+    "endDate": "",
+    "conditionId": "0x403b8deb760c51691df6dcc9a6aa080846ecd280d49d3786865c2d9846180aaa",
+    "createdAt": "2026-03-06T22:07:01.271Z",
+    "entryDate": "2026-03-06T22:07:01.271Z",
+    "invested": 17.5,
+    "currentValue": 17.5,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
