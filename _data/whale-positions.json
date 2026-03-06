@@ -7969,5 +7969,29 @@
     "currentValue": 7,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "6a40c3e3-206b-4f5f-ac4b-8035d21b6aeb",
+    "market": "Will Donald Trump win the 2028 Republican presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 14,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Rooke Brollins, GollumGekko, Brokie",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 83.2,
+    "avgWinRate": 69.9,
+    "reasoning": "[FILTERED] Consensus: 3 whales (avg score 83.2, WR 69.9%) Yes. bet=$7.00, shares=14, tier=High. Whales: Rooke Brollins, GollumGekko, Brokie",
+    "endDate": "",
+    "conditionId": "0x895e01dbf3e6a33cd9a44ca0f8cdb5df1bd2b0b6ebed5300d28f8da7145145e4",
+    "createdAt": "2026-03-06T16:06:59.207Z",
+    "entryDate": "2026-03-06T16:06:59.207Z",
+    "invested": 7,
+    "currentValue": 7,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
