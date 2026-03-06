@@ -5569,7 +5569,7 @@
     "market": "Will Gavin Newsom win the 2028 US Presidential Election?",
     "side": "Yes",
     "entryPrice": 0.172,
-    "currentPrice": 0.1595,
+    "currentPrice": 0.161,
     "shares": 29.71,
     "status": "open",
     "source": "consensus-scanner",
@@ -5584,14 +5584,14 @@
     "createdAt": "2026-03-01T08:05:45.046Z",
     "entryDate": "2026-03-01T08:05:45.046Z",
     "invested": 5.1101,
-    "currentValue": 4.7387,
-    "pnl": -0.3714,
-    "pnlPercent": -7.27,
+    "currentValue": 4.7833,
+    "pnl": -0.3268,
+    "pnlPercent": -6.4,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T06:31:08.576Z"
+    "updatedAt": "2026-03-06T07:01:07.929Z"
   },
   {
     "id": "2e9d09d5-fa8b-4787-9576-765f2689f8cb",
