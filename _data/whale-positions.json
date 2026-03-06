@@ -7371,7 +7371,7 @@
     "entryPrice": 0.147,
     "currentPrice": 0.1005,
     "shares": 65.85,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, Polar, cashy, Mombil, Parz1vaI",
     "whaleCount": 5,
@@ -7391,7 +7391,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T20:04:20.192Z"
+    "updatedAt": "2026-03-06T20:06:43.737Z",
+    "exitPrice": 0.1005,
+    "notes": "Stop-loss triggered: -31.6% (threshold: -15%)"
   },
   {
     "id": "2fc9246a-2d9c-4fe8-972c-477bac7a57a8",
