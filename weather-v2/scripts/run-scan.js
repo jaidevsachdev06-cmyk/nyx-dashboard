@@ -136,24 +136,80 @@ async function main() {
     msg += `No trades entered this cycle.\n`;
   }
   
-  msg += `\nMarket conditions:\n`;
-  msg += `• ${scanResult.scanned} markets scanned\n`;
-  msg += `• ${scanResult.passing} met entry criteria (≥25% edge)\n`;
+  msg += `\n`;
   
-  // Get open positions count from trades.json
+  // Always include full P&L table
   const fs = require('fs');
   const path = require('path');
   const tradesPath = path.resolve(__dirname, '..', 'trades.json');
-  let openCount = 0;
+  
   try {
     const data = JSON.parse(fs.readFileSync(tradesPath, 'utf8'));
-    openCount = (data.trades || []).filter(p => p.status === 'open').length;
+    const openTrades = (data.trades || []).filter(t => t.status === 'open');
+    const closedTrades = (data.trades || []).filter(t => t.status === 'closed');
+    
+    const totalRealized = closedTrades.reduce((sum, t) => sum + (t.pnlUSDC || 0), 0);
+    const wins = closedTrades.filter(t => t.pnlUSDC > 0).length;
+    const losses = closedTrades.filter(t => t.pnlUSDC <= 0).length;
+    
+    let totalUnrealized = 0;
+    
+    if (openTrades.length > 0) {
+      msg += `Open Positions:\n\n`;
+      msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
+      msg += `|      | City     | Market   | Side  | Entry   | Now     | P&L      |\n`;
+      msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
+      
+      for (const t of openTrades) {
+        const unrealized = (t.currentPrice - t.entryPrice) * t.size;
+        totalUnrealized += unrealized;
+        const indicator = unrealized >= 0 ? '🟢' : '🔴';
+        const entry = (t.entryPrice * 100).toFixed(1) + '¢';
+        const now = (t.currentPrice * 100).toFixed(1) + '¢';
+        const pnl = (unrealized >= 0 ? '+' : '') + '$' + Math.abs(unrealized).toFixed(2);
+        const pnlPadded = (unrealized < 0 ? '-' : '') + pnl.padEnd(9);
+        
+        msg += `| ${indicator}  | ${t.city.padEnd(8).slice(0,8)} | ${t.bucket.padEnd(8).slice(0,8)} | ${t.side.padEnd(5)} | ${entry.padEnd(7)} | ${now.padEnd(7)} | ${pnlPadded} |\n`;
+        msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
+      }
+      
+      msg += `\n`;
+    } else {
+      msg += `No open positions.\n\n`;
+    }
+    
+    // Summary line
+    const urSign = totalUnrealized >= 0 ? '+' : '';
+    const rSign = totalRealized >= 0 ? '+' : '';
+    const total = totalRealized + totalUnrealized;
+    const tSign = total >= 0 ? '+' : '';
+    
+    msg += `Unrealized: ${urSign}$${totalUnrealized.toFixed(2)} | Realized: ${rSign}$${totalRealized.toFixed(2)} | ${wins}W/${losses}L\n`;
+    msg += `Total: ${tSign}$${total.toFixed(2)}\n\n`;
+    
+    // Scan stats
+    msg += `Scan: ${scanResult.scanned} markets, ${scanResult.passing} passed edge threshold\n`;
+    
+    // Candidate details if any were skipped
+    if (skipped.length > 0) {
+      const skipReasons = {};
+      skipped.forEach(s => {
+        const reason = s.reason.split(':')[0];
+        skipReasons[reason] = (skipReasons[reason] || 0) + 1;
+      });
+      msg += `Skipped: `;
+      msg += Object.entries(skipReasons).map(([r, c]) => `${r} (${c})`).join(', ');
+      msg += `\n`;
+    }
+    
+    msg += `\nNext scan: ~2h`;
   } catch (err) {
-    console.error('[run-scan] Failed to read trades for open count:', err.message);
+    console.error('[run-scan] Failed to build P&L table:', err.message);
+    msg += `\nMarket conditions:\n`;
+    msg += `• ${scanResult.scanned} markets scanned\n`;
+    msg += `• ${scanResult.passing} met entry criteria\n`;
+    msg += `\nNext scan: ~2h`;
   }
-  msg += `• ${openCount} positions currently open\n`;
-  
-  msg += `\nNext scan: ~2h`;
   
   await sendTelegram(msg);
   
