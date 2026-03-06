@@ -7849,5 +7849,29 @@
     "currentValue": 7,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "5e258385-3262-4d4f-b462-b884dbf51771",
+    "market": "Will Jasmine Crockett win the 2028 Democratic presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 14,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Qualitative, TheWolfOfPoly, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 85.3,
+    "avgWinRate": 71.5,
+    "reasoning": "[FILTERED] Consensus: 3 whales (avg score 85.3, WR 71.5%) Yes. bet=$7.00, shares=14, tier=High. Whales: Qualitative, TheWolfOfPoly, GollumGekko",
+    "endDate": "",
+    "conditionId": "0x3cd6e52603d80ddbbdac9b1a4d43f9b7faa6aae4fae4d0fdfad3bd58454da7d3",
+    "createdAt": "2026-03-06T16:06:41.242Z",
+    "entryDate": "2026-03-06T16:06:41.242Z",
+    "invested": 7,
+    "currentValue": 7,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
