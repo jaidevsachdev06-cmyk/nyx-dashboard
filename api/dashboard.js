@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
       readFile('_data/school-tasks.json').catch(() => ({ data: [] })),
       readFile('_data/polymarket-positions.json').catch(() => ({ data: [] })),
       readFile('_data/trading-positions.json').catch(() => ({ data: [] })),
-      readFile('_data/weather-trades.json').catch(() => ({ data: [] })),
+      readFile('weather-v2/trades.json').catch(() => ({ trades: [] })),
       readFile('_data/reaper-positions.json').catch(() => ({ data: [] }))
     ]);
 
