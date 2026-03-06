@@ -8005,7 +8005,7 @@
     "market": "Will Donald Trump win the 2028 Republican presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.0215,
+    "currentPrice": 0.022,
     "shares": 14,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -8020,13 +8020,13 @@
     "createdAt": "2026-03-06T16:06:59.207Z",
     "entryDate": "2026-03-06T16:06:59.207Z",
     "invested": 7,
-    "currentValue": 0.301,
-    "pnl": -6.699,
-    "pnlPercent": -95.7,
+    "currentValue": 0.308,
+    "pnl": -6.692,
+    "pnlPercent": -95.6,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T17:05:54.994Z"
+    "updatedAt": "2026-03-06T17:35:32.430Z"
   }
 ]
