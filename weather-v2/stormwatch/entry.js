@@ -56,9 +56,11 @@ async function processCandidate(signal) {
   const probRatio = signal.modelProb / currentPrice;  // How much does model disagree with market?
   const isLottery = currentPrice < 0.15 && signal.modelProb >= 0.07 && probRatio >= 1.35;
 
-  // Sanity check: reject extreme edges (>300%) for NON-lottery trades only
-  if (!isLottery && edgePct > 300) {
-    return { entered: false, trade: null, reason: `Edge too extreme: ${edgePct.toFixed(0)}% (likely data error or illiquid market)` };
+  // Sanity check: reject extreme edges (>250%) for NON-lottery trades
+  // When model and market disagree this much, market is usually right
+  // Feb 28-Mar 2: Toronto NO 7°C (263% edge) and Chicago NO 64-65°F (276% edge) both lost ~$12
+  if (!isLottery && edgePct > 250) {
+    return { entered: false, trade: null, reason: `Edge suspiciously high: ${edgePct.toFixed(0)}% — model likely miscalibrated` };
   }
 
   if (isLottery) {
@@ -98,7 +100,7 @@ async function processCandidate(signal) {
 
   // Lottery sizing: cap at $10 (higher risk, lower capital at risk)
   if (isLottery) {
-    sizeUSDC = Math.min(sizeUSDC, 3);
+    sizeUSDC = Math.min(sizeUSDC, 5);
   } else if (currentPrice < 0.20) {
     // Regular cheap bets get half size
     sizeUSDC = Math.min(sizeUSDC, maxSize * 0.5);

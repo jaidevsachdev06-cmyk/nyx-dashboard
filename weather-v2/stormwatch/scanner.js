@@ -302,9 +302,12 @@ async function scan() {
           const modelProb = bucketProbability(bucket, forecast.mean, forecast.sd);
           if (modelProb === null) continue;
           
-          // CRITICAL: Filter extreme probabilities - model is overconfident at tails
-          // Feb 28-Mar 2 data: 3 trades with >95% bucket prob lost $36.40 (all wrong)
-          if (modelProb < 0.05 || modelProb > 0.95) continue;
+          // CRITICAL: Filter extreme probabilities on NARROW buckets only
+          // Model is overconfident at distribution tails for 1-2°F ranges
+          // Feb 28-Mar 2: 3 narrow-bucket trades with >95% prob lost $36.40
+          // But Chicago YES "≥42°F" (100% prob) won $15.82 - wide buckets are OK
+          const isNarrowBucket = bucket.type === 'exact' || (bucket.type === 'range' && (bucket.high - bucket.low) <= 2);
+          if (isNarrowBucket && (modelProb < 0.03 || modelProb > 0.97)) continue;
 
           const conditionId = market.condition_id || market.conditionId;
           const yesTokenId = market.side_a?.id || (market.tokens || []).find(t => (t.outcome || '').toLowerCase() === 'yes')?.token_id || '';
