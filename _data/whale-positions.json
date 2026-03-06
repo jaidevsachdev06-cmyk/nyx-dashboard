@@ -7957,7 +7957,7 @@
     "market": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.0245,
+    "currentPrice": 0.027,
     "shares": 14,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -7972,14 +7972,14 @@
     "createdAt": "2026-03-06T16:06:49.978Z",
     "entryDate": "2026-03-06T16:06:49.978Z",
     "invested": 7,
-    "currentValue": 0.343,
-    "pnl": -6.657,
-    "pnlPercent": -95.1,
+    "currentValue": 0.378,
+    "pnl": -6.622,
+    "pnlPercent": -94.6,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T19:35:05.822Z"
+    "updatedAt": "2026-03-06T20:05:24.263Z"
   },
   {
     "id": "4b9cf3b4-243f-4554-8b7a-da9c96fad172",
