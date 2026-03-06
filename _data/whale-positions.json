@@ -5811,7 +5811,7 @@
     "market": "Will there be no change in Fed interest rates after the March 2026 meeting?",
     "side": "Yes",
     "entryPrice": 0.9625,
-    "currentPrice": 0.9815,
+    "currentPrice": 0.9824999999999999,
     "shares": 5.35,
     "status": "open",
     "source": "consensus-scanner",
@@ -5826,14 +5826,14 @@
     "createdAt": "2026-03-01T18:05:19.521Z",
     "entryDate": "2026-03-01T18:05:19.521Z",
     "invested": 5.1494,
-    "currentValue": 5.251,
-    "pnl": 0.1017,
-    "pnlPercent": 1.97,
+    "currentValue": 5.2564,
+    "pnl": 0.107,
+    "pnlPercent": 2.08,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T15:01:33.421Z"
+    "updatedAt": "2026-03-06T15:31:34.722Z"
   },
   {
     "id": "3477d686-6a77-47d5-a546-5484539e6c82",
