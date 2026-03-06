@@ -8186,7 +8186,7 @@
     "market": "Will Andy Beshear win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.5,
+    "currentPrice": 0.0215,
     "shares": 6,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -8201,9 +8201,14 @@
     "createdAt": "2026-03-06T22:06:58.404Z",
     "entryDate": "2026-03-06T22:06:58.404Z",
     "invested": 3,
-    "currentValue": 3,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 0.129,
+    "pnl": -2.871,
+    "pnlPercent": -95.7,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-06T22:34:05.512Z"
   },
   {
     "id": "bfe4f59e-ad4f-4462-b599-29d80d507988",
