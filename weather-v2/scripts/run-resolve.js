@@ -42,8 +42,20 @@ async function main() {
       const winners = result.resolved.filter(t => t.pnl > 0).length;
       const losers = result.resolved.filter(t => t.pnl <= 0).length;
       const totalPnL = result.resolved.reduce((sum, t) => sum + (t.pnl || 0), 0).toFixed(2);
-      const winRate = ((winners / (winners + losers)) * 100).toFixed(1);
-      const msg = `🌪️ Weather Positions Resolved\n\n${winners}W / ${losers}L (${winRate}% WR)\n💰 Session P&L: ${totalPnL >= 0 ? '+' : ''}$${totalPnL}`;
+      const winRate = winners + losers > 0 ? ((winners / (winners + losers)) * 100).toFixed(1) : '0.0';
+      
+      let msg = `🌪️ Weather Positions Resolved\n\n`;
+      msg += `${result.resolved.length} position${result.resolved.length > 1 ? 's' : ''} closed.\n\n`;
+      msg += `Results:\n`;
+      msg += `• ${winners}W / ${losers}L (${winRate}% win rate)\n`;
+      msg += `• Session P&L: ${totalPnL >= 0 ? '+' : ''}$${totalPnL}\n\n`;
+      
+      msg += `Positions:\n`;
+      result.resolved.forEach(t => {
+        const sign = t.pnl >= 0 ? '+' : '';
+        msg += `• ${t.market || 'Unknown'} ${sign}$${(t.pnl || 0).toFixed(2)}\n`;
+      });
+      
       execSync(`openclaw message send --channel telegram --to "-1003762193481:topic:2" --message "${msg.replace(/"/g, '\\"')}"`, { stdio: 'inherit' });
     } catch (err) {
       console.error('[run-resolve] Notification failed (non-fatal):', err.message);

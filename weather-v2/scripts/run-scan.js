@@ -84,30 +84,35 @@ async function main() {
   console.log('\n' + JSON.stringify(scanResult, null, 2));
   
   // Build notification
-  let msg = `🌪️ <b>Weather Scan Complete</b>\n\n`;
-  msg += `📊 Markets: ${scanResult.scanned} | Edge passed: ${scanResult.passing} | Entered: ${entered}\n`;
-  msg += `⏱️ ${result.elapsedSeconds || '?'}s scan time\n`;
+  let msg = `🌪️ Weather Scan Complete\n\n`;
   
-  if (enteredTrades.length > 0) {
-    msg += `\n<b>New positions:</b>\n`;
+  if (entered > 0) {
+    msg += `${entered} trade${entered > 1 ? 's' : ''} entered.\n\n`;
+    msg += `Positions:\n`;
     for (const t of enteredTrades) {
-      const lottery = t.modelProb < 0.6 && t.edgePct > 100 ? ' 🎰' : '';
-      msg += `• ${t.city} ${t.bucket} ${t.side} @ ${(t.marketPrice*100).toFixed(0)}¢ | edge: ${t.edgePct.toFixed(0)}%${lottery}\n`;
+      msg += `• ${t.city} ${t.bucket} ${t.side} @ ${(t.marketPrice*100).toFixed(0)}¢ (edge: ${t.edgePct.toFixed(0)}%)\n`;
     }
+  } else {
+    msg += `No trades entered this cycle.\n`;
   }
   
-  if (entered === 0 && skipped.length > 0) {
-    // Show top 3 reasons why trades were skipped
-    const reasons = {};
-    skipped.forEach(s => {
-      const r = s.reason.split(':')[0];
-      reasons[r] = (reasons[r] || 0) + 1;
-    });
-    msg += `\n<b>Skip reasons:</b>\n`;
-    Object.entries(reasons).slice(0, 3).forEach(([r, c]) => {
-      msg += `• ${r} (${c}x)\n`;
-    });
+  msg += `\nMarket conditions:\n`;
+  msg += `• ${scanResult.scanned} markets scanned\n`;
+  msg += `• ${scanResult.passing} met entry criteria (≥25% edge)\n`;
+  
+  // Get open positions count from journal
+  const fs = require('fs');
+  const journalPath = '/docker/openclaw-uwzq/data/.openclaw/workspace/projects/nyx-dashboard/_data/trading-journal.json';
+  let openCount = 0;
+  try {
+    const journal = JSON.parse(fs.readFileSync(journalPath, 'utf8'));
+    openCount = journal.filter(p => p.status === 'open').length;
+  } catch (err) {
+    console.error('[run-scan] Failed to read journal for open count:', err.message);
   }
+  msg += `• ${openCount} positions currently open\n`;
+  
+  msg += `\nNext scan: ~2h`;
   
   await sendTelegram(msg);
   return scanResult;
