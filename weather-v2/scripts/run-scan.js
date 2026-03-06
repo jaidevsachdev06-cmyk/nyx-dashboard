@@ -56,58 +56,59 @@ async function main() {
 
   console.log(`\n[run-scan] Found ${result.candidates.length} candidates, ${result.passing.length} pass threshold`);
 
-  if (result.passing.length === 0) {
-    console.log('[run-scan] No actionable candidates. Done.');
-    return { scanned: result.candidates.length, passing: 0, entered: 0 };
-  }
-
-  // Sort by edge descending
-  result.passing.sort((a, b) => (b.edge || 0) - (a.edge || 0));
-
-  // Cap max edge to filter illiquid garbage (>500% usually means 3¢ market)
-  result.passing = result.passing.filter(c => (c.edge || 0) <= 5.0);
-
-  // Separate lottery vs normal trades
-  const lotteryTrades = result.passing.filter(c => c.marketPrice < 0.15 && c.modelProb >= 0.07);
-  const normalTrades = result.passing.filter(c => !(c.marketPrice < 0.15 && c.modelProb >= 0.07));
-
-  // Sort lottery trades by probability ratio (quality), take top 3
-  lotteryTrades.sort((a, b) => {
-    const ratioA = a.modelProb / a.marketPrice;
-    const ratioB = b.modelProb / b.marketPrice;
-    return ratioB - ratioA;
-  });
-  const topLottery = lotteryTrades.slice(0, 3);
-
-  // Recombine: normal trades + top 3 lottery trades
-  result.passing = [...normalTrades, ...topLottery];
-
-  console.log(`[run-scan] After sorting & filtering: ${result.passing.length} candidates (${normalTrades.length} normal, ${topLottery.length} lottery)`);
-
-  // Enter trades
+  // Initialize entry tracking
   let entered = 0;
   const enteredTrades = [];
   const skipped = [];
-  
-  for (const candidate of result.passing) {
-    try {
-      const res = await processCandidate(candidate);
-      if (res.entered) {
-        entered++;
-        enteredTrades.push(candidate);
-      } else {
-        console.log(`[run-scan] Skipped: ${res.reason}`);
-        skipped.push({ candidate, reason: res.reason });
+
+  // Only process candidates if there are any
+  if (result.passing.length > 0) {
+    // Sort by edge descending
+    result.passing.sort((a, b) => (b.edge || 0) - (a.edge || 0));
+
+    // Cap max edge to filter illiquid garbage (>500% usually means 3¢ market)
+    result.passing = result.passing.filter(c => (c.edge || 0) <= 5.0);
+
+    // Separate lottery vs normal trades
+    const lotteryTrades = result.passing.filter(c => c.marketPrice < 0.15 && c.modelProb >= 0.07);
+    const normalTrades = result.passing.filter(c => !(c.marketPrice < 0.15 && c.modelProb >= 0.07));
+
+    // Sort lottery trades by probability ratio (quality), take top 3
+    lotteryTrades.sort((a, b) => {
+      const ratioA = a.modelProb / a.marketPrice;
+      const ratioB = b.modelProb / b.marketPrice;
+      return ratioB - ratioA;
+    });
+    const topLottery = lotteryTrades.slice(0, 3);
+
+    // Recombine: normal trades + top 3 lottery trades
+    result.passing = [...normalTrades, ...topLottery];
+
+    console.log(`[run-scan] After sorting & filtering: ${result.passing.length} candidates (${normalTrades.length} normal, ${topLottery.length} lottery)`);
+
+    // Enter trades
+    for (const candidate of result.passing) {
+      try {
+        const res = await processCandidate(candidate);
+        if (res.entered) {
+          entered++;
+          enteredTrades.push(candidate);
+        } else {
+          console.log(`[run-scan] Skipped: ${res.reason}`);
+          skipped.push({ candidate, reason: res.reason });
+        }
+      } catch (err) {
+        console.error(`[run-scan] Error: ${err.message}`);
+        skipped.push({ candidate, reason: err.message });
       }
-    } catch (err) {
-      console.error(`[run-scan] Error: ${err.message}`);
-      skipped.push({ candidate, reason: err.message });
     }
+
+    console.log(`\n[run-scan] Complete: ${entered} trades entered out of ${result.passing.length} candidates`);
   }
 
-  console.log(`\n[run-scan] Complete: ${entered} trades entered out of ${result.passing.length} candidates`);
-  
-  const scanResult = { scanned: result.candidates.length, passing: result.passing.length, entered };
+  // Build scan result
+  const passingCount = result.passing ? result.passing.length : 0;
+  const scanResult = { scanned: result.candidates.length, passing: passingCount, entered };
   console.log('\n' + JSON.stringify(scanResult, null, 2));
   
   // Build notification
