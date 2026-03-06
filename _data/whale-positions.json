@@ -7181,7 +7181,7 @@
     "entryPrice": 0.815,
     "currentPrice": 0.7,
     "shares": 5.95,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "cashy, DOJ, Sonix, The-Joker",
     "whaleCount": 4,
@@ -7201,7 +7201,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T14:04:07.662Z"
+    "updatedAt": "2026-03-06T14:06:45.955Z",
+    "exitPrice": 0.7,
+    "notes": "Whale exodus: 0/4 whales remain (threshold: 50%)"
   },
   {
     "id": "94962412-e6ba-4364-b627-08f79c4494e6",
