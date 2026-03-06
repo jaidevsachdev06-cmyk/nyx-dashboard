@@ -7090,7 +7090,7 @@
     "entryPrice": 0.971,
     "currentPrice": 0.976,
     "shares": 5.41,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Gr33d, Xeny, Parz1vaI",
     "whaleCount": 3,
@@ -7110,7 +7110,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:04:34.167Z"
+    "updatedAt": "2026-03-06T12:07:03.179Z",
+    "exitPrice": 0.976,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "afe9c17e-e7a1-4a63-a4d9-1cbe008b87b7",
