@@ -7270,7 +7270,7 @@
     "entryPrice": 0.5285,
     "currentPrice": 0.386,
     "shares": 27.51,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Polar, GollumGekko, duderr, cashy, kekkone, The-Joker, Mombil",
     "whaleCount": 7,
@@ -7290,7 +7290,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T14:04:20.689Z"
+    "updatedAt": "2026-03-06T14:06:47.065Z",
+    "exitPrice": 0.386,
+    "notes": "Stop-loss triggered: -27.0% (threshold: -15%)"
   },
   {
     "id": "65665bcb-af56-4f95-aa06-04c6665a4179",
