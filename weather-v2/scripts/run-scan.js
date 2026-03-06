@@ -157,21 +157,25 @@ async function main() {
     
     if (openTrades.length > 0) {
       msg += `Open Positions:\n\n\`\`\`\n`;
-      msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
-      msg += `|      | City     | Market   | Side  | Entry   | Now     | P&L      |\n`;
-      msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
+      msg += `+--+------+------+--+-----+-----+-------+\n`;
+      msg += `|  | City | Mkt  |Sd| Ent | Now | P&L   |\n`;
+      msg += `+--+------+------+--+-----+-----+-------+\n`;
       
       for (const t of openTrades) {
         const unrealized = (t.currentPrice - t.entryPrice) * t.size;
         totalUnrealized += unrealized;
         const indicator = unrealized >= 0 ? '🟢' : '🔴';
-        const entry = (t.entryPrice * 100).toFixed(1) + '¢';
-        const now = (t.currentPrice * 100).toFixed(1) + '¢';
-        const pnl = (unrealized >= 0 ? '+' : '') + '$' + Math.abs(unrealized).toFixed(2);
-        const pnlPadded = (unrealized < 0 ? '-' : '') + pnl.padEnd(9);
+        const cityShort = t.city.slice(0,5).padEnd(5);
+        const mktShort = t.bucket.slice(0,5).padEnd(5);
+        const sideShort = t.side.slice(0,1);
+        const entry = (t.entryPrice * 100).toFixed(0).padStart(3);
+        const now = (t.currentPrice * 100).toFixed(0).padStart(3);
+        const pnlVal = unrealized.toFixed(2);
+        const pnlStr = (unrealized >= 0 ? '+' : '') + pnlVal;
+        const pnlPad = pnlStr.padStart(6);
         
-        msg += `| ${indicator}  | ${t.city.padEnd(8).slice(0,8)} | ${t.bucket.padEnd(8).slice(0,8)} | ${t.side.padEnd(5)} | ${entry.padEnd(7)} | ${now.padEnd(7)} | ${pnlPadded} |\n`;
-        msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
+        msg += `|${indicator}|${cityShort}|${mktShort}|${sideShort} |${entry}¢|${now}¢|${pnlPad}|\n`;
+        msg += `+--+------+------+--+-----+-----+-------+\n`;
       }
       
       msg += `\`\`\`\n\n`;
