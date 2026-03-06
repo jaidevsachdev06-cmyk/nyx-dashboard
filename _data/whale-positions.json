@@ -6939,7 +6939,7 @@
     "entryPrice": 0.056,
     "currentPrice": 0.0335,
     "shares": 83.57,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "TheWolfOfPoly, LinaBell, failstober",
     "whaleCount": 3,
@@ -6959,7 +6959,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T12:04:03.126Z"
+    "updatedAt": "2026-03-06T12:07:00.423Z",
+    "exitPrice": 0.0335,
+    "notes": "Stop-loss triggered: -40.2% (threshold: -15%)"
   },
   {
     "id": "d784d364-f30f-4dfa-bce7-8a0b8a6453c9",
