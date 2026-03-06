@@ -7400,5 +7400,29 @@
     "currentValue": 6.2816,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "5b748c2a-0775-4909-a1d3-4c78da4f0f40",
+    "market": "Will Iran name a successor to Khamenei by March 6?",
+    "side": "No",
+    "entryPrice": 0.9,
+    "currentPrice": 0.9,
+    "shares": 5.44,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Gr33d, Sonix, Mombil, arjenw",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 76.7,
+    "avgWinRate": 63.7,
+    "reasoning": "Consensus: 4 whales (avg score 76.7, WR 63.7%) No. bet=$4.90, shares=5.44, tierMult=1.00. Whales: Gr33d, Sonix, Mombil, arjenw",
+    "endDate": "2026-03-31",
+    "conditionId": "0x1204e81bd79e5caf0065549828d8c759b94c1914aef018a8535c986064cbe0b7",
+    "createdAt": "2026-03-06T08:06:58.163Z",
+    "entryDate": "2026-03-06T08:06:58.163Z",
+    "invested": 4.896,
+    "currentValue": 4.896,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
