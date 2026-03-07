@@ -347,11 +347,24 @@ async function scan() {
 
           const distFromLine = bucketDistance(bucket, forecast.mean);
           const minModelProb = config.risk.minModelProb || 0.6;
-          const minDist = config.risk.minDistanceFromLine || 2;
-          const modelConfident = side === 'YES'
-            ? (effectiveModelProb >= minModelProb || (yesPrice > 0 && modelProb >= 3 * yesPrice && modelProb >= 0.08))
-            : (effectiveModelProb >= minModelProb);
-          const confident = modelConfident && (distFromLine == null || distFromLine >= minDist);
+          const maxModelProb = config.risk.maxModelProb || 1.0;
+          const minDist = config.risk.minDistanceFromLine || 0;
+          const cityBlacklist = config.risk.cityBlacklist || [];
+          const bucketTypeBlacklist = config.risk.bucketTypeBlacklist || [];
+          
+          // Check model prob range
+          const modelConfident = effectiveModelProb >= minModelProb && effectiveModelProb <= maxModelProb;
+          
+          // Check distance (legacy, now default 0)
+          const distOk = distFromLine == null || distFromLine >= minDist;
+          
+          // Check city blacklist
+          const cityOk = !cityBlacklist.includes(city.name);
+          
+          // Check bucket type blacklist (boundary = above/below types)
+          const bucketTypeOk = !(bucketTypeBlacklist.includes('boundary') && (bucket.type === 'above' || bucket.type === 'below'));
+          
+          const confident = modelConfident && distOk && cityOk && bucketTypeOk;
 
           const bucketLabel = bucket.type === 'exact' ? `${bucket.low}°${bucket.unit}` :
                               bucket.type === 'range' ? `${bucket.low}-${bucket.high}°${bucket.unit}` :
@@ -362,6 +375,7 @@ async function scan() {
             city: city.name,
             date,
             bucket: bucketLabel,
+            bucketType: bucket.type,
             question,
             conditionId: conditionId || '',
             tokenId: tokenId,
@@ -378,7 +392,7 @@ async function scan() {
             distFromLine: distFromLine == null ? null : parseFloat(distFromLine.toFixed(2)),
             lowConfidence,
             confident,
-            passesThreshold: edgePct >= config.risk.minEdgePct && !lowConfidence && confident
+            passesThreshold: edgePct >= (config.risk.minEdgePct || 0) && !lowConfidence && confident
           };
 
           candidates.push(candidate);
