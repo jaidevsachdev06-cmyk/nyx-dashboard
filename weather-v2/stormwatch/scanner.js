@@ -252,10 +252,14 @@ async function scan() {
       const lowConfidence = (city.unit === 'F' && forecast.sd > 5) || (city.unit === 'C' && forecast.sd > 3);
 
       try {
-        // Format date for search query (convert 2026-03-07 → "March 7")
+        // Format date for search query and pattern matching (convert 2026-03-07 → "March 7")
         const dateObj = new Date(date + 'T12:00:00Z');
-        const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-        const searchDate = `${monthNames[dateObj.getUTCMonth()]} ${dateObj.getUTCDate()}`;
+        const monthNamesUpper = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const monthNamesLower = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+        const monthShort = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+        const monthIdx = dateObj.getUTCMonth();
+        const dayNum = dateObj.getUTCDate();
+        const searchDate = `${monthNamesUpper[monthIdx]} ${dayNum}`;
         
         const query = `highest temperature ${city.name} ${searchDate}`;
         const markets = await polymarket.searchMarkets(query);
@@ -271,14 +275,8 @@ async function scan() {
           const q = (m.title || m.question || '').toLowerCase();
           return q.includes(city.name.toLowerCase()) || q.includes(city.name.split(' ')[0].toLowerCase());
         }).slice(0, 10);
-
-        const dateObj = new Date(date + 'T12:00:00Z');
-        const monthNames = ['january','february','march','april','may','june','july','august','september','october','november','december'];
-        const monthShort = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
-        const monthIdx = dateObj.getUTCMonth();
-        const dayNum = dateObj.getUTCDate();
         const datePatterns = [
-          `${monthNames[monthIdx]} ${dayNum}`,
+          `${monthNamesLower[monthIdx]} ${dayNum}`,
           `${monthShort[monthIdx]} ${dayNum}`,
           `${String(monthIdx + 1).padStart(2,'0')}/${String(dayNum).padStart(2,'0')}`,
           `${monthIdx + 1}/${dayNum}`,
