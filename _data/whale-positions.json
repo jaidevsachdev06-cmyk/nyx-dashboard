@@ -8789,5 +8789,27 @@
       {}
     ],
     "updatedAt": "2026-03-07T22:04:07.314Z"
+  },
+  {
+    "id": "eab16b80-5223-4033-afbc-a525b2ad71a2",
+    "market": "Russia x Ukraine ceasefire by end of 2026?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 6.66,
+    "status": "open",
+    "source": "consensus-phase1",
+    "whales": "Car, ProfessionalPunter, dontshowmyname",
+    "whaleCount": 3,
+    "confidence": "High",
+    "reasoning": "[PHASE1] 3 whales, $3.33 bet. Quality: ✓, Concentration: other (1/5), Stability: 18.8h",
+    "endDate": "",
+    "conditionId": "0xaeea5f917fc5746387b5f9c0a4263dba035dbb3f0ac6ad72bf92183d21e26739",
+    "createdAt": "2026-03-07T22:06:58.805Z",
+    "entryDate": "2026-03-07T22:06:58.806Z",
+    "invested": 3.33,
+    "currentValue": 3.33,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
