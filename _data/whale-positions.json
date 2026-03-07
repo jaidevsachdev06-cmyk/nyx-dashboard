@@ -8762,5 +8762,27 @@
       {}
     ],
     "updatedAt": "2026-03-07T20:03:57.713Z"
+  },
+  {
+    "id": "bed8bb7f-de9c-4edc-8d9c-227cd4cb7c37",
+    "market": "US announces military support of Kurds in Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 6.66,
+    "status": "open",
+    "source": "consensus-phase1",
+    "whales": "Car, Polar, kekkone",
+    "whaleCount": 3,
+    "confidence": "High",
+    "reasoning": "[PHASE1] 3 whales, $3.33 bet. Quality: ✓, Concentration: iran-geopolitics (4/5), Stability: 10.0h",
+    "endDate": "",
+    "conditionId": "0x9a40c58ffda1c02eec35f58107bd69bd30cb3d367f1755c0512bbde5abeb9d4b",
+    "createdAt": "2026-03-07T20:07:00.809Z",
+    "entryDate": "2026-03-07T20:07:00.809Z",
+    "invested": 3.33,
+    "currentValue": 3.33,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
