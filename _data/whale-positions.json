@@ -6562,7 +6562,7 @@
     "entryPrice": 0.655,
     "currentPrice": 0.645,
     "shares": 7.92,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "elucidate, TheWolfOfPoly, GollumGekko",
     "whaleCount": 3,
@@ -6582,7 +6582,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T00:02:27.434Z"
+    "updatedAt": "2026-03-07T00:06:30.025Z",
+    "exitPrice": 0.645,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "0e613594-9a7d-408f-b8ae-167d0bc44bc9",
