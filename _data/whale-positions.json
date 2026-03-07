@@ -8330,7 +8330,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.2515,
     "shares": 6,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner-filtered",
     "whales": "Euan, FrancisSP8, Parz1vaI",
     "whaleCount": 3,
@@ -8350,7 +8350,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T02:03:49.603Z"
+    "updatedAt": "2026-03-07T02:06:29.917Z",
+    "exitPrice": 0.2515,
+    "notes": "Stop-loss triggered: -49.7% (threshold: -15%)"
   },
   {
     "id": "4268cb11-79d3-424e-a6b8-8eff4416c469",
