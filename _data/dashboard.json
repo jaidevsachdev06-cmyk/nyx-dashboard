@@ -19,10 +19,10 @@
     "memoryItems": 74
   },
   "yolo": {
-    "totalBuilds": 3,
-    "successBuilds": 2,
+    "totalBuilds": 11,
+    "successBuilds": 10,
     "partialBuilds": 1,
-    "latestBuild": "Conviction Journal - Prediction Calibration Tracker",
-    "latestDate": "2026-02-28"
+    "latestBuild": "NeuralForge - Interactive Neural Network Playground",
+    "latestDate": "2026-03-07"
   }
 }
