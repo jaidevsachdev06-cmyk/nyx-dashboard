@@ -8258,7 +8258,7 @@
     "market": "Will Kamala Harris win the 2028 US Presidential Election?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.5,
+    "currentPrice": 0.0305,
     "shares": 6,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -8273,9 +8273,14 @@
     "createdAt": "2026-03-07T00:06:39.800Z",
     "entryDate": "2026-03-07T00:06:39.800Z",
     "invested": 3,
-    "currentValue": 3,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 0.183,
+    "pnl": -2.817,
+    "pnlPercent": -93.9,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-07T00:33:47.311Z"
   },
   {
     "id": "d0ea4130-5466-41d0-b50c-33c2f872e720",
