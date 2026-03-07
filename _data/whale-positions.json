@@ -7718,7 +7718,7 @@
     "market": "Will Reza Pahlavi be the next Supreme Leader of Iran?",
     "side": "No",
     "entryPrice": 0.9885,
-    "currentPrice": 0.9855,
+    "currentPrice": 0.9835,
     "shares": 5.54,
     "status": "open",
     "source": "consensus-scanner",
@@ -7733,14 +7733,14 @@
     "createdAt": "2026-03-06T10:06:57.693Z",
     "entryDate": "2026-03-06T10:06:57.693Z",
     "invested": 5.4763,
-    "currentValue": 5.4597,
-    "pnl": -0.0166,
-    "pnlPercent": -0.3,
+    "currentValue": 5.4486,
+    "pnl": -0.0277,
+    "pnlPercent": -0.51,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T08:02:51.817Z"
+    "updatedAt": "2026-03-07T08:32:51.579Z"
   },
   {
     "id": "d7f5cd4a-af42-47c8-b2ba-510db09a2f2f",
