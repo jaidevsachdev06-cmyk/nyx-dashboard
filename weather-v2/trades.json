@@ -7665,7 +7665,7 @@
       "orderId": "paper-mmg2fge6-j9dm",
       "txHash": null,
       "currentPrice": 0.445,
-      "updatedAt": "2026-03-07T12:00:03.088Z"
+      "updatedAt": "2026-03-07T12:00:36.307Z"
     },
     {
       "id": "oc-mmg2fged-sicvd5",
@@ -7698,7 +7698,7 @@
       "orderId": "paper-mmg2fgeu-20o1",
       "txHash": null,
       "currentPrice": 0.725,
-      "updatedAt": "2026-03-07T12:00:03.653Z"
+      "updatedAt": "2026-03-07T12:00:36.884Z"
     },
     {
       "id": "oc-mmg2fgf1-hcffht",
@@ -7756,7 +7756,7 @@
       "orderId": "paper-mmg2fgfr-9qxh",
       "txHash": null,
       "currentPrice": 0.805,
-      "updatedAt": "2026-03-07T12:00:04.265Z"
+      "updatedAt": "2026-03-07T12:00:37.441Z"
     },
     {
       "id": "oc-mmg2fgfy-o07esp",
@@ -7789,7 +7789,7 @@
       "orderId": "paper-mmg2fggd-fqei",
       "txHash": null,
       "currentPrice": 0.94,
-      "updatedAt": "2026-03-07T12:00:04.800Z"
+      "updatedAt": "2026-03-07T12:00:38.010Z"
     },
     {
       "id": "oc-mmg2fggj-ezwmxm",
@@ -7804,7 +7804,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.07,
+      "pnlUSDC": -0.02,
       "createdAt": "2026-03-07T08:32:40.723Z",
       "signal": {
         "forecastTemp": 72.2,
@@ -7821,8 +7821,8 @@
       "enteredAt": "2026-03-07T08:32:40.736Z",
       "orderId": "paper-mmg2fgh2-knqy",
       "txHash": null,
-      "currentPrice": 0.9175,
-      "updatedAt": "2026-03-07T12:00:05.330Z"
+      "currentPrice": 0.9215,
+      "updatedAt": "2026-03-07T12:00:38.535Z"
     },
     {
       "id": "oc-mmg2fgh8-7j5hif",
@@ -7880,7 +7880,7 @@
       "orderId": "paper-mmg5xy7o-72fz",
       "txHash": null,
       "currentPrice": 0.71,
-      "updatedAt": "2026-03-07T12:00:05.908Z"
+      "updatedAt": "2026-03-07T12:00:39.104Z"
     },
     {
       "id": "oc-mmg5xy7y-0v63i9",
@@ -7911,6 +7911,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-07T10:11:02.401Z",
-    "lastPriceSync": "2026-03-07T12:00:06.208Z"
+    "lastPriceSync": "2026-03-07T12:00:39.404Z"
   }
 }
