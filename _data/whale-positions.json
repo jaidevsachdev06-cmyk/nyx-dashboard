@@ -8372,5 +8372,29 @@
     "currentValue": 7,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "5534eb5b-b9f3-497c-b965-0987ecf08736",
+    "market": "Will the position of Supreme Leader of Iran be abolished?",
+    "side": "No",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 34,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "scottilicious, Gr33d, arjenw",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 80.8,
+    "avgWinRate": 66.6,
+    "reasoning": "[FILTERED] Consensus: 3 whales (avg score 80.8, WR 66.6%) No. bet=$17.00, shares=34, tier=High. Whales: scottilicious, Gr33d, arjenw",
+    "endDate": "",
+    "conditionId": "0x0e1a1094091ba8905a5d11222796cf94d3d6d055076f0088886bd2386e6f88b8",
+    "createdAt": "2026-03-07T00:06:56.531Z",
+    "entryDate": "2026-03-07T00:06:56.531Z",
+    "invested": 17,
+    "currentValue": 17,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
