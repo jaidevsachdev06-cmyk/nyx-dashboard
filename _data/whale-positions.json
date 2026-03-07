@@ -8348,5 +8348,29 @@
     "currentValue": 19.5,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "309307d0-fa79-44c5-a319-336e43fd4b9a",
+    "market": "Will Hashem Hosseini Bushehri be the next Supreme Leader of Iran?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 14,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "archaic, LinaBell, Parz1vaI",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.4,
+    "avgWinRate": 67,
+    "reasoning": "[FILTERED] Consensus: 3 whales (avg score 82.4, WR 67%) Yes. bet=$7.00, shares=14, tier=High. Whales: archaic, LinaBell, Parz1vaI",
+    "endDate": "",
+    "conditionId": "0x72ff7039aa25933615def04c65aba7686ae2f41ea48a93dee58ad031e4b22ebd",
+    "createdAt": "2026-03-07T00:06:53.644Z",
+    "entryDate": "2026-03-07T00:06:53.644Z",
+    "invested": 7,
+    "currentValue": 7,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
