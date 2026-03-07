@@ -252,7 +252,12 @@ async function scan() {
       const lowConfidence = (city.unit === 'F' && forecast.sd > 5) || (city.unit === 'C' && forecast.sd > 3);
 
       try {
-        const query = `highest temperature ${city.name} ${date}`;
+        // Format date for search query (convert 2026-03-07 → "March 7")
+        const dateObj = new Date(date + 'T12:00:00Z');
+        const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const searchDate = `${monthNames[dateObj.getUTCMonth()]} ${dateObj.getUTCDate()}`;
+        
+        const query = `highest temperature ${city.name} ${searchDate}`;
         const markets = await polymarket.searchMarkets(query);
 
         if (!markets || markets.length === 0) {
