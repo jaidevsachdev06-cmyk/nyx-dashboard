@@ -8361,7 +8361,7 @@
     "market": "US strikes Iraq by March 7?",
     "side": "No",
     "entryPrice": 0.5,
-    "currentPrice": 0.41500000000000004,
+    "currentPrice": 0.435,
     "shares": 39,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -8376,14 +8376,14 @@
     "createdAt": "2026-03-07T00:06:50.844Z",
     "entryDate": "2026-03-07T00:06:50.844Z",
     "invested": 19.5,
-    "currentValue": 16.185,
-    "pnl": -3.315,
-    "pnlPercent": -17,
+    "currentValue": 16.965,
+    "pnl": -2.535,
+    "pnlPercent": -13,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T09:33:30.615Z"
+    "updatedAt": "2026-03-07T10:03:19.026Z"
   },
   {
     "id": "309307d0-fa79-44c5-a319-336e43fd4b9a",
