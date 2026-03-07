@@ -8514,7 +8514,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.006,
     "shares": 14,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner-filtered",
     "whales": "archaic, LinaBell, Parz1vaI",
     "whaleCount": 3,
@@ -8534,7 +8534,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T04:03:37.446Z"
+    "updatedAt": "2026-03-07T04:06:25.472Z",
+    "exitPrice": 0.006,
+    "notes": "Stop-loss triggered: -98.8% (threshold: -15%)"
   },
   {
     "id": "bf148a48-5749-4c88-bdb2-a21c43ae6fa9",
