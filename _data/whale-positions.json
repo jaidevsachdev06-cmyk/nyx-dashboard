@@ -7445,7 +7445,7 @@
     "entryPrice": 0.5825,
     "currentPrice": 0.5834999999999999,
     "shares": 9.68,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Rooke Brollins, debased, GollumGekko, Mombil",
     "whaleCount": 4,
@@ -7465,7 +7465,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T02:03:06.083Z"
+    "updatedAt": "2026-03-07T02:06:26.941Z",
+    "exitPrice": 0.5834999999999999,
+    "notes": "Whale exodus: 2/4 whales remain (threshold: 50%)"
   },
   {
     "id": "4d925d28-8ca6-40f1-bc40-be3a42e3ee81",
