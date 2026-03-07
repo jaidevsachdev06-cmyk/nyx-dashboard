@@ -7684,7 +7684,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.1,
+      "pnlUSDC": 0.19,
       "createdAt": "2026-03-07T08:32:40.645Z",
       "signal": {
         "forecastTemp": 55.1,
@@ -7701,8 +7701,8 @@
       "enteredAt": "2026-03-07T08:32:40.657Z",
       "orderId": "paper-mmg2fgeu-20o1",
       "txHash": null,
-      "currentPrice": 0.66,
-      "updatedAt": "2026-03-07T18:30:02.869Z"
+      "currentPrice": 0.665,
+      "updatedAt": "2026-03-07T19:00:16.740Z"
     },
     {
       "id": "oc-mmg2fgf1-hcffht",
@@ -7742,7 +7742,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.28,
+      "pnlUSDC": 0.06,
       "createdAt": "2026-03-07T08:32:40.679Z",
       "signal": {
         "forecastTemp": 61.9,
@@ -7759,8 +7759,8 @@
       "enteredAt": "2026-03-07T08:32:40.691Z",
       "orderId": "paper-mmg2fgfr-9qxh",
       "txHash": null,
-      "currentPrice": 0.85,
-      "updatedAt": "2026-03-07T18:30:03.430Z"
+      "currentPrice": 0.83,
+      "updatedAt": "2026-03-07T19:00:17.267Z"
     },
     {
       "id": "oc-mmg2fgfy-o07esp",
@@ -7874,7 +7874,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.77,
+      "pnlUSDC": -0.09,
       "createdAt": "2026-03-07T10:11:02.367Z",
       "signal": {
         "forecastTemp": 43.4,
@@ -7891,8 +7891,8 @@
       "enteredAt": "2026-03-07T10:11:02.383Z",
       "orderId": "paper-mmg5xy7o-72fz",
       "txHash": null,
-      "currentPrice": 0.76,
-      "updatedAt": "2026-03-07T18:30:03.977Z"
+      "currentPrice": 0.71,
+      "updatedAt": "2026-03-07T19:00:17.811Z"
     },
     {
       "id": "oc-mmg5xy7y-0v63i9",
@@ -7932,7 +7932,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.61,
+      "pnlUSDC": -2.55,
       "createdAt": "2026-03-07T12:11:46.873Z",
       "signal": {
         "forecastTemp": 69.3,
@@ -7949,8 +7949,8 @@
       "enteredAt": "2026-03-07T12:11:47.126Z",
       "orderId": "paper-mmga98al-e92u",
       "txHash": null,
-      "currentPrice": 0.63,
-      "updatedAt": "2026-03-07T18:30:04.511Z"
+      "currentPrice": 0.575,
+      "updatedAt": "2026-03-07T19:00:18.336Z"
     },
     {
       "id": "oc-mmga98ax-5wkdu9",
@@ -7983,7 +7983,7 @@
       "orderId": "paper-mmga98bi-utco",
       "txHash": null,
       "currentPrice": 0.82,
-      "updatedAt": "2026-03-07T18:30:05.063Z"
+      "updatedAt": "2026-03-07T19:00:18.894Z"
     },
     {
       "id": "oc-mmgenly5-hp6i44",
@@ -8016,7 +8016,7 @@
       "orderId": "paper-mmgenlyr-1zkc",
       "txHash": null,
       "currentPrice": 0.875,
-      "updatedAt": "2026-03-07T18:30:05.632Z"
+      "updatedAt": "2026-03-07T19:00:19.429Z"
     },
     {
       "id": "oc-mmgenlz4-fucmne",
@@ -8056,7 +8056,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.42,
+      "pnlUSDC": 1.05,
       "createdAt": "2026-03-07T16:11:23.296Z",
       "signal": {
         "forecastTemp": 54,
@@ -8073,8 +8073,8 @@
       "enteredAt": "2026-03-07T16:11:23.571Z",
       "orderId": "paper-mmgitd87-4i6w",
       "txHash": null,
-      "currentPrice": 0.705,
-      "updatedAt": "2026-03-07T18:30:06.161Z"
+      "currentPrice": 0.685,
+      "updatedAt": "2026-03-07T19:00:19.976Z"
     },
     {
       "id": "oc-mmgn3npi-023gv4",
@@ -8089,7 +8089,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.87,
+      "pnlUSDC": 1.74,
       "createdAt": "2026-03-07T18:11:22.182Z",
       "signal": {
         "forecastTemp": 76.6,
@@ -8106,13 +8106,13 @@
       "enteredAt": "2026-03-07T18:11:22.455Z",
       "orderId": "paper-mmgn3nx8-du1f",
       "txHash": null,
-      "currentPrice": 0.46,
-      "updatedAt": "2026-03-07T18:30:06.701Z"
+      "currentPrice": 0.49,
+      "updatedAt": "2026-03-07T19:00:20.535Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-07T18:11:22.464Z",
-    "lastPriceSync": "2026-03-07T18:30:07.002Z"
+    "lastPriceSync": "2026-03-07T19:00:20.835Z"
   }
 }
