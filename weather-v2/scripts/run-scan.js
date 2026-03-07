@@ -157,24 +157,20 @@ async function main() {
     
     if (openTrades.length > 0) {
       msg += `Open Positions:\n\n\`\`\`\n`;
-      msg += `| City     | Market      | Side | Entry/>\n`;
-      msg += `| Entry    | Now         | P&L  |\n`;
-      msg += `| ----     | -------     | ---- | -------\n`;
+      msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
+      msg += `|      | City     | Market   | Side  | Entry   | Now     | P&L      |\n`;
+      msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
       
       for (const t of openTrades) {
         const unrealized = (t.currentPrice - t.entryPrice) * t.size;
         totalUnrealized += unrealized;
-        const indicator = unrealized >= 0 ? '✅' : '❌';
+        const indicator = unrealized >= 0 ? '🟢' : '🔴';
         const entry = (t.entryPrice * 100).toFixed(1) + '¢';
         const now = (t.currentPrice * 100).toFixed(1) + '¢';
         const pnl = (unrealized >= 0 ? '+$' : '-$') + Math.abs(unrealized).toFixed(2);
-        const ts = new Date(t.timestamp);
-        const month = ts.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
-        const day = ts.getUTCDate();
-        const time = ts.toISOString().slice(11, 16).replace(':', ' ');
-        const entryDate = `${month} ${day} ${time}`;
         
-        msg += `| ${indicator} | ${t.city.padEnd(7)} | ${t.bucket.padEnd(10)} | ${t.side.padEnd(3)} | ${entry.padEnd(5)} | ${now.padEnd(5)} | ${pnl.padEnd(6)} | ${entryDate} |\n`;
+        msg += `| ${indicator}  | ${t.city.padEnd(8)} | ${t.bucket.padEnd(8)} | ${t.side.padEnd(5)} | ${entry.padEnd(7)} | ${now.padEnd(7)} | ${pnl.padEnd(8)} |\n`;
+        msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
       }
       
       msg += `\`\`\`\n\n`;
