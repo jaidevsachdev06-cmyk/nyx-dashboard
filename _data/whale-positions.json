@@ -8508,7 +8508,7 @@
     "market": "Will Hashem Hosseini Bushehri be the next Supreme Leader of Iran?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.5,
+    "currentPrice": 0.015,
     "shares": 14,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -8523,9 +8523,14 @@
     "createdAt": "2026-03-07T02:06:36.143Z",
     "entryDate": "2026-03-07T02:06:36.143Z",
     "invested": 7,
-    "currentValue": 7,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 0.21,
+    "pnl": -6.79,
+    "pnlPercent": -97,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-07T02:33:31.879Z"
   },
   {
     "id": "bf148a48-5749-4c88-bdb2-a21c43ae6fa9",
