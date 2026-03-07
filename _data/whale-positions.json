@@ -8545,5 +8545,29 @@
     "currentValue": 7,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "04a128ce-8f80-44c3-b1b8-3eae54946c05",
+    "market": "DeepSeek V4 released by March 15?",
+    "side": "No",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 38,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Gr33d, LinaBell, The-Joker",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 77.9,
+    "avgWinRate": 64.9,
+    "reasoning": "[FILTERED] Consensus: 3 whales (avg score 77.9, WR 64.9%) No. bet=$19.00, shares=38, tier=High. Whales: Gr33d, LinaBell, The-Joker",
+    "endDate": "",
+    "conditionId": "0x815a50e2f7caef6613c02f487bf7132da24a00bfa85101158101d2fa6d03b1e3",
+    "createdAt": "2026-03-07T02:06:46.897Z",
+    "entryDate": "2026-03-07T02:06:46.897Z",
+    "invested": 19,
+    "currentValue": 19,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
