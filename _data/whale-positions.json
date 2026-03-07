@@ -7265,7 +7265,7 @@
     "market": "DeepSeek V4 released by March 31?",
     "side": "No",
     "entryPrice": 0.22,
-    "currentPrice": 0.41500000000000004,
+    "currentPrice": 0.415,
     "shares": 21.14,
     "status": "open",
     "source": "consensus-scanner",
@@ -7287,7 +7287,7 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T22:32:34.929Z"
+    "updatedAt": "2026-03-07T23:02:34.068Z"
   },
   {
     "id": "fd977f5a-bd42-4009-9a87-cf1fb5090fb1",
