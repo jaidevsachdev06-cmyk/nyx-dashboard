@@ -7802,9 +7802,9 @@
       "bucket": "66-67°F",
       "question": "Will the highest temperature in Atlanta be between 66-67°F on March 8?",
       "side": "NO",
-      "status": "open",
+      "status": "exited",
       "result": null,
-      "pnlUSDC": -0.02,
+      "pnlUSDC": 0.156,
       "createdAt": "2026-03-07T08:32:40.723Z",
       "signal": {
         "forecastTemp": 72.2,
@@ -7814,7 +7814,7 @@
         "edge": 0.021,
         "isLottery": false
       },
-      "notes": "Forecast: 72.2°F | Model: 94% vs Market: 92% | Edge: 2.3%",
+      "notes": "Forecast: 72.2°F | Model: 94% vs Market: 92% | Edge: 2.3% | SWAP: replaced by better edge candidate (ΔedgePP 11.1pp)",
       "entryPrice": 0.923,
       "size": 13,
       "sizeUSDC": 11.999,
@@ -7822,7 +7822,11 @@
       "orderId": "paper-mmg2fgh2-knqy",
       "txHash": null,
       "currentPrice": 0.9215,
-      "updatedAt": "2026-03-07T12:00:38.535Z"
+      "updatedAt": "2026-03-07T12:00:38.535Z",
+      "exitPrice": 0.935,
+      "exitSource": "swap",
+      "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 11.1pp)",
+      "exitedAt": "2026-03-07T12:11:47.113Z"
     },
     {
       "id": "oc-mmg2fgh8-7j5hif",
@@ -7906,11 +7910,73 @@
         "isLottery": false
       },
       "notes": "Forecast: 51.7°F | Model: 83% vs Market: 83% | Edge: 0.4%"
+    },
+    {
+      "id": "oc-mmga983d-c5tp2h",
+      "conditionId": "0xbf5176fd0848c978c73be3822af7e04497a9d90853dc2c37332dfd6ac01735be",
+      "tokenId": "0x18fdf4ea8ec547b397573e4bde423f53d4d6345b9e40e3453a3cf716245ecd4",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-8-2026-72-73f",
+      "city": "Atlanta",
+      "date": "2026-03-08",
+      "bucket": "72-73°F",
+      "question": "Will the highest temperature in Atlanta be between 72-73°F on March 8?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-07T12:11:46.873Z",
+      "signal": {
+        "forecastTemp": 69.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.725,
+        "modelProb": 0.857,
+        "edge": 0.132,
+        "isLottery": false
+      },
+      "notes": "Forecast: 69.3°F | Model: 86% vs Market: 73% | Edge: 18.2%",
+      "entryPrice": 0.725,
+      "size": 17,
+      "sizeUSDC": 12.325,
+      "enteredAt": "2026-03-07T12:11:47.126Z",
+      "orderId": "paper-mmga98al-e92u",
+      "txHash": null
+    },
+    {
+      "id": "oc-mmga98ax-5wkdu9",
+      "conditionId": "0x4aaf7d59b6a0e3198a679b2c9d5c6ca7cdc05ed1d74dbe34dc87847a8ee00a42",
+      "tokenId": "0xd1c310f9ee187e1b26c568c4ff56ffe90a72b23a66a0948a1432cfc2ed447909",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-march-8-2026-4c",
+      "city": "Seoul",
+      "date": "2026-03-08",
+      "bucket": "4°C",
+      "question": "Will the highest temperature in Seoul be 4°C on March 8?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-07T12:11:47.145Z",
+      "signal": {
+        "forecastTemp": 6.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.895,
+        "modelProb": 0.9189,
+        "edge": 0.0239,
+        "isLottery": false
+      },
+      "notes": "Forecast: 6.8°F | Model: 92% vs Market: 90% | Edge: 2.7%",
+      "entryPrice": 0.895,
+      "size": 12,
+      "sizeUSDC": 10.74,
+      "enteredAt": "2026-03-07T12:11:47.160Z",
+      "orderId": "paper-mmga98bi-utco",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-07T10:11:02.401Z",
+    "lastUpdated": "2026-03-07T12:11:47.170Z",
     "lastPriceSync": "2026-03-07T12:00:39.404Z"
   }
 }
