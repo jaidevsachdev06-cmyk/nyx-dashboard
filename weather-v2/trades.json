@@ -8087,9 +8087,9 @@
       "bucket": "80-81°F",
       "question": "Will the highest temperature in Atlanta be between 80-81°F on March 7?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 16.52,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 16.53,
       "createdAt": "2026-03-07T18:11:22.182Z",
       "signal": {
         "forecastTemp": 76.6,
@@ -8107,12 +8107,16 @@
       "orderId": "paper-mmgn3nx8-du1f",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-07T20:00:07.578Z"
+      "updatedAt": "2026-03-07T20:00:07.578Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-07T20:08:06.186Z",
+      "closedAt": "2026-03-07T20:08:06.206Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-07T18:11:22.464Z",
+    "lastUpdated": "2026-03-07T20:08:06.210Z",
     "lastPriceSync": "2026-03-07T20:00:07.878Z"
   }
 }
