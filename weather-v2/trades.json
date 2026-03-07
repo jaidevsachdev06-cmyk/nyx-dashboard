@@ -7848,11 +7848,67 @@
         "isLottery": false
       },
       "notes": "Forecast: 61.9°F | Model: 94% vs Market: 93% | Edge: 1.1%"
+    },
+    {
+      "id": "oc-mmg5xy73-g1wg7w",
+      "conditionId": "0xa7bf0f03d8e74ca06ad39f5c30f86aeb47e893b82e1d443fbb9c586fcf970eb0",
+      "tokenId": "0xce0f9e97e35f3f32106166bdef75aa315abb8914e9f26f1556bfc6f34bcd6bd5",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-7-2026-46-47f",
+      "city": "New York City",
+      "date": "2026-03-07",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in New York City be between 46-47°F on March 7?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-07T10:11:02.367Z",
+      "signal": {
+        "forecastTemp": 43.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.715,
+        "modelProb": 0.8733,
+        "edge": 0.1583,
+        "isLottery": false
+      },
+      "notes": "Forecast: 43.4°F | Model: 87% vs Market: 72% | Edge: 22.1%",
+      "entryPrice": 0.715,
+      "size": 17,
+      "sizeUSDC": 12.155,
+      "enteredAt": "2026-03-07T10:11:02.383Z",
+      "orderId": "paper-mmg5xy7o-72fz",
+      "txHash": null
+    },
+    {
+      "id": "oc-mmg5xy7y-0v63i9",
+      "conditionId": "0x351eae8b1121a3873692f71244d7c22a983601efa81d5c8ef42c8ee214c762f0",
+      "tokenId": "0xd781bd22540fed3ddaa413dce02665f441b0b8f30ff72a5750e059fa9ff93ef2",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-8-2026-54-55f",
+      "city": "Seattle",
+      "date": "2026-03-08",
+      "bucket": "54-55°F",
+      "question": "Will the highest temperature in Seattle be between 54-55°F on March 8?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-07T10:11:02.398Z",
+      "signal": {
+        "forecastTemp": 51.7,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.825,
+        "modelProb": 0.8285,
+        "edge": 0.0035,
+        "isLottery": false
+      },
+      "notes": "Forecast: 51.7°F | Model: 83% vs Market: 83% | Edge: 0.4%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-07T08:32:40.751Z",
+    "lastUpdated": "2026-03-07T10:11:02.401Z",
     "lastPriceSync": "2026-03-07T10:00:06.788Z"
   }
 }
