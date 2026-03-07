@@ -7769,7 +7769,7 @@
       "bucket": "48-49°F",
       "question": "Will the highest temperature in Seattle be between 48-49°F on March 8?",
       "side": "NO",
-      "status": "open",
+      "status": "exited",
       "result": null,
       "pnlUSDC": 0,
       "createdAt": "2026-03-07T08:32:40.702Z",
@@ -7781,7 +7781,7 @@
         "edge": 0.0244,
         "isLottery": false
       },
-      "notes": "Forecast: 52.5°F | Model: 94% vs Market: 92% | Edge: 2.7%",
+      "notes": "Forecast: 52.5°F | Model: 94% vs Market: 92% | Edge: 2.7% | SWAP: replaced by better edge candidate (ΔedgePP 22.3pp)",
       "entryPrice": 0.915,
       "size": 13,
       "sizeUSDC": 11.895,
@@ -7789,7 +7789,11 @@
       "orderId": "paper-mmg2fggd-fqei",
       "txHash": null,
       "currentPrice": 0.915,
-      "updatedAt": "2026-03-07T16:00:04.763Z"
+      "updatedAt": "2026-03-07T16:00:04.763Z",
+      "exitPrice": 0.915,
+      "exitSource": "swap",
+      "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 22.3pp)",
+      "exitedAt": "2026-03-07T16:11:23.558Z"
     },
     {
       "id": "oc-mmg2fggj-ezwmxm",
@@ -8034,11 +8038,42 @@
         "isLottery": false
       },
       "notes": "Forecast: 72.7°F | Model: 89% vs Market: 89% | Edge: 0.9%"
+    },
+    {
+      "id": "oc-mmgitd0g-stmg5x",
+      "conditionId": "0x5c2611cc7512a242707aac4c053755d71846fa4da714c6891cbfee4a52778d4a",
+      "tokenId": "0xb560f15bb8e01ee110cda86944190c97fd617a062bc2f32ed36c362b13495664",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-8-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-08",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 8?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-07T16:11:23.296Z",
+      "signal": {
+        "forecastTemp": 54,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.63,
+        "modelProb": 0.8773,
+        "edge": 0.2473,
+        "isLottery": false
+      },
+      "notes": "Forecast: 54.0°F | Model: 88% vs Market: 63% | Edge: 39.3%",
+      "entryPrice": 0.63,
+      "size": 19,
+      "sizeUSDC": 11.97,
+      "enteredAt": "2026-03-07T16:11:23.571Z",
+      "orderId": "paper-mmgitd87-4i6w",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-07T14:14:56.515Z",
+    "lastUpdated": "2026-03-07T16:11:23.579Z",
     "lastPriceSync": "2026-03-07T16:00:07.225Z"
   }
 }
