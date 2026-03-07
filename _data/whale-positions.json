@@ -8200,7 +8200,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.0215,
     "shares": 6,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner-filtered",
     "whales": "nicoco89, scottilicious, Mombil",
     "whaleCount": 3,
@@ -8220,7 +8220,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T00:04:05.780Z"
+    "updatedAt": "2026-03-07T00:06:36.528Z",
+    "exitPrice": 0.0215,
+    "notes": "Stop-loss triggered: -95.7% (threshold: -15%)"
   },
   {
     "id": "bfe4f59e-ad4f-4462-b599-29d80d507988",
