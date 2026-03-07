@@ -7495,7 +7495,7 @@
     "entryPrice": 0.9,
     "currentPrice": 0.9935,
     "shares": 5.44,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Gr33d, Sonix, Mombil, arjenw",
     "whaleCount": 4,
@@ -7515,7 +7515,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T00:03:34.478Z"
+    "updatedAt": "2026-03-07T00:06:31.972Z",
+    "exitPrice": 0.9935,
+    "notes": "Whale exodus: 2/4 whales remain (threshold: 50%)"
   },
   {
     "id": "f891cabf-e7a7-4f8d-83ce-30020e18cd98",
