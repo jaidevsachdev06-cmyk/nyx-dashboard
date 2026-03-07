@@ -6864,7 +6864,7 @@
     "entryPrice": 0.967,
     "currentPrice": 0.9815,
     "shares": 5.13,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Gr33d, x.compolymarketbet, Mombil",
     "whaleCount": 3,
@@ -6884,7 +6884,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T00:02:47.173Z"
+    "updatedAt": "2026-03-07T00:06:31.046Z",
+    "exitPrice": 0.9815,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "28c4dc8d-83ac-41df-bb05-c00fff2fc698",
