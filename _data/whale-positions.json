@@ -6268,7 +6268,7 @@
     "entryPrice": 0.805,
     "currentPrice": 0.825,
     "shares": 19.27,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "donjo, Gr33d, GollumGekko, kekkone, x.compolymarketbet, Thonker",
     "whaleCount": 6,
@@ -6288,7 +6288,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T04:01:50.138Z"
+    "updatedAt": "2026-03-07T04:06:23.461Z",
+    "exitPrice": 0.825,
+    "notes": "Whale exodus: 3/6 whales remain (threshold: 50%)"
   },
   {
     "id": "fadc6b07-a990-4698-bc5b-d13cb4cc2465",
