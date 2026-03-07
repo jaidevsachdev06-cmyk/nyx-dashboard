@@ -8252,5 +8252,29 @@
       {}
     ],
     "updatedAt": "2026-03-07T00:04:10.975Z"
+  },
+  {
+    "id": "03b1112e-5acc-4146-b214-bd5a19bb30b5",
+    "market": "Will Kamala Harris win the 2028 US Presidential Election?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 6,
+    "status": "open",
+    "source": "consensus-scanner-filtered",
+    "whales": "Car, UbuntuTrading, XieGuangKun, gopfan2",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 86.2,
+    "avgWinRate": 69.3,
+    "reasoning": "[FILTERED] Consensus: 4 whales (avg score 86.2, WR 69.3%) Yes. bet=$3.00, shares=6, tier=High. Whales: Car, UbuntuTrading, XieGuangKun, gopfan2",
+    "endDate": "",
+    "conditionId": "0xb3298af85e00aafad937c119444a5f2800a55343b7482eb75581f6e454432501",
+    "createdAt": "2026-03-07T00:06:39.800Z",
+    "entryDate": "2026-03-07T00:06:39.800Z",
+    "invested": 3,
+    "currentValue": 3,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
