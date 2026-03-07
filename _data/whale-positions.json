@@ -5550,7 +5550,7 @@
     "entryPrice": 0.1625,
     "currentPrice": 0.1815,
     "shares": 31.82,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Brokie, Car, GollumGekko",
     "whaleCount": 3,
@@ -5570,7 +5570,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-07T02:00:53.139Z"
+    "updatedAt": "2026-03-07T02:06:24.271Z",
+    "exitPrice": 0.1815,
+    "notes": "Whale exodus: 0/3 whales remain (threshold: 50%)"
   },
   {
     "id": "32aa1a49-8a29-49c3-85b2-d79a06831cab",
