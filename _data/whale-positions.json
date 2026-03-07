@@ -8157,7 +8157,7 @@
     "market": "Will Gavin Newsom win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.252,
+    "currentPrice": 0.2515,
     "shares": 6,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -8172,14 +8172,14 @@
     "createdAt": "2026-03-06T22:06:55.617Z",
     "entryDate": "2026-03-06T22:06:55.617Z",
     "invested": 3,
-    "currentValue": 1.512,
-    "pnl": -1.488,
-    "pnlPercent": -49.6,
+    "currentValue": 1.509,
+    "pnl": -1.491,
+    "pnlPercent": -49.7,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-06T23:34:36.864Z"
+    "updatedAt": "2026-03-07T00:04:02.220Z"
   },
   {
     "id": "5f58cec3-e2b9-439b-bbd2-62034d204bad",
