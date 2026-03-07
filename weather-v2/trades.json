@@ -7976,11 +7976,67 @@
       "txHash": null,
       "currentPrice": 0.885,
       "updatedAt": "2026-03-07T14:00:29.877Z"
+    },
+    {
+      "id": "oc-mmgenly5-hp6i44",
+      "conditionId": "0x7c017f6ea8adc1c625aee982e772d75d7a506a971a31f02818b3566da3f41cae",
+      "tokenId": "0x3e83bf086146088292d1efd74ba9bbff100c99064775d17bf3ad7c575693b8a",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-paris-on-march-8-2026-16c",
+      "city": "Paris",
+      "date": "2026-03-08",
+      "bucket": "16°C",
+      "question": "Will the highest temperature in Paris be 16°C on March 8?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-07T14:14:56.477Z",
+      "signal": {
+        "forecastTemp": 18.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.885,
+        "modelProb": 0.9499,
+        "edge": 0.0649,
+        "isLottery": false
+      },
+      "notes": "Forecast: 18.1°F | Model: 95% vs Market: 89% | Edge: 7.3%",
+      "entryPrice": 0.885,
+      "size": 14,
+      "sizeUSDC": 12.39,
+      "enteredAt": "2026-03-07T14:14:56.492Z",
+      "orderId": "paper-mmgenlyr-1zkc",
+      "txHash": null
+    },
+    {
+      "id": "oc-mmgenlz4-fucmne",
+      "conditionId": "0x349ba6b19ab2c9513d39badd08123b6cf9de5ac4cca21482f834e50ffd1a474d",
+      "tokenId": "0xefcbbc23d7d96ac8d77708c46f659a6b232f0e686eb34ba9bed39ac863ca9d16",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-8-2026-68-69f",
+      "city": "Atlanta",
+      "date": "2026-03-08",
+      "bucket": "68-69°F",
+      "question": "Will the highest temperature in Atlanta be between 68-69°F on March 8?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-07T14:14:56.512Z",
+      "signal": {
+        "forecastTemp": 72.7,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.885,
+        "modelProb": 0.8934,
+        "edge": 0.0084,
+        "isLottery": false
+      },
+      "notes": "Forecast: 72.7°F | Model: 89% vs Market: 89% | Edge: 0.9%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-07T12:11:47.170Z",
+    "lastUpdated": "2026-03-07T14:14:56.515Z",
     "lastPriceSync": "2026-03-07T14:00:30.178Z"
   }
 }
