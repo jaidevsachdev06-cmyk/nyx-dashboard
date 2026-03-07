@@ -8628,5 +8628,27 @@
     "updatedAt": "2026-03-07T04:06:27.046Z",
     "exitPrice": 0.08,
     "notes": "Stop-loss triggered: -84.0% (threshold: -15%)"
+  },
+  {
+    "id": "a3dce422-830c-41fe-abd9-5a7b65c6aab1",
+    "market": "Will Iran close the Strait of Hormuz by March 31?",
+    "side": "Yes",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 4.28,
+    "status": "open",
+    "source": "consensus-phase1",
+    "whales": "scottilicious, elucidate, aenews, kekkone, ProfessionalPunter, The-Joker, Ozi",
+    "whaleCount": 7,
+    "confidence": "Very High",
+    "reasoning": "[PHASE1] 7 whales, $2.14 bet. Quality: ✓, Concentration: iran-geopolitics (0/5), Stability: 3.0h",
+    "endDate": "",
+    "conditionId": "0x561cd8d035bac38ed04e23d7882a126da38d7ead9d6679f722ad62c0c9d54ad2",
+    "createdAt": "2026-03-07T06:20:21.857Z",
+    "entryDate": "2026-03-07T06:20:21.857Z",
+    "invested": 2.14,
+    "currentValue": 2.14,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
