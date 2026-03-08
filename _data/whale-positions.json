@@ -8840,5 +8840,29 @@
     "currentValue": 14.9086,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "2aabeace-99cd-4ced-84fd-3241405e4698",
+    "market": "Will France, UK, or Germany strike Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.814,
+    "currentPrice": 0.814,
+    "shares": 13.13,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Parz1vaI, Roflan, Mombil, debased",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 81.8,
+    "avgWinRate": 69.5,
+    "reasoning": "Consensus: 5 whales (avg score 81.8, WR 69.5%) No. bet=$10.69, shares=13.13. Whales: Car, Parz1vaI, Roflan, Mombil, debased",
+    "endDate": "",
+    "conditionId": "0x24026080b17f4e88729eab0ac2929ee37c13bfbb4a159179ec63deb4a242d9c9",
+    "createdAt": "2026-03-08T07:26:03.353Z",
+    "entryDate": "2026-03-08T07:26:03.353Z",
+    "invested": 10.6878,
+    "currentValue": 10.6878,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
