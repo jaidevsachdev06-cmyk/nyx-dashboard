@@ -9,10 +9,12 @@
     "forecastApi": "https://api.open-meteo.com/v1/forecast",
     "ensembleApi": "https://ensemble-api.open-meteo.com/v1/ensemble",
     "models": [
+      "ecmwf_ifs025",
       "icon_seamless",
       "gfs_seamless",
-      "ecmwf_ifs025",
-      "gem_global"
+      "gem_global",
+      "meteofrance_seamless",
+      "jma_seamless"
     ],
     "forecastDays": 2
   },

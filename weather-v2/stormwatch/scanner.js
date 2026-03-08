@@ -6,6 +6,7 @@
 
 const config = require('../config.json');
 const polymarket = require('../core/polymarket');
+const calibration = require('../core/calibration');
 const fs = require('fs');
 const path = require('path');
 
@@ -114,7 +115,7 @@ function aggregateForecasts(forecasts, cityName, unit) {
   const byDate = {};
   for (const f of forecasts) {
     if (!byDate[f.date]) byDate[f.date] = [];
-    byDate[f.date].push(f.highTemp);
+    byDate[f.date].push(f);  // Keep full forecast objects for weighted ensemble
   }
 
   const baseError = EMPIRICAL_BASE_ERROR[unit] || EMPIRICAL_BASE_ERROR.F;
@@ -122,11 +123,17 @@ function aggregateForecasts(forecasts, cityName, unit) {
   const bias = CITY_BIAS[cityName] || 0;
 
   const result = {};
-  for (const [date, temps] of Object.entries(byDate)) {
-    const n = temps.length;
-    const rawMean = temps.reduce((s, t) => s + t, 0) / n;
-    const modelVariance = n > 1 ? temps.reduce((s, t) => s + (t - rawMean) ** 2, 0) / (n - 1) : 4;
-    const modelSpread = Math.sqrt(modelVariance);
+  for (const [date, forecastObjs] of Object.entries(byDate)) {
+    // Use weighted ensemble from calibration module
+    const ensemble = calibration.weightedEnsemble(forecastObjs);
+    
+    if (ensemble.mean === null) continue;
+    
+    const rawMean = ensemble.mean;
+    const modelSpread = ensemble.sd || 0;
+    const n = ensemble.models;
+    
+    // Add base forecast error and apply city bias
     const blendedSD = Math.sqrt(modelSpread * modelSpread + baseError * baseError);
     const sd = Math.max(blendedSD, sdFloor);
     const mean = rawMean - bias;
@@ -137,7 +144,8 @@ function aggregateForecasts(forecasts, cityName, unit) {
       rawMean: Math.round(rawMean * 10) / 10,
       modelSpread: Math.round(modelSpread * 10) / 10,
       biasAdj: bias,
-      models: n
+      models: n,
+      weights: ensemble.weights  // Track which models contributed
     };
   }
   return result;
@@ -340,13 +348,19 @@ async function scan() {
 
           const side = evYes >= evNo ? 'YES' : 'NO';
           const tokenId = side === 'YES' ? (yesTokenId || '') : (noTokenId || '');
-          const effectiveModelProb = side === 'YES' ? modelProb : (1 - modelProb);
+          const rawModelProb = side === 'YES' ? modelProb : (1 - modelProb);
           const effectivePrice = side === 'YES' ? yesPrice : noPrice;
 
           if (!tokenId || effectivePrice == null) continue;
 
-          const edge = effectiveModelProb - effectivePrice;
+          // Apply calibration to adjust for model overconfidence
+          const calibratedModelProb = calibration.calibrateProb(rawModelProb);
+          
+          // Calculate edge with BOTH calibrated and raw probabilities
+          const edge = calibratedModelProb - effectivePrice;
           const edgePct = (edge / effectivePrice) * 100;
+          const rawEdge = rawModelProb - effectivePrice;
+          const rawEdgePct = (rawEdge / effectivePrice) * 100;
 
           const distFromLine = bucketDistance(bucket, forecast.mean);
           const minModelProb = config.risk.minModelProb || 0.6;
@@ -355,8 +369,9 @@ async function scan() {
           const cityBlacklist = config.risk.cityBlacklist || [];
           const bucketTypeBlacklist = config.risk.bucketTypeBlacklist || [];
           
-          // Check model prob range
-          const modelConfident = effectiveModelProb >= minModelProb && effectiveModelProb <= maxModelProb;
+          // Check model prob range (use RAW prob for filtering - calibration is for edge calc only)
+          // This maintains strategy continuity while improving edge estimates
+          const modelConfident = rawModelProb >= minModelProb && rawModelProb <= maxModelProb;
           
           // Check distance (legacy, now default 0)
           const distOk = distFromLine == null || distFromLine >= minDist;
@@ -388,10 +403,14 @@ async function scan() {
             forecastTemp: forecast.mean,
             forecastSD: forecast.sd,
             forecastModels: forecast.models,
-            modelProb: parseFloat(effectiveModelProb.toFixed(4)),
+            forecastWeights: forecast.weights,  // Which models contributed
+            modelProb: parseFloat(calibratedModelProb.toFixed(4)),  // Calibrated (for edge calc)
+            rawModelProb: parseFloat(rawModelProb.toFixed(4)),      // Raw (for reference)
             marketPrice: parseFloat(effectivePrice.toFixed(4)),
-            edge: parseFloat(edge.toFixed(4)),
-            edgePct: parseFloat(edgePct.toFixed(1)),
+            edge: parseFloat(edge.toFixed(4)),                      // Calibrated edge
+            edgePct: parseFloat(edgePct.toFixed(1)),                // Calibrated edge %
+            rawEdge: parseFloat(rawEdge.toFixed(4)),                // Raw edge (for comparison)
+            rawEdgePct: parseFloat(rawEdgePct.toFixed(1)),          // Raw edge %
             distFromLine: distFromLine == null ? null : parseFloat(distFromLine.toFixed(2)),
             lowConfidence,
             confident,
@@ -400,7 +419,7 @@ async function scan() {
 
           candidates.push(candidate);
           const emoji = candidate.passesThreshold ? '✅' : '⬜';
-          console.log(`[scanner] ${emoji} ${city.name} ${date} ${bucketLabel} ${side} | model: ${(effectiveModelProb*100).toFixed(1)}% mkt: ${(effectivePrice*100).toFixed(1)}% edge: ${edgePct.toFixed(1)}%`);
+          console.log(`[scanner] ${emoji} ${city.name} ${date} ${bucketLabel} ${side} | model: ${(calibratedModelProb*100).toFixed(1)}% (raw ${(rawModelProb*100).toFixed(1)}%) mkt: ${(effectivePrice*100).toFixed(1)}% edge: ${edgePct.toFixed(1)}%`);
         }
       } catch (err) {
         console.warn(`[scanner] Market search error for ${city.name} ${date}: ${err.message}`);
