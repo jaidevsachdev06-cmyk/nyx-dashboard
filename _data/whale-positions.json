@@ -8768,7 +8768,7 @@
     "market": "US announces military support of Kurds in Iran by March 31?",
     "side": "No",
     "entryPrice": 0.5,
-    "currentPrice": 0.8,
+    "currentPrice": 0.785,
     "shares": 6.66,
     "status": "open",
     "source": "consensus-phase1",
@@ -8781,14 +8781,14 @@
     "createdAt": "2026-03-07T20:07:00.809Z",
     "entryDate": "2026-03-07T20:07:00.809Z",
     "invested": 3.33,
-    "currentValue": 5.328,
-    "pnl": 1.998,
-    "pnlPercent": 60,
+    "currentValue": 5.2281,
+    "pnl": 1.8981,
+    "pnlPercent": 57,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T06:33:49.575Z"
+    "updatedAt": "2026-03-08T07:04:04.683Z"
   },
   {
     "id": "eab16b80-5223-4033-afbc-a525b2ad71a2",
