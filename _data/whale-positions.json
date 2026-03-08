@@ -7367,7 +7367,7 @@
     "entryPrice": 0.845,
     "currentPrice": 0.9955,
     "shares": 12.76,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Gr33d, GollumGekko, cashy, Sonix",
     "whaleCount": 5,
@@ -7387,7 +7387,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T07:02:57.263Z"
+    "updatedAt": "2026-03-08T07:27:30.340Z",
+    "exitPrice": 0.9955,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "437f4591-df4b-404e-8ba1-c414d371e793",
