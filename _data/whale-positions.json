@@ -6450,7 +6450,7 @@
     "market": "Will the US acquire part of Greenland in 2026?",
     "side": "Yes",
     "entryPrice": 0.155,
-    "currentPrice": 0.165,
+    "currentPrice": 0.155,
     "shares": 36.52,
     "status": "open",
     "source": "consensus-scanner",
@@ -6465,14 +6465,14 @@
     "createdAt": "2026-03-02T10:57:59.406Z",
     "entryDate": "2026-03-02T10:57:59.406Z",
     "invested": 5.6606,
-    "currentValue": 6.0258,
-    "pnl": 0.3652,
-    "pnlPercent": 6.45,
+    "currentValue": 5.6606,
+    "pnl": 0,
+    "pnlPercent": 0,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T03:31:52.484Z"
+    "updatedAt": "2026-03-08T04:01:53.473Z"
   },
   {
     "id": "fe99582f-562e-4821-87d1-81c2e2626093",
