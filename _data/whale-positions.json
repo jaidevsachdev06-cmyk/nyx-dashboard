@@ -7098,7 +7098,7 @@
     "entryPrice": 0.605,
     "currentPrice": 0.575,
     "shares": 9.29,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "UbuntuTrading, Roflan, kekkone",
     "whaleCount": 3,
@@ -7118,7 +7118,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T13:02:10.577Z"
+    "updatedAt": "2026-03-08T13:27:54.704Z",
+    "exitPrice": 0.575,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "82661ff5-fb06-4a72-af4c-26c25420503b",
