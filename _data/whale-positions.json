@@ -5908,7 +5908,7 @@
     "market": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "side": "Yes",
     "entryPrice": 0.825,
-    "currentPrice": 0.845,
+    "currentPrice": 1,
     "shares": 5.67,
     "status": "open",
     "source": "consensus-scanner",
@@ -5923,14 +5923,14 @@
     "createdAt": "2026-03-01T22:05:21.496Z",
     "entryDate": "2026-03-01T22:05:21.496Z",
     "invested": 4.6777,
-    "currentValue": 4.7912,
-    "pnl": 0.1134,
-    "pnlPercent": 2.42,
+    "currentValue": 5.67,
+    "pnl": 0.9923,
+    "pnlPercent": 21.21,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T23:01:12.977Z"
+    "updatedAt": "2026-03-08T23:31:17.855Z"
   },
   {
     "id": "2921a65e-af60-4674-aa2c-e83b4bf1d7b9",
