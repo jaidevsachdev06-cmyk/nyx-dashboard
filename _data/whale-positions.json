@@ -8984,5 +8984,29 @@
     "currentValue": 5.0937,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "a21b08cc-7ce7-4acf-ba56-4ac963268e6b",
+    "market": "Will Germany strike Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.983,
+    "currentPrice": 0.983,
+    "shares": 4.86,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, Parz1vaI, Mombil",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.3,
+    "avgWinRate": 62.1,
+    "reasoning": "Consensus: 3 whales (avg score 78.3, WR 62.1%) No. bet=$4.78, shares=4.86. Whales: scottilicious, Parz1vaI, Mombil",
+    "endDate": "",
+    "conditionId": "0xa825060543929a11ab634061cfa410dbc3ba3d216e2c3449474c548dde0178b6",
+    "createdAt": "2026-03-08T07:26:47.585Z",
+    "entryDate": "2026-03-08T07:26:47.585Z",
+    "invested": 4.7774,
+    "currentValue": 4.7774,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
