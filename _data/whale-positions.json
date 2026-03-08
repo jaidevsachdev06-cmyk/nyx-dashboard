@@ -7236,7 +7236,7 @@
     "market": "Trump out as President before 2027?",
     "side": "No",
     "entryPrice": 0.835,
-    "currentPrice": 0.8200000000000001,
+    "currentPrice": 0.825,
     "shares": 6.92,
     "status": "open",
     "source": "consensus-scanner",
@@ -7251,14 +7251,14 @@
     "createdAt": "2026-03-03T00:06:10.551Z",
     "entryDate": "2026-03-03T00:06:10.551Z",
     "invested": 5.7782,
-    "currentValue": 5.6744,
-    "pnl": -0.1038,
-    "pnlPercent": -1.8,
+    "currentValue": 5.709,
+    "pnl": -0.0692,
+    "pnlPercent": -1.2,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T02:32:37.787Z"
+    "updatedAt": "2026-03-08T03:02:50.125Z"
   },
   {
     "id": "3035e26c-27a0-496d-9d94-fe2aafce2998",
