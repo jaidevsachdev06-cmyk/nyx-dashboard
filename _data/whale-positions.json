@@ -9146,7 +9146,7 @@
     "market": "Will Alireza Arafi be the next Supreme Leader of Iran?",
     "side": "Yes",
     "entryPrice": 0.096,
-    "currentPrice": 1,
+    "currentPrice": 0.0675,
     "shares": 48.96,
     "status": "open",
     "source": "consensus-scanner",
@@ -9161,14 +9161,14 @@
     "createdAt": "2026-03-08T07:27:04.177Z",
     "entryDate": "2026-03-08T07:27:04.177Z",
     "invested": 4.7002,
-    "currentValue": 48.96,
-    "pnl": 44.2598,
-    "pnlPercent": 941.66,
+    "currentValue": 3.3048,
+    "pnl": -1.3954,
+    "pnlPercent": -29.69,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T13:04:47.227Z"
+    "updatedAt": "2026-03-08T13:33:20.231Z"
   },
   {
     "id": "1bb679f3-3c23-4a6d-9408-88bd0696f81e",
