@@ -8446,7 +8446,7 @@
     "market": "Will the position of Supreme Leader of Iran be abolished?",
     "side": "No",
     "entryPrice": 0.5,
-    "currentPrice": 0.982,
+    "currentPrice": 0.975,
     "shares": 34,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -8461,14 +8461,14 @@
     "createdAt": "2026-03-07T00:06:56.531Z",
     "entryDate": "2026-03-07T00:06:56.531Z",
     "invested": 17,
-    "currentValue": 33.388,
-    "pnl": 16.388,
-    "pnlPercent": 96.4,
+    "currentValue": 33.15,
+    "pnl": 16.15,
+    "pnlPercent": 95,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T13:03:02.220Z"
+    "updatedAt": "2026-03-08T13:32:23.067Z"
   },
   {
     "id": "c013777a-8b14-4111-bc9c-5e99df9a9c78",
