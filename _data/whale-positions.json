@@ -9161,5 +9161,29 @@
       {}
     ],
     "updatedAt": "2026-03-08T09:34:02.206Z"
+  },
+  {
+    "id": "1bb679f3-3c23-4a6d-9408-88bd0696f81e",
+    "market": "Will Gavin Newsom win the 2028 Democratic presidential nomination?",
+    "side": "Yes",
+    "entryPrice": 0.2505,
+    "currentPrice": 0.2505,
+    "shares": 19.72,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Parz1vaI, failstober, Qualitative",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 79.2,
+    "avgWinRate": 64.2,
+    "reasoning": "Consensus: 3 whales (avg score 79.2, WR 64.2%) Yes. bet=$4.94, shares=19.72. Whales: Parz1vaI, failstober, Qualitative",
+    "endDate": "",
+    "conditionId": "0x0f49db97f71c68b1e42a6d16e3de93d85dbf7d4148e3f018eb79e88554be9f75",
+    "createdAt": "2026-03-08T10:03:05.150Z",
+    "entryDate": "2026-03-08T10:03:05.150Z",
+    "invested": 4.9399,
+    "currentValue": 4.9399,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
