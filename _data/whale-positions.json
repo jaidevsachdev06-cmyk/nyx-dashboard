@@ -8936,5 +8936,29 @@
     "currentValue": 5.5759,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "56609eb6-e7d9-4b4e-9876-be77d6c56837",
+    "market": "Will Iran strike Israel on March 4?",
+    "side": "Yes",
+    "entryPrice": 0.9995,
+    "currentPrice": 0.9995,
+    "shares": 4.95,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "ProfessionalPunter, aenews, Car",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 83.9,
+    "avgWinRate": 64.3,
+    "reasoning": "Consensus: 3 whales (avg score 83.9, WR 64.3%) Yes. bet=$4.95, shares=4.95. Whales: ProfessionalPunter, aenews, Car",
+    "endDate": "",
+    "conditionId": "0x8d3378d5c859b2f27173627df2edecb3c0c578eb5a0c977bbbef3ec86a7eb9e7",
+    "createdAt": "2026-03-08T07:26:29.434Z",
+    "entryDate": "2026-03-08T07:26:29.434Z",
+    "invested": 4.9475,
+    "currentValue": 4.9475,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
