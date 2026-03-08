@@ -8335,9 +8335,9 @@
       "bucket": "15°C",
       "question": "Will the highest temperature in Paris be 15°C on March 8?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 16.56,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 16.5735,
       "createdAt": "2026-03-08T14:11:35.571Z",
       "signal": {
         "forecastTemp": 17.3,
@@ -8355,12 +8355,16 @@
       "orderId": "paper-mmhtz5si-e1f1",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-08T16:00:07.139Z"
+      "updatedAt": "2026-03-08T16:00:07.139Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-08T16:06:40.246Z",
+      "closedAt": "2026-03-08T16:06:40.259Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-08T14:11:35.830Z",
+    "lastUpdated": "2026-03-08T16:06:40.262Z",
     "lastPriceSync": "2026-03-08T16:00:07.439Z"
   }
 }
