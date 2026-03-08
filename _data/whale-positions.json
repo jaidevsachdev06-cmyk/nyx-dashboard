@@ -9059,7 +9059,7 @@
     "market": "Will Germany strike Iran by March 31?",
     "side": "No",
     "entryPrice": 0.983,
-    "currentPrice": 0.9815,
+    "currentPrice": 0.983,
     "shares": 4.86,
     "status": "open",
     "source": "consensus-scanner",
@@ -9074,14 +9074,14 @@
     "createdAt": "2026-03-08T07:26:47.585Z",
     "entryDate": "2026-03-08T07:26:47.585Z",
     "invested": 4.7774,
-    "currentValue": 4.7701,
-    "pnl": -0.0073,
-    "pnlPercent": -0.15,
+    "currentValue": 4.7774,
+    "pnl": 0,
+    "pnlPercent": 0,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T17:03:31.471Z"
+    "updatedAt": "2026-03-08T17:33:27.585Z"
   },
   {
     "id": "4c34f1a2-48e7-46d7-9681-7e096a83582d",
