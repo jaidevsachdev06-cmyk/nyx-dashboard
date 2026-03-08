@@ -9310,5 +9310,29 @@
       {}
     ],
     "updatedAt": "2026-03-08T12:33:55.657Z"
+  },
+  {
+    "id": "580cb5dd-53f3-4664-b735-8317c26bb0bc",
+    "market": "Will Sarah Knafo win the Paris mayor election?",
+    "side": "No",
+    "entryPrice": 0.99,
+    "currentPrice": 0.99,
+    "shares": 5.21,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, elucidate, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 84.8,
+    "avgWinRate": 67.1,
+    "reasoning": "Consensus: 3 whales (avg score 84.8, WR 67.1%) No. bet=$5.16, shares=5.21. Whales: scottilicious, elucidate, GollumGekko",
+    "endDate": "",
+    "conditionId": "0x72b25fe7b05903658eea56ffd995dc4f0f252d49d6a9a202bac103dd29ab2ba5",
+    "createdAt": "2026-03-08T12:54:00.776Z",
+    "entryDate": "2026-03-08T12:54:00.776Z",
+    "invested": 5.1579,
+    "currentValue": 5.1579,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
