@@ -8856,7 +8856,7 @@
     "market": "Will Iran strike Israel on March 6?",
     "side": "No",
     "entryPrice": 0.805,
-    "currentPrice": 0.795,
+    "currentPrice": 0.765,
     "shares": 18.52,
     "status": "open",
     "source": "consensus-scanner",
@@ -8871,14 +8871,14 @@
     "createdAt": "2026-03-08T07:25:56.871Z",
     "entryDate": "2026-03-08T07:25:56.871Z",
     "invested": 14.9086,
-    "currentValue": 14.7234,
-    "pnl": -0.1852,
-    "pnlPercent": -1.24,
+    "currentValue": 14.1678,
+    "pnl": -0.7408,
+    "pnlPercent": -4.97,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T14:02:51.385Z"
+    "updatedAt": "2026-03-08T14:32:52.363Z"
   },
   {
     "id": "2aabeace-99cd-4ced-84fd-3241405e4698",
