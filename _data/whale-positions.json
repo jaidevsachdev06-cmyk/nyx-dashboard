@@ -9235,7 +9235,7 @@
     "market": "Will Big AI be out as #1 Free App in the US Apple Store by March 9?",
     "side": "Yes",
     "entryPrice": 0.997,
-    "currentPrice": 0.9995,
+    "currentPrice": 0.999,
     "shares": 4.63,
     "status": "open",
     "source": "consensus-scanner",
@@ -9250,14 +9250,14 @@
     "createdAt": "2026-03-08T10:03:19.359Z",
     "entryDate": "2026-03-08T10:03:19.359Z",
     "invested": 4.6161,
-    "currentValue": 4.6277,
-    "pnl": 0.0116,
-    "pnlPercent": 0.25,
+    "currentValue": 4.6254,
+    "pnl": 0.0093,
+    "pnlPercent": 0.2,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T16:03:50.360Z"
+    "updatedAt": "2026-03-08T16:33:42.321Z"
   },
   {
     "id": "2c777ae1-2898-4886-92e9-b97d3d85ed73",
