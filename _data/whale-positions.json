@@ -9209,5 +9209,29 @@
     "currentValue": 5.1002,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "ad99b198-0b65-4950-bdf1-1870c3b14055",
+    "market": "Will Big AI be out as #1 Free App in the US Apple Store by March 9?",
+    "side": "Yes",
+    "entryPrice": 0.997,
+    "currentPrice": 0.997,
+    "shares": 4.63,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Thonker, LinaBell, Xeny",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75.1,
+    "avgWinRate": 60,
+    "reasoning": "Consensus: 3 whales (avg score 75.1, WR 60%) Yes. bet=$4.62, shares=4.63. Whales: Thonker, LinaBell, Xeny",
+    "endDate": "",
+    "conditionId": "0x915bc298dac2e0b992433de515896d8b74bd7a15bf6978ed57dc3e578d1a90c1",
+    "createdAt": "2026-03-08T10:03:19.359Z",
+    "entryDate": "2026-03-08T10:03:19.359Z",
+    "invested": 4.6161,
+    "currentValue": 4.6161,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
