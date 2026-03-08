@@ -8912,5 +8912,29 @@
     "currentValue": 5.4482,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "ee2d9c57-d076-464f-abff-9266c5fd6b17",
+    "market": "Will the US officially declare war on Iran by December 31, 2026?",
+    "side": "No",
+    "entryPrice": 0.895,
+    "currentPrice": 0.895,
+    "shares": 6.23,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, LinaBell, Michael5289",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 84,
+    "avgWinRate": 72.6,
+    "reasoning": "Consensus: 3 whales (avg score 84, WR 72.6%) No. bet=$5.58, shares=6.23. Whales: Car, LinaBell, Michael5289",
+    "endDate": "",
+    "conditionId": "0x3285179b99df57b0390e480f8e69d340e5fa38496b263225df90ef389e2958f4",
+    "createdAt": "2026-03-08T07:26:24.419Z",
+    "entryDate": "2026-03-08T07:26:24.419Z",
+    "invested": 5.5759,
+    "currentValue": 5.5759,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
