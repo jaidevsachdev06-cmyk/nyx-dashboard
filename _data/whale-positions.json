@@ -8688,7 +8688,7 @@
     "market": "Will Mojtaba Khamenei be the next Supreme Leader of Iran?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.624,
+    "currentPrice": 0.6455,
     "shares": 6.66,
     "status": "open",
     "source": "consensus-phase1",
@@ -8701,14 +8701,14 @@
     "createdAt": "2026-03-07T06:20:31.366Z",
     "entryDate": "2026-03-07T06:20:31.366Z",
     "invested": 3.33,
-    "currentValue": 4.1558,
-    "pnl": 0.8258,
-    "pnlPercent": 24.8,
+    "currentValue": 4.299,
+    "pnl": 0.969,
+    "pnlPercent": 29.1,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T01:33:58.511Z"
+    "updatedAt": "2026-03-08T02:03:57.734Z"
   },
   {
     "id": "8d85c415-dfb6-4c97-9730-2aac5c5a0c48",
