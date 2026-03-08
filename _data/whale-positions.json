@@ -8821,7 +8821,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.375,
     "shares": 6.66,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-phase1",
     "whales": "Car, ProfessionalPunter, dontshowmyname",
     "whaleCount": 3,
@@ -8839,7 +8839,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T07:04:08.822Z"
+    "updatedAt": "2026-03-08T07:28:48.871Z",
+    "exitPrice": 0.375,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "933b5d7f-4156-4ed6-b719-143ba7683819",
