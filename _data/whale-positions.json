@@ -8376,9 +8376,9 @@
     "market": "US strikes Iraq by March 7?",
     "side": "No",
     "entryPrice": 0.5,
-    "currentPrice": 0.0015,
+    "currentPrice": 0.001,
     "shares": 39,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner-filtered",
     "whales": "Car, Sonix, The-Joker",
     "whaleCount": 3,
@@ -8391,14 +8391,16 @@
     "createdAt": "2026-03-07T00:06:50.844Z",
     "entryDate": "2026-03-07T00:06:50.844Z",
     "invested": 19.5,
-    "currentValue": 0.0585,
-    "pnl": -19.4415,
-    "pnlPercent": -99.7,
+    "currentValue": 0.039,
+    "pnl": -19.461,
+    "pnlPercent": -99.8,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T07:03:32.973Z"
+    "updatedAt": "2026-03-08T07:28:37.414Z",
+    "exitPrice": 0.001,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "309307d0-fa79-44c5-a319-336e43fd4b9a",
