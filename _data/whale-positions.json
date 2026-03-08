@@ -9422,5 +9422,29 @@
     "currentValue": 4.9788,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "7f26a287-9106-41bb-b54a-398128839faa",
+    "market": "Will UK strike Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.815,
+    "currentPrice": 0.815,
+    "shares": 6.29,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Parz1vaI, Xeny, Roflan",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 76.4,
+    "avgWinRate": 66.7,
+    "reasoning": "Consensus: 3 whales (avg score 76.4, WR 66.7%) No. bet=$5.13, shares=6.29. Whales: Parz1vaI, Xeny, Roflan",
+    "endDate": "",
+    "conditionId": "0x101d521eea2a04b8bf2c865facd18dcdfd8c7751a759ca622e512bbdb3896610",
+    "createdAt": "2026-03-08T18:05:17.501Z",
+    "entryDate": "2026-03-08T18:05:17.501Z",
+    "invested": 5.1263,
+    "currentValue": 5.1263,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
