@@ -7740,9 +7740,9 @@
       "bucket": "58-59°F",
       "question": "Will the highest temperature in New York City be between 58-59°F on March 8?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 1.92,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 1.925,
       "createdAt": "2026-03-07T08:32:40.679Z",
       "signal": {
         "forecastTemp": 61.9,
@@ -7760,7 +7760,11 @@
       "orderId": "paper-mmg2fgfr-9qxh",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-08T18:00:04.277Z"
+      "updatedAt": "2026-03-08T18:00:04.277Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-08T18:06:42.048Z",
+      "closedAt": "2026-03-08T18:06:42.059Z"
     },
     {
       "id": "oc-mmg2fgfy-o07esp",
@@ -8364,7 +8368,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-08T16:06:40.262Z",
+    "lastUpdated": "2026-03-08T18:06:42.062Z",
     "lastPriceSync": "2026-03-08T18:00:07.300Z"
   }
 }
