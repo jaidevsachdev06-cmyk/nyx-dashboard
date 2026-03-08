@@ -9382,7 +9382,7 @@
     "market": "Will US or Israel strike Iran on March 10, 2026?",
     "side": "Yes",
     "entryPrice": 0.9875,
-    "currentPrice": 0.9864999999999999,
+    "currentPrice": 0.985,
     "shares": 5.04,
     "status": "open",
     "source": "consensus-scanner",
@@ -9397,14 +9397,14 @@
     "createdAt": "2026-03-08T18:05:07.259Z",
     "entryDate": "2026-03-08T18:05:07.259Z",
     "invested": 4.977,
-    "currentValue": 4.972,
-    "pnl": -0.005,
-    "pnlPercent": -0.1,
+    "currentValue": 4.9644,
+    "pnl": -0.0126,
+    "pnlPercent": -0.25,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T23:03:47.505Z"
+    "updatedAt": "2026-03-08T23:33:54.989Z"
   },
   {
     "id": "cbdcf50d-45f9-4bbb-b567-f2b299426976",
