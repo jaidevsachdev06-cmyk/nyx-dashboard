@@ -6815,7 +6815,7 @@
     "entryPrice": 0.145,
     "currentPrice": 0.135,
     "shares": 31.24,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Xplayer, gopfan2, failstober",
     "whaleCount": 3,
@@ -6835,7 +6835,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T07:02:27.146Z"
+    "updatedAt": "2026-03-08T07:27:16.840Z",
+    "exitPrice": 0.135,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "c78c40bf-4c56-4cf9-8478-d5d7b825c736",
