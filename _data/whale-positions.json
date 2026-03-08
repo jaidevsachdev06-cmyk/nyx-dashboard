@@ -8682,7 +8682,7 @@
     "entryPrice": 0.5,
     "currentPrice": 1,
     "shares": 5,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-phase1",
     "whales": "Gr33d, Sonix, ProfessionalPunter, arjenw",
     "whaleCount": 4,
@@ -8700,7 +8700,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T07:03:49.200Z"
+    "updatedAt": "2026-03-08T07:28:43.533Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "8ae14525-4034-4ec0-9ac8-b26da07f02a4",
