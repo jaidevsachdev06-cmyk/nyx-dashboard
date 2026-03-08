@@ -9374,5 +9374,29 @@
       {}
     ],
     "updatedAt": "2026-03-08T18:04:05.252Z"
+  },
+  {
+    "id": "54227719-4d1d-43e7-b018-e2fd94dd443f",
+    "market": "Will US or Israel strike Iran on March 10, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.9875,
+    "currentPrice": 0.9875,
+    "shares": 5.04,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "cashy, Parz1vaI, Sonix",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 77.1,
+    "avgWinRate": 64.7,
+    "reasoning": "Consensus: 3 whales (avg score 77.1, WR 64.7%) Yes. bet=$4.98, shares=5.04. Whales: cashy, Parz1vaI, Sonix",
+    "endDate": "",
+    "conditionId": "0xc7d80fc1ed78c70f2c2e95fab1c34c9bb0c52cbfdbf8f9efd1ba8272262bb953",
+    "createdAt": "2026-03-08T18:05:07.259Z",
+    "entryDate": "2026-03-08T18:05:07.259Z",
+    "invested": 4.977,
+    "currentValue": 4.977,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
