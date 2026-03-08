@@ -8960,5 +8960,29 @@
     "currentValue": 4.9475,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "da43697c-c969-41ac-b161-294999763869",
+    "market": "Will the U.S. invade Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.8905,
+    "currentPrice": 0.8905,
+    "shares": 5.72,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, arjenw, Roflan",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.8,
+    "avgWinRate": 66.2,
+    "reasoning": "Consensus: 3 whales (avg score 82.8, WR 66.2%) No. bet=$5.09, shares=5.72. Whales: Car, arjenw, Roflan",
+    "endDate": "",
+    "conditionId": "0x705479cc3e7cf2907997c62b4245356c48b5133f7d82a47829a2354dd77a7c51",
+    "createdAt": "2026-03-08T07:26:35.853Z",
+    "entryDate": "2026-03-08T07:26:35.853Z",
+    "invested": 5.0937,
+    "currentValue": 5.0937,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
