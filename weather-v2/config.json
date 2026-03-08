@@ -33,8 +33,9 @@
       "enabled": true,
       "maxDailyTrades": 3,
       "maxSizeUSDC": 2,
-      "minEdgePct": 25,
-      "maxEntryPrice": 0.15
+      "maxEntryPrice": 0.15,
+      "minProbRatio": 1.35,
+      "minModelProb": 0.06
     },
     "swap": {
       "enabled": true,

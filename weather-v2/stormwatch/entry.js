@@ -52,13 +52,16 @@ async function processCandidate(signal) {
 
   // Lottery trade classification — probability-ratio approach
   // Instead of edge %, we check: cheap price + model thinks there's a real chance + model meaningfully disagrees with market
-  // Lottery trade detection
+  // Lottery trade detection - emulate Paris 16°C YES conditions
   const lotteryConfig = config.risk.lottery || { enabled: false };
   const probRatio = signal.modelProb / currentPrice;  // How much does model disagree with market?
+  const minProbRatio = lotteryConfig.minProbRatio || 1.35;
+  const minModelProb = lotteryConfig.minModelProb || 0.06;
+  
   const isLottery = lotteryConfig.enabled && 
                     currentPrice < (lotteryConfig.maxEntryPrice || 0.15) && 
-                    edgePct >= (lotteryConfig.minEdgePct || 25) &&
-                    signal.modelProb >= 0.05;
+                    signal.modelProb >= minModelProb &&
+                    probRatio >= minProbRatio;
 
   // Sanity check: reject extreme edges (>250%) for NON-lottery trades
   // When model and market disagree this much, market is usually right
