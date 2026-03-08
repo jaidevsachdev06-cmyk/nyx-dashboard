@@ -52,9 +52,13 @@ async function processCandidate(signal) {
 
   // Lottery trade classification — probability-ratio approach
   // Instead of edge %, we check: cheap price + model thinks there's a real chance + model meaningfully disagrees with market
-  // This catches trades like Paris 16°C (7.4% model, 5.4¢ market) and Miami 82-83°F (17.2% model, 5¢ market)
+  // Lottery trade detection
+  const lotteryConfig = config.risk.lottery || { enabled: false };
   const probRatio = signal.modelProb / currentPrice;  // How much does model disagree with market?
-  const isLottery = currentPrice < 0.15 && signal.modelProb >= 0.07 && probRatio >= 1.35;
+  const isLottery = lotteryConfig.enabled && 
+                    currentPrice < (lotteryConfig.maxEntryPrice || 0.15) && 
+                    edgePct >= (lotteryConfig.minEdgePct || 25) &&
+                    signal.modelProb >= 0.05;
 
   // Sanity check: reject extreme edges (>250%) for NON-lottery trades
   // When model and market disagree this much, market is usually right
@@ -69,15 +73,15 @@ async function processCandidate(signal) {
     const allTrades = { trades: store.getAll() };
     const lotteryToday = allTrades.trades.filter(t => 
       t.enteredAt && new Date(t.enteredAt).toISOString().slice(0, 10) === today &&
-      t.entryPrice && t.size && (t.entryPrice * t.size) <= 5 &&
-      t.entryPrice < 0.15
+      t.entryPrice && t.entryPrice < (lotteryConfig.maxEntryPrice || 0.15)
     );
 
-    if (lotteryToday.length >= 2) {
-      return { entered: false, trade: null, reason: `Lottery quota reached: ${lotteryToday.length}/2 today` };
+    const maxDaily = lotteryConfig.maxDailyTrades || 3;
+    if (lotteryToday.length >= maxDaily) {
+      return { entered: false, trade: null, reason: `Lottery quota reached: ${lotteryToday.length}/${maxDaily} today` };
     }
 
-    console.log(`${tag} 🎰 LOTTERY TRADE (${lotteryToday.length + 1}/2 today) | modelProb: ${(signal.modelProb*100).toFixed(1)}% | price: ${(currentPrice*100).toFixed(1)}¢ | ratio: ${probRatio.toFixed(1)}x`);
+    console.log(`${tag} 🎰 LOTTERY TRADE (${lotteryToday.length + 1}/${maxDaily} today) | modelProb: ${(signal.modelProb*100).toFixed(1)}% | price: ${(currentPrice*100).toFixed(1)}¢ | edge: ${edgePct.toFixed(0)}%`);
   } else {
     // Normal trade: apply confidence gates
     const minModelProb = config.risk.minModelProb || 0.6;
@@ -98,9 +102,9 @@ async function processCandidate(signal) {
   if (sizeUSDC < 5) sizeUSDC = config.risk.defaultSizeUSDC;
   sizeUSDC = Math.min(sizeUSDC, maxSize);
 
-  // Lottery sizing: cap at $10 (higher risk, lower capital at risk)
+  // Lottery sizing: cap per config (default $2)
   if (isLottery) {
-    sizeUSDC = Math.min(sizeUSDC, 5);
+    sizeUSDC = Math.min(sizeUSDC, lotteryConfig.maxSizeUSDC || 2);
   } else if (currentPrice < 0.20) {
     // Regular cheap bets get half size
     sizeUSDC = Math.min(sizeUSDC, maxSize * 0.5);

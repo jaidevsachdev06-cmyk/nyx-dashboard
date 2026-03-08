@@ -29,6 +29,13 @@
     "minDistanceFromLine": 0,
     "cityBlacklist": ["London", "Toronto", "Miami"],
     "bucketTypeBlacklist": ["boundary"],
+    "lottery": {
+      "enabled": true,
+      "maxDailyTrades": 3,
+      "maxSizeUSDC": 2,
+      "minEdgePct": 25,
+      "maxEntryPrice": 0.15
+    },
     "swap": {
       "enabled": true,
       "minEdgePPImprove": 10,
