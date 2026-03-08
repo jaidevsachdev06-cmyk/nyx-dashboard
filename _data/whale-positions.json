@@ -8266,7 +8266,7 @@
     "market": "US strike on Cuba by March 31?",
     "side": "No",
     "entryPrice": 0.5,
-    "currentPrice": 0.9365,
+    "currentPrice": 0.9355,
     "shares": 35,
     "status": "open",
     "source": "consensus-scanner-filtered",
@@ -8281,14 +8281,14 @@
     "createdAt": "2026-03-06T22:07:01.271Z",
     "entryDate": "2026-03-06T22:07:01.271Z",
     "invested": 17.5,
-    "currentValue": 32.7775,
-    "pnl": 15.2775,
-    "pnlPercent": 87.3,
+    "currentValue": 32.7425,
+    "pnl": 15.2425,
+    "pnlPercent": 87.1,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T21:02:21.562Z"
+    "updatedAt": "2026-03-08T21:32:20.090Z"
   },
   {
     "id": "03b1112e-5acc-4146-b214-bd5a19bb30b5",
