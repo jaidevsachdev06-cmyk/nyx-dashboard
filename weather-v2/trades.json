@@ -8070,9 +8070,9 @@
       "bucket": "50-51°F",
       "question": "Will the highest temperature in Seattle be between 50-51°F on March 8?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 7.02,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 7.03,
       "createdAt": "2026-03-07T16:11:23.296Z",
       "signal": {
         "forecastTemp": 54,
@@ -8090,7 +8090,11 @@
       "orderId": "paper-mmgitd87-4i6w",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-08T20:00:05.002Z"
+      "updatedAt": "2026-03-08T20:00:05.002Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-08T20:06:30.193Z",
+      "closedAt": "2026-03-08T20:06:30.206Z"
     },
     {
       "id": "oc-mmgn3npi-023gv4",
@@ -8368,7 +8372,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-08T18:06:42.062Z",
+    "lastUpdated": "2026-03-08T20:06:30.209Z",
     "lastPriceSync": "2026-03-08T20:00:06.964Z"
   }
 }
