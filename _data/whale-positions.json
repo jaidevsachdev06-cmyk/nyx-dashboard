@@ -6394,7 +6394,7 @@
     "entryPrice": 0.935,
     "currentPrice": 1,
     "shares": 5.16,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "MuddyRC, cashy, Parz1vaI, arjenw",
     "whaleCount": 4,
@@ -6413,7 +6413,9 @@
     "priceHistory": [
       {}
     ],
-    "updatedAt": "2026-03-08T07:01:53.690Z"
+    "updatedAt": "2026-03-08T07:27:14.128Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "f72dca3f-b909-40f6-813e-8caa7981cc24",
