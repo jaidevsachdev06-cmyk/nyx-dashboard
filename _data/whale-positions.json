@@ -7499,7 +7499,7 @@
     "market": "Zelenskyy out as Ukraine president by end of 2026?",
     "side": "No",
     "entryPrice": 0.755,
-    "currentPrice": 0.765,
+    "currentPrice": 0.77,
     "shares": 8.32,
     "status": "open",
     "source": "consensus-scanner",
@@ -7514,14 +7514,14 @@
     "createdAt": "2026-03-06T08:06:50.518Z",
     "entryDate": "2026-03-06T08:06:50.518Z",
     "invested": 6.2816,
-    "currentValue": 6.3648,
-    "pnl": 0.0832,
-    "pnlPercent": 1.32,
+    "currentValue": 6.4064,
+    "pnl": 0.1248,
+    "pnlPercent": 1.99,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T22:31:57.210Z"
+    "updatedAt": "2026-03-08T23:01:55.389Z"
   },
   {
     "id": "5b748c2a-0775-4909-a1d3-4c78da4f0f40",
