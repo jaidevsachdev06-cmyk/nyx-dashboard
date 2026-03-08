@@ -6208,7 +6208,7 @@
     "entryPrice": 0.212,
     "currentPrice": 0.2115,
     "shares": 71.08,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "UbuntuTrading, Xplayer, HolyMoses7, Roflan, XPredicter1, Winry, gopfan2, The-Joker, dontshowmyname",
     "whaleCount": 9,
@@ -6228,7 +6228,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T07:01:49.709Z"
+    "updatedAt": "2026-03-08T07:27:09.251Z",
+    "exitPrice": 0.2115,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "7f3f6318-bece-4fd9-8d3c-69895350a7c4",
