@@ -8376,11 +8376,42 @@
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-08T16:06:40.246Z",
       "closedAt": "2026-03-08T16:06:40.259Z"
+    },
+    {
+      "id": "oc-mmib47fh-d8ls3g",
+      "conditionId": "0xf077fd7a204dc8c685397580ed3aca33ea31f6a226ee4de45fec11c57ee61a21",
+      "tokenId": "0xd905ac205625f240ce720c9ba78b830dd515ebcb0bb897bed7a8c2225c09aa36",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-9-2026-80-81f",
+      "city": "Dallas",
+      "date": "2026-03-09",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Dallas be between 80-81°F on March 9?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-08T22:11:24.701Z",
+      "signal": {
+        "forecastTemp": 76.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.625,
+        "modelProb": 0.6634,
+        "edge": 0.0384,
+        "isLottery": false
+      },
+      "notes": "Forecast: 76.5°F | Model: 66% vs Market: 63% | Edge: 6.1%",
+      "entryPrice": 0.625,
+      "size": 8,
+      "sizeUSDC": 5,
+      "enteredAt": "2026-03-08T22:11:24.718Z",
+      "orderId": "paper-mmib47g3-e2v5",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-08T22:06:21.495Z",
+    "lastUpdated": "2026-03-08T22:11:24.728Z",
     "lastPriceSync": "2026-03-08T22:00:06.608Z"
   }
 }
