@@ -7682,9 +7682,9 @@
       "bucket": "60-61°F",
       "question": "Will the highest temperature in Chicago be between 60-61°F on March 8?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 6.55,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 6.555,
       "createdAt": "2026-03-07T08:32:40.645Z",
       "signal": {
         "forecastTemp": 55.1,
@@ -7702,7 +7702,11 @@
       "orderId": "paper-mmg2fgeu-20o1",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-08T22:00:04.058Z"
+      "updatedAt": "2026-03-08T22:00:04.058Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-08T22:06:20.521Z",
+      "closedAt": "2026-03-08T22:06:20.533Z"
     },
     {
       "id": "oc-mmg2fgf1-hcffht",
@@ -7938,9 +7942,9 @@
       "bucket": "72-73°F",
       "question": "Will the highest temperature in Atlanta be between 72-73°F on March 8?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 4.59,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.675,
       "createdAt": "2026-03-07T12:11:46.873Z",
       "signal": {
         "forecastTemp": 69.3,
@@ -7958,7 +7962,11 @@
       "orderId": "paper-mmga98al-e92u",
       "txHash": null,
       "currentPrice": 0.995,
-      "updatedAt": "2026-03-08T22:00:04.632Z"
+      "updatedAt": "2026-03-08T22:00:04.632Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-08T22:06:21.480Z",
+      "closedAt": "2026-03-08T22:06:21.492Z"
     },
     {
       "id": "oc-mmga98ax-5wkdu9",
@@ -8372,7 +8380,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-08T20:06:30.209Z",
+    "lastUpdated": "2026-03-08T22:06:21.495Z",
     "lastPriceSync": "2026-03-08T22:00:06.608Z"
   }
 }
