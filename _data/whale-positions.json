@@ -7265,7 +7265,7 @@
     "market": "DeepSeek V4 released by March 31?",
     "side": "No",
     "entryPrice": 0.22,
-    "currentPrice": 0.56,
+    "currentPrice": 0.54,
     "shares": 21.14,
     "status": "open",
     "source": "consensus-scanner",
@@ -7280,14 +7280,14 @@
     "createdAt": "2026-03-03T02:06:18.573Z",
     "entryDate": "2026-03-03T02:06:18.573Z",
     "invested": 4.6508,
-    "currentValue": 11.8384,
-    "pnl": 7.1876,
-    "pnlPercent": 154.55,
+    "currentValue": 11.4156,
+    "pnl": 6.7648,
+    "pnlPercent": 145.45,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T04:02:39.206Z"
+    "updatedAt": "2026-03-08T04:32:44.757Z"
   },
   {
     "id": "fd977f5a-bd42-4009-9a87-cf1fb5090fb1",
