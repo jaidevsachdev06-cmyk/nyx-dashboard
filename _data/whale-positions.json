@@ -9056,5 +9056,29 @@
     "currentValue": 5.28,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "dfd60812-c8cc-4c14-8c87-7a6205fafa21",
+    "market": "Will Alireza Arafi be the next Supreme Leader of Iran?",
+    "side": "Yes",
+    "entryPrice": 0.096,
+    "currentPrice": 0.096,
+    "shares": 48.96,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Parz1vaI, cashy, Mombil",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 75.6,
+    "avgWinRate": 61.1,
+    "reasoning": "Consensus: 3 whales (avg score 75.6, WR 61.1%) Yes. bet=$4.70, shares=48.96. Whales: Parz1vaI, cashy, Mombil",
+    "endDate": "",
+    "conditionId": "0x7be7599c20006b0af1b33484bd30f65117122fd74695331345605b13c578f749",
+    "createdAt": "2026-03-08T07:27:04.177Z",
+    "entryDate": "2026-03-08T07:27:04.177Z",
+    "invested": 4.7002,
+    "currentValue": 4.7002,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
