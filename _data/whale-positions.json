@@ -9276,5 +9276,29 @@
     "currentValue": 6.2094,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "5782bf8f-9bf0-43d1-ace6-7796fc73aa3b",
+    "market": "Will Judy Shelton be confirmed as Fed Chair?",
+    "side": "No",
+    "entryPrice": 0.9735,
+    "currentPrice": 0.9735,
+    "shares": 6.09,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, debased, GollumGekko",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.2,
+    "avgWinRate": 77.1,
+    "reasoning": "Consensus: 3 whales (avg score 82.2, WR 77.1%) No. bet=$5.93, shares=6.09. Whales: Roflan, debased, GollumGekko",
+    "endDate": "",
+    "conditionId": "0x14fd8ab261d14215058b77a9541a5013ccc3d3eb677276a9de54445a31acd194",
+    "createdAt": "2026-03-08T12:03:11.400Z",
+    "entryDate": "2026-03-08T12:03:11.400Z",
+    "invested": 5.9286,
+    "currentValue": 5.9286,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
