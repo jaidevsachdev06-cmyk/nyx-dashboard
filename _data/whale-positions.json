@@ -9411,7 +9411,7 @@
     "market": "Will Iran announce a new supreme leader on March 8, 2026?",
     "side": "No",
     "entryPrice": 0.875,
-    "currentPrice": 0.9504999999999999,
+    "currentPrice": 0.9784999999999999,
     "shares": 5.69,
     "status": "open",
     "source": "consensus-scanner",
@@ -9426,14 +9426,14 @@
     "createdAt": "2026-03-08T18:05:12.318Z",
     "entryDate": "2026-03-08T18:05:12.318Z",
     "invested": 4.9788,
-    "currentValue": 5.4083,
-    "pnl": 0.4296,
-    "pnlPercent": 8.63,
+    "currentValue": 5.5677,
+    "pnl": 0.5889,
+    "pnlPercent": 11.83,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T21:34:01.422Z"
+    "updatedAt": "2026-03-08T22:03:59.089Z"
   },
   {
     "id": "7f26a287-9106-41bb-b54a-398128839faa",
