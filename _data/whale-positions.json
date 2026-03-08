@@ -8790,9 +8790,9 @@
     "market": "US announces military support of Kurds in Iran by March 31?",
     "side": "No",
     "entryPrice": 0.5,
-    "currentPrice": 0.785,
+    "currentPrice": 0.795,
     "shares": 6.66,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-phase1",
     "whales": "Car, Polar, kekkone",
     "whaleCount": 3,
@@ -8803,14 +8803,16 @@
     "createdAt": "2026-03-07T20:07:00.809Z",
     "entryDate": "2026-03-07T20:07:00.809Z",
     "invested": 3.33,
-    "currentValue": 5.2281,
-    "pnl": 1.8981,
-    "pnlPercent": 57,
+    "currentValue": 5.2947,
+    "pnl": 1.9647,
+    "pnlPercent": 59,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T07:04:04.683Z"
+    "updatedAt": "2026-03-08T07:28:46.166Z",
+    "exitPrice": 0.795,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "eab16b80-5223-4033-afbc-a525b2ad71a2",
