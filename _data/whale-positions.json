@@ -9398,5 +9398,29 @@
     "currentValue": 4.977,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "cbdcf50d-45f9-4bbb-b567-f2b299426976",
+    "market": "Will Iran announce a new supreme leader on March 8, 2026?",
+    "side": "No",
+    "entryPrice": 0.875,
+    "currentPrice": 0.875,
+    "shares": 5.69,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "cashy, Parz1vaI, Sonix",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 77.1,
+    "avgWinRate": 64.7,
+    "reasoning": "Consensus: 3 whales (avg score 77.1, WR 64.7%) No. bet=$4.98, shares=5.69. Whales: cashy, Parz1vaI, Sonix",
+    "endDate": "",
+    "conditionId": "0xa77b0fe6af6adbf62a04d4bdbf9fb7a0eac951b506dbc6b68ecf452c41ce333f",
+    "createdAt": "2026-03-08T18:05:12.318Z",
+    "entryDate": "2026-03-08T18:05:12.318Z",
+    "invested": 4.9788,
+    "currentValue": 4.9788,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
