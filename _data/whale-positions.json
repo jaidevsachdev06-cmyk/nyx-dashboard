@@ -6486,7 +6486,7 @@
     "entryPrice": 0.84,
     "currentPrice": 0.945,
     "shares": 6.19,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, scottilicious, MuddyRC",
     "whaleCount": 3,
@@ -6506,7 +6506,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T10:01:54.357Z"
+    "updatedAt": "2026-03-08T10:03:26.156Z",
+    "exitPrice": 0.945,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "399afe6d-bf3e-4660-94d7-80af33523e53",
