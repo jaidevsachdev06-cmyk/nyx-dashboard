@@ -8232,11 +8232,92 @@
         "isLottery": false
       },
       "notes": "Forecast: 67.0°F | Model: 81% vs Market: 74% | Edge: 9.0%"
+    },
+    {
+      "id": "oc-mmh49519-r7w6sg",
+      "conditionId": "0x0b4abad7069ab3a365326892f1d7f1131a0d5ab7f0fb3e644e2bf4917ef1acf4",
+      "tokenId": "0x933bf003f50a0b1a3a5c81595dabb8476663b1285b718477affb2824ee2dba3",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-9-2026-78-79f",
+      "city": "Atlanta",
+      "date": "2026-03-09",
+      "bucket": "78-79°F",
+      "question": "Will the highest temperature in Atlanta be between 78-79°F on March 9?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-08T02:11:31.389Z",
+      "signal": {
+        "forecastTemp": 74.7,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.68,
+        "modelProb": 0.8961,
+        "edge": 0.2161,
+        "isLottery": false
+      },
+      "notes": "Forecast: 74.7°F | Model: 90% vs Market: 68% | Edge: 31.8%"
+    },
+    {
+      "id": "oc-mmh4951k-dxash9",
+      "conditionId": "0x078d34285f81b89cf4f9ebbb2edd951102517f56a293fe73ebced1252410c85e",
+      "tokenId": "0x2efac347dce2b3df23be2ff84d5334a03aa28c532f6ab45440891fae4e0d2bf5",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-9-2026-66-67f",
+      "city": "Chicago",
+      "date": "2026-03-09",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Chicago be between 66-67°F on March 9?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-08T02:11:31.400Z",
+      "signal": {
+        "forecastTemp": 70.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.735,
+        "modelProb": 0.9285,
+        "edge": 0.1935,
+        "isLottery": false
+      },
+      "notes": "Forecast: 70.9°F | Model: 93% vs Market: 74% | Edge: 26.3%",
+      "entryPrice": 0.735,
+      "size": 17,
+      "sizeUSDC": 12.495,
+      "enteredAt": "2026-03-08T02:11:31.410Z",
+      "orderId": "paper-mmh4951z-ilrc",
+      "txHash": null
+    },
+    {
+      "id": "oc-mmh49528-f2y7ia",
+      "conditionId": "0xf4de2e0427331ffd85bc80a7afd0d704d004ffffb5df8abe8da1263500482851",
+      "tokenId": "0x902f9210624564673b9a9e0c0c48d153bb07f3119582fd149071d78f700f94cc",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-8-2026-62-63f",
+      "city": "Chicago",
+      "date": "2026-03-08",
+      "bucket": "62-63°F",
+      "question": "Will the highest temperature in Chicago be between 62-63°F on March 8?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-08T02:11:31.424Z",
+      "signal": {
+        "forecastTemp": 57.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.79,
+        "modelProb": 0.9419,
+        "edge": 0.1519,
+        "isLottery": false
+      },
+      "notes": "Forecast: 57.8°F | Model: 94% vs Market: 79% | Edge: 19.2%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-08T00:10:51.805Z",
+    "lastUpdated": "2026-03-08T02:11:31.426Z",
     "lastPriceSync": "2026-03-08T02:00:08.053Z"
   }
 }
