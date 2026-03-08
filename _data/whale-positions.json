@@ -8593,7 +8593,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.86,
     "shares": 38,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner-filtered",
     "whales": "Gr33d, LinaBell, The-Joker",
     "whaleCount": 3,
@@ -8613,7 +8613,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T07:03:40.582Z"
+    "updatedAt": "2026-03-08T07:28:40.866Z",
+    "exitPrice": 0.86,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "6a57499c-4644-4e70-b017-f79f4780210d",
