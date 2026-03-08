@@ -8004,9 +8004,9 @@
       "bucket": "16°C",
       "question": "Will the highest temperature in Paris be 16°C on March 8?",
       "side": "NO",
-      "status": "open",
+      "status": "exited",
       "result": null,
-      "pnlUSDC": -2.1,
+      "pnlUSDC": -1.75,
       "createdAt": "2026-03-07T14:14:56.477Z",
       "signal": {
         "forecastTemp": 18.1,
@@ -8016,7 +8016,7 @@
         "edge": 0.0649,
         "isLottery": false
       },
-      "notes": "Forecast: 18.1°F | Model: 95% vs Market: 89% | Edge: 7.3%",
+      "notes": "Forecast: 18.1°F | Model: 95% vs Market: 89% | Edge: 7.3% | SWAP: replaced by better edge candidate (ΔedgePP 15.7pp)",
       "entryPrice": 0.885,
       "size": 14,
       "sizeUSDC": 12.39,
@@ -8024,7 +8024,11 @@
       "orderId": "paper-mmgenlyr-1zkc",
       "txHash": null,
       "currentPrice": 0.735,
-      "updatedAt": "2026-03-08T14:00:05.808Z"
+      "updatedAt": "2026-03-08T14:00:05.808Z",
+      "exitPrice": 0.76,
+      "exitSource": "swap",
+      "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 15.7pp)",
+      "exitedAt": "2026-03-08T14:11:35.813Z"
     },
     {
       "id": "oc-mmgenlz4-fucmne",
@@ -8319,11 +8323,42 @@
         "isLottery": false
       },
       "notes": "Forecast: 57.8°F | Model: 94% vs Market: 79% | Edge: 19.2%"
+    },
+    {
+      "id": "oc-mmhtz5lf-oz2c36",
+      "conditionId": "0x3b0469b9964a711a13782a9382b9fd0ccf679d3743495d809f3e59931b1fc484",
+      "tokenId": "0xe80fca53f93273fa6b1ab0a7c2937fb1cfed03ec4e125a069f52183578c23743",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-paris-on-march-8-2026-15c",
+      "city": "Paris",
+      "date": "2026-03-08",
+      "bucket": "15°C",
+      "question": "Will the highest temperature in Paris be 15°C on March 8?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-08T14:11:35.571Z",
+      "signal": {
+        "forecastTemp": 17.3,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.4285,
+        "modelProb": 0.6504,
+        "edge": 0.2219,
+        "isLottery": false
+      },
+      "notes": "Forecast: 17.3°F | Model: 65% vs Market: 43% | Edge: 51.8%",
+      "entryPrice": 0.4285,
+      "size": 29,
+      "sizeUSDC": 12.426499999999999,
+      "enteredAt": "2026-03-08T14:11:35.822Z",
+      "orderId": "paper-mmhtz5si-e1f1",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-08T06:10:04.901Z",
+    "lastUpdated": "2026-03-08T14:11:35.830Z",
     "lastPriceSync": "2026-03-08T14:00:08.303Z"
   }
 }
