@@ -9440,7 +9440,7 @@
     "market": "Will UK strike Iran by March 31?",
     "side": "No",
     "entryPrice": 0.815,
-    "currentPrice": 0.815,
+    "currentPrice": 0.825,
     "shares": 6.29,
     "status": "open",
     "source": "consensus-scanner",
@@ -9455,14 +9455,14 @@
     "createdAt": "2026-03-08T18:05:17.501Z",
     "entryDate": "2026-03-08T18:05:17.501Z",
     "invested": 5.1263,
-    "currentValue": 5.1263,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 5.1892,
+    "pnl": 0.0629,
+    "pnlPercent": 1.23,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T21:04:17.623Z"
+    "updatedAt": "2026-03-08T21:34:05.380Z"
   },
   {
     "id": "6e8836d5-c34f-405c-afef-6408ba2a37b3",
