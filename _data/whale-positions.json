@@ -9287,7 +9287,7 @@
     "market": "Will Judy Shelton be confirmed as Fed Chair?",
     "side": "No",
     "entryPrice": 0.9735,
-    "currentPrice": 0.9735,
+    "currentPrice": 0.9744999999999999,
     "shares": 6.09,
     "status": "open",
     "source": "consensus-scanner",
@@ -9302,8 +9302,13 @@
     "createdAt": "2026-03-08T12:03:11.400Z",
     "entryDate": "2026-03-08T12:03:11.400Z",
     "invested": 5.9286,
-    "currentValue": 5.9286,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 5.9347,
+    "pnl": 0.0061,
+    "pnlPercent": 0.1,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-08T12:33:55.657Z"
   }
 ]
