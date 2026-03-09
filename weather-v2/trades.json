@@ -8189,9 +8189,9 @@
       "bucket": "76-77°F",
       "question": "Will the highest temperature in Atlanta be between 76-77°F on March 9?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -8.65,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -11.2,
       "createdAt": "2026-03-08T00:10:51.762Z",
       "signal": {
         "forecastTemp": 73.1,
@@ -8209,7 +8209,11 @@
       "orderId": "paper-mmgzxyx5-bm52",
       "txHash": null,
       "currentPrice": 0.1995,
-      "updatedAt": "2026-03-09T22:00:03.924Z"
+      "updatedAt": "2026-03-09T22:00:03.924Z",
+      "resolutionPrice": 0.04,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-09T22:10:02.960Z",
+      "closedAt": "2026-03-09T22:10:02.972Z"
     },
     {
       "id": "oc-mmgzxyxf-1ysmp8",
@@ -8508,9 +8512,9 @@
       "bucket": "44-45°F",
       "question": "Will the highest temperature in Seattle be between 44-45°F on March 9?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -10.7,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -11.472,
       "createdAt": "2026-03-09T18:11:04.170Z",
       "signal": {
         "forecastTemp": 48.7,
@@ -8528,7 +8532,11 @@
       "orderId": "paper-mmjhyz5r-5ho4",
       "txHash": null,
       "currentPrice": 0.059,
-      "updatedAt": "2026-03-09T22:00:05.018Z"
+      "updatedAt": "2026-03-09T22:00:05.018Z",
+      "resolutionPrice": 0.027,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-09T22:10:03.208Z",
+      "closedAt": "2026-03-09T22:10:03.218Z"
     },
     {
       "id": "oc-mmjm9cg8-vj9q7n",
@@ -8568,7 +8576,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.26,
+      "pnlUSDC": 1.35,
       "createdAt": "2026-03-09T20:11:06.452Z",
       "signal": {
         "forecastTemp": 56.8,
@@ -8585,13 +8593,13 @@
       "enteredAt": "2026-03-09T20:11:06.465Z",
       "orderId": "paper-mmjm9ch2-238i",
       "txHash": null,
-      "currentPrice": 0.71,
-      "updatedAt": "2026-03-09T22:00:05.553Z"
+      "currentPrice": 0.715,
+      "updatedAt": "2026-03-09T22:30:04.009Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-09T22:06:43.760Z",
-    "lastPriceSync": "2026-03-09T22:00:05.854Z"
+    "lastUpdated": "2026-03-09T22:10:03.221Z",
+    "lastPriceSync": "2026-03-09T22:30:04.310Z"
   }
 }
