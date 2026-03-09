@@ -8191,7 +8191,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.44,
+      "pnlUSDC": 1.12,
       "createdAt": "2026-03-08T00:10:51.762Z",
       "signal": {
         "forecastTemp": 73.1,
@@ -8208,8 +8208,8 @@
       "enteredAt": "2026-03-08T00:10:51.779Z",
       "orderId": "paper-mmgzxyx5-bm52",
       "txHash": null,
-      "currentPrice": 0.83,
-      "updatedAt": "2026-03-09T16:00:04.221Z"
+      "currentPrice": 0.81,
+      "updatedAt": "2026-03-09T16:30:03.111Z"
     },
     {
       "id": "oc-mmgzxyxf-1ysmp8",
@@ -8299,7 +8299,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 4.03,
+      "pnlUSDC": 4.07,
       "createdAt": "2026-03-08T02:11:31.400Z",
       "signal": {
         "forecastTemp": 70.9,
@@ -8316,8 +8316,8 @@
       "enteredAt": "2026-03-08T02:11:31.410Z",
       "orderId": "paper-mmh4951z-ilrc",
       "txHash": null,
-      "currentPrice": 0.972,
-      "updatedAt": "2026-03-09T16:00:04.760Z"
+      "currentPrice": 0.9745,
+      "updatedAt": "2026-03-09T16:30:03.637Z"
     },
     {
       "id": "oc-mmh49528-f2y7ia",
@@ -8394,7 +8394,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.08,
+      "pnlUSDC": -0.04,
       "createdAt": "2026-03-08T22:11:24.701Z",
       "signal": {
         "forecastTemp": 76.5,
@@ -8411,8 +8411,8 @@
       "enteredAt": "2026-03-08T22:11:24.718Z",
       "orderId": "paper-mmib47g3-e2v5",
       "txHash": null,
-      "currentPrice": 0.615,
-      "updatedAt": "2026-03-09T16:00:05.302Z"
+      "currentPrice": 0.62,
+      "updatedAt": "2026-03-09T16:30:04.181Z"
     },
     {
       "id": "oc-mmife5km-a439th",
@@ -8463,11 +8463,36 @@
         "isLottery": false
       },
       "notes": "Forecast: 79.1°F | Model: 67% vs Market: 65% | Edge: 2.8%"
+    },
+    {
+      "id": "oc-mmjdo29s-269wy4",
+      "conditionId": "0x0e946ed7ad76f7cb0d5f642b95946504a0d1a6779100c107d929cf25f2a4e81e",
+      "tokenId": "0x986caf8e360ac7e64bb400bb71e751f380873ca64143a826cfbd558c9e76217d",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-9-2026-72-73f",
+      "city": "Chicago",
+      "date": "2026-03-09",
+      "bucket": "72-73°F",
+      "question": "Will the highest temperature in Chicago be between 72-73°F on March 9?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-09T16:10:36.544Z",
+      "signal": {
+        "forecastTemp": 68.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.58,
+        "modelProb": 0.6583,
+        "edge": 0.0783,
+        "isLottery": false
+      },
+      "notes": "Forecast: 68.4°F | Model: 66% vs Market: 58% | Edge: 13.5%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-09T16:06:13.014Z",
-    "lastPriceSync": "2026-03-09T16:00:05.602Z"
+    "lastUpdated": "2026-03-09T16:10:36.548Z",
+    "lastPriceSync": "2026-03-09T16:30:04.482Z"
   }
 }
