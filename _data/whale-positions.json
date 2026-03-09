@@ -9542,7 +9542,7 @@
     "entryPrice": 0.9965,
     "currentPrice": 1,
     "shares": 5.21,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Mombil, ProfessionalPunter, Thonker, Michael5289",
     "whaleCount": 4,
@@ -9562,7 +9562,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:03:48.214Z"
+    "updatedAt": "2026-03-09T10:12:36.480Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "52ebc75e-55e6-435b-b895-a8b3b6330c4c",
