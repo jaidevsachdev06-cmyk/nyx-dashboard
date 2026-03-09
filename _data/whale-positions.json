@@ -9271,7 +9271,7 @@
     "entryPrice": 0.997,
     "currentPrice": 0.9995,
     "shares": 4.63,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Thonker, LinaBell, Xeny",
     "whaleCount": 3,
@@ -9291,7 +9291,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:03:13.367Z"
+    "updatedAt": "2026-03-09T10:12:22.542Z",
+    "exitPrice": 0.9995,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "2c777ae1-2898-4886-92e9-b97d3d85ed73",
