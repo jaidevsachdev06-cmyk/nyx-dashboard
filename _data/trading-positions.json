@@ -514,22 +514,6 @@
       "dataSource": "consensus"
     },
     {
-      "market": "Will the Iranian regime fall before 2027?",
-      "slug": "will-the-iranian-regime-fall-by-the-end-of-2026",
-      "side": "Yes",
-      "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
-      "whaleCount": 3,
-      "avgScore": 88.7,
-      "confidence": "Early Signal",
-      "entryPrice": 0.405,
-      "shares": 37.03703703703704,
-      "size": 15,
-      "entryTime": 1773057937557,
-      "endDate": null,
-      "whales": "XieGuangKun, Dropper, UbuntuTrading",
-      "dataSource": "consensus"
-    },
-    {
       "market": "Hamad bin Isa Al Khalifa out as leader of Bahrain?",
       "slug": "hamad-bin-isa-al-khalifa-out-as-bahrain-king",
       "side": "No",
@@ -623,6 +607,22 @@
       "entryTime": 1773072345745,
       "endDate": null,
       "whales": "Roflan, HolyMoses7, UbuntuTrading",
+      "dataSource": "consensus"
+    },
+    {
+      "market": "Will the Iranian regime fall before 2027?",
+      "slug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+      "side": "No",
+      "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "whaleCount": 6,
+      "avgScore": 84.6,
+      "confidence": "Very High",
+      "entryPrice": 0.655,
+      "shares": 30.534351145038165,
+      "size": 20,
+      "entryTime": 1773086741707,
+      "endDate": null,
+      "whales": "Anjun, Car, Roflan, kekkone, GollumGekko, debased",
       "dataSource": "consensus"
     }
   ],
@@ -1705,18 +1705,39 @@
       "pnl": 0.4347826086956514,
       "exitReason": "Whales exited consensus",
       "holdDays": 0
+    },
+    {
+      "market": "Will the Iranian regime fall before 2027?",
+      "slug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+      "side": "Yes",
+      "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "whaleCount": 3,
+      "avgScore": 88.7,
+      "confidence": "Early Signal",
+      "entryPrice": 0.405,
+      "shares": 37.03703703703704,
+      "size": 15,
+      "entryTime": 1773057937557,
+      "endDate": null,
+      "whales": "XieGuangKun, Dropper, UbuntuTrading",
+      "dataSource": "consensus",
+      "exitPrice": 0.345,
+      "exitTime": 1773086731098,
+      "pnl": -2.222222222222224,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 0
     }
   ],
-  "lastUpdate": 1773072334452,
-  "totalPnL": -24.037778012163777,
+  "lastUpdate": 1773086731098,
+  "totalPnL": -26.260000234386002,
   "stats": {
     "openPositions": 40,
-    "closedPositions": 52,
-    "winRate": "32.7%"
+    "closedPositions": 53,
+    "winRate": "32.1%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773072334452,
+    "lastConsensusCheck": 1773086731098,
     "version": 2
   }
 }
