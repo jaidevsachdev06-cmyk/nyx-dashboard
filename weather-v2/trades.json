@@ -8396,8 +8396,8 @@
       "bucket": "80-81°F",
       "question": "Will the highest temperature in Dallas be between 80-81°F on March 9?",
       "side": "NO",
-      "status": "open",
-      "result": null,
+      "status": "closed",
+      "result": "win",
       "pnlUSDC": 3,
       "createdAt": "2026-03-08T22:11:24.701Z",
       "signal": {
@@ -8416,7 +8416,11 @@
       "orderId": "paper-mmib47g3-e2v5",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-09T22:00:04.454Z"
+      "updatedAt": "2026-03-09T22:00:04.454Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-09T22:06:43.745Z",
+      "closedAt": "2026-03-09T22:06:43.757Z"
     },
     {
       "id": "oc-mmife5km-a439th",
@@ -8587,7 +8591,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-09T20:11:06.474Z",
+    "lastUpdated": "2026-03-09T22:06:43.760Z",
     "lastPriceSync": "2026-03-09T22:00:05.854Z"
   }
 }
