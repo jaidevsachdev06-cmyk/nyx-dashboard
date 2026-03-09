@@ -8525,11 +8525,67 @@
       "txHash": null,
       "currentPrice": 0.59,
       "updatedAt": "2026-03-09T20:00:15.650Z"
+    },
+    {
+      "id": "oc-mmjm9cg8-vj9q7n",
+      "conditionId": "0xe062527640f4ccd3bd349d183b1af0b691bf874630496dbffa5e56d0dd809922",
+      "tokenId": "0x4777cfceb98fae52b707c0fb66a10d2acf4d53bbda1d4c5dea779116e65aaf2d",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-9-2026-84-85f",
+      "city": "Dallas",
+      "date": "2026-03-09",
+      "bucket": "84-85°F",
+      "question": "Will the highest temperature in Dallas be between 84-85°F on March 9?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-09T20:11:06.440Z",
+      "signal": {
+        "forecastTemp": 81.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.555,
+        "modelProb": 0.6801,
+        "edge": 0.1251,
+        "isLottery": false
+      },
+      "notes": "Forecast: 81.8°F | Model: 68% vs Market: 56% | Edge: 22.5%"
+    },
+    {
+      "id": "oc-mmjm9cgk-rz2bhv",
+      "conditionId": "0xe2ba40714250e9deb29ab3c54399a2b039182e810bed381c4f006caca0ab62e1",
+      "tokenId": "0x191d275d6a33f490babce55cde7d158b22927cb12e8e630527a6e592819e05e0",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-10-2026-60-61f",
+      "city": "Chicago",
+      "date": "2026-03-10",
+      "bucket": "60-61°F",
+      "question": "Will the highest temperature in Chicago be between 60-61°F on March 10?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-09T20:11:06.452Z",
+      "signal": {
+        "forecastTemp": 56.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.64,
+        "modelProb": 0.6571,
+        "edge": 0.0171,
+        "isLottery": false
+      },
+      "notes": "Forecast: 56.8°F | Model: 66% vs Market: 64% | Edge: 2.7%",
+      "entryPrice": 0.64,
+      "size": 18,
+      "sizeUSDC": 11.52,
+      "enteredAt": "2026-03-09T20:11:06.465Z",
+      "orderId": "paper-mmjm9ch2-238i",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-09T18:11:04.197Z",
+    "lastUpdated": "2026-03-09T20:11:06.474Z",
     "lastPriceSync": "2026-03-09T20:00:15.950Z"
   }
 }
