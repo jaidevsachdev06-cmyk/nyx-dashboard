@@ -8975,7 +8975,7 @@
     "entryPrice": 0.475,
     "currentPrice": 0.47,
     "shares": 11.47,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, Mombil, debased",
     "whaleCount": 3,
@@ -8995,7 +8995,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T12:01:57.682Z"
+    "updatedAt": "2026-03-09T12:06:07.517Z",
+    "exitPrice": 0.47,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "ee2d9c57-d076-464f-abff-9266c5fd6b17",
