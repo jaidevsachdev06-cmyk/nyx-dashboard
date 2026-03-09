@@ -498,22 +498,6 @@
       "dataSource": "consensus"
     },
     {
-      "market": "Will NVIDIA be the largest company in the world by market cap on June 30?",
-      "slug": "will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-june-30-824",
-      "side": "No",
-      "conditionId": "0x79afea6a94f0b3dffb5e0886fa1dbd740d688029f7aba351dc46911bcb1b1f95",
-      "whaleCount": 2,
-      "avgScore": 91.6,
-      "confidence": "Early Signal",
-      "entryPrice": 0.23,
-      "shares": 43.47826086956522,
-      "size": 10,
-      "entryTime": 1773050733046,
-      "endDate": null,
-      "whales": "JJo, UbuntuTrading",
-      "dataSource": "consensus"
-    },
-    {
       "market": "Will the next Prime Minister of Hungary be Péter Magyar?",
       "slug": "will-the-next-prime-minister-of-hungary-be-pter-magyar",
       "side": "No",
@@ -623,6 +607,22 @@
       "entryTime": 1773065139347,
       "endDate": null,
       "whales": "Qualitative, GollumGekko, UbuntuTrading",
+      "dataSource": "consensus"
+    },
+    {
+      "market": "Will JD Vance win the 2028 US Presidential Election?",
+      "slug": "will-jd-vance-win-the-2028-us-presidential-election",
+      "side": "Yes",
+      "conditionId": "0x7ad403c3508f8e3912940fd1a913f227591145ca0614074208e0b962d5fcc422",
+      "whaleCount": 3,
+      "avgScore": 85.9,
+      "confidence": "Early Signal",
+      "entryPrice": 0.2095,
+      "shares": 71.59904534606206,
+      "size": 15,
+      "entryTime": 1773072345745,
+      "endDate": null,
+      "whales": "Roflan, HolyMoses7, UbuntuTrading",
       "dataSource": "consensus"
     }
   ],
@@ -1684,18 +1684,39 @@
       "pnl": 0,
       "exitReason": "Whales exited consensus",
       "holdDays": 0
+    },
+    {
+      "market": "Will NVIDIA be the largest company in the world by market cap on June 30?",
+      "slug": "will-nvidia-be-the-largest-company-in-the-world-by-market-cap-on-june-30-824",
+      "side": "No",
+      "conditionId": "0x79afea6a94f0b3dffb5e0886fa1dbd740d688029f7aba351dc46911bcb1b1f95",
+      "whaleCount": 2,
+      "avgScore": 91.6,
+      "confidence": "Early Signal",
+      "entryPrice": 0.23,
+      "shares": 43.47826086956522,
+      "size": 10,
+      "entryTime": 1773050733046,
+      "endDate": null,
+      "whales": "JJo, UbuntuTrading",
+      "dataSource": "consensus",
+      "exitPrice": 0.24,
+      "exitTime": 1773072334452,
+      "pnl": 0.4347826086956514,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 0
     }
   ],
-  "lastUpdate": 1773065128562,
-  "totalPnL": -24.47256062085943,
+  "lastUpdate": 1773072334452,
+  "totalPnL": -24.037778012163777,
   "stats": {
     "openPositions": 40,
-    "closedPositions": 51,
-    "winRate": "31.4%"
+    "closedPositions": 52,
+    "winRate": "32.7%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773065128562,
+    "lastConsensusCheck": 1773072334452,
     "version": 2
   }
 }
