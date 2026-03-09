@@ -9116,9 +9116,9 @@
     "market": "Will Iran name a successor to Khamenei by March 15?",
     "side": "No",
     "entryPrice": 0.21,
-    "currentPrice": 1,
+    "currentPrice": 0,
     "shares": 23.1,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Parz1vaI, Mombil, MuddyRC",
     "whaleCount": 3,
@@ -9131,14 +9131,16 @@
     "createdAt": "2026-03-08T07:26:52.612Z",
     "entryDate": "2026-03-08T07:26:52.612Z",
     "invested": 4.851,
-    "currentValue": 23.1,
-    "pnl": 18.249,
-    "pnlPercent": 376.19,
+    "currentValue": 0,
+    "pnl": -4.851,
+    "pnlPercent": -100,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:02:57.044Z"
+    "updatedAt": "2026-03-09T10:12:13.540Z",
+    "exitPrice": 0,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "18b6f5f0-37ae-461d-bf88-c056358ba8e6",
