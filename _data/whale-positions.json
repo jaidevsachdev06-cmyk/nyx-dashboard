@@ -9585,7 +9585,7 @@
     "market": "Will JD Vance win the 2028 US Presidential Election?",
     "side": "Yes",
     "entryPrice": 0.2105,
-    "currentPrice": 0.2095,
+    "currentPrice": 0.211,
     "shares": 25.75,
     "status": "open",
     "source": "consensus-scanner",
@@ -9600,14 +9600,14 @@
     "createdAt": "2026-03-09T00:05:05.291Z",
     "entryDate": "2026-03-09T00:05:05.291Z",
     "invested": 5.4204,
-    "currentValue": 5.3946,
-    "pnl": -0.0258,
-    "pnlPercent": -0.48,
+    "currentValue": 5.4333,
+    "pnl": 0.0129,
+    "pnlPercent": 0.24,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T03:04:37.596Z"
+    "updatedAt": "2026-03-09T03:34:42.689Z"
   },
   {
     "id": "e74bcce3-efa5-41c5-8d97-906bece79b45",
