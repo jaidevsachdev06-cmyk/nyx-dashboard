@@ -7352,7 +7352,7 @@
     "entryPrice": 0.295,
     "currentPrice": 0.245,
     "shares": 54.14,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, UbuntuTrading, MuddyRC, GollumGekko, Mombil, Parz1vaI",
     "whaleCount": 6,
@@ -7372,7 +7372,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:01:41.273Z"
+    "updatedAt": "2026-03-09T10:11:42.846Z",
+    "exitPrice": 0.245,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "a1068dc5-6a0a-4d37-95de-f6e8e8d5455b",
