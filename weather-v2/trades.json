@@ -8297,9 +8297,9 @@
       "bucket": "66-67°F",
       "question": "Will the highest temperature in Chicago be between 66-67°F on March 9?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 4.04,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.505,
       "createdAt": "2026-03-08T02:11:31.400Z",
       "signal": {
         "forecastTemp": 70.9,
@@ -8317,7 +8317,11 @@
       "orderId": "paper-mmh4951z-ilrc",
       "txHash": null,
       "currentPrice": 0.9725,
-      "updatedAt": "2026-03-09T18:00:04.039Z"
+      "updatedAt": "2026-03-09T18:00:04.039Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-09T18:07:47.698Z",
+      "closedAt": "2026-03-09T18:07:47.710Z"
     },
     {
       "id": "oc-mmh49528-f2y7ia",
@@ -8492,7 +8496,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-09T16:10:36.548Z",
+    "lastUpdated": "2026-03-09T18:07:47.712Z",
     "lastPriceSync": "2026-03-09T18:00:04.893Z"
   }
 }
