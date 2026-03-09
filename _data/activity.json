@@ -1,5 +1,14 @@
 [
   {
+    "timestamp": "2026-03-09T17:07:00Z",
+    "agent": "yolo",
+    "type": "build",
+    "title": "FluidForge - Real-Time Fluid Dynamics",
+    "description": "Navier-Stokes fluid sim with 6 viz modes, 6 presets, vorticity confinement, obstacle drawing. 48KB single-file.",
+    "status": "success",
+    "link": "/data/.openclaw/workspace/projects/yolo/2026-03-09-fluidforge/"
+  },
+  {
     "id": "c3207c53-9e60-4f64-8fe7-d94dea434264",
     "agentName": "YOLO Builder",
     "action": "Built NeuralForge \u2014 interactive neural network playground",
