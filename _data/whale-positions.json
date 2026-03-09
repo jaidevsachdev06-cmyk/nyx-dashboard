@@ -9511,7 +9511,7 @@
     "entryPrice": 0.984,
     "currentPrice": 0.985,
     "shares": 5.62,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, LinaBell, GollumGekko",
     "whaleCount": 3,
@@ -9531,7 +9531,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:03:43.780Z"
+    "updatedAt": "2026-03-09T10:12:33.764Z",
+    "exitPrice": 0.985,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "43a2d40e-4107-4c27-9de6-2bf96482e95c",
