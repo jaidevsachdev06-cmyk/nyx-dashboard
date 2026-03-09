@@ -8793,9 +8793,9 @@
     "market": "Russia x Ukraine ceasefire by March 31, 2026?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.018000000000000002,
+    "currentPrice": 0.018,
     "shares": 6.66,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-phase1",
     "whales": "debased, Roflan, ProfessionalPunter",
     "whaleCount": 3,
@@ -8813,7 +8813,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:02:22.941Z"
+    "updatedAt": "2026-03-09T10:12:05.062Z",
+    "exitPrice": 0.018,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "bed8bb7f-de9c-4edc-8d9c-227cd4cb7c37",
