@@ -6701,7 +6701,7 @@
     "market": "Will Kamala Harris win the 2028 Democratic presidential nomination?",
     "side": "Yes",
     "entryPrice": 0.056,
-    "currentPrice": 0.0525,
+    "currentPrice": 0.0535,
     "shares": 91.25,
     "status": "open",
     "source": "consensus-scanner",
@@ -6716,14 +6716,14 @@
     "createdAt": "2026-03-02T10:58:57.604Z",
     "entryDate": "2026-03-02T10:58:57.604Z",
     "invested": 5.11,
-    "currentValue": 4.7906,
-    "pnl": -0.3194,
-    "pnlPercent": -6.25,
+    "currentValue": 4.8819,
+    "pnl": -0.2281,
+    "pnlPercent": -4.46,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-08T23:31:42.296Z"
+    "updatedAt": "2026-03-09T00:01:43.125Z"
   },
   {
     "id": "5e9fd314-0911-4aa3-9887-b96067f4db1b",
