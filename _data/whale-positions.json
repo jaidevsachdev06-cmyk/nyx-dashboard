@@ -8764,9 +8764,9 @@
     "market": "Will Iran close the Strait of Hormuz by June 30?",
     "side": "Yes",
     "entryPrice": 0.5,
-    "currentPrice": 0.9784999999999999,
+    "currentPrice": 0.9785,
     "shares": 6.66,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-phase1",
     "whales": "debased, aenews, The-Joker",
     "whaleCount": 3,
@@ -8784,7 +8784,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:02:19.329Z"
+    "updatedAt": "2026-03-09T10:12:02.295Z",
+    "exitPrice": 0.9785,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "9a192f03-920a-484c-ad05-c6bfa079834c",
