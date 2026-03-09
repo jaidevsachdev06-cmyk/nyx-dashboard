@@ -8464,7 +8464,7 @@
     "entryPrice": 0.5,
     "currentPrice": 1,
     "shares": 34,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner-filtered",
     "whales": "scottilicious, Gr33d, arjenw",
     "whaleCount": 3,
@@ -8484,7 +8484,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:02:07.134Z"
+    "updatedAt": "2026-03-09T10:11:56.715Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "c013777a-8b14-4111-bc9c-5e99df9a9c78",
