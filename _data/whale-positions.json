@@ -7507,7 +7507,7 @@
     "entryPrice": 0.755,
     "currentPrice": 0.765,
     "shares": 8.32,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, GollumGekko, jinsun1377, Thonker",
     "whaleCount": 4,
@@ -7527,7 +7527,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:01:44.870Z"
+    "updatedAt": "2026-03-09T10:11:45.644Z",
+    "exitPrice": 0.765,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "5b748c2a-0775-4909-a1d3-4c78da4f0f40",
