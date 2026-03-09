@@ -9691,9 +9691,9 @@
     "market": "Will Crude Oil (CL) hit (HIGH) $110 by end of March?",
     "side": "Yes",
     "entryPrice": 0.919,
-    "currentPrice": 0.7204999999999999,
+    "currentPrice": 0.725,
     "shares": 5.39,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Roflan, arjenw, Prexpect",
     "whaleCount": 3,
@@ -9706,13 +9706,15 @@
     "createdAt": "2026-03-09T04:04:57.736Z",
     "entryDate": "2026-03-09T04:04:57.736Z",
     "invested": 4.9534,
-    "currentValue": 3.8835,
-    "pnl": -1.0699,
-    "pnlPercent": -21.6,
+    "currentValue": 3.9077,
+    "pnl": -1.0457,
+    "pnlPercent": -21.11,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:04:07.139Z"
+    "updatedAt": "2026-03-09T10:12:44.772Z",
+    "exitPrice": 0.725,
+    "notes": "Dropped from whale consensus"
   }
 ]
