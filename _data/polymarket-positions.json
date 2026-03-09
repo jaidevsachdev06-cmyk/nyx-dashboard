@@ -191,12 +191,12 @@
     "market": "Will the DHS shutdown last 30 days or more?",
     "position": "No",
     "entryPrice": 0.355,
-    "currentPrice": 0.0275,
+    "currentPrice": 0.0235,
     "shares": 7.75,
     "invested": 2.7512,
-    "currentValue": 0.2131,
-    "pnl": -2.5381,
-    "pnlPercent": -92.25,
+    "currentValue": 0.1821,
+    "pnl": -2.5691,
+    "pnlPercent": -93.38,
     "status": "open",
     "notes": "30+ days extreme. Hedge pair C with 14+ YES.",
     "tags": [
@@ -210,7 +210,7 @@
     "reasoning": "DHS shutdown unlikely to last 30+ days. Hedging DHS YES.",
     "conditionId": "0xbbe335576024805eab8f9da0aeb2f59db740605c6d314a8d861b100fa57fcfca",
     "ep": "polymarket",
-    "updatedAt": "2026-03-09T00:00:22.473Z",
+    "updatedAt": "2026-03-09T00:30:21.667Z",
     "priceHistory": [
       {},
       {}
