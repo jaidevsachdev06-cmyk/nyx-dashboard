@@ -8154,7 +8154,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 4.59,
+      "pnlUSDC": 4.78,
       "createdAt": "2026-03-08T00:10:51.727Z",
       "signal": {
         "forecastTemp": 67,
@@ -8171,8 +8171,8 @@
       "enteredAt": "2026-03-08T00:10:51.747Z",
       "orderId": "paper-mmgzxyw8-asxk",
       "txHash": null,
-      "currentPrice": 0.945,
-      "updatedAt": "2026-03-09T08:30:02.623Z"
+      "currentPrice": 0.9555,
+      "updatedAt": "2026-03-09T09:00:04.165Z"
     },
     {
       "id": "oc-mmgzxywi-uefihx",
@@ -8187,7 +8187,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.36,
+      "pnlUSDC": 1.2,
       "createdAt": "2026-03-08T00:10:51.762Z",
       "signal": {
         "forecastTemp": 73.1,
@@ -8204,8 +8204,8 @@
       "enteredAt": "2026-03-08T00:10:51.779Z",
       "orderId": "paper-mmgzxyx5-bm52",
       "txHash": null,
-      "currentPrice": 0.825,
-      "updatedAt": "2026-03-09T08:30:03.190Z"
+      "currentPrice": 0.815,
+      "updatedAt": "2026-03-09T09:00:04.696Z"
     },
     {
       "id": "oc-mmgzxyxf-1ysmp8",
@@ -8295,7 +8295,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.78,
+      "pnlUSDC": 3.42,
       "createdAt": "2026-03-08T02:11:31.400Z",
       "signal": {
         "forecastTemp": 70.9,
@@ -8312,8 +8312,8 @@
       "enteredAt": "2026-03-08T02:11:31.410Z",
       "orderId": "paper-mmh4951z-ilrc",
       "txHash": null,
-      "currentPrice": 0.9575,
-      "updatedAt": "2026-03-09T08:30:03.755Z"
+      "currentPrice": 0.936,
+      "updatedAt": "2026-03-09T09:00:05.226Z"
     },
     {
       "id": "oc-mmh49528-f2y7ia",
@@ -8390,7 +8390,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.68,
+      "pnlUSDC": 0.72,
       "createdAt": "2026-03-08T22:11:24.701Z",
       "signal": {
         "forecastTemp": 76.5,
@@ -8407,8 +8407,8 @@
       "enteredAt": "2026-03-08T22:11:24.718Z",
       "orderId": "paper-mmib47g3-e2v5",
       "txHash": null,
-      "currentPrice": 0.71,
-      "updatedAt": "2026-03-09T08:30:04.323Z"
+      "currentPrice": 0.715,
+      "updatedAt": "2026-03-09T09:00:05.759Z"
     },
     {
       "id": "oc-mmife5km-a439th",
@@ -8434,11 +8434,36 @@
         "isLottery": false
       },
       "notes": "Forecast: 66.3°F | Model: 67% vs Market: 66% | Edge: 1.1%"
+    },
+    {
+      "id": "oc-mmixryor-j17ofl",
+      "conditionId": "0x6cd5d4095bf11dd6b58fc57d1b904c05840d0f1946f7e30517186c4607760638",
+      "tokenId": "0x82f55fe7f354f550ae91fae37477308ff6001a0ff24ecd0acd80de5e78fcbb2a",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-9-2026-82-83f",
+      "city": "Dallas",
+      "date": "2026-03-09",
+      "bucket": "82-83°F",
+      "question": "Will the highest temperature in Dallas be between 82-83°F on March 9?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-09T08:45:44.667Z",
+      "signal": {
+        "forecastTemp": 79.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.65,
+        "modelProb": 0.6682,
+        "edge": 0.0182,
+        "isLottery": false
+      },
+      "notes": "Forecast: 79.1°F | Model: 67% vs Market: 65% | Edge: 2.8%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-09T00:11:07.322Z",
-    "lastPriceSync": "2026-03-09T08:30:04.623Z"
+    "lastUpdated": "2026-03-09T08:45:44.670Z",
+    "lastPriceSync": "2026-03-09T09:00:06.059Z"
   }
 }
