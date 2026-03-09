@@ -9643,7 +9643,7 @@
     "market": "Will Crude Oil (CL) hit (HIGH) $110 by end of March?",
     "side": "Yes",
     "entryPrice": 0.919,
-    "currentPrice": 0.8414999999999999,
+    "currentPrice": 0.83,
     "shares": 5.39,
     "status": "open",
     "source": "consensus-scanner",
@@ -9658,13 +9658,13 @@
     "createdAt": "2026-03-09T04:04:57.736Z",
     "entryDate": "2026-03-09T04:04:57.736Z",
     "invested": 4.9534,
-    "currentValue": 4.5357,
-    "pnl": -0.4177,
-    "pnlPercent": -8.43,
+    "currentValue": 4.4737,
+    "pnl": -0.4797,
+    "pnlPercent": -9.68,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T06:34:05.417Z"
+    "updatedAt": "2026-03-09T07:04:08.420Z"
   }
 ]
