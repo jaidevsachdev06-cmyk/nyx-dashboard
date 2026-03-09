@@ -5823,7 +5823,7 @@
     "entryPrice": 0.9625,
     "currentPrice": 0.9855,
     "shares": 5.35,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, Mombil, JAHODA",
     "whaleCount": 3,
@@ -5843,7 +5843,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T12:00:59.671Z"
+    "updatedAt": "2026-03-09T12:06:01.927Z",
+    "exitPrice": 0.9855,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "3477d686-6a77-47d5-a546-5484539e6c82",
