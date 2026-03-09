@@ -8187,7 +8187,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.655,
     "shares": 21,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner-filtered",
     "whales": "Car, UbuntuTrading, Parz1vaI",
     "whaleCount": 3,
@@ -8207,7 +8207,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:01:55.513Z"
+    "updatedAt": "2026-03-09T10:11:51.100Z",
+    "exitPrice": 0.655,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "90cbf476-6581-496a-8c7e-bb63cf2291a0",
