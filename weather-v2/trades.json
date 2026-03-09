@@ -8154,7 +8154,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 5.13,
+      "pnlUSDC": 5.24,
       "createdAt": "2026-03-08T00:10:51.727Z",
       "signal": {
         "forecastTemp": 67,
@@ -8171,8 +8171,8 @@
       "enteredAt": "2026-03-08T00:10:51.747Z",
       "orderId": "paper-mmgzxyw8-asxk",
       "txHash": null,
-      "currentPrice": 0.975,
-      "updatedAt": "2026-03-09T14:00:04.772Z"
+      "currentPrice": 0.981,
+      "updatedAt": "2026-03-09T14:30:04.242Z"
     },
     {
       "id": "oc-mmgzxywi-uefihx",
@@ -8187,7 +8187,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.88,
+      "pnlUSDC": 0.8,
       "createdAt": "2026-03-08T00:10:51.762Z",
       "signal": {
         "forecastTemp": 73.1,
@@ -8204,8 +8204,8 @@
       "enteredAt": "2026-03-08T00:10:51.779Z",
       "orderId": "paper-mmgzxyx5-bm52",
       "txHash": null,
-      "currentPrice": 0.795,
-      "updatedAt": "2026-03-09T14:00:05.363Z"
+      "currentPrice": 0.79,
+      "updatedAt": "2026-03-09T14:30:04.802Z"
     },
     {
       "id": "oc-mmgzxyxf-1ysmp8",
@@ -8313,7 +8313,7 @@
       "orderId": "paper-mmh4951z-ilrc",
       "txHash": null,
       "currentPrice": 0.9755,
-      "updatedAt": "2026-03-09T14:00:05.964Z"
+      "updatedAt": "2026-03-09T14:30:05.346Z"
     },
     {
       "id": "oc-mmh49528-f2y7ia",
@@ -8390,7 +8390,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.72,
+      "pnlUSDC": 0.4,
       "createdAt": "2026-03-08T22:11:24.701Z",
       "signal": {
         "forecastTemp": 76.5,
@@ -8407,8 +8407,8 @@
       "enteredAt": "2026-03-08T22:11:24.718Z",
       "orderId": "paper-mmib47g3-e2v5",
       "txHash": null,
-      "currentPrice": 0.715,
-      "updatedAt": "2026-03-09T14:00:06.576Z"
+      "currentPrice": 0.675,
+      "updatedAt": "2026-03-09T14:30:05.869Z"
     },
     {
       "id": "oc-mmife5km-a439th",
@@ -8464,6 +8464,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-09T08:45:44.670Z",
-    "lastPriceSync": "2026-03-09T14:00:06.876Z"
+    "lastPriceSync": "2026-03-09T14:30:06.169Z"
   }
 }
