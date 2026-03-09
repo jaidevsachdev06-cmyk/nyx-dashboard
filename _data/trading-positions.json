@@ -578,22 +578,6 @@
       "dataSource": "consensus"
     },
     {
-      "market": "US x Iran ceasefire by March 31?",
-      "slug": "us-x-iran-ceasefire-by-march-31",
-      "side": "Yes",
-      "conditionId": "0x3c6bcb7da14ea576e5af25547dbd96f2bb24ac34e748e76aecff2ee9195dd1ac",
-      "whaleCount": 2,
-      "avgScore": 94.3,
-      "confidence": "Early Signal",
-      "entryPrice": 0.225,
-      "shares": 44.44444444444444,
-      "size": 10,
-      "entryTime": 1773057938494,
-      "endDate": null,
-      "whales": "Car, UbuntuTrading",
-      "dataSource": "consensus"
-    },
-    {
       "market": "Will SpaceX's public ticker be $SEX?",
       "slug": "will-spacexs-public-ticker-be-sex-544",
       "side": "No",
@@ -623,6 +607,22 @@
       "entryTime": 1773057939273,
       "endDate": null,
       "whales": "archaic, Michael5289",
+      "dataSource": "consensus"
+    },
+    {
+      "market": "Will Josh Shapiro win the 2028 Democratic presidential nomination?",
+      "slug": "will-josh-shapiro-win-the-2028-democratic-presidential-nomination-977",
+      "side": "Yes",
+      "conditionId": "0xd65891729ce093cc12236856837eba1a0872fc7998fd4294c21346f7db68079c",
+      "whaleCount": 3,
+      "avgScore": 88.6,
+      "confidence": "Early Signal",
+      "entryPrice": 0.0395,
+      "shares": 379.746835443038,
+      "size": 15,
+      "entryTime": 1773065139347,
+      "endDate": null,
+      "whales": "Qualitative, GollumGekko, UbuntuTrading",
       "dataSource": "consensus"
     }
   ],
@@ -1663,18 +1663,39 @@
       "pnl": 0.107526881720429,
       "exitReason": "Whales exited consensus",
       "holdDays": 0
+    },
+    {
+      "market": "US x Iran ceasefire by March 31?",
+      "slug": "us-x-iran-ceasefire-by-march-31",
+      "side": "Yes",
+      "conditionId": "0x3c6bcb7da14ea576e5af25547dbd96f2bb24ac34e748e76aecff2ee9195dd1ac",
+      "whaleCount": 2,
+      "avgScore": 94.3,
+      "confidence": "Early Signal",
+      "entryPrice": 0.225,
+      "shares": 44.44444444444444,
+      "size": 10,
+      "entryTime": 1773057938494,
+      "endDate": null,
+      "whales": "Car, UbuntuTrading",
+      "dataSource": "consensus",
+      "exitPrice": 0.225,
+      "exitTime": 1773065128562,
+      "pnl": 0,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 0
     }
   ],
-  "lastUpdate": 1773057998495,
+  "lastUpdate": 1773065128562,
   "totalPnL": -24.47256062085943,
   "stats": {
     "openPositions": 40,
-    "closedPositions": 50,
-    "winRate": "32.0%"
+    "closedPositions": 51,
+    "winRate": "31.4%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773057998495,
+    "lastConsensusCheck": 1773065128562,
     "version": 2
   }
 }
