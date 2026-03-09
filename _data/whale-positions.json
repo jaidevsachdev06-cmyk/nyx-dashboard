@@ -9478,9 +9478,9 @@
     "market": "Will UK strike Iran by March 31?",
     "side": "No",
     "entryPrice": 0.815,
-    "currentPrice": 0.8200000000000001,
+    "currentPrice": 0.82,
     "shares": 6.29,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Parz1vaI, Xeny, Roflan",
     "whaleCount": 3,
@@ -9500,7 +9500,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:03:39.992Z"
+    "updatedAt": "2026-03-09T10:12:30.995Z",
+    "exitPrice": 0.82,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "6e8836d5-c34f-405c-afef-6408ba2a37b3",
