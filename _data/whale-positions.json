@@ -9418,7 +9418,7 @@
     "entryPrice": 0.9875,
     "currentPrice": 0.9935,
     "shares": 5.04,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "cashy, Parz1vaI, Sonix",
     "whaleCount": 3,
@@ -9438,7 +9438,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:03:31.496Z"
+    "updatedAt": "2026-03-09T10:12:25.386Z",
+    "exitPrice": 0.9935,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "cbdcf50d-45f9-4bbb-b567-f2b299426976",
