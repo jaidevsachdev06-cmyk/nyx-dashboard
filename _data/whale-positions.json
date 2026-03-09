@@ -8880,9 +8880,9 @@
     "market": "Will Iran strike Israel on March 6?",
     "side": "No",
     "entryPrice": 0.805,
-    "currentPrice": 0.9345,
+    "currentPrice": 0.9305,
     "shares": 18.52,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "ProfessionalPunter, aenews, Car, cashy, The-Joker, MuddyRC",
     "whaleCount": 6,
@@ -8895,14 +8895,16 @@
     "createdAt": "2026-03-08T07:25:56.871Z",
     "entryDate": "2026-03-08T07:25:56.871Z",
     "invested": 14.9086,
-    "currentValue": 17.3069,
-    "pnl": 2.3983,
-    "pnlPercent": 16.09,
+    "currentValue": 17.2329,
+    "pnl": 2.3243,
+    "pnlPercent": 15.59,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-09T10:02:26.561Z"
+    "updatedAt": "2026-03-09T10:12:07.892Z",
+    "exitPrice": 0.9305,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "2aabeace-99cd-4ced-84fd-3241405e4698",
