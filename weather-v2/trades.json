@@ -8628,11 +8628,42 @@
       "txHash": null,
       "currentPrice": 0.745,
       "updatedAt": "2026-03-10T08:00:04.658Z"
+    },
+    {
+      "id": "oc-mmkbrf5q-foseop",
+      "conditionId": "0x23bd68a8b8f2791e1181ae654b242dd8b7b6714f9d708912d342dc276e736724",
+      "tokenId": "0x1222c83638aca134af96a235fe8bec77f9a1e9d9012f4fd0fbc06c68b343eb0",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-11-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-11",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 11?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-10T08:05:00.158Z",
+      "signal": {
+        "forecastTemp": 46.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.615,
+        "modelProb": 0.6501,
+        "edge": 0.0351,
+        "isLottery": false
+      },
+      "notes": "Forecast: 46.8°F | Model: 65% vs Market: 62% | Edge: 5.7%",
+      "entryPrice": 0.615,
+      "size": 19,
+      "sizeUSDC": 11.685,
+      "enteredAt": "2026-03-10T08:05:00.176Z",
+      "orderId": "paper-mmkbrf6e-my07",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-10T00:11:17.353Z",
+    "lastUpdated": "2026-03-10T08:05:00.187Z",
     "lastPriceSync": "2026-03-10T08:00:04.957Z"
   }
 }
