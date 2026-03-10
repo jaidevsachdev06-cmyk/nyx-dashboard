@@ -8611,9 +8611,9 @@
       "bucket": "78-79°F",
       "question": "Will the highest temperature in Dallas be between 78-79°F on March 10?",
       "side": "NO",
-      "status": "open",
+      "status": "exited",
       "result": null,
-      "pnlUSDC": -0.45,
+      "pnlUSDC": 0.81,
       "createdAt": "2026-03-10T00:11:17.328Z",
       "signal": {
         "forecastTemp": 75.4,
@@ -8623,7 +8623,7 @@
         "edge": 0.0023,
         "isLottery": false
       },
-      "notes": "Forecast: 75.4°F | Model: 66% vs Market: 66% | Edge: 0.3%",
+      "notes": "Forecast: 75.4°F | Model: 66% vs Market: 66% | Edge: 0.3% | SWAP: replaced by better edge candidate (ΔedgePP 15.3pp)",
       "entryPrice": 0.66,
       "size": 18,
       "sizeUSDC": 11.88,
@@ -8631,7 +8631,11 @@
       "orderId": "paper-mmjuu7z9-bq9v",
       "txHash": null,
       "currentPrice": 0.635,
-      "updatedAt": "2026-03-10T18:00:03.549Z"
+      "updatedAt": "2026-03-10T18:00:03.549Z",
+      "exitPrice": 0.705,
+      "exitSource": "swap",
+      "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 15.3pp)",
+      "exitedAt": "2026-03-10T18:10:47.677Z"
     },
     {
       "id": "oc-mmkbrf5q-foseop",
@@ -8698,11 +8702,42 @@
       "txHash": null,
       "currentPrice": 0.0445,
       "updatedAt": "2026-03-10T18:00:04.645Z"
+    },
+    {
+      "id": "oc-mmkxegur-07khdn",
+      "conditionId": "0x383eec356c3c5c96cf059f73e092cfac65d6e9979ab8ecc6f0cd15583a974a57",
+      "tokenId": "0xe12a311487d59021e0ca683b9c15070ec0740fbb3c57463b7caa719bb2fa15f3",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-10-2026-80-81f",
+      "city": "Dallas",
+      "date": "2026-03-10",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Dallas be between 80-81°F on March 10?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-10T18:10:47.379Z",
+      "signal": {
+        "forecastTemp": 77.7,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.52,
+        "modelProb": 0.6755,
+        "edge": 0.1555,
+        "isLottery": false
+      },
+      "notes": "Forecast: 77.7°F | Model: 68% vs Market: 52% | Edge: 29.9%",
+      "entryPrice": 0.52,
+      "size": 24,
+      "sizeUSDC": 12.48,
+      "enteredAt": "2026-03-10T18:10:47.689Z",
+      "orderId": "paper-mmkxeh3p-q9jd",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-10T10:11:11.752Z",
+    "lastUpdated": "2026-03-10T18:10:47.712Z",
     "lastPriceSync": "2026-03-10T18:00:04.946Z"
   }
 }
