@@ -238,6 +238,22 @@
       "endDate": null,
       "whales": "Qualitative, GollumGekko",
       "dataSource": "consensus"
+    },
+    {
+      "market": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
+      "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
+      "side": "Yes",
+      "conditionId": "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701",
+      "whaleCount": 2,
+      "avgScore": 89.8,
+      "confidence": "Early Signal",
+      "entryPrice": 0.0235,
+      "shares": 425.531914893617,
+      "size": 10,
+      "entryTime": 1773137153966,
+      "endDate": null,
+      "whales": "Qualitative, scottilicious",
+      "dataSource": "consensus"
     }
   ],
   "closed": [
@@ -2252,16 +2268,16 @@
       "holdDays": 0
     }
   ],
-  "lastUpdate": 1773129917014,
+  "lastUpdate": 1773137126983,
   "totalPnL": -11.748579598801749,
   "stats": {
-    "openPositions": 15,
+    "openPositions": 16,
     "closedPositions": 97,
     "winRate": "41.2%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773129917014,
+    "lastConsensusCheck": 1773137126983,
     "version": 2
   }
 }
