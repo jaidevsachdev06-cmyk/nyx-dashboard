@@ -5434,7 +5434,7 @@
     "entryPrice": 0.725,
     "currentPrice": 0.75,
     "shares": 6.9,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Mombil, Ozi, GollumGekko",
     "whaleCount": 3,
@@ -5454,7 +5454,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-10T00:00:30.102Z"
+    "updatedAt": "2026-03-10T00:05:02.497Z",
+    "exitPrice": 0.75,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "3945f596-c3a6-47c3-9c6e-84195b86581e",
