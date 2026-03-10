@@ -8576,7 +8576,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.99,
+      "pnlUSDC": 0.63,
       "createdAt": "2026-03-09T20:11:06.452Z",
       "signal": {
         "forecastTemp": 56.8,
@@ -8593,13 +8593,13 @@
       "enteredAt": "2026-03-09T20:11:06.465Z",
       "orderId": "paper-mmjm9ch2-238i",
       "txHash": null,
-      "currentPrice": 0.695,
-      "updatedAt": "2026-03-09T23:30:02.656Z"
+      "currentPrice": 0.675,
+      "updatedAt": "2026-03-10T00:00:04.157Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-09T22:10:03.221Z",
-    "lastPriceSync": "2026-03-09T23:30:02.957Z"
+    "lastPriceSync": "2026-03-10T00:00:04.458Z"
   }
 }
