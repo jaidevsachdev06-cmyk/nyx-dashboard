@@ -240,19 +240,35 @@
       "dataSource": "consensus"
     },
     {
-      "market": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
-      "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
+      "market": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+      "slug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
       "side": "Yes",
-      "conditionId": "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701",
+      "conditionId": "0xd5d9fc47718bd553592d126b1fa5e87183d27f3936975b0c04cc0f2dec1f1bb4",
       "whaleCount": 2,
-      "avgScore": 89.8,
+      "avgScore": 93.7,
       "confidence": "Early Signal",
-      "entryPrice": 0.0235,
-      "shares": 425.531914893617,
+      "entryPrice": 0.845,
+      "shares": 11.834319526627219,
       "size": 10,
-      "entryTime": 1773137153966,
+      "entryTime": 1773144338975,
       "endDate": null,
-      "whales": "Qualitative, scottilicious",
+      "whales": "Qualitative, nicoco89",
+      "dataSource": "consensus"
+    },
+    {
+      "market": "Will JD Vance win the 2028 US Presidential Election?",
+      "slug": "will-jd-vance-win-the-2028-us-presidential-election",
+      "side": "Yes",
+      "conditionId": "0x7ad403c3508f8e3912940fd1a913f227591145ca0614074208e0b962d5fcc422",
+      "whaleCount": 2,
+      "avgScore": 84.9,
+      "confidence": "Early Signal",
+      "entryPrice": 0.2105,
+      "shares": 47.50593824228029,
+      "size": 10,
+      "entryTime": 1773144360281,
+      "endDate": null,
+      "whales": "Verrissimus, HolyMoses7",
       "dataSource": "consensus"
     }
   ],
@@ -2266,18 +2282,39 @@
       "pnl": 0,
       "exitReason": "Whales exited consensus",
       "holdDays": 0
+    },
+    {
+      "market": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
+      "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
+      "side": "Yes",
+      "conditionId": "0x36db77c539bcc8c7bf0686c1b99f30c5a5eed1f53d3b3a27a071550c81f83701",
+      "whaleCount": 2,
+      "avgScore": 89.8,
+      "confidence": "Early Signal",
+      "entryPrice": 0.0235,
+      "shares": 425.531914893617,
+      "size": 10,
+      "entryTime": 1773137153966,
+      "endDate": null,
+      "whales": "Qualitative, scottilicious",
+      "dataSource": "consensus",
+      "exitPrice": 0.0235,
+      "exitTime": 1773144318932,
+      "pnl": 0,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 0
     }
   ],
-  "lastUpdate": 1773137126983,
+  "lastUpdate": 1773144318932,
   "totalPnL": -11.748579598801749,
   "stats": {
-    "openPositions": 16,
-    "closedPositions": 97,
-    "winRate": "41.2%"
+    "openPositions": 17,
+    "closedPositions": 98,
+    "winRate": "40.8%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773137126983,
+    "lastConsensusCheck": 1773144318932,
     "version": 2
   }
 }
