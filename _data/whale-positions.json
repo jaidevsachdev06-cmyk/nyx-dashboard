@@ -6618,7 +6618,7 @@
     "market": "U.S. anti-cartel ground operation in Mexico by March 31?",
     "side": "Yes",
     "entryPrice": 0.065,
-    "currentPrice": 0.14500000000000002,
+    "currentPrice": 0.135,
     "shares": 77.69,
     "status": "open",
     "source": "consensus-scanner",
@@ -6633,14 +6633,14 @@
     "createdAt": "2026-03-02T10:58:41.777Z",
     "entryDate": "2026-03-02T10:58:41.777Z",
     "invested": 5.0499,
-    "currentValue": 11.2651,
-    "pnl": 6.2152,
-    "pnlPercent": 123.08,
+    "currentValue": 10.4882,
+    "pnl": 5.4383,
+    "pnlPercent": 107.69,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-10T01:31:18.689Z"
+    "updatedAt": "2026-03-10T02:01:21.836Z"
   },
   {
     "id": "e2775258-ce7a-4986-989a-0ef411838319",
