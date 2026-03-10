@@ -8595,11 +8595,42 @@
       "txHash": null,
       "currentPrice": 0.675,
       "updatedAt": "2026-03-10T00:00:04.157Z"
+    },
+    {
+      "id": "oc-mmjuu7yo-kxtbtg",
+      "conditionId": "0x7f0ceaec680365683371cdb2cbd9791d926909fb97d2e1e4bfcd53c6d53f50f2",
+      "tokenId": "0x1958dc2c66363257eda1ebed79c520cea1733479785ed0ae387f1b9cd09337db",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-10-2026-78-79f",
+      "city": "Dallas",
+      "date": "2026-03-10",
+      "bucket": "78-79°F",
+      "question": "Will the highest temperature in Dallas be between 78-79°F on March 10?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-10T00:11:17.328Z",
+      "signal": {
+        "forecastTemp": 75.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.66,
+        "modelProb": 0.6623,
+        "edge": 0.0023,
+        "isLottery": false
+      },
+      "notes": "Forecast: 75.4°F | Model: 66% vs Market: 66% | Edge: 0.3%",
+      "entryPrice": 0.66,
+      "size": 18,
+      "sizeUSDC": 11.88,
+      "enteredAt": "2026-03-10T00:11:17.343Z",
+      "orderId": "paper-mmjuu7z9-bq9v",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-09T22:10:03.221Z",
+    "lastUpdated": "2026-03-10T00:11:17.353Z",
     "lastPriceSync": "2026-03-10T00:00:04.458Z"
   }
 }
