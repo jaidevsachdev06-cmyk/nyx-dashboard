@@ -8574,9 +8574,9 @@
       "bucket": "60-61°F",
       "question": "Will the highest temperature in Chicago be between 60-61°F on March 10?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -9.36,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -9.81,
       "createdAt": "2026-03-09T20:11:06.452Z",
       "signal": {
         "forecastTemp": 56.8,
@@ -8594,7 +8594,11 @@
       "orderId": "paper-mmjm9ch2-238i",
       "txHash": null,
       "currentPrice": 0.12,
-      "updatedAt": "2026-03-10T10:00:03.061Z"
+      "updatedAt": "2026-03-10T10:00:03.061Z",
+      "resolutionPrice": 0.095,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-10T10:10:03.719Z",
+      "closedAt": "2026-03-10T10:10:03.734Z"
     },
     {
       "id": "oc-mmjuu7yo-kxtbtg",
@@ -8661,11 +8665,42 @@
       "txHash": null,
       "currentPrice": 0.62,
       "updatedAt": "2026-03-10T10:00:04.205Z"
+    },
+    {
+      "id": "oc-mmkg9pew-og84xl",
+      "conditionId": "0x2204467353c07ce30c6dfa6de24f0819184af444d1f1c5972e4a0e98eba41386",
+      "tokenId": "0xa5365d674ddc9d00fbef1681615a577219e341d7d66f39ff52bcae31f6954947",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-chicago-on-march-11-2026-39forbelow",
+      "city": "Chicago",
+      "date": "2026-03-11",
+      "bucket": "≤39°F",
+      "question": "Will the highest temperature in Chicago be 39°F or below on March 11?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-10T10:11:11.720Z",
+      "signal": {
+        "forecastTemp": 36.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.0505,
+        "modelProb": 0.6613,
+        "edge": 0.6108,
+        "isLottery": true
+      },
+      "notes": "Forecast: 36.5°F | Model: 66% vs Market: 5% | Edge: 1209.5% 🎰LOTTERY",
+      "entryPrice": 0.0505,
+      "size": 39,
+      "sizeUSDC": 1.9695,
+      "enteredAt": "2026-03-10T10:11:11.739Z",
+      "orderId": "paper-mmkg9pfm-unbq",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-10T08:05:00.187Z",
+    "lastUpdated": "2026-03-10T10:11:11.752Z",
     "lastPriceSync": "2026-03-10T10:00:04.505Z"
   }
 }
