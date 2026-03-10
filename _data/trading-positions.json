@@ -254,22 +254,6 @@
       "endDate": null,
       "whales": "Qualitative, nicoco89",
       "dataSource": "consensus"
-    },
-    {
-      "market": "Will JD Vance win the 2028 US Presidential Election?",
-      "slug": "will-jd-vance-win-the-2028-us-presidential-election",
-      "side": "Yes",
-      "conditionId": "0x7ad403c3508f8e3912940fd1a913f227591145ca0614074208e0b962d5fcc422",
-      "whaleCount": 2,
-      "avgScore": 84.9,
-      "confidence": "Early Signal",
-      "entryPrice": 0.2105,
-      "shares": 47.50593824228029,
-      "size": 10,
-      "entryTime": 1773144360281,
-      "endDate": null,
-      "whales": "Verrissimus, HolyMoses7",
-      "dataSource": "consensus"
     }
   ],
   "closed": [
@@ -2303,18 +2287,39 @@
       "pnl": 0,
       "exitReason": "Whales exited consensus",
       "holdDays": 0
+    },
+    {
+      "market": "Will JD Vance win the 2028 US Presidential Election?",
+      "slug": "will-jd-vance-win-the-2028-us-presidential-election",
+      "side": "Yes",
+      "conditionId": "0x7ad403c3508f8e3912940fd1a913f227591145ca0614074208e0b962d5fcc422",
+      "whaleCount": 2,
+      "avgScore": 84.9,
+      "confidence": "Early Signal",
+      "entryPrice": 0.2105,
+      "shares": 47.50593824228029,
+      "size": 10,
+      "entryTime": 1773144360281,
+      "endDate": null,
+      "whales": "Verrissimus, HolyMoses7",
+      "dataSource": "consensus",
+      "exitPrice": 0.2115,
+      "exitTime": 1773151521537,
+      "pnl": 0.04750593824228033,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 0
     }
   ],
-  "lastUpdate": 1773144318932,
-  "totalPnL": -11.748579598801749,
+  "lastUpdate": 1773151521537,
+  "totalPnL": -11.70107366055947,
   "stats": {
-    "openPositions": 17,
-    "closedPositions": 98,
-    "winRate": "40.8%"
+    "openPositions": 16,
+    "closedPositions": 99,
+    "winRate": "41.4%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773144318932,
+    "lastConsensusCheck": 1773151521537,
     "version": 2
   }
 }
