@@ -16,22 +16,6 @@
       "dataSource": "consensus"
     },
     {
-      "market": "Will J.D. Vance win the 2028 Republican presidential nomination?",
-      "slug": "will-jd-vance-win-the-2028-republican-presidential-nomination",
-      "side": "Yes",
-      "conditionId": "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919",
-      "whaleCount": 3,
-      "avgScore": 86.4,
-      "confidence": "Early Signal",
-      "entryPrice": 0.4095,
-      "shares": 36.630036630036635,
-      "size": 15,
-      "entryTime": 1773093949409,
-      "endDate": null,
-      "whales": "Polar, debased, UbuntuTrading",
-      "dataSource": "consensus"
-    },
-    {
       "market": "Will James Talarico win the 2028 Democratic presidential nomination?",
       "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
       "side": "Yes",
@@ -2245,18 +2229,39 @@
       "pnl": -0.18181818181818196,
       "exitReason": "Whales exited consensus",
       "holdDays": 0
+    },
+    {
+      "market": "Will J.D. Vance win the 2028 Republican presidential nomination?",
+      "slug": "will-jd-vance-win-the-2028-republican-presidential-nomination",
+      "side": "Yes",
+      "conditionId": "0x18b1c135d0a40c5894da9412e77311827d9caf16cf4cd6591b247a34730af919",
+      "whaleCount": 3,
+      "avgScore": 86.4,
+      "confidence": "Early Signal",
+      "entryPrice": 0.4095,
+      "shares": 36.630036630036635,
+      "size": 15,
+      "entryTime": 1773093949409,
+      "endDate": null,
+      "whales": "Polar, debased, UbuntuTrading",
+      "dataSource": "consensus",
+      "exitPrice": 0.4095,
+      "exitTime": 1773129917014,
+      "pnl": 0,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 0
     }
   ],
-  "lastUpdate": 1773122715341,
+  "lastUpdate": 1773129917014,
   "totalPnL": -11.748579598801749,
   "stats": {
-    "openPositions": 16,
-    "closedPositions": 96,
-    "winRate": "41.7%"
+    "openPositions": 15,
+    "closedPositions": 97,
+    "winRate": "41.2%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773122715341,
+    "lastConsensusCheck": 1773129917014,
     "version": 2
   }
 }
