@@ -2385,7 +2385,7 @@
       "holdDays": 0
     }
   ],
-  "lastUpdate": 1773165911554,
+  "lastUpdate": 1773173122153,
   "totalPnL": -8.750528575563166,
   "stats": {
     "openPositions": 1,
@@ -2394,7 +2394,7 @@
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773165911554,
+    "lastConsensusCheck": 1773173122153,
     "version": 2
   }
 }
