@@ -1,21 +1,5 @@
 {
-  "open": [
-    {
-      "market": "Will the Iranian regime fall by March 31?",
-      "slug": "will-the-iranian-regime-fall-by-march-31",
-      "side": "No",
-      "conditionId": "0x61ce3773237a948584e422de72265f937034af418a8b703e3a860ea62e59ff36",
-      "whaleCount": 4,
-      "avgScore": 86.2,
-      "confidence": "High",
-      "entryPrice": 0.887,
-      "shares": 16.910935738444195,
-      "size": 15,
-      "entryTime": 1772955015338,
-      "whales": "scottilicious, ProfessionalPunter, debased, archaic",
-      "dataSource": "consensus"
-    }
-  ],
+  "open": [],
   "closed": [
     {
       "market": "Will the Iranian regime fall before 2027?",
@@ -2383,18 +2367,38 @@
       "pnl": 0,
       "exitReason": "Whales exited consensus",
       "holdDays": 0
+    },
+    {
+      "market": "Will the Iranian regime fall by March 31?",
+      "slug": "will-the-iranian-regime-fall-by-march-31",
+      "side": "No",
+      "conditionId": "0x61ce3773237a948584e422de72265f937034af418a8b703e3a860ea62e59ff36",
+      "whaleCount": 4,
+      "avgScore": 86.2,
+      "confidence": "High",
+      "entryPrice": 0.887,
+      "shares": 16.910935738444195,
+      "size": 15,
+      "entryTime": 1772955015338,
+      "whales": "scottilicious, ProfessionalPunter, debased, archaic",
+      "dataSource": "consensus",
+      "exitPrice": 0.9515,
+      "exitTime": 1773180316255,
+      "pnl": 1.0907553551296505,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 2
     }
   ],
-  "lastUpdate": 1773173122153,
-  "totalPnL": -8.750528575563166,
+  "lastUpdate": 1773180316255,
+  "totalPnL": -7.659773220433515,
   "stats": {
-    "openPositions": 1,
-    "closedPositions": 114,
-    "winRate": "38.6%"
+    "openPositions": 0,
+    "closedPositions": 115,
+    "winRate": "39.1%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773173122153,
+    "lastConsensusCheck": 1773180316255,
     "version": 2
   }
 }
