@@ -36,7 +36,7 @@
       "maxDailyTrades": 3,
       "maxSizeUSDC": 2,
       "maxEntryPrice": 0.15,
-      "minProbRatio": 1.35,
+      "minProbRatio": 1.20,
       "minModelProb": 0.06
     },
     "swap": {
@@ -122,6 +122,22 @@
       "lon": 2.3522,
       "tz": "Europe/Paris",
       "station": "LFPG",
+      "unit": "C"
+    },
+    {
+      "name": "Tokyo",
+      "lat": 35.6762,
+      "lon": 139.6503,
+      "tz": "Asia/Tokyo",
+      "station": "RJTT",
+      "unit": "C"
+    },
+    {
+      "name": "Munich",
+      "lat": 48.1351,
+      "lon": 11.582,
+      "tz": "Europe/Berlin",
+      "station": "EDDM",
       "unit": "C"
     }
   ],
