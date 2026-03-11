@@ -10150,7 +10150,12 @@
     "invested": 5.85,
     "currentValue": 5.85,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-11T08:32:21.006Z"
   },
   {
     "id": "9ca650b9-5630-438f-b43e-dc26dffdf684",
