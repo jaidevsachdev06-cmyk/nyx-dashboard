@@ -10220,7 +10220,7 @@
     "market": "Internet Access restored in Iran by March 14, 2026?",
     "side": "No",
     "entryPrice": 0.98,
-    "currentPrice": 0.9795,
+    "currentPrice": 0.98,
     "shares": 5.22,
     "status": "open",
     "source": "consensus-scanner",
@@ -10235,14 +10235,14 @@
     "createdAt": "2026-03-11T08:28:05.365Z",
     "entryDate": "2026-03-11T08:28:05.365Z",
     "invested": 5.1156,
-    "currentValue": 5.113,
-    "pnl": -0.0026,
-    "pnlPercent": -0.05,
+    "currentValue": 5.1156,
+    "pnl": 0,
+    "pnlPercent": 0,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-11T09:02:40.082Z"
+    "updatedAt": "2026-03-11T09:32:33.180Z"
   },
   {
     "id": "05bde9a2-beaf-4578-88a6-8fea6d25dcdb",
