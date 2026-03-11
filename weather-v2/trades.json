@@ -8714,9 +8714,9 @@
       "bucket": "80-81°F",
       "question": "Will the highest temperature in Dallas be between 80-81°F on March 10?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 11.51,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 11.52,
       "createdAt": "2026-03-10T18:10:47.379Z",
       "signal": {
         "forecastTemp": 77.7,
@@ -8734,12 +8734,16 @@
       "orderId": "paper-mmkxeh3p-q9jd",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-11T00:00:04.335Z"
+      "updatedAt": "2026-03-11T00:00:04.335Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-11T00:06:32.710Z",
+      "closedAt": "2026-03-11T00:06:32.727Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-10T18:10:47.712Z",
+    "lastUpdated": "2026-03-11T00:06:32.730Z",
     "lastPriceSync": "2026-03-11T00:00:04.636Z"
   }
 }
