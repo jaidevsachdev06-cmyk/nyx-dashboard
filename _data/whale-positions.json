@@ -9854,7 +9854,7 @@
     "market": "Will Israel's Ben Gurion Airport reopen by March 7?",
     "side": "No",
     "entryPrice": 0.9985,
-    "currentPrice": 0.9985,
+    "currentPrice": 0.9984999999999999,
     "shares": 5.28,
     "status": "open",
     "source": "consensus-scanner",
@@ -9871,6 +9871,11 @@
     "invested": 5.2721,
     "currentValue": 5.2721,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-11T02:32:18.556Z"
   }
 ]
