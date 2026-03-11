@@ -9245,7 +9245,7 @@
     "entryPrice": 0.2505,
     "currentPrice": 0.252,
     "shares": 19.72,
-    "status": "open",
+    "status": "closed-exit",
     "source": "consensus-scanner",
     "whales": "Parz1vaI, failstober, Qualitative",
     "whaleCount": 3,
@@ -9265,7 +9265,10 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-11T10:31:03.878Z"
+    "updatedAt": "2026-03-11T10:36:03.658Z",
+    "exitPrice": 0.252,
+    "exitedAt": "2026-03-11T10:36:03.396Z",
+    "exitReason": "2028 election market - BANNED CATEGORY (32 losses, -$89.85)"
   },
   {
     "id": "63356fbc-aefc-420a-8764-c80da759e3db",
