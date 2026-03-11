@@ -10153,7 +10153,7 @@
     "market": "Iran leadership change by December 31?",
     "side": "No",
     "entryPrice": 0.36,
-    "currentPrice": 0.37,
+    "currentPrice": 0.375,
     "shares": 16.25,
     "status": "open",
     "source": "consensus-scanner",
@@ -10168,14 +10168,14 @@
     "createdAt": "2026-03-11T08:27:44.484Z",
     "entryDate": "2026-03-11T08:27:44.484Z",
     "invested": 5.85,
-    "currentValue": 6.0125,
-    "pnl": 0.1625,
-    "pnlPercent": 2.78,
+    "currentValue": 6.0938,
+    "pnl": 0.2438,
+    "pnlPercent": 4.17,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-11T17:02:00.248Z"
+    "updatedAt": "2026-03-11T17:31:54.660Z"
   },
   {
     "id": "9ca650b9-5630-438f-b43e-dc26dffdf684",
