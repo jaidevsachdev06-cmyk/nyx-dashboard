@@ -303,6 +303,70 @@
       "endDate": null,
       "whales": "Gr33d, Michael5289",
       "dataSource": "consensus"
+    },
+    {
+      "market": "Will Xander Schauffele win the 2026 Masters tournament?",
+      "slug": "will-xander-schauffele-win-the-2026-masters-tournament",
+      "side": "No",
+      "conditionId": "0xac6b6f6da4eb31a28cd22d050038877963a4fe2243174c0e65d20f99ff20f9ce",
+      "whaleCount": 2,
+      "avgScore": 87.9,
+      "confidence": "Early Signal",
+      "entryPrice": 0.955,
+      "shares": 10.471204188481677,
+      "size": 10,
+      "entryTime": 1773245158798,
+      "endDate": null,
+      "whales": "Gr33d, UbuntuTrading",
+      "dataSource": "consensus"
+    },
+    {
+      "market": "Will Crude Oil (CL) hit (HIGH) $105 by end of March?",
+      "slug": "will-crude-oil-cl-hit-high-105-by-end-of-march-881",
+      "side": "Yes",
+      "conditionId": "0xf6890c707d1e327b006b9511bdba8c98ec4e4978646c6ffcf3ec8750c26a666a",
+      "whaleCount": 2,
+      "avgScore": 86.6,
+      "confidence": "Early Signal",
+      "entryPrice": 0.574,
+      "shares": 17.421602787456447,
+      "size": 10,
+      "entryTime": 1773245164904,
+      "endDate": null,
+      "whales": "Qualitative, Roflan",
+      "dataSource": "consensus"
+    },
+    {
+      "market": "Russia x Ukraine ceasefire by June 30, 2026?",
+      "slug": "russia-x-ukraine-ceasefire-by-june-30-2026",
+      "side": "No",
+      "conditionId": "0xe546672750517f62c45a5a00067481981e62b9c20fa8220203232c9dc8fd2093",
+      "whaleCount": 2,
+      "avgScore": 82.3,
+      "confidence": "Early Signal",
+      "entryPrice": 0.785,
+      "shares": 12.738853503184712,
+      "size": 10,
+      "entryTime": 1773245174590,
+      "endDate": null,
+      "whales": "Gr33d, GollumGekko",
+      "dataSource": "consensus"
+    },
+    {
+      "market": "Xi Jinping out by June 30?",
+      "slug": "xi-jinping-out-by",
+      "side": "No",
+      "conditionId": "0x4ba35ccd015e3899f323b7b0bcb38ecab3a3c0fafc397666e690ba301fbeff30",
+      "whaleCount": 2,
+      "avgScore": 82.3,
+      "confidence": "Early Signal",
+      "entryPrice": 0.9665,
+      "shares": 10.346611484738748,
+      "size": 10,
+      "entryTime": 1773245174863,
+      "endDate": null,
+      "whales": "Gr33d, GollumGekko",
+      "dataSource": "consensus"
     }
   ],
   "closed": [
@@ -2736,16 +2800,16 @@
       "holdDays": 0
     }
   ],
-  "lastUpdate": 1773237927888,
+  "lastUpdate": 1773245134318,
   "totalPnL": -8.050367368701332,
   "stats": {
-    "openPositions": 19,
+    "openPositions": 23,
     "closedPositions": 117,
     "winRate": "39.3%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773237927888,
+    "lastConsensusCheck": 1773245134318,
     "version": 2
   }
 }
