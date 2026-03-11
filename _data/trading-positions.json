@@ -1,5 +1,22 @@
 {
-  "open": [],
+  "open": [
+    {
+      "market": "Will James Talarico win the 2028 Democratic presidential nomination?",
+      "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
+      "side": "Yes",
+      "conditionId": "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089",
+      "whaleCount": 2,
+      "avgScore": 87.4,
+      "confidence": "Early Signal",
+      "entryPrice": 0.0225,
+      "shares": 444.44444444444446,
+      "size": 10,
+      "entryTime": 1773223556774,
+      "endDate": null,
+      "whales": "Qualitative, TheWolfOfPoly",
+      "dataSource": "consensus"
+    }
+  ],
   "closed": [
     {
       "market": "Will the Iranian regime fall before 2027?",
@@ -2431,16 +2448,16 @@
       "holdDays": 0
     }
   ],
-  "lastUpdate": 1773216314608,
+  "lastUpdate": 1773223520455,
   "totalPnL": -8.050367368701332,
   "stats": {
-    "openPositions": 0,
+    "openPositions": 1,
     "closedPositions": 117,
     "winRate": "39.3%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773216314608,
+    "lastConsensusCheck": 1773223520455,
     "version": 2
   }
 }
