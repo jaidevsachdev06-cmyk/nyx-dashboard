@@ -9426,7 +9426,7 @@
     "entryPrice": 0.417,
     "currentPrice": 0.3875,
     "shares": 12.23,
-    "status": "open",
+    "status": "closed-exit",
     "source": "consensus-scanner",
     "whales": "failstober, debased, Mombil",
     "whaleCount": 3,
@@ -9446,7 +9446,10 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-11T10:31:18.999Z"
+    "updatedAt": "2026-03-11T10:36:05.110Z",
+    "exitPrice": 0.3875,
+    "exitedAt": "2026-03-11T10:36:04.860Z",
+    "exitReason": "2028 election market - BANNED CATEGORY (32 losses, -$89.85)"
   },
   {
     "id": "54227719-4d1d-43e7-b018-e2fd94dd443f",
