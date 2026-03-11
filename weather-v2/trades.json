@@ -8650,7 +8650,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0,
+      "pnlUSDC": 0.29,
       "createdAt": "2026-03-10T08:05:00.158Z",
       "signal": {
         "forecastTemp": 46.8,
@@ -8667,8 +8667,8 @@
       "enteredAt": "2026-03-10T08:05:00.176Z",
       "orderId": "paper-mmkbrf6e-my07",
       "txHash": null,
-      "currentPrice": 0.615,
-      "updatedAt": "2026-03-11T18:00:03.771Z"
+      "currentPrice": 0.63,
+      "updatedAt": "2026-03-11T18:30:02.967Z"
     },
     {
       "id": "oc-mmkg9pew-og84xl",
@@ -8782,7 +8782,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.99,
+      "pnlUSDC": 0.54,
       "createdAt": "2026-03-11T05:03:27.615Z",
       "signal": {
         "forecastTemp": 77.2,
@@ -8799,8 +8799,8 @@
       "enteredAt": "2026-03-11T05:03:27.633Z",
       "orderId": "paper-mmlkpt3s-ne9e",
       "txHash": null,
-      "currentPrice": 0.705,
-      "updatedAt": "2026-03-11T18:00:04.329Z"
+      "currentPrice": 0.68,
+      "updatedAt": "2026-03-11T18:30:03.550Z"
     },
     {
       "id": "oc-mmlkpt42-9oesac",
@@ -8889,7 +8889,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.42,
+      "pnlUSDC": -0.21,
       "createdAt": "2026-03-11T13:11:01.592Z",
       "signal": {
         "forecastTemp": 57.4,
@@ -8906,8 +8906,8 @@
       "enteredAt": "2026-03-11T13:11:01.612Z",
       "orderId": "paper-mmm24tm9-9csh",
       "txHash": null,
-      "currentPrice": 0.105,
-      "updatedAt": "2026-03-11T18:00:04.888Z"
+      "currentPrice": 0.12,
+      "updatedAt": "2026-03-11T18:30:04.128Z"
     },
     {
       "id": "oc-mmm8kb3y-7qg7zi",
@@ -8922,7 +8922,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0,
+      "pnlUSDC": -0.18,
       "createdAt": "2026-03-11T16:11:01.822Z",
       "signal": {
         "forecastTemp": 42.6,
@@ -8939,13 +8939,13 @@
       "enteredAt": "2026-03-11T16:11:01.844Z",
       "orderId": "paper-mmm8kb4q-6o2u",
       "txHash": null,
-      "currentPrice": 0.645,
-      "updatedAt": "2026-03-11T18:00:05.446Z"
+      "currentPrice": 0.635,
+      "updatedAt": "2026-03-11T18:30:04.690Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-11T17:10:03.934Z",
-    "lastPriceSync": "2026-03-11T18:00:05.746Z"
+    "lastPriceSync": "2026-03-11T18:30:04.991Z"
   }
 }
