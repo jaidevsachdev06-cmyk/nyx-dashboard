@@ -10099,5 +10099,29 @@
     "currentValue": 5.85,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "9ca650b9-5630-438f-b43e-dc26dffdf684",
+    "market": "US x Iran ceasefire by March 31?",
+    "side": "Yes",
+    "entryPrice": 0.305,
+    "currentPrice": 0.305,
+    "shares": 18.89,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, debased, kekkone",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 86.9,
+    "avgWinRate": 74.9,
+    "reasoning": "Consensus: 3 whales (avg score 86.9, WR 74.9%) Yes. bet=$5.76, shares=18.89, tierMult=1.00. Whales: Car, debased, kekkone",
+    "endDate": "",
+    "conditionId": "0x3c6bcb7da14ea576e5af25547dbd96f2bb24ac34e748e76aecff2ee9195dd1ac",
+    "createdAt": "2026-03-11T08:27:49.838Z",
+    "entryDate": "2026-03-11T08:27:49.838Z",
+    "invested": 5.7614,
+    "currentValue": 5.7614,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
