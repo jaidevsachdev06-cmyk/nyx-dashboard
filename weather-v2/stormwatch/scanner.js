@@ -106,9 +106,12 @@ const EMPIRICAL_BASE_ERROR = { F: 1.5, C: 0.8 };
 const EMPIRICAL_SD_FLOOR = { F: 2.0, C: 1.0 };
 
 const CITY_BIAS = {
-  'London':  -1.0,
-  'Miami':   -2.0,
-  'Chicago':  1.5,
+  'London':   -2.0,  // Model too cold (25% win rate, -$57)
+  'Miami':    -2.0,  // Model too cold (46% win rate, -$27)
+  'Chicago':   1.5,  // Slight warm bias (OK performance)
+  'Atlanta':  -3.0,  // Model significantly too cold (loses on NO range bets)
+  'Toronto':   2.0,  // Model too warm (31% win rate, -$24)
+  'Seattle':   2.0,  // Model too warm (47% win rate, -$7)
 };
 
 function aggregateForecasts(forecasts, cityName, unit) {
@@ -369,6 +372,12 @@ async function scan() {
           const cityBlacklist = config.risk.cityBlacklist || [];
           const bucketTypeBlacklist = config.risk.bucketTypeBlacklist || [];
           
+          // Check if this is a lottery candidate (bypass city blacklist for lottery)
+          const lotteryConfig = config.risk.lottery || { enabled: false };
+          const isLotteryCandidate = lotteryConfig.enabled && 
+                                      effectivePrice < (lotteryConfig.maxEntryPrice || 0.15) &&
+                                      calibratedModelProb >= (lotteryConfig.minModelProb || 0.06);
+          
           // Check model prob range (use RAW prob for filtering - calibration is for edge calc only)
           // This maintains strategy continuity while improving edge estimates
           const modelConfident = rawModelProb >= minModelProb && rawModelProb <= maxModelProb;
@@ -376,13 +385,24 @@ async function scan() {
           // Check distance (legacy, now default 0)
           const distOk = distFromLine == null || distFromLine >= minDist;
           
-          // Check city blacklist
-          const cityOk = !cityBlacklist.includes(city.name);
+          // Check city blacklist - BYPASS for lottery candidates
+          const cityOk = isLotteryCandidate || !cityBlacklist.includes(city.name);
           
-          // Check bucket type blacklist (boundary = above/below types)
-          const bucketTypeOk = !(bucketTypeBlacklist.includes('boundary') && (bucket.type === 'above' || bucket.type === 'below'));
+          // Check bucket type blacklist (boundary = above/below types) - BYPASS for lottery candidates
+          const bucketTypeOk = isLotteryCandidate || !(bucketTypeBlacklist.includes('boundary') && (bucket.type === 'above' || bucket.type === 'below'));
           
-          const confident = modelConfident && distOk && cityOk && bucketTypeOk;
+          // FIX 2: Enhanced boundary trade filtering
+          // Boundary trades (≥/≤) require higher model confidence (80% vs 60%)
+          const isBoundaryTrade = bucket.type === 'above' || bucket.type === 'below';
+          const boundaryOk = !isBoundaryTrade || isLotteryCandidate || rawModelProb >= 0.80;
+          
+          // FIX 3: Pause NO trades on range buckets for problem cities
+          // Cities with systematic forecast bias keep losing on NO range bets
+          const problemCities = ['Atlanta', 'Seattle', 'Miami', 'Toronto', 'London'];
+          const isRangeNO = bucket.type === 'range' && side === 'NO';
+          const rangeNOOk = isLotteryCandidate || !isRangeNO || !problemCities.includes(city.name);
+          
+          const confident = modelConfident && distOk && cityOk && bucketTypeOk && boundaryOk && rangeNOOk;
 
           const bucketLabel = bucket.type === 'exact' ? `${bucket.low}°${bucket.unit}` :
                               bucket.type === 'range' ? `${bucket.low}-${bucket.high}°${bucket.unit}` :
