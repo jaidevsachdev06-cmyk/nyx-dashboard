@@ -10075,5 +10075,29 @@
     "currentValue": 5.2473,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "0f8f99c3-ac43-4a16-9caa-e6f216d0945c",
+    "market": "Iran leadership change by December 31?",
+    "side": "No",
+    "entryPrice": 0.36,
+    "currentPrice": 0.36,
+    "shares": 16.25,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, debased, Roflan",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 87.2,
+    "avgWinRate": 76,
+    "reasoning": "Consensus: 3 whales (avg score 87.2, WR 76%) No. bet=$5.85, shares=16.25, tierMult=1.00. Whales: Car, debased, Roflan",
+    "endDate": "2026-12-31",
+    "conditionId": "0x377e7fe65cf198a7fc4fdae3f2136b74729279267858daaf96718b23bc2a5607",
+    "createdAt": "2026-03-11T08:27:44.484Z",
+    "entryDate": "2026-03-11T08:27:44.484Z",
+    "invested": 5.85,
+    "currentValue": 5.85,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
