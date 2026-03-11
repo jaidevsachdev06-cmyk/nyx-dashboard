@@ -8650,7 +8650,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.14,
+      "pnlUSDC": 1.05,
       "createdAt": "2026-03-10T08:05:00.158Z",
       "signal": {
         "forecastTemp": 46.8,
@@ -8667,8 +8667,8 @@
       "enteredAt": "2026-03-10T08:05:00.176Z",
       "orderId": "paper-mmkbrf6e-my07",
       "txHash": null,
-      "currentPrice": 0.675,
-      "updatedAt": "2026-03-11T00:30:04.231Z"
+      "currentPrice": 0.67,
+      "updatedAt": "2026-03-11T01:00:51.926Z"
     },
     {
       "id": "oc-mmkg9pew-og84xl",
@@ -8748,6 +8748,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-11T00:10:05.484Z",
-    "lastPriceSync": "2026-03-11T00:30:04.532Z"
+    "lastPriceSync": "2026-03-11T01:00:52.226Z"
   }
 }
