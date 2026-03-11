@@ -8650,7 +8650,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.57,
+      "pnlUSDC": 0.67,
       "createdAt": "2026-03-10T08:05:00.158Z",
       "signal": {
         "forecastTemp": 46.8,
@@ -8667,8 +8667,8 @@
       "enteredAt": "2026-03-10T08:05:00.176Z",
       "orderId": "paper-mmkbrf6e-my07",
       "txHash": null,
-      "currentPrice": 0.645,
-      "updatedAt": "2026-03-11T17:00:03.136Z"
+      "currentPrice": 0.65,
+      "updatedAt": "2026-03-11T17:30:02.933Z"
     },
     {
       "id": "oc-mmkg9pew-og84xl",
@@ -8782,7 +8782,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.44,
+      "pnlUSDC": 0.36,
       "createdAt": "2026-03-11T05:03:27.615Z",
       "signal": {
         "forecastTemp": 77.2,
@@ -8799,8 +8799,8 @@
       "enteredAt": "2026-03-11T05:03:27.633Z",
       "orderId": "paper-mmlkpt3s-ne9e",
       "txHash": null,
-      "currentPrice": 0.57,
-      "updatedAt": "2026-03-11T17:00:03.702Z"
+      "currentPrice": 0.67,
+      "updatedAt": "2026-03-11T17:30:03.469Z"
     },
     {
       "id": "oc-mmlkpt42-9oesac",
@@ -8813,9 +8813,9 @@
       "bucket": "≥7°C",
       "question": "Will the highest temperature in Toronto be 7°C or higher on March 12?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -1.48,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -1.635,
       "createdAt": "2026-03-11T05:03:27.650Z",
       "signal": {
         "forecastTemp": 10.2,
@@ -8833,7 +8833,11 @@
       "orderId": "paper-mmlkpt4o-2klk",
       "txHash": null,
       "currentPrice": 0.0155,
-      "updatedAt": "2026-03-11T17:00:04.235Z"
+      "updatedAt": "2026-03-11T17:00:04.235Z",
+      "resolutionPrice": 0.0105,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-11T17:10:03.908Z",
+      "closedAt": "2026-03-11T17:10:03.930Z"
     },
     {
       "id": "oc-mmlvp0zr-6nl40x",
@@ -8903,7 +8907,7 @@
       "orderId": "paper-mmm24tm9-9csh",
       "txHash": null,
       "currentPrice": 0.13,
-      "updatedAt": "2026-03-11T17:00:04.779Z"
+      "updatedAt": "2026-03-11T17:30:04.001Z"
     },
     {
       "id": "oc-mmm8kb3y-7qg7zi",
@@ -8936,12 +8940,12 @@
       "orderId": "paper-mmm8kb4q-6o2u",
       "txHash": null,
       "currentPrice": 0.635,
-      "updatedAt": "2026-03-11T17:00:05.373Z"
+      "updatedAt": "2026-03-11T17:30:04.533Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-11T16:11:01.857Z",
-    "lastPriceSync": "2026-03-11T17:00:05.673Z"
+    "lastUpdated": "2026-03-11T17:10:03.934Z",
+    "lastPriceSync": "2026-03-11T17:30:04.834Z"
   }
 }
