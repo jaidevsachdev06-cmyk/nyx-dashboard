@@ -8904,11 +8904,42 @@
       "txHash": null,
       "currentPrice": 0.11,
       "updatedAt": "2026-03-11T16:00:05.118Z"
+    },
+    {
+      "id": "oc-mmm8kb3y-7qg7zi",
+      "conditionId": "0x18b622f02b81c014fc5a0a6b368f20c706fef4d14fd5338ff6178ee46ca302cf",
+      "tokenId": "0x3afa8ac13c70545d59714dc7d16de1b7cdfec06785c0e3ec7874dd5ce3aa093b",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-12-2026-46-47f",
+      "city": "Chicago",
+      "date": "2026-03-12",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in Chicago be between 46-47°F on March 12?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-11T16:11:01.822Z",
+      "signal": {
+        "forecastTemp": 42.6,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.645,
+        "modelProb": 0.6614,
+        "edge": 0.0164,
+        "isLottery": false
+      },
+      "notes": "Forecast: 42.6°F | Model: 66% vs Market: 65% | Edge: 2.5%",
+      "entryPrice": 0.645,
+      "size": 18,
+      "sizeUSDC": 11.61,
+      "enteredAt": "2026-03-11T16:11:01.844Z",
+      "orderId": "paper-mmm8kb4q-6o2u",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-11T13:11:01.623Z",
+    "lastUpdated": "2026-03-11T16:11:01.857Z",
     "lastPriceSync": "2026-03-11T16:00:05.418Z"
   }
 }
