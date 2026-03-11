@@ -5899,7 +5899,7 @@
     "entryPrice": 0.715,
     "currentPrice": 0.845,
     "shares": 7.86,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, archaic, kekkone",
     "whaleCount": 3,
@@ -5919,7 +5919,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-11T10:00:31.204Z"
+    "updatedAt": "2026-03-11T10:05:09.372Z",
+    "exitPrice": 0.845,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "83990b09-6b1e-423b-ac26-71a0156eaeb2",
