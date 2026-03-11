@@ -8650,7 +8650,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.04,
+      "pnlUSDC": -2.85,
       "createdAt": "2026-03-10T08:05:00.158Z",
       "signal": {
         "forecastTemp": 46.8,
@@ -8667,8 +8667,8 @@
       "enteredAt": "2026-03-10T08:05:00.176Z",
       "orderId": "paper-mmkbrf6e-my07",
       "txHash": null,
-      "currentPrice": 0.455,
-      "updatedAt": "2026-03-11T19:30:02.967Z"
+      "currentPrice": 0.465,
+      "updatedAt": "2026-03-11T20:00:04.048Z"
     },
     {
       "id": "oc-mmkg9pew-og84xl",
@@ -8782,7 +8782,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.18,
+      "pnlUSDC": 0.9,
       "createdAt": "2026-03-11T05:03:27.615Z",
       "signal": {
         "forecastTemp": 77.2,
@@ -8799,8 +8799,8 @@
       "enteredAt": "2026-03-11T05:03:27.633Z",
       "orderId": "paper-mmlkpt3s-ne9e",
       "txHash": null,
-      "currentPrice": 0.66,
-      "updatedAt": "2026-03-11T19:30:03.553Z"
+      "currentPrice": 0.7,
+      "updatedAt": "2026-03-11T20:00:04.600Z"
     },
     {
       "id": "oc-mmlkpt42-9oesac",
@@ -8907,7 +8907,7 @@
       "orderId": "paper-mmm24tm9-9csh",
       "txHash": null,
       "currentPrice": 0.145,
-      "updatedAt": "2026-03-11T19:30:04.118Z"
+      "updatedAt": "2026-03-11T20:00:05.163Z"
     },
     {
       "id": "oc-mmm8kb3y-7qg7zi",
@@ -8922,7 +8922,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0,
+      "pnlUSDC": -0.09,
       "createdAt": "2026-03-11T16:11:01.822Z",
       "signal": {
         "forecastTemp": 42.6,
@@ -8939,13 +8939,13 @@
       "enteredAt": "2026-03-11T16:11:01.844Z",
       "orderId": "paper-mmm8kb4q-6o2u",
       "txHash": null,
-      "currentPrice": 0.645,
-      "updatedAt": "2026-03-11T19:30:04.666Z"
+      "currentPrice": 0.64,
+      "updatedAt": "2026-03-11T20:00:05.709Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-11T17:10:03.934Z",
-    "lastPriceSync": "2026-03-11T19:30:04.966Z"
+    "lastPriceSync": "2026-03-11T20:00:06.009Z"
   }
 }
