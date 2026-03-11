@@ -10195,5 +10195,29 @@
     "currentValue": 4.8503,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "5aba9b5f-5183-46e1-b5c0-a3c231b6485b",
+    "market": "Russia x Ukraine Peace Parlay",
+    "side": "Yes",
+    "entryPrice": 0.225,
+    "currentPrice": 0.225,
+    "shares": 20.67,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, mango-lassi, dontshowmyname",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 77.4,
+    "avgWinRate": 60.4,
+    "reasoning": "Consensus: 3 whales (avg score 77.4, WR 60.4%) Yes. bet=$4.65, shares=20.67, tierMult=1.00. Whales: Roflan, mango-lassi, dontshowmyname",
+    "endDate": "2026-12-31",
+    "conditionId": "0x1fb51c9398ae0f164de29cfe3d53f291d4b953145c73a524135b35fb03fa6534",
+    "createdAt": "2026-03-11T08:28:18.613Z",
+    "entryDate": "2026-03-11T08:28:18.613Z",
+    "invested": 4.6508,
+    "currentValue": 4.6508,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
