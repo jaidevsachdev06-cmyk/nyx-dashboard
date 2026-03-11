@@ -9979,5 +9979,29 @@
     "currentValue": 18.7693,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "2f078796-05e1-48fc-9688-10a61f50941f",
+    "market": "Will Iran close the Strait of Hormuz by June 30?",
+    "side": "Yes",
+    "entryPrice": 0.9975,
+    "currentPrice": 0.9975,
+    "shares": 12.66,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "donjo, Anjun, debased, aenews, Xeny",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 82.7,
+    "avgWinRate": 68.4,
+    "reasoning": "Consensus: 5 whales (avg score 82.7, WR 68.4%) Yes. bet=$12.63, shares=12.66, tierMult=1.20. Whales: donjo, Anjun, debased, aenews, Xeny",
+    "endDate": "2026-06-30",
+    "conditionId": "0x43c7e8f73e867ebc035edf002617f67cf96b90c85eccac18090e553bfe7a8411",
+    "createdAt": "2026-03-11T08:27:21.770Z",
+    "entryDate": "2026-03-11T08:27:21.770Z",
+    "invested": 12.6284,
+    "currentValue": 12.6284,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
