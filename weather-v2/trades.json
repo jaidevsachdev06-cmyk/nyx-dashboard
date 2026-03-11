@@ -8846,9 +8846,9 @@
       "bucket": "15°C",
       "question": "Will the highest temperature in Munich be 15°C on March 11?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 5.15,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.2,
       "createdAt": "2026-03-11T10:10:46.983Z",
       "signal": {
         "forecastTemp": 12.9,
@@ -8866,12 +8866,16 @@
       "orderId": "paper-mmlvp10e-dmtt",
       "txHash": null,
       "currentPrice": 0.9965,
-      "updatedAt": "2026-03-11T13:00:05.991Z"
+      "updatedAt": "2026-03-11T13:00:05.991Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-11T13:05:06.360Z",
+      "closedAt": "2026-03-11T13:05:06.373Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-11T10:10:47.019Z",
+    "lastUpdated": "2026-03-11T13:05:06.376Z",
     "lastPriceSync": "2026-03-11T13:00:06.291Z"
   }
 }
