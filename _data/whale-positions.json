@@ -9673,7 +9673,7 @@
     "entryPrice": 0.2105,
     "currentPrice": 0.2125,
     "shares": 25.75,
-    "status": "open",
+    "status": "closed-exit",
     "source": "consensus-scanner",
     "whales": "gopfan2, HolyMoses7, Roflan",
     "whaleCount": 3,
@@ -9693,7 +9693,10 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-11T10:31:26.432Z"
+    "updatedAt": "2026-03-11T10:36:06.544Z",
+    "exitPrice": 0.2125,
+    "exitedAt": "2026-03-11T10:36:06.275Z",
+    "exitReason": "2028 election market - BANNED CATEGORY (32 losses, -$89.85)"
   },
   {
     "id": "e74bcce3-efa5-41c5-8d97-906bece79b45",
