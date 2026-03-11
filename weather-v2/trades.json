@@ -8768,11 +8768,73 @@
         "isLottery": false
       },
       "notes": "Forecast: 49.5°F | Model: 67% vs Market: 62% | Edge: 8.4%"
+    },
+    {
+      "id": "oc-mmlkpt33-wc9z1q",
+      "conditionId": "0x1a8237b067eef148378d3739565b784912046b0e980128a4f74e2b530d895c29",
+      "tokenId": "0xd065e7906d2e49c0bb327e261a639350164d7a1a618ad25fce0db214fed93427",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-11-2026-80-81f",
+      "city": "Atlanta",
+      "date": "2026-03-11",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Atlanta be between 80-81°F on March 11?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-11T05:03:27.615Z",
+      "signal": {
+        "forecastTemp": 77.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.65,
+        "modelProb": 0.6649,
+        "edge": 0.0149,
+        "isLottery": false
+      },
+      "notes": "Forecast: 77.2°F | Model: 66% vs Market: 65% | Edge: 2.3%",
+      "entryPrice": 0.65,
+      "size": 18,
+      "sizeUSDC": 11.700000000000001,
+      "enteredAt": "2026-03-11T05:03:27.633Z",
+      "orderId": "paper-mmlkpt3s-ne9e",
+      "txHash": null
+    },
+    {
+      "id": "oc-mmlkpt42-9oesac",
+      "conditionId": "0x93ceb97e9153a2678762c77c7a26e60d9c34c4bf9dc1f60d6d53d763d078772e",
+      "tokenId": "0x7c827d3f3b2727b0556a8d589286836753b7a2d2a36052ad5819e23c9df2efcf",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-toronto-on-march-12-2026-7corhigher",
+      "city": "Toronto",
+      "date": "2026-03-12",
+      "bucket": "≥7°C",
+      "question": "Will the highest temperature in Toronto be 7°C or higher on March 12?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-11T05:03:27.650Z",
+      "signal": {
+        "forecastTemp": 10.2,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.065,
+        "modelProb": 0.654,
+        "edge": 0.589,
+        "isLottery": true
+      },
+      "notes": "Forecast: 10.2°F | Model: 65% vs Market: 7% | Edge: 906.2% 🎰LOTTERY",
+      "entryPrice": 0.065,
+      "size": 30,
+      "sizeUSDC": 1.9500000000000002,
+      "enteredAt": "2026-03-11T05:03:27.665Z",
+      "orderId": "paper-mmlkpt4o-2klk",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-11T03:11:28.282Z",
+    "lastUpdated": "2026-03-11T05:03:27.679Z",
     "lastPriceSync": "2026-03-11T05:00:03.455Z"
   }
 }
