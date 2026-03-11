@@ -9907,5 +9907,29 @@
     "currentValue": 15.6473,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "f7c1011e-4466-4454-9d53-af998398bc01",
+    "market": "Will the Iranian regime fall before 2027?",
+    "side": "No",
+    "entryPrice": 0.665,
+    "currentPrice": 0.665,
+    "shares": 23.91,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Anjun, debased, Roflan, kekkone, duderr, gopfan2",
+    "whaleCount": 7,
+    "confidence": "Very High",
+    "avgScore": 83.2,
+    "avgWinRate": 68.9,
+    "reasoning": "Consensus: 7 whales (avg score 83.2, WR 68.9%) No. bet=$15.90, shares=23.91, tierMult=1.00. Whales: Car, Anjun, debased, Roflan, kekkone, duderr, gopfan2",
+    "endDate": "2026-12-31",
+    "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+    "createdAt": "2026-03-11T08:27:04.353Z",
+    "entryDate": "2026-03-11T08:27:04.353Z",
+    "invested": 15.9002,
+    "currentValue": 15.9002,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
