@@ -8650,7 +8650,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.76,
+      "pnlUSDC": 0.38,
       "createdAt": "2026-03-10T08:05:00.158Z",
       "signal": {
         "forecastTemp": 46.8,
@@ -8667,8 +8667,8 @@
       "enteredAt": "2026-03-10T08:05:00.176Z",
       "orderId": "paper-mmkbrf6e-my07",
       "txHash": null,
-      "currentPrice": 0.655,
-      "updatedAt": "2026-03-11T03:00:03.028Z"
+      "currentPrice": 0.635,
+      "updatedAt": "2026-03-11T03:30:03.112Z"
     },
     {
       "id": "oc-mmkg9pew-og84xl",
@@ -8743,11 +8743,36 @@
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-11T00:06:32.710Z",
       "closedAt": "2026-03-11T00:06:32.727Z"
+    },
+    {
+      "id": "oc-mmlgpses-s1jkc9",
+      "conditionId": "0x76acb138ea838a3f9cae9bb3f1f9a023d32f469e8ef285f33cfdd6f787d8883b",
+      "tokenId": "0x4334934d13efdd48311af5c136a13c048f1bf799d23fe6cc2d3766aced00616c",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-11-2026-52-53f",
+      "city": "Seattle",
+      "date": "2026-03-11",
+      "bucket": "52-53°F",
+      "question": "Will the highest temperature in Seattle be between 52-53°F on March 11?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-11T03:11:28.276Z",
+      "signal": {
+        "forecastTemp": 49.5,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.615,
+        "modelProb": 0.6665,
+        "edge": 0.0515,
+        "isLottery": false
+      },
+      "notes": "Forecast: 49.5°F | Model: 67% vs Market: 62% | Edge: 8.4%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-11T00:10:05.484Z",
-    "lastPriceSync": "2026-03-11T03:00:03.329Z"
+    "lastUpdated": "2026-03-11T03:11:28.282Z",
+    "lastPriceSync": "2026-03-11T03:30:03.413Z"
   }
 }
