@@ -8871,11 +8871,42 @@
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-11T13:05:06.360Z",
       "closedAt": "2026-03-11T13:05:06.373Z"
+    },
+    {
+      "id": "oc-mmm24tlk-4rznw8",
+      "conditionId": "0x6d6eac9170a5d719a3639a33ec277b578dc52fb7c753c19e36ecd4ff64f7fbd4",
+      "tokenId": "0x1f910942105826d2ced38c1326d11a00683732b8d9a819ec3408281c991be3cd",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-12-2026-60forhigher",
+      "city": "New York City",
+      "date": "2026-03-12",
+      "bucket": "≥60°F",
+      "question": "Will the highest temperature in New York City be 60°F or higher on March 12?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-11T13:11:01.592Z",
+      "signal": {
+        "forecastTemp": 57.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.135,
+        "modelProb": 0.6716,
+        "edge": 0.5366,
+        "isLottery": true
+      },
+      "notes": "Forecast: 57.4°F | Model: 67% vs Market: 14% | Edge: 397.5% 🎰LOTTERY",
+      "entryPrice": 0.135,
+      "size": 14,
+      "sizeUSDC": 1.8900000000000001,
+      "enteredAt": "2026-03-11T13:11:01.612Z",
+      "orderId": "paper-mmm24tm9-9csh",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-11T13:05:06.376Z",
+    "lastUpdated": "2026-03-11T13:11:01.623Z",
     "lastPriceSync": "2026-03-11T13:00:06.291Z"
   }
 }
