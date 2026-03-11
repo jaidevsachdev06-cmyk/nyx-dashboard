@@ -1,22 +1,5 @@
 {
-  "open": [
-    {
-      "market": "Will Lewis Hamilton be the 2026 F1 Drivers' Champion?",
-      "slug": "will-lewis-hamilton-be-the-2026-f1-drivers-champion",
-      "side": "No",
-      "conditionId": "0x2cefe6009ea518f77b8a82714e54c0af1d0f25e99b37d4861f4a5d3ebbf142d3",
-      "whaleCount": 2,
-      "avgScore": 87.9,
-      "confidence": "Early Signal",
-      "entryPrice": 0.9285,
-      "shares": 10.770059235325794,
-      "size": 10,
-      "entryTime": 1773209156025,
-      "endDate": null,
-      "whales": "Gr33d, UbuntuTrading",
-      "dataSource": "consensus"
-    }
-  ],
+  "open": [],
   "closed": [
     {
       "market": "Will the Iranian regime fall before 2027?",
@@ -2425,18 +2408,39 @@
       "pnl": -0.44444444444444486,
       "exitReason": "Whales exited consensus",
       "holdDays": 0
+    },
+    {
+      "market": "Will Lewis Hamilton be the 2026 F1 Drivers' Champion?",
+      "slug": "will-lewis-hamilton-be-the-2026-f1-drivers-champion",
+      "side": "No",
+      "conditionId": "0x2cefe6009ea518f77b8a82714e54c0af1d0f25e99b37d4861f4a5d3ebbf142d3",
+      "whaleCount": 2,
+      "avgScore": 87.9,
+      "confidence": "Early Signal",
+      "entryPrice": 0.9285,
+      "shares": 10.770059235325794,
+      "size": 10,
+      "entryTime": 1773209156025,
+      "endDate": null,
+      "whales": "Gr33d, UbuntuTrading",
+      "dataSource": "consensus",
+      "exitPrice": 0.9335,
+      "exitTime": 1773216314608,
+      "pnl": 0.053850296176629016,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 0
     }
   ],
-  "lastUpdate": 1773209115236,
-  "totalPnL": -8.104217664877961,
+  "lastUpdate": 1773216314608,
+  "totalPnL": -8.050367368701332,
   "stats": {
-    "openPositions": 1,
-    "closedPositions": 116,
-    "winRate": "38.8%"
+    "openPositions": 0,
+    "closedPositions": 117,
+    "winRate": "39.3%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773209115236,
+    "lastConsensusCheck": 1773216314608,
     "version": 2
   }
 }
