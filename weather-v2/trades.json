@@ -8668,7 +8668,7 @@
       "orderId": "paper-mmkbrf6e-my07",
       "txHash": null,
       "currentPrice": 0.635,
-      "updatedAt": "2026-03-11T03:30:03.112Z"
+      "updatedAt": "2026-03-11T04:00:03.775Z"
     },
     {
       "id": "oc-mmkg9pew-og84xl",
@@ -8773,6 +8773,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-11T03:11:28.282Z",
-    "lastPriceSync": "2026-03-11T03:30:03.413Z"
+    "lastPriceSync": "2026-03-11T04:00:04.075Z"
   }
 }
