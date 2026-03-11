@@ -8834,11 +8834,42 @@
       "txHash": null,
       "currentPrice": 0.055,
       "updatedAt": "2026-03-11T10:00:05.357Z"
+    },
+    {
+      "id": "oc-mmlvp0zr-6nl40x",
+      "conditionId": "0xd7d6bb6b3ba9d4f0e7c81c8df3aeacf78daeaaf3eaaed537f0a5403cdae6fc4e",
+      "tokenId": "0x84d480ee5ca8944176586d85cd83cbf896bb0d2b9c7405ed20dbd4bae245cf1",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-munich-on-march-11-2026-15c",
+      "city": "Munich",
+      "date": "2026-03-11",
+      "bucket": "15°C",
+      "question": "Will the highest temperature in Munich be 15°C on March 11?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-11T10:10:46.983Z",
+      "signal": {
+        "forecastTemp": 12.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.6,
+        "modelProb": 0.667,
+        "edge": 0.067,
+        "isLottery": false
+      },
+      "notes": "Forecast: 12.9°F | Model: 67% vs Market: 60% | Edge: 11.2%",
+      "entryPrice": 0.6,
+      "size": 13,
+      "sizeUSDC": 7.8,
+      "enteredAt": "2026-03-11T10:10:47.001Z",
+      "orderId": "paper-mmlvp10e-dmtt",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-11T05:03:27.679Z",
+    "lastUpdated": "2026-03-11T10:10:47.019Z",
     "lastPriceSync": "2026-03-11T10:00:05.658Z"
   }
 }
