@@ -8650,7 +8650,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.95,
+      "pnlUSDC": 1.14,
       "createdAt": "2026-03-10T08:05:00.158Z",
       "signal": {
         "forecastTemp": 46.8,
@@ -8667,8 +8667,8 @@
       "enteredAt": "2026-03-10T08:05:00.176Z",
       "orderId": "paper-mmkbrf6e-my07",
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-03-11T00:00:03.219Z"
+      "currentPrice": 0.675,
+      "updatedAt": "2026-03-11T00:30:04.231Z"
     },
     {
       "id": "oc-mmkg9pew-og84xl",
@@ -8681,9 +8681,9 @@
       "bucket": "≤39°F",
       "question": "Will the highest temperature in Chicago be 39°F or below on March 11?",
       "side": "YES",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -1.37,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -1.326,
       "createdAt": "2026-03-10T10:11:11.720Z",
       "signal": {
         "forecastTemp": 36.5,
@@ -8701,7 +8701,11 @@
       "orderId": "paper-mmkg9pfm-unbq",
       "txHash": null,
       "currentPrice": 0.0155,
-      "updatedAt": "2026-03-11T00:00:03.787Z"
+      "updatedAt": "2026-03-11T00:00:03.787Z",
+      "resolutionPrice": 0.0165,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-11T00:10:05.459Z",
+      "closedAt": "2026-03-11T00:10:05.481Z"
     },
     {
       "id": "oc-mmkxegur-07khdn",
@@ -8743,7 +8747,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-11T00:06:32.730Z",
-    "lastPriceSync": "2026-03-11T00:00:04.636Z"
+    "lastUpdated": "2026-03-11T00:10:05.484Z",
+    "lastPriceSync": "2026-03-11T00:30:04.532Z"
   }
 }
