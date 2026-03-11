@@ -9988,7 +9988,7 @@
     "market": "Will Trump acquire Greenland before 2027?",
     "side": "No",
     "entryPrice": 0.8925,
-    "currentPrice": 0.8925,
+    "currentPrice": 0.8925000000000001,
     "shares": 21.03,
     "status": "open",
     "source": "consensus-scanner",
@@ -10005,7 +10005,12 @@
     "invested": 18.7693,
     "currentValue": 18.7693,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-11T08:32:02.204Z"
   },
   {
     "id": "2f078796-05e1-48fc-9688-10a61f50941f",
