@@ -5651,7 +5651,7 @@
     "entryPrice": 0.415,
     "currentPrice": 0.665,
     "shares": 12.46,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Parz1vaI, kekkone",
     "whaleCount": 3,
@@ -5671,7 +5671,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-11T04:00:27.336Z"
+    "updatedAt": "2026-03-11T04:05:04.805Z",
+    "exitPrice": 0.665,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "78a1da0e-0b3f-4c8e-9278-20417f2cd421",
