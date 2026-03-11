@@ -9846,5 +9846,29 @@
       {}
     ],
     "updatedAt": "2026-03-11T02:02:36.826Z"
+  },
+  {
+    "id": "d276b4a0-7d36-457b-b2d3-e196d9ac1806",
+    "market": "Will Israel's Ben Gurion Airport reopen by March 7?",
+    "side": "No",
+    "entryPrice": 0.9985,
+    "currentPrice": 0.9985,
+    "shares": 5.28,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "aenews, JJo, Gr33d, FrancisSP8",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 86.7,
+    "avgWinRate": 68.5,
+    "reasoning": "Consensus: 4 whales (avg score 86.7, WR 68.5%) No. bet=$5.27, shares=5.28. Whales: aenews, JJo, Gr33d, FrancisSP8",
+    "endDate": "2026-03-31",
+    "conditionId": "0x56ced25c1266e3bdb08450662d82a6361777ddd1de9c5c4572c33652d6dd1aaf",
+    "createdAt": "2026-03-11T02:05:04.597Z",
+    "entryDate": "2026-03-11T02:05:04.597Z",
+    "invested": 5.2721,
+    "currentValue": 5.2721,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
