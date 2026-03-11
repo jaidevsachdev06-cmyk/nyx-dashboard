@@ -1,22 +1,5 @@
 {
-  "open": [
-    {
-      "market": "Will James Talarico win the 2028 Democratic presidential nomination?",
-      "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
-      "side": "Yes",
-      "conditionId": "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089",
-      "whaleCount": 2,
-      "avgScore": 87.4,
-      "confidence": "Early Signal",
-      "entryPrice": 0.0225,
-      "shares": 444.44444444444446,
-      "size": 10,
-      "entryTime": 1773194768560,
-      "endDate": null,
-      "whales": "Qualitative, TheWolfOfPoly",
-      "dataSource": "consensus"
-    }
-  ],
+  "open": [],
   "closed": [
     {
       "market": "Will the Iranian regime fall before 2027?",
@@ -2404,18 +2387,39 @@
       "pnl": 1.0907553551296505,
       "exitReason": "Whales exited consensus",
       "holdDays": 2
+    },
+    {
+      "market": "Will James Talarico win the 2028 Democratic presidential nomination?",
+      "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
+      "side": "Yes",
+      "conditionId": "0xb91be12388b3d4079c3ed9b5783cb42d8c33051d37746a49300227e0f45fc089",
+      "whaleCount": 2,
+      "avgScore": 87.4,
+      "confidence": "Early Signal",
+      "entryPrice": 0.0225,
+      "shares": 444.44444444444446,
+      "size": 10,
+      "entryTime": 1773194768560,
+      "endDate": null,
+      "whales": "Qualitative, TheWolfOfPoly",
+      "dataSource": "consensus",
+      "exitPrice": 0.0215,
+      "exitTime": 1773201916795,
+      "pnl": -0.44444444444444486,
+      "exitReason": "Whales exited consensus",
+      "holdDays": 0
     }
   ],
-  "lastUpdate": 1773194724114,
-  "totalPnL": -7.659773220433515,
+  "lastUpdate": 1773201916795,
+  "totalPnL": -8.104217664877961,
   "stats": {
-    "openPositions": 1,
-    "closedPositions": 115,
-    "winRate": "39.1%"
+    "openPositions": 0,
+    "closedPositions": 116,
+    "winRate": "38.8%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773194724114,
+    "lastConsensusCheck": 1773201916795,
     "version": 2
   }
 }
