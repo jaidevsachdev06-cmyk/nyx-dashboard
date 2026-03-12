@@ -9416,9 +9416,9 @@
       "bucket": "13°C",
       "question": "Will the highest temperature in Paris be 13°C on March 12?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -11.64,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.425,
       "createdAt": "2026-03-12T13:12:44.648Z",
       "signal": {
         "forecastTemp": 12.8,
@@ -9436,7 +9436,11 @@
       "orderId": "paper-mmnhmvsu-hwd7",
       "txHash": null,
       "currentPrice": 0.011,
-      "updatedAt": "2026-03-12T14:00:07.070Z"
+      "updatedAt": "2026-03-12T14:00:07.070Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-12T14:05:19.933Z",
+      "closedAt": "2026-03-12T14:05:19.946Z"
     },
     {
       "id": "oc-mmnhmvtf-c11r6p",
@@ -9507,7 +9511,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-12T13:12:44.750Z",
+    "lastUpdated": "2026-03-12T14:05:19.950Z",
     "lastPriceSync": "2026-03-12T14:00:08.453Z"
   }
 }
