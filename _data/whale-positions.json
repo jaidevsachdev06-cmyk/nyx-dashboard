@@ -9835,7 +9835,7 @@
     "market": "Iran x Israel/US conflict ends by March 15?",
     "side": "Yes",
     "entryPrice": 0.0545,
-    "currentPrice": 0.027,
+    "currentPrice": 0.025500000000000002,
     "shares": 111.74,
     "status": "open",
     "source": "consensus-scanner",
@@ -9850,14 +9850,14 @@
     "createdAt": "2026-03-10T20:05:05.123Z",
     "entryDate": "2026-03-10T20:05:05.124Z",
     "invested": 6.0898,
-    "currentValue": 3.017,
-    "pnl": -3.0728,
-    "pnlPercent": -50.46,
+    "currentValue": 2.8494,
+    "pnl": -3.2405,
+    "pnlPercent": -53.21,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-11T23:31:04.195Z"
+    "updatedAt": "2026-03-12T00:01:03.059Z"
   },
   {
     "id": "00cef089-af3e-449c-9b63-bb886c287cb3",
