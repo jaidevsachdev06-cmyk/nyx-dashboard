@@ -9081,11 +9081,42 @@
       "txHash": null,
       "currentPrice": 0.155,
       "updatedAt": "2026-03-12T05:00:06.025Z"
+    },
+    {
+      "id": "oc-mmn0i53t-o0fpi6",
+      "conditionId": "0x2b931a62774348fd21acf38bf1c54b81b163c64369fea53574124e9bd39d1ed8",
+      "tokenId": "0xc1d618a83f2ce1874e108e637e1992cfa03b78a163f07bee5b1de67f794a9148",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seoul-on-march-12-2026-11c",
+      "city": "Seoul",
+      "date": "2026-03-12",
+      "bucket": "11°C",
+      "question": "Will the highest temperature in Seoul be 11°C on March 12?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T05:13:09.977Z",
+      "signal": {
+        "forecastTemp": 8.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.1,
+        "modelProb": 0.6525,
+        "edge": 0.5525,
+        "isLottery": true
+      },
+      "notes": "Forecast: 8.8°F | Model: 65% vs Market: 10% | Edge: 552.5% 🎰LOTTERY",
+      "entryPrice": 0.1,
+      "size": 20,
+      "sizeUSDC": 2,
+      "enteredAt": "2026-03-12T05:13:10.000Z",
+      "orderId": "paper-mmn0i54n-8res",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-12T04:13:17.747Z",
+    "lastUpdated": "2026-03-12T05:13:10.021Z",
     "lastPriceSync": "2026-03-12T05:00:06.326Z"
   }
 }
