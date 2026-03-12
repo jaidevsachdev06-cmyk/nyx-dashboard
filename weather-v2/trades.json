@@ -9247,11 +9247,73 @@
       "txHash": null,
       "currentPrice": 0.665,
       "updatedAt": "2026-03-12T09:00:05.399Z"
+    },
+    {
+      "id": "oc-mmn929y4-vk388d",
+      "conditionId": "0x3f9d869a28ed3fa939067cd7922052881d14d1f4e50d0979e21148ab564f90d6",
+      "tokenId": "0x2044fcb0adce5de0a63eaf583c7756613ace9dce540fc3dad06910b161f24171",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-tokyo-on-march-13-2026-11c",
+      "city": "Tokyo",
+      "date": "2026-03-13",
+      "bucket": "11°C",
+      "question": "Will the highest temperature in Tokyo be 11°C on March 13?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T09:12:46.300Z",
+      "signal": {
+        "forecastTemp": 9.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.68,
+        "modelProb": 0.6922,
+        "edge": 0.0122,
+        "isLottery": false
+      },
+      "notes": "Forecast: 9.8°F | Model: 69% vs Market: 68% | Edge: 1.8%",
+      "entryPrice": 0.68,
+      "size": 17,
+      "sizeUSDC": 11.56,
+      "enteredAt": "2026-03-12T09:12:46.327Z",
+      "orderId": "paper-mmn929zb-icr4",
+      "txHash": null
+    },
+    {
+      "id": "oc-mmn929zr-z38o8i",
+      "conditionId": "0x7f50d22cc337eb933a07f0301ba8a4ccb26c1ae65e785cf75d9382147497ffc1",
+      "tokenId": "0x823d68b8276bc8c4343c0df45a9836a8ff3783bb5b038b54aaaf6db1c5a5c70",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-paris-on-march-13-2026-11c",
+      "city": "Paris",
+      "date": "2026-03-13",
+      "bucket": "11°C",
+      "question": "Will the highest temperature in Paris be 11°C on March 13?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T09:12:46.359Z",
+      "signal": {
+        "forecastTemp": 11,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.565,
+        "modelProb": 0.5762,
+        "edge": 0.0112,
+        "isLottery": false
+      },
+      "notes": "Forecast: 11.0°F | Model: 58% vs Market: 56% | Edge: 2.0%",
+      "entryPrice": 0.565,
+      "size": 21,
+      "sizeUSDC": 11.864999999999998,
+      "enteredAt": "2026-03-12T09:12:46.390Z",
+      "orderId": "paper-mmn92a0z-1wxu",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-12T08:12:52.297Z",
+    "lastUpdated": "2026-03-12T09:12:46.410Z",
     "lastPriceSync": "2026-03-12T09:00:05.700Z"
   }
 }
