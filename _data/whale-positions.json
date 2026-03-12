@@ -8314,9 +8314,9 @@
     "market": "US strike on Cuba by March 31?",
     "side": "No",
     "entryPrice": 0.5,
-    "currentPrice": 0.9484999999999999,
+    "currentPrice": 0.9485,
     "shares": 35,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner-filtered",
     "whales": "Car, LinaBell, Michael5289",
     "whaleCount": 3,
@@ -8336,7 +8336,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T02:00:31.454Z"
+    "updatedAt": "2026-03-12T02:05:06.664Z",
+    "exitPrice": 0.9485,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "03b1112e-5acc-4146-b214-bd5a19bb30b5",
