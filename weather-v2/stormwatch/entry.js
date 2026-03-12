@@ -87,13 +87,16 @@ async function processCandidate(signal) {
     console.log(`${tag} 🎰 LOTTERY TRADE (${lotteryToday.length + 1}/${maxDaily} today) | modelProb: ${(signal.modelProb*100).toFixed(1)}% | price: ${(currentPrice*100).toFixed(1)}¢ | edge: ${edgePct.toFixed(0)}%`);
   } else {
     // Normal trade: apply confidence gates
+    // Use RAW model probability for confidence check (calibration is only for edge calculation)
     const minModelProb = config.risk.minModelProb || 0.6;
-    if (signal.modelProb < minModelProb) {
-      return { entered: false, trade: null, reason: `Low model confidence: ${(signal.modelProb*100).toFixed(1)}% (<${(minModelProb*100).toFixed(0)}%)` };
+    const probToCheck = signal.rawModelProb || signal.modelProb; // Fallback to calibrated if raw not available
+    if (probToCheck < minModelProb) {
+      return { entered: false, trade: null, reason: `Low model confidence: ${(probToCheck*100).toFixed(1)}% raw (<${(minModelProb*100).toFixed(0)}%)` };
     }
   }
 
-  const minDist = config.risk.minDistanceFromLine || 2;
+  // Use ?? instead of || to allow 0 as a valid value
+  const minDist = config.risk.minDistanceFromLine ?? 2;
   if (signal.distFromLine != null && signal.distFromLine < minDist) {
     return { entered: false, trade: null, reason: `Too close to line: ${signal.distFromLine.toFixed(2)} (<${minDist})` };
   }
