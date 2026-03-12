@@ -7,6 +7,7 @@
 const config = require('../config.json');
 const polymarket = require('../core/polymarket');
 const calibration = require('../core/calibration');
+const multiSource = require('../core/multi-source-forecast');
 const fs = require('fs');
 const path = require('path');
 
@@ -84,7 +85,13 @@ async function fetchForecasts(city) {
         const temps = data.daily.temperature_2m_max || [];
         for (let i = 0; i < dates.length; i++) {
           if (temps[i] !== null && temps[i] !== undefined) {
-            modelResults.push({ model, date: dates[i], highTemp: temps[i] });
+            modelResults.push({ 
+              model, 
+              date: dates[i], 
+              highTemp: temps[i],
+              source: 'open-meteo',
+              reliability: 0.65  // Based on historical 53% avg accuracy
+            });
           }
         }
       }
@@ -231,12 +238,45 @@ async function scan() {
   if (allForecasts) {
     console.log(`[scanner] Using cached forecasts (${Object.keys(allForecasts).length} cities)`);
   } else {
-    console.log(`[scanner] Fetching fresh forecasts (parallel)...`);
+    console.log(`[scanner] Fetching fresh forecasts (parallel + multi-source)...`);
     const forecastStart = Date.now();
     
     const forecastPromises = config.cities.map(async (city) => {
-      const forecasts = await fetchForecasts(city);
-      const aggregated = aggregateForecasts(forecasts, city.name, city.unit);
+      // Fetch Open-Meteo ensemble
+      const openMeteoForecasts = await fetchForecasts(city);
+      
+      // Fetch additional sources (NOAA, Visual Crossing, WeatherAPI)
+      let multiSourceForecasts = [];
+      if (config.weather?.multiSource) {
+        try {
+          multiSourceForecasts = await multiSource.fetchAllSources(city, config);
+        } catch (err) {
+          console.warn(`[scanner] Multi-source fetch error for ${city.name}:`, err.message);
+        }
+      }
+      
+      // Combine all forecasts
+      const allCityForecasts = [...openMeteoForecasts, ...multiSourceForecasts];
+      
+      // Apply city bias correction to Open-Meteo forecasts only
+      const bias = CITY_BIAS[city.name] || 0;
+      const correctedForecasts = allCityForecasts.map(f => {
+        if (f.source && f.source !== 'open-meteo' && !f.model) {
+          // External sources: use as-is
+          return f;
+        }
+        // Open-Meteo: apply bias correction
+        return { ...f, highTemp: f.highTemp - bias, source: f.source || 'open-meteo' };
+      });
+      
+      // Use multi-source weighted aggregation if available, otherwise fall back to old method
+      let aggregated;
+      if (config.weather?.multiSource && correctedForecasts.some(f => f.source)) {
+        aggregated = multiSource.aggregateWithWeighting(correctedForecasts, city.name);
+      } else {
+        aggregated = aggregateForecasts(correctedForecasts, city.name, city.unit);
+      }
+      
       return { cityName: city.name, aggregated };
     });
     

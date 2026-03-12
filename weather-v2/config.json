@@ -17,8 +17,8 @@
       "jma_seamless"
     ],
     "forecastDays": 2,
-    "visualCrossingKey": null,
-    "weatherApiKey": null,
+    "visualCrossingKey": "BNNTAG7JPGRAFU2SQBE4K2UH6",
+    "weatherApiKey": "23a230fd4d9f43a5bd904753261902",
     "multiSource": true
   },
   "risk": {

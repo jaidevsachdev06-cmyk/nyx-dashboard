@@ -77,12 +77,13 @@ async function fetchNOAA(lat, lon, forecastDays = 2) {
 }
 
 // Visual Crossing (global, free tier)
-async function fetchVisualCrossing(lat, lon, forecastDays = 2, apiKey = null) {
+async function fetchVisualCrossing(lat, lon, forecastDays = 2, apiKey = null, unit = 'F') {
   if (!apiKey) return null;
   
   try {
+    const unitGroup = unit === 'F' ? 'us' : 'metric';
     const endDate = new Date(Date.now() + forecastDays * 86400000).toISOString().split('T')[0];
-    const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat},${lon}?key=${apiKey}&unitGroup=us&include=days&elements=datetime,tempmax`;
+    const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat},${lon}?key=${apiKey}&unitGroup=${unitGroup}&include=days&elements=datetime,tempmax`;
     
     const res = await fetch(url);
     if (!res.ok) return null;
@@ -107,7 +108,7 @@ async function fetchVisualCrossing(lat, lon, forecastDays = 2, apiKey = null) {
 }
 
 // WeatherAPI.com (global, generous free tier)
-async function fetchWeatherAPI(lat, lon, forecastDays = 2, apiKey = null) {
+async function fetchWeatherAPI(lat, lon, forecastDays = 2, apiKey = null, unit = 'F') {
   if (!apiKey) return null;
   
   try {
@@ -120,10 +121,11 @@ async function fetchWeatherAPI(lat, lon, forecastDays = 2, apiKey = null) {
     const forecasts = [];
     const days = data.forecast?.forecastday || [];
     for (const day of days) {
+      const temp = unit === 'F' ? day.day.maxtemp_f : day.day.maxtemp_c;
       forecasts.push({
         source: 'weatherapi',
         date: day.date,
-        highTemp: day.day.maxtemp_f,
+        highTemp: temp,
         reliability: 0.70
       });
     }
@@ -150,19 +152,26 @@ async function fetchAllSources(city, config) {
   
   const promises = [];
   
-  // NOAA (US cities only)
+  // NOAA (US cities only, always returns Fahrenheit)
   if (lat >= 24 && lat <= 50 && lon >= -125 && lon <= -66) {
-    promises.push(fetchNOAA(lat, lon, forecastDays));
+    promises.push(fetchNOAA(lat, lon, forecastDays).then(forecasts => {
+      if (!forecasts || unit === 'F') return forecasts;
+      // Convert NOAA Fahrenheit to Celsius if needed
+      return forecasts.map(f => ({
+        ...f,
+        highTemp: (f.highTemp - 32) * 5 / 9
+      }));
+    }));
   }
   
   // Visual Crossing (if API key configured)
   if (config.weather?.visualCrossingKey) {
-    promises.push(fetchVisualCrossing(lat, lon, forecastDays, config.weather.visualCrossingKey));
+    promises.push(fetchVisualCrossing(lat, lon, forecastDays, config.weather.visualCrossingKey, unit));
   }
   
   // WeatherAPI (if API key configured)
   if (config.weather?.weatherApiKey) {
-    promises.push(fetchWeatherAPI(lat, lon, forecastDays, config.weather.weatherApiKey));
+    promises.push(fetchWeatherAPI(lat, lon, forecastDays, config.weather.weatherApiKey, unit));
   }
   
   // Open-Meteo will be added by caller (existing implementation)
