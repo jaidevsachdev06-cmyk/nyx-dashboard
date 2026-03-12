@@ -10338,7 +10338,7 @@
     "entryPrice": 0.225,
     "currentPrice": 0.225,
     "shares": 20.67,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Roflan, mango-lassi, dontshowmyname",
     "whaleCount": 3,
@@ -10357,7 +10357,9 @@
     "priceHistory": [
       {}
     ],
-    "updatedAt": "2026-03-12T08:01:55.723Z"
+    "updatedAt": "2026-03-12T08:07:35.095Z",
+    "exitPrice": 0.225,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "39520566-f18e-452e-84fa-f4a932346348",
