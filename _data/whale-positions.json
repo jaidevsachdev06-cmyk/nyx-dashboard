@@ -10185,7 +10185,7 @@
     "entryPrice": 0.36,
     "currentPrice": 0.375,
     "shares": 16.25,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, debased, Roflan",
     "whaleCount": 3,
@@ -10205,7 +10205,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T08:01:36.717Z"
+    "updatedAt": "2026-03-12T08:07:23.434Z",
+    "exitPrice": 0.375,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "9ca650b9-5630-438f-b43e-dc26dffdf684",
