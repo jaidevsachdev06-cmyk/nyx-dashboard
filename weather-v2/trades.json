@@ -9040,9 +9040,9 @@
       "bucket": "12°C",
       "question": "Will the highest temperature in Munich be 12°C on March 12?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -11.23,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -10.953,
       "createdAt": "2026-03-12T02:13:17.711Z",
       "signal": {
         "forecastTemp": 11,
@@ -9060,7 +9060,11 @@
       "orderId": "paper-mmmu2trf-h4d4",
       "txHash": null,
       "currentPrice": 0.041,
-      "updatedAt": "2026-03-12T16:00:04.822Z"
+      "updatedAt": "2026-03-12T16:00:04.822Z",
+      "resolutionPrice": 0.0565,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-12T16:10:03.677Z",
+      "closedAt": "2026-03-12T16:10:03.691Z"
     },
     {
       "id": "oc-mmmyd5ah-pz2vxh",
@@ -9540,11 +9544,42 @@
       "txHash": null,
       "currentPrice": 0.585,
       "updatedAt": "2026-03-12T16:00:08.742Z"
+    },
+    {
+      "id": "oc-mmno2gkr-cfohgx",
+      "conditionId": "0x223dfa8c5299894db86790ebb33fac75d3e9db99da920142d09ee879676a3cde",
+      "tokenId": "0xbce17b5494ae4b85b4628449d5ef20f5e575b08b07894286127b076281ff0f6c",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-12-2026-64-65f",
+      "city": "Dallas",
+      "date": "2026-03-12",
+      "bucket": "64-65°F",
+      "question": "Will the highest temperature in Dallas be between 64-65°F on March 12?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T16:12:49.131Z",
+      "signal": {
+        "forecastTemp": 65.8,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.335,
+        "modelProb": 0.4273,
+        "edge": 0.0923,
+        "isLottery": false
+      },
+      "notes": "Forecast: 65.8°F | Model: 43% vs Market: 34% | Edge: 27.6%",
+      "entryPrice": 0.335,
+      "size": 20,
+      "sizeUSDC": 6.7,
+      "enteredAt": "2026-03-12T16:12:49.145Z",
+      "orderId": "paper-mmno2gla-gu4d",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-12T15:12:54.008Z",
+    "lastUpdated": "2026-03-12T16:12:49.156Z",
     "lastPriceSync": "2026-03-12T16:00:09.042Z"
   }
 }
