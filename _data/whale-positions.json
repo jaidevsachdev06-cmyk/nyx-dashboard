@@ -10278,7 +10278,7 @@
     "entryPrice": 0.98,
     "currentPrice": 0.9815,
     "shares": 5.22,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, The-Joker, Xeny",
     "whaleCount": 3,
@@ -10298,7 +10298,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T08:01:47.947Z"
+    "updatedAt": "2026-03-12T08:07:32.309Z",
+    "exitPrice": 0.9815,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "05bde9a2-beaf-4578-88a6-8fea6d25dcdb",
