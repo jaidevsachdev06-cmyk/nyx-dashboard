@@ -10216,7 +10216,7 @@
     "entryPrice": 0.305,
     "currentPrice": 0.265,
     "shares": 18.89,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, debased, kekkone",
     "whaleCount": 3,
@@ -10236,7 +10236,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T08:01:40.496Z"
+    "updatedAt": "2026-03-12T08:07:26.361Z",
+    "exitPrice": 0.265,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "c15c35d3-ac5e-45c6-8bca-9b2b00e42a3c",
