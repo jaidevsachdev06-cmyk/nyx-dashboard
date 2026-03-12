@@ -8966,9 +8966,9 @@
       "bucket": "12°C",
       "question": "Will the highest temperature in Tokyo be 12°C on March 12?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -6.24,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -9.75,
       "createdAt": "2026-03-12T02:13:17.625Z",
       "signal": {
         "forecastTemp": 10.8,
@@ -8986,7 +8986,11 @@
       "orderId": "paper-mmmu2tp7-tj5h",
       "txHash": null,
       "currentPrice": 0.24,
-      "updatedAt": "2026-03-12T07:00:03.293Z"
+      "updatedAt": "2026-03-12T07:00:03.293Z",
+      "resolutionPrice": 0.105,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-12T07:10:05.239Z",
+      "closedAt": "2026-03-12T07:10:05.265Z"
     },
     {
       "id": "oc-mmmu2tpi-mc9uc1",
@@ -9098,9 +9102,9 @@
       "bucket": "11°C",
       "question": "Will the highest temperature in Seoul be 11°C on March 12?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -1.62,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -1.74,
       "createdAt": "2026-03-12T05:13:09.977Z",
       "signal": {
         "forecastTemp": 8.8,
@@ -9118,7 +9122,11 @@
       "orderId": "paper-mmn0i54n-8res",
       "txHash": null,
       "currentPrice": 0.019,
-      "updatedAt": "2026-03-12T07:00:05.575Z"
+      "updatedAt": "2026-03-12T07:00:05.575Z",
+      "resolutionPrice": 0.013,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-12T07:10:06.322Z",
+      "closedAt": "2026-03-12T07:10:06.340Z"
     },
     {
       "id": "oc-mmn2ncgq-sl83cf",
@@ -9144,11 +9152,67 @@
         "isLottery": false
       },
       "notes": "Forecast: 11.0°F | Model: 58% vs Market: 39% | Edge: 47.7%"
+    },
+    {
+      "id": "oc-mmn4s5hj-jwq937",
+      "conditionId": "0x9d20e6a192cbe11a1b67cd11f8a3dfd50d391236ef9df832ba56ea74bc8c37a7",
+      "tokenId": "0x9347031e1f4fb049637d8e883ed98e326690394bdf3d9db091e2b1eb24c9787c",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-munich-on-march-12-2026-11c",
+      "city": "Munich",
+      "date": "2026-03-12",
+      "bucket": "11°C",
+      "question": "Will the highest temperature in Munich be 11°C on March 12?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T07:12:55.495Z",
+      "signal": {
+        "forecastTemp": 11.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.555,
+        "modelProb": 0.5773,
+        "edge": 0.0223,
+        "isLottery": false
+      },
+      "notes": "Forecast: 11.1°F | Model: 58% vs Market: 56% | Edge: 4.0%"
+    },
+    {
+      "id": "oc-mmn4s5hz-ij52ph",
+      "conditionId": "0xbfcb1af475f431c3f48a25a57924dbada589c3e11e854513bf9ade003e8e2f47",
+      "tokenId": "0x7f436387f6b2c0bf4bd19271ec5a8fa2c0f546546d066580f171e46badfa4c41",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-tokyo-on-march-12-2026-12c",
+      "city": "Tokyo",
+      "date": "2026-03-12",
+      "bucket": "12°C",
+      "question": "Will the highest temperature in Tokyo be 12°C on March 12?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T07:12:55.511Z",
+      "signal": {
+        "forecastTemp": 11.4,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.11,
+        "modelProb": 0.6142,
+        "edge": 0.5042,
+        "isLottery": true
+      },
+      "notes": "Forecast: 11.4°F | Model: 61% vs Market: 11% | Edge: 458.4% 🎰LOTTERY",
+      "entryPrice": 0.11,
+      "size": 18,
+      "sizeUSDC": 1.98,
+      "enteredAt": "2026-03-12T07:12:55.528Z",
+      "orderId": "paper-mmn4s5iu-lg4v",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-12T06:13:12.032Z",
+    "lastUpdated": "2026-03-12T07:12:55.547Z",
     "lastPriceSync": "2026-03-12T07:00:05.875Z"
   }
 }
