@@ -8895,9 +8895,9 @@
       "bucket": "≥60°F",
       "question": "Will the highest temperature in New York City be 60°F or higher on March 12?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 7.14,
+      "status": "closed",
+      "result": "exited",
+      "pnlUSDC": 7.140000000000001,
       "createdAt": "2026-03-11T13:11:01.592Z",
       "signal": {
         "forecastTemp": 57.4,
@@ -8915,7 +8915,12 @@
       "orderId": "paper-mmm24tm9-9csh",
       "txHash": null,
       "currentPrice": 0.645,
-      "updatedAt": "2026-03-12T06:00:04.354Z"
+      "updatedAt": "2026-03-12T06:00:04.354Z",
+      "closedAt": "2026-03-12T06:18:36.505Z",
+      "exitPrice": 0.645,
+      "exitOrderId": "paper-exit-mmn2uau1",
+      "resolutionSource": "manual-exit",
+      "exitReason": "Risk management - 2.8°F margin too thin, locked in 378% gain"
     },
     {
       "id": "oc-mmm8kb3y-7qg7zi",
@@ -8930,7 +8935,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.72,
+      "pnlUSDC": -0.36,
       "createdAt": "2026-03-11T16:11:01.822Z",
       "signal": {
         "forecastTemp": 42.6,
@@ -8947,8 +8952,8 @@
       "enteredAt": "2026-03-11T16:11:01.844Z",
       "orderId": "paper-mmm8kb4q-6o2u",
       "txHash": null,
-      "currentPrice": 0.605,
-      "updatedAt": "2026-03-12T06:00:04.928Z"
+      "currentPrice": 0.625,
+      "updatedAt": "2026-03-12T06:30:03.000Z"
     },
     {
       "id": "oc-mmmu2to9-snyl51",
@@ -8963,7 +8968,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.3,
+      "pnlUSDC": 0.26,
       "createdAt": "2026-03-12T02:13:17.625Z",
       "signal": {
         "forecastTemp": 10.8,
@@ -8980,8 +8985,8 @@
       "enteredAt": "2026-03-12T02:13:17.653Z",
       "orderId": "paper-mmmu2tp7-tj5h",
       "txHash": null,
-      "currentPrice": 0.53,
-      "updatedAt": "2026-03-12T06:00:05.502Z"
+      "currentPrice": 0.49,
+      "updatedAt": "2026-03-12T06:30:03.556Z"
     },
     {
       "id": "oc-mmmu2tpi-mc9uc1",
@@ -8996,7 +9001,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.1,
+      "pnlUSDC": -0.6,
       "createdAt": "2026-03-12T02:13:17.670Z",
       "signal": {
         "forecastTemp": 12.7,
@@ -9013,8 +9018,8 @@
       "enteredAt": "2026-03-12T02:13:17.692Z",
       "orderId": "paper-mmmu2tqb-naaw",
       "txHash": null,
-      "currentPrice": 0.525,
-      "updatedAt": "2026-03-12T06:00:06.042Z"
+      "currentPrice": 0.475,
+      "updatedAt": "2026-03-12T06:30:04.139Z"
     },
     {
       "id": "oc-mmmu2tqn-tt89r2",
@@ -9029,7 +9034,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.72,
+      "pnlUSDC": -1.08,
       "createdAt": "2026-03-12T02:13:17.711Z",
       "signal": {
         "forecastTemp": 11,
@@ -9046,8 +9051,8 @@
       "enteredAt": "2026-03-12T02:13:17.726Z",
       "orderId": "paper-mmmu2trf-h4d4",
       "txHash": null,
-      "currentPrice": 0.625,
-      "updatedAt": "2026-03-12T06:00:06.596Z"
+      "currentPrice": 0.605,
+      "updatedAt": "2026-03-12T06:30:04.702Z"
     },
     {
       "id": "oc-mmmyd5ah-pz2vxh",
@@ -9080,7 +9085,7 @@
       "orderId": "paper-mmmyd5bb-uq12",
       "txHash": null,
       "currentPrice": 0.165,
-      "updatedAt": "2026-03-12T06:00:07.170Z"
+      "updatedAt": "2026-03-12T06:30:05.274Z"
     },
     {
       "id": "oc-mmn0i53t-o0fpi6",
@@ -9095,7 +9100,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.53,
+      "pnlUSDC": -1.3,
       "createdAt": "2026-03-12T05:13:09.977Z",
       "signal": {
         "forecastTemp": 8.8,
@@ -9112,13 +9117,38 @@
       "enteredAt": "2026-03-12T05:13:10.000Z",
       "orderId": "paper-mmn0i54n-8res",
       "txHash": null,
-      "currentPrice": 0.0235,
-      "updatedAt": "2026-03-12T06:00:07.742Z"
+      "currentPrice": 0.035,
+      "updatedAt": "2026-03-12T06:30:05.812Z"
+    },
+    {
+      "id": "oc-mmn2ncgq-sl83cf",
+      "conditionId": "0x71b79642318e97ad0efb59a17b2be8df68b683e5b04fc4e17dd8fe167464da5f",
+      "tokenId": "0xc246f016203a0731c26c1efb434fc46b6fd14fd145d3fcec612438f56f456a38",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-tokyo-on-march-12-2026-11c",
+      "city": "Tokyo",
+      "date": "2026-03-12",
+      "bucket": "11°C",
+      "question": "Will the highest temperature in Tokyo be 11°C on March 12?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T06:13:12.026Z",
+      "signal": {
+        "forecastTemp": 11,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.39,
+        "modelProb": 0.5762,
+        "edge": 0.1862,
+        "isLottery": false
+      },
+      "notes": "Forecast: 11.0°F | Model: 58% vs Market: 39% | Edge: 47.7%"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-12T05:13:10.021Z",
-    "lastPriceSync": "2026-03-12T06:00:08.043Z"
+    "lastUpdated": "2026-03-12T06:13:12.032Z",
+    "lastPriceSync": "2026-03-12T06:30:06.113Z"
   }
 }
