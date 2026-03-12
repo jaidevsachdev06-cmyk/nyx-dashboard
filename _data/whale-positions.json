@@ -10091,7 +10091,7 @@
     "entryPrice": 0.9895,
     "currentPrice": 0.9935,
     "shares": 10.39,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, elucidate, debased, wkmfa57, arjenw",
     "whaleCount": 5,
@@ -10111,7 +10111,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T08:01:29.055Z"
+    "updatedAt": "2026-03-12T08:07:17.292Z",
+    "exitPrice": 0.9935,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "e9fda7f8-1c76-4211-8a6f-1370fa2ca56f",
