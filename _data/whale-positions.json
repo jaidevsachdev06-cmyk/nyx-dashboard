@@ -9975,7 +9975,7 @@
     "entryPrice": 0.665,
     "currentPrice": 0.675,
     "shares": 23.91,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Anjun, debased, Roflan, kekkone, duderr, gopfan2",
     "whaleCount": 7,
@@ -9995,7 +9995,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T10:30:50.070Z"
+    "updatedAt": "2026-03-12T10:41:34.868Z",
+    "exitPrice": 0.675,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "ca831733-626d-487e-b8ec-c85881de1a08",
