@@ -351,6 +351,38 @@
       "endDate": null,
       "whales": "GollumGekko, Car",
       "dataSource": "consensus"
+    },
+    {
+      "market": "Will Manchester City win the 2025–26 English Premier League?",
+      "slug": "will-manchester-city-win-the-202526-english-premier-league",
+      "side": "Yes",
+      "conditionId": "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573",
+      "whaleCount": 2,
+      "avgScore": 92.4,
+      "confidence": "Early Signal",
+      "entryPrice": 0.185,
+      "shares": 54.054054054054056,
+      "size": 10,
+      "entryTime": 1773273945778,
+      "endDate": null,
+      "whales": "UbuntuTrading, Euan",
+      "dataSource": "consensus"
+    },
+    {
+      "market": "US-Iran nuclear deal by March 31?",
+      "slug": "us-iran-nuclear-deal-by-march-31",
+      "side": "No",
+      "conditionId": "0x2b1435f47a09615867ade05d314485b7603924199ba0982cf28678b88717b520",
+      "whaleCount": 2,
+      "avgScore": 89.9,
+      "confidence": "Early Signal",
+      "entryPrice": 0.945,
+      "shares": 10.582010582010582,
+      "size": 10,
+      "entryTime": 1773273949737,
+      "endDate": null,
+      "whales": "Gr33d, Car",
+      "dataSource": "consensus"
     }
   ],
   "closed": [
@@ -3078,16 +3110,16 @@
       "holdDays": 0
     }
   ],
-  "lastUpdate": 1773266721113,
+  "lastUpdate": 1773273922180,
   "totalPnL": -8.804969316437015,
   "stats": {
-    "openPositions": 22,
+    "openPositions": 24,
     "closedPositions": 131,
     "winRate": "35.9%"
   },
   "metadata": {
     "dataSource": "consensus",
-    "lastConsensusCheck": 1773266721113,
+    "lastConsensusCheck": 1773273922180,
     "version": 2
   }
 }

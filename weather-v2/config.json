@@ -16,7 +16,10 @@
       "meteofrance_seamless",
       "jma_seamless"
     ],
-    "forecastDays": 2
+    "forecastDays": 2,
+    "visualCrossingKey": null,
+    "weatherApiKey": null,
+    "multiSource": true
   },
   "risk": {
     "maxPositionSizeUSDC": 50,
@@ -29,8 +32,14 @@
     "minModelProb": 0.6,
     "maxModelProb": 0.95,
     "minDistanceFromLine": 0,
-    "cityBlacklist": ["London", "Toronto", "Miami"],
-    "bucketTypeBlacklist": ["boundary"],
+    "cityBlacklist": [
+      "London",
+      "Toronto",
+      "Miami"
+    ],
+    "bucketTypeBlacklist": [
+      "boundary"
+    ],
     "lottery": {
       "enabled": true,
       "maxDailyTrades": 3,
