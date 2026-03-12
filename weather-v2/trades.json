@@ -9048,11 +9048,42 @@
       "txHash": null,
       "currentPrice": 0.615,
       "updatedAt": "2026-03-12T04:00:06.081Z"
+    },
+    {
+      "id": "oc-mmmyd5ah-pz2vxh",
+      "conditionId": "0x04d0ca0d87b9ce46387190003a0a86822ec1d87487b416a40bde306063263fe2",
+      "tokenId": "0x2d0fcb0dc3e74f5c9af69b45fb43c1040cfdc3d4597bd655c163afbe115ff08",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-toronto-on-march-13-2026-5corhigher",
+      "city": "Toronto",
+      "date": "2026-03-13",
+      "bucket": "≥5°C",
+      "question": "Will the highest temperature in Toronto be 5°C or higher on March 13?",
+      "side": "YES",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T04:13:17.705Z",
+      "signal": {
+        "forecastTemp": 5.9,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.135,
+        "modelProb": 0.6846,
+        "edge": 0.5496,
+        "isLottery": true
+      },
+      "notes": "Forecast: 5.9°F | Model: 68% vs Market: 14% | Edge: 407.1% 🎰LOTTERY",
+      "entryPrice": 0.135,
+      "size": 14,
+      "sizeUSDC": 1.8900000000000001,
+      "enteredAt": "2026-03-12T04:13:17.729Z",
+      "orderId": "paper-mmmyd5bb-uq12",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-12T02:13:17.744Z",
+    "lastUpdated": "2026-03-12T04:13:17.747Z",
     "lastPriceSync": "2026-03-12T04:00:06.381Z"
   }
 }
