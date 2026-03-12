@@ -9415,7 +9415,7 @@
     "entryPrice": 0.99,
     "currentPrice": 0.985,
     "shares": 5.21,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "scottilicious, elucidate, GollumGekko",
     "whaleCount": 3,
@@ -9435,7 +9435,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T08:00:45.228Z"
+    "updatedAt": "2026-03-12T08:06:57.635Z",
+    "exitPrice": 0.985,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "3b17f132-cdfc-49b1-9965-e4c39a7ef38d",
