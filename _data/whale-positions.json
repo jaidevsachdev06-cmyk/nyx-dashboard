@@ -10002,7 +10002,7 @@
     "entryPrice": 0.76,
     "currentPrice": 0.755,
     "shares": 20.41,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, nicoco89, scottilicious, elucidate, Cynical, Ozi",
     "whaleCount": 6,
@@ -10022,7 +10022,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T08:01:17.713Z"
+    "updatedAt": "2026-03-12T08:07:14.353Z",
+    "exitPrice": 0.755,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "f1916bd8-8697-4668-abbd-882eff29d2ca",
