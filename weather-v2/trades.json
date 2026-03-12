@@ -9214,11 +9214,42 @@
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-12T08:08:05.122Z",
       "closedAt": "2026-03-12T08:08:05.144Z"
+    },
+    {
+      "id": "oc-mmn6x8rk-srbyz8",
+      "conditionId": "0x6d6d7ab53749d1101306888041cfd77a19a0fbe9e171d774737af9620c08c949",
+      "tokenId": "0x7fb35ed72b35cc5926c9eba1805b3a21c1f8eaed5ebe6c0989eee2dfcbdf7394",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-munich-on-march-13-2026-16c",
+      "city": "Munich",
+      "date": "2026-03-13",
+      "bucket": "16°C",
+      "question": "Will the highest temperature in Munich be 16°C on March 13?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-12T08:12:52.256Z",
+      "signal": {
+        "forecastTemp": 15.1,
+        "forecastSource": "open-meteo",
+        "impliedProb": 0.65,
+        "modelProb": 0.6577,
+        "edge": 0.0077,
+        "isLottery": false
+      },
+      "notes": "Forecast: 15.1°F | Model: 66% vs Market: 65% | Edge: 1.2%",
+      "entryPrice": 0.65,
+      "size": 18,
+      "sizeUSDC": 11.700000000000001,
+      "enteredAt": "2026-03-12T08:12:52.278Z",
+      "orderId": "paper-mmn6x8sd-nrpp",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-12T08:08:05.150Z",
+    "lastUpdated": "2026-03-12T08:12:52.297Z",
     "lastPriceSync": "2026-03-12T08:00:06.670Z"
   }
 }
