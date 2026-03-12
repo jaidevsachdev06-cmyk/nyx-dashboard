@@ -9382,9 +9382,9 @@
     "market": "Will Judy Shelton be confirmed as Fed Chair?",
     "side": "No",
     "entryPrice": 0.9735,
-    "currentPrice": 0.9804999999999999,
+    "currentPrice": 0.9805,
     "shares": 6.09,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Roflan, debased, GollumGekko",
     "whaleCount": 3,
@@ -9404,7 +9404,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T08:00:41.429Z"
+    "updatedAt": "2026-03-12T08:06:54.871Z",
+    "exitPrice": 0.9805,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "580cb5dd-53f3-4664-b735-8317c26bb0bc",
