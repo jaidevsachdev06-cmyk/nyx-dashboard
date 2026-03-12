@@ -9355,7 +9355,7 @@
     "entryPrice": 0.785,
     "currentPrice": 0.875,
     "shares": 7.91,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, archaic, GollumGekko",
     "whaleCount": 3,
@@ -9375,7 +9375,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-12T10:30:42.293Z"
+    "updatedAt": "2026-03-12T10:41:30.654Z",
+    "exitPrice": 0.875,
+    "notes": "Whale exit triggered: debased exited position"
   },
   {
     "id": "5782bf8f-9bf0-43d1-ace6-7796fc73aa3b",
