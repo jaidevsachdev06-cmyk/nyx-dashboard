@@ -10428,5 +10428,29 @@
     "updatedAt": "2026-03-12T08:07:37.846Z",
     "exitPrice": 0.8975,
     "notes": "Dropped from whale consensus"
+  },
+  {
+    "id": "383c41b8-c3aa-4671-85a5-3ba717024d51",
+    "market": "Will the Iranian regime fall by June 30?",
+    "side": "No",
+    "entryPrice": 0.765,
+    "currentPrice": 0.765,
+    "shares": 24.54,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "archaic, Car, nicoco89, Euan, donjo, debased, Gr33d, Roflan, mango-lassi, kekkone, duderr, gopfan2",
+    "whaleCount": 12,
+    "confidence": "Very High",
+    "avgScore": 86.3,
+    "avgWinRate": 69.7,
+    "reasoning": "Consensus: 12 whales (avg score 86.3, WR 69.7%) No. bet=$18.77, shares=24.54, tierMult=1.17. Whales: archaic, Car, nicoco89, Euan, donjo, debased, Gr33d, Roflan, mango-lassi, kekkone, duderr, gopfan2",
+    "endDate": "2026-06-30",
+    "conditionId": "0x9352c559e9648ab4cab236087b64ca85c5b7123a4c7d9d7d4efde4a39c18056f",
+    "createdAt": "2026-03-13T02:32:00.308Z",
+    "entryDate": "2026-03-13T02:32:00.308Z",
+    "invested": 18.7731,
+    "currentValue": 18.7731,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
