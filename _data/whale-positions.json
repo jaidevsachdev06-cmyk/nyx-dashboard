@@ -10452,5 +10452,29 @@
     "currentValue": 18.7731,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "115a557c-97e8-423c-921c-b62e5ee47e1a",
+    "market": "Will Reza Pahlavi enter Iran by June 30?",
+    "side": "No",
+    "entryPrice": 0.845,
+    "currentPrice": 0.845,
+    "shares": 25.95,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "archaic, Car, scottilicious, elucidate, Gr33d, Roflan, kekkone, duderr",
+    "whaleCount": 8,
+    "confidence": "Very High",
+    "avgScore": 86.6,
+    "avgWinRate": 69.1,
+    "reasoning": "Consensus: 8 whales (avg score 86.6, WR 69.1%) No. bet=$21.93, shares=25.95, tierMult=1.38. Whales: archaic, Car, scottilicious, elucidate, Gr33d, Roflan, kekkone, duderr",
+    "endDate": "2026-06-30",
+    "conditionId": "0x43272c02b8407ed3f8d5b04fb4cb132d7a59c5df6ecc423afcf66f1c778d1887",
+    "createdAt": "2026-03-13T02:32:06.258Z",
+    "entryDate": "2026-03-13T02:32:06.258Z",
+    "invested": 21.9277,
+    "currentValue": 21.9277,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
