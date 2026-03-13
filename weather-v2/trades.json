@@ -9244,7 +9244,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.63,
+      "pnlUSDC": -1.08,
       "createdAt": "2026-03-12T08:12:52.256Z",
       "signal": {
         "forecastTemp": 15.1,
@@ -9261,8 +9261,8 @@
       "enteredAt": "2026-03-12T08:12:52.278Z",
       "orderId": "paper-mmn6x8sd-nrpp",
       "txHash": null,
-      "currentPrice": 0.615,
-      "updatedAt": "2026-03-13T07:30:03.441Z"
+      "currentPrice": 0.59,
+      "updatedAt": "2026-03-13T08:00:03.723Z"
     },
     {
       "id": "oc-mmn929y4-vk388d",
@@ -9314,7 +9314,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -5.88,
+      "pnlUSDC": -4.62,
       "createdAt": "2026-03-12T09:12:46.359Z",
       "signal": {
         "forecastTemp": 11,
@@ -9331,8 +9331,8 @@
       "enteredAt": "2026-03-12T09:12:46.390Z",
       "orderId": "paper-mmn92a0z-1wxu",
       "txHash": null,
-      "currentPrice": 0.285,
-      "updatedAt": "2026-03-13T07:30:03.981Z"
+      "currentPrice": 0.345,
+      "updatedAt": "2026-03-13T08:00:04.293Z"
     },
     {
       "id": "oc-mmnb7kp1-dvevbp",
@@ -9508,7 +9508,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.42,
+      "pnlUSDC": 1.36,
       "createdAt": "2026-03-12T13:12:44.724Z",
       "signal": {
         "forecastTemp": 44,
@@ -9525,8 +9525,8 @@
       "enteredAt": "2026-03-12T13:12:44.740Z",
       "orderId": "paper-mmnhmvux-61dn",
       "txHash": null,
-      "currentPrice": 0.7,
-      "updatedAt": "2026-03-13T07:30:04.512Z"
+      "currentPrice": 0.755,
+      "updatedAt": "2026-03-13T08:00:04.832Z"
     },
     {
       "id": "oc-mmnlxejj-lo0gy9",
@@ -9541,7 +9541,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.7,
+      "pnlUSDC": 1.6,
       "createdAt": "2026-03-12T15:12:53.983Z",
       "signal": {
         "forecastTemp": 76.4,
@@ -9558,8 +9558,8 @@
       "enteredAt": "2026-03-12T15:12:53.997Z",
       "orderId": "paper-mmnlxek3-dy2g",
       "txHash": null,
-      "currentPrice": 0.77,
-      "updatedAt": "2026-03-13T07:30:05.083Z"
+      "currentPrice": 0.665,
+      "updatedAt": "2026-03-13T08:00:05.390Z"
     },
     {
       "id": "oc-mmno2gkr-cfohgx",
@@ -9602,6 +9602,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-13T07:05:05.880Z",
-    "lastPriceSync": "2026-03-13T07:30:05.383Z"
+    "lastPriceSync": "2026-03-13T08:00:05.690Z"
   }
 }
