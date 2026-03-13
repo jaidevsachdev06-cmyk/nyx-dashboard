@@ -8933,9 +8933,9 @@
       "bucket": "46-47°F",
       "question": "Will the highest temperature in Chicago be between 46-47°F on March 12?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 6.35,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 6.39,
       "createdAt": "2026-03-11T16:11:01.822Z",
       "signal": {
         "forecastTemp": 42.6,
@@ -8953,7 +8953,11 @@
       "orderId": "paper-mmm8kb4q-6o2u",
       "txHash": null,
       "currentPrice": 0.998,
-      "updatedAt": "2026-03-13T02:00:04.145Z"
+      "updatedAt": "2026-03-13T02:00:04.145Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-13T02:05:04.498Z",
+      "closedAt": "2026-03-13T02:05:04.515Z"
     },
     {
       "id": "oc-mmmu2to9-snyl51",
@@ -9589,7 +9593,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-13T00:10:03.246Z",
+    "lastUpdated": "2026-03-13T02:05:04.520Z",
     "lastPriceSync": "2026-03-13T02:00:07.752Z"
   }
 }
