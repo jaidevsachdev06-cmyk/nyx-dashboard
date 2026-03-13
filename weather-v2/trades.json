@@ -9605,11 +9605,45 @@
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-12T23:10:05.246Z",
       "closedAt": "2026-03-12T23:10:05.261Z"
+    },
+    {
+      "id": "oc-mmpe9kkh-syzqk4",
+      "conditionId": "0xdc1656087aac09ddce744392b23881191adae300daa8c6b42e8ee180e57ec4c8",
+      "tokenId": "0x10dee79fc41016a199b758e87aeae94120853b514b969b77eb62b0750d205c7d",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-miami-on-march-13-2026-78-79f",
+      "city": "Miami",
+      "date": "2026-03-13",
+      "bucket": "78-79°F",
+      "question": "Will the highest temperature in Miami be between 78-79°F on March 13?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-13T21:13:57.089Z",
+      "signal": {
+        "forecastTemp": 81.8,
+        "forecastSource": "open-meteo",
+        "sources": 1,
+        "sourceWeights": null,
+        "forecastSD": null,
+        "impliedProb": 0.135,
+        "modelProb": 0.6634,
+        "edge": 0.5284,
+        "isLottery": true
+      },
+      "notes": "Forecast: 81.8°F | Model: 66% vs Market: 14% | Edge: 391.4% 🎰LOTTERY",
+      "entryPrice": 0.135,
+      "size": 14,
+      "sizeUSDC": 1.8900000000000001,
+      "enteredAt": "2026-03-13T21:13:57.105Z",
+      "orderId": "paper-mmpe9kl3-u9s4",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-13T15:05:06.083Z",
+    "lastUpdated": "2026-03-13T21:13:57.116Z",
     "lastPriceSync": "2026-03-13T21:00:05.349Z"
   }
 }
