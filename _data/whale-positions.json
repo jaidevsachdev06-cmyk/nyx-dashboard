@@ -10524,5 +10524,29 @@
     "currentValue": 19.2222,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "34d934a8-5d83-4b6f-b7c9-b19565ea7850",
+    "market": "Will Graham Platner be the Democratic nominee for Senate in Maine?",
+    "side": "Yes",
+    "entryPrice": 0.76,
+    "currentPrice": 0.76,
+    "shares": 23.84,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, nicoco89, scottilicious, elucidate, Cynical, Ozi",
+    "whaleCount": 6,
+    "confidence": "Very High",
+    "avgScore": 86.2,
+    "avgWinRate": 67.3,
+    "reasoning": "Consensus: 6 whales (avg score 86.2, WR 67.3%) Yes. bet=$18.12, shares=23.84, tierMult=1.17. Whales: Car, nicoco89, scottilicious, elucidate, Cynical, Ozi",
+    "endDate": "2026-07-31",
+    "conditionId": "0x807a5bd3d52942c2d8b58bf71a583d4aa03a637f3fd9ff7a7c4a1ad818003067",
+    "createdAt": "2026-03-13T02:34:19.306Z",
+    "entryDate": "2026-03-13T02:34:19.306Z",
+    "invested": 18.1184,
+    "currentValue": 18.1184,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
