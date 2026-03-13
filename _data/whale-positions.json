@@ -10596,5 +10596,29 @@
     "currentValue": 6.9802,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "67c3e159-9b0a-4986-a3c7-4e91d9c7f643",
+    "market": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+    "side": "Yes",
+    "entryPrice": 0.9935,
+    "currentPrice": 0.9935,
+    "shares": 7.24,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, elucidate, wkmfa57, arjenw",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 81.2,
+    "avgWinRate": 62.3,
+    "reasoning": "Consensus: 4 whales (avg score 81.2, WR 62.3%) Yes. bet=$7.19, shares=7.24, tierMult=1.50. Whales: scottilicious, elucidate, wkmfa57, arjenw",
+    "endDate": "2026-03-18",
+    "conditionId": "0x257b18205f908aef01ef2d1d50e6fea7d29cf5486fe04031d8b101394476faed",
+    "createdAt": "2026-03-13T02:34:36.758Z",
+    "entryDate": "2026-03-13T02:34:36.758Z",
+    "invested": 7.1929,
+    "currentValue": 7.1929,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
