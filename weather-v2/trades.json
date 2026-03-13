@@ -9275,9 +9275,9 @@
       "bucket": "11°C",
       "question": "Will the highest temperature in Tokyo be 11°C on March 13?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 5.35,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.44,
       "createdAt": "2026-03-12T09:12:46.300Z",
       "signal": {
         "forecastTemp": 9.8,
@@ -9295,7 +9295,11 @@
       "orderId": "paper-mmn929zb-icr4",
       "txHash": null,
       "currentPrice": 0.9945,
-      "updatedAt": "2026-03-13T07:00:04.032Z"
+      "updatedAt": "2026-03-13T07:00:04.032Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-13T07:05:05.856Z",
+      "closedAt": "2026-03-13T07:05:05.873Z"
     },
     {
       "id": "oc-mmn929zr-z38o8i",
@@ -9597,7 +9601,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-13T05:05:06.535Z",
+    "lastUpdated": "2026-03-13T07:05:05.880Z",
     "lastPriceSync": "2026-03-13T07:00:06.047Z"
   }
 }
