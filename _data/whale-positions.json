@@ -10812,5 +10812,29 @@
     "currentValue": 4.8784,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "6d072a52-1277-442e-baa5-3fe39c7d385b",
+    "market": "Miguel Díaz-Canel out as leader of Cuba by June 30?",
+    "side": "No",
+    "entryPrice": 0.5,
+    "currentPrice": 0.5,
+    "shares": 18.38,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "kekkone, LinaBell, Michael5289",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.7,
+    "avgWinRate": 71.7,
+    "reasoning": "Consensus: 3 whales (avg score 78.7, WR 71.7%) No. bet=$9.19, shares=18.38, tierMult=1.67. Whales: kekkone, LinaBell, Michael5289",
+    "endDate": "2026-06-30",
+    "conditionId": "0x119db6dda44f109bcdc2ec5e1d9cb8c21fa1a7e66489f59b1190fdfb25c0d515",
+    "createdAt": "2026-03-13T02:35:33.910Z",
+    "entryDate": "2026-03-13T02:35:33.910Z",
+    "invested": 9.19,
+    "currentValue": 9.19,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
