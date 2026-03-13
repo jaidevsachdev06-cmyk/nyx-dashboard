@@ -9242,9 +9242,9 @@
       "bucket": "16°C",
       "question": "Will the highest temperature in Munich be 16°C on March 13?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 6.29,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 6.3,
       "createdAt": "2026-03-12T08:12:52.256Z",
       "signal": {
         "forecastTemp": 15.1,
@@ -9262,7 +9262,11 @@
       "orderId": "paper-mmn6x8sd-nrpp",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-13T15:00:03.209Z"
+      "updatedAt": "2026-03-13T15:00:03.209Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-13T15:05:06.059Z",
+      "closedAt": "2026-03-13T15:05:06.077Z"
     },
     {
       "id": "oc-mmn929y4-vk388d",
@@ -9605,7 +9609,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-13T09:10:04.357Z",
+    "lastUpdated": "2026-03-13T15:05:06.083Z",
     "lastPriceSync": "2026-03-13T15:00:04.635Z"
   }
 }
