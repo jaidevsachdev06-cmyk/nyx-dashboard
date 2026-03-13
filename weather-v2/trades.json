@@ -9244,7 +9244,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.97,
+      "pnlUSDC": -4.95,
       "createdAt": "2026-03-12T08:12:52.256Z",
       "signal": {
         "forecastTemp": 15.1,
@@ -9261,8 +9261,8 @@
       "enteredAt": "2026-03-12T08:12:52.278Z",
       "orderId": "paper-mmn6x8sd-nrpp",
       "txHash": null,
-      "currentPrice": 0.485,
-      "updatedAt": "2026-03-13T09:00:02.441Z"
+      "currentPrice": 0.375,
+      "updatedAt": "2026-03-13T09:30:03.024Z"
     },
     {
       "id": "oc-mmn929y4-vk388d",
@@ -9312,8 +9312,8 @@
       "bucket": "11°C",
       "question": "Will the highest temperature in Paris be 11°C on March 13?",
       "side": "NO",
-      "status": "open",
-      "result": null,
+      "status": "closed",
+      "result": "loss",
       "pnlUSDC": -7.14,
       "createdAt": "2026-03-12T09:12:46.359Z",
       "signal": {
@@ -9332,7 +9332,11 @@
       "orderId": "paper-mmn92a0z-1wxu",
       "txHash": null,
       "currentPrice": 0.225,
-      "updatedAt": "2026-03-13T09:00:02.974Z"
+      "updatedAt": "2026-03-13T09:00:02.974Z",
+      "resolutionPrice": 0.225,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-13T09:10:04.339Z",
+      "closedAt": "2026-03-13T09:10:04.354Z"
     },
     {
       "id": "oc-mmnb7kp1-dvevbp",
@@ -9508,7 +9512,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.42,
+      "pnlUSDC": 1.02,
       "createdAt": "2026-03-12T13:12:44.724Z",
       "signal": {
         "forecastTemp": 44,
@@ -9525,8 +9529,8 @@
       "enteredAt": "2026-03-12T13:12:44.740Z",
       "orderId": "paper-mmnhmvux-61dn",
       "txHash": null,
-      "currentPrice": 0.7,
-      "updatedAt": "2026-03-13T09:00:03.544Z"
+      "currentPrice": 0.735,
+      "updatedAt": "2026-03-13T09:30:03.597Z"
     },
     {
       "id": "oc-mmnlxejj-lo0gy9",
@@ -9541,7 +9545,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.5,
+      "pnlUSDC": 3.3,
       "createdAt": "2026-03-12T15:12:53.983Z",
       "signal": {
         "forecastTemp": 76.4,
@@ -9558,8 +9562,8 @@
       "enteredAt": "2026-03-12T15:12:53.997Z",
       "orderId": "paper-mmnlxek3-dy2g",
       "txHash": null,
-      "currentPrice": 0.76,
-      "updatedAt": "2026-03-13T09:00:04.167Z"
+      "currentPrice": 0.75,
+      "updatedAt": "2026-03-13T09:30:04.171Z"
     },
     {
       "id": "oc-mmno2gkr-cfohgx",
@@ -9601,7 +9605,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-13T07:05:05.880Z",
-    "lastPriceSync": "2026-03-13T09:00:04.467Z"
+    "lastUpdated": "2026-03-13T09:10:04.357Z",
+    "lastPriceSync": "2026-03-13T09:30:04.472Z"
   }
 }
