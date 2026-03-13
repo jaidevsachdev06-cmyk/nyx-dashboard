@@ -10836,5 +10836,29 @@
     "currentValue": 9.19,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "38020270-9797-4152-847b-a44b905fb4df",
+    "market": "Fed rate cut by March 2026 meeting?",
+    "side": "No",
+    "entryPrice": 0.993,
+    "currentPrice": 0.993,
+    "shares": 5.25,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "debased, LinaBell, ProfessionalPunter",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 78.6,
+    "avgWinRate": 67.7,
+    "reasoning": "Consensus: 3 whales (avg score 78.6, WR 67.7%) No. bet=$5.21, shares=5.25, tierMult=1.00. Whales: debased, LinaBell, ProfessionalPunter",
+    "endDate": "2026-03-18",
+    "conditionId": "0xe7f239d76b59c4e614f0bdb80467026da833083e38a31a27fde8e0907417ea12",
+    "createdAt": "2026-03-13T02:35:39.662Z",
+    "entryDate": "2026-03-13T02:35:39.662Z",
+    "invested": 5.2133,
+    "currentValue": 5.2133,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
