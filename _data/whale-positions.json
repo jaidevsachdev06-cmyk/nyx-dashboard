@@ -10072,7 +10072,7 @@
     "entryPrice": 0.9975,
     "currentPrice": 0.9995,
     "shares": 12.66,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "donjo, Anjun, debased, aenews, Xeny",
     "whaleCount": 5,
@@ -10092,7 +10092,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-13T22:00:30.951Z"
+    "updatedAt": "2026-03-13T22:05:05.199Z",
+    "exitPrice": 0.9995,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "8557a802-b52c-489c-8535-faea0f17e057",
