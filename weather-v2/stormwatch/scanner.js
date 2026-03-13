@@ -431,6 +431,11 @@ async function scan() {
           // Check bucket type blacklist (boundary = above/below types) - BYPASS for lottery candidates
           const bucketTypeOk = isLotteryCandidate || !(bucketTypeBlacklist.includes('boundary') && (bucket.type === 'above' || bucket.type === 'below'));
           
+          // CRITICAL FIX: Ban specific-degree NO positions (e.g., "12°C NO")
+          // These are coin flips - 1° forecast error = total loss
+          const isSpecificTempNO = bucket.type === 'exact' && side === 'NO';
+          const specificTempNOOk = isLotteryCandidate || !isSpecificTempNO || !bucketTypeBlacklist.includes('specific-temp-NO');
+          
           // FIX 2: Enhanced boundary trade filtering
           // Boundary trades (≥/≤) require higher model confidence (80% vs 60%)
           const isBoundaryTrade = bucket.type === 'above' || bucket.type === 'below';
@@ -442,7 +447,11 @@ async function scan() {
           const isRangeNO = bucket.type === 'range' && side === 'NO';
           const rangeNOOk = isLotteryCandidate || !isRangeNO || !problemCities.includes(city.name);
           
-          const confident = modelConfident && distOk && cityOk && bucketTypeOk && boundaryOk && rangeNOOk;
+          // CRITICAL FIX: Require minimum forecast sources (multi-source consensus)
+          const minSources = config.risk.minForecastSources || 1;
+          const hasEnoughSources = (forecast.sources || 0) >= minSources;
+          
+          const confident = modelConfident && distOk && cityOk && bucketTypeOk && specificTempNOOk && boundaryOk && rangeNOOk && hasEnoughSources;
 
           const bucketLabel = bucket.type === 'exact' ? `${bucket.low}°${bucket.unit}` :
                               bucket.type === 'range' ? `${bucket.low}-${bucket.high}°${bucket.unit}` :

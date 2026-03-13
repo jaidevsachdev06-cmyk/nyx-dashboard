@@ -43,6 +43,14 @@ async function processCandidate(signal) {
     return { entered: false, trade: null, reason: `Invalid price: ${currentPrice}` };
   }
 
+  // CRITICAL: Per-city trade limit
+  if (config.risk.maxTradesPerCity) {
+    const openInCity = store.getOpenPositions().filter(t => t.city === signal.city);
+    if (openInCity.length >= config.risk.maxTradesPerCity) {
+      return { entered: false, trade: null, reason: `City limit: ${openInCity.length}/${config.risk.maxTradesPerCity} open in ${signal.city}` };
+    }
+  }
+
   // Edge check
   const edge = signal.modelProb - currentPrice;
   const edgePct = (edge / currentPrice) * 100;
@@ -123,7 +131,10 @@ async function processCandidate(signal) {
   try {
     const signalData = {
       forecastTemp: signal.forecastTemp,
-      forecastSource: 'open-meteo',
+      forecastSource: signal.sources && signal.sources.length > 1 ? 'multi-source' : 'open-meteo',
+      sources: signal.sources || 1,  // Number of sources
+      sourceWeights: signal.weights || null,  // Source breakdown
+      forecastSD: signal.sd || null,  // Uncertainty estimate
       impliedProb: currentPrice,
       modelProb: signal.modelProb,
       edge: parseFloat(edge.toFixed(4)),
