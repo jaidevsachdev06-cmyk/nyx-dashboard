@@ -9516,7 +9516,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 4.92,
+      "pnlUSDC": 5.15,
       "createdAt": "2026-03-12T13:12:44.724Z",
       "signal": {
         "forecastTemp": 44,
@@ -9533,8 +9533,8 @@
       "enteredAt": "2026-03-12T13:12:44.740Z",
       "orderId": "paper-mmnhmvux-61dn",
       "txHash": null,
-      "currentPrice": 0.9645,
-      "updatedAt": "2026-03-13T22:00:03.701Z"
+      "currentPrice": 0.978,
+      "updatedAt": "2026-03-13T22:30:02.651Z"
     },
     {
       "id": "oc-mmnlxejj-lo0gy9",
@@ -9547,9 +9547,9 @@
       "bucket": "76-77°F",
       "question": "Will the highest temperature in Dallas be between 76-77°F on March 13?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -9.5,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -10.3,
       "createdAt": "2026-03-12T15:12:53.983Z",
       "signal": {
         "forecastTemp": 76.4,
@@ -9567,7 +9567,11 @@
       "orderId": "paper-mmnlxek3-dy2g",
       "txHash": null,
       "currentPrice": 0.11,
-      "updatedAt": "2026-03-13T22:00:04.280Z"
+      "updatedAt": "2026-03-13T22:00:04.280Z",
+      "resolutionPrice": 0.07,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-13T22:10:04.947Z",
+      "closedAt": "2026-03-13T22:10:04.963Z"
     },
     {
       "id": "oc-mmno2gkr-cfohgx",
@@ -9619,7 +9623,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.07,
+      "pnlUSDC": 2.73,
       "createdAt": "2026-03-13T21:13:57.089Z",
       "signal": {
         "forecastTemp": 81.8,
@@ -9639,13 +9643,13 @@
       "enteredAt": "2026-03-13T21:13:57.105Z",
       "orderId": "paper-mmpe9kl3-u9s4",
       "txHash": null,
-      "currentPrice": 0.14,
-      "updatedAt": "2026-03-13T22:00:04.832Z"
+      "currentPrice": 0.33,
+      "updatedAt": "2026-03-13T22:30:03.234Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-13T21:13:57.116Z",
-    "lastPriceSync": "2026-03-13T22:00:05.132Z"
+    "lastUpdated": "2026-03-13T22:10:04.966Z",
+    "lastPriceSync": "2026-03-13T22:30:03.534Z"
   }
 }
