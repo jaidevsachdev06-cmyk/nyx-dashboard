@@ -10548,5 +10548,29 @@
     "currentValue": 18.1184,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "234b34a2-0739-47da-98c6-92262716d113",
+    "market": "Will Reza Pahlavi enter Iran by December 31?",
+    "side": "No",
+    "entryPrice": 0.715,
+    "currentPrice": 0.715,
+    "shares": 16.63,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Roflan, kekkone, duderr, LinaBell",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 82.6,
+    "avgWinRate": 64.4,
+    "reasoning": "Consensus: 5 whales (avg score 82.6, WR 64.4%) No. bet=$11.89, shares=16.63, tierMult=1.20. Whales: Car, Roflan, kekkone, duderr, LinaBell",
+    "endDate": "2026-06-30",
+    "conditionId": "0x2f224fca80a6a6b3a2a200406473fc8b33da6bcf5af83dc3fe9021a541c0519d",
+    "createdAt": "2026-03-13T02:34:24.646Z",
+    "entryDate": "2026-03-13T02:34:24.646Z",
+    "invested": 11.8904,
+    "currentValue": 11.8904,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
