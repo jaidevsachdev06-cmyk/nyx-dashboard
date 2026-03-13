@@ -9516,7 +9516,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 5.09,
+      "pnlUSDC": 5.11,
       "createdAt": "2026-03-12T13:12:44.724Z",
       "signal": {
         "forecastTemp": 44,
@@ -9533,8 +9533,8 @@
       "enteredAt": "2026-03-12T13:12:44.740Z",
       "orderId": "paper-mmnhmvux-61dn",
       "txHash": null,
-      "currentPrice": 0.9745,
-      "updatedAt": "2026-03-13T23:00:03.353Z"
+      "currentPrice": 0.9755,
+      "updatedAt": "2026-03-13T23:30:03.763Z"
     },
     {
       "id": "oc-mmnlxejj-lo0gy9",
@@ -9621,9 +9621,9 @@
       "bucket": "78-79°F",
       "question": "Will the highest temperature in Miami be between 78-79°F on March 13?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -1.19,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -1.33,
       "createdAt": "2026-03-13T21:13:57.089Z",
       "signal": {
         "forecastTemp": 81.8,
@@ -9644,12 +9644,16 @@
       "orderId": "paper-mmpe9kl3-u9s4",
       "txHash": null,
       "currentPrice": 0.05,
-      "updatedAt": "2026-03-13T23:00:03.907Z"
+      "updatedAt": "2026-03-13T23:00:03.907Z",
+      "resolutionPrice": 0.04,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-13T23:10:04.517Z",
+      "closedAt": "2026-03-13T23:10:04.531Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-13T22:10:04.966Z",
-    "lastPriceSync": "2026-03-13T23:00:04.207Z"
+    "lastUpdated": "2026-03-13T23:10:04.534Z",
+    "lastPriceSync": "2026-03-13T23:30:04.064Z"
   }
 }
