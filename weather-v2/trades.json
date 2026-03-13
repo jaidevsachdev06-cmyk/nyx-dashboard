@@ -9465,9 +9465,9 @@
       "bucket": "10°C",
       "question": "Will the highest temperature in Seoul be 10°C on March 13?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 4.34,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.345,
       "createdAt": "2026-03-12T13:12:44.691Z",
       "signal": {
         "forecastTemp": 7.6,
@@ -9485,7 +9485,11 @@
       "orderId": "paper-mmnhmvty-w6nw",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-13T05:00:04.656Z"
+      "updatedAt": "2026-03-13T05:00:04.656Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-13T05:05:06.511Z",
+      "closedAt": "2026-03-13T05:05:06.529Z"
     },
     {
       "id": "oc-mmnhmvuc-k2e16i",
@@ -9593,7 +9597,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-13T02:05:04.520Z",
+    "lastUpdated": "2026-03-13T05:05:06.535Z",
     "lastPriceSync": "2026-03-13T05:00:06.035Z"
   }
 }
