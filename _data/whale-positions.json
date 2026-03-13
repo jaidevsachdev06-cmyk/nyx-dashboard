@@ -10740,5 +10740,29 @@
     "currentValue": 7.1361,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "23da6902-44d9-472c-8337-da556e6b20a5",
+    "market": "Internet Access restored in Iran by March 14, 2026?",
+    "side": "No",
+    "entryPrice": 0.9925,
+    "currentPrice": 0.9925,
+    "shares": 5.17,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, The-Joker, Xeny",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.4,
+    "avgWinRate": 66.7,
+    "reasoning": "Consensus: 3 whales (avg score 82.4, WR 66.7%) No. bet=$5.13, shares=5.17, tierMult=1.00. Whales: Car, The-Joker, Xeny",
+    "endDate": "2026-03-14",
+    "conditionId": "0x13c4737fb2d2886f5d71c95b9851db4eb2442faac4bc61fdfcf7277899dc25f6",
+    "createdAt": "2026-03-13T02:35:16.580Z",
+    "entryDate": "2026-03-13T02:35:16.580Z",
+    "invested": 5.1312,
+    "currentValue": 5.1312,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
