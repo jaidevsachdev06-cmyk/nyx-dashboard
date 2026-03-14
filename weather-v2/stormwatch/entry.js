@@ -51,29 +51,39 @@ async function processCandidate(signal) {
     }
   }
 
-  // Edge check
+  // Edge check (using calibrated probability)
   const edge = signal.modelProb - currentPrice;
   const edgePct = (edge / currentPrice) * 100;
   if (edgePct < config.risk.minEdgePct) {
     return { entered: false, trade: null, reason: `Insufficient edge: ${edgePct.toFixed(1)}% (min: ${config.risk.minEdgePct}%)` };
   }
 
-  // Lottery trade classification — probability-ratio approach
-  // Instead of edge %, we check: cheap price + model thinks there's a real chance + model meaningfully disagrees with market
-  // Lottery trade detection - emulate Paris 16°C YES conditions
+  // Lottery trade classification
   const lotteryConfig = config.risk.lottery || { enabled: false };
-  const probRatio = signal.modelProb / currentPrice;  // How much does model disagree with market?
+  const probRatio = signal.modelProb / currentPrice;
   const minProbRatio = lotteryConfig.minProbRatio || 1.35;
-  const minModelProb = lotteryConfig.minModelProb || 0.06;
+  const lotteryMinProb = lotteryConfig.minModelProb || 0.06;
   
   const isLottery = lotteryConfig.enabled && 
                     currentPrice < (lotteryConfig.maxEntryPrice || 0.15) && 
-                    signal.modelProb >= minModelProb &&
+                    signal.modelProb >= lotteryMinProb &&
                     probRatio >= minProbRatio;
 
+  // FIX 3 (2026-03-14): Normal YES trades are banned (5W/15L = -$74)
+  // YES is only allowed for lottery trades (4W lottery YES = +$346)
+  const sideRestriction = config.risk.normalSideRestriction || null;
+  if (!isLottery && sideRestriction && signal.side !== sideRestriction) {
+    return { entered: false, trade: null, reason: `Side restriction: normal trades must be ${sideRestriction} (got ${signal.side})` };
+  }
+
+  // FIX 2 (2026-03-14): Minimum entry price for normal trades
+  // 20-40c bracket: 4W/16L = -$88. Death zone.
+  const minEntryPrice = config.risk.minEntryPrice || 0;
+  if (!isLottery && currentPrice < minEntryPrice) {
+    return { entered: false, trade: null, reason: `Entry price too low: ${(currentPrice*100).toFixed(1)}c (min: ${(minEntryPrice*100).toFixed(0)}c for normal trades)` };
+  }
+
   // Sanity check: reject extreme edges (>250%) for NON-lottery trades
-  // When model and market disagree this much, market is usually right
-  // Feb 28-Mar 2: Toronto NO 7°C (263% edge) and Chicago NO 64-65°F (276% edge) both lost ~$12
   if (!isLottery && edgePct > 250) {
     return { entered: false, trade: null, reason: `Edge suspiciously high: ${edgePct.toFixed(0)}% — model likely miscalibrated` };
   }
@@ -94,10 +104,11 @@ async function processCandidate(signal) {
 
     console.log(`${tag} 🎰 LOTTERY TRADE (${lotteryToday.length + 1}/${maxDaily} today) | modelProb: ${(signal.modelProb*100).toFixed(1)}% | price: ${(currentPrice*100).toFixed(1)}¢ | edge: ${edgePct.toFixed(0)}%`);
   } else {
-    // Normal trade: apply confidence gates
-    // Use RAW model probability for confidence check (calibration is only for edge calculation)
-    const minModelProb = config.risk.minModelProb || 0.6;
-    const probToCheck = signal.rawModelProb || signal.modelProb; // Fallback to calibrated if raw not available
+    // FIX 1 (2026-03-14): Raised min raw model prob to 80%
+    // Below 80%: model is a coin flip (50%) or anti-informative (28%)
+    // Above 80%: model hits 70.4% actual accuracy
+    const minModelProb = config.risk.minModelProb || 0.80;
+    const probToCheck = signal.rawModelProb || signal.modelProb;
     if (probToCheck < minModelProb) {
       return { entered: false, trade: null, reason: `Low model confidence: ${(probToCheck*100).toFixed(1)}% raw (<${(minModelProb*100).toFixed(0)}%)` };
     }
@@ -131,10 +142,13 @@ async function processCandidate(signal) {
   try {
     const signalData = {
       forecastTemp: signal.forecastTemp,
-      forecastSource: signal.sources && signal.sources.length > 1 ? 'multi-source' : 'open-meteo',
-      sources: signal.sources || 1,  // Number of sources
-      sourceWeights: signal.weights || null,  // Source breakdown
-      forecastSD: signal.sd || null,  // Uncertainty estimate
+      // FIX 5 (2026-03-14): Fixed multi-source detection
+      // signal.forecastModels = number of Open-Meteo models
+      // signal.forecastSources = count of independent API sources (open-meteo, noaa, visualcrossing, weatherapi)
+      forecastSource: (signal.forecastSources || 0) > 1 ? 'multi-source' : 'open-meteo',
+      sources: signal.forecastSources || 1,
+      sourceDetails: signal.forecastWeights || null,
+      forecastSD: signal.forecastSD || signal.sd || null,
       impliedProb: currentPrice,
       modelProb: signal.modelProb,
       edge: parseFloat(edge.toFixed(4)),

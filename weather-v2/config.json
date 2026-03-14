@@ -25,15 +25,15 @@
     "maxPositionSizeUSDC": 50,
     "maxOpenPositions": 20,
     "maxDailyLossUSDC": 50,
-    "minEdgePct": 75,
+    "minEdgePct": 15,
     "maxExposurePerCity": 150,
     "kellyMultiplier": 0.25,
     "defaultSizeUSDC": 6,
-    "minModelProb": 0.75,
+    "minModelProb": 0.8,
     "maxModelProb": 0.95,
     "minDistanceFromLine": 2,
     "maxTradesPerCity": 1,
-    "minForecastSources": 2,
+    "minForecastSources": 1,
     "cityBlacklist": [
       "London",
       "Toronto",
@@ -56,7 +56,10 @@
       "minEdgePPImprove": 10,
       "minEdgePctImprove": 20,
       "minHoldMinutes": 30
-    }
+    },
+    "minEntryPrice": 0.4,
+    "normalSideRestriction": "NO",
+    "preferMultiSource": true
   },
   "stormwatch": {
     "scanIntervalMinutes": 120,

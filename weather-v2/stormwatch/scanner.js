@@ -155,7 +155,8 @@ function aggregateForecasts(forecasts, cityName, unit) {
       modelSpread: Math.round(modelSpread * 10) / 10,
       biasAdj: bias,
       models: n,
-      weights: ensemble.weights  // Track which models contributed
+      sources: 1,  // Open-Meteo only = 1 source (even with multiple models)
+      weights: ensemble.weights
     };
   }
   return result;
@@ -472,7 +473,8 @@ async function scan() {
             forecastTemp: forecast.mean,
             forecastSD: forecast.sd,
             forecastModels: forecast.models,
-            forecastWeights: forecast.weights,  // Which models contributed
+            forecastSources: forecast.sources || 1,  // Independent API source count (for multi-source detection)
+            forecastWeights: forecast.weights,  // Source/model breakdown
             modelProb: parseFloat(calibratedModelProb.toFixed(4)),  // Calibrated (for edge calc)
             rawModelProb: parseFloat(rawModelProb.toFixed(4)),      // Raw (for reference)
             marketPrice: parseFloat(effectivePrice.toFixed(4)),
