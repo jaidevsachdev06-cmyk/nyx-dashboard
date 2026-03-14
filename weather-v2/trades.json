@@ -9667,7 +9667,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.11,
+      "pnlUSDC": -1.95,
       "createdAt": "2026-03-14T03:13:38.784Z",
       "signal": {
         "forecastTemp": 45.5,
@@ -9696,13 +9696,13 @@
       "enteredAt": "2026-03-14T03:13:38.800Z",
       "orderId": "paper-mmpr454n-8whm",
       "txHash": null,
-      "currentPrice": 0.0305,
-      "updatedAt": "2026-03-14T03:30:02.753Z"
+      "currentPrice": 0.0005,
+      "updatedAt": "2026-03-14T04:00:02.963Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-14T03:13:38.812Z",
-    "lastPriceSync": "2026-03-14T03:30:03.054Z"
+    "lastPriceSync": "2026-03-14T04:00:03.263Z"
   }
 }
