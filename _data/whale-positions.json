@@ -10684,7 +10684,7 @@
     "entryPrice": 0.9995,
     "currentPrice": 1,
     "shares": 4.86,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Anjun, JAHODA, DOJ, Ozi",
     "whaleCount": 4,
@@ -10704,7 +10704,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T10:00:48.040Z"
+    "updatedAt": "2026-03-14T10:05:23.732Z",
+    "exitPrice": 1,
+    "notes": "Whale exit triggered: Anjun, JAHODA, DOJ, Ozi exited position"
   },
   {
     "id": "32b1100f-ada3-4f7b-97cd-181b904669e3",
