@@ -11011,7 +11011,7 @@
     "entryPrice": 0.866,
     "currentPrice": 0.9055,
     "shares": 6.26,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "GollumGekko, elucidate, kekkone, Gr33d",
     "whaleCount": 4,
@@ -11031,7 +11031,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T10:01:30.030Z"
+    "updatedAt": "2026-03-14T10:06:18.403Z",
+    "exitPrice": 0.9055,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "e9bb3c50-5cac-47f0-b0a1-88a8aceec586",
