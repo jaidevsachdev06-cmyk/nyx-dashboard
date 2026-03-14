@@ -11386,5 +11386,29 @@
     "currentValue": 6.96,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "96b1b753-0c21-49be-b6d5-5e47e6d95b10",
+    "market": "Iran removed from FIFA World Cup by March 31?",
+    "side": "No",
+    "entryPrice": 0.725,
+    "currentPrice": 0.725,
+    "shares": 7.14,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Sonix, Ozi",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.1,
+    "avgWinRate": 67.4,
+    "reasoning": "Consensus: 3 whales (avg score 82.1, WR 67.4%) No. bet=$5.18, shares=7.14, tierMult=1.00. Whales: Car, Sonix, Ozi",
+    "endDate": "2026-03-31",
+    "conditionId": "0xd1a27425265c58ea1fef1ab3292b0a6c58481fd022658221c7e6d7c7e7db3a09",
+    "createdAt": "2026-03-14T17:35:14.513Z",
+    "entryDate": "2026-03-14T17:35:14.513Z",
+    "invested": 5.1765,
+    "currentValue": 5.1765,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
