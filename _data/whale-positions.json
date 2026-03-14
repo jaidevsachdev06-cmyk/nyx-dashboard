@@ -10953,7 +10953,7 @@
     "entryPrice": 0.993,
     "currentPrice": 0.9944999999999999,
     "shares": 5.25,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, LinaBell, ProfessionalPunter",
     "whaleCount": 3,
@@ -10973,7 +10973,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T12:00:55.555Z"
+    "updatedAt": "2026-03-14T12:05:11.859Z",
+    "exitPrice": 0.9944999999999999,
+    "notes": "Whale exit triggered: debased exited position"
   },
   {
     "id": "a894b755-0bd2-49e9-9e33-18b26f919082",
