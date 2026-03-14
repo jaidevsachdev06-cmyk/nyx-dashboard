@@ -9653,11 +9653,54 @@
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-13T23:10:04.517Z",
       "closedAt": "2026-03-13T23:10:04.531Z"
+    },
+    {
+      "id": "oc-mmpr4540-z1yelk",
+      "conditionId": "0x44f403ac58e4aaab4f17e957e1dc50d6b0014ab600c378c6d0bf954ebf94921e",
+      "tokenId": "0xd9d452fadf977856fc336db7ee8dbd487a09687dd1505bfb63079b54ae900d9f",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-13-2026-42-43f",
+      "city": "New York City",
+      "date": "2026-03-13",
+      "bucket": "42-43°F",
+      "question": "Will the highest temperature in New York City be between 42-43°F on March 13?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-14T03:13:38.784Z",
+      "signal": {
+        "forecastTemp": 45.5,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 1.5,
+        "impliedProb": 0.07,
+        "modelProb": 0.667,
+        "edge": 0.597,
+        "isLottery": true
+      },
+      "notes": "Forecast: 45.5°F | Model: 67% vs Market: 7% | Edge: 852.9% 🎰LOTTERY",
+      "entryPrice": 0.07,
+      "size": 28,
+      "sizeUSDC": 1.9600000000000002,
+      "enteredAt": "2026-03-14T03:13:38.800Z",
+      "orderId": "paper-mmpr454n-8whm",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-14T03:05:03.655Z",
+    "lastUpdated": "2026-03-14T03:13:38.812Z",
     "lastPriceSync": "2026-03-14T03:00:03.881Z"
   }
 }
