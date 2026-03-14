@@ -10877,7 +10877,7 @@
     "market": "Will Anthropic have the best AI model at the end of March 2026?",
     "side": "Yes",
     "entryPrice": 0.8665,
-    "currentPrice": 0.895,
+    "currentPrice": 0.8945000000000001,
     "shares": 5.63,
     "status": "open",
     "source": "consensus-scanner",
@@ -10892,14 +10892,14 @@
     "createdAt": "2026-03-13T02:35:28.003Z",
     "entryDate": "2026-03-13T02:35:28.003Z",
     "invested": 4.8784,
-    "currentValue": 5.0389,
-    "pnl": 0.1605,
-    "pnlPercent": 3.29,
+    "currentValue": 5.036,
+    "pnl": 0.1576,
+    "pnlPercent": 3.23,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T03:31:17.147Z"
+    "updatedAt": "2026-03-14T04:01:19.139Z"
   },
   {
     "id": "6d072a52-1277-442e-baa5-3fe39c7d385b",
