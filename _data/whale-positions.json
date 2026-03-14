@@ -10715,7 +10715,7 @@
     "entryPrice": 0.385,
     "currentPrice": 0.375,
     "shares": 15.27,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "archaic, nicoco89, Roflan",
     "whaleCount": 3,
@@ -10735,7 +10735,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T10:00:51.601Z"
+    "updatedAt": "2026-03-14T10:05:26.170Z",
+    "exitPrice": 0.375,
+    "notes": "Whale exit triggered: Roflan exited position"
   },
   {
     "id": "3b264edd-e5dd-4154-87ff-efa4fea80ed4",
