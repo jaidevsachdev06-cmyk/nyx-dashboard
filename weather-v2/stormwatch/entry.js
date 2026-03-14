@@ -15,6 +15,29 @@ async function processCandidate(signal) {
   const tag = `[entry] ${signal.city} ${signal.date} ${signal.bucket} ${signal.side}`;
   console.log(`${tag} — Processing candidate...`);
 
+  // FIX 6 (2026-03-14): Reject expired or near-expiry markets
+  // The bug: scanner entered a March 13 market at 03:13 UTC on March 14.
+  // Market resolved 50 mins later → guaranteed loss.
+  if (signal.date) {
+    const now = Date.now();
+    // Look up city timezone, default to UTC if unknown
+    const cityConfig = (config.cities || []).find(c => c.name === signal.city);
+    const tz = cityConfig?.tz || 'UTC';
+
+    // Get current time in the city's local timezone
+    const localDateStr = new Date(now).toLocaleDateString('en-CA', { timeZone: tz }); // YYYY-MM-DD
+    const localHour = parseInt(new Date(now).toLocaleString('en-US', { timeZone: tz, hour: 'numeric', hour12: false }));
+
+    if (signal.date < localDateStr) {
+      // Market date already passed in local time → definitely expired
+      return { entered: false, trade: null, reason: `Market expired: ${signal.date} is past (local: ${localDateStr} ${tz})` };
+    }
+    if (signal.date === localDateStr && localHour >= 22) {
+      // Same day but within 2h of midnight local → too close to resolution
+      return { entered: false, trade: null, reason: `Too close to expiry: ${localHour}:00 local (${tz}), market date ${signal.date}` };
+    }
+  }
+
   // Circuit breaker check
   if (circuitBreaker.isTripped()) {
     return { entered: false, trade: null, reason: "Circuit breaker tripped — trading paused after 3 consecutive losses" };

@@ -162,12 +162,16 @@ async function main() {
       msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
       
       for (const t of openTrades) {
-        const unrealized = (t.currentPrice - t.entryPrice) * t.size;
-        totalUnrealized += unrealized;
+        // FIX 7 (2026-03-14): Guard against NaN prices in notification
+        // Near-resolution markets can return undefined/null currentPrice
+        const safeCurrentPrice = (t.currentPrice != null && !isNaN(t.currentPrice)) ? t.currentPrice : t.entryPrice;
+        const safeEntryPrice = (t.entryPrice != null && !isNaN(t.entryPrice)) ? t.entryPrice : 0;
+        const unrealized = (safeCurrentPrice - safeEntryPrice) * (t.size || 0);
+        totalUnrealized += isNaN(unrealized) ? 0 : unrealized;
         const indicator = unrealized >= 0 ? '🟢' : '🔴';
-        const entry = (t.entryPrice * 100).toFixed(1) + '¢';
-        const now = (t.currentPrice * 100).toFixed(1) + '¢';
-        const pnl = (unrealized >= 0 ? '+$' : '-$') + Math.abs(unrealized).toFixed(2);
+        const entry = (safeEntryPrice * 100).toFixed(1) + '¢';
+        const now = (t.currentPrice != null && !isNaN(t.currentPrice)) ? (t.currentPrice * 100).toFixed(1) + '¢' : '—';
+        const pnl = isNaN(unrealized) ? '$0.00' : ((unrealized >= 0 ? '+$' : '-$') + Math.abs(unrealized).toFixed(2));
         
         msg += `| ${indicator}  | ${t.city.padEnd(8)} | ${t.bucket.padEnd(8)} | ${t.side.padEnd(5)} | ${entry.padEnd(7)} | ${now.padEnd(7)} | ${pnl.padEnd(8)} |\n`;
         msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
