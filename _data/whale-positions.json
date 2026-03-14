@@ -10624,7 +10624,7 @@
     "entryPrice": 0.205,
     "currentPrice": 0.155,
     "shares": 34.05,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, debased, kekkone, Xeny",
     "whaleCount": 4,
@@ -10644,7 +10644,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T10:00:39.821Z"
+    "updatedAt": "2026-03-14T10:05:21.177Z",
+    "exitPrice": 0.155,
+    "notes": "Whale exit triggered: debased exited position"
   },
   {
     "id": "67c3e159-9b0a-4986-a3c7-4e91d9c7f643",
