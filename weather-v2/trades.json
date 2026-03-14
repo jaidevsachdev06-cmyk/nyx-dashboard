@@ -9665,9 +9665,9 @@
       "bucket": "42-43°F",
       "question": "Will the highest temperature in New York City be between 42-43°F on March 13?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -1.95,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -1.96,
       "createdAt": "2026-03-14T03:13:38.784Z",
       "signal": {
         "forecastTemp": 45.5,
@@ -9697,12 +9697,16 @@
       "orderId": "paper-mmpr454n-8whm",
       "txHash": null,
       "currentPrice": 0.0005,
-      "updatedAt": "2026-03-14T04:00:02.963Z"
+      "updatedAt": "2026-03-14T04:00:02.963Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-14T04:05:28.382Z",
+      "closedAt": "2026-03-14T04:05:28.395Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-14T03:13:38.812Z",
+    "lastUpdated": "2026-03-14T04:05:28.400Z",
     "lastPriceSync": "2026-03-14T04:00:03.263Z"
   }
 }
