@@ -11069,7 +11069,7 @@
     "entryPrice": 0.9575,
     "currentPrice": 0.9624999999999999,
     "shares": 17.79,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "GollumGekko, kekkone, archaic, Gr33d, scottilicious, FrancisSP8, debased, Anjun",
     "whaleCount": 8,
@@ -11089,6 +11089,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T10:01:37.544Z"
+    "updatedAt": "2026-03-14T10:05:33.734Z",
+    "exitPrice": 0.9624999999999999,
+    "notes": "Whale exit triggered: Gr33d exited position"
   }
 ]
