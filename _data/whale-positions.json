@@ -11266,5 +11266,29 @@
     "currentValue": 6.3921,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "245b3d21-28a3-4e78-81eb-3b6258aca26a",
+    "market": "Russia strike impacts Kyiv municipality during week of March 2, 2026?",
+    "side": "Yes",
+    "entryPrice": 0.9995,
+    "currentPrice": 0.9995,
+    "shares": 4.97,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, ProfessionalPunter, Xeny, Thonker",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 80.4,
+    "avgWinRate": 64.6,
+    "reasoning": "Consensus: 4 whales (avg score 80.4, WR 64.6%) Yes. bet=$4.97, shares=4.97, tierMult=1.00. Whales: Car, ProfessionalPunter, Xeny, Thonker",
+    "endDate": "",
+    "conditionId": "0x771de080638c0fd0deff3e2016dfb22f16c1f6edad690c75d1f4cb9b240add51",
+    "createdAt": "2026-03-14T17:34:39.902Z",
+    "entryDate": "2026-03-14T17:34:39.902Z",
+    "invested": 4.9675,
+    "currentValue": 4.9675,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
