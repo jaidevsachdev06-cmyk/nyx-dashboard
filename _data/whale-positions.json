@@ -10864,7 +10864,7 @@
     "entryPrice": 0.215,
     "currentPrice": 0.155,
     "shares": 31.86,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, kekkone, Moond",
     "whaleCount": 3,
@@ -10884,7 +10884,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T10:01:10.542Z"
+    "updatedAt": "2026-03-14T10:05:31.278Z",
+    "exitPrice": 0.155,
+    "notes": "Whale exit triggered: Moond exited position"
   },
   {
     "id": "720f476f-6710-4920-ad22-7541cdc19152",
