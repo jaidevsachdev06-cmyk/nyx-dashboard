@@ -10655,9 +10655,9 @@
     "market": "Will there be no change in Fed interest rates after the March 2026 meeting?",
     "side": "Yes",
     "entryPrice": 0.9935,
-    "currentPrice": 0.9964999999999999,
+    "currentPrice": 0.9965,
     "shares": 7.24,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, elucidate, wkmfa57, arjenw",
     "whaleCount": 4,
@@ -10677,7 +10677,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T20:00:29.384Z"
+    "updatedAt": "2026-03-14T20:05:01.196Z",
+    "exitPrice": 0.9965,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "1ffc5b50-8839-4431-a886-1529724978aa",
