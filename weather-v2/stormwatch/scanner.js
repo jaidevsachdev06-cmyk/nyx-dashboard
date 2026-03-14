@@ -423,8 +423,8 @@ async function scan() {
           // This maintains strategy continuity while improving edge estimates
           const modelConfident = rawModelProb >= minModelProb && rawModelProb <= maxModelProb;
           
-          // Check distance (legacy, now default 0)
-          const distOk = distFromLine == null || distFromLine >= minDist;
+          // Check distance (legacy, now default 0) — lottery candidates bypass
+          const distOk = isLotteryCandidate || distFromLine == null || distFromLine >= minDist;
           
           // Check city blacklist - BYPASS for lottery candidates
           const cityOk = isLotteryCandidate || !cityBlacklist.includes(city.name);
@@ -452,7 +452,11 @@ async function scan() {
           const minSources = config.risk.minForecastSources || 1;
           const hasEnoughSources = (forecast.sources || 0) >= minSources;
           
-          const confident = modelConfident && distOk && cityOk && bucketTypeOk && specificTempNOOk && boundaryOk && rangeNOOk && hasEnoughSources;
+          // Lottery candidates bypass model prob floor (they're longshots by definition)
+          const confident = (isLotteryCandidate || modelConfident) && distOk && cityOk && bucketTypeOk && specificTempNOOk && boundaryOk && rangeNOOk && hasEnoughSources;
+          
+          if (isLotteryCandidate && edgePct > 0) {
+          }
 
           const bucketLabel = bucket.type === 'exact' ? `${bucket.low}°${bucket.unit}` :
                               bucket.type === 'range' ? `${bucket.low}-${bucket.high}°${bucket.unit}` :
