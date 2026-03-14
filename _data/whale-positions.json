@@ -10593,7 +10593,7 @@
     "entryPrice": 0.715,
     "currentPrice": 0.735,
     "shares": 16.63,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Roflan, kekkone, duderr, LinaBell",
     "whaleCount": 5,
@@ -10613,7 +10613,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T10:00:35.934Z"
+    "updatedAt": "2026-03-14T10:05:18.706Z",
+    "exitPrice": 0.735,
+    "notes": "Whale exit triggered: LinaBell exited position"
   },
   {
     "id": "ae510086-a044-4b2d-b413-692a0be2b730",
