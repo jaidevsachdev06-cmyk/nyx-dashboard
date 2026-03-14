@@ -10984,7 +10984,7 @@
     "entryPrice": 0.605,
     "currentPrice": 0.605,
     "shares": 27.57,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, debased, elucidate, nicoco89, Polar, archaic",
     "whaleCount": 6,
@@ -11004,7 +11004,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-14T12:00:59.094Z"
+    "updatedAt": "2026-03-14T12:05:14.541Z",
+    "exitPrice": 0.605,
+    "notes": "Whale exit triggered: debased exited position"
   },
   {
     "id": "0ea30402-5a7f-4e38-8df6-ced7c5cdfbf8",
