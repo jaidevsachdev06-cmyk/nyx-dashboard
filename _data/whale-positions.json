@@ -11362,5 +11362,29 @@
     "currentValue": 5.1186,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "c191d542-d072-4ea2-97d4-5bdf9c49c277",
+    "market": "Iran x Israel/US conflict ends by March 31?",
+    "side": "Yes",
+    "entryPrice": 0.145,
+    "currentPrice": 0.145,
+    "shares": 48,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, kekkone, Xeny",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 83.8,
+    "avgWinRate": 67.9,
+    "reasoning": "Consensus: 3 whales (avg score 83.8, WR 67.9%) Yes. bet=$6.96, shares=48, tierMult=1.33. Whales: Car, kekkone, Xeny",
+    "endDate": "2026-03-31",
+    "conditionId": "0x5a200d7d560169d60dc82cd16bb14c16f36f029fdf609dcb92d06a554f9f0fe1",
+    "createdAt": "2026-03-14T17:35:09.045Z",
+    "entryDate": "2026-03-14T17:35:09.045Z",
+    "invested": 6.96,
+    "currentValue": 6.96,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
