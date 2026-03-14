@@ -9534,7 +9534,7 @@
       "orderId": "paper-mmnhmvux-61dn",
       "txHash": null,
       "currentPrice": 0.9805,
-      "updatedAt": "2026-03-14T00:30:03.628Z"
+      "updatedAt": "2026-03-14T01:00:47.200Z"
     },
     {
       "id": "oc-mmnlxejj-lo0gy9",
@@ -9654,6 +9654,6 @@
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-13T23:10:04.534Z",
-    "lastPriceSync": "2026-03-14T00:30:03.928Z"
+    "lastPriceSync": "2026-03-14T01:00:47.500Z"
   }
 }
