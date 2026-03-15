@@ -10936,7 +10936,7 @@
     "entryPrice": 0.5,
     "currentPrice": 0.49,
     "shares": 18.38,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "kekkone, LinaBell, Michael5289",
     "whaleCount": 3,
@@ -10956,7 +10956,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-15T06:00:28.516Z"
+    "updatedAt": "2026-03-15T06:05:00.353Z",
+    "exitPrice": 0.49,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "38020270-9797-4152-847b-a44b905fb4df",
