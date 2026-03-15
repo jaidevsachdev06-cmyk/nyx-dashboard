@@ -11408,7 +11408,7 @@
     "market": "Will Rachida Dati win the Paris mayor election?",
     "side": "Yes",
     "entryPrice": 0.285,
-    "currentPrice": 0.265,
+    "currentPrice": 0.28,
     "shares": 17.96,
     "status": "open",
     "source": "consensus-scanner",
@@ -11423,14 +11423,14 @@
     "createdAt": "2026-03-14T17:35:02.990Z",
     "entryDate": "2026-03-14T17:35:02.990Z",
     "invested": 5.1186,
-    "currentValue": 4.7594,
-    "pnl": -0.3592,
-    "pnlPercent": -7.02,
+    "currentValue": 5.0288,
+    "pnl": -0.0898,
+    "pnlPercent": -1.75,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-15T18:31:05.462Z"
+    "updatedAt": "2026-03-15T19:01:10.070Z"
   },
   {
     "id": "c191d542-d072-4ea2-97d4-5bdf9c49c277",
