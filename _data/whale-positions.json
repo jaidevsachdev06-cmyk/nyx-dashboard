@@ -10930,7 +10930,7 @@
     "market": "Miguel Díaz-Canel out as leader of Cuba by June 30?",
     "side": "No",
     "entryPrice": 0.5,
-    "currentPrice": 0.49,
+    "currentPrice": 0.495,
     "shares": 18.38,
     "status": "open",
     "source": "consensus-scanner",
@@ -10945,14 +10945,14 @@
     "createdAt": "2026-03-13T02:35:33.910Z",
     "entryDate": "2026-03-13T02:35:33.910Z",
     "invested": 9.19,
-    "currentValue": 9.0062,
-    "pnl": -0.1838,
-    "pnlPercent": -2,
+    "currentValue": 9.0981,
+    "pnl": -0.0919,
+    "pnlPercent": -1,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-15T01:00:38.143Z"
+    "updatedAt": "2026-03-15T01:30:37.525Z"
   },
   {
     "id": "38020270-9797-4152-847b-a44b905fb4df",
