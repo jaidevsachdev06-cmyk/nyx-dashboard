@@ -10781,7 +10781,7 @@
     "entryPrice": 0.48,
     "currentPrice": 0.445,
     "shares": 14.56,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "archaic, kekkone, LinaBell",
     "whaleCount": 3,
@@ -10801,7 +10801,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-15T00:00:30.698Z"
+    "updatedAt": "2026-03-15T00:05:04.050Z",
+    "exitPrice": 0.445,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "84c3e882-594c-42dd-a5c8-e4fb397ff7e3",
