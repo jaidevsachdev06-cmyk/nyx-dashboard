@@ -11112,7 +11112,7 @@
     "market": "Will the Iranian regime fall by June 30?",
     "side": "No",
     "entryPrice": 0.735,
-    "currentPrice": 0.735,
+    "currentPrice": 0.73,
     "shares": 22.76,
     "status": "open",
     "source": "consensus-scanner",
@@ -11127,14 +11127,14 @@
     "createdAt": "2026-03-14T17:33:52.844Z",
     "entryDate": "2026-03-14T17:33:52.844Z",
     "invested": 16.7286,
-    "currentValue": 16.7286,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 16.6148,
+    "pnl": -0.1138,
+    "pnlPercent": -0.68,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-15T01:30:45.765Z"
+    "updatedAt": "2026-03-15T02:00:46.665Z"
   },
   {
     "id": "b2deb6f3-d1f0-4707-8c22-731210340a1c",
