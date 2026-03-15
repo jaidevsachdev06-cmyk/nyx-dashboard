@@ -413,7 +413,7 @@ async function scan() {
           const cityBlacklist = config.risk.cityBlacklist || [];
           const bucketTypeBlacklist = config.risk.bucketTypeBlacklist || [];
           
-          // Check if this is a lottery candidate (bypass city blacklist for lottery)
+          // Check if this is a lottery candidate (bypasses some filters, but NOT city blacklist)
           const lotteryConfig = config.risk.lottery || { enabled: false };
           const isLotteryCandidate = lotteryConfig.enabled && 
                                       effectivePrice < (lotteryConfig.maxEntryPrice || 0.15) &&
@@ -426,8 +426,8 @@ async function scan() {
           // Check distance (legacy, now default 0) — lottery candidates bypass
           const distOk = isLotteryCandidate || distFromLine == null || distFromLine >= minDist;
           
-          // Check city blacklist - BYPASS for lottery candidates
-          const cityOk = isLotteryCandidate || !cityBlacklist.includes(city.name);
+          // Check city blacklist - NEVER bypassed (models are systematically wrong for these cities)
+          const cityOk = !cityBlacklist.includes(city.name);
           
           // Check bucket type blacklist (boundary = above/below types) - BYPASS for lottery candidates
           const bucketTypeOk = isLotteryCandidate || !(bucketTypeBlacklist.includes('boundary') && (bucket.type === 'above' || bucket.type === 'below'));
