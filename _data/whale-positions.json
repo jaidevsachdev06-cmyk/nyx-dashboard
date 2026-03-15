@@ -11379,7 +11379,7 @@
     "market": "US-Iran nuclear deal by March 31?",
     "side": "No",
     "entryPrice": 0.9695,
-    "currentPrice": 0.9664999999999999,
+    "currentPrice": 0.966,
     "shares": 9.38,
     "status": "open",
     "source": "consensus-scanner",
@@ -11394,14 +11394,14 @@
     "createdAt": "2026-03-14T17:34:55.025Z",
     "entryDate": "2026-03-14T17:34:55.025Z",
     "invested": 9.0939,
-    "currentValue": 9.0658,
-    "pnl": -0.0281,
-    "pnlPercent": -0.31,
+    "currentValue": 9.0611,
+    "pnl": -0.0328,
+    "pnlPercent": -0.36,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-15T21:01:01.186Z"
+    "updatedAt": "2026-03-15T21:31:00.330Z"
   },
   {
     "id": "74efacf9-4de2-4630-a491-f25600464d0d",
