@@ -5597,11 +5597,58 @@
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-16T10:05:50.197Z",
       "closedAt": "2026-03-16T10:05:50.212Z"
+    },
+    {
+      "id": "oc-mmt11571-hgaro6",
+      "conditionId": "0xdcbcb6633a4e48518bb52d1e67d7ab0b881a05f257a4fd3c89ac4de46e58353f",
+      "tokenId": "0xeaace33fc1ee00e80c8ae08018357ac01f70d2cee8c325358576a0c1299dee86",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-16-2026-30-31f",
+      "city": "Chicago",
+      "date": "2026-03-16",
+      "bucket": "30-31°F",
+      "question": "Will the highest temperature in Chicago be between 30-31°F on March 16?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-16T10:14:33.613Z",
+      "signal": {
+        "forecastTemp": 27,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.8,
+        "impliedProb": 0.0575,
+        "modelProb": 0.7013,
+        "edge": 0.6438,
+        "isLottery": true
+      },
+      "notes": "Forecast: 27.0°F | Model: 70% vs Market: 6% | Edge: 1119.7% 🎰LOTTERY",
+      "entryPrice": 0.0575,
+      "size": 52,
+      "sizeUSDC": 2.99,
+      "enteredAt": "2026-03-16T10:14:33.629Z",
+      "orderId": "paper-mmt1157r-k19m",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-16T10:05:50.215Z",
+    "lastUpdated": "2026-03-16T10:14:33.644Z",
     "lastPriceSync": "2026-03-16T10:00:03.383Z"
   }
 }
