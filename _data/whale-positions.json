@@ -11453,7 +11453,7 @@
     "entryPrice": 0.145,
     "currentPrice": 0.125,
     "shares": 48,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, kekkone, Xeny",
     "whaleCount": 3,
@@ -11473,7 +11473,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-16T04:01:09.002Z"
+    "updatedAt": "2026-03-16T04:05:22.053Z",
+    "exitPrice": 0.125,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "96b1b753-0c21-49be-b6d5-5e47e6d95b10",
