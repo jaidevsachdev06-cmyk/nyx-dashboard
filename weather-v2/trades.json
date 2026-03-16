@@ -5664,7 +5664,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": -1.82,
       "createdAt": "2026-03-16T19:14:26.989Z",
       "signal": {
         "forecastTemp": 59.2,
@@ -5708,12 +5708,14 @@
       "sizeUSDC": 12.09,
       "enteredAt": "2026-03-16T19:14:27.005Z",
       "orderId": "paper-mmtkbg3q-oft9",
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.395,
+      "updatedAt": "2026-03-16T19:30:04.472Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-16T19:14:27.018Z",
-    "lastPriceSync": "2026-03-16T14:00:04.425Z"
+    "lastPriceSync": "2026-03-16T19:30:04.773Z"
   }
 }
