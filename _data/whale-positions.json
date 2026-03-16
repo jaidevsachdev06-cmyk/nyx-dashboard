@@ -11569,5 +11569,29 @@
     "updatedAt": "2026-03-16T04:05:30.344Z",
     "exitPrice": 0.9275,
     "notes": "Dropped from whale consensus"
+  },
+  {
+    "id": "06bc90e8-9b60-4b16-9b71-f9b3c40fb61d",
+    "market": "Will the Iranian regime fall by April 30?",
+    "side": "No",
+    "entryPrice": 0.845,
+    "currentPrice": 0.845,
+    "shares": 20.02,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "JJo, Qualitative, debased, Car, GollumGekko, FrancisSP8",
+    "whaleCount": 6,
+    "confidence": "Very High",
+    "avgScore": 89.5,
+    "avgWinRate": 73.3,
+    "reasoning": "Consensus: 6 whales (avg score 89.5, WR 73.3%) No. bet=$16.92, shares=20.02. Whales: JJo, Qualitative, debased, Car, GollumGekko, FrancisSP8",
+    "endDate": "2026-04-30",
+    "conditionId": "0xe443dab97ad8b7f58558cc7a6a3932d156031e962a451e0461e9a4578d78fe84",
+    "createdAt": "2026-03-16T06:04:58.080Z",
+    "entryDate": "2026-03-16T06:04:58.080Z",
+    "invested": 16.9169,
+    "currentValue": 16.9169,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
