@@ -5556,9 +5556,9 @@
       "bucket": "68-69°F",
       "question": "Will the highest temperature in Atlanta be between 68-69°F on March 16?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 0,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -2.97,
       "createdAt": "2026-03-16T05:14:42.708Z",
       "signal": {
         "forecastTemp": 62,
@@ -5591,13 +5591,17 @@
       "enteredAt": "2026-03-16T05:14:42.719Z",
       "orderId": "paper-mmsqbjc3-162x",
       "txHash": null,
-      "currentPrice": 0.11,
-      "updatedAt": "2026-03-16T10:00:03.083Z"
+      "currentPrice": 0.007,
+      "updatedAt": "2026-03-16T10:05:49.297Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-16T10:05:50.197Z",
+      "closedAt": "2026-03-16T10:05:50.212Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-16T09:10:03.013Z",
+    "lastUpdated": "2026-03-16T10:05:50.215Z",
     "lastPriceSync": "2026-03-16T10:00:03.383Z"
   }
 }
