@@ -5544,11 +5544,58 @@
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-16T03:05:05.959Z",
       "closedAt": "2026-03-16T03:05:05.970Z"
+    },
+    {
+      "id": "oc-mmsqbjbo-1rdvoy",
+      "conditionId": "0x2a3dacd57543976689d688053f7d346f087ddd8048157b20d84a2444c136a8ff",
+      "tokenId": "0x5e3c45029011a628835e2ac66b46a852c271cfe9813fa2de44a7b1c9560d0c26",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-16-2026-68-69f",
+      "city": "Atlanta",
+      "date": "2026-03-16",
+      "bucket": "68-69°F",
+      "question": "Will the highest temperature in Atlanta be between 68-69°F on March 16?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-16T05:14:42.708Z",
+      "signal": {
+        "forecastTemp": 62,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 5,
+        "impliedProb": 0.11,
+        "modelProb": 0.7,
+        "edge": 0.59,
+        "isLottery": true
+      },
+      "notes": "Forecast: 62.0°F | Model: 70% vs Market: 11% | Edge: 536.4% 🎰LOTTERY",
+      "entryPrice": 0.11,
+      "size": 27,
+      "sizeUSDC": 2.97,
+      "enteredAt": "2026-03-16T05:14:42.719Z",
+      "orderId": "paper-mmsqbjc3-162x",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-16T03:05:05.973Z",
+    "lastUpdated": "2026-03-16T05:14:42.728Z",
     "lastPriceSync": "2026-03-16T03:00:03.229Z"
   }
 }
