@@ -11604,7 +11604,7 @@
     "entryPrice": 0.845,
     "currentPrice": 0.845,
     "shares": 20.02,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "JJo, Qualitative, Car, debased, GollumGekko, FrancisSP8",
     "whaleCount": 6,
@@ -11619,6 +11619,9 @@
     "invested": 16.9169,
     "currentValue": 16.9169,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "exitPrice": 0.845,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-03-16T08:05:11.069Z"
   }
 ]
