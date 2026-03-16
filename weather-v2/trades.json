@@ -5558,7 +5558,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": 0.81,
       "createdAt": "2026-03-16T05:14:42.708Z",
       "signal": {
         "forecastTemp": 62,
@@ -5590,12 +5590,14 @@
       "sizeUSDC": 2.97,
       "enteredAt": "2026-03-16T05:14:42.719Z",
       "orderId": "paper-mmsqbjc3-162x",
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.14,
+      "updatedAt": "2026-03-16T05:30:03.459Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-16T05:14:42.728Z",
-    "lastPriceSync": "2026-03-16T03:00:03.229Z"
+    "lastPriceSync": "2026-03-16T05:30:03.760Z"
   }
 }
