@@ -11683,5 +11683,29 @@
     "exitPrice": 0.845,
     "notes": "Dropped from whale consensus",
     "updatedAt": "2026-03-16T12:05:07.701Z"
+  },
+  {
+    "id": "88540559-7386-4075-86c6-915849deaa3b",
+    "market": "Will the Iranian regime fall by March 31?",
+    "side": "No",
+    "entryPrice": 0.9695,
+    "currentPrice": 0.9695,
+    "shares": 12.02,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "debased, kekkone, archaic, GollumGekko, FrancisSP8",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 87.1,
+    "avgWinRate": 75.7,
+    "reasoning": "Consensus: 5 whales (avg score 87.1, WR 75.7%) No. bet=$11.65, shares=12.02. Whales: debased, kekkone, archaic, GollumGekko, FrancisSP8",
+    "endDate": "2026-03-31",
+    "conditionId": "0x61ce3773237a948584e422de72265f937034af418a8b703e3a860ea62e59ff36",
+    "createdAt": "2026-03-16T22:05:01.551Z",
+    "entryDate": "2026-03-16T22:05:01.551Z",
+    "invested": 11.6534,
+    "currentValue": 11.6534,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
