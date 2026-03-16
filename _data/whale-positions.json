@@ -11466,7 +11466,7 @@
     "market": "Iran removed from FIFA World Cup by March 31?",
     "side": "No",
     "entryPrice": 0.725,
-    "currentPrice": 0.755,
+    "currentPrice": 0.78,
     "shares": 7.14,
     "status": "open",
     "source": "consensus-scanner",
@@ -11481,14 +11481,14 @@
     "createdAt": "2026-03-14T17:35:14.513Z",
     "entryDate": "2026-03-14T17:35:14.513Z",
     "invested": 5.1765,
-    "currentValue": 5.3907,
-    "pnl": 0.2142,
-    "pnlPercent": 4.14,
+    "currentValue": 5.5692,
+    "pnl": 0.3927,
+    "pnlPercent": 7.59,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-16T02:01:13.504Z"
+    "updatedAt": "2026-03-16T02:31:11.884Z"
   },
   {
     "id": "04428d4b-a024-459b-be74-eea59bf963ab",
