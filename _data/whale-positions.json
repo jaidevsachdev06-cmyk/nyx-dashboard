@@ -11360,7 +11360,7 @@
     "entryPrice": 0.365,
     "currentPrice": 0.37,
     "shares": 16.08,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "archaic, nicoco89, Roflan",
     "whaleCount": 3,
@@ -11380,7 +11380,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-16T04:00:57.192Z"
+    "updatedAt": "2026-03-16T04:05:13.670Z",
+    "exitPrice": 0.37,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "76d89b88-534f-4fbc-8be3-0d530ede8c3b",
