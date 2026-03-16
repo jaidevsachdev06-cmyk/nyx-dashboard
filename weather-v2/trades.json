@@ -5611,7 +5611,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.4,
+      "pnlUSDC": -1.33,
       "createdAt": "2026-03-16T10:14:33.613Z",
       "signal": {
         "forecastTemp": 27,
@@ -5644,13 +5644,13 @@
       "enteredAt": "2026-03-16T10:14:33.629Z",
       "orderId": "paper-mmt1157r-k19m",
       "txHash": null,
-      "currentPrice": 0.0305,
-      "updatedAt": "2026-03-16T11:30:03.938Z"
+      "currentPrice": 0.032,
+      "updatedAt": "2026-03-16T12:00:03.449Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-16T11:10:03.566Z",
-    "lastPriceSync": "2026-03-16T11:30:04.239Z"
+    "lastPriceSync": "2026-03-16T12:00:03.749Z"
   }
 }
