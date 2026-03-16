@@ -11180,7 +11180,7 @@
     "entryPrice": 0.9805,
     "currentPrice": 0.9795,
     "shares": 23.91,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "archaic, Car, scottilicious, HolyMoses7, Gr33d, kekkone, duderr",
     "whaleCount": 7,
@@ -11200,7 +11200,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-16T04:00:37.125Z"
+    "updatedAt": "2026-03-16T04:05:02.627Z",
+    "exitPrice": 0.9795,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "d0d9e7f7-0e5b-49eb-84a6-153d0469426f",
