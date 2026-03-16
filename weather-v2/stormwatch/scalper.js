@@ -13,8 +13,12 @@
 
 const store = require('../core/store');
 const polymarket = require('../core/polymarket');
+const config = require('../config.json');
 
 const LOTTERY_THRESHOLD = 0.15;
+
+// Don't scalp if market resolves within this many hours (let it ride to resolution)
+const NEAR_RESOLUTION_HOURS = 4;
 
 const RULES = {
   lottery: [
@@ -36,6 +40,25 @@ function totalScalpedFraction(trade) {
   return (trade.scalps || []).reduce((sum, s) => sum + (s.fraction || 0), 0);
 }
 
+function isNearResolution(trade) {
+  if (!trade.date || !trade.city) return false;
+  const cityConfig = (config.cities || []).find(c => c.name === trade.city);
+  const tz = cityConfig?.tz || 'UTC';
+
+  // Market resolves at end of day in the city's local timezone (midnight)
+  // Calculate hours until midnight local time on the market date
+  const now = new Date();
+  const localDateStr = now.toLocaleDateString('en-CA', { timeZone: tz }); // YYYY-MM-DD
+  const localHour = parseInt(now.toLocaleString('en-US', { timeZone: tz, hour: 'numeric', hour12: false }));
+
+  if (trade.date < localDateStr) return true;  // Already past — definitely near resolution
+  if (trade.date === localDateStr) {
+    const hoursLeft = 24 - localHour;
+    return hoursLeft <= NEAR_RESOLUTION_HOURS;
+  }
+  return false;
+}
+
 async function checkPosition(trade) {
   const tag = `[scalper] ${trade.city} ${trade.bucket} ${trade.side}`;
   if (trade.status !== 'open') return null;
@@ -55,6 +78,13 @@ async function checkPosition(trade) {
   const remainingFraction = 1 - scalpedSoFar;
 
   if (remainingFraction <= 0.01) return null;
+
+  // Skip profit-taking if market resolves soon (let it ride to full payout)
+  // Stop-loss still active — protect downside even near resolution
+  if (isNearResolution(trade) && gainPct > 0) {
+    console.log(`${tag} ⏳ Near resolution (${trade.date}) — skipping scalp, letting it ride`);
+    return null;
+  }
 
   // Stop-loss check
   if (gainPct <= -RULES.stopLoss.lossPct) {
