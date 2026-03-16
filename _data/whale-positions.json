@@ -11484,7 +11484,7 @@
     "entryPrice": 0.725,
     "currentPrice": 0.78,
     "shares": 7.14,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Sonix, Ozi",
     "whaleCount": 3,
@@ -11504,7 +11504,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-16T04:01:12.617Z"
+    "updatedAt": "2026-03-16T04:05:24.806Z",
+    "exitPrice": 0.78,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "04428d4b-a024-459b-be74-eea59bf963ab",
