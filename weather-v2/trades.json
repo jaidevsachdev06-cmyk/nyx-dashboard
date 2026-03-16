@@ -5609,9 +5609,9 @@
       "bucket": "30-31°F",
       "question": "Will the highest temperature in Chicago be between 30-31°F on March 16?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -1.95,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -2.028,
       "createdAt": "2026-03-16T10:14:33.613Z",
       "signal": {
         "forecastTemp": 27,
@@ -5644,13 +5644,76 @@
       "enteredAt": "2026-03-16T10:14:33.629Z",
       "orderId": "paper-mmt1157r-k19m",
       "txHash": null,
-      "currentPrice": 0.02,
-      "updatedAt": "2026-03-16T14:00:04.125Z"
+      "currentPrice": 0.0185,
+      "updatedAt": "2026-03-16T14:10:04.293Z",
+      "resolutionPrice": 0.0185,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-16T14:10:04.552Z",
+      "closedAt": "2026-03-16T14:10:04.563Z"
+    },
+    {
+      "id": "oc-mmtkbg31-jopjho",
+      "conditionId": "0x455b96fa4d0c9e8ad97a8997f4fd29d81b7c8f72f84a6a0edef4963e2cb0401b",
+      "tokenId": "0xcf9ea8fade016f68c5c1a76d8ae9e2f67b522ff1129f500a34dcf9b76062ade3",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-16-2026-56-57f",
+      "city": "New York City",
+      "date": "2026-03-16",
+      "bucket": "56-57°F",
+      "question": "Will the highest temperature in New York City be between 56-57°F on March 16?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-16T19:14:26.989Z",
+      "signal": {
+        "forecastTemp": 59.2,
+        "forecastSource": "multi-source",
+        "sources": 6,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.1,
+        "impliedProb": 0.465,
+        "modelProb": 0.7028,
+        "edge": 0.2378,
+        "isLottery": false
+      },
+      "notes": "Forecast: 59.2°F | Model: 70% vs Market: 47% | Edge: 51.1%",
+      "entryPrice": 0.465,
+      "size": 26,
+      "sizeUSDC": 12.09,
+      "enteredAt": "2026-03-16T19:14:27.005Z",
+      "orderId": "paper-mmtkbg3q-oft9",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-16T13:10:03.001Z",
+    "lastUpdated": "2026-03-16T19:14:27.018Z",
     "lastPriceSync": "2026-03-16T14:00:04.425Z"
   }
 }
