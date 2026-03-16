@@ -11524,7 +11524,7 @@
     "market": "Will France, UK, or Germany strike Iran by March 31?",
     "side": "No",
     "entryPrice": 0.915,
-    "currentPrice": 0.9195,
+    "currentPrice": 0.92,
     "shares": 5.81,
     "status": "open",
     "source": "consensus-scanner",
@@ -11539,13 +11539,13 @@
     "createdAt": "2026-03-15T00:04:58.624Z",
     "entryDate": "2026-03-15T00:04:58.624Z",
     "invested": 5.3161,
-    "currentValue": 5.3423,
-    "pnl": 0.0261,
-    "pnlPercent": 0.49,
+    "currentValue": 5.3452,
+    "pnl": 0.0291,
+    "pnlPercent": 0.55,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-16T02:31:19.129Z"
+    "updatedAt": "2026-03-16T03:01:24.689Z"
   }
 ]
