@@ -11329,7 +11329,7 @@
     "entryPrice": 0.9995,
     "currentPrice": 0.9995,
     "shares": 4.97,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, ProfessionalPunter, Xeny, Thonker",
     "whaleCount": 4,
@@ -11349,7 +11349,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-16T04:00:53.578Z"
+    "updatedAt": "2026-03-16T04:05:10.942Z",
+    "exitPrice": 0.9995,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "7ffaa0a7-b03a-4d69-8c57-1c60a2ea7c91",
