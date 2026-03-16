@@ -11298,7 +11298,7 @@
     "entryPrice": 0.745,
     "currentPrice": 0.745,
     "shares": 8.58,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Roflan, kekkone, duderr",
     "whaleCount": 4,
@@ -11318,7 +11318,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-16T04:00:49.984Z"
+    "updatedAt": "2026-03-16T04:05:08.185Z",
+    "exitPrice": 0.745,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "245b3d21-28a3-4e78-81eb-3b6258aca26a",
