@@ -11691,7 +11691,7 @@
     "entryPrice": 0.9695,
     "currentPrice": 0.9695,
     "shares": 12.02,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, kekkone, archaic, GollumGekko, FrancisSP8",
     "whaleCount": 5,
@@ -11706,7 +11706,10 @@
     "invested": 11.6534,
     "currentValue": 11.6534,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "exitPrice": 0.9695,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-03-16T22:05:12.421Z"
   },
   {
     "id": "a01072ac-c1fd-4885-8e99-893963317d4c",
