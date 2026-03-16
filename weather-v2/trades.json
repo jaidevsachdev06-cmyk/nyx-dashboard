@@ -5611,7 +5611,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": -0.94,
       "createdAt": "2026-03-16T10:14:33.613Z",
       "signal": {
         "forecastTemp": 27,
@@ -5643,12 +5643,14 @@
       "sizeUSDC": 2.99,
       "enteredAt": "2026-03-16T10:14:33.629Z",
       "orderId": "paper-mmt1157r-k19m",
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.0395,
+      "updatedAt": "2026-03-16T10:30:04.290Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-16T10:14:33.644Z",
-    "lastPriceSync": "2026-03-16T10:00:03.383Z"
+    "lastPriceSync": "2026-03-16T10:30:04.591Z"
   }
 }
