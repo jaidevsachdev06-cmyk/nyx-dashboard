@@ -12150,7 +12150,7 @@
     "entryPrice": 0.956,
     "currentPrice": 0.956,
     "shares": 6.11,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "FrancisSP8, kekkone, archaic, debased",
     "whaleCount": 4,
@@ -12165,6 +12165,9 @@
     "invested": 5.8412,
     "currentValue": 5.8412,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "exitPrice": 0.956,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-03-17T20:05:16.251Z"
   }
 ]
