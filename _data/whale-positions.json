@@ -11907,7 +11907,7 @@
     "entryPrice": 0.145,
     "currentPrice": 0.145,
     "shares": 39.66,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, donjo, debased, UbuntuTrading",
     "whaleCount": 4,
@@ -11922,6 +11922,9 @@
     "invested": 5.7507,
     "currentValue": 5.7507,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "exitPrice": 0.145,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-03-17T08:05:21.533Z"
   }
 ]
