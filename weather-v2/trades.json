@@ -5739,7 +5739,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.42,
+      "pnlUSDC": -0.73,
       "createdAt": "2026-03-17T13:14:55.907Z",
       "signal": {
         "forecastTemp": 67.8,
@@ -5772,13 +5772,13 @@
       "enteredAt": "2026-03-17T13:14:55.920Z",
       "orderId": "paper-mmumwyew-012y",
       "txHash": null,
-      "currentPrice": 0.565,
-      "updatedAt": "2026-03-17T17:30:16.664Z"
+      "currentPrice": 0.55,
+      "updatedAt": "2026-03-17T18:00:04.081Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-17T17:10:03.502Z",
-    "lastPriceSync": "2026-03-17T17:30:16.965Z"
+    "lastPriceSync": "2026-03-17T18:00:04.382Z"
   }
 }
