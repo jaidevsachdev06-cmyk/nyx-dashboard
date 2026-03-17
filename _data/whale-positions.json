@@ -12096,7 +12096,7 @@
     "entryPrice": 0.615,
     "currentPrice": 0.615,
     "shares": 18.29,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "nicoco89, elucidate, archaic, debased, Polar",
     "whaleCount": 5,
@@ -12111,6 +12111,9 @@
     "invested": 11.2483,
     "currentValue": 11.2483,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "exitPrice": 0.615,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-03-17T18:05:10.258Z"
   }
 ]
