@@ -5863,7 +5863,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 7.1,
+      "pnlUSDC": 3.2,
       "createdAt": "2026-03-18T09:14:21.302Z",
       "signal": {
         "forecastTemp": 79.1,
@@ -5889,20 +5889,30 @@
         "edge": 0.1014,
         "isLottery": false
       },
-      "notes": "Forecast: 79.1°F | Model: 70% vs Market: 60% | Edge: 16.9%",
+      "notes": "Forecast: 79.1°F | Model: 70% vs Market: 60% | Edge: 16.9% | SCALP normal-half: sold 10@0.950 (+$3.50)",
       "entryPrice": 0.6,
-      "size": 20,
-      "sizeUSDC": 12,
+      "size": 10,
+      "sizeUSDC": 6,
       "enteredAt": "2026-03-18T09:14:21.314Z",
       "orderId": "paper-mmvtrf9j-0ox1",
       "txHash": null,
-      "currentPrice": 0.955,
-      "updatedAt": "2026-03-18T22:00:04.304Z"
+      "currentPrice": 0.92,
+      "updatedAt": "2026-03-18T22:30:02.863Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 10,
+          "price": 0.95,
+          "pnlUSDC": 3.5,
+          "timestamp": "2026-03-18T22:10:03.814Z"
+        }
+      ]
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-18T21:10:06.084Z",
-    "lastPriceSync": "2026-03-18T22:00:04.604Z"
+    "lastUpdated": "2026-03-18T22:10:03.817Z",
+    "lastPriceSync": "2026-03-18T22:30:03.163Z"
   }
 }
