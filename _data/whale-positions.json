@@ -12250,5 +12250,29 @@
     "exitPrice": 0.9555,
     "notes": "Dropped from whale consensus",
     "updatedAt": "2026-03-17T22:05:22.946Z"
+  },
+  {
+    "id": "f1f56021-a5e5-484b-b6c0-4b7824fcd50d",
+    "market": "Will John Cornyn win the 2026 Texas Republican Primary?",
+    "side": "Yes",
+    "entryPrice": 0.605,
+    "currentPrice": 0.605,
+    "shares": 18.6,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "nicoco89, elucidate, debased, archaic, Polar",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 89.3,
+    "avgWinRate": 73.1,
+    "reasoning": "Consensus: 5 whales (avg score 89.3, WR 73.1%) Yes. bet=$11.25, shares=18.6. Whales: nicoco89, elucidate, debased, archaic, Polar",
+    "endDate": "2026-05-26",
+    "conditionId": "0x781a06aa5779f97724b75ed8128aaf72c4a8955c893a6fefdc0efd7cb001c513",
+    "createdAt": "2026-03-18T00:05:04.931Z",
+    "entryDate": "2026-03-18T00:05:04.931Z",
+    "invested": 11.253,
+    "currentValue": 11.253,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
