@@ -5802,7 +5802,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.68,
+      "pnlUSDC": 1.47,
       "createdAt": "2026-03-18T00:14:49.181Z",
       "signal": {
         "forecastTemp": 39.7,
@@ -5843,13 +5843,13 @@
       "enteredAt": "2026-03-18T00:14:49.193Z",
       "orderId": "paper-mmvahkrz-s3m8",
       "txHash": null,
-      "currentPrice": 0.675,
-      "updatedAt": "2026-03-18T04:30:04.641Z"
+      "currentPrice": 0.665,
+      "updatedAt": "2026-03-18T05:00:04.333Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-18T04:10:07.061Z",
-    "lastPriceSync": "2026-03-18T04:30:04.942Z"
+    "lastPriceSync": "2026-03-18T05:00:04.634Z"
   }
 }
