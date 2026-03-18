@@ -12627,5 +12627,29 @@
     "currentValue": 11.2606,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "26fc4f3e-93ee-45d6-a858-b825cfb05532",
+    "market": "Will the Iranian regime fall by March 31?",
+    "side": "No",
+    "entryPrice": 0.9605,
+    "currentPrice": 0.9605,
+    "shares": 6.19,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "debased, GollumGekko, kekkone, archaic",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 85.8,
+    "avgWinRate": 77.3,
+    "reasoning": "Consensus: 4 whales (avg score 85.8, WR 77.3%) No. bet=$5.95, shares=6.19. Whales: debased, GollumGekko, kekkone, archaic",
+    "endDate": "2026-03-31",
+    "conditionId": "0x61ce3773237a948584e422de72265f937034af418a8b703e3a860ea62e59ff36",
+    "createdAt": "2026-03-18T10:03:03.092Z",
+    "entryDate": "2026-03-18T10:03:03.092Z",
+    "invested": 5.9455,
+    "currentValue": 5.9455,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
