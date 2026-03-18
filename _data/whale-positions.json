@@ -12501,7 +12501,7 @@
     "entryPrice": 0.845,
     "currentPrice": 0.845,
     "shares": 13.36,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "JJo, Qualitative, FrancisSP8, archaic, Dropper",
     "whaleCount": 5,
@@ -12516,6 +12516,9 @@
     "invested": 11.2892,
     "currentValue": 11.2892,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "exitPrice": 0.845,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-03-18T07:51:10.150Z"
   }
 ]
