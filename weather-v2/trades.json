@@ -5843,13 +5843,60 @@
       "enteredAt": "2026-03-18T00:14:49.193Z",
       "orderId": "paper-mmvahkrz-s3m8",
       "txHash": null,
-      "currentPrice": 0.685,
-      "updatedAt": "2026-03-18T09:00:06.941Z"
+      "currentPrice": 0.68,
+      "updatedAt": "2026-03-18T09:10:09.462Z"
+    },
+    {
+      "id": "oc-mmvtrf92-sh71z0",
+      "conditionId": "0x095674ec86e479653b78d31735743b5bc8be1052f6fc84d9d081e6941a7155c7",
+      "tokenId": "0x256e6152c9437e8b20a5867ff7a5b9834061497e553486d61d9b07b9695e5986",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-18-2026-76-77f",
+      "city": "Dallas",
+      "date": "2026-03-18",
+      "bucket": "76-77°F",
+      "question": "Will the highest temperature in Dallas be between 76-77°F on March 18?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-18T09:14:21.302Z",
+      "signal": {
+        "forecastTemp": 79.1,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 1.5,
+        "impliedProb": 0.6,
+        "modelProb": 0.7014,
+        "edge": 0.1014,
+        "isLottery": false
+      },
+      "notes": "Forecast: 79.1°F | Model: 70% vs Market: 60% | Edge: 16.9%",
+      "entryPrice": 0.6,
+      "size": 20,
+      "sizeUSDC": 12,
+      "enteredAt": "2026-03-18T09:14:21.314Z",
+      "orderId": "paper-mmvtrf9j-0ox1",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-18T08:10:27.002Z",
+    "lastUpdated": "2026-03-18T09:14:21.322Z",
     "lastPriceSync": "2026-03-18T09:00:07.241Z"
   }
 }
