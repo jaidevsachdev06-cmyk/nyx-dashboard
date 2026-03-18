@@ -5772,8 +5772,8 @@
       "enteredAt": "2026-03-17T13:14:55.920Z",
       "orderId": "paper-mmumwyew-012y",
       "txHash": null,
-      "currentPrice": 0.88,
-      "updatedAt": "2026-03-18T00:00:03.418Z",
+      "currentPrice": 0.985,
+      "updatedAt": "2026-03-18T00:10:03.439Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -5784,11 +5784,66 @@
           "timestamp": "2026-03-17T22:10:05.657Z"
         }
       ]
+    },
+    {
+      "id": "oc-mmvahkrh-7il57h",
+      "conditionId": "0xd360f308a107880b96c082c921fdea7c6ff7f747e0480242378330ea7a9672ab",
+      "tokenId": "0xf1d1e685229b5f5bced36a691a60767469ca6d5c2469c8b952137cdff9a20e8b",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-18-2026-42-43f",
+      "city": "Chicago",
+      "date": "2026-03-18",
+      "bucket": "42-43°F",
+      "question": "Will the highest temperature in Chicago be between 42-43°F on March 18?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-18T00:14:49.181Z",
+      "signal": {
+        "forecastTemp": 39.7,
+        "forecastSource": "multi-source",
+        "sources": 5,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.4,
+        "impliedProb": 0.595,
+        "modelProb": 0.7028,
+        "edge": 0.1078,
+        "isLottery": false
+      },
+      "notes": "Forecast: 39.7°F | Model: 70% vs Market: 60% | Edge: 18.1%",
+      "entryPrice": 0.595,
+      "size": 21,
+      "sizeUSDC": 12.495,
+      "enteredAt": "2026-03-18T00:14:49.193Z",
+      "orderId": "paper-mmvahkrz-s3m8",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-17T23:10:03.390Z",
+    "lastUpdated": "2026-03-18T00:14:49.203Z",
     "lastPriceSync": "2026-03-18T00:00:03.719Z"
   }
 }
