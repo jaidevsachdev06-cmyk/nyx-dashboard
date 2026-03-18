@@ -12420,7 +12420,7 @@
     "entryPrice": 0.9475,
     "currentPrice": 0.9475,
     "shares": 11.43,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "elucidate, Gr33d, kekkone, GollumGekko, Roflan",
     "whaleCount": 5,
@@ -12435,6 +12435,9 @@
     "invested": 10.8299,
     "currentValue": 10.8299,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "exitPrice": 0.9475,
+    "notes": "Dropped from whale consensus",
+    "updatedAt": "2026-03-18T04:05:17.394Z"
   }
 ]
