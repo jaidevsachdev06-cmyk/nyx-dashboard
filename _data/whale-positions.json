@@ -12298,5 +12298,29 @@
     "currentValue": 11.6483,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "6d5c9218-867b-415d-9540-089e337d6fec",
+    "market": "Will France, UK, or Germany strike Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.946,
+    "currentPrice": 0.946,
+    "shares": 11.47,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "elucidate, Gr33d, GollumGekko, Roflan, kekkone",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 82.5,
+    "avgWinRate": 70.5,
+    "reasoning": "Consensus: 5 whales (avg score 82.5, WR 70.5%) No. bet=$10.85, shares=11.47. Whales: elucidate, Gr33d, GollumGekko, Roflan, kekkone",
+    "endDate": "2026-03-31",
+    "conditionId": "0x24026080b17f4e88729eab0ac2929ee37c13bfbb4a159179ec63deb4a242d9c9",
+    "createdAt": "2026-03-18T00:05:16.422Z",
+    "entryDate": "2026-03-18T00:05:16.422Z",
+    "invested": 10.8506,
+    "currentValue": 10.8506,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
