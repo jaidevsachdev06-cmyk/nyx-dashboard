@@ -1928,7 +1928,7 @@
       "bucket": "36-37°F",
       "question": "Will the highest temperature in New York City be between 36-37°F on February 26?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 3.485,
       "createdAt": "2026-02-24T12:11:55.463Z",
@@ -1951,7 +1951,8 @@
       "exitPrice": 0.8999999999999999,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 11.0pp)",
-      "exitedAt": "2026-02-24T16:07:04.268Z"
+      "exitedAt": "2026-02-24T16:07:04.268Z",
+      "closedAt": "2026-02-24T16:07:04.268Z"
     },
     {
       "id": "oc-mm0kf1ef-mrodah",
@@ -2318,7 +2319,7 @@
       "bucket": "≥76°F",
       "question": "Will the highest temperature in Miami be 76°F or higher on February 25?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 0.49,
       "createdAt": "2026-02-25T08:07:05.004Z",
@@ -2339,7 +2340,8 @@
       "exitPrice": 0.88,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 15.6pp)",
-      "exitedAt": "2026-02-25T14:14:10.058Z"
+      "exitedAt": "2026-02-25T14:14:10.058Z",
+      "closedAt": "2026-02-25T14:14:10.058Z"
     },
     {
       "id": "oc-mm1r40u4-3wwwrk",
@@ -2772,7 +2774,7 @@
       "bucket": "88-89°F",
       "question": "Will the highest temperature in Miami be between 88-89°F on February 28?",
       "side": "YES",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": -2.4565,
       "createdAt": "2026-02-27T15:28:46.554Z",
@@ -2796,7 +2798,8 @@
       "exitPrice": 0.026,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 20.3pp)",
-      "exitedAt": "2026-02-28T14:11:12.707Z"
+      "exitedAt": "2026-02-28T14:11:12.707Z",
+      "closedAt": "2026-02-28T14:11:12.707Z"
     },
     {
       "id": "oc-mm51rqwf-240wkc",
@@ -3066,7 +3069,7 @@
       "bucket": "≤75°F",
       "question": "Will the highest temperature in Miami be 75°F or below on March 1?",
       "side": "YES",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 5.819,
       "createdAt": "2026-02-28T02:10:53.753Z",
@@ -3090,7 +3093,8 @@
       "exitPrice": 0.0625,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 18.0pp)",
-      "exitedAt": "2026-02-28T20:12:26.853Z"
+      "exitedAt": "2026-02-28T20:12:26.853Z",
+      "closedAt": "2026-02-28T20:12:26.853Z"
     },
     {
       "id": "oc-mm6efufi-esk90k",
@@ -3399,7 +3403,7 @@
       "bucket": "44-45°F",
       "question": "Will the highest temperature in Chicago be between 44-45°F on March 2?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 1.92,
       "createdAt": "2026-03-01T10:11:00.381Z",
@@ -3423,7 +3427,8 @@
       "exitPrice": 0.87,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 18.7pp)",
-      "exitedAt": "2026-03-02T10:11:56.623Z"
+      "exitedAt": "2026-03-02T10:11:56.623Z",
+      "closedAt": "2026-03-02T10:11:56.623Z"
     },
     {
       "id": "oc-mm7pl5sv-egbv1k",
@@ -3510,7 +3515,7 @@
       "bucket": "30-31°F",
       "question": "Will the highest temperature in New York City be between 30-31°F on March 2?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 0.18,
       "createdAt": "2026-03-01T14:11:00.220Z",
@@ -3532,7 +3537,8 @@
       "exitPrice": 0.675,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 16.1pp)",
-      "exitedAt": "2026-03-01T16:10:55.533Z"
+      "exitedAt": "2026-03-01T16:10:55.533Z",
+      "closedAt": "2026-03-01T16:10:55.533Z"
     },
     {
       "id": "oc-mm7y5ne6-900p94",
@@ -3841,7 +3847,7 @@
       "bucket": "82-83°F",
       "question": "Will the highest temperature in Atlanta be between 82-83°F on March 7?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 5.88,
       "createdAt": "2026-03-07T08:32:40.618Z",
@@ -3865,7 +3871,8 @@
       "exitPrice": 0.86,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 17.0pp)",
-      "exitedAt": "2026-03-07T18:11:22.444Z"
+      "exitedAt": "2026-03-07T18:11:22.444Z",
+      "closedAt": "2026-03-07T18:11:22.444Z"
     },
     {
       "id": "oc-mmg2fged-sicvd5",
@@ -3952,7 +3959,7 @@
       "bucket": "48-49°F",
       "question": "Will the highest temperature in Seattle be between 48-49°F on March 8?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 0,
       "createdAt": "2026-03-07T08:32:40.702Z",
@@ -3976,7 +3983,8 @@
       "exitPrice": 0.915,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 22.3pp)",
-      "exitedAt": "2026-03-07T16:11:23.558Z"
+      "exitedAt": "2026-03-07T16:11:23.558Z",
+      "closedAt": "2026-03-07T16:11:23.558Z"
     },
     {
       "id": "oc-mmg2fggj-ezwmxm",
@@ -3989,7 +3997,7 @@
       "bucket": "66-67°F",
       "question": "Will the highest temperature in Atlanta be between 66-67°F on March 8?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 0.156,
       "createdAt": "2026-03-07T08:32:40.723Z",
@@ -4013,7 +4021,8 @@
       "exitPrice": 0.935,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 11.1pp)",
-      "exitedAt": "2026-03-07T12:11:47.113Z"
+      "exitedAt": "2026-03-07T12:11:47.113Z",
+      "closedAt": "2026-03-07T12:11:47.113Z"
     },
     {
       "id": "oc-mmg5xy73-g1wg7w",
@@ -4137,7 +4146,7 @@
       "bucket": "16°C",
       "question": "Will the highest temperature in Paris be 16°C on March 8?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": -1.75,
       "createdAt": "2026-03-07T14:14:56.477Z",
@@ -4161,7 +4170,8 @@
       "exitPrice": 0.76,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 15.7pp)",
-      "exitedAt": "2026-03-08T14:11:35.813Z"
+      "exitedAt": "2026-03-08T14:11:35.813Z",
+      "closedAt": "2026-03-08T14:11:35.813Z"
     },
     {
       "id": "oc-mmgitd0g-stmg5x",
@@ -4507,7 +4517,7 @@
       "bucket": "78-79°F",
       "question": "Will the highest temperature in Dallas be between 78-79°F on March 10?",
       "side": "NO",
-      "status": "exited",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 0.81,
       "createdAt": "2026-03-10T00:11:17.328Z",
@@ -4531,7 +4541,8 @@
       "exitPrice": 0.705,
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 15.3pp)",
-      "exitedAt": "2026-03-10T18:10:47.677Z"
+      "exitedAt": "2026-03-10T18:10:47.677Z",
+      "closedAt": "2026-03-10T18:10:47.677Z"
     },
     {
       "id": "oc-mmkbrf5q-foseop",
@@ -4767,7 +4778,7 @@
       "question": "Will the highest temperature in New York City be 60°F or higher on March 12?",
       "side": "NO",
       "status": "closed",
-      "result": "exited",
+      "result": "win",
       "pnlUSDC": 7.140000000000001,
       "createdAt": "2026-03-11T13:11:01.592Z",
       "signal": {
@@ -4789,7 +4800,6 @@
       "updatedAt": "2026-03-12T06:00:04.354Z",
       "closedAt": "2026-03-12T06:18:36.505Z",
       "exitPrice": 0.645,
-      "exitOrderId": "paper-exit-mmn2uau1",
       "resolutionSource": "manual-exit",
       "exitReason": "Risk management - 2.8°F margin too thin, locked in 378% gain"
     },
@@ -5926,7 +5936,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": 0.62,
       "createdAt": "2026-03-19T15:14:16.572Z",
       "signal": {
         "forecastTemp": 89.5,
@@ -5958,12 +5968,14 @@
       "sizeUSDC": 18.599999999999998,
       "enteredAt": "2026-03-19T15:14:16.583Z",
       "orderId": "paper-mmxm24y3-mk6c",
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.62,
+      "updatedAt": "2026-03-19T15:30:03.707Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-19T15:14:16.591Z",
-    "lastPriceSync": "2026-03-19T00:00:04.572Z"
+    "lastUpdated": "2026-03-19T15:29:25.224Z",
+    "lastPriceSync": "2026-03-19T15:30:04.007Z"
   }
 }
