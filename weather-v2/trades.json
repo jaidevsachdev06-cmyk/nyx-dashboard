@@ -5936,7 +5936,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.31,
+      "pnlUSDC": 2.33,
       "createdAt": "2026-03-19T15:14:16.572Z",
       "signal": {
         "forecastTemp": 89.5,
@@ -5969,8 +5969,8 @@
       "enteredAt": "2026-03-19T15:14:16.583Z",
       "orderId": "paper-mmxm24y3-mk6c",
       "txHash": null,
-      "currentPrice": 0.63,
-      "updatedAt": "2026-03-19T19:10:14.354Z"
+      "currentPrice": 0.675,
+      "updatedAt": "2026-03-19T19:30:08.134Z"
     },
     {
       "id": "oc-mmxqc7so-4rcjrn",
@@ -5985,7 +5985,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.81,
+      "pnlUSDC": -1.35,
       "createdAt": "2026-03-19T17:14:05.304Z",
       "signal": {
         "forecastTemp": 55.5,
@@ -6014,8 +6014,8 @@
       "enteredAt": "2026-03-19T17:14:05.315Z",
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
-      "currentPrice": 0.64,
-      "updatedAt": "2026-03-19T19:10:14.593Z"
+      "currentPrice": 0.565,
+      "updatedAt": "2026-03-19T19:30:08.691Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6030,7 +6030,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0,
+      "pnlUSDC": 0.69,
       "createdAt": "2026-03-19T17:14:05.327Z",
       "signal": {
         "forecastTemp": 10.3,
@@ -6067,8 +6067,8 @@
       "enteredAt": "2026-03-19T17:14:05.336Z",
       "orderId": "paper-mmxqc7tq-r2px",
       "txHash": null,
-      "currentPrice": 0.17,
-      "updatedAt": "2026-03-19T19:10:14.846Z"
+      "currentPrice": 0.16,
+      "updatedAt": "2026-03-19T19:30:09.246Z"
     },
     {
       "id": "oc-mmxsh0q5-abgj2a",
@@ -6112,8 +6112,8 @@
       "enteredAt": "2026-03-19T18:13:48.666Z",
       "orderId": "paper-mmxsh0qn-1ilb",
       "txHash": null,
-      "currentPrice": 0.685,
-      "updatedAt": "2026-03-19T19:10:15.114Z"
+      "currentPrice": 0.665,
+      "updatedAt": "2026-03-19T19:30:09.795Z"
     },
     {
       "id": "oc-mmxumflr-jezzv3",
@@ -6128,7 +6128,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": -0.74,
       "createdAt": "2026-03-19T19:14:00.447Z",
       "signal": {
         "forecastTemp": 43.6,
@@ -6180,12 +6180,14 @@
       "sizeUSDC": 18.315,
       "enteredAt": "2026-03-19T19:14:00.463Z",
       "orderId": "paper-mmxumfmg-40iz",
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.475,
+      "updatedAt": "2026-03-19T19:30:10.339Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-19T19:14:00.477Z",
-    "lastPriceSync": "2026-03-19T19:00:06.663Z"
+    "lastPriceSync": "2026-03-19T19:30:10.639Z"
   }
 }
