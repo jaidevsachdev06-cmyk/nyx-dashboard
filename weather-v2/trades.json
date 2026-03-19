@@ -5970,7 +5970,7 @@
       "orderId": "paper-mmxm24y3-mk6c",
       "txHash": null,
       "currentPrice": 0.605,
-      "updatedAt": "2026-03-19T18:00:05.448Z"
+      "updatedAt": "2026-03-19T18:10:02.703Z"
     },
     {
       "id": "oc-mmxqc7so-4rcjrn",
@@ -6014,8 +6014,8 @@
       "enteredAt": "2026-03-19T17:14:05.315Z",
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
-      "currentPrice": 0.635,
-      "updatedAt": "2026-03-19T18:00:06.042Z"
+      "currentPrice": 0.645,
+      "updatedAt": "2026-03-19T18:10:02.986Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6067,13 +6067,56 @@
       "enteredAt": "2026-03-19T17:14:05.336Z",
       "orderId": "paper-mmxqc7tq-r2px",
       "txHash": null,
-      "currentPrice": 0.16,
-      "updatedAt": "2026-03-19T18:00:06.598Z"
+      "currentPrice": 0.185,
+      "updatedAt": "2026-03-19T18:10:03.235Z"
+    },
+    {
+      "id": "oc-mmxsh0q5-abgj2a",
+      "conditionId": "0xd42b5b3c113c1ac0bc9b922fc943b79d0e2dae1609f616c64a20505e82af3d7b",
+      "tokenId": "0x635e9295fb725e10ab086cc94c485f2b00939dc1bced97e89f5464c8a3a95563",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-19-2026-66-67f",
+      "city": "Atlanta",
+      "date": "2026-03-19",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Atlanta be between 66-67°F on March 19?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-19T18:13:48.653Z",
+      "signal": {
+        "forecastTemp": 69.3,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.5,
+        "impliedProb": 0.605,
+        "modelProb": 0.7029,
+        "edge": 0.0979,
+        "isLottery": false
+      },
+      "notes": "Forecast: 69.3°F | Model: 70% vs Market: 61% | Edge: 16.2%",
+      "entryPrice": 0.605,
+      "size": 30,
+      "sizeUSDC": 18.15,
+      "enteredAt": "2026-03-19T18:13:48.666Z",
+      "orderId": "paper-mmxsh0qn-1ilb",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-19T17:14:05.346Z",
+    "lastUpdated": "2026-03-19T18:13:48.675Z",
     "lastPriceSync": "2026-03-19T18:00:06.899Z"
   }
 }
