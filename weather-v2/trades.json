@@ -6018,8 +6018,8 @@
       "enteredAt": "2026-03-19T17:14:05.315Z",
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
-      "currentPrice": 0.365,
-      "updatedAt": "2026-03-19T23:00:03.669Z"
+      "currentPrice": 0.525,
+      "updatedAt": "2026-03-19T23:10:03.772Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6072,7 +6072,7 @@
       "orderId": "paper-mmxqc7tq-r2px",
       "txHash": null,
       "currentPrice": 0.1,
-      "updatedAt": "2026-03-19T23:00:04.240Z"
+      "updatedAt": "2026-03-19T23:10:04.019Z"
     },
     {
       "id": "oc-mmxsh0q5-abgj2a",
@@ -6134,9 +6134,9 @@
       "bucket": "40-41°F",
       "question": "Will the highest temperature in New York City be between 40-41°F on March 19?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -8.36,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -2.96,
       "createdAt": "2026-03-19T19:14:00.447Z",
       "signal": {
         "forecastTemp": 43.6,
@@ -6190,7 +6190,7 @@
       "orderId": "paper-mmxumfmg-40iz",
       "txHash": null,
       "currentPrice": 0.055,
-      "updatedAt": "2026-03-19T23:00:04.794Z",
+      "updatedAt": "2026-03-19T23:10:04.290Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -6200,12 +6200,63 @@
           "pnlUSDC": 5.4,
           "timestamp": "2026-03-19T21:10:05.205Z"
         }
-      ]
+      ],
+      "resolutionPrice": 0.055,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-19T23:10:05.061Z",
+      "closedAt": "2026-03-19T23:10:05.068Z"
+    },
+    {
+      "id": "oc-mmy37oki-ffeokg",
+      "conditionId": "0x779a3f434e854ff2a66e8714a251eb138fe29b953de82882c93f1d62210e80e6",
+      "tokenId": "0x385767a09eeb7de24a56a18f4930011f26f8c270905734c3dc07ad8863012657",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-20-2026-76-77f",
+      "city": "Atlanta",
+      "date": "2026-03-20",
+      "bucket": "76-77°F",
+      "question": "Will the highest temperature in Atlanta be between 76-77°F on March 20?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-19T23:14:28.770Z",
+      "signal": {
+        "forecastTemp": 73.8,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 1.8,
+        "impliedProb": 0.59,
+        "modelProb": 0.7021,
+        "edge": 0.1121,
+        "isLottery": false
+      },
+      "notes": "Forecast: 73.8°F | Model: 70% vs Market: 59% | Edge: 19.0%",
+      "entryPrice": 0.59,
+      "size": 31,
+      "sizeUSDC": 18.29,
+      "enteredAt": "2026-03-19T23:14:28.782Z",
+      "orderId": "paper-mmy37ol0-q7so",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-19T22:10:05.886Z",
+    "lastUpdated": "2026-03-19T23:14:28.792Z",
     "lastPriceSync": "2026-03-19T23:00:05.095Z"
   }
 }
