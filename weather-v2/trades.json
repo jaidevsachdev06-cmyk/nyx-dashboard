@@ -5936,7 +5936,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -4.49,
+      "pnlUSDC": -6.35,
       "createdAt": "2026-03-19T15:14:16.572Z",
       "signal": {
         "forecastTemp": 89.5,
@@ -5969,8 +5969,8 @@
       "enteredAt": "2026-03-19T15:14:16.583Z",
       "orderId": "paper-mmxm24y3-mk6c",
       "txHash": null,
-      "currentPrice": 0.455,
-      "updatedAt": "2026-03-19T21:00:02.815Z"
+      "currentPrice": 0.395,
+      "updatedAt": "2026-03-19T21:30:02.849Z"
     },
     {
       "id": "oc-mmxqc7so-4rcjrn",
@@ -5985,7 +5985,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.49,
+      "pnlUSDC": 0,
       "createdAt": "2026-03-19T17:14:05.304Z",
       "signal": {
         "forecastTemp": 55.5,
@@ -6014,8 +6014,8 @@
       "enteredAt": "2026-03-19T17:14:05.315Z",
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
-      "currentPrice": 0.67,
-      "updatedAt": "2026-03-19T21:00:03.354Z"
+      "currentPrice": 0.615,
+      "updatedAt": "2026-03-19T21:30:03.401Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6030,7 +6030,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.58,
+      "pnlUSDC": -0.69,
       "createdAt": "2026-03-19T17:14:05.327Z",
       "signal": {
         "forecastTemp": 10.3,
@@ -6067,8 +6067,8 @@
       "enteredAt": "2026-03-19T17:14:05.336Z",
       "orderId": "paper-mmxqc7tq-r2px",
       "txHash": null,
-      "currentPrice": 0.105,
-      "updatedAt": "2026-03-19T21:00:03.932Z"
+      "currentPrice": 0.1,
+      "updatedAt": "2026-03-19T21:30:03.958Z"
     },
     {
       "id": "oc-mmxsh0q5-abgj2a",
@@ -6132,7 +6132,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -4.44,
+      "pnlUSDC": 3.33,
       "createdAt": "2026-03-19T19:14:00.447Z",
       "signal": {
         "forecastTemp": 43.6,
@@ -6178,20 +6178,30 @@
         "edge": 0.2063,
         "isLottery": false
       },
-      "notes": "Forecast: 43.6°F | Model: 70% vs Market: 50% | Edge: 41.7%",
+      "notes": "Forecast: 43.6°F | Model: 70% vs Market: 50% | Edge: 41.7% | SCALP normal-half: sold 18@0.795 (+$5.40)",
       "entryPrice": 0.495,
-      "size": 37,
-      "sizeUSDC": 18.315,
+      "size": 19,
+      "sizeUSDC": 9.405,
       "enteredAt": "2026-03-19T19:14:00.463Z",
       "orderId": "paper-mmxumfmg-40iz",
       "txHash": null,
-      "currentPrice": 0.375,
-      "updatedAt": "2026-03-19T21:00:04.470Z"
+      "currentPrice": 0.67,
+      "updatedAt": "2026-03-19T21:30:04.503Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 18,
+          "price": 0.795,
+          "pnlUSDC": 5.4,
+          "timestamp": "2026-03-19T21:10:05.205Z"
+        }
+      ]
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-19T20:10:06.030Z",
-    "lastPriceSync": "2026-03-19T21:00:04.769Z"
+    "lastUpdated": "2026-03-19T21:10:05.208Z",
+    "lastPriceSync": "2026-03-19T21:30:04.803Z"
   }
 }
