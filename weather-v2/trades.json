@@ -5934,9 +5934,9 @@
       "bucket": "86-87°F",
       "question": "Will the highest temperature in Dallas be between 86-87°F on March 19?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -17.36,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -16.895,
       "createdAt": "2026-03-19T15:14:16.572Z",
       "signal": {
         "forecastTemp": 89.5,
@@ -5969,8 +5969,12 @@
       "enteredAt": "2026-03-19T15:14:16.583Z",
       "orderId": "paper-mmxm24y3-mk6c",
       "txHash": null,
-      "currentPrice": 0.04,
-      "updatedAt": "2026-03-19T22:00:04.388Z"
+      "currentPrice": 0.055,
+      "updatedAt": "2026-03-19T22:10:04.817Z",
+      "resolutionPrice": 0.055,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-19T22:10:05.873Z",
+      "closedAt": "2026-03-19T22:10:05.884Z"
     },
     {
       "id": "oc-mmxqc7so-4rcjrn",
@@ -5985,7 +5989,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.7,
+      "pnlUSDC": -4.59,
       "createdAt": "2026-03-19T17:14:05.304Z",
       "signal": {
         "forecastTemp": 55.5,
@@ -6014,8 +6018,8 @@
       "enteredAt": "2026-03-19T17:14:05.315Z",
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
-      "currentPrice": 0.515,
-      "updatedAt": "2026-03-19T22:00:04.976Z"
+      "currentPrice": 0.445,
+      "updatedAt": "2026-03-19T22:30:03.897Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6030,7 +6034,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.12,
+      "pnlUSDC": -0.58,
       "createdAt": "2026-03-19T17:14:05.327Z",
       "signal": {
         "forecastTemp": 10.3,
@@ -6067,8 +6071,8 @@
       "enteredAt": "2026-03-19T17:14:05.336Z",
       "orderId": "paper-mmxqc7tq-r2px",
       "txHash": null,
-      "currentPrice": 0.125,
-      "updatedAt": "2026-03-19T22:00:05.543Z"
+      "currentPrice": 0.105,
+      "updatedAt": "2026-03-19T22:30:04.437Z"
     },
     {
       "id": "oc-mmxsh0q5-abgj2a",
@@ -6132,7 +6136,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -5.32,
+      "pnlUSDC": -5.42,
       "createdAt": "2026-03-19T19:14:00.447Z",
       "signal": {
         "forecastTemp": 43.6,
@@ -6185,8 +6189,8 @@
       "enteredAt": "2026-03-19T19:14:00.463Z",
       "orderId": "paper-mmxumfmg-40iz",
       "txHash": null,
-      "currentPrice": 0.215,
-      "updatedAt": "2026-03-19T22:00:06.096Z",
+      "currentPrice": 0.21,
+      "updatedAt": "2026-03-19T22:30:05.006Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -6201,7 +6205,7 @@
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-19T21:10:05.208Z",
-    "lastPriceSync": "2026-03-19T22:00:06.396Z"
+    "lastUpdated": "2026-03-19T22:10:05.886Z",
+    "lastPriceSync": "2026-03-19T22:30:05.306Z"
   }
 }
