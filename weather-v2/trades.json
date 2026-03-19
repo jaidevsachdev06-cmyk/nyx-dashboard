@@ -5936,7 +5936,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.31,
+      "pnlUSDC": 0.16,
       "createdAt": "2026-03-19T15:14:16.572Z",
       "signal": {
         "forecastTemp": 89.5,
@@ -5969,13 +5969,13 @@
       "enteredAt": "2026-03-19T15:14:16.583Z",
       "orderId": "paper-mmxm24y3-mk6c",
       "txHash": null,
-      "currentPrice": 0.59,
-      "updatedAt": "2026-03-19T16:30:03.295Z"
+      "currentPrice": 0.605,
+      "updatedAt": "2026-03-19T17:00:04.496Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-19T16:10:02.940Z",
-    "lastPriceSync": "2026-03-19T16:30:03.595Z"
+    "lastPriceSync": "2026-03-19T17:00:04.797Z"
   }
 }
