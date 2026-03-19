@@ -5936,7 +5936,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.24,
+      "pnlUSDC": -4.49,
       "createdAt": "2026-03-19T15:14:16.572Z",
       "signal": {
         "forecastTemp": 89.5,
@@ -5969,8 +5969,8 @@
       "enteredAt": "2026-03-19T15:14:16.583Z",
       "orderId": "paper-mmxm24y3-mk6c",
       "txHash": null,
-      "currentPrice": 0.56,
-      "updatedAt": "2026-03-19T20:30:05.218Z"
+      "currentPrice": 0.455,
+      "updatedAt": "2026-03-19T21:00:02.815Z"
     },
     {
       "id": "oc-mmxqc7so-4rcjrn",
@@ -5985,7 +5985,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.83,
+      "pnlUSDC": 1.49,
       "createdAt": "2026-03-19T17:14:05.304Z",
       "signal": {
         "forecastTemp": 55.5,
@@ -6014,8 +6014,8 @@
       "enteredAt": "2026-03-19T17:14:05.315Z",
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
-      "currentPrice": 0.72,
-      "updatedAt": "2026-03-19T20:30:05.773Z"
+      "currentPrice": 0.67,
+      "updatedAt": "2026-03-19T21:00:03.354Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6030,7 +6030,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.12,
+      "pnlUSDC": -0.58,
       "createdAt": "2026-03-19T17:14:05.327Z",
       "signal": {
         "forecastTemp": 10.3,
@@ -6067,8 +6067,8 @@
       "enteredAt": "2026-03-19T17:14:05.336Z",
       "orderId": "paper-mmxqc7tq-r2px",
       "txHash": null,
-      "currentPrice": 0.125,
-      "updatedAt": "2026-03-19T20:30:06.312Z"
+      "currentPrice": 0.105,
+      "updatedAt": "2026-03-19T21:00:03.932Z"
     },
     {
       "id": "oc-mmxsh0q5-abgj2a",
@@ -6132,7 +6132,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 5,
+      "pnlUSDC": -4.44,
       "createdAt": "2026-03-19T19:14:00.447Z",
       "signal": {
         "forecastTemp": 43.6,
@@ -6185,13 +6185,13 @@
       "enteredAt": "2026-03-19T19:14:00.463Z",
       "orderId": "paper-mmxumfmg-40iz",
       "txHash": null,
-      "currentPrice": 0.63,
-      "updatedAt": "2026-03-19T20:30:06.867Z"
+      "currentPrice": 0.375,
+      "updatedAt": "2026-03-19T21:00:04.470Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-19T20:10:06.030Z",
-    "lastPriceSync": "2026-03-19T20:30:07.167Z"
+    "lastPriceSync": "2026-03-19T21:00:04.769Z"
   }
 }
