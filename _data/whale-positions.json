@@ -12661,5 +12661,29 @@
       {}
     ],
     "updatedAt": "2026-03-19T00:00:38.215Z"
+  },
+  {
+    "id": "3ba3d304-98f3-48e1-ae18-0a587472e33b",
+    "market": "Netanyahu out by March 31?",
+    "side": "No",
+    "entryPrice": 0.9725,
+    "currentPrice": 0.9725,
+    "shares": 16.99,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, Polar, Car, aenews, Roflan, Rooke Brollins, debased, JJo, Euan, GollumGekko, FrancisSP8, MuddyRC, Michael5289",
+    "whaleCount": 13,
+    "confidence": "Very High",
+    "avgScore": 86.3,
+    "avgWinRate": 71.6,
+    "reasoning": "Consensus: 13 whales (avg score 86.3, WR 71.6%) No. bet=$16.52, shares=16.99. Whales: scottilicious, Polar, Car, aenews, Roflan, Rooke Brollins, debased, JJo, Euan, GollumGekko, FrancisSP8, MuddyRC, Michael5289",
+    "endDate": "2026-03-31",
+    "conditionId": "0x7cb525e831729325d651017f81cbcb6f1adde5011c7b2283babea00b4ae93ae7",
+    "createdAt": "2026-03-19T00:02:52.565Z",
+    "entryDate": "2026-03-19T00:02:52.565Z",
+    "invested": 16.5228,
+    "currentValue": 16.5228,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
