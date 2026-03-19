@@ -5861,9 +5861,9 @@
       "bucket": "76-77°F",
       "question": "Will the highest temperature in Dallas be between 76-77°F on March 18?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 3.98,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4,
       "createdAt": "2026-03-18T09:14:21.302Z",
       "signal": {
         "forecastTemp": 79.1,
@@ -5897,7 +5897,7 @@
       "orderId": "paper-mmvtrf9j-0ox1",
       "txHash": null,
       "currentPrice": 0.9975,
-      "updatedAt": "2026-03-19T00:00:04.270Z",
+      "updatedAt": "2026-03-19T00:05:02.399Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -5907,12 +5907,16 @@
           "pnlUSDC": 3.5,
           "timestamp": "2026-03-18T22:10:03.814Z"
         }
-      ]
+      ],
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-19T00:05:03.725Z",
+      "closedAt": "2026-03-19T00:05:03.733Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-18T23:10:02.859Z",
+    "lastUpdated": "2026-03-19T00:05:03.736Z",
     "lastPriceSync": "2026-03-19T00:00:04.572Z"
   }
 }
