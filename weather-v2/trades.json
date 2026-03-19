@@ -5969,8 +5969,8 @@
       "enteredAt": "2026-03-19T15:14:16.583Z",
       "orderId": "paper-mmxm24y3-mk6c",
       "txHash": null,
-      "currentPrice": 0.61,
-      "updatedAt": "2026-03-19T19:00:04.696Z"
+      "currentPrice": 0.63,
+      "updatedAt": "2026-03-19T19:10:14.354Z"
     },
     {
       "id": "oc-mmxqc7so-4rcjrn",
@@ -6014,8 +6014,8 @@
       "enteredAt": "2026-03-19T17:14:05.315Z",
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
-      "currentPrice": 0.645,
-      "updatedAt": "2026-03-19T19:00:05.251Z"
+      "currentPrice": 0.64,
+      "updatedAt": "2026-03-19T19:10:14.593Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6067,8 +6067,8 @@
       "enteredAt": "2026-03-19T17:14:05.336Z",
       "orderId": "paper-mmxqc7tq-r2px",
       "txHash": null,
-      "currentPrice": 0.13,
-      "updatedAt": "2026-03-19T19:00:05.790Z"
+      "currentPrice": 0.17,
+      "updatedAt": "2026-03-19T19:10:14.846Z"
     },
     {
       "id": "oc-mmxsh0q5-abgj2a",
@@ -6112,13 +6112,80 @@
       "enteredAt": "2026-03-19T18:13:48.666Z",
       "orderId": "paper-mmxsh0qn-1ilb",
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-03-19T19:00:06.363Z"
+      "currentPrice": 0.685,
+      "updatedAt": "2026-03-19T19:10:15.114Z"
+    },
+    {
+      "id": "oc-mmxumflr-jezzv3",
+      "conditionId": "0xdea5064aaacb20160e93e8857b3303d3f691852aa345b766e6c6dec7fd3bea88",
+      "tokenId": "0x883c82b3e87002d57b5d23d44090e8f2d758e9ec2e6cb93b67c20ebed098bfa8",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-19-2026-40-41f",
+      "city": "New York City",
+      "date": "2026-03-19",
+      "bucket": "40-41°F",
+      "question": "Will the highest temperature in New York City be between 40-41°F on March 19?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-19T19:14:00.447Z",
+      "signal": {
+        "forecastTemp": 43.6,
+        "forecastSource": "multi-source",
+        "sources": 8,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.1,
+        "impliedProb": 0.495,
+        "modelProb": 0.7013,
+        "edge": 0.2063,
+        "isLottery": false
+      },
+      "notes": "Forecast: 43.6°F | Model: 70% vs Market: 50% | Edge: 41.7%",
+      "entryPrice": 0.495,
+      "size": 37,
+      "sizeUSDC": 18.315,
+      "enteredAt": "2026-03-19T19:14:00.463Z",
+      "orderId": "paper-mmxumfmg-40iz",
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-19T18:13:48.675Z",
+    "lastUpdated": "2026-03-19T19:14:00.477Z",
     "lastPriceSync": "2026-03-19T19:00:06.663Z"
   }
 }
