@@ -1678,7 +1678,7 @@
       "question": "Will the highest temperature in Paris be 13°C or below on February 24?",
       "side": "YES",
       "status": "closed",
-      "result": null,
+      "result": "loss",
       "pnlUSDC": -11.6325,
       "createdAt": "2026-02-23T00:04:12.825Z",
       "signal": {
@@ -1929,7 +1929,7 @@
       "question": "Will the highest temperature in New York City be between 36-37°F on February 26?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "win",
       "pnlUSDC": 3.485,
       "createdAt": "2026-02-24T12:11:55.463Z",
       "signal": {
@@ -2320,7 +2320,7 @@
       "question": "Will the highest temperature in Miami be 76°F or higher on February 25?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "win",
       "pnlUSDC": 0.49,
       "createdAt": "2026-02-25T08:07:05.004Z",
       "signal": {
@@ -2775,7 +2775,7 @@
       "question": "Will the highest temperature in Miami be between 88-89°F on February 28?",
       "side": "YES",
       "status": "closed",
-      "result": null,
+      "result": "loss",
       "pnlUSDC": -2.4565,
       "createdAt": "2026-02-27T15:28:46.554Z",
       "signal": {
@@ -3070,7 +3070,7 @@
       "question": "Will the highest temperature in Miami be 75°F or below on March 1?",
       "side": "YES",
       "status": "closed",
-      "result": null,
+      "result": "win",
       "pnlUSDC": 5.819,
       "createdAt": "2026-02-28T02:10:53.753Z",
       "signal": {
@@ -3404,7 +3404,7 @@
       "question": "Will the highest temperature in Chicago be between 44-45°F on March 2?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "win",
       "pnlUSDC": 1.92,
       "createdAt": "2026-03-01T10:11:00.381Z",
       "signal": {
@@ -3516,7 +3516,7 @@
       "question": "Will the highest temperature in New York City be between 30-31°F on March 2?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "win",
       "pnlUSDC": 0.18,
       "createdAt": "2026-03-01T14:11:00.220Z",
       "signal": {
@@ -3848,7 +3848,7 @@
       "question": "Will the highest temperature in Atlanta be between 82-83°F on March 7?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "win",
       "pnlUSDC": 5.88,
       "createdAt": "2026-03-07T08:32:40.618Z",
       "signal": {
@@ -3960,7 +3960,7 @@
       "question": "Will the highest temperature in Seattle be between 48-49°F on March 8?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "push",
       "pnlUSDC": 0,
       "createdAt": "2026-03-07T08:32:40.702Z",
       "signal": {
@@ -3998,7 +3998,7 @@
       "question": "Will the highest temperature in Atlanta be between 66-67°F on March 8?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "win",
       "pnlUSDC": 0.156,
       "createdAt": "2026-03-07T08:32:40.723Z",
       "signal": {
@@ -4147,7 +4147,7 @@
       "question": "Will the highest temperature in Paris be 16°C on March 8?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "loss",
       "pnlUSDC": -1.75,
       "createdAt": "2026-03-07T14:14:56.477Z",
       "signal": {
@@ -4518,7 +4518,7 @@
       "question": "Will the highest temperature in Dallas be between 78-79°F on March 10?",
       "side": "NO",
       "status": "closed",
-      "result": null,
+      "result": "win",
       "pnlUSDC": 0.81,
       "createdAt": "2026-03-10T00:11:17.328Z",
       "signal": {
@@ -5989,7 +5989,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.41,
+      "pnlUSDC": 4.19,
       "createdAt": "2026-03-19T17:14:05.304Z",
       "signal": {
         "forecastTemp": 55.5,
@@ -6018,8 +6018,8 @@
       "enteredAt": "2026-03-19T17:14:05.315Z",
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
-      "currentPrice": 0.63,
-      "updatedAt": "2026-03-20T03:00:03.937Z"
+      "currentPrice": 0.77,
+      "updatedAt": "2026-03-20T03:30:02.666Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6032,9 +6032,9 @@
       "bucket": "13°C",
       "question": "Will the highest temperature in Tokyo be 13°C on March 20?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -1.73,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -1.955,
       "createdAt": "2026-03-19T17:14:05.327Z",
       "signal": {
         "forecastTemp": 10.3,
@@ -6071,8 +6071,12 @@
       "enteredAt": "2026-03-19T17:14:05.336Z",
       "orderId": "paper-mmxqc7tq-r2px",
       "txHash": null,
-      "currentPrice": 0.055,
-      "updatedAt": "2026-03-20T03:00:04.509Z"
+      "currentPrice": 0.045,
+      "updatedAt": "2026-03-20T03:10:05.665Z",
+      "resolutionPrice": 0.045,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-20T03:10:06.462Z",
+      "closedAt": "2026-03-20T03:10:06.481Z"
     },
     {
       "id": "oc-mmxsh0q5-abgj2a",
@@ -6219,7 +6223,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.93,
+      "pnlUSDC": -2.01,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6252,13 +6256,13 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.56,
-      "updatedAt": "2026-03-20T03:00:05.061Z"
+      "currentPrice": 0.525,
+      "updatedAt": "2026-03-20T03:30:03.252Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T02:10:03.499Z",
-    "lastPriceSync": "2026-03-20T03:00:05.361Z"
+    "lastUpdated": "2026-03-20T03:17:09.979Z",
+    "lastPriceSync": "2026-03-20T03:30:03.552Z"
   }
 }
