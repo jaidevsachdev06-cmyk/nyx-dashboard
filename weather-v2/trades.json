@@ -6227,7 +6227,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -7.13,
+      "pnlUSDC": -12.86,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6260,8 +6260,8 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.36,
-      "updatedAt": "2026-03-20T20:00:04.247Z"
+      "currentPrice": 0.175,
+      "updatedAt": "2026-03-20T20:30:03.425Z"
     },
     {
       "id": "oc-mmymh4nu-ktvklx",
@@ -6896,11 +6896,115 @@
       "sizeUSDC": 16.12,
       "enteredAt": "2026-03-20T19:13:28.410Z",
       "closedAt": "2026-03-20T19:13:28.417Z"
+    },
+    {
+      "id": "oc-mmzc6ldb-8jbg9v",
+      "conditionId": "0xd3b02f65377dcaf899bb070ac28331d5a25f077a5b1c0671c6841dcae843c124",
+      "tokenId": "0x669f74091fcac8ce52dad459b80f870fafe6b25c0a44370e493e70ae8242fada",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T20:13:20.687Z",
+      "signal": {
+        "forecastTemp": 47.2,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3,
+        "impliedProb": 0.615,
+        "modelProb": 0.7018,
+        "edge": 0.0868,
+        "isLottery": false
+      },
+      "notes": "Forecast: 47.2°F | Model: 70% vs Market: 62% | Edge: 14.1%",
+      "entryPrice": 0.615,
+      "size": 27,
+      "sizeUSDC": 16.605,
+      "enteredAt": "2026-03-20T20:13:20.706Z",
+      "closedAt": "2026-03-20T20:13:20.716Z"
+    },
+    {
+      "id": "oc-mmzc6lei-fuvz30",
+      "conditionId": "0x57f4ad4240d089b72ed7a487fd0894c6fedd2fe6c2eed269261525f1ef9024db",
+      "tokenId": "0xc8a377689b1f85677a8d34360212abec5ecd57c0219332b51b991035a2d29a87",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-20-2026-52-53f",
+      "city": "New York City",
+      "date": "2026-03-20",
+      "bucket": "52-53°F",
+      "question": "Will the highest temperature in New York City be between 52-53°F on March 20?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T20:13:20.730Z",
+      "signal": {
+        "forecastTemp": 55.2,
+        "forecastSource": "multi-source",
+        "sources": 7,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.1,
+        "impliedProb": 0.115,
+        "modelProb": 0.7022,
+        "edge": 0.5872,
+        "isLottery": true
+      },
+      "notes": "Forecast: 55.2°F | Model: 70% vs Market: 12% | Edge: 510.6% 🎰LOTTERY",
+      "entryPrice": 0.115,
+      "size": 26,
+      "sizeUSDC": 2.99,
+      "enteredAt": "2026-03-20T20:13:20.742Z",
+      "closedAt": "2026-03-20T20:13:20.749Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T19:13:28.421Z",
-    "lastPriceSync": "2026-03-20T20:00:04.548Z"
+    "lastUpdated": "2026-03-20T20:13:20.753Z",
+    "lastPriceSync": "2026-03-20T20:30:03.726Z"
   }
 }
