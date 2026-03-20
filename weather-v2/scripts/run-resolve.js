@@ -4,6 +4,7 @@
  */
 
 const { observe } = require('../stormwatch/observer');
+const { syncPrices } = require('../core/price-sync');
 const { execSync } = require('child_process');
 const path = require('path');
 
@@ -11,6 +12,14 @@ const GIT_DIR = path.join(__dirname, '..', '..'); // nyx-dashboard root
 
 async function main() {
   console.log(`[run-resolve] Starting resolution check | ${new Date().toISOString()}`);
+
+  // FIX 9: Sync prices BEFORE resolution check (enables price-inferred fallback + accurate P&L)
+  try {
+    await syncPrices();
+  } catch (err) {
+    console.warn('[run-resolve] Price sync failed (continuing):', err.message);
+  }
+
   const result = await observe();
   console.log(`\n[run-resolve] Complete:`, JSON.stringify(result, null, 2));
 
@@ -56,7 +65,7 @@ async function main() {
         msg += `• ${t.market || 'Unknown'} ${sign}$${(t.pnl || 0).toFixed(2)}\n`;
       });
       
-      execSync(`openclaw message send --channel telegram --to "-1003762193481:topic:2" --message "${msg.replace(/"/g, '\\"')}"`, { stdio: 'inherit' });
+      execSync(`openclaw message send --channel telegram --target "-1003762193481:topic:2" --message "${msg.replace(/"/g, '\\"')}"`, { stdio: 'inherit' });
     } catch (err) {
       console.error('[run-resolve] Notification failed (non-fatal):', err.message);
     }
