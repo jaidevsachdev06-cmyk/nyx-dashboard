@@ -6227,7 +6227,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.39,
+      "pnlUSDC": -4.34,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6260,8 +6260,8 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.545,
-      "updatedAt": "2026-03-20T19:00:03.544Z"
+      "currentPrice": 0.45,
+      "updatedAt": "2026-03-20T19:30:02.349Z"
     },
     {
       "id": "oc-mmymh4nu-ktvklx",
@@ -6742,11 +6742,165 @@
       "sizeUSDC": 16.605,
       "enteredAt": "2026-03-20T18:13:40.505Z",
       "closedAt": "2026-03-20T18:13:40.513Z"
+    },
+    {
+      "id": "oc-mmza1li0-dt8k2q",
+      "conditionId": "0xd237b298cbbc09f244fb59ac497d692b32d9737d6e8005844d1db27631ff5018",
+      "tokenId": "0x85cc4f419056a6fe0dd777a8fd3aaa1659e52cb79784626285b8295713692525",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-20-2026-70-71f",
+      "city": "Chicago",
+      "date": "2026-03-20",
+      "bucket": "70-71°F",
+      "question": "Will the highest temperature in Chicago be between 70-71°F on March 20?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T19:13:28.344Z",
+      "signal": {
+        "forecastTemp": 67.8,
+        "forecastSource": "multi-source",
+        "sources": 5,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.5,
+        "impliedProb": 0.4205,
+        "modelProb": 0.7032,
+        "edge": 0.2827,
+        "isLottery": false
+      },
+      "notes": "Forecast: 67.8°F | Model: 70% vs Market: 42% | Edge: 67.2%",
+      "entryPrice": 0.4205,
+      "size": 44,
+      "sizeUSDC": 18.502,
+      "enteredAt": "2026-03-20T19:13:28.359Z",
+      "closedAt": "2026-03-20T19:13:28.366Z"
+    },
+    {
+      "id": "oc-mmza1liu-y2vc9a",
+      "conditionId": "0xd8ed93a371a5544c8ac39564afacc4b595629e1ad16444b1225d918f17f82e8c",
+      "tokenId": "0x954fd563c9370bd79a3e593a5be0b5916fc5980895f440ffa88f243dd4b22996",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-20-2026-72-73f",
+      "city": "Chicago",
+      "date": "2026-03-20",
+      "bucket": "72-73°F",
+      "question": "Will the highest temperature in Chicago be between 72-73°F on March 20?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T19:13:28.374Z",
+      "signal": {
+        "forecastTemp": 67.8,
+        "forecastSource": "multi-source",
+        "sources": 5,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.5,
+        "impliedProb": 0.616,
+        "modelProb": 0.7,
+        "edge": 0.084,
+        "isLottery": false
+      },
+      "notes": "Forecast: 67.8°F | Model: 70% vs Market: 62% | Edge: 13.6%",
+      "entryPrice": 0.616,
+      "size": 26,
+      "sizeUSDC": 16.016,
+      "enteredAt": "2026-03-20T19:13:28.385Z",
+      "closedAt": "2026-03-20T19:13:28.392Z"
+    },
+    {
+      "id": "oc-mmza1ljl-tm7s0b",
+      "conditionId": "0xd3b02f65377dcaf899bb070ac28331d5a25f077a5b1c0671c6841dcae843c124",
+      "tokenId": "0x669f74091fcac8ce52dad459b80f870fafe6b25c0a44370e493e70ae8242fada",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T19:13:28.401Z",
+      "signal": {
+        "forecastTemp": 47.8,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.6,
+        "impliedProb": 0.62,
+        "modelProb": 0.7032,
+        "edge": 0.0832,
+        "isLottery": false
+      },
+      "notes": "Forecast: 47.8°F | Model: 70% vs Market: 62% | Edge: 13.4%",
+      "entryPrice": 0.62,
+      "size": 26,
+      "sizeUSDC": 16.12,
+      "enteredAt": "2026-03-20T19:13:28.410Z",
+      "closedAt": "2026-03-20T19:13:28.417Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T18:13:40.517Z",
-    "lastPriceSync": "2026-03-20T19:00:03.845Z"
+    "lastUpdated": "2026-03-20T19:13:28.421Z",
+    "lastPriceSync": "2026-03-20T19:30:02.649Z"
   }
 }
