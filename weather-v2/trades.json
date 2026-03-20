@@ -6227,7 +6227,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.78,
+      "pnlUSDC": -0.47,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6260,8 +6260,8 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.565,
-      "updatedAt": "2026-03-20T11:00:04.026Z"
+      "currentPrice": 0.575,
+      "updatedAt": "2026-03-20T11:30:03.111Z"
     },
     {
       "id": "oc-mmymh4nu-ktvklx",
@@ -6320,11 +6320,53 @@
       "sizeUSDC": 13.937,
       "enteredAt": "2026-03-20T08:13:42.246Z",
       "closedAt": "2026-03-20T08:13:42.253Z"
+    },
+    {
+      "id": "oc-mmyswm1c-qgnld7",
+      "conditionId": "0xd3b02f65377dcaf899bb070ac28331d5a25f077a5b1c0671c6841dcae843c124",
+      "tokenId": "0x669f74091fcac8ce52dad459b80f870fafe6b25c0a44370e493e70ae8242fada",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T11:13:42.288Z",
+      "signal": {
+        "forecastTemp": 47.2,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.1,
+        "impliedProb": 0.63,
+        "modelProb": 0.7019,
+        "edge": 0.0719,
+        "isLottery": false
+      },
+      "notes": "Forecast: 47.2°F | Model: 70% vs Market: 63% | Edge: 11.4%",
+      "entryPrice": 0.63,
+      "size": 23,
+      "sizeUSDC": 14.49,
+      "enteredAt": "2026-03-20T11:13:42.306Z",
+      "closedAt": "2026-03-20T11:13:42.318Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T10:10:05.274Z",
-    "lastPriceSync": "2026-03-20T11:00:04.327Z"
+    "lastUpdated": "2026-03-20T11:13:42.321Z",
+    "lastPriceSync": "2026-03-20T11:30:03.411Z"
   }
 }
