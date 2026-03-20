@@ -6227,7 +6227,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.93,
+      "pnlUSDC": -1.08,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6260,13 +6260,71 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.56,
-      "updatedAt": "2026-03-20T08:00:11.203Z"
+      "currentPrice": 0.555,
+      "updatedAt": "2026-03-20T08:30:07.600Z"
+    },
+    {
+      "id": "oc-mmymh4nu-ktvklx",
+      "conditionId": "0x87f9ab5441a5ab9b6728ebbae282a56e47d4a540c77aa2a20b72bd4b7cef64af",
+      "tokenId": "0xe4a76f0de5ea286b7eace21fdfc33ad498755bb7632f730d9cc077970036b8a7",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-20-2026-66-67f",
+      "city": "Chicago",
+      "date": "2026-03-20",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Chicago be between 66-67°F on March 20?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T08:13:42.234Z",
+      "signal": {
+        "forecastTemp": 63.9,
+        "forecastSource": "multi-source",
+        "sources": 6,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.2,
+        "impliedProb": 0.6335,
+        "modelProb": 0.7031,
+        "edge": 0.0696,
+        "isLottery": false
+      },
+      "notes": "Forecast: 63.9°F | Model: 70% vs Market: 63% | Edge: 11.0%",
+      "entryPrice": 0.6335,
+      "size": 22,
+      "sizeUSDC": 13.937,
+      "enteredAt": "2026-03-20T08:13:42.246Z",
+      "closedAt": "2026-03-20T08:13:42.253Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T07:10:02.766Z",
-    "lastPriceSync": "2026-03-20T08:00:11.504Z"
+    "lastUpdated": "2026-03-20T08:13:42.256Z",
+    "lastPriceSync": "2026-03-20T08:30:07.900Z"
   }
 }
