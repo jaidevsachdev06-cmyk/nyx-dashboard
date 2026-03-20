@@ -15,7 +15,7 @@ const VALID_TRANSITIONS = {
   entered:   ['open', 'closed'],       // closed = order rejected/cancelled
   open:      ['resolved', 'exited', 'closed'],
   resolved:  ['closed'],
-  exited:    [],
+  exited:    ['closed'],  // FIX 10: allow exited→closed (swap-outs were stuck)
   closed:    []                        // terminal state
 };
 
@@ -88,7 +88,21 @@ const TRADE_SCHEMA = {
   },
 
   // Human-readable reasoning (for dashboard display)
-  notes: { type: 'string', required: false }
+  notes: { type: 'string', required: false },
+
+  // Scalper partial-exit tracking (FIX 8: 2026-03-14)
+  scalps: {
+    type: 'object',  // actually an array, but schema uses 'object' for complex types
+    required: false,
+    nullable: true
+  },
+
+  // Real-money trading fields (2026-03-20)
+  realTrading:    { type: 'boolean', required: false },
+  realOrderId:    { type: 'string',  required: false, nullable: true },
+  realSize:       { type: 'number',  required: false, min: 0 },
+  realEntryPrice: { type: 'number',  required: false, min: 0, max: 1 },
+  realPnlUSDC:    { type: 'number',  required: false, nullable: true },
 };
 
 /**
@@ -190,7 +204,6 @@ function validateTrade(trade) {
 
   // Cross-field: exited trades are manually closed before market resolution
   if (trade.status === 'exited') {
-    if (trade.result) errors.push('Exited trades must not have a result');
     if (trade.exitPrice === undefined || trade.exitPrice === null) errors.push('Exited trades must have exitPrice');
     if (!trade.exitedAt) errors.push('Exited trades must have exitedAt');
   }
@@ -199,8 +212,8 @@ function validateTrade(trade) {
   // Both are valid
 
   // Cross-field: resolutionSource must be "polymarket" or "price-inferred"
-  if (trade.resolutionSource && !['polymarket', 'price-inferred', 'manual-exit'].includes(trade.resolutionSource)) {
-    errors.push(`resolutionSource must be "polymarket", "price-inferred", or "manual-exit", got "${trade.resolutionSource}"`);
+  if (trade.resolutionSource && !['polymarket', 'price-inferred', 'manual-exit', 'cli-inferred', 'clob-inferred'].includes(trade.resolutionSource)) {
+    errors.push(`resolutionSource must be "polymarket", "price-inferred", "manual-exit", "cli-inferred", or "clob-inferred", got "${trade.resolutionSource}"`);
   }
 
   // Placeholder detection — catch fake conditionIds

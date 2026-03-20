@@ -22,13 +22,13 @@
     "multiSource": true
   },
   "risk": {
-    "maxPositionSizeUSDC": 50,
+    "maxPositionSizeUSDC": 75,
     "maxOpenPositions": 20,
     "maxDailyLossUSDC": 50,
-    "minEdgePct": 15,
+    "minEdgePct": 10,
     "maxExposurePerCity": 150,
     "kellyMultiplier": 0.25,
-    "defaultSizeUSDC": 6,
+    "defaultSizeUSDC": 12,
     "minModelProb": 0.8,
     "maxModelProb": 0.95,
     "minDistanceFromLine": 2,
@@ -62,7 +62,7 @@
     "preferMultiSource": true
   },
   "stormwatch": {
-    "scanIntervalMinutes": 120,
+    "scanIntervalMinutes": 60,
     "observerIntervalMinutes": 60,
     "candidateExpiryMinutes": 120
   },
@@ -180,5 +180,12 @@
     "apiUrl": "https://nyx-dashboard-lac.vercel.app",
     "token": "AI4P36tsICvIm4tozqbok2V19rvZ06g86ULOzP3aAlE"
   },
-  "paper": true
+  "paper": false,
+  "realTrading": {
+    "enabled": true,
+    "maxSizeUSDC": 6,
+    "maxDailySpendUSDC": 30,
+    "lotteryMaxSizeUSDC": 2,
+    "mirrorPaper": true
+  }
 }

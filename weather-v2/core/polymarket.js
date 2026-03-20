@@ -308,6 +308,91 @@ async function paperOrder({ tokenId, side, price, size }) {
   return { orderID: orderId, id: orderId, paper: true };
 }
 
+/**
+ * realOrder — Place an actual order on Polymarket CLOB via CLI.
+ *
+ * Uses GTC (Good Till Cancelled) limit orders.
+ * Returns { orderID, success, paper: false } or throws on failure.
+ *
+ * SAFETY:
+ * - Validates price is within [0.01, 0.99]
+ * - Validates size >= 1
+ * - Rounds price to tick size (0.01)
+ * - Logs everything for audit trail
+ */
+async function realOrder({ tokenId, side, price, size }) {
+  const tag = `[polymarket] REAL ORDER`;
+
+  // SAFETY: refuse if config.paper is not explicitly false
+  const cfg = require('../config.json');
+  if (cfg.paper !== false) {
+    throw new Error(`${tag}: SAFETY — config.paper must be explicitly false to place real orders (currently: ${cfg.paper})`);
+  }
+
+  // Emergency kill switch
+  const fs = require('fs');
+  const KILL_FILE = '/tmp/stormwatch-kill-real-trading';
+  if (fs.existsSync(KILL_FILE)) {
+    throw new Error(`${tag}: EMERGENCY KILL SWITCH ACTIVE — real trading halted. Remove ${KILL_FILE} to re-enable.`);
+  }
+
+  // Validate inputs
+  if (!tokenId) throw new Error(`${tag}: missing tokenId`);
+  if (!['BUY', 'SELL'].includes(side.toUpperCase())) throw new Error(`${tag}: invalid side "${side}"`);
+  if (price < 0.01 || price > 0.99) throw new Error(`${tag}: price ${price} out of range [0.01, 0.99]`);
+  if (size < 1) throw new Error(`${tag}: size ${size} too small (min 1)`);
+
+  // Round price to tick size (0.01)
+  // For sells: discount 2 ticks to hit the bid and ensure fills
+  let roundedPrice = Math.round(price * 100) / 100;
+  if (side.toUpperCase() === 'SELL') {
+    roundedPrice = Math.max(0.01, roundedPrice - 0.02);
+  }
+  // For sells at very low prices, floor to minimum tick
+  if (roundedPrice < 0.01) roundedPrice = 0.01;
+
+  const roundedSize = Math.floor(size);
+  const costUSDC = roundedPrice * roundedSize;
+
+  console.log(`${tag}: ${side} ${roundedSize} shares @ ${roundedPrice} ($${costUSDC.toFixed(2)}) | token: ${tokenId}`);
+
+  try {
+    const result = execPolymarketCLI([
+      '-o', 'json',
+      'clob', 'create-order',
+      '--token', tokenId,
+      '--side', side.toLowerCase(),
+      '--price', roundedPrice.toString(),
+      '--size', roundedSize.toString(),
+      '--order-type', 'GTC'
+    ], 30000);
+
+    // Check for explicit failure indicators
+    if (result?.error || result?.status === 'failed' || result?.success === false) {
+      throw new Error(`Order rejected by CLOB: ${JSON.stringify(result).slice(0, 300)}`);
+    }
+
+    const orderID = result?.orderID || result?.id || result?.order_id || null;
+    if (!orderID) {
+      throw new Error(`Order returned no orderID: ${JSON.stringify(result).slice(0, 300)}`);
+    }
+
+    // Append-only audit log (survives even if trades.json update fails)
+    try {
+      const auditLine = JSON.stringify({
+        timestamp: new Date().toISOString(), orderID, tokenId, side, price: roundedPrice, size: roundedSize, costUSDC
+      }) + '\n';
+      require('fs').appendFileSync(require('path').resolve(__dirname, '..', 'real-order-log.jsonl'), auditLine);
+    } catch (_) { /* non-fatal */ }
+
+    console.log(`${tag}: ✅ SUCCESS | orderID: ${orderID} | response: ${JSON.stringify(result).slice(0, 300)}`);
+    return { orderID, success: true, paper: false, result };
+  } catch (err) {
+    console.error(`${tag}: ❌ FAILED | ${err.message}`);
+    throw new Error(`Real order failed: ${err.message}`);
+  }
+}
+
 function computePnL(trade, resolution) {
   if (!resolution.resolved || resolution.outcome === null) {
     throw new Error('Cannot compute P&L: market not resolved');
@@ -337,5 +422,6 @@ module.exports = {
   getMidpointPrice,
   checkResolution,
   paperOrder,
+  realOrder,
   computePnL
 };

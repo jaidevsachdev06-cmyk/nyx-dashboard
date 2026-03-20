@@ -87,13 +87,36 @@ async function enterTrade(tradeId, { price, size }) {
     const oldSize = existing.size ?? 0;
     const pnlUSDC = parseFloat(((exitPrice - oldEntry) * oldSize).toFixed(4));
 
+    // Sell real shares before swap-closing (C3 fix: prevent orphaned real shares)
+    const realCfg = config.realTrading || {};
+    if (realCfg.enabled && existing.realTrading && existing.realSize > 0) {
+      try {
+        const sellPrice = Math.round(exitPrice * 100) / 100;
+        if (sellPrice >= 0.01 && sellPrice <= 0.99) {
+          await polymarket.realOrder({
+            tokenId: existing.tokenId,
+            side: 'SELL',
+            price: sellPrice,
+            size: existing.realSize
+          });
+          console.log(`[lifecycle] 🔴 REAL SELL on swap-out | ${existing.city} | ${existing.realSize} shares @ ${sellPrice}`);
+        }
+      } catch (swapSellErr) {
+        console.error(`[lifecycle] ⚠️ SWAP REAL SELL FAILED — aborting swap to prevent orphaned shares: ${swapSellErr.message}`);
+        throw new Error(`Swap aborted: could not sell real shares of old position: ${swapSellErr.message}`);
+      }
+    }
+
     store.transition(existing.id, 'exited', {
       exitPrice,
       exitSource: 'swap',
       exitReason: `SWAP: replaced by better edge candidate (ΔedgePP ${((newEdgePP-oldEdgePP)*100).toFixed(1)}pp)`,
       pnlUSDC,
+      result: pnlUSDC >= 0 ? 'win' : 'loss',
       notes: (existing.notes ? existing.notes + ' | ' : '') + `SWAP: replaced by better edge candidate (ΔedgePP ${((newEdgePP-oldEdgePP)*100).toFixed(1)}pp)`
     });
+    // FIX 10: Immediately close exited trades so they appear in stats
+    store.transition(existing.id, 'closed');
   }
 
   // Compute exposure for this city across all open positions
@@ -121,17 +144,89 @@ async function enterTrade(tradeId, { price, size }) {
       size
     });
 
+    // Step 1: Confirm paper trade in store FIRST (before spending real money)
     const updated = store.transition(tradeId, 'open', {
       orderId: orderResult.orderID || orderResult.id,
+      realTrading: false,
+      realOrderId: null,
+      realSize: null,
+      realEntryPrice: null,
       txHash: null
     });
 
-    console.log(`[lifecycle] Trade ${tradeId} is now OPEN | ${trade.city} ${trade.side} @ ${price}`);
-    return updated;
+    console.log(`[lifecycle] Trade ${tradeId} is now OPEN | ${trade.city} ${trade.side} @ ${price} [PAPER]`);
+
+    // Step 2: Real trading — mirror AFTER store is confirmed (no orphaned shares)
+    const realCfg = config.realTrading || {};
+    if (realCfg.enabled && realCfg.mirrorPaper) {
+      // Daily real spend cap
+      const maxDailyRealSpend = realCfg.maxDailySpendUSDC || 30;
+      const today = new Date().toISOString().split('T')[0];
+      const todayRealSpend = store.getAll()
+        .filter(t => t.realTrading && t.enteredAt?.startsWith(today) && t.realEntryPrice && t.realSize)
+        .reduce((sum, t) => sum + (t.realEntryPrice * t.realSize), 0);
+
+      const isLottery = trade.signal?.isLottery || false;
+      const maxRealUSDC = isLottery
+        ? (realCfg.lotteryMaxSizeUSDC || 2)
+        : (realCfg.maxSizeUSDC || 6);
+      const realSize = Math.max(1, Math.floor(maxRealUSDC / price));
+      const realCost = realSize * price;
+
+      if (todayRealSpend + realCost > maxDailyRealSpend) {
+        console.warn(`[lifecycle] Daily real spend limit hit: $${todayRealSpend.toFixed(2)} + $${realCost.toFixed(2)} > $${maxDailyRealSpend} — skipping real order`);
+      } else {
+        try {
+          const realOrderResult = await polymarket.realOrder({
+            tokenId: trade.tokenId,
+            side: 'BUY',
+            price,
+            size: realSize
+          });
+          // Update trade with real order info (store is already in good state)
+          store.update(tradeId, {
+            realTrading: true,
+            realOrderId: realOrderResult.orderID,
+            realSize: realSize,
+            realEntryPrice: price
+          });
+          console.log(`[lifecycle] 🔴 REAL ORDER placed | ${trade.city} ${trade.side} | ${realSize} shares @ ${price} ($${realCost.toFixed(2)}) [REAL+PAPER]`);
+        } catch (realErr) {
+          // Real order failure is non-fatal — paper trade is already safely stored
+          console.error(`[lifecycle] ⚠️ REAL ORDER FAILED (paper trade continues): ${realErr.message}`);
+        }
+      }
+    }
+
+    return store.getById(tradeId); // return latest state
   } catch (err) {
     console.error(`[lifecycle] Order failed for ${tradeId}: ${err.message}`);
     store.transition(tradeId, 'closed', { result: 'push', pnlUSDC: 0, closedAt: new Date().toISOString() });
     throw new Error(`Order placement failed: ${err.message}`);
+  }
+}
+
+/**
+ * Redeem real winning positions via CTF. Called from both normal and price-inferred resolution paths.
+ */
+async function redeemRealPosition(trade, tradeId, pnlResult) {
+  const realCfg = config.realTrading || {};
+  if (!realCfg.enabled || !trade.realTrading || pnlResult !== 'win') return;
+
+  try {
+    const { spawnSync } = require('child_process');
+    const redeemResult = spawnSync('polymarket', [
+      '-o', 'json', 'ctf', 'redeem',
+      '--condition', trade.conditionId
+    ], { timeout: 30000, encoding: 'utf8', killSignal: 'SIGKILL', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });
+
+    if (redeemResult.status === 0) {
+      console.log(`[lifecycle] ✅ REAL REDEEM successful for ${tradeId}: ${(redeemResult.stdout || '').slice(0, 200)}`);
+    } else {
+      console.warn(`[lifecycle] ⚠️ REAL REDEEM failed for ${tradeId}: ${(redeemResult.stderr || '').slice(0, 200)}`);
+    }
+  } catch (redeemErr) {
+    console.warn(`[lifecycle] ⚠️ REAL REDEEM error for ${tradeId}: ${redeemErr.message}`);
   }
 }
 
@@ -168,6 +263,10 @@ async function checkAndResolve(tradeId) {
           ? parseFloat(((1.0 - entryPrice) * size).toFixed(4))
           : parseFloat((-entryPrice * size).toFixed(4));
         console.log(`[lifecycle] ${tradeId} — PRICE-INFERRED ${inferredResult} (price ${price}, ${hoursPast.toFixed(0)}h past date)`);
+
+        // C4 fix: redeem real winning positions even on price-inferred resolution
+        await redeemRealPosition(trade, tradeId, inferredResult);
+
         store.transition(tradeId, 'resolved', {
           result: inferredResult, pnlUSDC,
           resolutionPrice: price, resolutionSource: 'price-inferred',
@@ -183,6 +282,9 @@ async function checkAndResolve(tradeId) {
   }
 
   const pnl = polymarket.computePnL(trade, resolution);
+
+  // Auto-redeem real positions on resolution
+  await redeemRealPosition(trade, tradeId, pnl.result);
 
   const resolved = store.transition(tradeId, 'resolved', {
     result: pnl.result,

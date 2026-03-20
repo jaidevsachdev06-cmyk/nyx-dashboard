@@ -120,6 +120,45 @@ async function executeScalp(signal) {
   const tag = `[scalper] ${trade.city} ${trade.bucket} ${trade.side}`;
   const pnlOnSold = (currentPrice - trade.entryPrice) * sharesToSell;
 
+  // Real trading: sell real shares if this trade has a real order
+  const realCfg = config.realTrading || {};
+  const realRemaining = trade.realSize || 0;
+  if (realCfg.enabled && trade.realTrading && trade.tokenId && realRemaining > 0) {
+    try {
+      let realSellSize;
+      if (signal.action === 'exit') {
+        // Full exit: sell all remaining real shares
+        realSellSize = realRemaining;
+      } else {
+        // Partial exit: use sellFraction of REAL position (not paper)
+        realSellSize = Math.max(1, Math.floor(realRemaining * sellFraction));
+      }
+
+      // Clamp: never sell more than we actually have
+      if (realSellSize > realRemaining) {
+        console.warn(`${tag} ⚠️ Clamping real sell ${realSellSize} → ${realRemaining} (tracked realSize)`);
+        realSellSize = realRemaining;
+      }
+
+      if (realSellSize >= 1) {
+        // Use currentPrice as basis — realOrder() will discount 2 ticks for sells
+        const realResult = await polymarket.realOrder({
+          tokenId: trade.tokenId,
+          side: 'SELL',
+          price: currentPrice,
+          size: realSellSize
+        });
+        console.log(`${tag} 💵 REAL SELL placed | ${realSellSize} shares @ ~${currentPrice}`);
+
+        // Update realSize tracker
+        const newRealSize = realRemaining - realSellSize;
+        store.update(trade.id, { realSize: newRealSize });
+      }
+    } catch (realErr) {
+      console.error(`${tag} ⚠️ REAL SELL FAILED (paper exit continues): ${realErr.message}`);
+    }
+  }
+
   if (signal.action === 'exit') {
     const priorScalpPnl = (trade.scalps || []).reduce((s, sc) => s + (sc.pnlUSDC || 0), 0);
     const remainingPnl = (currentPrice - trade.entryPrice) * trade.size;
