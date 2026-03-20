@@ -12748,5 +12748,29 @@
       {}
     ],
     "updatedAt": "2026-03-20T14:00:49.704Z"
+  },
+  {
+    "id": "c9733afc-df63-4295-a084-f9e78d2cd759",
+    "market": "Will the next Prime Minister of Hungary be Viktor Orbán?",
+    "side": "No",
+    "entryPrice": 0.625,
+    "currentPrice": 0.625,
+    "shares": 29.57,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "debased, Roflan, archaic, UbuntuTrading",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 89,
+    "avgWinRate": 80.1,
+    "reasoning": "Consensus: 4 whales (avg score 89, WR 80.1%) No. bet=$18.48, shares=29.57. Whales: debased, Roflan, archaic, UbuntuTrading",
+    "endDate": "2026-04-12",
+    "conditionId": "0x5ec80dc407457301f282a2b44341947afc700dfaa7923d14c8894e04bc63b03f",
+    "createdAt": "2026-03-20T14:03:07.172Z",
+    "entryDate": "2026-03-20T14:03:07.172Z",
+    "invested": 18.4812,
+    "currentValue": 18.4812,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
