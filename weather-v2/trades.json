@@ -6227,7 +6227,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.48,
+      "pnlUSDC": -2.32,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6260,8 +6260,8 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.51,
-      "updatedAt": "2026-03-20T17:00:06.073Z"
+      "currentPrice": 0.515,
+      "updatedAt": "2026-03-20T17:30:05.526Z"
     },
     {
       "id": "oc-mmymh4nu-ktvklx",
@@ -6642,11 +6642,65 @@
       "sizeUSDC": 14.375,
       "enteredAt": "2026-03-20T16:13:50.808Z",
       "closedAt": "2026-03-20T16:13:50.815Z"
+    },
+    {
+      "id": "oc-mmz5rnyi-rnph4z",
+      "conditionId": "0xd560c8d4999a4f23ede30161eadb047a53527d1f7e53e304d5b02e8d28a8631d",
+      "tokenId": "0x941e1fefda962e7ed616afa74dc8946ebf172996520f23f31444271f2d6dea",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-21-2026-94-95f",
+      "city": "Dallas",
+      "date": "2026-03-21",
+      "bucket": "94-95°F",
+      "question": "Will the highest temperature in Dallas be between 94-95°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T17:13:46.506Z",
+      "signal": {
+        "forecastTemp": 90.2,
+        "forecastSource": "multi-source",
+        "sources": 5,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.1,
+        "impliedProb": 0.615,
+        "modelProb": 0.7,
+        "edge": 0.085,
+        "isLottery": false
+      },
+      "notes": "Forecast: 90.2°F | Model: 70% vs Market: 62% | Edge: 13.8%",
+      "entryPrice": 0.615,
+      "size": 26,
+      "sizeUSDC": 15.99,
+      "enteredAt": "2026-03-20T17:13:46.519Z",
+      "closedAt": "2026-03-20T17:13:46.527Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T16:13:50.819Z",
-    "lastPriceSync": "2026-03-20T17:00:06.374Z"
+    "lastUpdated": "2026-03-20T17:13:46.531Z",
+    "lastPriceSync": "2026-03-20T17:30:05.827Z"
   }
 }
