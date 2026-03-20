@@ -12754,7 +12754,7 @@
     "market": "Will the next Prime Minister of Hungary be Viktor Orbán?",
     "side": "No",
     "entryPrice": 0.625,
-    "currentPrice": 0.625,
+    "currentPrice": 0.615,
     "shares": 29.57,
     "status": "open",
     "source": "consensus-scanner",
@@ -12769,13 +12769,13 @@
     "createdAt": "2026-03-20T14:03:07.172Z",
     "entryDate": "2026-03-20T14:03:07.172Z",
     "invested": 18.4812,
-    "currentValue": 18.4812,
-    "pnl": 0,
-    "pnlPercent": 0,
+    "currentValue": 18.1855,
+    "pnl": -0.2957,
+    "pnlPercent": -1.6,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-20T19:30:54.069Z"
+    "updatedAt": "2026-03-20T20:00:50.825Z"
   }
 ]
