@@ -6227,7 +6227,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.94,
+      "pnlUSDC": -0.47,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6260,8 +6260,8 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.495,
-      "updatedAt": "2026-03-20T18:00:04.373Z"
+      "currentPrice": 0.575,
+      "updatedAt": "2026-03-20T18:30:02.689Z"
     },
     {
       "id": "oc-mmymh4nu-ktvklx",
@@ -6696,11 +6696,57 @@
       "sizeUSDC": 15.99,
       "enteredAt": "2026-03-20T17:13:46.519Z",
       "closedAt": "2026-03-20T17:13:46.527Z"
+    },
+    {
+      "id": "oc-mmz7wp3g-vnef4m",
+      "conditionId": "0xd3b02f65377dcaf899bb070ac28331d5a25f077a5b1c0671c6841dcae843c124",
+      "tokenId": "0x669f74091fcac8ce52dad459b80f870fafe6b25c0a44370e493e70ae8242fada",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T18:13:40.492Z",
+      "signal": {
+        "forecastTemp": 47.8,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.6,
+        "impliedProb": 0.615,
+        "modelProb": 0.7032,
+        "edge": 0.0882,
+        "isLottery": false
+      },
+      "notes": "Forecast: 47.8°F | Model: 70% vs Market: 62% | Edge: 14.3%",
+      "entryPrice": 0.615,
+      "size": 27,
+      "sizeUSDC": 16.605,
+      "enteredAt": "2026-03-20T18:13:40.505Z",
+      "closedAt": "2026-03-20T18:13:40.513Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T17:13:46.531Z",
-    "lastPriceSync": "2026-03-20T18:00:04.674Z"
+    "lastUpdated": "2026-03-20T18:13:40.517Z",
+    "lastPriceSync": "2026-03-20T18:30:02.990Z"
   }
 }
