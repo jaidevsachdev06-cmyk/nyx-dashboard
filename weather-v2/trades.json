@@ -6227,7 +6227,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.31,
+      "pnlUSDC": -1.55,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6260,8 +6260,8 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.58,
-      "updatedAt": "2026-03-20T15:00:04.501Z"
+      "currentPrice": 0.54,
+      "updatedAt": "2026-03-20T15:30:03.663Z"
     },
     {
       "id": "oc-mmymh4nu-ktvklx",
@@ -6454,11 +6454,149 @@
       "sizeUSDC": 18.599999999999998,
       "enteredAt": "2026-03-20T13:13:50.584Z",
       "closedAt": "2026-03-20T13:13:50.597Z"
+    },
+    {
+      "id": "oc-mmz1hi0g-j52al0",
+      "conditionId": "0x5b4a04f619b916d5471bc65069fd218930844c85d87a569a632c62f78e782224",
+      "tokenId": "0xa440969e8402c49f86a409d34da21262149d456808988ed099defd39068929eb",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-20-2026-54-55f",
+      "city": "New York City",
+      "date": "2026-03-20",
+      "bucket": "54-55°F",
+      "question": "Will the highest temperature in New York City be between 54-55°F on March 20?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T15:13:53.776Z",
+      "signal": {
+        "forecastTemp": 57.8,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.8,
+        "impliedProb": 0.54,
+        "modelProb": 0.7017,
+        "edge": 0.1617,
+        "isLottery": false
+      },
+      "notes": "Forecast: 57.8°F | Model: 70% vs Market: 54% | Edge: 29.9%",
+      "entryPrice": 0.54,
+      "size": 34,
+      "sizeUSDC": 18.36,
+      "enteredAt": "2026-03-20T15:13:53.796Z",
+      "closedAt": "2026-03-20T15:13:53.809Z"
+    },
+    {
+      "id": "oc-mmz1hi1o-r2f56i",
+      "conditionId": "0xd560c8d4999a4f23ede30161eadb047a53527d1f7e53e304d5b02e8d28a8631d",
+      "tokenId": "0x941e1fefda962e7ed616afa74dc8946ebf172996520f23f31444271f2d6dea",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-21-2026-94-95f",
+      "city": "Dallas",
+      "date": "2026-03-21",
+      "bucket": "94-95°F",
+      "question": "Will the highest temperature in Dallas be between 94-95°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T15:13:53.820Z",
+      "signal": {
+        "forecastTemp": 91.5,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 1.6,
+        "impliedProb": 0.625,
+        "modelProb": 0.7,
+        "edge": 0.075,
+        "isLottery": false
+      },
+      "notes": "Forecast: 91.5°F | Model: 70% vs Market: 63% | Edge: 12.0%",
+      "entryPrice": 0.625,
+      "size": 23,
+      "sizeUSDC": 14.375,
+      "enteredAt": "2026-03-20T15:13:53.836Z",
+      "closedAt": "2026-03-20T15:13:53.851Z"
+    },
+    {
+      "id": "oc-mmz1hi34-7ctfji",
+      "conditionId": "0xd3b02f65377dcaf899bb070ac28331d5a25f077a5b1c0671c6841dcae843c124",
+      "tokenId": "0x669f74091fcac8ce52dad459b80f870fafe6b25c0a44370e493e70ae8242fada",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T15:13:53.872Z",
+      "signal": {
+        "forecastTemp": 47.8,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.6,
+        "impliedProb": 0.635,
+        "modelProb": 0.7032,
+        "edge": 0.0682,
+        "isLottery": false
+      },
+      "notes": "Forecast: 47.8°F | Model: 70% vs Market: 64% | Edge: 10.7%",
+      "entryPrice": 0.635,
+      "size": 22,
+      "sizeUSDC": 13.97,
+      "enteredAt": "2026-03-20T15:13:53.885Z",
+      "closedAt": "2026-03-20T15:13:53.895Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T14:10:05.204Z",
-    "lastPriceSync": "2026-03-20T15:00:04.801Z"
+    "lastUpdated": "2026-03-20T15:13:53.899Z",
+    "lastPriceSync": "2026-03-20T15:30:03.964Z"
   }
 }
