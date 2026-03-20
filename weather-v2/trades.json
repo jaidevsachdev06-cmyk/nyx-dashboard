@@ -5987,9 +5987,9 @@
       "bucket": "52-53°F",
       "question": "Will the highest temperature in Seattle be between 52-53°F on March 19?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 10.38,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 10.395,
       "createdAt": "2026-03-19T17:14:05.304Z",
       "signal": {
         "forecastTemp": 55.5,
@@ -6019,7 +6019,11 @@
       "orderId": "paper-mmxqc7t2-g0yt",
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-20T04:00:03.742Z"
+      "updatedAt": "2026-03-20T04:05:04.355Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-20T04:05:06.057Z",
+      "closedAt": "2026-03-20T04:05:06.068Z"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6256,13 +6260,13 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.55,
-      "updatedAt": "2026-03-20T04:00:04.329Z"
+      "currentPrice": 0.535,
+      "updatedAt": "2026-03-20T04:05:04.614Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T03:17:09.979Z",
+    "lastUpdated": "2026-03-20T04:05:06.073Z",
     "lastPriceSync": "2026-03-20T04:00:04.629Z"
   }
 }
