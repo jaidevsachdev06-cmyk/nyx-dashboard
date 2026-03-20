@@ -12777,5 +12777,29 @@
       {}
     ],
     "updatedAt": "2026-03-20T20:00:50.825Z"
+  },
+  {
+    "id": "716041c6-b5a4-4766-b4a5-a405a991fc9c",
+    "market": "Trump announces end of military operations against Iran by March 31st?",
+    "side": "Yes",
+    "entryPrice": 0.075,
+    "currentPrice": 0.075,
+    "shares": 235.33,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Dropper, debased, donjo, UbuntuTrading",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 89.5,
+    "avgWinRate": 76.5,
+    "reasoning": "Consensus: 4 whales (avg score 89.5, WR 76.5%) Yes. bet=$17.65, shares=235.33. Whales: Dropper, debased, donjo, UbuntuTrading",
+    "endDate": "2026-03-31",
+    "conditionId": "0x2cbfefb1c7f083b083bbc123b164c05fc13a9baf298063e9570fceb0ff1742a7",
+    "createdAt": "2026-03-20T20:02:51.698Z",
+    "entryDate": "2026-03-20T20:02:51.698Z",
+    "invested": 17.6498,
+    "currentValue": 17.6498,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
