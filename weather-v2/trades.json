@@ -7464,7 +7464,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.62,
+      "pnlUSDC": -1.39,
       "createdAt": "2026-03-21T06:27:46.262Z",
       "signal": {
         "forecastTemp": 51.4,
@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.58,
-      "updatedAt": "2026-03-21T12:30:04.223Z",
+      "currentPrice": 0.555,
+      "updatedAt": "2026-03-21T13:00:04.521Z",
       "tradeSource": "both"
     },
     {
@@ -7543,7 +7543,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.41,
+      "pnlUSDC": 4.26,
       "createdAt": "2026-03-21T07:12:03.673Z",
       "signal": {
         "forecastTemp": 82,
@@ -7581,8 +7581,8 @@
       "realEntryPrice": 0.53,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.44,
-      "updatedAt": "2026-03-21T12:30:04.783Z",
+      "currentPrice": 0.62,
+      "updatedAt": "2026-03-21T13:00:05.077Z",
       "tradeSource": "both"
     },
     {
@@ -7635,7 +7635,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.14,
+      "pnlUSDC": 0.8,
       "createdAt": "2026-03-21T08:12:00.577Z",
       "signal": {
         "forecastTemp": 76.7,
@@ -7672,8 +7672,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.7025,
-      "updatedAt": "2026-03-21T12:30:05.352Z",
+      "currentPrice": 0.7415,
+      "updatedAt": "2026-03-21T13:00:05.609Z",
       "tradeSource": "paper",
       "realFillStatus": "unfilled",
       "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
@@ -7735,12 +7735,12 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.76,
-      "updatedAt": "2026-03-21T12:30:05.883Z"
+      "updatedAt": "2026-03-21T13:00:06.195Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-21T12:25:21.415Z",
-    "lastPriceSync": "2026-03-21T12:30:06.183Z"
+    "lastPriceSync": "2026-03-21T13:00:06.495Z"
   }
 }
