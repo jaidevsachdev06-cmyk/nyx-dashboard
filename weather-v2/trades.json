@@ -7611,11 +7611,62 @@
       "realEntryPrice": 0.014263,
       "signal": null,
       "notes": "Manual real-money position placed during wallet testing. Tracked for scalper/resolver."
+    },
+    {
+      "id": "oc-mn01usw1-a49wsq",
+      "conditionId": "0x99269874752dedb9099f4b1b40f87655786d900add0b635d4f770c02e4dd0a59",
+      "tokenId": "0x74cab30cc71ba844592542f1b0043e759fca06c7f6abe12f4d63afb35a6bb6fd",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-21-2026-72-73f",
+      "city": "Chicago",
+      "date": "2026-03-21",
+      "bucket": "72-73°F",
+      "question": "Will the highest temperature in Chicago be between 72-73°F on March 21?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-21T08:12:00.577Z",
+      "signal": {
+        "forecastTemp": 76.7,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3,
+        "impliedProb": 0.6945,
+        "modelProb": 0.769,
+        "edge": 0.0745,
+        "isLottery": false
+      },
+      "notes": "Forecast: 76.7°F | Model: 77% vs Market: 69% | Edge: 10.7%",
+      "entryPrice": 0.6945,
+      "size": 17,
+      "sizeUSDC": 11.8065,
+      "enteredAt": "2026-03-21T08:12:00.591Z",
+      "orderId": "paper-mn01uswk-759n",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-21T08:10:03.997Z",
+    "lastUpdated": "2026-03-21T08:12:00.602Z",
     "lastPriceSync": "2026-03-21T08:00:03.556Z"
   }
 }
