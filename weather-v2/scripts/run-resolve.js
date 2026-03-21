@@ -51,6 +51,64 @@ async function main() {
   const result = await observe();
   console.log(`\n[run-resolve] Complete:`, JSON.stringify(result, null, 2));
 
+  // RECONCILIATION: Check real positions against CLOB
+  // Catches positions that resolved/sold externally without updating trades.json
+  try {
+    const store = require('../core/store');
+    const { spawnSync } = require('child_process');
+    const openReal = store.getOpenPositions().filter(t => t.realTrading && t.realSize > 0 && t.tokenId);
+    
+    if (openReal.length > 0) {
+      // Get all CLOB positions for our proxy
+      const config = require('../config.json');
+      const walletShow = spawnSync('polymarket', ['wallet', 'show', '-o', 'json'], { encoding: 'utf8', timeout: 5000 });
+      const proxyAddr = walletShow.status === 0 ? JSON.parse(walletShow.stdout).proxy_address : null;
+      
+      if (proxyAddr) {
+        const posResult = spawnSync('polymarket', ['data', 'positions', proxyAddr, '-o', 'json'], { encoding: 'utf8', timeout: 10000 });
+        const clobPositions = posResult.status === 0 ? JSON.parse(posResult.stdout) : [];
+        
+        for (const trade of openReal) {
+          // Check if this position exists on CLOB
+          const onClob = clobPositions.some(p => 
+            p.condition_id === trade.conditionId || 
+            p.slug?.includes(trade.city.toLowerCase().replace(/ /g, '-'))
+          );
+          
+          if (!onClob) {
+            console.log(`[reconcile] ⚠️ ${trade.city} ${trade.bucket} — tracked as open but NOT on CLOB`);
+            // Check if market is closed/resolved
+            const polymarket = require('../core/polymarket');
+            try {
+              const resolution = await polymarket.checkResolution(trade.conditionId);
+              if (resolution.resolved) {
+                console.log(`[reconcile] Market resolved: ${resolution.outcome} — closing trade`);
+                const isWin = (trade.side === resolution.outcome);
+                const pnl = isWin ? (1 - trade.entryPrice) * trade.size : -(trade.entryPrice * trade.size);
+                store.transition(trade.id, 'resolved', {
+                  result: isWin ? 'win' : 'loss',
+                  pnlUSDC: parseFloat(pnl.toFixed(4)),
+                  resolutionPrice: isWin ? 1.0 : 0.0,
+                  resolutionSource: 'reconciliation',
+                  resolvedAt: new Date().toISOString()
+                });
+                store.transition(trade.id, 'closed');
+                if (!result.resolved) result.resolved = [];
+                result.resolved.push({ ...store.getById(trade.id), city: trade.city, bucket: trade.bucket });
+              } else {
+                console.log(`[reconcile] Market NOT resolved but position missing from CLOB — possible external sale`);
+              }
+            } catch (e) {
+              console.warn(`[reconcile] Resolution check failed for ${trade.city}: ${e.message}`);
+            }
+          }
+        }
+      }
+    }
+  } catch (reconcileErr) {
+    console.warn('[reconcile] Reconciliation check failed (non-fatal):', reconcileErr.message);
+  }
+
   // Auto-push if any trades resolved
   if (result.resolved && result.resolved.length > 0) {
     try {

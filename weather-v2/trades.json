@@ -7664,12 +7664,13 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.688,
-      "updatedAt": "2026-03-21T08:30:05.781Z"
+      "updatedAt": "2026-03-21T08:30:05.781Z",
+      "tradeSource": "paper"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-21T08:12:00.602Z",
+    "lastUpdated": "2026-03-21T08:32:20.072Z",
     "lastPriceSync": "2026-03-21T08:30:06.082Z"
   }
 }
