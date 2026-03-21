@@ -12961,7 +12961,7 @@
     "market": "Will Israel launch a major ground offensive in Lebanon by March 31?",
     "side": "Yes",
     "entryPrice": 0.968,
-    "currentPrice": 0.968,
+    "currentPrice": 0.9655,
     "shares": 27.93,
     "status": "open",
     "source": "consensus-scanner",
@@ -12976,8 +12976,13 @@
     "createdAt": "2026-03-21T22:02:49.688Z",
     "entryDate": "2026-03-21T22:02:49.688Z",
     "invested": 27.0362,
-    "currentValue": 27.0362,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 26.9664,
+    "pnl": -0.0698,
+    "pnlPercent": -0.26,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-21T22:31:12.552Z"
   }
 ]
