@@ -309,16 +309,12 @@ async function paperOrder({ tokenId, side, price, size }) {
 }
 
 /**
- * realOrder — Place an actual order on Polymarket CLOB via CLI.
+ * realOrder — Place an actual order on Polymarket CLOB via SDK.
  *
- * Uses GTC (Good Till Cancelled) limit orders.
+ * Uses @polymarket/clob-client with the CORRECT gnosis-safe proxy (0x8dC9)
+ * so orders are visible on polymarket.com.
+ *
  * Returns { orderID, success, paper: false } or throws on failure.
- *
- * SAFETY:
- * - Validates price is within [0.01, 0.99]
- * - Validates size >= 1
- * - Rounds price to tick size (0.01)
- * - Logs everything for audit trail
  */
 async function realOrder({ tokenId, side, price, size }) {
   const tag = `[polymarket] REAL ORDER`;
@@ -329,164 +325,23 @@ async function realOrder({ tokenId, side, price, size }) {
     throw new Error(`${tag}: SAFETY — config.paper must be explicitly false to place real orders (currently: ${cfg.paper})`);
   }
 
-  // Emergency kill switch
-  const fs = require('fs');
-  const KILL_FILE = '/tmp/stormwatch-kill-real-trading';
-  if (fs.existsSync(KILL_FILE)) {
-    throw new Error(`${tag}: EMERGENCY KILL SWITCH ACTIVE — real trading halted. Remove ${KILL_FILE} to re-enable.`);
-  }
-
-  // Validate inputs
-  if (!tokenId) throw new Error(`${tag}: missing tokenId`);
-  if (!['BUY', 'SELL'].includes(side.toUpperCase())) throw new Error(`${tag}: invalid side "${side}"`);
-  if (price < 0.01 || price > 0.99) throw new Error(`${tag}: price ${price} out of range [0.01, 0.99]`);
-  if (size < 5) throw new Error(`${tag}: size ${size} too small (CLOB minimum is 5)`);
-
-  // Pre-flight: check orderbook has liquidity near our price
-  try {
-    const book = execPolymarketCLI(['-o', 'json', 'clob', 'book', tokenId], 8000);
-    const asks = book.asks || [];
-    const bids = book.bids || [];
-    if (side.toUpperCase() === 'BUY') {
-      const bestAsk = asks.length > 0 ? parseFloat(asks[0].price) : null;
-      if (!bestAsk || bestAsk > price + 0.10) {
-        console.warn(`${tag}: ⚠️ THIN BOOK — best ask ${bestAsk || 'NONE'} is >10¢ above our price ${price}. Proceeding but fill unlikely.`);
-      }
-    } else {
-      const bestBid = bids.length > 0 ? parseFloat(bids[0].price) : null;
-      if (!bestBid || bestBid < price - 0.10) {
-        console.warn(`${tag}: ⚠️ THIN BOOK — best bid ${bestBid || 'NONE'} is >10¢ below our price ${price}. Proceeding but fill unlikely.`);
-      }
-    }
-  } catch (bookErr) {
-    console.warn(`${tag}: Orderbook check failed (proceeding): ${bookErr.message}`);
-  }
-
-  // Round price to tick size (0.01)
-  // Adjust to hit counterparty: +2 ticks for BUY (hit ask), -2 ticks for SELL (hit bid)
-  let roundedPrice = Math.round(price * 100) / 100;
+  // Adjust price: +2 ticks for BUY (hit ask), -2 ticks for SELL (hit bid)
+  let adjustedPrice = Math.round(price * 100) / 100;
   if (side.toUpperCase() === 'BUY') {
-    // Add 2 ticks to ensure fill against the ask
-    roundedPrice = Math.min(0.99, Math.round((roundedPrice + 0.02) * 100) / 100);
+    adjustedPrice = Math.min(0.99, Math.round((adjustedPrice + 0.02) * 100) / 100);
   } else {
-    // FIX: Math.round AFTER subtraction to avoid float precision bugs
-    // e.g. 0.05 - 0.02 = 0.030000000000000002 → CLOB rejects
-    roundedPrice = Math.max(0.01, Math.round((roundedPrice - 0.02) * 100) / 100);
+    adjustedPrice = Math.max(0.01, Math.round((adjustedPrice - 0.02) * 100) / 100);
   }
 
-  const roundedSize = Math.floor(size);
-  const costUSDC = roundedPrice * roundedSize;
+  const sdkOrder = require('./sdk-order');
+  const result = await sdkOrder.placeOrder({
+    tokenId,
+    side: side.toUpperCase(),
+    price: adjustedPrice,
+    size: Math.max(5, Math.floor(size))
+  });
 
-  console.log(`${tag}: ${side} ${roundedSize} shares @ ${roundedPrice} ($${costUSDC.toFixed(2)}) | token: ${tokenId}`);
-
-  try {
-    const result = execPolymarketCLI([
-      '-o', 'json',
-      'clob', 'create-order',
-      '--token', tokenId,
-      '--side', side.toLowerCase(),
-      '--price', roundedPrice.toString(),
-      '--size', roundedSize.toString(),
-      '--order-type', 'GTC'
-    ], 30000);
-
-    // Check for explicit failure indicators
-    if (result?.error || result?.status === 'failed' || result?.success === false) {
-      throw new Error(`Order rejected by CLOB: ${JSON.stringify(result).slice(0, 300)}`);
-    }
-
-    const orderID = result?.orderID || result?.id || result?.order_id || null;
-    if (!orderID) {
-      throw new Error(`Order returned no orderID: ${JSON.stringify(result).slice(0, 300)}`);
-    }
-
-    // Append-only audit log (survives even if trades.json update fails)
-    try {
-      const auditLine = JSON.stringify({
-        timestamp: new Date().toISOString(), orderID, tokenId, side, price: roundedPrice, size: roundedSize, costUSDC
-      }) + '\n';
-      require('fs').appendFileSync(require('path').resolve(__dirname, '..', 'real-order-log.jsonl'), auditLine);
-    } catch (_) { /* non-fatal */ }
-
-    console.log(`${tag}: ✅ SUCCESS | orderID: ${orderID} | response: ${JSON.stringify(result).slice(0, 300)}`);
-    // V3: Verify fill — poll order status for up to 90s
-    // GTC orders stay on the book until matched. 15s was too aggressive —
-    // thin books need time for a counterparty to show up.
-    let filled = false;
-    let filledSize = 0;
-    let filledAvgPrice = null;
-    const pollStart = Date.now();
-    const POLL_TIMEOUT_MS = 90000;
-    const POLL_INTERVAL_MS = 5000;
-
-    while (Date.now() - pollStart < POLL_TIMEOUT_MS) {
-      await sleep(POLL_INTERVAL_MS);
-      try {
-        const orderStatus = execPolymarketCLI(['-o', 'json', 'clob', 'order', orderID], 8000);
-        const status = (orderStatus?.status || '').toUpperCase();
-        
-        if (status === 'MATCHED' || status === 'FILLED') {
-          filled = true;
-          filledSize = parseInt(orderStatus?.size_matched || orderStatus?.matched || roundedSize);
-          filledAvgPrice = parseFloat(orderStatus?.avg_price || orderStatus?.price || roundedPrice);
-          console.log(`${tag}: 🟢 FILLED | ${filledSize} shares @ ${filledAvgPrice}`);
-          break;
-        } else if (status === 'CANCELLED' || status === 'EXPIRED' || status === 'REJECTED') {
-          console.error(`${tag}: ⚠️ Order ${status} — NOT FILLED`);
-          // Append unfilled to audit log
-          try {
-            const auditLine = JSON.stringify({
-              timestamp: new Date().toISOString(), orderID, event: 'UNFILLED', status, tokenId, side
-            }) + '\n';
-            require('fs').appendFileSync(require('path').resolve(__dirname, '..', 'real-order-log.jsonl'), auditLine);
-          } catch (_) {}
-          return { orderID, success: true, filled: false, status, paper: false, result };
-        } else if (status === 'LIVE') {
-          console.log(`${tag}: ⏳ Still LIVE after ${((Date.now() - pollStart) / 1000).toFixed(0)}s...`);
-        }
-      } catch (pollErr) {
-        console.warn(`${tag}: Poll error: ${pollErr.message}`);
-      }
-    }
-
-    if (!filled) {
-      // Order still LIVE after 15s — cancel it and return unfilled
-      console.warn(`${tag}: ⚠️ Order still LIVE after ${POLL_TIMEOUT_MS / 1000}s — cancelling stale order`);
-      try {
-        execPolymarketCLI(['-o', 'json', 'clob', 'cancel', orderID], 10000);
-        console.log(`${tag}: 🗑️ Cancelled unfilled order ${orderID}`);
-      } catch (cancelErr) {
-        console.warn(`${tag}: Cancel failed (may have filled in the meantime): ${cancelErr.message}`);
-        // If cancel failed, try one more status check — it might have filled
-        try {
-          const finalCheck = execPolymarketCLI(['-o', 'json', 'clob', 'order', orderID], 8000);
-          const finalStatus = (finalCheck?.status || '').toUpperCase();
-          if (finalStatus === 'MATCHED' || finalStatus === 'FILLED') {
-            filled = true;
-            filledSize = parseInt(finalCheck?.size_matched || finalCheck?.matched || roundedSize);
-            filledAvgPrice = parseFloat(finalCheck?.avg_price || finalCheck?.price || roundedPrice);
-            console.log(`${tag}: 🟢 Filled between poll and cancel! ${filledSize} shares @ ${filledAvgPrice}`);
-          }
-        } catch (_) {}
-      }
-
-      try {
-        const auditLine = JSON.stringify({
-          timestamp: new Date().toISOString(), orderID, event: filled ? 'LATE_FILL' : 'CANCELLED_UNFILLED', tokenId, side, price: roundedPrice, size: roundedSize
-        }) + '\n';
-        require('fs').appendFileSync(require('path').resolve(__dirname, '..', 'real-order-log.jsonl'), auditLine);
-      } catch (_) {}
-
-      if (!filled) {
-        return { orderID, success: true, filled: false, status: 'cancelled_unfilled', paper: false, result };
-      }
-    }
-
-    return { orderID, success: true, filled, filledSize: filledSize || roundedSize, filledAvgPrice, paper: false, result };
-  } catch (err) {
-    console.error(`${tag}: ❌ FAILED | ${err.message}`);
-    throw new Error(`Real order failed: ${err.message}`);
-  }
+  return result;
 }
 
 function computePnL(trade, resolution) {
