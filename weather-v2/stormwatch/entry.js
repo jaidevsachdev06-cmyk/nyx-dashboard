@@ -66,6 +66,14 @@ async function processCandidate(signal) {
     return { entered: false, trade: null, reason: `Invalid price: ${currentPrice}` };
   }
 
+  // FIX 13: Enforce maxOpenPositions (was never checked)
+  if (config.risk.maxOpenPositions) {
+    const totalOpen = store.getOpenPositions().length;
+    if (totalOpen >= config.risk.maxOpenPositions) {
+      return { entered: false, trade: null, reason: `Max open positions reached: ${totalOpen}/${config.risk.maxOpenPositions}` };
+    }
+  }
+
   // CRITICAL: Per-city trade limit
   if (config.risk.maxTradesPerCity) {
     const openInCity = store.getOpenPositions().filter(t => t.city === signal.city);
@@ -112,6 +120,16 @@ async function processCandidate(signal) {
   }
 
   if (isLottery) {
+    // V3: Same-day-only lottery — 1-day-out lottery was 8W/25L (-$31), same-day was 2W/22L (+$259)
+    if (lotteryConfig.sameDayOnly && signal.date) {
+      const cityConfig = (config.cities || []).find(c => c.name === signal.city);
+      const tz = cityConfig?.tz || 'UTC';
+      const localDateStr = new Date().toLocaleDateString('en-CA', { timeZone: tz });
+      if (signal.date !== localDateStr) {
+        return { entered: false, trade: null, reason: `Lottery same-day only: market ${signal.date} != local today ${localDateStr}` };
+      }
+    }
+
     // Count lottery trades entered today
     const today = new Date().toISOString().slice(0, 10);
     const allTrades = { trades: store.getAll() };

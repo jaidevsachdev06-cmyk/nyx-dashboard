@@ -9,6 +9,45 @@ const polymarket = require('./polymarket');
 const circuitBreaker = require("./circuit-breaker");
 const config = require('../config.json');
 
+/**
+ * V3: Fetch actual observed high temperature for a resolved trade.
+ * Uses Open-Meteo historical weather API (free, no key needed).
+ * Returns temperature in the city's configured unit, or null on failure.
+ */
+async function fetchActualTemp(trade) {
+  if (!trade.city || !trade.date) return null;
+  
+  const cityConfig = (config.cities || []).find(c => c.name === trade.city);
+  if (!cityConfig) return null;
+  
+  const unit = cityConfig.unit || 'F';
+  const params = new URLSearchParams({
+    latitude: cityConfig.lat.toString(),
+    longitude: cityConfig.lon.toString(),
+    start_date: trade.date,
+    end_date: trade.date,
+    daily: 'temperature_2m_max',
+    temperature_unit: unit === 'F' ? 'fahrenheit' : 'celsius'
+  });
+  
+  const ctrl = new AbortController();
+  const timeout = setTimeout(() => ctrl.abort(), 8000);
+  try {
+    const res = await fetch(`https://archive-api.open-meteo.com/v1/archive?${params}`, { signal: ctrl.signal });
+    clearTimeout(timeout);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const temps = data?.daily?.temperature_2m_max;
+    if (temps && temps.length > 0 && temps[0] != null) {
+      return parseFloat(temps[0].toFixed(1));
+    }
+  } catch (err) {
+    clearTimeout(timeout);
+    console.warn(`[lifecycle] Archive API error: ${err.message}`);
+  }
+  return null;
+}
+
 async function registerCandidate(candidateTrade) {
   console.log(`[lifecycle] Registering candidate: ${candidateTrade.city} ${candidateTrade.date} ${candidateTrade.bucket} ${candidateTrade.side}`);
 
@@ -291,12 +330,28 @@ async function checkAndResolve(tradeId) {
   // Auto-redeem real positions on resolution
   await redeemRealPosition(trade, tradeId, pnl.result);
 
+  // V3: Weather verification — record actual temp vs forecast for calibration tracking
+  let actualTemp = null;
+  try {
+    actualTemp = await fetchActualTemp(trade);
+  } catch (err) {
+    console.warn(`[lifecycle] Actual temp fetch failed for ${tradeId}: ${err.message}`);
+  }
+
+  const verificationData = {};
+  if (actualTemp != null && trade.signal?.forecastTemp != null) {
+    verificationData.actualTemp = actualTemp;
+    verificationData.forecastError = parseFloat((actualTemp - trade.signal.forecastTemp).toFixed(1));
+    console.log(`[lifecycle] 📊 Verification: ${trade.city} ${trade.date} | forecast: ${trade.signal.forecastTemp}° actual: ${actualTemp}° error: ${verificationData.forecastError > 0 ? '+' : ''}${verificationData.forecastError}°`);
+  }
+
   const resolved = store.transition(tradeId, 'resolved', {
     result: pnl.result,
     pnlUSDC: pnl.pnlUSDC,
     resolutionPrice: pnl.resolutionPrice,
     resolutionSource: 'polymarket',
-    resolvedAt: new Date().toISOString()
+    resolvedAt: new Date().toISOString(),
+    ...verificationData
   });
 
   circuitBreaker.recordResult(pnl.result);

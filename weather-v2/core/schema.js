@@ -106,6 +106,10 @@ const TRADE_SCHEMA = {
   realSize:       { type: 'number',  required: false, min: 0 },
   realEntryPrice: { type: 'number',  required: false, min: 0, max: 1 },
   realPnlUSDC:    { type: 'number',  required: false, nullable: true },
+
+  // V3: Weather verification (filled by resolver after resolution)
+  actualTemp:     { type: 'number',  required: false, nullable: true },
+  forecastError:  { type: 'number',  required: false, nullable: true },
 };
 
 /**

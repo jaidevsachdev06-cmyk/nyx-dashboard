@@ -37,19 +37,22 @@
     "cityBlacklist": [
       "London",
       "Toronto",
-      "Miami"
+      "Miami",
+      "Tokyo"
     ],
     "bucketTypeBlacklist": [
       "boundary",
+      "below",
       "specific-temp-NO"
     ],
     "lottery": {
       "enabled": true,
-      "maxDailyTrades": 8,
-      "maxSizeUSDC": 3,
+      "maxDailyTrades": 5,
+      "maxSizeUSDC": 4,
       "maxEntryPrice": 0.15,
       "minProbRatio": 1,
-      "minModelProb": 0.06
+      "minModelProb": 0.06,
+      "sameDayOnly": true
     },
     "swap": {
       "enabled": true,
@@ -57,7 +60,7 @@
       "minEdgePctImprove": 20,
       "minHoldMinutes": 30
     },
-    "minEntryPrice": 0.4,
+    "minEntryPrice": 0.55,
     "normalSideRestriction": "NO",
     "preferMultiSource": true
   },
@@ -185,7 +188,7 @@
     "enabled": true,
     "maxSizeUSDC": 6,
     "maxDailySpendUSDC": 30,
-    "lotteryMaxSizeUSDC": 2,
+    "lotteryMaxSizeUSDC": 4,
     "mirrorPaper": true
   }
 }

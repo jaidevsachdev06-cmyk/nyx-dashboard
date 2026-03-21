@@ -432,8 +432,11 @@ async function scan() {
           // Check city blacklist - NEVER bypassed (models are systematically wrong for these cities)
           const cityOk = !cityBlacklist.includes(city.name);
           
-          // Check bucket type blacklist (boundary = above/below types) - BYPASS for lottery candidates
-          const bucketTypeOk = isLotteryCandidate || !(bucketTypeBlacklist.includes('boundary') && (bucket.type === 'above' || bucket.type === 'below'));
+          // Check bucket type blacklist — "boundary" blocks above, "below" blocks below specifically
+          // V3: "below" bucket type blocked entirely (1W/7L = -$66, model overestimates cold)
+          const isBoundaryBlocked = bucketTypeBlacklist.includes('boundary') && (bucket.type === 'above' || bucket.type === 'below');
+          const isBelowBlocked = bucketTypeBlacklist.includes('below') && bucket.type === 'below';
+          const bucketTypeOk = isLotteryCandidate || !(isBoundaryBlocked || isBelowBlocked);
           
           // CRITICAL FIX: Ban specific-degree NO positions (e.g., "12°C NO")
           // These are coin flips - 1° forecast error = total loss
