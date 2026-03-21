@@ -186,6 +186,7 @@ async function enterTrade(tradeId, { price, size }) {
     // Step 1: Confirm paper trade in store FIRST (before spending real money)
     const updated = store.transition(tradeId, 'open', {
       orderId: orderResult.orderID || orderResult.id,
+      tradeSource: 'paper',  // Default; upgraded to 'both' if real order succeeds
       realTrading: false,
       realOrderId: null,
       realSize: null,

@@ -89,7 +89,9 @@ async function processCandidate(signal) {
   // Historical: 52 trades at raw 85%+, 76.9% WR, +$129 in V3 universe
   // At 65-80c entry: 87% WR. Above 80c: 0% WR → cap bypass at 80c.
   const rawProb = signal.rawModelProb || signal.modelProb;
-  const highConfBypass = rawProb >= 0.85 && currentPrice <= 0.80;
+  // Bypass edge check for high-confidence trades, but still require ≥3% edge minimum
+  // Without this floor: enters negative-edge trades where model agrees with market
+  const highConfBypass = rawProb >= 0.85 && currentPrice <= 0.80 && edgePct >= 3;
   if (!highConfBypass && edgePct < config.risk.minEdgePct) {
     return { entered: false, trade: null, reason: `Insufficient edge: ${edgePct.toFixed(1)}% (min: ${config.risk.minEdgePct}%)` };
   }
