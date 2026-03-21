@@ -85,10 +85,11 @@ async function processCandidate(signal) {
   // Edge check (using calibrated probability)
   const edge = signal.modelProb - currentPrice;
   const edgePct = (edge / currentPrice) * 100;
-  // High-confidence bypass: raw >= 85% AND market <= 80c → skip edge check
+  const rawProb = signal.rawModelProb || signal.modelProb;
+
+  // High-confidence bypass: raw >= 85% AND market <= 80c → skip edge % check
   // Historical: 52 trades at raw 85%+, 76.9% WR, +$129 in V3 universe
   // At 65-80c entry: 87% WR. Above 80c: 0% WR → cap bypass at 80c.
-  const rawProb = signal.rawModelProb || signal.modelProb;
   // Bypass edge check for high-confidence trades, but still require ≥3% edge minimum
   // Without this floor: enters negative-edge trades where model agrees with market
   const highConfBypass = rawProb >= 0.85 && currentPrice <= 0.80 && edgePct >= 3;
@@ -124,6 +125,18 @@ async function processCandidate(signal) {
   // Sanity check: reject extreme edges (>250%) for NON-lottery trades
   if (!isLottery && edgePct > 250) {
     return { entered: false, trade: null, reason: `Edge suspiciously high: ${edgePct.toFixed(0)}% — model likely miscalibrated` };
+  }
+
+  // V4 FIX: Block normal trades with calibrated prob < 65%
+  // Data: 40-60% calibrated = 3W/13L (-$126). 60-65% calibrated = ~break-even.
+  // Real edge only exists at 65%+ calibrated (70.5% WR, +$235 on 88 trades).
+  // Lottery trades exempt — they have low cal probs by design (different strategy).
+  if (!isLottery) {
+    const calProb = signal.modelProb;
+    const minCalibratedProb = config.risk.minCalibratedProb || 0.65;
+    if (!isNaN(calProb) && calProb < minCalibratedProb) {
+      return { entered: false, trade: null, reason: `Calibrated prob too low: ${(calProb*100).toFixed(1)}% (min: ${(minCalibratedProb*100).toFixed(0)}%)` };
+    }
   }
 
   if (isLottery) {
