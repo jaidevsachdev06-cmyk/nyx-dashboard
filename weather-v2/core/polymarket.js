@@ -342,6 +342,26 @@ async function realOrder({ tokenId, side, price, size }) {
   if (price < 0.01 || price > 0.99) throw new Error(`${tag}: price ${price} out of range [0.01, 0.99]`);
   if (size < 5) throw new Error(`${tag}: size ${size} too small (CLOB minimum is 5)`);
 
+  // Pre-flight: check orderbook has liquidity near our price
+  try {
+    const book = execPolymarketCLI(['-o', 'json', 'clob', 'book', tokenId], 8000);
+    const asks = book.asks || [];
+    const bids = book.bids || [];
+    if (side.toUpperCase() === 'BUY') {
+      const bestAsk = asks.length > 0 ? parseFloat(asks[0].price) : null;
+      if (!bestAsk || bestAsk > price + 0.10) {
+        console.warn(`${tag}: ⚠️ THIN BOOK — best ask ${bestAsk || 'NONE'} is >10¢ above our price ${price}. Proceeding but fill unlikely.`);
+      }
+    } else {
+      const bestBid = bids.length > 0 ? parseFloat(bids[0].price) : null;
+      if (!bestBid || bestBid < price - 0.10) {
+        console.warn(`${tag}: ⚠️ THIN BOOK — best bid ${bestBid || 'NONE'} is >10¢ below our price ${price}. Proceeding but fill unlikely.`);
+      }
+    }
+  } catch (bookErr) {
+    console.warn(`${tag}: Orderbook check failed (proceeding): ${bookErr.message}`);
+  }
+
   // Round price to tick size (0.01)
   // Adjust to hit counterparty: +2 ticks for BUY (hit ask), -2 ticks for SELL (hit bid)
   let roundedPrice = Math.round(price * 100) / 100;
@@ -389,13 +409,15 @@ async function realOrder({ tokenId, side, price, size }) {
     } catch (_) { /* non-fatal */ }
 
     console.log(`${tag}: ✅ SUCCESS | orderID: ${orderID} | response: ${JSON.stringify(result).slice(0, 300)}`);
-    // V3: Verify fill — poll order status for up to 15s
+    // V3: Verify fill — poll order status for up to 90s
+    // GTC orders stay on the book until matched. 15s was too aggressive —
+    // thin books need time for a counterparty to show up.
     let filled = false;
     let filledSize = 0;
     let filledAvgPrice = null;
     const pollStart = Date.now();
-    const POLL_TIMEOUT_MS = 15000;
-    const POLL_INTERVAL_MS = 3000;
+    const POLL_TIMEOUT_MS = 90000;
+    const POLL_INTERVAL_MS = 5000;
 
     while (Date.now() - pollStart < POLL_TIMEOUT_MS) {
       await sleep(POLL_INTERVAL_MS);
