@@ -219,7 +219,9 @@ function aggregateWithWeighting(forecasts, cityName) {
     
     result[date] = {
       mean: Math.round(weightedMean * 10) / 10,
-      sd: Math.max(Math.round(sd * 10) / 10, 1.5),  // Min 1.5°F uncertainty
+      // SD floor must match scanner's EMPIRICAL_SD_FLOOR (2.0°F / 1.0°C)
+      // Lower floor = false confidence → inflated edge calculations
+      sd: Math.max(Math.round(sd * 10) / 10, 2.0),  // Min 2.0°F uncertainty (was 1.5, too tight)
       sources: forecastList.length,
       weights: forecastList.map(f => ({ source: f.source, weight: f.weight.toFixed(3) }))
     };
