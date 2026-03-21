@@ -506,9 +506,10 @@ async function scan() {
             // Calibration undervalues these — bypass edge check when model is sure.
             passesThreshold: (() => {
               const minEdge = config.risk.minEdgePct || 0;
-              // Raw ≥85%: model accuracy is 77% in V3 universe — bypass edge check
-              // The market prices these correctly but the model still wins at 85%+ WR
-              if (rawModelProb >= 0.85) return !lowConfidence && confident;
+              // Raw ≥85% AND market ≤80c: bypass edge check (77% actual WR, +EV)
+              // Above 80c: calibration ceiling (76.9%) means negative expected edge
+              // Historical: 85c+ entries are 0% WR (-$12), 65-80c entries are 87% WR (+$68)
+              if (rawModelProb >= 0.85 && effectivePrice <= 0.80) return !lowConfidence && confident;
               return edgePct >= minEdge && !lowConfidence && confident;
             })()
           };

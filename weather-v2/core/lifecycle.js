@@ -288,9 +288,45 @@ async function enterTrade(tradeId, { price, size }) {
 /**
  * Redeem real winning positions via CTF. Called from both normal and price-inferred resolution paths.
  */
+/**
+ * Compute real money P&L for trades with realTrading=true.
+ * Uses realEntryPrice and realSize (actual filled values on CLOB).
+ * For partial scalps, accumulates prior real scalp P&L.
+ */
+function computeRealPnl(trade, result) {
+  if (!trade.realTrading) return null;
+  const realEntry = trade.realEntryPrice;
+  const realSize = trade.realSize || 0;
+  if (realEntry == null || realSize === 0) return null;
+
+  // Accumulated P&L from real scalps (partial exits that already sold real shares)
+  const realScalpPnl = (trade.scalps || [])
+    .filter(s => s.realPnl != null)
+    .reduce((sum, s) => sum + s.realPnl, 0);
+
+  // Remaining real shares resolve at 1.0 (win) or 0.0 (loss)
+  let remainingPnl;
+  if (result === 'win') {
+    remainingPnl = (1.0 - realEntry) * realSize;
+  } else if (result === 'loss') {
+    remainingPnl = -realEntry * realSize;
+  } else {
+    remainingPnl = 0; // push
+  }
+
+  return parseFloat((remainingPnl + realScalpPnl).toFixed(4));
+}
+
 async function redeemRealPosition(trade, tradeId, pnlResult) {
   const realCfg = config.realTrading || {};
   if (!realCfg.enabled || !trade.realTrading || pnlResult !== 'win') return;
+
+  // Compute and store real P&L before redeem
+  const realPnl = computeRealPnl(trade, pnlResult);
+  if (realPnl != null) {
+    store.update(tradeId, { realPnlUSDC: realPnl });
+    console.log(`[lifecycle] 💵 REAL P&L for ${tradeId}: $${realPnl.toFixed(2)} (${pnlResult})`);
+  }
 
   try {
     const { spawnSync } = require('child_process');
@@ -344,6 +380,14 @@ async function checkAndResolve(tradeId) {
           : parseFloat((-entryPrice * size).toFixed(4));
         console.log(`[lifecycle] ${tradeId} — PRICE-INFERRED ${inferredResult} (price ${price}, ${hoursPast.toFixed(0)}h past date)`);
 
+        // Compute real P&L for losses too (redeemRealPosition only handles wins)
+        if (trade.realTrading && inferredResult === 'loss') {
+          const rPnl = computeRealPnl(trade, 'loss');
+          if (rPnl != null) {
+            store.update(tradeId, { realPnlUSDC: rPnl });
+            console.log(`[lifecycle] 💵 REAL P&L for ${tradeId}: $${rPnl.toFixed(2)} (loss)`);
+          }
+        }
         // C4 fix: redeem real winning positions even on price-inferred resolution
         await redeemRealPosition(trade, tradeId, inferredResult);
 
@@ -377,6 +421,15 @@ async function checkAndResolve(tradeId) {
   }
 
   const pnl = polymarket.computePnL(trade, resolution);
+
+  // Compute real P&L for losses (redeemRealPosition handles wins)
+  if (trade.realTrading && pnl.result === 'loss') {
+    const rPnl = computeRealPnl(trade, 'loss');
+    if (rPnl != null) {
+      store.update(tradeId, { realPnlUSDC: rPnl });
+      console.log(`[lifecycle] 💵 REAL P&L for ${tradeId}: $${rPnl.toFixed(2)} (loss)`);
+    }
+  }
 
   // Auto-redeem real positions on resolution
   await redeemRealPosition(trade, tradeId, pnl.result);

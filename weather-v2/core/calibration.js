@@ -31,8 +31,8 @@ const CALIBRATION_MAP = {
   0.60: 0.500,  // 60-70% model → 50.0% actual (n=18, reliable)
   0.70: 0.643,  // 70-80% model → 64.3% actual (n=14)
   0.80: 0.769,  // 80-90% model → 76.9% actual (n=26, strongest bucket)
-  0.90: 0.762,  // 90-100% model → 76.2% actual (n=21, NOT a ceiling)
-  0.95: 0.762,  // 95%+ → hold at 76.2% (no data to go higher)
+  0.90: 0.769,  // 90-100% model → 76.2% actual (n=21), FLOORED to 76.9% for monotonicity
+  0.95: 0.769,  // 95%+ → plateau at 76.9% (model confidence ceiling with 83 V3 trades)
 };
 
 /**
@@ -62,8 +62,8 @@ function calibrateProb(rawProb) {
     }
   }
   
-  // Above 95%: hold at V3-calibrated ceiling of 76.2%
-  return 0.762;
+  // Above 95%: hold at V3-calibrated ceiling of 76.9%
+  return 0.769;
 }
 
 /**

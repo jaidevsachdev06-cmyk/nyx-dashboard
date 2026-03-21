@@ -80,21 +80,31 @@ async function main() {
     // Send notification
     console.log('\n[run-resolve] Sending notification...');
     try {
-      const winners = result.resolved.filter(t => t.pnl > 0).length;
-      const losers = result.resolved.filter(t => t.pnl <= 0).length;
-      const totalPnL = result.resolved.reduce((sum, t) => sum + (t.pnl || 0), 0).toFixed(2);
+      const winners = result.resolved.filter(t => (t.pnlUSDC || 0) > 0).length;
+      const losers = result.resolved.filter(t => (t.pnlUSDC || 0) <= 0).length;
+      const totalPnL = result.resolved.reduce((sum, t) => sum + (t.pnlUSDC || 0), 0).toFixed(2);
       const winRate = winners + losers > 0 ? ((winners / (winners + losers)) * 100).toFixed(1) : '0.0';
+      
+      // Compute real money impact
+      const realTrades = result.resolved.filter(t => t.realTrading || t.tradeSource === 'real' || t.tradeSource === 'both');
+      const realPnL = realTrades.reduce((sum, t) => sum + (t.realPnlUSDC || 0), 0);
       
       let msg = `🌪️ Weather Positions Resolved\n\n`;
       msg += `${result.resolved.length} position${result.resolved.length > 1 ? 's' : ''} closed.\n\n`;
       msg += `Results:\n`;
       msg += `• ${winners}W / ${losers}L (${winRate}% win rate)\n`;
-      msg += `• Session P&L: ${totalPnL >= 0 ? '+' : ''}$${totalPnL}\n\n`;
+      msg += `• Paper P&L: ${totalPnL >= 0 ? '+' : ''}$${totalPnL}\n`;
+      if (realTrades.length > 0) {
+        msg += `• 💰 Real P&L: ${realPnL >= 0 ? '+' : ''}$${realPnL.toFixed(2)} (${realTrades.length} real trade${realTrades.length > 1 ? 's' : ''})\n`;
+      }
+      msg += `\n`;
       
       msg += `Positions:\n`;
       result.resolved.forEach(t => {
-        const sign = t.pnl >= 0 ? '+' : '';
-        msg += `• ${t.market || 'Unknown'} ${sign}$${(t.pnl || 0).toFixed(2)}\n`;
+        const pnl = t.pnlUSDC || 0;
+        const sign = pnl >= 0 ? '+' : '';
+        const realTag = (t.realTrading || t.tradeSource === 'real' || t.tradeSource === 'both') ? ' 💰' : '';
+        msg += `• ${t.city || 'Unknown'} ${t.bucket || ''} ${sign}$${pnl.toFixed(2)}${realTag}\n`;
       });
       
       await sendTelegram(msg);
