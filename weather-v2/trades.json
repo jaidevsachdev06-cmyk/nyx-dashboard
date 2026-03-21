@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.555,
-      "updatedAt": "2026-03-21T13:00:04.521Z",
+      "currentPrice": 0.61,
+      "updatedAt": "2026-03-21T13:10:04.939Z",
       "tradeSource": "both"
     },
     {
@@ -7581,8 +7581,8 @@
       "realEntryPrice": 0.53,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.62,
-      "updatedAt": "2026-03-21T13:00:05.077Z",
+      "currentPrice": 0.615,
+      "updatedAt": "2026-03-21T13:10:05.221Z",
       "tradeSource": "both"
     },
     {
@@ -7672,8 +7672,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.7415,
-      "updatedAt": "2026-03-21T13:00:05.609Z",
+      "currentPrice": 0.742,
+      "updatedAt": "2026-03-21T13:10:05.513Z",
       "tradeSource": "paper",
       "realFillStatus": "unfilled",
       "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
@@ -7734,13 +7734,62 @@
       "realEntryPrice": 0.76,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.76,
-      "updatedAt": "2026-03-21T13:00:06.195Z"
+      "currentPrice": 0.755,
+      "updatedAt": "2026-03-21T13:10:05.761Z"
+    },
+    {
+      "id": "oc-mn0ckofx-9jonfa",
+      "conditionId": "0xc7c5a74cd00aa5604a51e1f441f9228e497fce0a50863c28b0b34bf82b68ca56",
+      "tokenId": "0x801d133b655abbafee97c7c94fd4d7eff6923432f02a2953760e0986d891fc3f",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-21-2026-90-91f",
+      "city": "Dallas",
+      "date": "2026-03-21",
+      "bucket": "90-91°F",
+      "question": "Will the highest temperature in Dallas be between 90-91°F on March 21?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-21T13:12:04.029Z",
+      "signal": {
+        "forecastTemp": 94,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.2,
+        "impliedProb": 0.665,
+        "modelProb": 0.769,
+        "edge": 0.104,
+        "isLottery": false
+      },
+      "notes": "Forecast: 94.0°F | Model: 77% vs Market: 67% | Edge: 15.6%",
+      "entryPrice": 0.665,
+      "size": 18,
+      "sizeUSDC": 11.97,
+      "enteredAt": "2026-03-21T13:12:04.045Z",
+      "orderId": "paper-mn0ckogj-gfko",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0x974c3bedbc562c1fce4ce86f549f73626481de9c884bfabe5702331a5c69e2d5",
+      "realSize": 8,
+      "realEntryPrice": 0.665,
+      "txHash": null,
+      "realFillStatus": "unverified"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-21T12:25:21.415Z",
+    "lastUpdated": "2026-03-21T13:12:05.794Z",
     "lastPriceSync": "2026-03-21T13:00:06.495Z"
   }
 }
