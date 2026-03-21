@@ -12861,5 +12861,29 @@
     "currentValue": 16.92,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "dcb6bf89-9176-4cff-af9e-3dcb95be6a6a",
+    "market": "US forces enter Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.745,
+    "currentPrice": 0.745,
+    "shares": 23.38,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Roflan, kekkone, debased, Dropper",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 84.8,
+    "avgWinRate": 75.5,
+    "reasoning": "Consensus: 4 whales (avg score 84.8, WR 75.5%) No. bet=$17.42, shares=23.38. Whales: Roflan, kekkone, debased, Dropper",
+    "endDate": "2026-03-31",
+    "conditionId": "0x306d10d4a4d51b41910dbc779ca00908bd917c131541c5c42bbbc736258d2d56",
+    "createdAt": "2026-03-21T02:02:55.557Z",
+    "entryDate": "2026-03-21T02:02:55.557Z",
+    "invested": 17.4181,
+    "currentValue": 17.4181,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
