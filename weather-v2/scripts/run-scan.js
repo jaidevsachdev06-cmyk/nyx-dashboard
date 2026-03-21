@@ -42,6 +42,28 @@ async function sendTelegram(text) {
 async function main() {
   console.log(`[run-scan] Starting weather v2 scan | paper=${config.paper} | ${new Date().toISOString()}`);
 
+  // Step 0: Cancel any stale orders on gnosis-safe proxy (prevents duplicate buying)
+  // The CLI uses proxy mode (0x8733) but test orders may linger on gnosis-safe (0x8dC9)
+  try {
+    const { spawnSync } = require('child_process');
+    const gsOrders = spawnSync('polymarket', ['--signature-type', 'gnosis-safe', '-o', 'json', 'clob', 'orders'],
+      { timeout: 10000, encoding: 'utf8', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });
+    if (gsOrders.status === 0) {
+      const orders = JSON.parse(gsOrders.stdout);
+      const live = (orders.data || orders).filter(o => o.status === 'LIVE');
+      if (live.length > 0) {
+        console.warn(`[run-scan] ⚠️ Found ${live.length} stale gnosis-safe orders — cancelling`);
+        for (const o of live) {
+          try {
+            spawnSync('polymarket', ['--signature-type', 'gnosis-safe', '-o', 'json', 'clob', 'cancel', o.id],
+              { timeout: 10000, encoding: 'utf8', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });
+            console.log(`[run-scan] Cancelled stale gnosis-safe order ${o.id.slice(0,20)}`);
+          } catch(e) { console.warn(`[run-scan] Cancel failed: ${e.message}`); }
+        }
+      }
+    }
+  } catch(e) { console.warn('[run-scan] Gnosis-safe order check failed (non-fatal):', e.message); }
+
   // Step 0a: Sync prices for open positions (FIX 9)
   try {
     await syncPrices();
