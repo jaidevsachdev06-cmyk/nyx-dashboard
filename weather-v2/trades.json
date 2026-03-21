@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.7,
-      "updatedAt": "2026-03-21T22:00:05.591Z",
+      "currentPrice": 0.57,
+      "updatedAt": "2026-03-21T22:05:03.465Z",
       "tradeSource": "both"
     },
     {
@@ -7582,7 +7582,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.985,
-      "updatedAt": "2026-03-21T22:00:06.119Z",
+      "updatedAt": "2026-03-21T22:05:03.705Z",
       "tradeSource": "both",
       "scalps": [
         {
@@ -7606,9 +7606,9 @@
       "bucket": "72-73°F",
       "question": "Will the highest temperature in Chicago be between 72-73°F on March 21?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 5.19,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.1935,
       "createdAt": "2026-03-21T08:12:00.577Z",
       "signal": {
         "forecastTemp": 76.7,
@@ -7646,10 +7646,16 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-21T22:00:06.679Z",
+      "updatedAt": "2026-03-21T22:05:03.980Z",
       "tradeSource": "paper",
       "realFillStatus": "unfilled",
-      "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
+      "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-21T22:05:08.240Z",
+      "actualTemp": 67.1,
+      "forecastError": -9.6,
+      "closedAt": "2026-03-21T22:05:08.251Z"
     },
     {
       "id": "oc-mn0407bp-gvym9k",
@@ -7707,8 +7713,8 @@
       "realEntryPrice": 0.76,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.89,
-      "updatedAt": "2026-03-21T22:00:07.235Z"
+      "currentPrice": 0.875,
+      "updatedAt": "2026-03-21T22:05:04.244Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7758,12 +7764,12 @@
       "realEntryPrice": 0.665,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.025,
-      "updatedAt": "2026-03-21T22:00:07.765Z"
+      "currentPrice": 0.0145,
+      "updatedAt": "2026-03-21T22:05:04.492Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-21T22:00:08.066Z",
-    "lastUpdated": "2026-03-21T21:45:04.794Z"
+    "lastUpdated": "2026-03-21T22:05:08.253Z"
   }
 }
