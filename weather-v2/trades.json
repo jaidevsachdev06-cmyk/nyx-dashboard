@@ -7462,9 +7462,9 @@
       "bucket": "48-49°F",
       "question": "Will the highest temperature in Seattle be between 48-49°F on March 21?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 6.39,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 6.4,
       "createdAt": "2026-03-21T06:27:46.262Z",
       "signal": {
         "forecastTemp": 51.4,
@@ -7527,7 +7527,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-21T23:00:04.066Z",
+      "updatedAt": "2026-03-21T23:05:03.241Z",
       "tradeSource": "both",
       "scalps": [
         {
@@ -7538,7 +7538,14 @@
           "pnlUSDC": 4.725,
           "timestamp": "2026-03-21T22:45:04.837Z"
         }
-      ]
+      ],
+      "realPnlUSDC": 3.42,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-21T23:05:05.946Z",
+      "actualTemp": 56.2,
+      "forecastError": 4.8,
+      "closedAt": "2026-03-21T23:05:05.955Z"
     },
     {
       "id": "oc-mmzzppi1-0kwbqe",
@@ -7551,9 +7558,9 @@
       "bucket": "84-85°F",
       "question": "Will the highest temperature in Atlanta be between 84-85°F on March 21?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 9.33,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 9.405,
       "createdAt": "2026-03-21T07:12:03.673Z",
       "signal": {
         "forecastTemp": 82,
@@ -7591,8 +7598,8 @@
       "realEntryPrice": 0.53,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.996,
-      "updatedAt": "2026-03-21T23:00:04.684Z",
+      "currentPrice": 0.998,
+      "updatedAt": "2026-03-21T23:05:03.481Z",
       "tradeSource": "both",
       "scalps": [
         {
@@ -7603,7 +7610,14 @@
           "pnlUSDC": 4.59,
           "timestamp": "2026-03-21T21:45:04.789Z"
         }
-      ]
+      ],
+      "realPnlUSDC": 5.17,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-21T23:05:06.950Z",
+      "actualTemp": 80.4,
+      "forecastError": -1.6,
+      "closedAt": "2026-03-21T23:05:06.963Z"
     },
     {
       "id": "oc-mn01usw1-a49wsq",
@@ -7724,7 +7738,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.89,
-      "updatedAt": "2026-03-21T23:00:05.241Z"
+      "updatedAt": "2026-03-21T23:05:03.756Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7784,6 +7798,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-03-21T23:00:05.541Z",
-    "lastUpdated": "2026-03-21T22:45:04.842Z"
+    "lastUpdated": "2026-03-21T23:05:06.966Z"
   }
 }
