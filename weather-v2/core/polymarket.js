@@ -340,16 +340,16 @@ async function realOrder({ tokenId, side, price, size }) {
   if (!tokenId) throw new Error(`${tag}: missing tokenId`);
   if (!['BUY', 'SELL'].includes(side.toUpperCase())) throw new Error(`${tag}: invalid side "${side}"`);
   if (price < 0.01 || price > 0.99) throw new Error(`${tag}: price ${price} out of range [0.01, 0.99]`);
-  if (size < 1) throw new Error(`${tag}: size ${size} too small (min 1)`);
+  if (size < 5) throw new Error(`${tag}: size ${size} too small (CLOB minimum is 5)`);
 
   // Round price to tick size (0.01)
   // For sells: discount 2 ticks to hit the bid and ensure fills
   let roundedPrice = Math.round(price * 100) / 100;
   if (side.toUpperCase() === 'SELL') {
-    roundedPrice = Math.max(0.01, roundedPrice - 0.02);
+    // FIX: Math.round AFTER subtraction to avoid float precision bugs
+    // e.g. 0.05 - 0.02 = 0.030000000000000002 → CLOB rejects
+    roundedPrice = Math.max(0.01, Math.round((roundedPrice - 0.02) * 100) / 100);
   }
-  // For sells at very low prices, floor to minimum tick
-  if (roundedPrice < 0.01) roundedPrice = 0.01;
 
   const roundedSize = Math.floor(size);
   const costUSDC = roundedPrice * roundedSize;

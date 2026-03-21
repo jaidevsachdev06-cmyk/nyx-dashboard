@@ -13,6 +13,7 @@
 
 const store = require('../core/store');
 const polymarket = require('../core/polymarket');
+const circuitBreaker = require('../core/circuit-breaker');
 const config = require('../config.json');
 
 const LOTTERY_THRESHOLD = 0.15;
@@ -140,7 +141,13 @@ async function executeScalp(signal) {
         realSellSize = realRemaining;
       }
 
-      if (realSellSize >= 1) {
+      // CLOB minimum order size is 5. If we'd sell < 5, sell all remaining instead.
+      if (realSellSize < 5 && realRemaining >= 5) {
+        console.log(`${tag} ⚠️ Partial sell ${realSellSize} < CLOB min 5 — selling all ${realRemaining} instead`);
+        realSellSize = realRemaining;
+      }
+
+      if (realSellSize >= 5) {
         // Use currentPrice as basis — realOrder() will discount 2 ticks for sells
         const realResult = await polymarket.realOrder({
           tokenId: trade.tokenId,
@@ -153,6 +160,8 @@ async function executeScalp(signal) {
         // Update realSize tracker
         const newRealSize = realRemaining - realSellSize;
         store.update(trade.id, { realSize: newRealSize });
+      } else if (realSellSize > 0) {
+        console.warn(`${tag} ⚠️ Cannot sell ${realSellSize} real shares (below CLOB min 5, only ${realRemaining} remaining) — will resolve at expiry`);
       }
     } catch (realErr) {
       console.error(`${tag} ⚠️ REAL SELL FAILED (paper exit continues): ${realErr.message}`);
@@ -170,6 +179,8 @@ async function executeScalp(signal) {
       resolutionSource: 'manual-exit', resolvedAt: new Date().toISOString(),
     });
     store.transition(trade.id, 'closed');
+    // Record to circuit breaker (stop-loss streaks must trip the breaker too)
+    circuitBreaker.recordResult(result);
     console.log(`${tag} ✅ EXITED | ${rule} | P&L: $${finalPnl.toFixed(2)}`);
     return { action: 'exit', rule, pnlUSDC: finalPnl, currentPrice, gainPct, city: trade.city, bucket: trade.bucket, side: trade.side };
   }

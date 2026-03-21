@@ -275,7 +275,10 @@ async function scan() {
       if (config.weather?.multiSource && correctedForecasts.some(f => f.source)) {
         aggregated = multiSource.aggregateWithWeighting(correctedForecasts, city.name);
       } else {
-        aggregated = aggregateForecasts(correctedForecasts, city.name, city.unit);
+        // FIX: bias already applied to correctedForecasts above — pass raw forecasts
+        // to aggregateForecasts which applies its own bias, OR pass corrected ones
+        // with bias=0. We go with the latter to avoid touching aggregateForecasts.
+        aggregated = aggregateForecasts(openMeteoForecasts, city.name, city.unit);
       }
       
       return { cityName: city.name, aggregated };
@@ -442,11 +445,10 @@ async function scan() {
           const isBoundaryTrade = bucket.type === 'above' || bucket.type === 'below';
           const boundaryOk = !isBoundaryTrade || isLotteryCandidate || rawModelProb >= 0.80;
           
-          // FIX 3: Pause NO trades on range buckets for problem cities
-          // Cities with systematic forecast bias keep losing on NO range bets
-          const problemCities = ['Atlanta', 'Seattle', 'Miami', 'Toronto', 'London'];
-          const isRangeNO = bucket.type === 'range' && side === 'NO';
-          const rangeNOOk = isLotteryCandidate || !isRangeNO || !problemCities.includes(city.name);
+          // FIX 3: Problem city range-NO ban REMOVED (2026-03-19)
+          // Was double-punishing: calibration already discounts overconfidence (90% raw → 70% calibrated)
+          // City blacklist (London/Toronto/Miami) still enforced via cityBlacklist config
+          const rangeNOOk = true;
           
           // CRITICAL FIX: Require minimum forecast sources (multi-source consensus)
           const minSources = config.risk.minForecastSources || 1;
