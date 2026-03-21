@@ -174,6 +174,10 @@ async function processCandidate(signal) {
   } else if (currentPrice < 0.20) {
     // Regular cheap bets get half size
     sizeUSDC = Math.min(sizeUSDC, maxSize * 0.5);
+  } else if (currentPrice >= 0.55 && currentPrice < 0.65) {
+    // 55-65c bracket: 64% WR but EV $0.17/trade — half size to limit exposure
+    sizeUSDC = Math.min(sizeUSDC, config.risk.defaultSizeUSDC * 0.5);
+    console.log(`${tag} ⚖️ Half-size (55-65c bracket: thin EV)`);
   }
 
   const size = Math.max(1, Math.floor(sizeUSDC / currentPrice));

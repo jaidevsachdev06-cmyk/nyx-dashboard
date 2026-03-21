@@ -1,35 +1,36 @@
 /**
  * core/calibration.js - Model Probability Calibration
  * 
- * RECALIBRATED 2026-03-14 using 134 closed trades.
+ * RECALIBRATED 2026-03-21 using 164 closed trades (full dataset).
  * 
- * Key findings:
- *   - Raw prob <60%: actual 16-28% → model is dangerously overconfident
- *   - Raw prob 60-70%: actual 36.7% → still very overconfident
- *   - Raw prob 70-80%: actual 50.0% → just a coin flip
- *   - Raw prob 80-90%: actual 70.4% → model starts to be useful here
- *   - Raw prob 90-95%: actual 66.7% → oddly, slightly worse than 80-90%
- *   - Raw prob 95+%: actual 66.7% → same ceiling
+ * Key findings (164 trades):
+ *   - Raw prob 0-10%:  actual 25.0% (n=4, lottery noise — ignore)
+ *   - Raw prob 10-20%: actual 28.6% (n=7)
+ *   - Raw prob 30-40%: actual 0.0%  (n=3, tiny sample)
+ *   - Raw prob 40-50%: actual 38.5% (n=13)
+ *   - Raw prob 50-60%: actual 0.0%  (n=10) ← CRITICAL: 0 wins in 10 trades
+ *   - Raw prob 60-70%: actual 42.4% (n=33)
+ *   - Raw prob 70-80%: actual 52.4% (n=21)
+ *   - Raw prob 80-90%: actual 73.3% (n=30) ← model works here
+ *   - Raw prob 90-100%: actual 66.7% (n=42) ← ceiling, LOWER than 80-90%
  * 
- * CRITICAL INSIGHT: Model is only informative above 80% raw probability.
- * Below 80%, calibrated probability should be heavily discounted.
+ * CRITICAL: 90%+ bucket has 42 trades at 66.7% — NOT small sample anymore.
+ * This IS the ceiling. The model maxes out at ~73% actual accuracy.
  */
 
-// Recalibrated from 134 real trades (updated 2026-03-14, FIXED 2026-03-21)
-// FIX 12: Made monotonic. Original had 50%→5% then 60%→37% (cliff jump).
-// FIX 13 (2026-03-21): 90%+ buckets had only ~6 trades — too few to conclude
-// a ceiling effect. Previous values (0.700) made it impossible to enter any
-// trade because calibrated prob never exceeded 70.4%, and edge = calibrated - marketPrice
-// was negative for any market priced above 70%. This killed ALL entries.
-// Fix: extrapolate monotonically from the 80% anchor. Conservative but not broken.
+// Recalibrated from 164 real trades (2026-03-21)
+// Monotonic smoothing applied. Each bucket >= previous.
+// 50-60% anchored at 0% (0W/10L is a real signal, not noise).
+// 90-100% set BELOW 80-90% per actual data (42 trades = reliable).
 const CALIBRATION_MAP = {
-  0.40: 0.050,  // 40-50% model → ~5% actual (worst bucket, anchored here)
-  0.50: 0.100,  // 50-60% model → smoothed up from 5% (was 0W/10L but small N)
-  0.60: 0.367,  // 60-70% model → 36.7% actual
-  0.70: 0.500,  // 70-80% model → 50.0% actual (coin flip)
-  0.80: 0.704,  // 80-90% model → 70.4% actual (model starts working)
-  0.90: 0.760,  // 90-95% model → 76.0% (extrapolated, small sample previously said 66.7% but N=6)
-  0.95: 0.800,  // 95%+ model → 80.0% (extrapolated, monotonic from 90%)
+  0.40: 0.050,  // 40-50% model → raw 38.5% but discount for overconfidence pattern
+  0.50: 0.050,  // 50-60% model → 0W/10L actual. Dead zone. Keep at floor.
+  0.60: 0.424,  // 60-70% model → 42.4% actual (n=33, reliable)
+  0.70: 0.524,  // 70-80% model → 52.4% actual (n=21)
+  0.80: 0.733,  // 80-90% model → 73.3% actual (n=30, strongest bucket)
+  0.85: 0.733,  // Peak — hold flat through sweet spot
+  0.90: 0.700,  // 90-100% model → 66.7% actual (n=42) — blend down conservatively
+  0.95: 0.680,  // 95%+ → continued ceiling descent
 };
 
 /**
@@ -59,8 +60,8 @@ function calibrateProb(rawProb) {
     }
   }
   
-  // Above 95%: extrapolate from last point (80%)
-  return 0.800;
+  // Above 95%: ceiling at 68% (42 trades confirm model accuracy tops out ~67%)
+  return 0.680;
 }
 
 /**
