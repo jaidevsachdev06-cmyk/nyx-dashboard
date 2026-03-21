@@ -12806,5 +12806,29 @@
       {}
     ],
     "updatedAt": "2026-03-21T00:00:56.961Z"
+  },
+  {
+    "id": "d5de58ef-6d56-43bb-95f7-7929bcf668a3",
+    "market": "Will Trump talk to Mojtaba Khamenei by March 31?",
+    "side": "No",
+    "entryPrice": 0.987,
+    "currentPrice": 0.987,
+    "shares": 15.59,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "elucidate, scottilicious, Car, FrancisSP8",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 90.5,
+    "avgWinRate": 66.7,
+    "reasoning": "Consensus: 4 whales (avg score 90.5, WR 66.7%) No. bet=$15.39, shares=15.59. Whales: elucidate, scottilicious, Car, FrancisSP8",
+    "endDate": "2026-03-31",
+    "conditionId": "0x46f1c388fc04ae8b42252dc68a5b5679760848b4d08b3636f4c459d3a9e6ef11",
+    "createdAt": "2026-03-21T00:02:49.623Z",
+    "entryDate": "2026-03-21T00:02:49.623Z",
+    "invested": 15.3873,
+    "currentValue": 15.3873,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
