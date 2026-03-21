@@ -103,8 +103,8 @@ const TRADE_SCHEMA = {
   // Real-money trading fields (2026-03-20)
   realTrading:    { type: 'boolean', required: false },
   realOrderId:    { type: 'string',  required: false, nullable: true },
-  realSize:       { type: 'number',  required: false, min: 0 },
-  realEntryPrice: { type: 'number',  required: false, min: 0, max: 1 },
+  realSize:       { type: 'number',  required: false, min: 0, nullable: true },
+  realEntryPrice: { type: 'number',  required: false, min: 0, max: 1, nullable: true },
   realPnlUSDC:    { type: 'number',  required: false, nullable: true },
   realFillStatus: { type: 'string',  required: false, enum: ['filled', 'unverified', 'unfilled', 'cancelled', 'expired', 'rejected'] },
 
