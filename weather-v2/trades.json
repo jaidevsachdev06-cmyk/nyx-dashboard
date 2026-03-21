@@ -6225,9 +6225,9 @@
       "bucket": "76-77°F",
       "question": "Will the highest temperature in Atlanta be between 76-77°F on March 20?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -16.27,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -16.74,
       "createdAt": "2026-03-19T23:14:28.770Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -6260,8 +6260,12 @@
       "enteredAt": "2026-03-19T23:14:28.782Z",
       "orderId": "paper-mmy37ol0-q7so",
       "txHash": null,
-      "currentPrice": 0.065,
-      "updatedAt": "2026-03-20T21:00:07.975Z"
+      "currentPrice": 0.05,
+      "updatedAt": "2026-03-20T21:10:05.753Z",
+      "resolutionPrice": 0.05,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-20T21:10:06.022Z",
+      "closedAt": "2026-03-20T21:10:06.032Z"
     },
     {
       "id": "oc-mmymh4nu-ktvklx",
@@ -7000,11 +7004,347 @@
       "sizeUSDC": 2.99,
       "enteredAt": "2026-03-20T20:13:20.742Z",
       "closedAt": "2026-03-20T20:13:20.749Z"
+    },
+    {
+      "id": "oc-mmzgh695-b5z8y6",
+      "conditionId": "0xf2edd17f747c706d7946e949a3824ab5ea5209f12eb22f4a689645e612b43f36",
+      "tokenId": "0xd3091470db341026d8e3e7b088b76cd4077a1aba8286c555f9ac3ffc0d6dbf94",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-20-2026-88-89f",
+      "city": "Dallas",
+      "date": "2026-03-20",
+      "bucket": "88-89°F",
+      "question": "Will the highest temperature in Dallas be between 88-89°F on March 20?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-20T22:13:32.777Z",
+      "signal": {
+        "forecastTemp": 91,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 1.5,
+        "impliedProb": 0.085,
+        "modelProb": 0.702,
+        "edge": 0.617,
+        "isLottery": true
+      },
+      "notes": "Forecast: 91.0°F | Model: 70% vs Market: 9% | Edge: 725.9% 🎰LOTTERY",
+      "entryPrice": 0.085,
+      "size": 35,
+      "sizeUSDC": 2.975,
+      "enteredAt": "2026-03-20T22:13:32.795Z",
+      "closedAt": "2026-03-20T22:13:32.804Z"
+    },
+    {
+      "id": "oc-mmzp29oz-mo8byf",
+      "conditionId": "0xd3b02f65377dcaf899bb070ac28331d5a25f077a5b1c0671c6841dcae843c124",
+      "tokenId": "0x669f74091fcac8ce52dad459b80f870fafe6b25c0a44370e493e70ae8242fada",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-21T02:13:53.939Z",
+      "signal": {
+        "forecastTemp": 47.2,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3,
+        "impliedProb": 0.635,
+        "modelProb": 0.7018,
+        "edge": 0.0668,
+        "isLottery": false
+      },
+      "notes": "Forecast: 47.2°F | Model: 70% vs Market: 64% | Edge: 10.5%",
+      "entryPrice": 0.635,
+      "size": 21,
+      "sizeUSDC": 13.335,
+      "enteredAt": "2026-03-21T02:13:53.956Z",
+      "closedAt": "2026-03-21T02:13:53.966Z"
+    },
+    {
+      "id": "oc-mmztajcc-pzg0mh",
+      "conditionId": "0xd3b02f65377dcaf899bb070ac28331d5a25f077a5b1c0671c6841dcae843c124",
+      "tokenId": "0x669f74091fcac8ce52dad459b80f870fafe6b25c0a44370e493e70ae8242fada",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-21T04:12:18.156Z",
+      "signal": {
+        "forecastTemp": 48,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3,
+        "impliedProb": 0.625,
+        "modelProb": 0.7114,
+        "edge": 0.0864,
+        "isLottery": false
+      },
+      "notes": "Forecast: 48.0°F | Model: 71% vs Market: 63% | Edge: 13.8%",
+      "entryPrice": 0.625,
+      "size": 27,
+      "sizeUSDC": 16.875,
+      "enteredAt": "2026-03-21T04:12:18.178Z",
+      "closedAt": "2026-03-21T04:12:18.189Z",
+      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null"
+    },
+    {
+      "id": "oc-mmztajdm-asr105",
+      "conditionId": "0x1825432f791ccf821b7985a54e41f612e5b11c1466421959aaac094b0db1faa3",
+      "tokenId": "0x712028d77b1e75764c80f3072fa3c361627f9f108ec14e3604aea026969207e1",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-22-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-22",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 22?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-21T04:12:18.202Z",
+      "signal": {
+        "forecastTemp": 53,
+        "forecastSource": "open-meteo",
+        "sources": 1,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          }
+        ],
+        "forecastSD": 1.5,
+        "impliedProb": 0.665,
+        "modelProb": 0.7326,
+        "edge": 0.0676,
+        "isLottery": false
+      },
+      "notes": "Forecast: 53.0°F | Model: 73% vs Market: 67% | Edge: 10.2%",
+      "entryPrice": 0.665,
+      "size": 22,
+      "sizeUSDC": 14.63,
+      "enteredAt": "2026-03-21T04:12:18.218Z",
+      "closedAt": "2026-03-21T04:12:18.227Z",
+      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null"
+    },
+    {
+      "id": "oc-mmzvfj9y-tpdzue",
+      "conditionId": "0xd3b02f65377dcaf899bb070ac28331d5a25f077a5b1c0671c6841dcae843c124",
+      "tokenId": "0x669f74091fcac8ce52dad459b80f870fafe6b25c0a44370e493e70ae8242fada",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 21?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-21T05:12:10.582Z",
+      "signal": {
+        "forecastTemp": 48,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3,
+        "impliedProb": 0.605,
+        "modelProb": 0.7114,
+        "edge": 0.1064,
+        "isLottery": false
+      },
+      "notes": "Forecast: 48.0°F | Model: 71% vs Market: 61% | Edge: 17.6%",
+      "entryPrice": 0.605,
+      "size": 30,
+      "sizeUSDC": 18.15,
+      "enteredAt": "2026-03-21T05:12:10.599Z",
+      "closedAt": "2026-03-21T05:12:10.610Z",
+      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null"
+    },
+    {
+      "id": "oc-mmzvfjb1-jbcgrg",
+      "conditionId": "0x1825432f791ccf821b7985a54e41f612e5b11c1466421959aaac094b0db1faa3",
+      "tokenId": "0x712028d77b1e75764c80f3072fa3c361627f9f108ec14e3604aea026969207e1",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-22-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-22",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 22?",
+      "side": "NO",
+      "status": "closed",
+      "result": "push",
+      "pnlUSDC": 0,
+      "createdAt": "2026-03-21T05:12:10.621Z",
+      "signal": {
+        "forecastTemp": 53,
+        "forecastSource": "open-meteo",
+        "sources": 1,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          }
+        ],
+        "forecastSD": 1.5,
+        "impliedProb": 0.665,
+        "modelProb": 0.7326,
+        "edge": 0.0676,
+        "isLottery": false
+      },
+      "notes": "Forecast: 53.0°F | Model: 73% vs Market: 67% | Edge: 10.2%",
+      "entryPrice": 0.665,
+      "size": 22,
+      "sizeUSDC": 14.63,
+      "enteredAt": "2026-03-21T05:12:10.633Z",
+      "closedAt": "2026-03-21T05:12:10.642Z",
+      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null"
+    },
+    {
+      "id": "oc-mmzy4r12-a3kono",
+      "conditionId": "0xd847da426f80dd888d3e0004a09be391e407f600d669fd32b66689ac1c11f556",
+      "tokenId": "0x2b7673589876b7e9ac414fb3cd07b8b2d05cf73e1bef4a529c6083a31639f52e",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-21-2026-48-49f",
+      "city": "Seattle",
+      "date": "2026-03-21",
+      "bucket": "48-49°F",
+      "question": "Will the highest temperature in Seattle be between 48-49°F on March 21?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-21T06:27:46.262Z",
+      "signal": {
+        "forecastTemp": 51.4,
+        "forecastSource": "multi-source",
+        "sources": 9,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.2,
+        "impliedProb": 0.6,
+        "modelProb": 0.7237,
+        "edge": 0.1237,
+        "isLottery": false
+      },
+      "notes": "Forecast: 51.4°F | Model: 72% vs Market: 60% | Edge: 20.6%",
+      "entryPrice": 0.6,
+      "size": 31,
+      "sizeUSDC": 18.599999999999998,
+      "enteredAt": "2026-03-21T06:27:46.279Z",
+      "orderId": "paper-mmzy4r1p-1g3z",
+      "realTrading": true,
+      "realOrderId": "0xf697dee83e31f84eed18338a2acfb467a38fd3fa455f3985aa9bcdb8af0614e5",
+      "realSize": 9,
+      "realEntryPrice": 0.62,
+      "txHash": null,
+      "realFillStatus": "filled"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-20T20:13:20.753Z",
+    "lastUpdated": "2026-03-21T06:27:51.142Z",
     "lastPriceSync": "2026-03-20T21:00:08.275Z"
   }
 }
