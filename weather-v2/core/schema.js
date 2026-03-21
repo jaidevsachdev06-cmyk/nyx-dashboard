@@ -108,6 +108,11 @@ const TRADE_SCHEMA = {
   realPnlUSDC:    { type: 'number',  required: false, nullable: true },
   realFillStatus: { type: 'string',  required: false, enum: ['filled', 'unverified', 'unfilled', 'cancelled', 'expired', 'rejected'] },
 
+  // Trade source tracking (paper vs real)
+  // "paper" = paper-only (default, legacy), "real" = real-money only (manual/website),
+  // "both" = paper + mirrored real order (scanner-entered with realTrading)
+  tradeSource:    { type: 'string',  required: false, enum: ['paper', 'real', 'both'] },
+
   // V3: Weather verification (filled by resolver after resolution)
   actualTemp:     { type: 'number',  required: false, nullable: true },
   forecastError:  { type: 'number',  required: false, nullable: true },

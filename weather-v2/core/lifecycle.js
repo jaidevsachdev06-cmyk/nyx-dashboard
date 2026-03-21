@@ -257,6 +257,7 @@ async function enterTrade(tradeId, { price, size }) {
             const actualPrice = realOrderResult.filledAvgPrice || price;
             store.update(tradeId, {
               realTrading: true,
+              tradeSource: 'both',
               realOrderId: realOrderResult.orderID,
               realSize: actualSize,
               realEntryPrice: actualPrice,

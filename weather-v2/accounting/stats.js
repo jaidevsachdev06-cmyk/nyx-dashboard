@@ -60,14 +60,30 @@ function statsByCity() { return statsByField('city'); }
 function statsByBucket() { return statsByField('bucket'); }
 function statsBySide() { return statsByField('side'); }
 
+function statsBySource() {
+  const trades = getCompletedTrades();
+  const groups = { paper: { trades: 0, wins: 0, pnl: 0 }, real: { trades: 0, wins: 0, pnl: 0 }, both: { trades: 0, wins: 0, pnl: 0 } };
+  for (const t of trades) {
+    const src = t.tradeSource || 'paper';
+    if (!groups[src]) groups[src] = { trades: 0, wins: 0, pnl: 0 };
+    groups[src].trades++;
+    if (t.result === 'win') groups[src].wins++;
+    groups[src].pnl += t.pnlUSDC;
+  }
+  return groups;
+}
+
 function printDashboard() {
   console.log('\n═══════════════════════════════════════');
   console.log('  WEATHER v2 — PERFORMANCE DASHBOARD');
   console.log('═══════════════════════════════════════\n');
 
   const statusCounts = store.statusCounts();
+  const allOpen = store.getOpenPositions();
+  const paperOpen = allOpen.filter(t => (t.tradeSource || 'paper') === 'paper');
+  const realOpen = allOpen.filter(t => t.tradeSource === 'real' || t.tradeSource === 'both');
   console.log('📊 STATUS OVERVIEW');
-  console.log(`   Open: ${statusCounts.open || 0} | Candidates: ${statusCounts.candidate || 0} | Closed: ${statusCounts.closed || 0}`);
+  console.log(`   Open: ${statusCounts.open || 0} (paper: ${paperOpen.length}, real: ${realOpen.length}) | Closed: ${statusCounts.closed || 0}`);
   console.log('');
 
   const overall = overallStats();
@@ -75,12 +91,24 @@ function printDashboard() {
     console.log('   No completed trades yet.\n');
     return overall;
   }
-  console.log('📈 OVERALL PERFORMANCE');
+  console.log('📈 OVERALL PERFORMANCE (paper)');
   console.log(`   Trades: ${overall.totalTrades} | Win Rate: ${overall.winRate}`);
   console.log(`   Total P&L: $${overall.totalPnLUSDC} | Avg: $${overall.avgPnLUSDC}`);
   console.log(`   Avg Win: $${overall.avgWinUSDC} | Avg Loss: $${overall.avgLossUSDC}`);
   if (overall.profitFactor) console.log(`   Profit Factor: ${overall.profitFactor}`);
   console.log('');
+
+  // Real money stats
+  const bySource = statsBySource();
+  if (bySource.real.trades > 0 || bySource.both.trades > 0) {
+    const realTrades = bySource.real.trades + bySource.both.trades;
+    const realWins = bySource.real.wins + bySource.both.wins;
+    const realPnl = bySource.real.pnl + bySource.both.pnl;
+    console.log('💰 REAL MONEY PERFORMANCE');
+    console.log(`   Trades: ${realTrades} | Win Rate: ${(realWins/realTrades*100).toFixed(1)}%`);
+    console.log(`   Real P&L: $${realPnl.toFixed(2)}`);
+    console.log('');
+  }
 
   const cities = statsByCity();
   if (cities.length) {
@@ -95,4 +123,4 @@ function printDashboard() {
   return overall;
 }
 
-module.exports = { overallStats, statsByCity, statsByBucket, statsBySide, printDashboard };
+module.exports = { overallStats, statsByCity, statsByBucket, statsBySide, statsBySource, printDashboard };

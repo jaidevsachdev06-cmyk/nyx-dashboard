@@ -32,7 +32,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T23:04:59.819Z",
-      "closedAt": "2026-02-21T23:04:59.825Z"
+      "closedAt": "2026-02-21T23:04:59.825Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqyp-o8heja",
@@ -66,7 +67,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-20T22:05:03.286Z",
-      "closedAt": "2026-02-20T22:05:03.289Z"
+      "closedAt": "2026-02-20T22:05:03.289Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqyr-e4mpde",
@@ -100,7 +102,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T10:04:59.061Z",
-      "closedAt": "2026-02-21T10:04:59.064Z"
+      "closedAt": "2026-02-21T10:04:59.064Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqys-vhroa6",
@@ -134,7 +137,8 @@
       "resolutionPrice": 0.025,
       "resolutionSource": "price-inferred",
       "resolvedAt": "2026-02-22T00:05:01.606Z",
-      "closedAt": "2026-02-22T00:05:01.610Z"
+      "closedAt": "2026-02-22T00:05:01.610Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqyu-ljqdv4",
@@ -168,7 +172,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T09:05:00.899Z",
-      "closedAt": "2026-02-21T09:05:00.903Z"
+      "closedAt": "2026-02-21T09:05:00.903Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqyw-e09rb2",
@@ -202,7 +207,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-20T21:05:38.266Z",
-      "closedAt": "2026-02-20T21:05:38.268Z"
+      "closedAt": "2026-02-20T21:05:38.268Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqyx-yg0ddb",
@@ -236,7 +242,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T22:05:03.777Z",
-      "closedAt": "2026-02-21T22:05:03.781Z"
+      "closedAt": "2026-02-21T22:05:03.781Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqyy-ve3kzn",
@@ -268,7 +275,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-20T15:59:14.081Z",
-      "closedAt": "2026-02-20T15:59:14.083Z"
+      "closedAt": "2026-02-20T15:59:14.083Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqz0-epq21t",
@@ -302,7 +310,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T02:05:07.319Z",
-      "closedAt": "2026-02-21T02:05:07.323Z"
+      "closedAt": "2026-02-21T02:05:07.323Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqz2-ma57x1",
@@ -336,7 +345,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T16:05:04.679Z",
-      "closedAt": "2026-02-21T16:05:04.684Z"
+      "closedAt": "2026-02-21T16:05:04.684Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqz4-i4gyvi",
@@ -370,7 +380,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T04:05:08.281Z",
-      "closedAt": "2026-02-21T04:05:08.285Z"
+      "closedAt": "2026-02-21T04:05:08.285Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqz6-po8tut",
@@ -404,7 +415,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T09:05:04.307Z",
-      "closedAt": "2026-02-21T09:05:04.309Z"
+      "closedAt": "2026-02-21T09:05:04.309Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqz7-szsbrf",
@@ -438,7 +450,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T06:05:09.115Z",
-      "closedAt": "2026-02-21T06:05:09.118Z"
+      "closedAt": "2026-02-21T06:05:09.118Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqz9-wuyo8z",
@@ -472,7 +485,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-22T09:04:58.468Z",
-      "closedAt": "2026-02-22T09:04:58.474Z"
+      "closedAt": "2026-02-22T09:04:58.474Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlussqzb-fc5fi3",
@@ -506,7 +520,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-20T22:05:15.572Z",
-      "closedAt": "2026-02-20T22:05:15.573Z"
+      "closedAt": "2026-02-20T22:05:15.573Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlv7j1mp-hcyn08",
@@ -540,7 +555,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T16:05:06.830Z",
-      "closedAt": "2026-02-21T16:05:06.833Z"
+      "closedAt": "2026-02-21T16:05:06.833Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlvg33r4-nslh9y",
@@ -574,7 +590,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-21T06:05:12.416Z",
-      "closedAt": "2026-02-21T06:05:12.419Z"
+      "closedAt": "2026-02-21T06:05:12.419Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlvg33rb-e7p2fq",
@@ -608,7 +625,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-22T10:04:58.038Z",
-      "closedAt": "2026-02-22T10:04:58.044Z"
+      "closedAt": "2026-02-22T10:04:58.044Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlvg33rf-4f888n",
@@ -642,7 +660,8 @@
       "resolutionPrice": 0.0005,
       "resolutionSource": "price-inferred",
       "resolvedAt": "2026-02-22T00:05:04.850Z",
-      "closedAt": "2026-02-22T00:05:04.853Z"
+      "closedAt": "2026-02-22T00:05:04.853Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlvonw1s-ny3ckq",
@@ -676,7 +695,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-23T11:05:01.857Z",
-      "closedAt": "2026-02-23T11:05:01.868Z"
+      "closedAt": "2026-02-23T11:05:01.868Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlweduby-0d2sbu",
@@ -711,7 +731,8 @@
       "resolutionPrice": 0.0185,
       "resolutionSource": "price-inferred",
       "resolvedAt": "2026-02-23T00:05:03.143Z",
-      "closedAt": "2026-02-23T00:05:03.154Z"
+      "closedAt": "2026-02-23T00:05:03.154Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlweduc9-bxtn5s",
@@ -746,7 +767,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-22T15:05:00.411Z",
-      "closedAt": "2026-02-22T15:05:00.416Z"
+      "closedAt": "2026-02-22T15:05:00.416Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlweduco-nu56oj",
@@ -781,7 +803,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-23T11:05:02.788Z",
-      "closedAt": "2026-02-23T11:05:02.795Z"
+      "closedAt": "2026-02-23T11:05:02.795Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwigndf-nh0pzr",
@@ -816,7 +839,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-22T18:05:04.755Z",
-      "closedAt": "2026-02-22T18:05:04.761Z"
+      "closedAt": "2026-02-22T18:05:04.761Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwigndq-nqkakh",
@@ -851,7 +875,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-23T09:05:04.082Z",
-      "closedAt": "2026-02-23T09:05:04.089Z"
+      "closedAt": "2026-02-23T09:05:04.089Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwigne5-jzvcva",
@@ -886,7 +911,8 @@
       "resolutionPrice": 0.0005,
       "resolutionSource": "price-inferred",
       "resolvedAt": "2026-02-24T00:05:02.407Z",
-      "closedAt": "2026-02-24T00:05:02.414Z"
+      "closedAt": "2026-02-24T00:05:02.414Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwignef-yszrgj",
@@ -921,7 +947,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-23T08:05:06.425Z",
-      "closedAt": "2026-02-23T08:05:06.434Z"
+      "closedAt": "2026-02-23T08:05:06.434Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwigneo-e1du2q",
@@ -956,7 +983,8 @@
       "resolutionPrice": 0.955,
       "resolutionSource": "price-inferred",
       "resolvedAt": "2026-02-23T15:05:03.396Z",
-      "closedAt": "2026-02-23T15:05:03.405Z"
+      "closedAt": "2026-02-23T15:05:03.405Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwmo7ni-ba4zmo",
@@ -991,7 +1019,8 @@
       "resolutionPrice": 0.0005,
       "resolutionSource": "price-inferred",
       "resolvedAt": "2026-02-23T16:05:02.795Z",
-      "closedAt": "2026-02-23T16:05:02.803Z"
+      "closedAt": "2026-02-23T16:05:02.803Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwmo7ns-9enmi2",
@@ -1026,7 +1055,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-22T00:05:16.945Z",
-      "closedAt": "2026-02-22T00:05:16.949Z"
+      "closedAt": "2026-02-22T00:05:16.949Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwmo7og-87fv8p",
@@ -1061,7 +1091,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-22T21:05:10.432Z",
-      "closedAt": "2026-02-22T21:05:10.438Z"
+      "closedAt": "2026-02-22T21:05:10.438Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwr8oaq-5lzhme",
@@ -1096,7 +1127,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-22T08:05:13.120Z",
-      "closedAt": "2026-02-22T08:05:13.126Z"
+      "closedAt": "2026-02-22T08:05:13.126Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwzmc0y-j5bc4s",
@@ -1131,7 +1163,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-23T18:04:59.594Z",
-      "closedAt": "2026-02-23T18:04:59.605Z"
+      "closedAt": "2026-02-23T18:04:59.605Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwzmc1f-6tbtwn",
@@ -1166,7 +1199,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-23T15:05:06.707Z",
-      "closedAt": "2026-02-23T15:05:06.713Z"
+      "closedAt": "2026-02-23T15:05:06.713Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwzmc1q-exw3u7",
@@ -1201,7 +1235,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-23T22:04:59.272Z",
-      "closedAt": "2026-02-23T22:04:59.283Z"
+      "closedAt": "2026-02-23T22:04:59.283Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwzmc1y-3a2kgj",
@@ -1236,7 +1271,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T00:05:03.197Z",
-      "closedAt": "2026-02-24T00:05:03.204Z"
+      "closedAt": "2026-02-24T00:05:03.204Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwzmc27-0gktdt",
@@ -1271,7 +1307,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T08:04:59.266Z",
-      "closedAt": "2026-02-24T08:04:59.274Z"
+      "closedAt": "2026-02-24T08:04:59.274Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwzmc2f-nc2djz",
@@ -1306,7 +1343,8 @@
       "resolutionPrice": 0.9995,
       "resolutionSource": "price-inferred",
       "resolvedAt": "2026-02-24T10:29:00.216Z",
-      "closedAt": "2026-02-24T10:29:00.223Z"
+      "closedAt": "2026-02-24T10:29:00.223Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwzmc30-kvhv78",
@@ -1341,7 +1379,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T03:05:01.593Z",
-      "closedAt": "2026-02-24T03:05:01.600Z"
+      "closedAt": "2026-02-24T03:05:01.600Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlwzmc3z-jtrd0n",
@@ -1376,7 +1415,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-23T02:41:41.149Z",
-      "closedAt": "2026-02-23T02:41:41.155Z"
+      "closedAt": "2026-02-23T02:41:41.155Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlx838r4-sh5zju",
@@ -1412,7 +1452,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T01:05:01.864Z",
-      "closedAt": "2026-02-24T01:05:01.874Z"
+      "closedAt": "2026-02-24T01:05:01.874Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezcau-vw9m0x",
@@ -1448,7 +1489,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-25T01:04:59.780Z",
-      "closedAt": "2026-02-25T01:04:59.790Z"
+      "closedAt": "2026-02-25T01:04:59.790Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezcbk-ft7e3t",
@@ -1484,7 +1526,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T19:05:00.748Z",
-      "closedAt": "2026-02-24T19:05:00.757Z"
+      "closedAt": "2026-02-24T19:05:00.757Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezcbu-v38848",
@@ -1520,7 +1563,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T21:05:01.679Z",
-      "closedAt": "2026-02-24T21:05:01.687Z"
+      "closedAt": "2026-02-24T21:05:01.687Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezccb-z13vmj",
@@ -1556,7 +1600,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T12:05:05.149Z",
-      "closedAt": "2026-02-24T12:05:05.157Z"
+      "closedAt": "2026-02-24T12:05:05.157Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezccm-rorj7y",
@@ -1592,7 +1637,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-25T03:05:02.005Z",
-      "closedAt": "2026-02-25T03:05:02.015Z"
+      "closedAt": "2026-02-25T03:05:02.015Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezccy-913z15",
@@ -1628,7 +1674,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T20:05:02.772Z",
-      "closedAt": "2026-02-24T20:05:02.779Z"
+      "closedAt": "2026-02-24T20:05:02.779Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezcdl-08r0fy",
@@ -1664,7 +1711,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-25T02:05:03.047Z",
-      "closedAt": "2026-02-25T02:05:03.054Z"
+      "closedAt": "2026-02-25T02:05:03.054Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezcex-7t8qxt",
@@ -1699,7 +1747,8 @@
       "updatedAt": "2026-02-23T09:30:33.569Z",
       "resolutionPrice": 0.0315,
       "resolutionSource": "manual-exit",
-      "closedAt": "2026-02-23T09:52:12.088Z"
+      "closedAt": "2026-02-23T09:52:12.088Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyezcfd-b04pew",
@@ -1735,7 +1784,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T23:05:02.660Z",
-      "closedAt": "2026-02-24T23:05:02.670Z"
+      "closedAt": "2026-02-24T23:05:02.670Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyjc2rf-liovgl",
@@ -1771,7 +1821,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T10:37:13.573Z",
-      "closedAt": "2026-02-24T10:37:13.581Z"
+      "closedAt": "2026-02-24T10:37:13.581Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlynu4ot-xrhstx",
@@ -1807,7 +1858,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T02:05:11.677Z",
-      "closedAt": "2026-02-24T02:05:11.684Z"
+      "closedAt": "2026-02-24T02:05:11.684Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mlyzzhjj-l8sgv9",
@@ -1843,7 +1895,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T10:37:14.871Z",
-      "closedAt": "2026-02-24T10:37:14.878Z"
+      "closedAt": "2026-02-24T10:37:14.878Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm032gn0-slqm2n",
@@ -1879,7 +1932,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T22:05:03.706Z",
-      "closedAt": "2026-02-24T22:05:03.712Z"
+      "closedAt": "2026-02-24T22:05:03.712Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm0kf1da-5z2ggv",
@@ -1915,7 +1969,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:34.429Z",
-      "closedAt": "2026-02-27T03:05:34.448Z"
+      "closedAt": "2026-02-27T03:05:34.448Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm0kf1dz-8jl30b",
@@ -1952,7 +2007,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 11.0pp)",
       "exitedAt": "2026-02-24T16:07:04.268Z",
-      "closedAt": "2026-02-24T16:07:04.268Z"
+      "closedAt": "2026-02-24T16:07:04.268Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm0kf1ef-mrodah",
@@ -1988,7 +2044,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:36.034Z",
-      "closedAt": "2026-02-27T03:05:36.042Z"
+      "closedAt": "2026-02-27T03:05:36.042Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm0ohc7d-dlf246",
@@ -2024,7 +2081,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-24T16:05:14.863Z",
-      "closedAt": "2026-02-24T16:05:14.871Z"
+      "closedAt": "2026-02-24T16:05:14.871Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm0stfff-8r8e0q",
@@ -2060,7 +2118,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-25T04:05:04.099Z",
-      "closedAt": "2026-02-25T04:05:04.107Z"
+      "closedAt": "2026-02-25T04:05:04.107Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1a6x0k-k579h5",
@@ -2096,7 +2155,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:36.821Z",
-      "closedAt": "2026-02-27T03:05:36.835Z"
+      "closedAt": "2026-02-27T03:05:36.835Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1a6x11-v7gk42",
@@ -2132,7 +2192,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:37.943Z",
-      "closedAt": "2026-02-27T03:05:37.951Z"
+      "closedAt": "2026-02-27T03:05:37.951Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1eh817-3o4w9h",
@@ -2168,7 +2229,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:38.531Z",
-      "closedAt": "2026-02-27T03:05:38.538Z"
+      "closedAt": "2026-02-27T03:05:38.538Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1n1tnq-3b9ard",
@@ -2204,7 +2266,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:40.139Z",
-      "closedAt": "2026-02-27T03:05:40.147Z"
+      "closedAt": "2026-02-27T03:05:40.147Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1r40ru-uxmked",
@@ -2238,7 +2301,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:40.731Z",
-      "closedAt": "2026-02-27T03:05:40.737Z"
+      "closedAt": "2026-02-27T03:05:40.737Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1r40sk-bij3az",
@@ -2272,7 +2336,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-25T16:05:07.114Z",
-      "closedAt": "2026-02-25T16:05:07.123Z"
+      "closedAt": "2026-02-25T16:05:07.123Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1r40t0-n4o4ba",
@@ -2306,7 +2371,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-26T03:05:06.806Z",
-      "closedAt": "2026-02-26T03:05:06.817Z"
+      "closedAt": "2026-02-26T03:05:06.817Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1r40to-xm1r01",
@@ -2341,7 +2407,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 15.6pp)",
       "exitedAt": "2026-02-25T14:14:10.058Z",
-      "closedAt": "2026-02-25T14:14:10.058Z"
+      "closedAt": "2026-02-25T14:14:10.058Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm1r40u4-3wwwrk",
@@ -2375,7 +2442,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:42.311Z",
-      "closedAt": "2026-02-27T03:05:42.319Z"
+      "closedAt": "2026-02-27T03:05:42.319Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm24839b-glfwp9",
@@ -2409,7 +2477,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-25T23:05:09.024Z",
-      "closedAt": "2026-02-25T23:05:09.042Z"
+      "closedAt": "2026-02-25T23:05:09.042Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm2l39cf-qd1x9r",
@@ -2445,7 +2514,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-26T00:05:13.016Z",
-      "closedAt": "2026-02-26T00:05:13.026Z"
+      "closedAt": "2026-02-26T00:05:13.026Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm2l39d2-a3m7x2",
@@ -2479,7 +2549,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-26T01:05:10.845Z",
-      "closedAt": "2026-02-26T01:05:10.855Z"
+      "closedAt": "2026-02-26T01:05:10.855Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm2pe3rz-qgq4b8",
@@ -2513,7 +2584,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T22:06:52.836Z",
-      "closedAt": "2026-02-27T22:06:52.846Z"
+      "closedAt": "2026-02-27T22:06:52.846Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm2po70v-j7qv0l",
@@ -2547,7 +2619,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T03:05:44.654Z",
-      "closedAt": "2026-02-27T03:05:44.661Z"
+      "closedAt": "2026-02-27T03:05:44.661Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm2to826-0w2pqb",
@@ -2581,7 +2654,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T22:06:53.648Z",
-      "closedAt": "2026-02-27T22:06:53.656Z"
+      "closedAt": "2026-02-27T22:06:53.656Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm2to837-33g5ik",
@@ -2617,7 +2691,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T02:06:28.777Z",
-      "closedAt": "2026-02-28T02:06:28.786Z"
+      "closedAt": "2026-02-28T02:06:28.786Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm4sef89-01pyao",
@@ -2653,7 +2728,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T08:07:28.044Z",
-      "closedAt": "2026-02-28T08:07:28.056Z"
+      "closedAt": "2026-02-28T08:07:28.056Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm4sef8w-2821xg",
@@ -2689,7 +2765,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T21:05:08.572Z",
-      "closedAt": "2026-02-27T21:05:08.580Z"
+      "closedAt": "2026-02-27T21:05:08.580Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm4z90e7-5ikd92",
@@ -2724,7 +2801,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T00:06:38.099Z",
-      "closedAt": "2026-02-28T00:06:38.111Z"
+      "closedAt": "2026-02-28T00:06:38.111Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm4z90et-8x0rbx",
@@ -2761,7 +2839,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T22:06:55.364Z",
-      "closedAt": "2026-02-28T22:06:55.375Z"
+      "closedAt": "2026-02-28T22:06:55.375Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm51rqvu-gufjyq",
@@ -2799,7 +2878,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 20.3pp)",
       "exitedAt": "2026-02-28T14:11:12.707Z",
-      "closedAt": "2026-02-28T14:11:12.707Z"
+      "closedAt": "2026-02-28T14:11:12.707Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm51rqwf-240wkc",
@@ -2836,7 +2916,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T12:06:26.107Z",
-      "closedAt": "2026-02-28T12:06:26.117Z"
+      "closedAt": "2026-02-28T12:06:26.117Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm5bwh25-30yha6",
@@ -2871,7 +2952,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T00:06:41.454Z",
-      "closedAt": "2026-02-28T00:06:41.464Z"
+      "closedAt": "2026-02-28T00:06:41.464Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm5bwh2t-mh04d5",
@@ -2908,7 +2990,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T10:07:06.581Z",
-      "closedAt": "2026-02-28T10:07:06.596Z"
+      "closedAt": "2026-02-28T10:07:06.596Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm5g62r4-5qxgtr",
@@ -2945,7 +3028,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-27T23:05:12.114Z",
-      "closedAt": "2026-02-27T23:05:12.123Z"
+      "closedAt": "2026-02-27T23:05:12.123Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm5g62rs-cbcmm4",
@@ -2982,7 +3066,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-01T00:06:42.062Z",
-      "closedAt": "2026-03-01T00:06:42.074Z"
+      "closedAt": "2026-03-01T00:06:42.074Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm5kgrrz-538y9n",
@@ -3019,7 +3104,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-01T20:06:40.243Z",
-      "closedAt": "2026-03-01T20:06:40.256Z"
+      "closedAt": "2026-03-01T20:06:40.256Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm5kgrsv-5a2ccs",
@@ -3056,7 +3142,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T20:06:46.006Z",
-      "closedAt": "2026-02-28T20:06:46.017Z"
+      "closedAt": "2026-02-28T20:06:46.017Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm5opint-1zw6c8",
@@ -3094,7 +3181,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 18.0pp)",
       "exitedAt": "2026-02-28T20:12:26.853Z",
-      "closedAt": "2026-02-28T20:12:26.853Z"
+      "closedAt": "2026-02-28T20:12:26.853Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm6efufi-esk90k",
@@ -3131,7 +3219,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-02-28T22:06:57.813Z",
-      "closedAt": "2026-02-28T22:06:57.824Z"
+      "closedAt": "2026-02-28T22:06:57.824Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm6efumt-5w28qj",
@@ -3168,7 +3257,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-01T00:06:43.723Z",
-      "closedAt": "2026-03-01T00:06:43.733Z"
+      "closedAt": "2026-03-01T00:06:43.733Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm6n3boi-0zwpid",
@@ -3205,7 +3295,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-01T18:06:41.321Z",
-      "closedAt": "2026-03-01T18:06:41.333Z"
+      "closedAt": "2026-03-01T18:06:41.333Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm6n3bp8-ga9prd",
@@ -3242,7 +3333,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-01T22:06:29.508Z",
-      "closedAt": "2026-03-01T22:06:29.519Z"
+      "closedAt": "2026-03-01T22:06:29.519Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm6rceas-pqnsyn",
@@ -3279,7 +3371,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-01T18:06:43.151Z",
-      "closedAt": "2026-03-01T18:06:43.161Z"
+      "closedAt": "2026-03-01T18:06:43.161Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm6rceii-th8iu7",
@@ -3316,7 +3409,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-02T00:06:32.879Z",
-      "closedAt": "2026-03-02T00:06:32.891Z"
+      "closedAt": "2026-03-02T00:06:32.891Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm6zvw0r-vafejd",
@@ -3353,7 +3447,8 @@
       "resolutionPrice": 0.0615,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-02T02:07:50.029Z",
-      "closedAt": "2026-03-02T02:07:50.042Z"
+      "closedAt": "2026-03-02T02:07:50.042Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm78gqjg-xk66x6",
@@ -3390,7 +3485,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-01T20:06:43.758Z",
-      "closedAt": "2026-03-01T20:06:43.768Z"
+      "closedAt": "2026-03-01T20:06:43.768Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm7lasnx-od81m0",
@@ -3428,7 +3524,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 18.7pp)",
       "exitedAt": "2026-03-02T10:11:56.623Z",
-      "closedAt": "2026-03-02T10:11:56.623Z"
+      "closedAt": "2026-03-02T10:11:56.623Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm7pl5sv-egbv1k",
@@ -3465,7 +3562,8 @@
       "resolutionPrice": 0.235,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-02T13:10:30.047Z",
-      "closedAt": "2026-03-02T13:10:30.060Z"
+      "closedAt": "2026-03-02T13:10:30.060Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm7tvfmr-dktjfu",
@@ -3502,7 +3600,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-07T03:09:32.671Z",
-      "closedAt": "2026-03-07T03:09:32.686Z"
+      "closedAt": "2026-03-07T03:09:32.686Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm7tvfng-3gc3nf",
@@ -3538,7 +3637,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 16.1pp)",
       "exitedAt": "2026-03-01T16:10:55.533Z",
-      "closedAt": "2026-03-01T16:10:55.533Z"
+      "closedAt": "2026-03-01T16:10:55.533Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm7y5ne6-900p94",
@@ -3575,7 +3675,8 @@
       "resolutionPrice": 0.015,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-02T22:10:09.112Z",
-      "closedAt": "2026-03-02T22:10:09.124Z"
+      "closedAt": "2026-03-02T22:10:09.124Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm8fb7c2-jnrk69",
@@ -3612,7 +3713,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-07T03:09:32.977Z",
-      "closedAt": "2026-03-07T03:09:32.987Z"
+      "closedAt": "2026-03-07T03:09:32.987Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm8jmf1k-6vq0n6",
@@ -3649,7 +3751,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-07T03:09:33.693Z",
-      "closedAt": "2026-03-07T03:09:33.702Z"
+      "closedAt": "2026-03-07T03:09:33.702Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm8jmf2d-ufusze",
@@ -3686,7 +3789,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-02T22:08:10.328Z",
-      "closedAt": "2026-03-02T22:08:10.337Z"
+      "closedAt": "2026-03-02T22:08:10.337Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm8nwk4f-zqc91x",
@@ -3723,7 +3827,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-07T03:09:34.374Z",
-      "closedAt": "2026-03-07T03:09:34.385Z"
+      "closedAt": "2026-03-07T03:09:34.385Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm8nwk59-b4ytn3",
@@ -3760,7 +3865,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-02T16:08:48.700Z",
-      "closedAt": "2026-03-02T16:08:48.711Z"
+      "closedAt": "2026-03-02T16:08:48.711Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm90ruin-rvltbt",
@@ -3797,7 +3903,8 @@
       "resolutionPrice": 0.0175,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-02T22:10:10.165Z",
-      "closedAt": "2026-03-02T22:10:10.175Z"
+      "closedAt": "2026-03-02T22:10:10.175Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mm9uri8t-nn3glp",
@@ -3834,7 +3941,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-07T03:09:35.079Z",
-      "closedAt": "2026-03-07T03:09:35.087Z"
+      "closedAt": "2026-03-07T03:09:35.087Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmg2fgdm-sc73q6",
@@ -3872,7 +3980,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 17.0pp)",
       "exitedAt": "2026-03-07T18:11:22.444Z",
-      "closedAt": "2026-03-07T18:11:22.444Z"
+      "closedAt": "2026-03-07T18:11:22.444Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmg2fged-sicvd5",
@@ -3909,7 +4018,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-08T22:06:20.521Z",
-      "closedAt": "2026-03-08T22:06:20.533Z"
+      "closedAt": "2026-03-08T22:06:20.533Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmg2fgfb-8t1jw1",
@@ -3946,7 +4056,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-08T18:06:42.048Z",
-      "closedAt": "2026-03-08T18:06:42.059Z"
+      "closedAt": "2026-03-08T18:06:42.059Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmg2fgfy-o07esp",
@@ -3984,7 +4095,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 22.3pp)",
       "exitedAt": "2026-03-07T16:11:23.558Z",
-      "closedAt": "2026-03-07T16:11:23.558Z"
+      "closedAt": "2026-03-07T16:11:23.558Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmg2fggj-ezwmxm",
@@ -4022,7 +4134,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 11.1pp)",
       "exitedAt": "2026-03-07T12:11:47.113Z",
-      "closedAt": "2026-03-07T12:11:47.113Z"
+      "closedAt": "2026-03-07T12:11:47.113Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmg5xy73-g1wg7w",
@@ -4059,7 +4172,8 @@
       "resolutionPrice": 0.1,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-08T00:10:04.919Z",
-      "closedAt": "2026-03-08T00:10:04.931Z"
+      "closedAt": "2026-03-08T00:10:04.931Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmga983d-c5tp2h",
@@ -4096,7 +4210,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-08T22:06:21.480Z",
-      "closedAt": "2026-03-08T22:06:21.492Z"
+      "closedAt": "2026-03-08T22:06:21.492Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmga98ax-5wkdu9",
@@ -4133,7 +4248,8 @@
       "resolutionPrice": 0.035,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-08T06:10:04.886Z",
-      "closedAt": "2026-03-08T06:10:04.898Z"
+      "closedAt": "2026-03-08T06:10:04.898Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmgenly5-hp6i44",
@@ -4171,7 +4287,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 15.7pp)",
       "exitedAt": "2026-03-08T14:11:35.813Z",
-      "closedAt": "2026-03-08T14:11:35.813Z"
+      "closedAt": "2026-03-08T14:11:35.813Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmgitd0g-stmg5x",
@@ -4208,7 +4325,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-08T20:06:30.193Z",
-      "closedAt": "2026-03-08T20:06:30.206Z"
+      "closedAt": "2026-03-08T20:06:30.206Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmgn3npi-023gv4",
@@ -4245,7 +4363,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-07T20:08:06.186Z",
-      "closedAt": "2026-03-07T20:08:06.206Z"
+      "closedAt": "2026-03-07T20:08:06.206Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmgzxyvj-567nxr",
@@ -4282,7 +4401,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-09T16:06:12.995Z",
-      "closedAt": "2026-03-09T16:06:13.011Z"
+      "closedAt": "2026-03-09T16:06:13.011Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmgzxywi-uefihx",
@@ -4319,7 +4439,8 @@
       "resolutionPrice": 0.04,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-09T22:10:02.960Z",
-      "closedAt": "2026-03-09T22:10:02.972Z"
+      "closedAt": "2026-03-09T22:10:02.972Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmh4951k-dxash9",
@@ -4356,7 +4477,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-09T18:07:47.698Z",
-      "closedAt": "2026-03-09T18:07:47.710Z"
+      "closedAt": "2026-03-09T18:07:47.710Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmhtz5lf-oz2c36",
@@ -4393,7 +4515,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-08T16:06:40.246Z",
-      "closedAt": "2026-03-08T16:06:40.259Z"
+      "closedAt": "2026-03-08T16:06:40.259Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmib47fh-d8ls3g",
@@ -4430,7 +4553,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-09T22:06:43.745Z",
-      "closedAt": "2026-03-09T22:06:43.757Z"
+      "closedAt": "2026-03-09T22:06:43.757Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmjhyz56-gb5k7v",
@@ -4467,7 +4591,8 @@
       "resolutionPrice": 0.027,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-09T22:10:03.208Z",
-      "closedAt": "2026-03-09T22:10:03.218Z"
+      "closedAt": "2026-03-09T22:10:03.218Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmjm9cgk-rz2bhv",
@@ -4504,7 +4629,8 @@
       "resolutionPrice": 0.095,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-10T10:10:03.719Z",
-      "closedAt": "2026-03-10T10:10:03.734Z"
+      "closedAt": "2026-03-10T10:10:03.734Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmjuu7yo-kxtbtg",
@@ -4542,7 +4668,8 @@
       "exitSource": "swap",
       "exitReason": "SWAP: replaced by better edge candidate (ΔedgePP 15.3pp)",
       "exitedAt": "2026-03-10T18:10:47.677Z",
-      "closedAt": "2026-03-10T18:10:47.677Z"
+      "closedAt": "2026-03-10T18:10:47.677Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmkbrf5q-foseop",
@@ -4579,7 +4706,8 @@
       "resolutionPrice": 0.185,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-12T01:23:10.490Z",
-      "closedAt": "2026-03-12T01:23:10.511Z"
+      "closedAt": "2026-03-12T01:23:10.511Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmkg9pew-og84xl",
@@ -4616,7 +4744,8 @@
       "resolutionPrice": 0.0165,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-11T00:10:05.459Z",
-      "closedAt": "2026-03-11T00:10:05.481Z"
+      "closedAt": "2026-03-11T00:10:05.481Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmkxegur-07khdn",
@@ -4653,7 +4782,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-11T00:06:32.710Z",
-      "closedAt": "2026-03-11T00:06:32.727Z"
+      "closedAt": "2026-03-11T00:06:32.727Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmlkpt33-wc9z1q",
@@ -4690,7 +4820,8 @@
       "resolutionPrice": 0.0305,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-11T22:10:03.158Z",
-      "closedAt": "2026-03-11T22:10:03.178Z"
+      "closedAt": "2026-03-11T22:10:03.178Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmlkpt42-9oesac",
@@ -4727,7 +4858,8 @@
       "resolutionPrice": 0.0105,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-11T17:10:03.908Z",
-      "closedAt": "2026-03-11T17:10:03.930Z"
+      "closedAt": "2026-03-11T17:10:03.930Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmlvp0zr-6nl40x",
@@ -4764,7 +4896,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-11T13:05:06.360Z",
-      "closedAt": "2026-03-11T13:05:06.373Z"
+      "closedAt": "2026-03-11T13:05:06.373Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmm24tlk-4rznw8",
@@ -4801,7 +4934,8 @@
       "closedAt": "2026-03-12T06:18:36.505Z",
       "exitPrice": 0.645,
       "resolutionSource": "manual-exit",
-      "exitReason": "Risk management - 2.8°F margin too thin, locked in 378% gain"
+      "exitReason": "Risk management - 2.8°F margin too thin, locked in 378% gain",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmm8kb3y-7qg7zi",
@@ -4838,7 +4972,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-13T02:05:04.498Z",
-      "closedAt": "2026-03-13T02:05:04.515Z"
+      "closedAt": "2026-03-13T02:05:04.515Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmmu2to9-snyl51",
@@ -4875,7 +5010,8 @@
       "resolutionPrice": 0.105,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-12T07:10:05.239Z",
-      "closedAt": "2026-03-12T07:10:05.265Z"
+      "closedAt": "2026-03-12T07:10:05.265Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmmu2tpi-mc9uc1",
@@ -4912,7 +5048,8 @@
       "resolutionPrice": 0.185,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-12T13:10:04.412Z",
-      "closedAt": "2026-03-12T13:10:04.426Z"
+      "closedAt": "2026-03-12T13:10:04.426Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmmu2tqn-tt89r2",
@@ -4949,7 +5086,8 @@
       "resolutionPrice": 0.0565,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-12T16:10:03.677Z",
-      "closedAt": "2026-03-12T16:10:03.691Z"
+      "closedAt": "2026-03-12T16:10:03.691Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmmyd5ah-pz2vxh",
@@ -4986,7 +5124,8 @@
       "resolutionPrice": 0.05,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-13T00:10:03.225Z",
-      "closedAt": "2026-03-13T00:10:03.243Z"
+      "closedAt": "2026-03-13T00:10:03.243Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmn0i53t-o0fpi6",
@@ -5023,7 +5162,8 @@
       "resolutionPrice": 0.013,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-12T07:10:06.322Z",
-      "closedAt": "2026-03-12T07:10:06.340Z"
+      "closedAt": "2026-03-12T07:10:06.340Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmn4s5hz-ij52ph",
@@ -5060,7 +5200,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-12T08:08:05.122Z",
-      "closedAt": "2026-03-12T08:08:05.144Z"
+      "closedAt": "2026-03-12T08:08:05.144Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmn6x8rk-srbyz8",
@@ -5097,7 +5238,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-13T15:05:06.059Z",
-      "closedAt": "2026-03-13T15:05:06.077Z"
+      "closedAt": "2026-03-13T15:05:06.077Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmn929y4-vk388d",
@@ -5134,7 +5276,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-13T07:05:05.856Z",
-      "closedAt": "2026-03-13T07:05:05.873Z"
+      "closedAt": "2026-03-13T07:05:05.873Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmn929zr-z38o8i",
@@ -5171,7 +5314,8 @@
       "resolutionPrice": 0.225,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-13T09:10:04.339Z",
-      "closedAt": "2026-03-13T09:10:04.354Z"
+      "closedAt": "2026-03-13T09:10:04.354Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmndcgfe-r11i3k",
@@ -5208,7 +5352,8 @@
       "resolutionPrice": 0.017,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-12T12:10:05.207Z",
-      "closedAt": "2026-03-12T12:10:05.222Z"
+      "closedAt": "2026-03-12T12:10:05.222Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmnhmvs8-cp985n",
@@ -5245,7 +5390,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-12T14:05:19.933Z",
-      "closedAt": "2026-03-12T14:05:19.946Z"
+      "closedAt": "2026-03-12T14:05:19.946Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmnhmvtf-c11r6p",
@@ -5282,7 +5428,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-13T05:05:06.511Z",
-      "closedAt": "2026-03-13T05:05:06.529Z"
+      "closedAt": "2026-03-13T05:05:06.529Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmnhmvuc-k2e16i",
@@ -5319,7 +5466,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-14T03:05:03.637Z",
-      "closedAt": "2026-03-14T03:05:03.651Z"
+      "closedAt": "2026-03-14T03:05:03.651Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmnlxejj-lo0gy9",
@@ -5356,7 +5504,8 @@
       "resolutionPrice": 0.07,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-13T22:10:04.947Z",
-      "closedAt": "2026-03-13T22:10:04.963Z"
+      "closedAt": "2026-03-13T22:10:04.963Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmno2gkr-cfohgx",
@@ -5393,7 +5542,8 @@
       "resolutionPrice": 0.845,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-12T23:10:05.246Z",
-      "closedAt": "2026-03-12T23:10:05.261Z"
+      "closedAt": "2026-03-12T23:10:05.261Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmpe9kkh-syzqk4",
@@ -5433,7 +5583,8 @@
       "resolutionPrice": 0.04,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-13T23:10:04.517Z",
-      "closedAt": "2026-03-13T23:10:04.531Z"
+      "closedAt": "2026-03-13T23:10:04.531Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmpr4540-z1yelk",
@@ -5482,7 +5633,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-14T04:05:28.382Z",
-      "closedAt": "2026-03-14T04:05:28.395Z"
+      "closedAt": "2026-03-14T04:05:28.395Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmsdgqmh-r1npi4",
@@ -5553,7 +5705,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-16T03:05:05.959Z",
-      "closedAt": "2026-03-16T03:05:05.970Z"
+      "closedAt": "2026-03-16T03:05:05.970Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmsqbjbo-1rdvoy",
@@ -5606,7 +5759,8 @@
       "resolutionPrice": 1,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-16T10:05:50.197Z",
-      "closedAt": "2026-03-16T10:05:50.212Z"
+      "closedAt": "2026-03-16T10:05:50.212Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmt11571-hgaro6",
@@ -5659,7 +5813,8 @@
       "resolutionPrice": 0.0185,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-16T14:10:04.552Z",
-      "closedAt": "2026-03-16T14:10:04.563Z"
+      "closedAt": "2026-03-16T14:10:04.563Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmtkbg31-jopjho",
@@ -5734,7 +5889,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-17T04:05:37.694Z",
-      "closedAt": "2026-03-17T04:05:37.707Z"
+      "closedAt": "2026-03-17T04:05:37.707Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmumwyeb-5lvv8f",
@@ -5797,7 +5953,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-18T01:05:06.241Z",
-      "closedAt": "2026-03-18T01:05:06.251Z"
+      "closedAt": "2026-03-18T01:05:06.251Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmvahkrh-7il57h",
@@ -5858,7 +6015,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-18T21:05:04.702Z",
-      "closedAt": "2026-03-18T21:05:04.710Z"
+      "closedAt": "2026-03-18T21:05:04.710Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmvtrf92-sh71z0",
@@ -5921,7 +6079,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-19T00:05:03.725Z",
-      "closedAt": "2026-03-19T00:05:03.733Z"
+      "closedAt": "2026-03-19T00:05:03.733Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmxm24xo-6j8puq",
@@ -5974,7 +6133,8 @@
       "resolutionPrice": 0.055,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-19T22:10:05.873Z",
-      "closedAt": "2026-03-19T22:10:05.884Z"
+      "closedAt": "2026-03-19T22:10:05.884Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmxqc7so-4rcjrn",
@@ -6023,7 +6183,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-20T04:05:06.057Z",
-      "closedAt": "2026-03-20T04:05:06.068Z"
+      "closedAt": "2026-03-20T04:05:06.068Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmxqc7tb-p6zyrh",
@@ -6080,7 +6241,8 @@
       "resolutionPrice": 0.045,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-20T03:10:06.462Z",
-      "closedAt": "2026-03-20T03:10:06.481Z"
+      "closedAt": "2026-03-20T03:10:06.481Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmxsh0q5-abgj2a",
@@ -6129,7 +6291,8 @@
       "resolutionPrice": 0,
       "resolutionSource": "polymarket",
       "resolvedAt": "2026-03-19T20:05:08.366Z",
-      "closedAt": "2026-03-19T20:05:08.382Z"
+      "closedAt": "2026-03-19T20:05:08.382Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmxumflr-jezzv3",
@@ -6212,7 +6375,8 @@
       "resolutionPrice": 0.055,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-19T23:10:05.061Z",
-      "closedAt": "2026-03-19T23:10:05.068Z"
+      "closedAt": "2026-03-19T23:10:05.068Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmy37oki-ffeokg",
@@ -6265,7 +6429,8 @@
       "resolutionPrice": 0.05,
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-20T21:10:06.022Z",
-      "closedAt": "2026-03-20T21:10:06.032Z"
+      "closedAt": "2026-03-20T21:10:06.032Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmymh4nu-ktvklx",
@@ -6323,7 +6488,8 @@
       "size": 22,
       "sizeUSDC": 13.937,
       "enteredAt": "2026-03-20T08:13:42.246Z",
-      "closedAt": "2026-03-20T08:13:42.253Z"
+      "closedAt": "2026-03-20T08:13:42.253Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmyswm1c-qgnld7",
@@ -6365,7 +6531,8 @@
       "size": 23,
       "sizeUSDC": 14.49,
       "enteredAt": "2026-03-20T11:13:42.306Z",
-      "closedAt": "2026-03-20T11:13:42.318Z"
+      "closedAt": "2026-03-20T11:13:42.318Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmyv38bc-isd9hr",
@@ -6411,7 +6578,8 @@
       "size": 26,
       "sizeUSDC": 16.12,
       "enteredAt": "2026-03-20T12:14:50.347Z",
-      "closedAt": "2026-03-20T12:14:50.361Z"
+      "closedAt": "2026-03-20T12:14:50.361Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmyx73zd-4ejmrr",
@@ -6457,7 +6625,8 @@
       "size": 31,
       "sizeUSDC": 18.599999999999998,
       "enteredAt": "2026-03-20T13:13:50.584Z",
-      "closedAt": "2026-03-20T13:13:50.597Z"
+      "closedAt": "2026-03-20T13:13:50.597Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmz1hi0g-j52al0",
@@ -6503,7 +6672,8 @@
       "size": 34,
       "sizeUSDC": 18.36,
       "enteredAt": "2026-03-20T15:13:53.796Z",
-      "closedAt": "2026-03-20T15:13:53.809Z"
+      "closedAt": "2026-03-20T15:13:53.809Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmz1hi1o-r2f56i",
@@ -6549,7 +6719,8 @@
       "size": 23,
       "sizeUSDC": 14.375,
       "enteredAt": "2026-03-20T15:13:53.836Z",
-      "closedAt": "2026-03-20T15:13:53.851Z"
+      "closedAt": "2026-03-20T15:13:53.851Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmz1hi34-7ctfji",
@@ -6595,7 +6766,8 @@
       "size": 22,
       "sizeUSDC": 13.97,
       "enteredAt": "2026-03-20T15:13:53.885Z",
-      "closedAt": "2026-03-20T15:13:53.895Z"
+      "closedAt": "2026-03-20T15:13:53.895Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmz3mlhn-mts533",
@@ -6645,7 +6817,8 @@
       "size": 23,
       "sizeUSDC": 14.375,
       "enteredAt": "2026-03-20T16:13:50.808Z",
-      "closedAt": "2026-03-20T16:13:50.815Z"
+      "closedAt": "2026-03-20T16:13:50.815Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmz5rnyi-rnph4z",
@@ -6699,7 +6872,8 @@
       "size": 26,
       "sizeUSDC": 15.99,
       "enteredAt": "2026-03-20T17:13:46.519Z",
-      "closedAt": "2026-03-20T17:13:46.527Z"
+      "closedAt": "2026-03-20T17:13:46.527Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmz7wp3g-vnef4m",
@@ -6745,7 +6919,8 @@
       "size": 27,
       "sizeUSDC": 16.605,
       "enteredAt": "2026-03-20T18:13:40.505Z",
-      "closedAt": "2026-03-20T18:13:40.513Z"
+      "closedAt": "2026-03-20T18:13:40.513Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmza1li0-dt8k2q",
@@ -6799,7 +6974,8 @@
       "size": 44,
       "sizeUSDC": 18.502,
       "enteredAt": "2026-03-20T19:13:28.359Z",
-      "closedAt": "2026-03-20T19:13:28.366Z"
+      "closedAt": "2026-03-20T19:13:28.366Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmza1liu-y2vc9a",
@@ -6853,7 +7029,8 @@
       "size": 26,
       "sizeUSDC": 16.016,
       "enteredAt": "2026-03-20T19:13:28.385Z",
-      "closedAt": "2026-03-20T19:13:28.392Z"
+      "closedAt": "2026-03-20T19:13:28.392Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmza1ljl-tm7s0b",
@@ -6899,7 +7076,8 @@
       "size": 26,
       "sizeUSDC": 16.12,
       "enteredAt": "2026-03-20T19:13:28.410Z",
-      "closedAt": "2026-03-20T19:13:28.417Z"
+      "closedAt": "2026-03-20T19:13:28.417Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmzc6ldb-8jbg9v",
@@ -6941,7 +7119,8 @@
       "size": 27,
       "sizeUSDC": 16.605,
       "enteredAt": "2026-03-20T20:13:20.706Z",
-      "closedAt": "2026-03-20T20:13:20.716Z"
+      "closedAt": "2026-03-20T20:13:20.716Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmzc6lei-fuvz30",
@@ -7003,7 +7182,8 @@
       "size": 26,
       "sizeUSDC": 2.99,
       "enteredAt": "2026-03-20T20:13:20.742Z",
-      "closedAt": "2026-03-20T20:13:20.749Z"
+      "closedAt": "2026-03-20T20:13:20.749Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmzgh695-b5z8y6",
@@ -7049,7 +7229,8 @@
       "size": 35,
       "sizeUSDC": 2.975,
       "enteredAt": "2026-03-20T22:13:32.795Z",
-      "closedAt": "2026-03-20T22:13:32.804Z"
+      "closedAt": "2026-03-20T22:13:32.804Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmzp29oz-mo8byf",
@@ -7091,7 +7272,8 @@
       "size": 21,
       "sizeUSDC": 13.335,
       "enteredAt": "2026-03-21T02:13:53.956Z",
-      "closedAt": "2026-03-21T02:13:53.966Z"
+      "closedAt": "2026-03-21T02:13:53.966Z",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmztajcc-pzg0mh",
@@ -7138,7 +7320,8 @@
       "sizeUSDC": 16.875,
       "enteredAt": "2026-03-21T04:12:18.178Z",
       "closedAt": "2026-03-21T04:12:18.189Z",
-      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null"
+      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmztajdm-asr105",
@@ -7177,7 +7360,8 @@
       "sizeUSDC": 14.63,
       "enteredAt": "2026-03-21T04:12:18.218Z",
       "closedAt": "2026-03-21T04:12:18.227Z",
-      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null"
+      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmzvfj9y-tpdzue",
@@ -7224,7 +7408,8 @@
       "sizeUSDC": 18.15,
       "enteredAt": "2026-03-21T05:12:10.599Z",
       "closedAt": "2026-03-21T05:12:10.610Z",
-      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null"
+      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmzvfjb1-jbcgrg",
@@ -7263,7 +7448,8 @@
       "sizeUSDC": 14.63,
       "enteredAt": "2026-03-21T05:12:10.633Z",
       "closedAt": "2026-03-21T05:12:10.642Z",
-      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null"
+      "failReason": "REJECTED: Updated trade fails validation:\n  Field \"realSize\" cannot be null\n  Field \"realEntryPrice\" cannot be null",
+      "tradeSource": "paper"
     },
     {
       "id": "oc-mmzy4r12-a3kono",
@@ -7341,7 +7527,8 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.56,
-      "updatedAt": "2026-03-21T08:00:02.693Z"
+      "updatedAt": "2026-03-21T08:00:02.693Z",
+      "tradeSource": "both"
     },
     {
       "id": "oc-mmzzppi1-0kwbqe",
@@ -7395,12 +7582,40 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.515,
-      "updatedAt": "2026-03-21T08:00:03.256Z"
+      "updatedAt": "2026-03-21T08:00:03.256Z",
+      "tradeSource": "both"
+    },
+    {
+      "id": "oc-mn01gcsd-fva1ly",
+      "conditionId": "0xfa27b0b742432fe2a9da5684b31c528d3d8967cb6d1af9169a5f4ea3324c9137",
+      "tokenId": "0x33b7cf5fe97947be08e0a3672cd15024be6525b19f17092b89b440b461ad807",
+      "tokenSide": "YES",
+      "marketSlug": "highest-temperature-in-seattle-on-march-22-2026-46-47f",
+      "city": "Seattle",
+      "date": "2026-03-22",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in Seattle be between 46-47°F on March 22?",
+      "side": "YES",
+      "entryPrice": 0.014263,
+      "size": 19,
+      "sizeUSDC": 0.271,
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-21T06:27:00.000Z",
+      "enteredAt": "2026-03-21T06:27:00.000Z",
+      "currentPrice": 0.035,
+      "tradeSource": "real",
+      "realTrading": true,
+      "realSize": 19,
+      "realEntryPrice": 0.014263,
+      "signal": null,
+      "notes": "Manual real-money position placed during wallet testing. Tracked for scalper/resolver."
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-21T07:12:08.633Z",
+    "lastUpdated": "2026-03-21T08:00:57.224Z",
     "lastPriceSync": "2026-03-21T08:00:03.556Z"
   }
 }
