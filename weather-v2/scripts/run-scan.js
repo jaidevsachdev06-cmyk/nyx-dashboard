@@ -274,8 +274,11 @@ async function main() {
     const data3 = JSON.parse(fs.readFileSync(tradesPath3, 'utf8'));
     const now = Date.now();
     const h24 = 24 * 3600000;
+    // Only count pushes after schema fix (2026-03-21T05:23:00Z) — older ones are known-fixed
+    const PUSH_FIX_CUTOFF = new Date('2026-03-21T05:23:00Z').getTime();
     const recentPushes = (data3.trades || []).filter(t =>
-      t.result === 'push' && t.closedAt && (now - new Date(t.closedAt).getTime()) < h24
+      t.result === 'push' && t.closedAt && (now - new Date(t.closedAt).getTime()) < h24 &&
+      new Date(t.closedAt).getTime() > PUSH_FIX_CUTOFF
     );
     if (recentPushes.length > 2) {
       console.error(`[HEALTH] ⚠️ PUSH-RATE ALERT: ${recentPushes.length} trades instantly closed as 'push' in last 24h`);
