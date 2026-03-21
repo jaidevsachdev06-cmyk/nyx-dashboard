@@ -7464,7 +7464,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.78,
+      "pnlUSDC": -0.62,
       "createdAt": "2026-03-21T06:27:46.262Z",
       "signal": {
         "forecastTemp": 51.4,
@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.57,
-      "updatedAt": "2026-03-21T12:10:04.745Z",
+      "currentPrice": 0.58,
+      "updatedAt": "2026-03-21T12:30:04.223Z",
       "tradeSource": "both"
     },
     {
@@ -7543,7 +7543,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.59,
+      "pnlUSDC": -2.41,
       "createdAt": "2026-03-21T07:12:03.673Z",
       "signal": {
         "forecastTemp": 82,
@@ -7581,8 +7581,8 @@
       "realEntryPrice": 0.53,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.435,
-      "updatedAt": "2026-03-21T12:10:04.988Z",
+      "currentPrice": 0.44,
+      "updatedAt": "2026-03-21T12:30:04.783Z",
       "tradeSource": "both"
     },
     {
@@ -7635,7 +7635,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.11,
+      "pnlUSDC": 0.14,
       "createdAt": "2026-03-21T08:12:00.577Z",
       "signal": {
         "forecastTemp": 76.7,
@@ -7672,8 +7672,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.707,
-      "updatedAt": "2026-03-21T12:10:05.465Z",
+      "currentPrice": 0.7025,
+      "updatedAt": "2026-03-21T12:30:05.352Z",
       "tradeSource": "paper",
       "realFillStatus": "unfilled",
       "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
@@ -7691,7 +7691,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.32,
+      "pnlUSDC": 0.2,
       "createdAt": "2026-03-21T09:12:11.797Z",
       "signal": {
         "forecastTemp": 60.5,
@@ -7734,13 +7734,13 @@
       "realEntryPrice": 0.76,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.765,
-      "updatedAt": "2026-03-21T12:10:05.700Z"
+      "currentPrice": 0.76,
+      "updatedAt": "2026-03-21T12:30:05.883Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-21T12:25:21.415Z",
-    "lastPriceSync": "2026-03-21T12:00:07.594Z"
+    "lastPriceSync": "2026-03-21T12:30:06.183Z"
   }
 }
