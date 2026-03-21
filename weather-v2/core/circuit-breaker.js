@@ -28,17 +28,24 @@ function saveState(state) {
 function recordResult(result) {
   const state = loadState();
   
+  state.lastUpdated = new Date().toISOString();
   if (result === 'win') {
     state.consecutiveLosses = 0;
     state.lastResult = 'win';
   } else if (result === 'loss') {
     state.consecutiveLosses++;
     state.lastResult = 'loss';
+    // Log each loss for debugging false trips
+    if (!state.lossLog) state.lossLog = [];
+    state.lossLog.push({ at: new Date().toISOString(), caller: new Error().stack?.split('\n')[2]?.trim() || 'unknown' });
+    if (state.lossLog.length > 10) state.lossLog = state.lossLog.slice(-10);
     
     if (state.consecutiveLosses >= 3 && !state.tripped) {
       state.tripped = true;
       state.trippedAt = new Date().toISOString();
+      state.tripCaller = new Error().stack?.split('\n')[2]?.trim() || 'unknown';
       console.log(`[circuit-breaker] 🚨 TRIPPED — ${state.consecutiveLosses} consecutive losses`);
+      console.log(`[circuit-breaker] Trigger stack: ${state.tripCaller}`);
       
       // Send alert via Telegram Bot API (reliable, same as scanner/resolver)
       try {
