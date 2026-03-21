@@ -220,7 +220,7 @@ async function enterTrade(tradeId, { price, size }) {
       let clobBalance = Infinity; // assume OK if check fails (non-fatal)
       try {
         const balResult = require('child_process').spawnSync('polymarket', [
-          '--signature-type', 'gnosis-safe', '-o', 'json', 'clob', 'balance', '--asset-type', 'collateral'
+          '-o', 'json', 'clob', 'balance', '--asset-type', 'collateral'
         ], { timeout: 10000, encoding: 'utf8', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });
         if (balResult.status === 0) {
           const balData = JSON.parse(balResult.stdout.trim());
@@ -332,7 +332,6 @@ async function redeemRealPosition(trade, tradeId, pnlResult) {
   try {
     const { spawnSync } = require('child_process');
     const redeemResult = spawnSync('polymarket', [
-      '--signature-type', 'gnosis-safe',
       '-o', 'json', 'ctf', 'redeem',
       '--condition', trade.conditionId
     ], { timeout: 30000, encoding: 'utf8', killSignal: 'SIGKILL', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });
