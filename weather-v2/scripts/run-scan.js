@@ -239,6 +239,8 @@ async function main() {
       console.log(`[run-scan] Pushed ${entered} new trade(s) to GitHub`);
     } catch (e) {
       console.warn(`[run-scan] Git push failed: ${e.message?.slice(0, 80)}`);
+      // Abort any broken rebase to prevent corrupted repo state
+      try { const { execSync: es } = require('child_process'); es(`git -C ${path.resolve(__dirname, '..', '..')} rebase --abort`, { stdio: 'pipe' }); } catch(_) {}
     }
   }
   

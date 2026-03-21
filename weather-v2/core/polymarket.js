@@ -343,9 +343,12 @@ async function realOrder({ tokenId, side, price, size }) {
   if (size < 5) throw new Error(`${tag}: size ${size} too small (CLOB minimum is 5)`);
 
   // Round price to tick size (0.01)
-  // For sells: discount 2 ticks to hit the bid and ensure fills
+  // Adjust to hit counterparty: +2 ticks for BUY (hit ask), -2 ticks for SELL (hit bid)
   let roundedPrice = Math.round(price * 100) / 100;
-  if (side.toUpperCase() === 'SELL') {
+  if (side.toUpperCase() === 'BUY') {
+    // Add 2 ticks to ensure fill against the ask
+    roundedPrice = Math.min(0.99, Math.round((roundedPrice + 0.02) * 100) / 100);
+  } else {
     // FIX: Math.round AFTER subtraction to avoid float precision bugs
     // e.g. 0.05 - 0.02 = 0.030000000000000002 → CLOB rejects
     roundedPrice = Math.max(0.01, Math.round((roundedPrice - 0.02) * 100) / 100);

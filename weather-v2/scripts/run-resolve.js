@@ -65,7 +65,11 @@ async function main() {
           const local = execSync(`git -C ${GIT_DIR} rev-parse HEAD`, { encoding: 'utf8' }).trim();
           const remote = execSync(`git -C ${GIT_DIR} ls-remote origin HEAD`, { encoding: 'utf8' }).split(/\s/)[0];
           if (local === remote) { pushOk = true; console.log(`[run-resolve] Git push verified (attempt ${attempt})`); break; }
-        } catch(e) { console.log(`[run-resolve] Git push attempt ${attempt} failed: ${e.message}`); }
+        } catch(e) {
+          console.log(`[run-resolve] Git push attempt ${attempt} failed: ${e.message}`);
+          // Abort any broken rebase to prevent corrupted repo state
+          try { execSync(`git -C ${GIT_DIR} rebase --abort`, { stdio: 'pipe' }); } catch(_) {}
+        }
       }
       if (!pushOk) console.error('[run-resolve] 🚨 CRITICAL: Git push failed after 3 attempts');
       console.log(`[run-resolve] Pushed ${result.resolved.length} resolved trade(s) to GitHub`);
