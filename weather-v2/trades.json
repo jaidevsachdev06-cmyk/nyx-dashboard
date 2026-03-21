@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.575,
-      "updatedAt": "2026-03-21T12:00:05.090Z",
+      "currentPrice": 0.57,
+      "updatedAt": "2026-03-21T12:10:04.745Z",
       "tradeSource": "both"
     },
     {
@@ -7582,7 +7582,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.435,
-      "updatedAt": "2026-03-21T12:00:05.643Z",
+      "updatedAt": "2026-03-21T12:10:04.988Z",
       "tradeSource": "both"
     },
     {
@@ -7599,19 +7599,28 @@
       "entryPrice": 0.014263,
       "size": 19,
       "sizeUSDC": 0.271,
-      "status": "open",
+      "status": "closed",
       "result": null,
       "pnlUSDC": 0.27,
       "createdAt": "2026-03-21T06:27:00.000Z",
       "enteredAt": "2026-03-21T06:27:00.000Z",
       "currentPrice": 0.0285,
       "tradeSource": "real",
-      "realTrading": true,
+      "realTrading": false,
       "realSize": 19,
       "realEntryPrice": 0.014263,
-      "signal": null,
+      "signal": {
+        "forecastTemp": null,
+        "forecastSource": "manual-test",
+        "impliedProb": 0.014263,
+        "modelProb": null,
+        "edge": null,
+        "isManualEntry": true
+      },
       "notes": "Manual real-money position placed during wallet testing. Tracked for scalper/resolver.",
-      "updatedAt": "2026-03-21T12:00:06.182Z"
+      "updatedAt": "2026-03-21T12:00:06.182Z",
+      "closedAt": "2026-03-21T12:25:21.408Z",
+      "exitReason": "Manual test entry from wallet testing — closed as per audit fix 2026-03-21"
     },
     {
       "id": "oc-mn01usw1-a49wsq",
@@ -7663,8 +7672,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.701,
-      "updatedAt": "2026-03-21T12:00:06.717Z",
+      "currentPrice": 0.707,
+      "updatedAt": "2026-03-21T12:10:05.465Z",
       "tradeSource": "paper",
       "realFillStatus": "unfilled",
       "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
@@ -7725,13 +7734,13 @@
       "realEntryPrice": 0.76,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.775,
-      "updatedAt": "2026-03-21T12:00:07.294Z"
+      "currentPrice": 0.765,
+      "updatedAt": "2026-03-21T12:10:05.700Z"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-21T11:10:11.626Z",
+    "lastUpdated": "2026-03-21T12:25:21.415Z",
     "lastPriceSync": "2026-03-21T12:00:07.594Z"
   }
 }

@@ -246,6 +246,14 @@ function validateTrade(trade) {
     }
   }
 
+  // FIX (2026-03-21): Real trades must have signal data for tracking edge/forecast
+  // BUG: Manual real position (Trade 188) was entered without signal, bypassing validation
+  if (trade.realTrading || trade.tradeSource === 'real' || trade.tradeSource === 'both') {
+    if (!trade.signal || trade.signal === null) {
+      errors.push('Real trades must have signal data (edge, forecast, modelProb). Manual entries: provide signal object or set realTrading=false');
+    }
+  }
+
   return { valid: errors.length === 0, errors };
 }
 
