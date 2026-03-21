@@ -277,6 +277,7 @@ async function redeemRealPosition(trade, tradeId, pnlResult) {
   try {
     const { spawnSync } = require('child_process');
     const redeemResult = spawnSync('polymarket', [
+      '--signature-type', 'gnosis-safe',
       '-o', 'json', 'ctf', 'redeem',
       '--condition', trade.conditionId
     ], { timeout: 30000, encoding: 'utf8', killSignal: 'SIGKILL', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });

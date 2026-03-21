@@ -361,6 +361,7 @@ async function realOrder({ tokenId, side, price, size }) {
 
   try {
     const result = execPolymarketCLI([
+      '--signature-type', 'gnosis-safe',
       '-o', 'json',
       'clob', 'create-order',
       '--token', tokenId,
@@ -400,7 +401,7 @@ async function realOrder({ tokenId, side, price, size }) {
     while (Date.now() - pollStart < POLL_TIMEOUT_MS) {
       await sleep(POLL_INTERVAL_MS);
       try {
-        const orderStatus = execPolymarketCLI(['-o', 'json', 'clob', 'order', orderID], 8000);
+        const orderStatus = execPolymarketCLI(['--signature-type', 'gnosis-safe', '-o', 'json', 'clob', 'order', orderID], 8000);
         const status = (orderStatus?.status || '').toUpperCase();
         
         if (status === 'MATCHED' || status === 'FILLED') {
@@ -431,13 +432,13 @@ async function realOrder({ tokenId, side, price, size }) {
       // Order still LIVE after 15s — cancel it and return unfilled
       console.warn(`${tag}: ⚠️ Order still LIVE after ${POLL_TIMEOUT_MS / 1000}s — cancelling stale order`);
       try {
-        execPolymarketCLI(['-o', 'json', 'clob', 'cancel', orderID], 10000);
+        execPolymarketCLI(['--signature-type', 'gnosis-safe', '-o', 'json', 'clob', 'cancel', orderID], 10000);
         console.log(`${tag}: 🗑️ Cancelled unfilled order ${orderID}`);
       } catch (cancelErr) {
         console.warn(`${tag}: Cancel failed (may have filled in the meantime): ${cancelErr.message}`);
         // If cancel failed, try one more status check — it might have filled
         try {
-          const finalCheck = execPolymarketCLI(['-o', 'json', 'clob', 'order', orderID], 8000);
+          const finalCheck = execPolymarketCLI(['--signature-type', 'gnosis-safe', '-o', 'json', 'clob', 'order', orderID], 8000);
           const finalStatus = (finalCheck?.status || '').toUpperCase();
           if (finalStatus === 'MATCHED' || finalStatus === 'FILLED') {
             filled = true;
