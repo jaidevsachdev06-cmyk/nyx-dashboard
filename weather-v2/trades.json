@@ -7464,7 +7464,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.16,
+      "pnlUSDC": 0.78,
       "createdAt": "2026-03-21T06:27:46.262Z",
       "signal": {
         "forecastTemp": 51.4,
@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.605,
-      "updatedAt": "2026-03-21T09:10:05.255Z",
+      "currentPrice": 0.625,
+      "updatedAt": "2026-03-21T09:30:02.865Z",
       "tradeSource": "both"
     },
     {
@@ -7543,7 +7543,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.56,
+      "pnlUSDC": 0.93,
       "createdAt": "2026-03-21T07:12:03.673Z",
       "signal": {
         "forecastTemp": 82,
@@ -7581,8 +7581,8 @@
       "realEntryPrice": 0.53,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.52,
-      "updatedAt": "2026-03-21T09:10:05.511Z",
+      "currentPrice": 0.53,
+      "updatedAt": "2026-03-21T09:30:03.432Z",
       "tradeSource": "both"
     },
     {
@@ -7611,7 +7611,7 @@
       "realEntryPrice": 0.014263,
       "signal": null,
       "notes": "Manual real-money position placed during wallet testing. Tracked for scalper/resolver.",
-      "updatedAt": "2026-03-21T09:00:04.236Z"
+      "updatedAt": "2026-03-21T09:30:03.977Z"
     },
     {
       "id": "oc-mn01usw1-a49wsq",
@@ -7626,7 +7626,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.74,
+      "pnlUSDC": -0.65,
       "createdAt": "2026-03-21T08:12:00.577Z",
       "signal": {
         "forecastTemp": 76.7,
@@ -7663,8 +7663,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.652,
-      "updatedAt": "2026-03-21T09:10:06.008Z",
+      "currentPrice": 0.656,
+      "updatedAt": "2026-03-21T09:30:04.546Z",
       "tradeSource": "paper",
       "realFillStatus": "unfilled",
       "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
@@ -7682,7 +7682,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": -0.08,
       "createdAt": "2026-03-21T09:12:11.797Z",
       "signal": {
         "forecastTemp": 60.5,
@@ -7724,12 +7724,14 @@
       "realSize": 7,
       "realEntryPrice": 0.76,
       "txHash": null,
-      "realFillStatus": "filled"
+      "realFillStatus": "filled",
+      "currentPrice": 0.725,
+      "updatedAt": "2026-03-21T09:30:05.128Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-21T09:12:19.282Z",
-    "lastPriceSync": "2026-03-21T09:00:05.067Z"
+    "lastPriceSync": "2026-03-21T09:30:05.429Z"
   }
 }
