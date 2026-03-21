@@ -12955,5 +12955,29 @@
       {}
     ],
     "updatedAt": "2026-03-21T22:01:09.816Z"
+  },
+  {
+    "id": "2c3ad487-106c-406b-9083-168495403dfa",
+    "market": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+    "side": "Yes",
+    "entryPrice": 0.968,
+    "currentPrice": 0.968,
+    "shares": 27.93,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Dropper, GollumGekko, aenews, kekkone",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 86.2,
+    "avgWinRate": 70.3,
+    "reasoning": "Consensus: 5 whales (avg score 86.2, WR 70.3%) Yes. bet=$27.04, shares=27.93. Whales: Car, Dropper, GollumGekko, aenews, kekkone",
+    "endDate": "2026-03-31",
+    "conditionId": "0x24fb7c2d95c93a68018e6c4a90d88043bb67d32fd1454924cef8ebdd550228f3",
+    "createdAt": "2026-03-21T22:02:49.688Z",
+    "entryDate": "2026-03-21T22:02:49.688Z",
+    "invested": 27.0362,
+    "currentValue": 27.0362,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
