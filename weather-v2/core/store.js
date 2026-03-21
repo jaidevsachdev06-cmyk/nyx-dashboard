@@ -12,6 +12,7 @@ const { validateTrade, validateTransition } = require('./schema');
 
 const TRADES_FILE = path.resolve(__dirname, '..', 'trades.json');
 const BACKUP_DIR = path.resolve(__dirname, '..', 'backups');
+const LOCK_FILE = path.resolve(__dirname, '..', 'logs', '.trades.lock');
 
 class TradeStore {
   constructor(filePath = TRADES_FILE) {
@@ -34,21 +35,55 @@ class TradeStore {
     return data;
   }
 
-  _write(data) {
-    if (!fs.existsSync(BACKUP_DIR)) {
-      fs.mkdirSync(BACKUP_DIR, { recursive: true });
-    }
-    if (fs.existsSync(this.filePath)) {
-      const ts = new Date().toISOString().replace(/[:.]/g, '-');
-      const backupPath = path.join(BACKUP_DIR, `trades-${ts}.json`);
-      fs.copyFileSync(this.filePath, backupPath);
-      const backups = fs.readdirSync(BACKUP_DIR).sort();
-      while (backups.length > 50) {
-        fs.unlinkSync(path.join(BACKUP_DIR, backups.shift()));
+  _acquireLock(timeoutMs = 10000) {
+    const start = Date.now();
+    fs.mkdirSync(path.dirname(LOCK_FILE), { recursive: true });
+    while (true) {
+      try {
+        // O_EXCL = fail if file exists (atomic on same filesystem)
+        fs.writeFileSync(LOCK_FILE, String(process.pid), { flag: 'wx' });
+        return true;
+      } catch (e) {
+        if (e.code !== 'EEXIST') throw e;
+        // Check for stale lock (process died without releasing)
+        try {
+          const lockPid = parseInt(fs.readFileSync(LOCK_FILE, 'utf8'));
+          try { process.kill(lockPid, 0); } catch { fs.unlinkSync(LOCK_FILE); continue; }
+        } catch { fs.unlinkSync(LOCK_FILE); continue; }
+        if (Date.now() - start > timeoutMs) throw new Error('Could not acquire trades.json lock after ' + timeoutMs + 'ms');
+        // Spin wait 50ms
+        const w = Date.now(); while (Date.now() - w < 50) {}
       }
     }
-    data.meta.lastUpdated = new Date().toISOString();
-    fs.writeFileSync(this.filePath, JSON.stringify(data, null, 2));
+  }
+
+  _releaseLock() {
+    try { fs.unlinkSync(LOCK_FILE); } catch {}
+  }
+
+  _write(data) {
+    this._acquireLock();
+    try {
+      if (!fs.existsSync(BACKUP_DIR)) {
+        fs.mkdirSync(BACKUP_DIR, { recursive: true });
+      }
+      if (fs.existsSync(this.filePath)) {
+        const ts = new Date().toISOString().replace(/[:.]/g, '-');
+        const backupPath = path.join(BACKUP_DIR, `trades-${ts}.json`);
+        fs.copyFileSync(this.filePath, backupPath);
+        const backups = fs.readdirSync(BACKUP_DIR).sort();
+        while (backups.length > 50) {
+          fs.unlinkSync(path.join(BACKUP_DIR, backups.shift()));
+        }
+      }
+      data.meta.lastUpdated = new Date().toISOString();
+      // Write to tmp first, then rename (atomic on same filesystem)
+      const tmpFile = this.filePath + '.tmp';
+      fs.writeFileSync(tmpFile, JSON.stringify(data, null, 2));
+      fs.renameSync(tmpFile, this.filePath);
+    } finally {
+      this._releaseLock();
+    }
   }
 
   getAll(filter = {}) {

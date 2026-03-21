@@ -408,6 +408,8 @@ async function checkAndResolve(tradeId) {
           resolvedAt: new Date().toISOString(),
           ...verificationPI
         });
+        // FIX: Record to circuit breaker (was missing — price-inferred losses didn't trip CB)
+        circuitBreaker.recordResult(inferredResult);
         return store.transition(tradeId, 'closed');
       }
     }
