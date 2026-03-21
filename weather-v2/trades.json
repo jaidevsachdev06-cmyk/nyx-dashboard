@@ -7464,7 +7464,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.24,
+      "pnlUSDC": -0.78,
       "createdAt": "2026-03-21T06:27:46.262Z",
       "signal": {
         "forecastTemp": 51.4,
@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.595,
-      "updatedAt": "2026-03-21T08:10:03.720Z",
+      "currentPrice": 0.575,
+      "updatedAt": "2026-03-21T08:30:04.135Z",
       "tradeSource": "both"
     },
     {
@@ -7543,7 +7543,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.37,
+      "pnlUSDC": 1.11,
       "createdAt": "2026-03-21T07:12:03.673Z",
       "signal": {
         "forecastTemp": 82,
@@ -7581,8 +7581,8 @@
       "realEntryPrice": 0.53,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.515,
-      "updatedAt": "2026-03-21T08:10:03.991Z",
+      "currentPrice": 0.535,
+      "updatedAt": "2026-03-21T08:30:04.682Z",
       "tradeSource": "both"
     },
     {
@@ -7601,16 +7601,17 @@
       "sizeUSDC": 0.271,
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": 0.34,
       "createdAt": "2026-03-21T06:27:00.000Z",
       "enteredAt": "2026-03-21T06:27:00.000Z",
-      "currentPrice": 0.035,
+      "currentPrice": 0.032,
       "tradeSource": "real",
       "realTrading": true,
       "realSize": 19,
       "realEntryPrice": 0.014263,
       "signal": null,
-      "notes": "Manual real-money position placed during wallet testing. Tracked for scalper/resolver."
+      "notes": "Manual real-money position placed during wallet testing. Tracked for scalper/resolver.",
+      "updatedAt": "2026-03-21T08:30:05.221Z"
     },
     {
       "id": "oc-mn01usw1-a49wsq",
@@ -7625,7 +7626,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": -0.11,
       "createdAt": "2026-03-21T08:12:00.577Z",
       "signal": {
         "forecastTemp": 76.7,
@@ -7661,12 +7662,14 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.688,
+      "updatedAt": "2026-03-21T08:30:05.781Z"
     }
   ],
   "meta": {
     "version": 2,
     "lastUpdated": "2026-03-21T08:12:00.602Z",
-    "lastPriceSync": "2026-03-21T08:00:03.556Z"
+    "lastPriceSync": "2026-03-21T08:30:06.082Z"
   }
 }
