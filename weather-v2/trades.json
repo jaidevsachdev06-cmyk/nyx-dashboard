@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.595,
-      "updatedAt": "2026-03-21T09:00:03.163Z",
+      "currentPrice": 0.605,
+      "updatedAt": "2026-03-21T09:10:05.255Z",
       "tradeSource": "both"
     },
     {
@@ -7582,7 +7582,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.52,
-      "updatedAt": "2026-03-21T09:00:03.698Z",
+      "updatedAt": "2026-03-21T09:10:05.511Z",
       "tradeSource": "both"
     },
     {
@@ -7663,16 +7663,73 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.651,
-      "updatedAt": "2026-03-21T09:00:04.766Z",
+      "currentPrice": 0.652,
+      "updatedAt": "2026-03-21T09:10:06.008Z",
       "tradeSource": "paper",
       "realFillStatus": "unfilled",
       "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
+    },
+    {
+      "id": "oc-mn0407bp-gvym9k",
+      "conditionId": "0x8bd3639d046fbe7d055f6fac3f54e977bf90850d6cc5a87fd06cebdb32f9c10a",
+      "tokenId": "0x4511c4bdb114e3c2aa8acc84153ff8ac7330d5d52792f14191b861be685c7349",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-22-2026-56-57f",
+      "city": "New York City",
+      "date": "2026-03-22",
+      "bucket": "56-57°F",
+      "question": "Will the highest temperature in New York City be between 56-57°F on March 22?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-21T09:12:11.797Z",
+      "signal": {
+        "forecastTemp": 60.5,
+        "forecastSource": "multi-source",
+        "sources": 4,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.8,
+        "impliedProb": 0.735,
+        "modelProb": 0.769,
+        "edge": 0.034,
+        "isLottery": false
+      },
+      "notes": "Forecast: 60.5°F | Model: 77% vs Market: 74% | Edge: 4.6%",
+      "entryPrice": 0.735,
+      "size": 8,
+      "sizeUSDC": 5.88,
+      "enteredAt": "2026-03-21T09:12:11.814Z",
+      "orderId": "paper-mn0407cc-7e46",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0x1bd0995521f31aef4d498002ddcd394ec96927c524277a7c6e91fa94a5fc0211",
+      "realSize": 7,
+      "realEntryPrice": 0.76,
+      "txHash": null,
+      "realFillStatus": "filled"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-21T08:37:23.882Z",
+    "lastUpdated": "2026-03-21T09:12:19.282Z",
     "lastPriceSync": "2026-03-21T09:00:05.067Z"
   }
 }
