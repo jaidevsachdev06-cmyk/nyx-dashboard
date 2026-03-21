@@ -7665,12 +7665,14 @@
       "txHash": null,
       "currentPrice": 0.688,
       "updatedAt": "2026-03-21T08:30:05.781Z",
-      "tradeSource": "paper"
+      "tradeSource": "paper",
+      "realFillStatus": "unfilled",
+      "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
     }
   ],
   "meta": {
     "version": 2,
-    "lastUpdated": "2026-03-21T08:32:20.072Z",
+    "lastUpdated": "2026-03-21T08:37:23.882Z",
     "lastPriceSync": "2026-03-21T08:30:06.082Z"
   }
 }
