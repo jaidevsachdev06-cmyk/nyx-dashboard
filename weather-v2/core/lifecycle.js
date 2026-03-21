@@ -215,7 +215,24 @@ async function enterTrade(tradeId, { price, size }) {
       const realSize = Math.max(5, Math.floor(maxRealUSDC / adjustedPrice));
       const realCost = realSize * adjustedPrice;
 
-      if (todayRealSpend + realCost > maxDailyRealSpend) {
+      // Pre-flight: check CLOB balance before placing real order
+      let clobBalance = Infinity; // assume OK if check fails (non-fatal)
+      try {
+        const balResult = require('child_process').spawnSync('polymarket', [
+          '--signature-type', 'gnosis-safe', '-o', 'json', 'clob', 'balance', '--asset-type', 'collateral'
+        ], { timeout: 10000, encoding: 'utf8', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });
+        if (balResult.status === 0) {
+          const balData = JSON.parse(balResult.stdout.trim());
+          clobBalance = parseFloat(balData.balance) || 0;
+          console.log(`[lifecycle] CLOB balance: $${clobBalance.toFixed(2)}`);
+        }
+      } catch (balErr) {
+        console.warn(`[lifecycle] Balance check failed (proceeding): ${balErr.message}`);
+      }
+
+      if (realCost > clobBalance) {
+        console.warn(`[lifecycle] Insufficient CLOB balance: $${clobBalance.toFixed(2)} < $${realCost.toFixed(2)} — skipping real order`);
+      } else if (todayRealSpend + realCost > maxDailyRealSpend) {
         console.warn(`[lifecycle] Daily real spend limit hit: $${todayRealSpend.toFixed(2)} + $${realCost.toFixed(2)} > $${maxDailyRealSpend} — skipping real order`);
       } else {
         try {

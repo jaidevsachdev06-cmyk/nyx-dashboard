@@ -22,13 +22,13 @@
     "multiSource": true
   },
   "risk": {
-    "maxPositionSizeUSDC": 75,
+    "maxPositionSizeUSDC": 50,
     "maxOpenPositions": 20,
     "maxDailyLossUSDC": 50,
     "minEdgePct": 10,
     "maxExposurePerCity": 150,
     "kellyMultiplier": 0.25,
-    "defaultSizeUSDC": 12,
+    "defaultSizeUSDC": 6,
     "minModelProb": 0.65,
     "maxModelProb": 1.0,
     "minDistanceFromLine": 2,
@@ -42,12 +42,13 @@
     ],
     "bucketTypeBlacklist": [
       "boundary",
-      "below"
+      "below",
+      "specific-temp-NO"
     ],
     "lottery": {
       "enabled": true,
-      "maxDailyTrades": 5,
-      "maxSizeUSDC": 4,
+      "maxDailyTrades": 4,
+      "maxSizeUSDC": 2,
       "maxEntryPrice": 0.15,
       "minProbRatio": 1,
       "minModelProb": 0.06,
@@ -187,7 +188,7 @@
     "enabled": true,
     "maxSizeUSDC": 6,
     "maxDailySpendUSDC": 30,
-    "lotteryMaxSizeUSDC": 4,
+    "lotteryMaxSizeUSDC": 2,
     "mirrorPaper": true
   }
 }
