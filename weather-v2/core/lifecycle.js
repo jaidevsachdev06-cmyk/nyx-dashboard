@@ -216,17 +216,12 @@ async function enterTrade(tradeId, { price, size }) {
       const realSize = Math.max(5, Math.floor(maxRealUSDC / adjustedPrice));
       const realCost = realSize * adjustedPrice;
 
-      // Pre-flight: check CLOB balance before placing real order
+      // Pre-flight: check CLOB balance on the CORRECT proxy (Account A) via SDK
       let clobBalance = Infinity; // assume OK if check fails (non-fatal)
       try {
-        const balResult = require('child_process').spawnSync('polymarket', [
-          '-o', 'json', 'clob', 'balance', '--asset-type', 'collateral'
-        ], { timeout: 10000, encoding: 'utf8', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });
-        if (balResult.status === 0) {
-          const balData = JSON.parse(balResult.stdout.trim());
-          clobBalance = parseFloat(balData.balance) || 0;
-          console.log(`[lifecycle] CLOB balance: $${clobBalance.toFixed(2)}`);
-        }
+        const sdkOrder = require('./sdk-order');
+        clobBalance = await sdkOrder.getBalance();
+        console.log(`[lifecycle] CLOB balance (Account A): $${clobBalance.toFixed(2)}`);
       } catch (balErr) {
         console.warn(`[lifecycle] Balance check failed (proceeding): ${balErr.message}`);
       }
@@ -331,7 +326,9 @@ async function redeemRealPosition(trade, tradeId, pnlResult) {
 
   try {
     const { spawnSync } = require('child_process');
+    // Use gnosis-safe signature type so redemption goes through the correct proxy (Account A)
     const redeemResult = spawnSync('polymarket', [
+      '--signature-type', 'gnosis-safe',
       '-o', 'json', 'ctf', 'redeem',
       '--condition', trade.conditionId
     ], { timeout: 30000, encoding: 'utf8', killSignal: 'SIGKILL', env: { ...process.env, PATH: '/usr/local/bin:' + (process.env.PATH || '') } });

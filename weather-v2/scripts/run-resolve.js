@@ -61,8 +61,9 @@ async function main() {
     if (openReal.length > 0) {
       // Get all CLOB positions for our proxy
       const config = require('../config.json');
-      const walletShow = spawnSync('polymarket', ['wallet', 'show', '-o', 'json'], { encoding: 'utf8', timeout: 5000 });
-      const proxyAddr = walletShow.status === 0 ? JSON.parse(walletShow.stdout).proxy_address : null;
+      // Use the correct gnosis-safe proxy (Account A — visible on polymarket.com)
+      // Do NOT use `wallet show` — the CLI derives the wrong proxy address (bug #14)
+      const proxyAddr = '0x8dC9c96Edd3dab3E5A79f1db49Cd7764E8Ff7C94';
       
       if (proxyAddr) {
         const posResult = spawnSync('polymarket', ['data', 'positions', proxyAddr, '-o', 'json'], { encoding: 'utf8', timeout: 10000 });
