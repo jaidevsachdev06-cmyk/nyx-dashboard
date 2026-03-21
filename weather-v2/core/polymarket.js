@@ -428,14 +428,36 @@ async function realOrder({ tokenId, side, price, size }) {
     }
 
     if (!filled) {
-      // Order still LIVE after 15s — mark as unverified
-      console.warn(`${tag}: ⚠️ Order still LIVE after ${POLL_TIMEOUT_MS / 1000}s — fill unverified`);
+      // Order still LIVE after 15s — cancel it and return unfilled
+      console.warn(`${tag}: ⚠️ Order still LIVE after ${POLL_TIMEOUT_MS / 1000}s — cancelling stale order`);
+      try {
+        execPolymarketCLI(['-o', 'json', 'clob', 'cancel', orderID], 10000);
+        console.log(`${tag}: 🗑️ Cancelled unfilled order ${orderID}`);
+      } catch (cancelErr) {
+        console.warn(`${tag}: Cancel failed (may have filled in the meantime): ${cancelErr.message}`);
+        // If cancel failed, try one more status check — it might have filled
+        try {
+          const finalCheck = execPolymarketCLI(['-o', 'json', 'clob', 'order', orderID], 8000);
+          const finalStatus = (finalCheck?.status || '').toUpperCase();
+          if (finalStatus === 'MATCHED' || finalStatus === 'FILLED') {
+            filled = true;
+            filledSize = parseInt(finalCheck?.size_matched || finalCheck?.matched || roundedSize);
+            filledAvgPrice = parseFloat(finalCheck?.avg_price || finalCheck?.price || roundedPrice);
+            console.log(`${tag}: 🟢 Filled between poll and cancel! ${filledSize} shares @ ${filledAvgPrice}`);
+          }
+        } catch (_) {}
+      }
+
       try {
         const auditLine = JSON.stringify({
-          timestamp: new Date().toISOString(), orderID, event: 'UNVERIFIED', tokenId, side, price: roundedPrice, size: roundedSize
+          timestamp: new Date().toISOString(), orderID, event: filled ? 'LATE_FILL' : 'CANCELLED_UNFILLED', tokenId, side, price: roundedPrice, size: roundedSize
         }) + '\n';
         require('fs').appendFileSync(require('path').resolve(__dirname, '..', 'real-order-log.jsonl'), auditLine);
       } catch (_) {}
+
+      if (!filled) {
+        return { orderID, success: true, filled: false, status: 'cancelled_unfilled', paper: false, result };
+      }
     }
 
     return { orderID, success: true, filled, filledSize: filledSize || roundedSize, filledAvgPrice, paper: false, result };
