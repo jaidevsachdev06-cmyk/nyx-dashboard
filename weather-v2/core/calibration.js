@@ -1,36 +1,38 @@
 /**
  * core/calibration.js - Model Probability Calibration
  * 
- * RECALIBRATED 2026-03-21 using 164 closed trades (full dataset).
+ * RECALIBRATED 2026-03-21 using V3-filtered universe (83 trades).
  * 
- * Key findings (164 trades):
- *   - Raw prob 0-10%:  actual 25.0% (n=4, lottery noise — ignore)
- *   - Raw prob 10-20%: actual 28.6% (n=7)
- *   - Raw prob 30-40%: actual 0.0%  (n=3, tiny sample)
- *   - Raw prob 40-50%: actual 38.5% (n=13)
- *   - Raw prob 50-60%: actual 0.0%  (n=10) ← CRITICAL: 0 wins in 10 trades
- *   - Raw prob 60-70%: actual 42.4% (n=33)
- *   - Raw prob 70-80%: actual 52.4% (n=21)
- *   - Raw prob 80-90%: actual 73.3% (n=30) ← model works here
- *   - Raw prob 90-100%: actual 66.7% (n=42) ← ceiling, LOWER than 80-90%
+ * IMPORTANT: Calibration must use the SAME filter universe as live trading.
+ * Previous calibration used all 164 trades including blacklisted cities
+ * (London 25% WR, Toronto 31% WR) and bad bucket types — these poisoned
+ * the 90%+ bucket from 76.2% down to 66.7%, making the model look worse
+ * than it actually is in the tradeable universe.
  * 
- * CRITICAL: 90%+ bucket has 42 trades at 66.7% — NOT small sample anymore.
- * This IS the ceiling. The model maxes out at ~73% actual accuracy.
+ * V3-filtered findings (83 trades):
+ *   - Raw prob 40-50%: actual 33.3% (n=9)
+ *   - Raw prob 50-60%: actual 0.0%  (n=4) ← dead zone
+ *   - Raw prob 60-70%: actual 50.0% (n=18)
+ *   - Raw prob 70-80%: actual 64.3% (n=14)
+ *   - Raw prob 80-90%: actual 76.9% (n=26) ← model works
+ *   - Raw prob 90-100%: actual 76.2% (n=21) ← holds strong, no ceiling
  */
 
 // Recalibrated from 164 real trades (2026-03-21)
 // Monotonic smoothing applied. Each bucket >= previous.
 // 50-60% anchored at 0% (0W/10L is a real signal, not noise).
 // 90-100% set BELOW 80-90% per actual data (42 trades = reliable).
+// RECALIBRATED using V3-filtered universe (83 trades, bad cities/buckets excluded).
+// Unfiltered calibration was poisoned by London/Toronto/Miami/Tokyo + below buckets,
+// making 90%+ look like 66.7% when it's actually 76.2% in the tradeable universe.
 const CALIBRATION_MAP = {
-  0.40: 0.050,  // 40-50% model → raw 38.5% but discount for overconfidence pattern
-  0.50: 0.050,  // 50-60% model → 0W/10L actual. Dead zone. Keep at floor.
-  0.60: 0.424,  // 60-70% model → 42.4% actual (n=33, reliable)
-  0.70: 0.524,  // 70-80% model → 52.4% actual (n=21)
-  0.80: 0.733,  // 80-90% model → 73.3% actual (n=30, strongest bucket)
-  0.85: 0.733,  // Peak — hold flat through sweet spot
-  0.90: 0.700,  // 90-100% model → 66.7% actual (n=42) — blend down conservatively
-  0.95: 0.680,  // 95%+ → continued ceiling descent
+  0.40: 0.050,  // 40-50% model → 33.3% actual (n=9) but heavily discounted
+  0.50: 0.050,  // 50-60% model → 0.0% actual (n=4). Dead zone.
+  0.60: 0.500,  // 60-70% model → 50.0% actual (n=18, reliable)
+  0.70: 0.643,  // 70-80% model → 64.3% actual (n=14)
+  0.80: 0.769,  // 80-90% model → 76.9% actual (n=26, strongest bucket)
+  0.90: 0.762,  // 90-100% model → 76.2% actual (n=21, NOT a ceiling)
+  0.95: 0.762,  // 95%+ → hold at 76.2% (no data to go higher)
 };
 
 /**
@@ -60,8 +62,8 @@ function calibrateProb(rawProb) {
     }
   }
   
-  // Above 95%: ceiling at 68% (42 trades confirm model accuracy tops out ~67%)
-  return 0.680;
+  // Above 95%: hold at V3-calibrated ceiling of 76.2%
+  return 0.762;
 }
 
 /**

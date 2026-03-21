@@ -500,7 +500,17 @@ async function scan() {
             distFromLine: distFromLine == null ? null : parseFloat(distFromLine.toFixed(2)),
             lowConfidence,
             confident,
-            passesThreshold: edgePct >= (config.risk.minEdgePct || 0) && !lowConfidence && confident
+            // High-confidence entries (raw ≥85%) can use lower edge threshold
+            // Data: 70c+ entries with raw 85%+ had 87% WR in V3 universe
+            // The calibrated edge is thin because the market correctly prices these,
+            // but the model's raw accuracy exceeds what calibration shows
+            passesThreshold: (() => {
+              const minEdge = config.risk.minEdgePct || 0;
+              const rawP = rawModelProb;
+              // Tiered edge: raw ≥85% → 5% min edge, otherwise standard
+              const effectiveMinEdge = (rawP >= 0.85 && effectivePrice >= 0.65) ? Math.min(minEdge, 5) : minEdge;
+              return edgePct >= effectiveMinEdge && !lowConfidence && confident;
+            })()
           };
 
           candidates.push(candidate);
