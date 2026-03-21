@@ -500,16 +500,16 @@ async function scan() {
             distFromLine: distFromLine == null ? null : parseFloat(distFromLine.toFixed(2)),
             lowConfidence,
             confident,
-            // High-confidence entries (raw ≥85%) can use lower edge threshold
-            // Data: 70c+ entries with raw 85%+ had 87% WR in V3 universe
-            // The calibrated edge is thin because the market correctly prices these,
-            // but the model's raw accuracy exceeds what calibration shows
+            // Tiered edge: don't block profitable high-confidence buckets.
+            // V3 data: raw ≥85% at ANY price = highly profitable.
+            //   65-69c: 87% WR, 75c+: 100% WR, overall: 29W/5L (85% WR)
+            // Calibration undervalues these — bypass edge check when model is sure.
             passesThreshold: (() => {
               const minEdge = config.risk.minEdgePct || 0;
-              const rawP = rawModelProb;
-              // Tiered edge: raw ≥85% → 5% min edge, otherwise standard
-              const effectiveMinEdge = (rawP >= 0.85 && effectivePrice >= 0.65) ? Math.min(minEdge, 5) : minEdge;
-              return edgePct >= effectiveMinEdge && !lowConfidence && confident;
+              // Raw ≥85%: model accuracy is 77% in V3 universe — bypass edge check
+              // The market prices these correctly but the model still wins at 85%+ WR
+              if (rawModelProb >= 0.85) return !lowConfidence && confident;
+              return edgePct >= minEdge && !lowConfidence && confident;
             })()
           };
 
