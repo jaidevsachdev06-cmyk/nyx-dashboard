@@ -97,6 +97,9 @@ const TRADE_SCHEMA = {
     nullable: true
   },
 
+  // Error tracking (for push trades that failed during order placement)
+  failReason:    { type: 'string',  required: false, nullable: true },
+
   // Real-money trading fields (2026-03-20)
   realTrading:    { type: 'boolean', required: false },
   realOrderId:    { type: 'string',  required: false, nullable: true },

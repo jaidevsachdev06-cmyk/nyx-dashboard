@@ -40,11 +40,15 @@ function recordResult(result) {
       state.trippedAt = new Date().toISOString();
       console.log(`[circuit-breaker] 🚨 TRIPPED — ${state.consecutiveLosses} consecutive losses`);
       
-      // Send alert
+      // Send alert via Telegram Bot API (reliable, same as scanner/resolver)
       try {
-        const { execSync } = require('child_process');
-        const msg = `🚨 CIRCUIT BREAKER TRIPPED\\n\\n${state.consecutiveLosses} consecutive losses.\\nTrading paused until manual reset.\\n\\nSend "reset circuit breaker" to resume.`;
-        execSync(`openclaw message send --channel telegram --to "-1003762193481:topic:2" --message "${msg}"`, { stdio: 'pipe' });
+        const BOT_TOKEN = '8550919932:AAEJrh5TX03LP7gXq_WiRnMNBUlPA6K1zC4';
+        const msg = `🚨 CIRCUIT BREAKER TRIPPED\n\n${state.consecutiveLosses} consecutive losses.\nTrading paused until manual reset.\n\nSend "reset circuit breaker" to resume.`;
+        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: '-1003762193481', message_thread_id: 2, text: msg })
+        }).catch(() => {});
       } catch {}
     }
   }

@@ -251,7 +251,7 @@ async function main() {
     const now = Date.now();
     const h24 = 24 * 3600000;
     const recentEntries = (data2.trades || []).filter(t => 
-      t.status !== 'candidate' && t.enteredAt && (now - new Date(t.enteredAt).getTime()) < h24
+      t.status !== 'candidate' && t.result !== 'push' && t.enteredAt && (now - new Date(t.enteredAt).getTime()) < h24
     );
     // Count consecutive zero-entry scans (rough: if 0 entries in 24h AND this scan had 0)
     if (recentEntries.length === 0 && entered === 0) {

@@ -10,6 +10,34 @@ const path = require('path');
 
 const GIT_DIR = path.join(__dirname, '..', '..'); // nyx-dashboard root
 
+const BOT_TOKEN = '8550919932:AAEJrh5TX03LP7gXq_WiRnMNBUlPA6K1zC4';
+const CHAT_ID = '-1003762193481';
+const TOPIC_ID = 2;
+
+async function sendTelegram(text) {
+  try {
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        message_thread_id: TOPIC_ID,
+        text,
+        parse_mode: 'Markdown'
+      })
+    });
+    if (!res.ok) {
+      const err = await res.text();
+      console.error('[notify] Telegram error:', res.status, err);
+    } else {
+      console.log('[notify] Telegram notification sent');
+    }
+  } catch (err) {
+    console.error('[notify] Failed:', err.message);
+  }
+}
+
 async function main() {
   console.log(`[run-resolve] Starting resolution check | ${new Date().toISOString()}`);
 
@@ -65,7 +93,7 @@ async function main() {
         msg += `• ${t.market || 'Unknown'} ${sign}$${(t.pnl || 0).toFixed(2)}\n`;
       });
       
-      execSync(`openclaw message send --channel telegram --target "-1003762193481:topic:2" --message "${msg.replace(/"/g, '\\"')}"`, { stdio: 'inherit' });
+      await sendTelegram(msg);
     } catch (err) {
       console.error('[run-resolve] Notification failed (non-fatal):', err.message);
     }
