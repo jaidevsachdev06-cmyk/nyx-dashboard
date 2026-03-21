@@ -7526,8 +7526,8 @@
       "realEntryPrice": 0.62,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.62,
-      "updatedAt": "2026-03-21T20:00:04.770Z",
+      "currentPrice": 0.6,
+      "updatedAt": "2026-03-21T20:10:04.498Z",
       "tradeSource": "both"
     },
     {
@@ -7581,46 +7581,9 @@
       "realEntryPrice": 0.53,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.34,
-      "updatedAt": "2026-03-21T20:00:05.324Z",
+      "currentPrice": 0.355,
+      "updatedAt": "2026-03-21T20:10:04.743Z",
       "tradeSource": "both"
-    },
-    {
-      "id": "oc-mn01gcsd-fva1ly",
-      "conditionId": "0xfa27b0b742432fe2a9da5684b31c528d3d8967cb6d1af9169a5f4ea3324c9137",
-      "tokenId": "0x33b7cf5fe97947be08e0a3672cd15024be6525b19f17092b89b440b461ad807",
-      "tokenSide": "YES",
-      "marketSlug": "highest-temperature-in-seattle-on-march-22-2026-46-47f",
-      "city": "Seattle",
-      "date": "2026-03-22",
-      "bucket": "46-47°F",
-      "question": "Will the highest temperature in Seattle be between 46-47°F on March 22?",
-      "side": "YES",
-      "entryPrice": 0.014263,
-      "size": 19,
-      "sizeUSDC": 0.271,
-      "status": "closed",
-      "result": null,
-      "pnlUSDC": 0.27,
-      "createdAt": "2026-03-21T06:27:00.000Z",
-      "enteredAt": "2026-03-21T06:27:00.000Z",
-      "currentPrice": 0.0285,
-      "tradeSource": "real",
-      "realTrading": false,
-      "realSize": 19,
-      "realEntryPrice": 0.014263,
-      "signal": {
-        "forecastTemp": null,
-        "forecastSource": "manual-test",
-        "impliedProb": 0.014263,
-        "modelProb": null,
-        "edge": null,
-        "isManualEntry": true
-      },
-      "notes": "Manual real-money position placed during wallet testing. Tracked for scalper/resolver.",
-      "updatedAt": "2026-03-21T12:00:06.182Z",
-      "closedAt": "2026-03-21T12:25:21.408Z",
-      "exitReason": "Manual test entry from wallet testing — closed as per audit fix 2026-03-21"
     },
     {
       "id": "oc-mn01usw1-a49wsq",
@@ -7672,8 +7635,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.635,
-      "updatedAt": "2026-03-21T20:00:05.861Z",
+      "currentPrice": 0.653,
+      "updatedAt": "2026-03-21T20:10:05.019Z",
       "tradeSource": "paper",
       "realFillStatus": "unfilled",
       "failReason": "No orderbook liquidity around midpoint price — neg-risk market has empty book at fair value"
@@ -7735,7 +7698,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.855,
-      "updatedAt": "2026-03-21T20:00:06.392Z"
+      "updatedAt": "2026-03-21T20:10:05.271Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7785,13 +7748,8 @@
       "realEntryPrice": 0.665,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.645,
-      "updatedAt": "2026-03-21T20:00:06.959Z"
+      "currentPrice": 0.665,
+      "updatedAt": "2026-03-21T20:10:05.531Z"
     }
-  ],
-  "meta": {
-    "version": 2,
-    "lastUpdated": "2026-03-21T19:10:06.592Z",
-    "lastPriceSync": "2026-03-21T20:00:07.259Z"
-  }
+  ]
 }
