@@ -122,8 +122,10 @@ async function processCandidate(signal) {
     return { entered: false, trade: null, reason: `Entry price too low: ${(currentPrice*100).toFixed(1)}c (min: ${(minEntryPrice*100).toFixed(0)}c for normal trades)` };
   }
 
-  // Sanity check: reject extreme edges (>250%) for NON-lottery trades
-  if (!isLottery && edgePct > 250) {
+  // Sanity check: reject extreme edges (>250%)
+  // V4 FIX: Apply to lottery TOO — 1W/16L at >250% edge (-$72).
+  // Market knows better at these extremes; our model is hallucinating.
+  if (edgePct > 250) {
     return { entered: false, trade: null, reason: `Edge suspiciously high: ${edgePct.toFixed(0)}% — model likely miscalibrated` };
   }
 
