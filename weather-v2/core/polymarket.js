@@ -389,7 +389,56 @@ async function realOrder({ tokenId, side, price, size }) {
     } catch (_) { /* non-fatal */ }
 
     console.log(`${tag}: ✅ SUCCESS | orderID: ${orderID} | response: ${JSON.stringify(result).slice(0, 300)}`);
-    return { orderID, success: true, paper: false, result };
+    // V3: Verify fill — poll order status for up to 15s
+    let filled = false;
+    let filledSize = 0;
+    let filledAvgPrice = null;
+    const pollStart = Date.now();
+    const POLL_TIMEOUT_MS = 15000;
+    const POLL_INTERVAL_MS = 3000;
+
+    while (Date.now() - pollStart < POLL_TIMEOUT_MS) {
+      await sleep(POLL_INTERVAL_MS);
+      try {
+        const orderStatus = execPolymarketCLI(['-o', 'json', 'clob', 'order', orderID], 8000);
+        const status = (orderStatus?.status || '').toUpperCase();
+        
+        if (status === 'MATCHED' || status === 'FILLED') {
+          filled = true;
+          filledSize = parseInt(orderStatus?.size_matched || orderStatus?.matched || roundedSize);
+          filledAvgPrice = parseFloat(orderStatus?.avg_price || orderStatus?.price || roundedPrice);
+          console.log(`${tag}: 🟢 FILLED | ${filledSize} shares @ ${filledAvgPrice}`);
+          break;
+        } else if (status === 'CANCELLED' || status === 'EXPIRED' || status === 'REJECTED') {
+          console.error(`${tag}: ⚠️ Order ${status} — NOT FILLED`);
+          // Append unfilled to audit log
+          try {
+            const auditLine = JSON.stringify({
+              timestamp: new Date().toISOString(), orderID, event: 'UNFILLED', status, tokenId, side
+            }) + '\n';
+            require('fs').appendFileSync(require('path').resolve(__dirname, '..', 'real-order-log.jsonl'), auditLine);
+          } catch (_) {}
+          return { orderID, success: true, filled: false, status, paper: false, result };
+        } else if (status === 'LIVE') {
+          console.log(`${tag}: ⏳ Still LIVE after ${((Date.now() - pollStart) / 1000).toFixed(0)}s...`);
+        }
+      } catch (pollErr) {
+        console.warn(`${tag}: Poll error: ${pollErr.message}`);
+      }
+    }
+
+    if (!filled) {
+      // Order still LIVE after 15s — mark as unverified
+      console.warn(`${tag}: ⚠️ Order still LIVE after ${POLL_TIMEOUT_MS / 1000}s — fill unverified`);
+      try {
+        const auditLine = JSON.stringify({
+          timestamp: new Date().toISOString(), orderID, event: 'UNVERIFIED', tokenId, side, price: roundedPrice, size: roundedSize
+        }) + '\n';
+        require('fs').appendFileSync(require('path').resolve(__dirname, '..', 'real-order-log.jsonl'), auditLine);
+      } catch (_) {}
+    }
+
+    return { orderID, success: true, filled, filledSize: filledSize || roundedSize, filledAvgPrice, paper: false, result };
   } catch (err) {
     console.error(`${tag}: ❌ FAILED | ${err.message}`);
     throw new Error(`Real order failed: ${err.message}`);

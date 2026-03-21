@@ -106,6 +106,7 @@ const TRADE_SCHEMA = {
   realSize:       { type: 'number',  required: false, min: 0 },
   realEntryPrice: { type: 'number',  required: false, min: 0, max: 1 },
   realPnlUSDC:    { type: 'number',  required: false, nullable: true },
+  realFillStatus: { type: 'string',  required: false, enum: ['filled', 'unverified', 'unfilled', 'cancelled', 'expired', 'rejected'] },
 
   // V3: Weather verification (filled by resolver after resolution)
   actualTemp:     { type: 'number',  required: false, nullable: true },

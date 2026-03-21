@@ -225,14 +225,28 @@ async function enterTrade(tradeId, { price, size }) {
             price,
             size: realSize
           });
-          // Update trade with real order info (store is already in good state)
-          store.update(tradeId, {
-            realTrading: true,
-            realOrderId: realOrderResult.orderID,
-            realSize: realSize,
-            realEntryPrice: price
-          });
-          console.log(`[lifecycle] 🔴 REAL ORDER placed | ${trade.city} ${trade.side} | ${realSize} shares @ ${price} ($${realCost.toFixed(2)}) [REAL+PAPER]`);
+
+          if (realOrderResult.filled === false) {
+            // Order was placed but NOT filled (cancelled/expired/rejected)
+            console.warn(`[lifecycle] ⚠️ REAL ORDER NOT FILLED | ${trade.city} ${trade.side} | status: ${realOrderResult.status} | paper trade continues without real position`);
+            store.update(tradeId, {
+              realTrading: false,
+              realOrderId: realOrderResult.orderID,
+              realFillStatus: realOrderResult.status || 'unfilled'
+            });
+          } else {
+            // Filled or unverified — track the position
+            const actualSize = realOrderResult.filledSize || realSize;
+            const actualPrice = realOrderResult.filledAvgPrice || price;
+            store.update(tradeId, {
+              realTrading: true,
+              realOrderId: realOrderResult.orderID,
+              realSize: actualSize,
+              realEntryPrice: actualPrice,
+              realFillStatus: realOrderResult.filled ? 'filled' : 'unverified'
+            });
+            console.log(`[lifecycle] 🔴 REAL ORDER ${realOrderResult.filled ? 'FILLED' : 'UNVERIFIED'} | ${trade.city} ${trade.side} | ${actualSize} shares @ ${actualPrice} ($${(actualSize * actualPrice).toFixed(2)}) [REAL+PAPER]`);
+          }
         } catch (realErr) {
           // Real order failure is non-fatal — paper trade is already safely stored
           console.error(`[lifecycle] ⚠️ REAL ORDER FAILED (paper trade continues): ${realErr.message}`);
