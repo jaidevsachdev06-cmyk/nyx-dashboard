@@ -29,8 +29,8 @@
     "maxExposurePerCity": 150,
     "kellyMultiplier": 0.25,
     "defaultSizeUSDC": 12,
-    "minModelProb": 0.8,
-    "maxModelProb": 0.95,
+    "minModelProb": 0.65,
+    "maxModelProb": 1.0,
     "minDistanceFromLine": 2,
     "maxTradesPerCity": 1,
     "minForecastSources": 1,
@@ -42,8 +42,7 @@
     ],
     "bucketTypeBlacklist": [
       "boundary",
-      "below",
-      "specific-temp-NO"
+      "below"
     ],
     "lottery": {
       "enabled": true,
@@ -60,7 +59,7 @@
       "minEdgePctImprove": 20,
       "minHoldMinutes": 30
     },
-    "minEntryPrice": 0.55,
+    "minEntryPrice": 0.40,
     "normalSideRestriction": "NO",
     "preferMultiSource": true
   },
