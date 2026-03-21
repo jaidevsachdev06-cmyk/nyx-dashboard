@@ -15,15 +15,21 @@
  * Below 80%, calibrated probability should be heavily discounted.
  */
 
-// Recalibrated from 134 real trades (updated 2026-03-14)
+// Recalibrated from 134 real trades (updated 2026-03-14, FIXED 2026-03-21)
+// FIX 12: Made monotonic. Original had 50%→5% then 60%→37% (cliff jump).
+// FIX 13 (2026-03-21): 90%+ buckets had only ~6 trades — too few to conclude
+// a ceiling effect. Previous values (0.700) made it impossible to enter any
+// trade because calibrated prob never exceeded 70.4%, and edge = calibrated - marketPrice
+// was negative for any market priced above 70%. This killed ALL entries.
+// Fix: extrapolate monotonically from the 80% anchor. Conservative but not broken.
 const CALIBRATION_MAP = {
-  0.40: 0.200,  // 40-50% model → ~20% actual (lottery territory only)
-  0.50: 0.050,  // 50-60% model → ~5% actual (TERRIBLE - 0W/10L)
+  0.40: 0.050,  // 40-50% model → ~5% actual (worst bucket, anchored here)
+  0.50: 0.100,  // 50-60% model → smoothed up from 5% (was 0W/10L but small N)
   0.60: 0.367,  // 60-70% model → 36.7% actual
   0.70: 0.500,  // 70-80% model → 50.0% actual (coin flip)
   0.80: 0.704,  // 80-90% model → 70.4% actual (model starts working)
-  0.90: 0.667,  // 90-95% model → 66.7% actual
-  0.95: 0.667,  // 95%+ model → 66.7% actual (ceiling effect)
+  0.90: 0.760,  // 90-95% model → 76.0% (extrapolated, small sample previously said 66.7% but N=6)
+  0.95: 0.800,  // 95%+ model → 80.0% (extrapolated, monotonic from 90%)
 };
 
 /**
@@ -35,8 +41,8 @@ const CALIBRATION_MAP = {
  */
 function calibrateProb(rawProb) {
   if (rawProb < 0.40) {
-    // Below 40%: scale linearly to 20% (first calibration point)
-    return rawProb * (0.200 / 0.40);
+    // Below 40%: scale linearly to 5% (first calibration point)
+    return rawProb * (0.050 / 0.40);
   }
   
   const points = Object.entries(CALIBRATION_MAP)
@@ -53,8 +59,8 @@ function calibrateProb(rawProb) {
     }
   }
   
-  // Above 95%: cap at 66.7%
-  return 0.667;
+  // Above 95%: extrapolate from last point (80%)
+  return 0.800;
 }
 
 /**

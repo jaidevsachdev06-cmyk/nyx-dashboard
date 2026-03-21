@@ -200,8 +200,13 @@ async function enterTrade(tradeId, { price, size }) {
 
     return store.getById(tradeId); // return latest state
   } catch (err) {
-    console.error(`[lifecycle] Order failed for ${tradeId}: ${err.message}`);
-    store.transition(tradeId, 'closed', { result: 'push', pnlUSDC: 0, closedAt: new Date().toISOString() });
+    console.error(`[lifecycle] ❌ Order FAILED for ${tradeId}: ${err.message}`);
+    console.error(`[lifecycle] ❌ Stack: ${err.stack?.slice(0, 300)}`);
+    // Don't silently bury as "push" — leave as open so resolver can handle it,
+    // or delete if it was never a real position
+    try {
+      store.transition(tradeId, 'closed', { result: 'push', pnlUSDC: 0, closedAt: new Date().toISOString(), failReason: err.message });
+    } catch (e) { /* store may not have the trade */ }
     throw new Error(`Order placement failed: ${err.message}`);
   }
 }
