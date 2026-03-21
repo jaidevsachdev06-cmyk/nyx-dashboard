@@ -12845,7 +12845,7 @@
     "entryPrice": 0.145,
     "currentPrice": 0.125,
     "shares": 116.69,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "debased, Car, donjo, Dropper",
     "whaleCount": 4,
@@ -12865,7 +12865,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-21T06:00:58.841Z"
+    "updatedAt": "2026-03-21T06:02:51.939Z",
+    "exitPrice": 0.125,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "dcb6bf89-9176-4cff-af9e-3dcb95be6a6a",
