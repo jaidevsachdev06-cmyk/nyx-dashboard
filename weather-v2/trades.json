@@ -7737,8 +7737,8 @@
       "realEntryPrice": 0.76,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.89,
-      "updatedAt": "2026-03-21T23:05:03.756Z"
+      "currentPrice": 0.895,
+      "updatedAt": "2026-03-21T23:10:03.340Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7794,10 +7794,55 @@
       "resolutionSource": "manual-exit",
       "resolvedAt": "2026-03-21T22:10:08.111Z",
       "closedAt": "2026-03-21T22:10:08.124Z"
+    },
+    {
+      "id": "oc-mn0y0izq-9o0dfx",
+      "conditionId": "0x5b47bc8d39c57f80c9b6b1cb23141961a05ae2062ccf821bd90b6108cd432d0d",
+      "tokenId": "0xdcd841fc34307597e3c96148a4bdc238e5931d08bb62e77daf1f76a624c8740a",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-23-2026-76-77f",
+      "city": "Atlanta",
+      "date": "2026-03-23",
+      "bucket": "76-77°F",
+      "question": "Will the highest temperature in Atlanta be between 76-77°F on March 23?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-21T23:12:15.399Z",
+      "signal": {
+        "forecastTemp": 79,
+        "forecastSource": "open-meteo",
+        "sources": 1,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          }
+        ],
+        "forecastSD": 2,
+        "impliedProb": 0.64,
+        "modelProb": 0.769,
+        "edge": 0.129,
+        "isLottery": false
+      },
+      "notes": "Forecast: 79.0°F | Model: 77% vs Market: 64% | Edge: 20.2%",
+      "entryPrice": 0.64,
+      "size": 4,
+      "sizeUSDC": 2.56,
+      "enteredAt": "2026-03-21T23:12:15.412Z",
+      "orderId": "paper-mn0y0j0a-9q0a",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0x8bff11b3f245574f1190e0aa31018907c257d199681e6ba13ae629c172c10302",
+      "realSize": 9,
+      "realEntryPrice": 0.64,
+      "txHash": null,
+      "realFillStatus": "unverified"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-21T23:00:05.541Z",
-    "lastUpdated": "2026-03-21T23:05:06.966Z"
+    "lastUpdated": "2026-03-21T23:12:16.811Z"
   }
 }
