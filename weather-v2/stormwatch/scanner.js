@@ -233,6 +233,11 @@ async function scan() {
   console.log(`[scanner] Starting scan for ${config.cities.length} cities...`);
   const candidates = [];
 
+  // V3: Skip blacklisted cities entirely (saves ~160 API calls per scan)
+  const activeCityBlacklist = config.risk.cityBlacklist || [];
+  const activeCities = config.cities.filter(c => !activeCityBlacklist.includes(c.name));
+  console.log(`[scanner] Active cities: ${activeCities.length}/${config.cities.length} (${activeCityBlacklist.length} blacklisted: ${activeCityBlacklist.join(', ')})`);
+
   // Step 1: Fetch all forecasts in parallel (biggest speedup)
   let allForecasts = loadCache();
   
@@ -242,7 +247,7 @@ async function scan() {
     console.log(`[scanner] Fetching fresh forecasts (parallel + multi-source)...`);
     const forecastStart = Date.now();
     
-    const forecastPromises = config.cities.map(async (city) => {
+    const forecastPromises = activeCities.map(async (city) => {
       // Fetch Open-Meteo ensemble
       const openMeteoForecasts = await fetchForecasts(city);
       
@@ -294,7 +299,7 @@ async function scan() {
   }
 
   // Step 2: For each city+date, search markets and evaluate
-  for (const city of config.cities) {
+  for (const city of activeCities) {
     const forecasts = allForecasts[city.name];
     if (!forecasts || Object.keys(forecasts).length === 0) {
       console.warn(`[scanner] No forecast data for ${city.name}`);
@@ -434,9 +439,10 @@ async function scan() {
           
           // Check bucket type blacklist — "boundary" blocks above, "below" blocks below specifically
           // V3: "below" bucket type blocked entirely (1W/7L = -$66, model overestimates cold)
+          // NOTE: "below" is NOT bypassed by lottery (5 below-lottery trades lost $30)
           const isBoundaryBlocked = bucketTypeBlacklist.includes('boundary') && (bucket.type === 'above' || bucket.type === 'below');
           const isBelowBlocked = bucketTypeBlacklist.includes('below') && bucket.type === 'below';
-          const bucketTypeOk = isLotteryCandidate || !(isBoundaryBlocked || isBelowBlocked);
+          const bucketTypeOk = (isLotteryCandidate && !isBelowBlocked) || !(isBoundaryBlocked || isBelowBlocked);
           
           // CRITICAL FIX: Ban specific-degree NO positions (e.g., "12°C NO")
           // These are coin flips - 1° forecast error = total loss

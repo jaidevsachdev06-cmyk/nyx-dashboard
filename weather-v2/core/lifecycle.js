@@ -209,8 +209,11 @@ async function enterTrade(tradeId, { price, size }) {
       const maxRealUSDC = isLottery
         ? (realCfg.lotteryMaxSizeUSDC || 2)
         : (realCfg.maxSizeUSDC || 6);
-      const realSize = Math.max(1, Math.floor(maxRealUSDC / price));
-      const realCost = realSize * price;
+      // V3 FIX: Size using ACTUAL order price (midpoint + 2 ticks for BUY), not midpoint
+      // Without this, $4 lottery budget at 5¢ midpoint = 80 shares, but actual order at 7¢ = $5.60
+      const adjustedPrice = Math.min(0.99, Math.round((price + 0.02) * 100) / 100);
+      const realSize = Math.max(5, Math.floor(maxRealUSDC / adjustedPrice));
+      const realCost = realSize * adjustedPrice;
 
       if (todayRealSpend + realCost > maxDailyRealSpend) {
         console.warn(`[lifecycle] Daily real spend limit hit: $${todayRealSpend.toFixed(2)} + $${realCost.toFixed(2)} > $${maxDailyRealSpend} — skipping real order`);
@@ -311,10 +314,25 @@ async function checkAndResolve(tradeId) {
         // C4 fix: redeem real winning positions even on price-inferred resolution
         await redeemRealPosition(trade, tradeId, inferredResult);
 
+        // V3: Weather verification on price-inferred path too
+        let actualTempPI = null;
+        try {
+          actualTempPI = await fetchActualTemp(trade);
+        } catch (err) {
+          console.warn(`[lifecycle] Actual temp fetch failed for ${tradeId}: ${err.message}`);
+        }
+        const verificationPI = {};
+        if (actualTempPI != null && trade.signal?.forecastTemp != null) {
+          verificationPI.actualTemp = actualTempPI;
+          verificationPI.forecastError = parseFloat((actualTempPI - trade.signal.forecastTemp).toFixed(1));
+          console.log(`[lifecycle] 📊 Verification: ${trade.city} ${trade.date} | forecast: ${trade.signal.forecastTemp}° actual: ${actualTempPI}° error: ${verificationPI.forecastError > 0 ? '+' : ''}${verificationPI.forecastError}°`);
+        }
+
         store.transition(tradeId, 'resolved', {
           result: inferredResult, pnlUSDC,
           resolutionPrice: price, resolutionSource: 'price-inferred',
-          resolvedAt: new Date().toISOString()
+          resolvedAt: new Date().toISOString(),
+          ...verificationPI
         });
         return store.transition(tradeId, 'closed');
       }
