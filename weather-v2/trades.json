@@ -7738,7 +7738,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.875,
-      "updatedAt": "2026-03-22T01:00:35.458Z"
+      "updatedAt": "2026-03-22T01:30:03.005Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7840,11 +7840,11 @@
       "txHash": null,
       "realFillStatus": "unverified",
       "currentPrice": 0.73,
-      "updatedAt": "2026-03-22T01:00:36.018Z"
+      "updatedAt": "2026-03-22T01:30:03.573Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-22T01:00:36.319Z",
-    "lastUpdated": "2026-03-22T00:10:04.821Z"
+    "lastPriceSync": "2026-03-22T01:30:03.873Z",
+    "lastUpdated": "2026-03-22T01:10:04.559Z"
   }
 }
