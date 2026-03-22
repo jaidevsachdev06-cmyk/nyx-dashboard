@@ -12818,7 +12818,7 @@
     "market": "Will Trump talk to Mojtaba Khamenei by March 31?",
     "side": "No",
     "entryPrice": 0.987,
-    "currentPrice": 0.985,
+    "currentPrice": 0.9855,
     "shares": 15.59,
     "status": "open",
     "source": "consensus-scanner",
@@ -12833,14 +12833,14 @@
     "createdAt": "2026-03-21T00:02:49.623Z",
     "entryDate": "2026-03-21T00:02:49.623Z",
     "invested": 15.3873,
-    "currentValue": 15.3561,
-    "pnl": -0.0312,
-    "pnlPercent": -0.2,
+    "currentValue": 15.3639,
+    "pnl": -0.0234,
+    "pnlPercent": -0.15,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-22T02:00:50.170Z"
+    "updatedAt": "2026-03-22T02:30:46.655Z"
   },
   {
     "id": "21c1461f-3ecc-47e1-930d-46fdbeb69bda",
