@@ -7692,9 +7692,9 @@
       "bucket": "56-57°F",
       "question": "Will the highest temperature in New York City be between 56-57°F on March 22?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -0.84,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -3.64,
       "createdAt": "2026-03-21T09:12:11.797Z",
       "signal": {
         "forecastTemp": 60.5,
@@ -7738,7 +7738,11 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.63,
-      "updatedAt": "2026-03-22T20:30:03.160Z"
+      "updatedAt": "2026-03-22T20:30:03.160Z",
+      "resolutionPrice": 0.28,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-22T20:45:07.405Z",
+      "closedAt": "2026-03-22T20:45:07.417Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7808,7 +7812,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.26,
+      "pnlUSDC": 0.24,
       "createdAt": "2026-03-21T23:12:15.399Z",
       "signal": {
         "forecastTemp": 79,
@@ -7839,8 +7843,8 @@
       "realEntryPrice": 0.64,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.705,
-      "updatedAt": "2026-03-22T20:30:03.706Z"
+      "currentPrice": 0.7,
+      "updatedAt": "2026-03-22T21:00:03.908Z"
     },
     {
       "id": "oc-mn16llln-fjob4s",
@@ -7855,7 +7859,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.77,
+      "pnlUSDC": 0.06,
       "createdAt": "2026-03-22T03:12:35.483Z",
       "signal": {
         "forecastTemp": 85.3,
@@ -7889,8 +7893,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.655,
-      "updatedAt": "2026-03-22T20:30:04.242Z"
+      "currentPrice": 0.73,
+      "updatedAt": "2026-03-22T21:00:04.460Z"
     },
     {
       "id": "oc-mn1jg1oo-jzw83y",
@@ -7905,7 +7909,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.1,
+      "pnlUSDC": 0,
       "createdAt": "2026-03-22T09:12:11.400Z",
       "signal": {
         "forecastTemp": 49.8,
@@ -7952,8 +7956,8 @@
       "realEntryPrice": 0.545,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.595,
-      "updatedAt": "2026-03-22T20:30:04.809Z"
+      "currentPrice": 0.545,
+      "updatedAt": "2026-03-22T21:00:05.035Z"
     },
     {
       "id": "oc-mn1u5rk0-zxb8ek",
@@ -7968,7 +7972,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.15,
+      "pnlUSDC": 0.15,
       "createdAt": "2026-03-22T14:12:07.488Z",
       "signal": {
         "forecastTemp": 43.5,
@@ -8007,12 +8011,12 @@
       "realEntryPrice": 0.705,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.695,
-      "updatedAt": "2026-03-22T20:30:05.371Z"
+      "currentPrice": 0.715,
+      "updatedAt": "2026-03-22T21:00:05.583Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-22T20:30:05.671Z",
-    "lastUpdated": "2026-03-22T20:10:05.305Z"
+    "lastPriceSync": "2026-03-22T21:00:05.883Z",
+    "lastUpdated": "2026-03-22T20:45:07.421Z"
   }
 }
