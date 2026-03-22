@@ -12725,9 +12725,9 @@
     "market": "Will Israel take military action in Gaza on March 18, 2026?",
     "side": "No",
     "entryPrice": 0.0515,
-    "currentPrice": 1,
+    "currentPrice": 0,
     "shares": 314.95,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "aenews, debased, JJo, MuddyRC",
     "whaleCount": 4,
@@ -12740,14 +12740,16 @@
     "createdAt": "2026-03-20T06:02:54.996Z",
     "entryDate": "2026-03-20T06:02:54.996Z",
     "invested": 16.2199,
-    "currentValue": 314.95,
-    "pnl": 298.7301,
-    "pnlPercent": 1841.75,
+    "currentValue": 0,
+    "pnl": -16.2199,
+    "pnlPercent": -100,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-22T02:00:46.349Z"
+    "updatedAt": "2026-03-22T02:02:50.101Z",
+    "exitPrice": 0,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "c9733afc-df63-4295-a084-f9e78d2cd759",
