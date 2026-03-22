@@ -12880,7 +12880,7 @@
     "entryPrice": 0.745,
     "currentPrice": 0.815,
     "shares": 23.38,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Roflan, kekkone, debased, Dropper",
     "whaleCount": 4,
@@ -12900,7 +12900,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-22T02:00:54.370Z"
+    "updatedAt": "2026-03-22T02:02:52.808Z",
+    "exitPrice": 0.815,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "f46ef538-17d0-4f25-8eb1-c9daa6ba6226",
