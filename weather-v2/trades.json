@@ -7738,7 +7738,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.905,
-      "updatedAt": "2026-03-22T03:00:03.471Z"
+      "updatedAt": "2026-03-22T03:10:04.765Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7839,12 +7839,60 @@
       "realEntryPrice": 0.64,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.71,
-      "updatedAt": "2026-03-22T03:00:04.005Z"
+      "currentPrice": 0.72,
+      "updatedAt": "2026-03-22T03:10:05.030Z"
+    },
+    {
+      "id": "oc-mn16llln-fjob4s",
+      "conditionId": "0x17425a389d1a74d674c571ddc1174111dc0d6d78af6e8b12e422efc17de01326",
+      "tokenId": "0x746ce58bdfe6047c3767b2bef3864e40190c3b254ad9129e9bc71a5a8a28d113",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-23-2026-80-81f",
+      "city": "Dallas",
+      "date": "2026-03-23",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Dallas be between 80-81°F on March 23?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-22T03:12:35.483Z",
+      "signal": {
+        "forecastTemp": 85.3,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          }
+        ],
+        "forecastSD": 2.7,
+        "impliedProb": 0.725,
+        "modelProb": 0.769,
+        "edge": 0.044,
+        "isLottery": false
+      },
+      "notes": "Forecast: 85.3°F | Model: 77% vs Market: 73% | Edge: 6.1%",
+      "entryPrice": 0.725,
+      "size": 11,
+      "sizeUSDC": 7.975,
+      "enteredAt": "2026-03-22T03:12:35.499Z",
+      "orderId": "paper-mn16llm9-fku8",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-22T03:00:04.305Z",
-    "lastUpdated": "2026-03-22T02:10:05.087Z"
+    "lastUpdated": "2026-03-22T03:12:35.509Z"
   }
 }
