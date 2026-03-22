@@ -7737,8 +7737,8 @@
       "realEntryPrice": 0.76,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.9,
-      "updatedAt": "2026-03-22T09:00:02.934Z"
+      "currentPrice": 0.89,
+      "updatedAt": "2026-03-22T09:10:04.274Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7839,8 +7839,8 @@
       "realEntryPrice": 0.64,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.745,
-      "updatedAt": "2026-03-22T09:00:03.508Z"
+      "currentPrice": 0.715,
+      "updatedAt": "2026-03-22T09:10:04.547Z"
     },
     {
       "id": "oc-mn16llln-fjob4s",
@@ -7889,12 +7889,73 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.725,
-      "updatedAt": "2026-03-22T09:00:04.061Z"
+      "currentPrice": 0.73,
+      "updatedAt": "2026-03-22T09:10:04.796Z"
+    },
+    {
+      "id": "oc-mn1jg1oo-jzw83y",
+      "conditionId": "0x0a640921ea677add00fd11f308de91cdda4928463f45a8a9cce9d47ae8ef7dc8",
+      "tokenId": "0xf149567ed07da6c5a9f5b51eb03666442176d5f440cb35706f1eea365aceb142",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-22-2026-52-53f",
+      "city": "Seattle",
+      "date": "2026-03-22",
+      "bucket": "52-53°F",
+      "question": "Will the highest temperature in Seattle be between 52-53°F on March 22?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-22T09:12:11.400Z",
+      "signal": {
+        "forecastTemp": 49.8,
+        "forecastSource": "multi-source",
+        "sources": 5,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2.4,
+        "impliedProb": 0.545,
+        "modelProb": 0.769,
+        "edge": 0.224,
+        "isLottery": false
+      },
+      "notes": "Forecast: 49.8°F | Model: 77% vs Market: 55% | Edge: 41.1%",
+      "entryPrice": 0.545,
+      "size": 22,
+      "sizeUSDC": 11.99,
+      "enteredAt": "2026-03-22T09:12:11.415Z",
+      "orderId": "paper-mn1jg1p8-3bqg",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0xc9db740022dc597cada95ee884e606862ab1374a326ae348909d3639e63e3f52",
+      "realSize": 10,
+      "realEntryPrice": 0.545,
+      "txHash": null,
+      "realFillStatus": "unverified"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-22T09:00:04.360Z",
-    "lastUpdated": "2026-03-22T08:10:05.565Z"
+    "lastUpdated": "2026-03-22T09:12:13.129Z"
   }
 }
