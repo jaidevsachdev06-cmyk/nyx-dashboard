@@ -7737,8 +7737,8 @@
       "realEntryPrice": 0.76,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.91,
-      "updatedAt": "2026-03-22T14:00:03.901Z"
+      "currentPrice": 0.915,
+      "updatedAt": "2026-03-22T14:10:04.925Z"
     },
     {
       "id": "oc-mn0ckofx-9jonfa",
@@ -7839,8 +7839,8 @@
       "realEntryPrice": 0.64,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.765,
-      "updatedAt": "2026-03-22T14:00:04.462Z"
+      "currentPrice": 0.75,
+      "updatedAt": "2026-03-22T14:10:05.211Z"
     },
     {
       "id": "oc-mn16llln-fjob4s",
@@ -7889,8 +7889,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.735,
-      "updatedAt": "2026-03-22T14:00:05.043Z"
+      "currentPrice": 0.74,
+      "updatedAt": "2026-03-22T14:10:05.470Z"
     },
     {
       "id": "oc-mn1jg1oo-jzw83y",
@@ -7952,12 +7952,65 @@
       "realEntryPrice": 0.545,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.58,
-      "updatedAt": "2026-03-22T14:00:05.611Z"
+      "currentPrice": 0.575,
+      "updatedAt": "2026-03-22T14:10:05.719Z"
+    },
+    {
+      "id": "oc-mn1u5rk0-zxb8ek",
+      "conditionId": "0x71a9df6d911a49a51faab7f3c168af2987ee8931f22bb981be2b37d2c4cfbf83",
+      "tokenId": "0x1a4d684b259cba1cbc7c332a1a95d13e2dbc90efef598e8cbe4fc65a088e7c2b",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-23-2026-40-41f",
+      "city": "Chicago",
+      "date": "2026-03-23",
+      "bucket": "40-41°F",
+      "question": "Will the highest temperature in Chicago be between 40-41°F on March 23?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-22T14:12:07.488Z",
+      "signal": {
+        "forecastTemp": 43.5,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 2,
+        "impliedProb": 0.705,
+        "modelProb": 0.769,
+        "edge": 0.064,
+        "isLottery": false
+      },
+      "notes": "Forecast: 43.5°F | Model: 77% vs Market: 71% | Edge: 9.1%",
+      "entryPrice": 0.705,
+      "size": 15,
+      "sizeUSDC": 10.575,
+      "enteredAt": "2026-03-22T14:12:07.507Z",
+      "orderId": "paper-mn1u5rkq-nnqv",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0x47fc892f6763c05e4548ea14643932b2d4047636c68a0da5d0e3190d32455408",
+      "realSize": 8,
+      "realEntryPrice": 0.705,
+      "txHash": null,
+      "realFillStatus": "filled"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-22T14:00:05.912Z",
-    "lastUpdated": "2026-03-22T13:10:04.753Z"
+    "lastUpdated": "2026-03-22T14:12:09.016Z"
   }
 }
