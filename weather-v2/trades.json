@@ -7812,7 +7812,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.22,
+      "pnlUSDC": 0.24,
       "createdAt": "2026-03-21T23:12:15.399Z",
       "signal": {
         "forecastTemp": 79,
@@ -7843,8 +7843,8 @@
       "realEntryPrice": 0.64,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.695,
-      "updatedAt": "2026-03-22T23:00:03.382Z"
+      "currentPrice": 0.7,
+      "updatedAt": "2026-03-22T23:30:03.180Z"
     },
     {
       "id": "oc-mn16llln-fjob4s",
@@ -7894,7 +7894,7 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.695,
-      "updatedAt": "2026-03-22T23:00:03.940Z"
+      "updatedAt": "2026-03-22T23:30:03.750Z"
     },
     {
       "id": "oc-mn1jg1oo-jzw83y",
@@ -7907,9 +7907,9 @@
       "bucket": "52-53°F",
       "question": "Will the highest temperature in Seattle be between 52-53°F on March 22?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -11.11,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -11,
       "createdAt": "2026-03-22T09:12:11.400Z",
       "signal": {
         "forecastTemp": 49.8,
@@ -7952,12 +7952,16 @@
       "tradeSource": "both",
       "realTrading": true,
       "realOrderId": "0xc9db740022dc597cada95ee884e606862ab1374a326ae348909d3639e63e3f52",
-      "realSize": 10,
+      "realSize": 0,
       "realEntryPrice": 0.545,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.04,
-      "updatedAt": "2026-03-22T23:00:04.697Z"
+      "currentPrice": 0.045,
+      "updatedAt": "2026-03-22T23:10:05.217Z",
+      "resolutionPrice": 0.045,
+      "resolutionSource": "manual-exit",
+      "resolvedAt": "2026-03-22T23:10:07.662Z",
+      "closedAt": "2026-03-22T23:10:07.673Z"
     },
     {
       "id": "oc-mn1u5rk0-zxb8ek",
@@ -8012,11 +8016,11 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.755,
-      "updatedAt": "2026-03-22T23:00:05.260Z"
+      "updatedAt": "2026-03-22T23:30:04.314Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-22T23:00:05.560Z",
-    "lastUpdated": "2026-03-22T22:10:04.897Z"
+    "lastPriceSync": "2026-03-22T23:30:04.614Z",
+    "lastUpdated": "2026-03-22T23:10:07.677Z"
   }
 }
