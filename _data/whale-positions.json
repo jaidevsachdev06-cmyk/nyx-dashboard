@@ -12725,7 +12725,7 @@
     "market": "Will Israel take military action in Gaza on March 18, 2026?",
     "side": "No",
     "entryPrice": 0.0515,
-    "currentPrice": 0.0005,
+    "currentPrice": 1,
     "shares": 314.95,
     "status": "open",
     "source": "consensus-scanner",
@@ -12740,14 +12740,14 @@
     "createdAt": "2026-03-20T06:02:54.996Z",
     "entryDate": "2026-03-20T06:02:54.996Z",
     "invested": 16.2199,
-    "currentValue": 0.1575,
-    "pnl": -16.0624,
-    "pnlPercent": -99.03,
+    "currentValue": 314.95,
+    "pnl": 298.7301,
+    "pnlPercent": 1841.75,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-22T00:30:46.413Z"
+    "updatedAt": "2026-03-22T01:00:47.756Z"
   },
   {
     "id": "c9733afc-df63-4295-a084-f9e78d2cd759",
