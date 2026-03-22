@@ -147,6 +147,9 @@ async function main() {
       // Compute real money impact
       const realTrades = result.resolved.filter(t => t.realTrading || t.tradeSource === 'real' || t.tradeSource === 'both');
       const realPnL = realTrades.reduce((sum, t) => sum + (t.realPnlUSDC || 0), 0);
+      // Load real order log for proxy attribution
+      let log = [];
+      try { log = fs.readFileSync(path.resolve(__dirname, '..', 'real-order-log.jsonl'), 'utf8').trim().split('\n').map(l => JSON.parse(l)); } catch {};
       
       let msg = `🌪️ Weather Positions Resolved\n\n`;
       msg += `${result.resolved.length} position${result.resolved.length > 1 ? 's' : ''} closed.\n\n`;
@@ -162,7 +165,13 @@ async function main() {
       result.resolved.forEach(t => {
         const pnl = t.pnlUSDC || 0;
         const sign = pnl >= 0 ? '+' : '';
-        const realTag = (t.realTrading || t.tradeSource === 'real' || t.tradeSource === 'both') ? ' 💰' : '';
+        const isReal = t.realTrading || t.tradeSource === 'real' || t.tradeSource === 'both';
+        let realTag = '';
+        if (isReal) {
+          // Check which proxy the order went through
+          const isSDK = t.realOrderId && log.some(l => l.orderID === t.realOrderId && l.via === 'sdk');
+          realTag = isSDK ? ' 💰' : ' 💰(old proxy)';
+        }
         msg += `• ${t.city || 'Unknown'} ${t.bucket || ''} ${sign}$${pnl.toFixed(2)}${realTag}\n`;
       });
       
