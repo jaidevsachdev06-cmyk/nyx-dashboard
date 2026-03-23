@@ -8068,10 +8068,87 @@
       "realFillStatus": "filled",
       "currentPrice": 0.715,
       "updatedAt": "2026-03-23T13:30:05.874Z"
+    },
+    {
+      "id": "oc-mn3845ro-bew1cr",
+      "conditionId": "0x85525b248e15db1f58d4839d77fc1489fb26422fbd2e372abe4eee7177cdefef",
+      "tokenId": "0xd8e14f86f0605a34ffc9ccb84350790192dc54bce560ef05cabb656b8e25b456",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-24-2026-46-47f",
+      "city": "New York City",
+      "date": "2026-03-24",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in New York City be between 46-47°F on March 24?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-23T13:30:33.397Z",
+      "signal": {
+        "forecastTemp": 43,
+        "forecastSource": "multi-source",
+        "sources": 9,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.6,
+        "impliedProb": 0.665,
+        "modelProb": 0.7961,
+        "edge": 0.1311,
+        "isLottery": false
+      },
+      "notes": "Forecast: 43.0°F | Model: 80% vs Market: 67% | Edge: 19.7%",
+      "entryPrice": 0.665,
+      "size": 23,
+      "sizeUSDC": 15.295000000000002,
+      "enteredAt": "2026-03-23T13:30:33.412Z",
+      "orderId": "paper-mn3845sa-gee9",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0xd5b8b46f360348b3639ad678d63652cbd27158244ea286d0237f7400b640a492",
+      "realSize": 8,
+      "realEntryPrice": 0.665,
+      "txHash": null,
+      "realFillStatus": "filled"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-23T13:30:06.174Z",
-    "lastUpdated": "2026-03-23T13:29:01.935Z"
+    "lastUpdated": "2026-03-23T13:30:35.049Z"
   }
 }
