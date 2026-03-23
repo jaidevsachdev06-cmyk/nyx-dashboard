@@ -190,5 +190,13 @@
     "maxDailySpendUSDC": 30,
     "lotteryMaxSizeUSDC": 2,
     "mirrorPaper": true
+  },
+  "circuitBreaker": {
+    "enabled": true,
+    "maxDailyLoss": 50,
+    "maxOpenPositions": 20,
+    "maxExposurePerCity": 150,
+    "minEdgeThreshold": 0.15,
+    "halted": false
   }
 }

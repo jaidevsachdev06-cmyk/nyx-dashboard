@@ -355,7 +355,13 @@ function computePnL(trade, resolution) {
   const won = (trade.side === 'YES' && resolution.outcome === 'YES') ||
               (trade.side === 'NO' && resolution.outcome === 'NO');
 
-  const pnlPerShare = won ? (1.0 - trade.entryPrice) : (0.0 - trade.entryPrice);
+  // FIXED 2026-03-23: P&L calculation must use actual payout value
+  // YES token: worth resolutionPrice if YES wins, 0 if NO wins
+  // NO token: worth (1 - resolutionPrice) if NO wins, 0 if YES wins
+  const payout = (trade.side === 'YES') 
+    ? (won ? resolution.resolutionPrice : 0)
+    : (won ? (1.0 - resolution.resolutionPrice) : 0);
+  const pnlPerShare = payout - trade.entryPrice;
   const pnlUSDC = parseFloat((pnlPerShare * trade.size).toFixed(4));
 
   return {
