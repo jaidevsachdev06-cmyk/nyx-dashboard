@@ -12,7 +12,13 @@ const STATE_FILE = path.resolve(__dirname, '..', 'logs', '.circuit-breaker.json'
 
 function loadState() {
   try {
-    return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+    const state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+    // Ensure all required fields exist (migration for old state format)
+    state.consecutiveLosses = state.consecutiveLosses ?? 0;
+    state.tripped = state.tripped ?? false;
+    state.trippedAt = state.trippedAt ?? null;
+    state.lastResult = state.lastResult ?? null;
+    return state;
   } catch {
     return { consecutiveLosses: 0, tripped: false, trippedAt: null, lastResult: null };
   }
