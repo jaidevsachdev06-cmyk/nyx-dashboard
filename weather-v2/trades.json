@@ -7812,7 +7812,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.54,
+      "pnlUSDC": -0.56,
       "createdAt": "2026-03-21T23:12:15.399Z",
       "signal": {
         "forecastTemp": 79,
@@ -7843,8 +7843,8 @@
       "realEntryPrice": 0.64,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.505,
-      "updatedAt": "2026-03-23T10:00:03.681Z"
+      "currentPrice": 0.5,
+      "updatedAt": "2026-03-23T10:30:04.165Z"
     },
     {
       "id": "oc-mn16llln-fjob4s",
@@ -7859,7 +7859,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.1,
+      "pnlUSDC": 1.65,
       "createdAt": "2026-03-22T03:12:35.483Z",
       "signal": {
         "forecastTemp": 85.3,
@@ -7893,8 +7893,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.825,
-      "updatedAt": "2026-03-23T10:00:04.239Z"
+      "currentPrice": 0.875,
+      "updatedAt": "2026-03-23T10:30:04.707Z"
     },
     {
       "id": "oc-mn1jg1oo-jzw83y",
@@ -8016,7 +8016,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.745,
-      "updatedAt": "2026-03-23T10:00:04.819Z"
+      "updatedAt": "2026-03-23T10:30:05.259Z"
     },
     {
       "id": "oc-mn2jxvwv-ve0eov",
@@ -8031,7 +8031,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.99,
+      "pnlUSDC": -1.08,
       "createdAt": "2026-03-23T02:13:49.903Z",
       "signal": {
         "forecastTemp": 50,
@@ -8066,12 +8066,12 @@
       "realEntryPrice": 0.675,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.62,
-      "updatedAt": "2026-03-23T10:00:05.354Z"
+      "currentPrice": 0.615,
+      "updatedAt": "2026-03-23T10:30:05.822Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-23T10:00:05.654Z",
-    "lastUpdated": "2026-03-23T09:10:05.546Z"
+    "lastPriceSync": "2026-03-23T10:30:06.122Z",
+    "lastUpdated": "2026-03-23T10:10:06.011Z"
   }
 }
