@@ -12998,9 +12998,9 @@
     "market": "Trump announces end of military operations against Iran by March 31st?",
     "side": "Yes",
     "entryPrice": 0.125,
-    "currentPrice": 0.21000000000000002,
+    "currentPrice": 0.225,
     "shares": 135.36,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Dropper, debased, donjo",
     "whaleCount": 4,
@@ -13013,14 +13013,16 @@
     "createdAt": "2026-03-22T16:02:49.396Z",
     "entryDate": "2026-03-22T16:02:49.396Z",
     "invested": 16.92,
-    "currentValue": 28.4256,
-    "pnl": 11.5056,
-    "pnlPercent": 68,
+    "currentValue": 30.456,
+    "pnl": 13.536,
+    "pnlPercent": 80,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-23T18:01:23.382Z"
+    "updatedAt": "2026-03-23T18:02:52.246Z",
+    "exitPrice": 0.225,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "0b0879a0-2642-43b4-a58a-e2a9bdec24fa",
