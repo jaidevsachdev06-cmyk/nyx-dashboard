@@ -7844,7 +7844,7 @@
       "txHash": null,
       "realFillStatus": "unverified",
       "currentPrice": 0.53,
-      "updatedAt": "2026-03-23T13:30:04.214Z"
+      "updatedAt": "2026-03-23T14:00:05.250Z"
     },
     {
       "id": "oc-mn16llln-fjob4s",
@@ -7859,7 +7859,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.77,
+      "pnlUSDC": 0.5,
       "createdAt": "2026-03-22T03:12:35.483Z",
       "signal": {
         "forecastTemp": 85.3,
@@ -7893,8 +7893,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.795,
-      "updatedAt": "2026-03-23T13:30:04.788Z"
+      "currentPrice": 0.77,
+      "updatedAt": "2026-03-23T14:00:05.791Z"
     },
     {
       "id": "oc-mn1jg1oo-jzw83y",
@@ -7976,7 +7976,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.2,
+      "pnlUSDC": -1.8,
       "createdAt": "2026-03-22T14:12:07.488Z",
       "signal": {
         "forecastTemp": 43.5,
@@ -8015,8 +8015,8 @@
       "realEntryPrice": 0.705,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.625,
-      "updatedAt": "2026-03-23T13:30:05.320Z"
+      "currentPrice": 0.585,
+      "updatedAt": "2026-03-23T14:00:06.400Z"
     },
     {
       "id": "oc-mn2jxvwv-ve0eov",
@@ -8031,7 +8031,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.72,
+      "pnlUSDC": 0,
       "createdAt": "2026-03-23T02:13:49.903Z",
       "signal": {
         "forecastTemp": 50,
@@ -8066,8 +8066,8 @@
       "realEntryPrice": 0.675,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.715,
-      "updatedAt": "2026-03-23T13:30:05.874Z"
+      "currentPrice": 0.675,
+      "updatedAt": "2026-03-23T14:00:06.952Z"
     },
     {
       "id": "oc-mn3845ro-bew1cr",
@@ -8082,7 +8082,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": 0.23,
       "createdAt": "2026-03-23T13:30:33.397Z",
       "signal": {
         "forecastTemp": 43,
@@ -8144,11 +8144,13 @@
       "realSize": 8,
       "realEntryPrice": 0.665,
       "txHash": null,
-      "realFillStatus": "filled"
+      "realFillStatus": "filled",
+      "currentPrice": 0.675,
+      "updatedAt": "2026-03-23T14:00:07.506Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-23T13:30:06.174Z",
+    "lastPriceSync": "2026-03-23T14:00:07.806Z",
     "lastUpdated": "2026-03-23T13:30:35.049Z"
   }
 }
