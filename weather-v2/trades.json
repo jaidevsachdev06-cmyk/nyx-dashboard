@@ -7810,9 +7810,9 @@
       "bucket": "76-77°F",
       "question": "Will the highest temperature in Atlanta be between 76-77°F on March 23?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -0.7,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 1.44,
       "createdAt": "2026-03-21T23:12:15.399Z",
       "signal": {
         "forecastTemp": 79,
@@ -7843,8 +7843,15 @@
       "realEntryPrice": 0.64,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.465,
-      "updatedAt": "2026-03-23T15:00:04.666Z"
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-03-23T18:05:03.781Z",
+      "realPnlUSDC": 3.24,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-23T18:05:07.209Z",
+      "actualTemp": 75.3,
+      "forecastError": -3.7,
+      "closedAt": "2026-03-23T18:05:07.223Z"
     },
     {
       "id": "oc-mn16llln-fjob4s",
@@ -7893,8 +7900,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.595,
-      "updatedAt": "2026-03-23T15:00:05.235Z"
+      "currentPrice": 0.685,
+      "updatedAt": "2026-03-23T18:05:04.048Z"
     },
     {
       "id": "oc-mn1jg1oo-jzw83y",
@@ -8070,8 +8077,8 @@
       "realEntryPrice": 0.675,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.685,
-      "updatedAt": "2026-03-23T15:00:05.872Z"
+      "currentPrice": 0.67,
+      "updatedAt": "2026-03-23T18:05:04.289Z"
     },
     {
       "id": "oc-mn3845ro-bew1cr",
@@ -8149,12 +8156,12 @@
       "realEntryPrice": 0.665,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.69,
-      "updatedAt": "2026-03-23T15:00:06.426Z"
+      "currentPrice": 0.655,
+      "updatedAt": "2026-03-23T18:05:04.546Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-23T15:00:06.727Z",
-    "lastUpdated": "2026-03-23T14:15:07.913Z"
+    "lastUpdated": "2026-03-23T18:05:07.226Z"
   }
 }
