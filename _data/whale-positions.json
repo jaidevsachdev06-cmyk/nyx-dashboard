@@ -13021,5 +13021,29 @@
       {}
     ],
     "updatedAt": "2026-03-23T14:01:21.527Z"
+  },
+  {
+    "id": "0b0879a0-2642-43b4-a58a-e2a9bdec24fa",
+    "market": "US x Iran ceasefire by April 15?",
+    "side": "Yes",
+    "entryPrice": 0.405,
+    "currentPrice": 0.405,
+    "shares": 39.56,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, aenews, donjo, debased",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 87.3,
+    "avgWinRate": 69.4,
+    "reasoning": "Consensus: 4 whales (avg score 87.3, WR 69.4%) Yes. bet=$16.02, shares=39.56. Whales: Car, aenews, donjo, debased",
+    "endDate": "2026-04-15",
+    "conditionId": "0x773abaa5fe55e5cde51a261f444b7921652a4e059ead6b3be9fe56499c2d4609",
+    "createdAt": "2026-03-23T14:02:58.016Z",
+    "entryDate": "2026-03-23T14:02:58.016Z",
+    "invested": 16.0218,
+    "currentValue": 16.0218,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
