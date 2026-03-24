@@ -8081,8 +8081,8 @@
       "realEntryPrice": 0.675,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.61,
-      "updatedAt": "2026-03-24T16:00:16.657Z"
+      "currentPrice": 0.65,
+      "updatedAt": "2026-03-24T16:10:05.177Z"
     },
     {
       "id": "oc-mn3845ro-bew1cr",
@@ -8160,8 +8160,8 @@
       "realEntryPrice": 0.665,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.495,
-      "updatedAt": "2026-03-24T16:00:17.193Z"
+      "currentPrice": 0.475,
+      "updatedAt": "2026-03-24T16:10:05.448Z"
     },
     {
       "id": "oc-mn3mg0nx-oonwsf",
@@ -8219,8 +8219,8 @@
       "realEntryPrice": 0.75,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.675,
-      "updatedAt": "2026-03-24T16:00:17.732Z"
+      "currentPrice": 0.685,
+      "updatedAt": "2026-03-24T16:10:05.724Z"
     },
     {
       "id": "oc-mn3zddjc-b8dq74",
@@ -8274,8 +8274,8 @@
       "realEntryPrice": 0.645,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.595,
-      "updatedAt": "2026-03-24T16:00:18.281Z"
+      "currentPrice": 0.615,
+      "updatedAt": "2026-03-24T16:10:05.980Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8325,12 +8325,73 @@
       "realEntryPrice": 0.565,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.635,
-      "updatedAt": "2026-03-24T16:00:18.828Z"
+      "currentPrice": 0.595,
+      "updatedAt": "2026-03-24T16:10:06.219Z"
+    },
+    {
+      "id": "oc-mn4tcwtl-21bmir",
+      "conditionId": "0xa20f36e5074e3c3028336444244992a7236717c047f75240189b3317a9a4e331",
+      "tokenId": "0x83960d734ea0526c3a2cc527ffb4ed4b75990b57c5bce5aa360650961e7a546f",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-24-2026-50-51f",
+      "city": "Chicago",
+      "date": "2026-03-24",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Chicago be between 50-51°F on March 24?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-24T16:12:59.817Z",
+      "signal": {
+        "forecastTemp": 53.9,
+        "forecastSource": "multi-source",
+        "sources": 5,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.5,
+        "impliedProb": 0.625,
+        "modelProb": 0.7957,
+        "edge": 0.1707,
+        "isLottery": false
+      },
+      "notes": "Forecast: 53.9°F | Model: 80% vs Market: 63% | Edge: 27.3%",
+      "entryPrice": 0.625,
+      "size": 25,
+      "sizeUSDC": 15.625,
+      "enteredAt": "2026-03-24T16:12:59.831Z",
+      "orderId": "paper-mn4tcwu5-0zxy",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0x7ce98f33b01ed9e32a4b2fec9ee1decca5d5d9962c8cb6b905d2d57e9b01b056",
+      "realSize": 9,
+      "realEntryPrice": 0.625,
+      "txHash": null,
+      "realFillStatus": "unverified"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-24T16:00:19.127Z",
-    "lastUpdated": "2026-03-24T15:10:09.112Z"
+    "lastUpdated": "2026-03-24T16:13:01.527Z"
   }
 }
