@@ -8044,9 +8044,9 @@
       "bucket": "52-53°F",
       "question": "Will the highest temperature in Seattle be between 52-53°F on March 24?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 5.84,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.85,
       "createdAt": "2026-03-23T02:13:49.903Z",
       "signal": {
         "forecastTemp": 50,
@@ -8082,7 +8082,14 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-24T23:00:04.631Z"
+      "updatedAt": "2026-03-24T23:05:03.098Z",
+      "realPnlUSDC": 2.6,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-24T23:05:06.036Z",
+      "actualTemp": 54,
+      "forecastError": 4,
+      "closedAt": "2026-03-24T23:05:06.047Z"
     },
     {
       "id": "oc-mn3845ro-bew1cr",
@@ -8181,9 +8188,9 @@
       "bucket": "86-87°F",
       "question": "Will the highest temperature in Dallas be between 86-87°F on March 24?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 3.92,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4,
       "createdAt": "2026-03-23T20:11:41.277Z",
       "signal": {
         "forecastTemp": 81.7,
@@ -8226,8 +8233,15 @@
       "realEntryPrice": 0.75,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.995,
-      "updatedAt": "2026-03-24T23:00:05.223Z"
+      "currentPrice": 0.996,
+      "updatedAt": "2026-03-24T23:05:03.352Z",
+      "realPnlUSDC": 1.75,
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-24T23:05:07.066Z",
+      "actualTemp": 84.9,
+      "forecastError": 3.2,
+      "closedAt": "2026-03-24T23:05:07.075Z"
     },
     {
       "id": "oc-mn3zddjc-b8dq74",
@@ -8282,7 +8296,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.565,
-      "updatedAt": "2026-03-24T23:00:05.791Z"
+      "updatedAt": "2026-03-24T23:05:03.637Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8412,12 +8426,12 @@
       "realEntryPrice": 0.625,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.1,
-      "updatedAt": "2026-03-24T23:00:06.318Z"
+      "currentPrice": 0.085,
+      "updatedAt": "2026-03-24T23:05:03.877Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-24T23:00:06.618Z",
-    "lastUpdated": "2026-03-24T22:10:10.549Z"
+    "lastUpdated": "2026-03-24T23:05:07.078Z"
   }
 }
