@@ -8081,8 +8081,8 @@
       "realEntryPrice": 0.675,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.545,
-      "updatedAt": "2026-03-24T02:00:05.193Z"
+      "currentPrice": 0.56,
+      "updatedAt": "2026-03-24T02:10:06.350Z"
     },
     {
       "id": "oc-mn3845ro-bew1cr",
@@ -8160,8 +8160,8 @@
       "realEntryPrice": 0.665,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.51,
-      "updatedAt": "2026-03-24T02:00:05.749Z"
+      "currentPrice": 0.505,
+      "updatedAt": "2026-03-24T02:10:06.630Z"
     },
     {
       "id": "oc-mn3mg0nx-oonwsf",
@@ -8219,12 +8219,65 @@
       "realEntryPrice": 0.75,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.75,
-      "updatedAt": "2026-03-24T02:00:06.333Z"
+      "currentPrice": 0.745,
+      "updatedAt": "2026-03-24T02:10:06.899Z"
+    },
+    {
+      "id": "oc-mn3zddjc-b8dq74",
+      "conditionId": "0x48319f467c433ae31d7254159e3e06b0f7ecb336c9a6dad0ef616f97e6f51f59",
+      "tokenId": "0x935e0a51ed105718aca6bc7de1f6ff6ee4714f6def2218b829b86d55258209d8",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-miami-on-march-25-2026-80-81f",
+      "city": "Miami",
+      "date": "2026-03-25",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Miami be between 80-81°F on March 25?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-24T02:13:33.000Z",
+      "signal": {
+        "forecastTemp": 83.4,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.645,
+        "modelProb": 0.7429,
+        "edge": 0.0979,
+        "isLottery": false
+      },
+      "notes": "Forecast: 83.4°F | Model: 74% vs Market: 65% | Edge: 15.2%",
+      "entryPrice": 0.645,
+      "size": 14,
+      "sizeUSDC": 9.030000000000001,
+      "enteredAt": "2026-03-24T02:13:33.016Z",
+      "orderId": "paper-mn3zddjy-pqjb",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0xf3e37a5a9d226d8d93941db69fc81715c9f63530c98a27c6e026382b604a5163",
+      "realSize": 8,
+      "realEntryPrice": 0.645,
+      "txHash": null,
+      "realFillStatus": "filled"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-24T02:00:06.632Z",
-    "lastUpdated": "2026-03-24T01:10:05.665Z"
+    "lastUpdated": "2026-03-24T02:13:34.779Z"
   }
 }
