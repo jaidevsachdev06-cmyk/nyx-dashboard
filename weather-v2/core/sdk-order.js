@@ -24,22 +24,30 @@ function getPrivateKey() {
   return config.private_key;
 }
 
-// Cached client instance
+// Cached client instance with TTL (re-derive credentials every 30 min)
 let _client = null;
 let _creds = null;
+let _clientCreatedAt = 0;
+const CLIENT_TTL_MS = 30 * 60 * 1000; // 30 minutes
 
 async function getClient() {
-  if (_client) return _client;
+  const now = Date.now();
+  if (_client && (now - _clientCreatedAt) < CLIENT_TTL_MS) return _client;
+
+  // Clear stale client
+  _client = null;
+  _creds = null;
 
   const key = getPrivateKey();
   const wallet = new ethers.Wallet(key);
 
-  // Derive API credentials (cached for session)
+  // Derive API credentials (cached with TTL)
   const tmpClient = new ClobClient(CLOB_HOST, CHAIN_ID, wallet);
   _creds = await tmpClient.createOrDeriveApiKey();
 
   // Create client with correct funder address (6th param)
   _client = new ClobClient(CLOB_HOST, CHAIN_ID, wallet, _creds, SignatureType.POLY_GNOSIS_SAFE, CORRECT_SAFE);
+  _clientCreatedAt = now;
   return _client;
 }
 

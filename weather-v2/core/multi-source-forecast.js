@@ -183,7 +183,7 @@ async function fetchAllSources(city, config) {
 /**
  * Aggregate forecasts with reliability weighting
  */
-function aggregateWithWeighting(forecasts, cityName) {
+function aggregateWithWeighting(forecasts, cityName, unit) {
   const accuracy = loadAccuracy();
   const byDate = {};
   
@@ -215,13 +215,19 @@ function aggregateWithWeighting(forecasts, cityName) {
       return sum + f.weight * Math.pow(f.highTemp - weightedMean, 2);
     }, 0) / totalWeight;
     
-    const sd = Math.sqrt(variance);
+    // Add empirical base forecast error (same as scanner's aggregateForecasts)
+    // Without this, SD only reflects inter-source spread, not actual forecast error
+    const isCelsius = unit === 'C';
+    const baseError = isCelsius ? 1.4 : 2.5; // Must match EMPIRICAL_BASE_ERROR in scanner.js
+    const blendedVariance = variance + baseError * baseError;
+    const sd = Math.sqrt(blendedVariance);
+    
+    // SD floor: 3.5°F for Fahrenheit, 2.0°C for Celsius (matches scanner's EMPIRICAL_SD_FLOOR)
+    const sdFloor = isCelsius ? 2.0 : 3.5;
     
     result[date] = {
       mean: Math.round(weightedMean * 10) / 10,
-      // SD floor must match scanner's EMPIRICAL_SD_FLOOR (2.0°F / 1.0°C)
-      // Lower floor = false confidence → inflated edge calculations
-      sd: Math.max(Math.round(sd * 10) / 10, 2.0),  // Min 2.0°F uncertainty (was 1.5, too tight)
+      sd: Math.max(Math.round(sd * 10) / 10, sdFloor),
       sources: forecastList.length,
       weights: forecastList.map(f => ({ source: f.source, weight: f.weight.toFixed(3) }))
     };

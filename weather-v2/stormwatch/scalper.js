@@ -13,28 +13,22 @@
 
 const store = require('../core/store');
 const polymarket = require('../core/polymarket');
-const circuitBreaker = require('../core/circuit-breaker');
 const config = require('../config.json');
-
-const LOTTERY_THRESHOLD = 0.15;
 
 // Don't scalp if market resolves within this many hours (let it ride to resolution)
 const NEAR_RESOLUTION_HOURS = 4;
 
 const RULES = {
-  lottery: [
-    { name: 'lottery-half', gainPct: 200, targetScalped: 0.5 },
-    { name: 'lottery-full', gainPct: 500, targetScalped: 1.0 },
-  ],
   normal: [
     { name: 'normal-half', gainPct: 50, targetScalped: 0.5 },
     { name: 'normal-full', gainPct: 100, targetScalped: 1.0 },
   ],
-  stopLoss: { name: 'stop-loss', lossPct: 60 }
+  stopLoss: { name: 'stop-loss', lossPct: 40 }
 };
 
-function classifyTrade(trade) {
-  return (trade.entryPrice && trade.entryPrice < LOTTERY_THRESHOLD) ? 'lottery' : 'normal';
+function classifyTrade(_trade) {
+  // Lottery disabled (2026-03-23) — all trades are normal
+  return 'normal';
 }
 
 function totalScalpedFraction(trade) {
@@ -87,13 +81,13 @@ async function checkPosition(trade) {
     return null;
   }
 
-  // Stop-loss check
-  if (gainPct <= -RULES.stopLoss.lossPct) {
-    const sharesToSell = Math.floor(trade.size * remainingFraction);
-    if (sharesToSell < 1) return null;
-    console.log(`${tag} 🛑 STOP-LOSS | ${gainPct.toFixed(0)}% loss`);
-    return { action: 'exit', rule: RULES.stopLoss.name, trade, currentPrice, gainPct, sellFraction: remainingFraction, sharesToSell };
-  }
+  // Stop-loss DISABLED for weather markets (2026-03-24)
+  // Weather markets are binary EOD events. Intraday price swings are noise.
+  // Stop-loss was killing winning trades before resolution (e.g. Dallas 80-81 Mar 23:
+  // stopped out at -48%, actual high was 79.1°F → NO would have won).
+  // Let positions ride to resolution. We accept full loss on wrong calls
+  // rather than locking in losses on correct calls.
+  // if (gainPct <= -RULES.stopLoss.lossPct) { ... }
 
   // Profit-take rules (highest threshold first)
   const rules = RULES[type].slice().reverse();
@@ -179,8 +173,6 @@ async function executeScalp(signal) {
       resolutionSource: 'manual-exit', resolvedAt: new Date().toISOString(),
     });
     store.transition(trade.id, 'closed');
-    // Record to circuit breaker (stop-loss streaks must trip the breaker too)
-    circuitBreaker.recordResult(result);
     console.log(`${tag} ✅ EXITED | ${rule} | P&L: $${finalPnl.toFixed(2)}`);
     return { action: 'exit', rule, pnlUSDC: finalPnl, currentPrice, gainPct, city: trade.city, bucket: trade.bucket, side: trade.side };
   }

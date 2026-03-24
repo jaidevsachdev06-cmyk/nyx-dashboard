@@ -67,6 +67,43 @@ function calibrateProb(rawProb) {
 }
 
 /**
+ * Source-adjusted calibration: breaks the 76.9% plateau for high-source-agreement trades.
+ * 
+ * Problem: calibrateProb caps at 76.9% for all raw probs ≥80%. A 5-source-agreement
+ * 95% raw trade and a 1-source 82% raw trade get identical calibrated probs.
+ * 
+ * Fix: Add source-count bonus/penalty above the 80% raw threshold.
+ * - 1 unique source: -3pp (no consensus verification)
+ * - 2 unique sources: baseline (no adjustment)
+ * - 3 unique sources: +2pp (multi-source agreement)
+ * - 4+ unique sources: +4pp (strong multi-source consensus)
+ * 
+ * Also adds a small gradient within the plateau for very high raw prob
+ * (80% raw and 95% raw shouldn't be identical even with same source count).
+ * 
+ * @param {number} rawProb - Raw model probability (0-1)
+ * @param {number} uniqueSources - Number of unique independent forecast providers
+ * @returns {number} Source-adjusted calibrated probability (0-1)
+ */
+function sourceAdjustedCalibration(rawProb, uniqueSources) {
+  const base = calibrateProb(rawProb);
+  
+  // Only adjust above the plateau zone (80%+ raw → 76.9% base)
+  if (rawProb < 0.80) return base;
+  
+  // Source-count bonus/penalty
+  const sourceBonus = uniqueSources <= 1 ? -0.03 :
+                      uniqueSources === 2 ? 0 :
+                      uniqueSources === 3 ? 0.02 :
+                      0.04;  // 4+
+  
+  // Gradient bonus: 80% raw = +0pp, 95% raw = +1.5pp
+  const gradientBonus = Math.max(0, (rawProb - 0.80) * 0.10);
+  
+  return Math.min(0.90, Math.max(0.05, base + sourceBonus + gradientBonus));
+}
+
+/**
  * Calculate edge with calibrated probabilities.
  */
 function calibratedEdge(rawModelProb, marketPrice) {
@@ -145,6 +182,7 @@ function validateCalibration() {
 
 module.exports = {
   calibrateProb,
+  sourceAdjustedCalibration,
   calibratedEdge,
   weightedEnsemble,
   validateCalibration,

@@ -10,9 +10,10 @@ const path = require('path');
 
 const GIT_DIR = path.join(__dirname, '..', '..'); // nyx-dashboard root
 
-const BOT_TOKEN = '8550919932:AAEJrh5TX03LP7gXq_WiRnMNBUlPA6K1zC4';
-const CHAT_ID = '-1003762193481';
-const TOPIC_ID = 2;
+const config = require('../config.json');
+const BOT_TOKEN = config.telegram?.botToken || process.env.TELEGRAM_BOT_TOKEN;
+const CHAT_ID = config.telegram?.chatId || process.env.TELEGRAM_CHAT_ID;
+const TOPIC_ID = config.telegram?.topicId || 2;
 
 async function sendTelegram(text) {
   try {
@@ -24,7 +25,7 @@ async function sendTelegram(text) {
         chat_id: CHAT_ID,
         message_thread_id: TOPIC_ID,
         text,
-        parse_mode: 'Markdown'
+        parse_mode: 'HTML'
       })
     });
     if (!res.ok) {

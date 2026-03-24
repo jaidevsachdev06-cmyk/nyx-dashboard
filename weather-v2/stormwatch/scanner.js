@@ -109,16 +109,26 @@ async function fetchForecasts(city) {
 
 // ── Empirical forecast error and city bias corrections ──
 
-const EMPIRICAL_BASE_ERROR = { F: 1.5, C: 0.8 };
-const EMPIRICAL_SD_FLOOR = { F: 2.0, C: 1.0 };
+const EMPIRICAL_BASE_ERROR = { F: 2.5, C: 1.4 };
+const EMPIRICAL_SD_FLOOR = { F: 3.5, C: 2.0 };
 
+// RECALIBRATED 2026-03-23 from Polymarket resolution data (Mar 18-21)
+// Previous biases were wrong — verified against actual resolved market outcomes:
+//   NYC: forecast avg +4.2°F too hot → bias = +4.2 (subtract from forecast)
+//   Dallas: forecast avg +2.8°F too hot → bias = +2.8
+//   Chicago: forecast avg -4.4°F too cold → bias = -4.4 (add to forecast)
+//   Seattle: forecast avg -1.1°F too cold → bias = -1.1
+//   Atlanta: forecast avg -0.8°F too cold → bias = -0.8
+//   (positive bias = model predicts too hot, we subtract to correct)
 const CITY_BIAS = {
-  'London':   -2.0,  // Model too cold (25% win rate, -$57)
-  'Miami':    -2.0,  // Model too cold (46% win rate, -$27)
-  'Chicago':   1.5,  // Slight warm bias (OK performance)
-  'Atlanta':  -3.0,  // Model significantly too cold (loses on NO range bets)
-  'Toronto':   2.0,  // Model too warm (31% win rate, -$24)
-  'Seattle':   2.0,  // Model too warm (47% win rate, -$7)
+  'London':   -2.0,   // Model too cold (25% win rate, -$57)
+  'Miami':    -2.0,   // Model too cold (46% win rate, -$27)
+  'Chicago':  -2.0,   // Reduced from -4.4: overcorrection made raw-correct forecasts wrong (Mar 23: raw ~40°F correct, +4.4 pushed to 44°F, actual 41°F)
+  'Atlanta':  -0.8,   // Model slightly too cold (verified Mar 18-21 actuals)
+  'Toronto':   2.0,   // Model too warm (31% win rate, -$24)
+  'Seattle':  -1.1,   // Model slightly too cold (verified Mar 18-21 actuals)
+  'New York City': 4.2, // Model too hot by 4.2°F (verified Mar 18-21 actuals)
+  'Dallas':   1.5,    // Reduced from 2.8: still overshooting (Mar 23: forecast 85→corrected 83, actual 79°F)
 };
 
 function aggregateForecasts(forecasts, cityName, unit) {
@@ -278,7 +288,7 @@ async function scan() {
       // Use multi-source weighted aggregation if available, otherwise fall back to old method
       let aggregated;
       if (config.weather?.multiSource && correctedForecasts.some(f => f.source)) {
-        aggregated = multiSource.aggregateWithWeighting(correctedForecasts, city.name);
+        aggregated = multiSource.aggregateWithWeighting(correctedForecasts, city.name, city.unit);
       } else {
         // FIX: bias already applied to correctedForecasts above — pass raw forecasts
         // to aggregateForecasts which applies its own bias, OR pass corrected ones
@@ -405,8 +415,18 @@ async function scan() {
 
           if (!tokenId || effectivePrice == null) continue;
 
-          // Apply calibration to adjust for model overconfidence
-          const calibratedModelProb = calibration.calibrateProb(rawModelProb);
+          // Apply calibration with source-count adjustment (breaks the 76.9% plateau)
+          // Count UNIQUE independent sources (open-meteo counts as 1 regardless of model count)
+          const sourceWeights = forecast.weights;
+          let uniqueSources = forecast.sources || 1;
+          if (Array.isArray(sourceWeights)) {
+            const uniqueNames = new Set(sourceWeights.map(w => w.source || w.model || 'unknown'));
+            // Open-Meteo models count as 1 source collectively
+            const hasOpenMeteo = [...uniqueNames].some(n => n.startsWith('ecmwf') || n.startsWith('icon') || n.startsWith('gfs') || n.startsWith('gem') || n.startsWith('meteo') || n.startsWith('jma'));
+            const externalSources = [...uniqueNames].filter(n => ['noaa', 'visualcrossing', 'weatherapi'].includes(n)).length;
+            uniqueSources = (hasOpenMeteo ? 1 : 0) + externalSources;
+          }
+          const calibratedModelProb = calibration.sourceAdjustedCalibration(rawModelProb, uniqueSources);
           
           // Calculate edge with BOTH calibrated and raw probabilities
           const edge = calibratedModelProb - effectivePrice;

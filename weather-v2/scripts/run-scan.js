@@ -11,9 +11,9 @@ const { scanAll: runScalper } = require('../stormwatch/scalper');
 const { syncPrices } = require('../core/price-sync');
 const config = require('../config.json');
 
-const BOT_TOKEN = '8550919932:AAEJrh5TX03LP7gXq_WiRnMNBUlPA6K1zC4';
-const CHAT_ID = '-1003762193481';
-const TOPIC_ID = 2;
+const BOT_TOKEN = config.telegram?.botToken || process.env.TELEGRAM_BOT_TOKEN;
+const CHAT_ID = config.telegram?.chatId || process.env.TELEGRAM_CHAT_ID;
+const TOPIC_ID = config.telegram?.topicId || 2;
 
 async function sendTelegram(text) {
   try {
@@ -25,7 +25,7 @@ async function sendTelegram(text) {
         chat_id: CHAT_ID,
         message_thread_id: TOPIC_ID,
         text,
-        parse_mode: 'Markdown'
+        parse_mode: 'HTML'
       })
     });
     if (!res.ok) {
@@ -187,7 +187,7 @@ async function main() {
     let totalUnrealized = 0;
     
     if (openTrades.length > 0) {
-      msg += `Open Positions:\n\n\`\`\`\n`;
+      msg += `Open Positions:\n\n<pre>\n`;
       msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
       msg += `|      | City     | Market   | Side  | Entry   | Now     | P&L      |\n`;
       msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
@@ -208,7 +208,7 @@ async function main() {
         msg += `+------+----------+----------+-------+---------+---------+----------+\n`;
       }
       
-      msg += `\`\`\`\n\n`;
+      msg += `</pre>\n\n`;
     } else {
       msg += `No open positions.\n\n`;
     }
@@ -284,7 +284,7 @@ async function main() {
         .sort((a, b) => new Date(b.enteredAt) - new Date(a.enteredAt))[0];
       const hoursSinceEntry = lastEntry ? ((now - new Date(lastEntry.enteredAt).getTime()) / 3600000).toFixed(1) : 'never';
       console.error(`[HEALTH] ⚠️ ZERO-ENTRY ALERT: No trades entered in ${hoursSinceEntry}h`);
-      await sendTelegram(`⚠️ *HEALTH ALERT: Zero Entries*\n\nNo trades entered in ${hoursSinceEntry}h.\nThis scan: ${scanResult.scanned} markets evaluated, 0 passed threshold.\n\nPossible causes:\n• Calibration too aggressive\n• Edge threshold too high\n• Market conditions genuinely poor\n\nCheck calibration.js and scanner output.`);
+      await sendTelegram(`⚠️ <b>HEALTH ALERT: Zero Entries</b>\n\nNo trades entered in ${hoursSinceEntry}h.\nThis scan: ${scanResult.scanned} markets evaluated, 0 passed threshold.\n\nPossible causes:\n• Calibration too aggressive\n• Edge threshold too high\n• Market conditions genuinely poor\n\nCheck calibration.js and scanner output.`);
     }
   } catch (err) {
     console.warn('[HEALTH] Zero-entry check failed:', err.message);
@@ -306,7 +306,7 @@ async function main() {
       console.error(`[HEALTH] ⚠️ PUSH-RATE ALERT: ${recentPushes.length} trades instantly closed as 'push' in last 24h`);
       const cities = recentPushes.map(t => `${t.city} ${t.bucket}`).slice(0, 5).join(', ');
       const reasons = recentPushes.map(t => t.failReason).filter(Boolean).slice(0, 3);
-      let alertMsg = `⚠️ *HEALTH ALERT: ${recentPushes.length} Push Trades in 24h*\n\nTrades opened then instantly closed as 'push' ($0 P&L). Order placement is failing.\n\nRecent: ${cities}`;
+      let alertMsg = `⚠️ <b>HEALTH ALERT: ${recentPushes.length} Push Trades in 24h</b>\n\nTrades opened then instantly closed as 'push' ($0 P&L). Order placement is failing.\n\nRecent: ${cities}`;
       if (reasons.length > 0) alertMsg += `\n\nErrors:\n${reasons.map(r => '• ' + r.slice(0, 100)).join('\n')}`;
       await sendTelegram(alertMsg);
     }
@@ -320,7 +320,7 @@ async function main() {
     const testProb = calibrateProb(0.92); // Typical high-confidence trade
     if (testProb < 0.72) {
       console.error(`[HEALTH] ⚠️ CALIBRATION ALERT: 92% raw → ${(testProb*100).toFixed(1)}% calibrated — may be too aggressive`);
-      await sendTelegram(`⚠️ *HEALTH ALERT: Calibration Too Aggressive*\n\n92% raw model prob → ${(testProb*100).toFixed(1)}% calibrated.\nThis makes it nearly impossible to find positive edge vs markets priced >70¢.\n\nCheck calibration.js CALIBRATION_MAP.`);
+      await sendTelegram(`⚠️ <b>HEALTH ALERT: Calibration Too Aggressive</b>\n\n92% raw model prob → ${(testProb*100).toFixed(1)}% calibrated.\nThis makes it nearly impossible to find positive edge vs markets priced >70¢.\n\nCheck calibration.js CALIBRATION_MAP.`);
     }
   } catch (err) {
     console.warn('[HEALTH] Calibration smoke test failed:', err.message);

@@ -38,9 +38,25 @@ async function processCandidate(signal) {
     }
   }
 
-  // Circuit breaker check
-  if (circuitBreaker.isTripped()) {
-    return { entered: false, trade: null, reason: "Circuit breaker tripped — trading paused after 3 consecutive losses" };
+  // Circuit breaker DISABLED (2026-03-23) — was blocking trades after normal variance
+  // if (circuitBreaker.isTripped()) {
+  //   return { entered: false, trade: null, reason: "Circuit breaker tripped — trading paused after 3 consecutive losses" };
+  // }
+
+  // Push-retry cap (2026-03-23): Stop re-entering markets that keep failing
+  // Seattle 50-51°F was entered 10 times for the same date — all pushes.
+  // Cap at maxPushRetries (default 3) per city+date+bucket combo.
+  const maxPushRetries = config.risk.maxPushRetries ?? 3;
+  const allTrades = store.getAll();
+  const pushKey = `${signal.city}|${signal.date}|${signal.bucket}`;
+  const pushCount = allTrades.filter(t =>
+    t.result === 'push' &&
+    t.city === signal.city &&
+    t.date === signal.date &&
+    t.bucket === signal.bucket
+  ).length;
+  if (pushCount >= maxPushRetries) {
+    return { entered: false, trade: null, reason: `Push retry cap: ${pushCount}/${maxPushRetries} failed attempts for ${pushKey}` };
   }
 
   // Validate conditionId
@@ -108,18 +124,35 @@ async function processCandidate(signal) {
                     signal.modelProb >= lotteryMinProb &&
                     probRatio >= minProbRatio;
 
-  // FIX 3 (2026-03-14): Normal YES trades are banned (5W/15L = -$74)
-  // YES is only allowed for lottery trades (4W lottery YES = +$346)
+  // STRATEGY SHIFT (2026-03-24): YES-side trading enabled
+  // Old NO-only strategy had negative expectancy at high entry prices:
+  //   NO at 65¢: win 35¢ / lose 65¢ = 0.54x ratio, need 65% WR
+  //   YES at 30¢: win 70¢ / lose 30¢ = 2.33x ratio, need 30% WR
+  // Scanner already picks best EV side. No side restriction.
   const sideRestriction = config.risk.normalSideRestriction || null;
   if (!isLottery && sideRestriction && signal.side !== sideRestriction) {
     return { entered: false, trade: null, reason: `Side restriction: normal trades must be ${sideRestriction} (got ${signal.side})` };
   }
 
-  // FIX 2 (2026-03-14): Minimum entry price for normal trades
-  // 20-40c bracket: 4W/16L = -$88. Death zone.
+  // Entry price floors — side-dependent (2026-03-24)
+  // YES trades: 15-45¢ is the sweet spot (high payout ratio)
+  // NO trades: 65¢+ required (need high WR to overcome bad ratio)
   const minEntryPrice = config.risk.minEntryPrice || 0;
-  if (!isLottery && currentPrice < minEntryPrice) {
-    return { entered: false, trade: null, reason: `Entry price too low: ${(currentPrice*100).toFixed(1)}c (min: ${(minEntryPrice*100).toFixed(0)}c for normal trades)` };
+  if (!isLottery) {
+    if (signal.side === 'YES') {
+      // YES: block below 15¢ (too speculative) and above 45¢ (ratio gets bad)
+      if (currentPrice < 0.15) {
+        return { entered: false, trade: null, reason: `YES entry too low: ${(currentPrice*100).toFixed(1)}¢ (min 15¢ for YES)` };
+      }
+      if (currentPrice > 0.45) {
+        return { entered: false, trade: null, reason: `YES entry too high: ${(currentPrice*100).toFixed(1)}¢ (max 45¢ for YES — ratio unfavorable)` };
+      }
+    } else {
+      // NO: keep high floor — only enter when very confident
+      if (currentPrice < 0.65) {
+        return { entered: false, trade: null, reason: `NO entry too low: ${(currentPrice*100).toFixed(1)}¢ (min 65¢ for NO)` };
+      }
+    }
   }
 
   // Sanity check: reject extreme edges (>250%)
@@ -178,7 +211,7 @@ async function processCandidate(signal) {
   }
 
   // Use ?? instead of || to allow 0 as a valid value
-  const minDist = config.risk.minDistanceFromLine ?? 2;
+  const minDist = config.risk.minDistanceFromLine ?? 3;
   if (signal.distFromLine != null && signal.distFromLine < minDist) {
     return { entered: false, trade: null, reason: `Too close to line: ${signal.distFromLine.toFixed(2)} (<${minDist})` };
   }
@@ -190,16 +223,33 @@ async function processCandidate(signal) {
   if (sizeUSDC < 5) sizeUSDC = config.risk.defaultSizeUSDC;
   sizeUSDC = Math.min(sizeUSDC, maxSize);
 
+  // Source-count sizing multiplier (FIX: 2026-03-23)
+  // Trades backed by more independent sources get bigger size; single-source gets penalized.
+  // signal.forecastSources = raw count, but we need unique independent sources
+  const rawSourceCount = signal.forecastSources || 1;
+  const sourceWeights = signal.forecastWeights;
+  let uniqueSources = rawSourceCount;
+  if (Array.isArray(sourceWeights)) {
+    const uniqueNames = new Set(sourceWeights.map(w => w.source || 'unknown'));
+    const hasOpenMeteo = [...uniqueNames].some(n => n === 'open-meteo');
+    const externalSources = [...uniqueNames].filter(n => ['noaa', 'visualcrossing', 'weatherapi'].includes(n)).length;
+    uniqueSources = (hasOpenMeteo ? 1 : 0) + externalSources;
+  }
+  const sourceMultiplier = uniqueSources <= 1 ? 0.5 :    // 1 source: half size
+                           uniqueSources === 2 ? 0.75 :   // 2 sources: 75%
+                           uniqueSources === 3 ? 1.0 :     // 3 sources: full size
+                           1.25;                           // 4+: 125% (strong consensus)
+  sizeUSDC *= sourceMultiplier;
+  if (sourceMultiplier !== 1.0) {
+    console.log(`${tag} 📊 Source multiplier: ${sourceMultiplier}x (${uniqueSources} unique sources)`);
+  }
+
   // Lottery sizing: cap per config (default $2)
   if (isLottery) {
     sizeUSDC = Math.min(sizeUSDC, lotteryConfig.maxSizeUSDC || 2);
   } else if (currentPrice < 0.20) {
     // Regular cheap bets get half size
     sizeUSDC = Math.min(sizeUSDC, maxSize * 0.5);
-  } else if (currentPrice >= 0.55 && currentPrice < 0.65) {
-    // 55-65c bracket: 64% WR but EV $0.17/trade — half size to limit exposure
-    sizeUSDC = Math.min(sizeUSDC, config.risk.defaultSizeUSDC * 0.5);
-    console.log(`${tag} ⚖️ Half-size (55-65c bracket: thin EV)`);
   }
 
   const size = Math.max(1, Math.floor(sizeUSDC / currentPrice));

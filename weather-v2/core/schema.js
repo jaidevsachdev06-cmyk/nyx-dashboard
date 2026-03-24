@@ -225,8 +225,8 @@ function validateTrade(trade) {
   // Both are valid
 
   // Cross-field: resolutionSource must be "polymarket" or "price-inferred"
-  if (trade.resolutionSource && !['polymarket', 'price-inferred', 'manual-exit', 'cli-inferred', 'clob-inferred'].includes(trade.resolutionSource)) {
-    errors.push(`resolutionSource must be "polymarket", "price-inferred", "manual-exit", "cli-inferred", or "clob-inferred", got "${trade.resolutionSource}"`);
+  if (trade.resolutionSource && !['polymarket', 'price-inferred', 'manual-exit', 'cli-inferred', 'clob-inferred', 'reconciliation'].includes(trade.resolutionSource)) {
+    errors.push(`resolutionSource must be "polymarket", "price-inferred", "manual-exit", "cli-inferred", "clob-inferred", or "reconciliation", got "${trade.resolutionSource}"`);
   }
 
   // Placeholder detection — catch fake conditionIds
