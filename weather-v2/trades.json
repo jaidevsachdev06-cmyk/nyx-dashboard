@@ -8046,7 +8046,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.63,
+      "pnlUSDC": 5.84,
       "createdAt": "2026-03-23T02:13:49.903Z",
       "signal": {
         "forecastTemp": 50,
@@ -8081,8 +8081,8 @@
       "realEntryPrice": 0.675,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.71,
-      "updatedAt": "2026-03-24T22:30:15.735Z"
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-03-24T23:00:04.631Z"
     },
     {
       "id": "oc-mn3845ro-bew1cr",
@@ -8183,7 +8183,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.62,
+      "pnlUSDC": 3.92,
       "createdAt": "2026-03-23T20:11:41.277Z",
       "signal": {
         "forecastTemp": 81.7,
@@ -8226,8 +8226,8 @@
       "realEntryPrice": 0.75,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.976,
-      "updatedAt": "2026-03-24T22:30:16.288Z"
+      "currentPrice": 0.995,
+      "updatedAt": "2026-03-24T23:00:05.223Z"
     },
     {
       "id": "oc-mn3zddjc-b8dq74",
@@ -8282,7 +8282,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.565,
-      "updatedAt": "2026-03-24T22:30:16.845Z"
+      "updatedAt": "2026-03-24T23:00:05.791Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8365,7 +8365,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -5.62,
+      "pnlUSDC": -13.12,
       "createdAt": "2026-03-24T16:12:59.817Z",
       "signal": {
         "forecastTemp": 53.9,
@@ -8412,12 +8412,12 @@
       "realEntryPrice": 0.625,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.4,
-      "updatedAt": "2026-03-24T22:30:17.387Z"
+      "currentPrice": 0.1,
+      "updatedAt": "2026-03-24T23:00:06.318Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-24T22:30:17.687Z",
+    "lastPriceSync": "2026-03-24T23:00:06.618Z",
     "lastUpdated": "2026-03-24T22:10:10.549Z"
   }
 }
