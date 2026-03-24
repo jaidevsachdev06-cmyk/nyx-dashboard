@@ -13110,5 +13110,29 @@
       {}
     ],
     "updatedAt": "2026-03-24T20:01:15.484Z"
+  },
+  {
+    "id": "ad7027e5-f626-435a-b91c-28f582a7cc9d",
+    "market": "Will Reza Pahlavi enter Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.9925,
+    "currentPrice": 0.9925,
+    "shares": 47.18,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, GollumGekko, scottilicious, debased, archaic, Gr33d, HolyMoses7",
+    "whaleCount": 7,
+    "confidence": "Very High",
+    "avgScore": 87.8,
+    "avgWinRate": 76.1,
+    "reasoning": "Consensus: 7 whales (avg score 87.8, WR 76.1%) No. bet=$46.83, shares=47.18. Whales: Car, GollumGekko, scottilicious, debased, archaic, Gr33d, HolyMoses7",
+    "endDate": "2026-03-31",
+    "conditionId": "0xd25b2fc3a916b317d71b398c5d0f81ad33fe1da6b56d6c9f717332d31584504e",
+    "createdAt": "2026-03-24T20:02:57.226Z",
+    "entryDate": "2026-03-24T20:02:57.226Z",
+    "invested": 46.8262,
+    "currentValue": 46.8262,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
