@@ -8046,7 +8046,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.52,
+      "pnlUSDC": -3.6,
       "createdAt": "2026-03-23T02:13:49.903Z",
       "signal": {
         "forecastTemp": 50,
@@ -8081,8 +8081,8 @@
       "realEntryPrice": 0.675,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.535,
-      "updatedAt": "2026-03-24T19:00:04.065Z"
+      "currentPrice": 0.475,
+      "updatedAt": "2026-03-24T19:30:06.648Z"
     },
     {
       "id": "oc-mn3845ro-bew1cr",
@@ -8097,7 +8097,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.22,
+      "pnlUSDC": -8.28,
       "createdAt": "2026-03-23T13:30:33.397Z",
       "signal": {
         "forecastTemp": 43,
@@ -8160,8 +8160,8 @@
       "realEntryPrice": 0.665,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.525,
-      "updatedAt": "2026-03-24T19:00:04.631Z"
+      "currentPrice": 0.305,
+      "updatedAt": "2026-03-24T19:30:07.192Z"
     },
     {
       "id": "oc-mn3mg0nx-oonwsf",
@@ -8176,7 +8176,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.08,
+      "pnlUSDC": 1.04,
       "createdAt": "2026-03-23T20:11:41.277Z",
       "signal": {
         "forecastTemp": 81.7,
@@ -8219,8 +8219,8 @@
       "realEntryPrice": 0.75,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.755,
-      "updatedAt": "2026-03-24T19:00:05.194Z"
+      "currentPrice": 0.815,
+      "updatedAt": "2026-03-24T19:30:07.717Z"
     },
     {
       "id": "oc-mn3zddjc-b8dq74",
@@ -8235,7 +8235,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.12,
+      "pnlUSDC": -1.26,
       "createdAt": "2026-03-24T02:13:33.000Z",
       "signal": {
         "forecastTemp": 83.4,
@@ -8274,8 +8274,8 @@
       "realEntryPrice": 0.645,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.565,
-      "updatedAt": "2026-03-24T19:00:05.761Z"
+      "currentPrice": 0.555,
+      "updatedAt": "2026-03-24T19:30:08.258Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8290,7 +8290,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.12,
+      "pnlUSDC": 2.48,
       "createdAt": "2026-03-24T03:13:28.323Z",
       "signal": {
         "forecastTemp": 63.7,
@@ -8325,8 +8325,8 @@
       "realEntryPrice": 0.565,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.83,
-      "updatedAt": "2026-03-24T19:00:06.316Z",
+      "currentPrice": 0.8745,
+      "updatedAt": "2026-03-24T19:30:08.824Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -8351,7 +8351,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.87,
+      "pnlUSDC": 0.38,
       "createdAt": "2026-03-24T16:12:59.817Z",
       "signal": {
         "forecastTemp": 53.9,
@@ -8398,12 +8398,12 @@
       "realEntryPrice": 0.625,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.55,
-      "updatedAt": "2026-03-24T19:00:06.877Z"
+      "currentPrice": 0.64,
+      "updatedAt": "2026-03-24T19:30:09.366Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-24T19:00:07.178Z",
-    "lastUpdated": "2026-03-24T18:45:08.042Z"
+    "lastPriceSync": "2026-03-24T19:30:09.667Z",
+    "lastUpdated": "2026-03-24T19:10:10.577Z"
   }
 }
