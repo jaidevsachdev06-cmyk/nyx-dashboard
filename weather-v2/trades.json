@@ -8046,7 +8046,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.81,
+      "pnlUSDC": -2.52,
       "createdAt": "2026-03-23T02:13:49.903Z",
       "signal": {
         "forecastTemp": 50,
@@ -8081,8 +8081,8 @@
       "realEntryPrice": 0.675,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.63,
-      "updatedAt": "2026-03-24T18:30:05.632Z"
+      "currentPrice": 0.535,
+      "updatedAt": "2026-03-24T19:00:04.065Z"
     },
     {
       "id": "oc-mn3845ro-bew1cr",
@@ -8097,7 +8097,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -3.8,
+      "pnlUSDC": -3.22,
       "createdAt": "2026-03-23T13:30:33.397Z",
       "signal": {
         "forecastTemp": 43,
@@ -8160,8 +8160,8 @@
       "realEntryPrice": 0.665,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.5,
-      "updatedAt": "2026-03-24T18:30:06.172Z"
+      "currentPrice": 0.525,
+      "updatedAt": "2026-03-24T19:00:04.631Z"
     },
     {
       "id": "oc-mn3mg0nx-oonwsf",
@@ -8176,7 +8176,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.12,
+      "pnlUSDC": 0.08,
       "createdAt": "2026-03-23T20:11:41.277Z",
       "signal": {
         "forecastTemp": 81.7,
@@ -8219,8 +8219,8 @@
       "realEntryPrice": 0.75,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.68,
-      "updatedAt": "2026-03-24T18:30:06.732Z"
+      "currentPrice": 0.755,
+      "updatedAt": "2026-03-24T19:00:05.194Z"
     },
     {
       "id": "oc-mn3zddjc-b8dq74",
@@ -8235,7 +8235,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.98,
+      "pnlUSDC": -1.12,
       "createdAt": "2026-03-24T02:13:33.000Z",
       "signal": {
         "forecastTemp": 83.4,
@@ -8274,8 +8274,8 @@
       "realEntryPrice": 0.645,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.575,
-      "updatedAt": "2026-03-24T18:30:07.268Z"
+      "currentPrice": 0.565,
+      "updatedAt": "2026-03-24T19:00:05.761Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8290,7 +8290,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 5.28,
+      "pnlUSDC": 2.12,
       "createdAt": "2026-03-24T03:13:28.323Z",
       "signal": {
         "forecastTemp": 63.7,
@@ -8312,10 +8312,10 @@
         "edge": 0.2075,
         "isLottery": false
       },
-      "notes": "Forecast: 63.7°F | Model: 77% vs Market: 56% | Edge: 36.7%",
+      "notes": "Forecast: 63.7°F | Model: 77% vs Market: 56% | Edge: 36.7% | SCALP normal-half: sold 8@0.880 (+$2.52)",
       "entryPrice": 0.565,
-      "size": 16,
-      "sizeUSDC": 9.04,
+      "size": 8,
+      "sizeUSDC": 4.52,
       "enteredAt": "2026-03-24T03:13:28.342Z",
       "orderId": "paper-mn41ifq9-45f4",
       "tradeSource": "both",
@@ -8325,8 +8325,18 @@
       "realEntryPrice": 0.565,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.895,
-      "updatedAt": "2026-03-24T18:30:07.830Z"
+      "currentPrice": 0.83,
+      "updatedAt": "2026-03-24T19:00:06.316Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 8,
+          "price": 0.88,
+          "pnlUSDC": 2.52,
+          "timestamp": "2026-03-24T18:45:08.037Z"
+        }
+      ]
     },
     {
       "id": "oc-mn4tcwtl-21bmir",
@@ -8341,7 +8351,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.75,
+      "pnlUSDC": -1.87,
       "createdAt": "2026-03-24T16:12:59.817Z",
       "signal": {
         "forecastTemp": 53.9,
@@ -8388,12 +8398,12 @@
       "realEntryPrice": 0.625,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.555,
-      "updatedAt": "2026-03-24T18:30:08.361Z"
+      "currentPrice": 0.55,
+      "updatedAt": "2026-03-24T19:00:06.877Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-24T18:30:08.662Z",
-    "lastUpdated": "2026-03-24T18:10:20.451Z"
+    "lastPriceSync": "2026-03-24T19:00:07.178Z",
+    "lastUpdated": "2026-03-24T18:45:08.042Z"
   }
 }
