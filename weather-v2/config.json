@@ -31,16 +31,12 @@
     "defaultSizeUSDC": 6,
     "minModelProb": 0.65,
     "maxModelProb": 1.0,
-    "minDistanceFromLine": 5,
+    "minDistanceFromLine": 2,
     "maxTradesPerCity": 1,
     "minForecastSources": 2,
     "cityBlacklist": [
       "London",
-      "Toronto",
-      "Miami",
-      "Tokyo",
-      "Atlanta",
-      "Paris"
+      "Toronto"
     ],
     "bucketTypeBlacklist": [
       "boundary",
@@ -48,11 +44,11 @@
       "specific-temp-NO"
     ],
     "lottery": {
-      "enabled": false,
-      "maxDailyTrades": 0,
-      "maxSizeUSDC": 1,
+      "enabled": true,
+      "maxDailyTrades": 4,
+      "maxSizeUSDC": 2,
       "maxEntryPrice": 0.15,
-      "minProbRatio": 1,
+      "minProbRatio": 1.2,
       "minModelProb": 0.06,
       "sameDayOnly": true
     },
@@ -62,7 +58,7 @@
       "minEdgePctImprove": 20,
       "minHoldMinutes": 30
     },
-    "minEntryPrice": 0.4,
+    "minEntryPrice": 0.0,
     "maxPushRetries": 3,
     "normalSideRestriction": "NO",
     "preferMultiSource": true,
