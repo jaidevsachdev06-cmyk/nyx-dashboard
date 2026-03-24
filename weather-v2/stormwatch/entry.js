@@ -124,35 +124,18 @@ async function processCandidate(signal) {
                     signal.modelProb >= lotteryMinProb &&
                     probRatio >= minProbRatio;
 
-  // STRATEGY SHIFT (2026-03-24): YES-side trading enabled
-  // Old NO-only strategy had negative expectancy at high entry prices:
-  //   NO at 65¢: win 35¢ / lose 65¢ = 0.54x ratio, need 65% WR
-  //   YES at 30¢: win 70¢ / lose 30¢ = 2.33x ratio, need 30% WR
-  // Scanner already picks best EV side. No side restriction.
+  // NO-only strategy (reverted 2026-03-24)
+  // YES backtested at 12% WR on forecast bucket — model not accurate enough for YES.
+  // NO at 40-55¢ with wide distance is the profitable zone (Feb: +$355).
   const sideRestriction = config.risk.normalSideRestriction || null;
   if (!isLottery && sideRestriction && signal.side !== sideRestriction) {
     return { entered: false, trade: null, reason: `Side restriction: normal trades must be ${sideRestriction} (got ${signal.side})` };
   }
 
-  // Entry price floors — side-dependent (2026-03-24)
-  // YES trades: 15-45¢ is the sweet spot (high payout ratio)
-  // NO trades: 65¢+ required (need high WR to overcome bad ratio)
+  // Min entry price for normal trades
   const minEntryPrice = config.risk.minEntryPrice || 0;
-  if (!isLottery) {
-    if (signal.side === 'YES') {
-      // YES: block below 15¢ (too speculative) and above 45¢ (ratio gets bad)
-      if (currentPrice < 0.15) {
-        return { entered: false, trade: null, reason: `YES entry too low: ${(currentPrice*100).toFixed(1)}¢ (min 15¢ for YES)` };
-      }
-      if (currentPrice > 0.45) {
-        return { entered: false, trade: null, reason: `YES entry too high: ${(currentPrice*100).toFixed(1)}¢ (max 45¢ for YES — ratio unfavorable)` };
-      }
-    } else {
-      // NO: keep high floor — only enter when very confident
-      if (currentPrice < 0.65) {
-        return { entered: false, trade: null, reason: `NO entry too low: ${(currentPrice*100).toFixed(1)}¢ (min 65¢ for NO)` };
-      }
-    }
+  if (!isLottery && currentPrice < minEntryPrice) {
+    return { entered: false, trade: null, reason: `Entry price too low: ${(currentPrice*100).toFixed(1)}c (min: ${(minEntryPrice*100).toFixed(0)}c for normal trades)` };
   }
 
   // Sanity check: reject extreme edges (>250%)

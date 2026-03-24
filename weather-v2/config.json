@@ -62,9 +62,9 @@
       "minEdgePctImprove": 20,
       "minHoldMinutes": 30
     },
-    "minEntryPrice": 0.25,
+    "minEntryPrice": 0.4,
     "maxPushRetries": 3,
-    "normalSideRestriction": null,
+    "normalSideRestriction": "NO",
     "preferMultiSource": true,
     "stopLossPct": null
   },
