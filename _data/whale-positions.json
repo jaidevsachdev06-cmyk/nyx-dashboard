@@ -13234,7 +13234,7 @@
     "market": "Will TISZA – Respect and Freedom Party (TISZA) win the most seats in the next Hungarian parliamentary election?",
     "side": "No",
     "entryPrice": 0.345,
-    "currentPrice": 0.345,
+    "currentPrice": 0.335,
     "shares": 53.65,
     "status": "open",
     "source": "consensus-scanner",
@@ -13249,8 +13249,13 @@
     "createdAt": "2026-03-25T20:02:54.664Z",
     "entryDate": "2026-03-25T20:02:54.664Z",
     "invested": 18.5092,
-    "currentValue": 18.5092,
-    "pnl": 0,
-    "pnlPercent": 0
+    "currentValue": 17.9728,
+    "pnl": -0.5365,
+    "pnlPercent": -2.9,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-03-25T20:31:30.960Z"
   }
 ]
