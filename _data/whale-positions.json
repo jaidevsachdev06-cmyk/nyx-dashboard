@@ -13205,7 +13205,7 @@
     "market": "Will Trump visit China by April 30?",
     "side": "No",
     "entryPrice": 0.9725,
-    "currentPrice": 0.979,
+    "currentPrice": 0.977,
     "shares": 17.84,
     "status": "open",
     "source": "consensus-scanner",
@@ -13220,14 +13220,14 @@
     "createdAt": "2026-03-25T18:02:54.966Z",
     "entryDate": "2026-03-25T18:02:54.966Z",
     "invested": 17.3494,
-    "currentValue": 17.4654,
-    "pnl": 0.116,
-    "pnlPercent": 0.67,
+    "currentValue": 17.4297,
+    "pnl": 0.0803,
+    "pnlPercent": 0.46,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-25T22:31:28.756Z"
+    "updatedAt": "2026-03-25T23:01:21.933Z"
   },
   {
     "id": "ec07f094-3355-4f1a-a0d1-ab9b5b56e0bc",
