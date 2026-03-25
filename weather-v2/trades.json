@@ -8295,8 +8295,8 @@
       "realEntryPrice": 0.645,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.555,
-      "updatedAt": "2026-03-25T09:00:04.006Z"
+      "currentPrice": 0.565,
+      "updatedAt": "2026-03-25T09:10:04.069Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8488,8 +8488,8 @@
       "realEntryPrice": 0.605,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.655,
-      "updatedAt": "2026-03-25T09:00:04.556Z"
+      "currentPrice": 0.66,
+      "updatedAt": "2026-03-25T09:10:04.347Z"
     },
     {
       "id": "oc-mn5j2sg4-8tu3c6",
@@ -8551,12 +8551,60 @@
       "realEntryPrice": 0.71,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.695,
-      "updatedAt": "2026-03-25T09:00:05.160Z"
+      "currentPrice": 0.675,
+      "updatedAt": "2026-03-25T09:10:04.595Z"
+    },
+    {
+      "id": "oc-mn5tsb9t-n3ctew",
+      "conditionId": "0xad2996346f745c033107c775b935d7ff848bf2125416d39139930ee5297061c4",
+      "tokenId": "0x9f07c675ff59565a6dfbd47d8ae6a87ec8d555c6139b95e4ee9e6fced5777bd5",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-25-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-03-25",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on March 25?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-25T09:12:44.561Z",
+      "signal": {
+        "forecastTemp": 48,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.595,
+        "modelProb": 0.7715,
+        "edge": 0.1765,
+        "isLottery": false
+      },
+      "notes": "Forecast: 48.0°F | Model: 77% vs Market: 60% | Edge: 29.7%",
+      "entryPrice": 0.595,
+      "size": 15,
+      "sizeUSDC": 8.924999999999999,
+      "enteredAt": "2026-03-25T09:12:44.586Z",
+      "orderId": "paper-mn5tsbax-0w4y",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-25T09:00:05.460Z",
-    "lastUpdated": "2026-03-25T08:10:05.166Z"
+    "lastUpdated": "2026-03-25T09:12:44.607Z"
   }
 }
