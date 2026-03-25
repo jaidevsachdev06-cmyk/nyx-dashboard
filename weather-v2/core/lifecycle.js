@@ -75,6 +75,21 @@ async function enterTrade(tradeId, { price, size }) {
     throw new Error(`Risk limit: position size $${sizeUSDC.toFixed(2)} exceeds max $${config.risk.maxPositionSizeUSDC}`);
   }
 
+  // CRITICAL FIX: Validate edge on incoming trade (even if swap bypassed entry.js validation)
+  if (trade.signal && trade.signal.modelProb != null && price != null && price > 0) {
+    const edge = trade.signal.modelProb - price;
+    const edgePct = (edge / price) * 100;
+    const minEdge = (config.risk && config.risk.minEdgePct) || 15;
+    
+    // Same high-confidence bypass logic as entry.js (must match)
+    const rawProb = trade.signal.rawModelProb || trade.signal.modelProb;
+    const highConfBypass = rawProb >= 0.85 && price <= 0.80 && edgePct >= 3;
+    
+    if (!highConfBypass && edgePct < minEdge) {
+      throw new Error(`FIX_11: Edge violation in enterTrade: ${edgePct.toFixed(2)}% (min ${minEdge}%). This bypassed entry validation.`);
+    }
+  }
+
   // E027: Same city + same date = 1 position only (correlated bet protection)
   // OPTIMIZATION: allow automatic SWAP when a strictly better candidate appears.
   const sameCityDate = openPositions.filter(t => t.city === trade.city && t.date === trade.date);
