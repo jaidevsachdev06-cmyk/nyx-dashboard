@@ -8295,8 +8295,8 @@
       "realEntryPrice": 0.645,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.565,
-      "updatedAt": "2026-03-25T10:00:10.536Z"
+      "currentPrice": 0.555,
+      "updatedAt": "2026-03-25T10:10:03.973Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8488,8 +8488,8 @@
       "realEntryPrice": 0.605,
       "txHash": null,
       "realFillStatus": "unverified",
-      "currentPrice": 0.66,
-      "updatedAt": "2026-03-25T10:00:11.081Z"
+      "currentPrice": 0.755,
+      "updatedAt": "2026-03-25T10:10:04.256Z"
     },
     {
       "id": "oc-mn5j2sg4-8tu3c6",
@@ -8552,7 +8552,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.715,
-      "updatedAt": "2026-03-25T10:00:11.608Z"
+      "updatedAt": "2026-03-25T10:10:04.542Z"
     },
     {
       "id": "oc-mn5tsb9t-n3ctew",
@@ -8601,12 +8601,68 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.595,
-      "updatedAt": "2026-03-25T10:00:12.158Z"
+      "currentPrice": 0.615,
+      "updatedAt": "2026-03-25T10:10:04.859Z"
+    },
+    {
+      "id": "oc-mn5vxbji-9pq27d",
+      "conditionId": "0xa3996983e1c1007ff5f15ed04da3bdf7871b32a5af8209c48ff60476109e3073",
+      "tokenId": "0x28f28e16c372016be02d9575ef8d118b08da1771fbc4a6505d9df4564d69d8e8",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-26-2026-88-89f",
+      "city": "Dallas",
+      "date": "2026-03-26",
+      "bucket": "88-89°F",
+      "question": "Will the highest temperature in Dallas be between 88-89°F on March 26?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-25T10:12:37.422Z",
+      "signal": {
+        "forecastTemp": 86,
+        "forecastSource": "multi-source",
+        "sources": 4,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.655,
+        "modelProb": 0.7915,
+        "edge": 0.1365,
+        "isLottery": false
+      },
+      "notes": "Forecast: 86.0°F | Model: 79% vs Market: 66% | Edge: 20.8%",
+      "entryPrice": 0.655,
+      "size": 23,
+      "sizeUSDC": 15.065000000000001,
+      "enteredAt": "2026-03-25T10:12:37.443Z",
+      "orderId": "paper-mn5vxbke-uhvs",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-25T10:00:12.458Z",
-    "lastUpdated": "2026-03-25T09:12:44.607Z"
+    "lastUpdated": "2026-03-25T10:12:37.458Z"
   }
 }
