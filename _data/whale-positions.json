@@ -13139,5 +13139,29 @@
       {}
     ],
     "updatedAt": "2026-03-25T08:01:13.326Z"
+  },
+  {
+    "id": "20c2fb6c-546b-4745-9031-ed4b5791b4ad",
+    "market": "US x Iran ceasefire by May 31?",
+    "side": "Yes",
+    "entryPrice": 0.615,
+    "currentPrice": 0.615,
+    "shares": 27.06,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, GollumGekko, donjo, UbuntuTrading",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 89,
+    "avgWinRate": 72.1,
+    "reasoning": "Consensus: 4 whales (avg score 89, WR 72.1%) Yes. bet=$16.64, shares=27.06. Whales: Car, GollumGekko, donjo, UbuntuTrading",
+    "endDate": "2026-05-31",
+    "conditionId": "0xa9937410f8aae98cc6440a7480ad832be5a1a998afcf5a6e77c6f5aa4c0f259f",
+    "createdAt": "2026-03-25T08:02:49.234Z",
+    "entryDate": "2026-03-25T08:02:49.234Z",
+    "invested": 16.6419,
+    "currentValue": 16.6419,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
