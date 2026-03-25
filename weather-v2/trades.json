@@ -8296,7 +8296,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.58,
-      "updatedAt": "2026-03-25T02:30:03.863Z"
+      "updatedAt": "2026-03-25T03:00:05.149Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8438,7 +8438,7 @@
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-25T02:30:04.163Z",
+    "lastPriceSync": "2026-03-25T03:00:05.450Z",
     "lastUpdated": "2026-03-25T02:10:05.058Z"
   }
 }
