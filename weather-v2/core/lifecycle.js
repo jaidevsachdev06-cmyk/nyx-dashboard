@@ -228,7 +228,11 @@ async function enterTrade(tradeId, { price, size }) {
       // V3 FIX: Size using ACTUAL order price (midpoint + 2 ticks for BUY), not midpoint
       // Without this, $4 lottery budget at 5¢ midpoint = 80 shares, but actual order at 7¢ = $5.60
       const adjustedPrice = Math.min(0.99, Math.round((price + 0.02) * 100) / 100);
-      const realSize = Math.max(5, Math.floor(maxRealUSDC / adjustedPrice));
+      let realSize = Math.max(5, Math.floor(maxRealUSDC / adjustedPrice));
+      // FIX 14 (2026-03-25): Enforce realSize <= paperSize to prevent orphaned real orders
+      // Bug: realSize could exceed trade.size if adjusted price < midpoint
+      // This broke position matching in 2 trades (oc-mn0y0izq, oc-mn41ifpf)
+      realSize = Math.min(realSize, trade.size);
       const realCost = realSize * adjustedPrice;
 
       // Pre-flight: check CLOB balance on the CORRECT proxy (Account A) via SDK
