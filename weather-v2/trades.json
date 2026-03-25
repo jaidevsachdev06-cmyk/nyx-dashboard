@@ -8256,7 +8256,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.91,
+      "pnlUSDC": -1.19,
       "createdAt": "2026-03-24T02:13:33.000Z",
       "signal": {
         "forecastTemp": 83.4,
@@ -8295,8 +8295,8 @@
       "realEntryPrice": 0.645,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.58,
-      "updatedAt": "2026-03-25T03:00:05.149Z"
+      "currentPrice": 0.56,
+      "updatedAt": "2026-03-25T03:30:07.378Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8438,7 +8438,7 @@
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-25T03:00:05.450Z",
-    "lastUpdated": "2026-03-25T02:10:05.058Z"
+    "lastPriceSync": "2026-03-25T03:30:07.678Z",
+    "lastUpdated": "2026-03-25T03:10:04.489Z"
   }
 }
