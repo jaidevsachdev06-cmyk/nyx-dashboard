@@ -112,21 +112,28 @@ async function placeOrder({ tokenId, side, price, size }) {
 
   const orderID = result.orderID;
 
-  // Audit log
+  // Audit log - CRITICAL: must succeed to maintain order tracking
+  // Failure here means the order is placed but not logged → orphaned position
+  const auditLine = JSON.stringify({
+    timestamp: new Date().toISOString(),
+    orderID,
+    tokenId: decimalTokenId,
+    side: side.toUpperCase(),
+    price: roundedPrice,
+    size: roundedSize,
+    costUSDC,
+    proxy: 'gnosis-safe',
+    via: 'sdk'
+  }) + '\n';
   try {
-    const auditLine = JSON.stringify({
-      timestamp: new Date().toISOString(),
-      orderID,
-      tokenId: decimalTokenId,
-      side: side.toUpperCase(),
-      price: roundedPrice,
-      size: roundedSize,
-      costUSDC,
-      proxy: 'gnosis-safe',
-      via: 'sdk'
-    }) + '\n';
     fs.appendFileSync(AUDIT_LOG, auditLine);
-  } catch (_) { /* non-fatal */ }
+    console.log(`${tag} 📝 logged to audit file`);
+  } catch (auditErr) {
+    console.error(`${tag} ❌ CRITICAL: Audit log write failed! Order placed but not logged.`);
+    console.error(`${tag} OrderID ${orderID} is orphaned — manual recovery required.`);
+    console.error(`${tag} Error: ${auditErr.message}`);
+    throw new Error(`Audit log write failed: ${auditErr.message} — order ${orderID} is orphaned`);
+  }
 
   console.log(`${tag} ✅ ${side} order posted | orderID: ${orderID}`);
 
