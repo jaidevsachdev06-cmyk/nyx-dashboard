@@ -8296,7 +8296,7 @@
       "txHash": null,
       "realFillStatus": "filled",
       "currentPrice": 0.57,
-      "updatedAt": "2026-03-25T01:00:33.462Z"
+      "updatedAt": "2026-03-25T01:05:04.224Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8377,9 +8377,9 @@
       "bucket": "50-51°F",
       "question": "Will the highest temperature in Chicago be between 50-51°F on March 24?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -15.56,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -15.625,
       "createdAt": "2026-03-24T16:12:59.817Z",
       "signal": {
         "forecastTemp": 53.9,
@@ -8427,11 +8427,18 @@
       "txHash": null,
       "realFillStatus": "unverified",
       "currentPrice": 0.0025,
-      "updatedAt": "2026-03-25T01:00:33.990Z"
+      "updatedAt": "2026-03-25T01:05:04.474Z",
+      "realPnlUSDC": -5.625,
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-25T01:05:07.537Z",
+      "actualTemp": 48.8,
+      "forecastError": -5.1,
+      "closedAt": "2026-03-25T01:05:07.549Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-25T01:00:34.291Z",
-    "lastUpdated": "2026-03-24T23:10:06.207Z"
+    "lastUpdated": "2026-03-25T01:05:07.553Z"
   }
 }
