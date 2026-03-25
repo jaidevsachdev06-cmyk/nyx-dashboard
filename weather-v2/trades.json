@@ -8295,8 +8295,8 @@
       "realEntryPrice": 0.645,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.56,
-      "updatedAt": "2026-03-25T04:00:07.976Z"
+      "currentPrice": 0.6,
+      "updatedAt": "2026-03-25T04:10:04.188Z"
     },
     {
       "id": "oc-mn41ifpf-9f5gmg",
@@ -8435,10 +8435,124 @@
       "actualTemp": 48.8,
       "forecastError": -5.1,
       "closedAt": "2026-03-25T01:05:07.549Z"
+    },
+    {
+      "id": "oc-mn5j2r7p-zz0f7m",
+      "conditionId": "0xaab6cb49862878ead9c12a2cd79cd0367f1de879ba254b833a1cb435fdb2ddd1",
+      "tokenId": "0xf5197eb67f8fa8ad7894f59d3c21a1dd7c5d50ea8cc5e6f09df0782037feb3ce",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-25-2026-50-51f",
+      "city": "New York City",
+      "date": "2026-03-25",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in New York City be between 50-51°F on March 25?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-25T04:12:56.005Z",
+      "signal": {
+        "forecastTemp": 54,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.605,
+        "modelProb": 0.7952,
+        "edge": 0.1902,
+        "isLottery": false
+      },
+      "notes": "Forecast: 54.0°F | Model: 80% vs Market: 61% | Edge: 31.4%",
+      "entryPrice": 0.605,
+      "size": 20,
+      "sizeUSDC": 12.1,
+      "enteredAt": "2026-03-25T04:12:56.019Z",
+      "orderId": "paper-mn5j2r89-fuhz",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0x07a8f546b58223e31a78b58c4bba9825150b9ff4090d477c40c0c9d4bd6707c4",
+      "realSize": 9,
+      "realEntryPrice": 0.605,
+      "txHash": null,
+      "realFillStatus": "unverified"
+    },
+    {
+      "id": "oc-mn5j2sg4-8tu3c6",
+      "conditionId": "0x0208e20de1112f19f282c5655a84e716ea635eceb1c3031fcb60371c08458ec3",
+      "tokenId": "0xf9af188dcc766dda403f732188ebc9ecc392a422e9893179cdf1d6ab09c4ae28",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-26-2026-82-83f",
+      "city": "Atlanta",
+      "date": "2026-03-26",
+      "bucket": "82-83°F",
+      "question": "Will the highest temperature in Atlanta be between 82-83°F on March 26?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-25T04:12:57.604Z",
+      "signal": {
+        "forecastTemp": 78.5,
+        "forecastSource": "multi-source",
+        "sources": 5,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.71,
+        "modelProb": 0.7971,
+        "edge": 0.0871,
+        "isLottery": false
+      },
+      "notes": "Forecast: 78.5°F | Model: 80% vs Market: 71% | Edge: 12.3%",
+      "entryPrice": 0.71,
+      "size": 22,
+      "sizeUSDC": 15.62,
+      "enteredAt": "2026-03-25T04:12:57.614Z",
+      "orderId": "paper-mn5j2sgk-tgvz",
+      "tradeSource": "both",
+      "realTrading": true,
+      "realOrderId": "0x6bb399a8291c8ec752ec02e3f5f5ca8928ca439d46c78db8e1ec55415e737afa",
+      "realSize": 8,
+      "realEntryPrice": 0.71,
+      "txHash": null,
+      "realFillStatus": "filled"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-25T04:00:08.276Z",
-    "lastUpdated": "2026-03-25T03:10:04.489Z"
+    "lastUpdated": "2026-03-25T04:12:58.431Z"
   }
 }
