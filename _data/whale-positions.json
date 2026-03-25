@@ -13199,5 +13199,29 @@
       {}
     ],
     "updatedAt": "2026-03-25T18:01:19.856Z"
+  },
+  {
+    "id": "c92ed895-531f-4d98-b2a7-a3d376ed5726",
+    "market": "Will Trump visit China by April 30?",
+    "side": "No",
+    "entryPrice": 0.9725,
+    "currentPrice": 0.9725,
+    "shares": 17.84,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, debased, Gr33d, TheWolfOfPoly",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 86.7,
+    "avgWinRate": 75.2,
+    "reasoning": "Consensus: 4 whales (avg score 86.7, WR 75.2%) No. bet=$17.35, shares=17.84. Whales: Car, debased, Gr33d, TheWolfOfPoly",
+    "endDate": "2026-04-30",
+    "conditionId": "0x48fbf70c1713e71a405052bc4641e26dbba435fa557672c4040763c901cbf606",
+    "createdAt": "2026-03-25T18:02:54.966Z",
+    "entryDate": "2026-03-25T18:02:54.966Z",
+    "invested": 17.3494,
+    "currentValue": 17.3494,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
