@@ -114,25 +114,46 @@ async function placeOrder({ tokenId, side, price, size }) {
 
   // Audit log - CRITICAL: must succeed to maintain order tracking
   // Failure here means the order is placed but not logged → orphaned position
-  const auditLine = JSON.stringify({
-    timestamp: new Date().toISOString(),
-    orderID,
-    tokenId: decimalTokenId,
-    side: side.toUpperCase(),
-    price: roundedPrice,
-    size: roundedSize,
-    costUSDC,
-    proxy: 'gnosis-safe',
-    via: 'sdk'
-  }) + '\n';
+  // FIX (2026-03-25): Check for duplicate log entries (idempotency)
+  // If this orderID already exists in the log, skip re-logging (same order placed twice)
+  let isDuplicate = false;
   try {
-    fs.appendFileSync(AUDIT_LOG, auditLine);
-    console.log(`${tag} 📝 logged to audit file`);
-  } catch (auditErr) {
-    console.error(`${tag} ❌ CRITICAL: Audit log write failed! Order placed but not logged.`);
-    console.error(`${tag} OrderID ${orderID} is orphaned — manual recovery required.`);
-    console.error(`${tag} Error: ${auditErr.message}`);
-    throw new Error(`Audit log write failed: ${auditErr.message} — order ${orderID} is orphaned`);
+    const existingLog = fs.readFileSync(AUDIT_LOG, 'utf8').trim().split('\n').filter(l=>l);
+    isDuplicate = existingLog.some(line => {
+      try {
+        const entry = JSON.parse(line);
+        return entry.orderID === orderID;
+      } catch {
+        return false;
+      }
+    });
+  } catch {
+    // If log doesn't exist yet, can't be duplicate
+  }
+
+  if (isDuplicate) {
+    console.log(`${tag} ⚠️ DUPLICATE orderID detected (already logged). Skipping re-log.`);
+  } else {
+    const auditLine = JSON.stringify({
+      timestamp: new Date().toISOString(),
+      orderID,
+      tokenId: decimalTokenId,
+      side: side.toUpperCase(),
+      price: roundedPrice,
+      size: roundedSize,
+      costUSDC,
+      proxy: 'gnosis-safe',
+      via: 'sdk'
+    }) + '\n';
+    try {
+      fs.appendFileSync(AUDIT_LOG, auditLine);
+      console.log(`${tag} 📝 logged to audit file`);
+    } catch (auditErr) {
+      console.error(`${tag} ❌ CRITICAL: Audit log write failed! Order placed but not logged.`);
+      console.error(`${tag} OrderID ${orderID} is orphaned — manual recovery required.`);
+      console.error(`${tag} Error: ${auditErr.message}`);
+      throw new Error(`Audit log write failed: ${auditErr.message} — order ${orderID} is orphaned`);
+    }
   }
 
   console.log(`${tag} ✅ ${side} order posted | orderID: ${orderID}`);
