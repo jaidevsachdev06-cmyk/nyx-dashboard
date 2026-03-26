@@ -8643,7 +8643,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 7.6,
+      "pnlUSDC": 3.96,
       "createdAt": "2026-03-25T10:12:37.422Z",
       "signal": {
         "forecastTemp": 86,
@@ -8673,10 +8673,10 @@
         "edge": 0.1365,
         "isLottery": false
       },
-      "notes": "Forecast: 86.0°F | Model: 79% vs Market: 66% | Edge: 20.8%",
+      "notes": "Forecast: 86.0°F | Model: 79% vs Market: 66% | Edge: 20.8% | SCALP normal-half: sold 11@0.986 (+$3.64)",
       "entryPrice": 0.655,
-      "size": 23,
-      "sizeUSDC": 15.065000000000001,
+      "size": 12,
+      "sizeUSDC": 7.86,
       "enteredAt": "2026-03-25T10:12:37.443Z",
       "orderId": "paper-mn5vxbke-uhvs",
       "tradeSource": "paper",
@@ -8685,12 +8685,22 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.9855,
-      "updatedAt": "2026-03-26T22:30:03.499Z"
+      "currentPrice": 0.985,
+      "updatedAt": "2026-03-26T23:00:04.440Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 11,
+          "price": 0.9855,
+          "pnlUSDC": 3.6355,
+          "timestamp": "2026-03-26T22:45:03.640Z"
+        }
+      ]
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-26T22:30:03.799Z",
-    "lastUpdated": "2026-03-26T22:05:05.067Z"
+    "lastPriceSync": "2026-03-26T23:00:04.741Z",
+    "lastUpdated": "2026-03-26T22:45:03.648Z"
   }
 }
