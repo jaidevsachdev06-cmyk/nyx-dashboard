@@ -36,7 +36,8 @@
     "minForecastSources": 2,
     "cityBlacklist": [
       "London",
-      "Toronto"
+      "Toronto",
+      "Miami"
     ],
     "bucketTypeBlacklist": [
       "boundary",
