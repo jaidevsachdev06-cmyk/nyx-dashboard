@@ -13091,7 +13091,7 @@
     "market": "Trump announces end of military operations against Iran by March 31st?",
     "side": "Yes",
     "entryPrice": 0.125,
-    "currentPrice": 0.135,
+    "currentPrice": 0.14,
     "shares": 145.68,
     "status": "open",
     "source": "consensus-scanner",
@@ -13106,14 +13106,14 @@
     "createdAt": "2026-03-24T10:02:56.567Z",
     "entryDate": "2026-03-24T10:02:56.567Z",
     "invested": 18.21,
-    "currentValue": 19.6668,
-    "pnl": 1.4568,
-    "pnlPercent": 8,
+    "currentValue": 20.3952,
+    "pnl": 2.1852,
+    "pnlPercent": 12,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-26T05:31:02.409Z"
+    "updatedAt": "2026-03-26T06:01:02.432Z"
   },
   {
     "id": "ad7027e5-f626-435a-b91c-28f582a7cc9d",
