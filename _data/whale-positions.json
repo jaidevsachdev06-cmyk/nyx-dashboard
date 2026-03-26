@@ -13377,5 +13377,29 @@
       {}
     ],
     "updatedAt": "2026-03-26T12:01:44.612Z"
+  },
+  {
+    "id": "ecd3ce36-ce1e-49b4-a3da-5e9782d50f4d",
+    "market": "Will the US officially declare war on Iran by March 31, 2026?",
+    "side": "No",
+    "entryPrice": 0.9995,
+    "currentPrice": 0.9995,
+    "shares": 16.6,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, Anjun, Polar, Michael5289",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 83.6,
+    "avgWinRate": 71.9,
+    "reasoning": "Consensus: 4 whales (avg score 83.6, WR 71.9%) No. bet=$16.59, shares=16.6. Whales: scottilicious, Anjun, Polar, Michael5289",
+    "endDate": "2026-03-31",
+    "conditionId": "0x5d0010816af97d97145a0b2f90b10687e0280ee4d90a5e6615e606bab7b45465",
+    "createdAt": "2026-03-26T12:02:59.404Z",
+    "entryDate": "2026-03-26T12:02:59.404Z",
+    "invested": 16.5917,
+    "currentValue": 16.5917,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
