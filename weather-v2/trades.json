@@ -8565,8 +8565,8 @@
       "realEntryPrice": 0.71,
       "txHash": null,
       "realFillStatus": "filled",
-      "currentPrice": 0.96,
-      "updatedAt": "2026-03-26T20:00:07.769Z"
+      "currentPrice": 0.9685,
+      "updatedAt": "2026-03-26T20:05:14.222Z"
     },
     {
       "id": "oc-mn5tsb9t-n3ctew",
@@ -8679,12 +8679,12 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.72,
-      "updatedAt": "2026-03-26T20:00:08.359Z"
+      "currentPrice": 0.715,
+      "updatedAt": "2026-03-26T20:05:14.492Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-26T20:00:08.659Z",
-    "lastUpdated": "2026-03-26T19:05:10.476Z"
+    "lastUpdated": "2026-03-26T20:05:14.496Z"
   }
 }
