@@ -13035,7 +13035,7 @@
     "entryPrice": 0.405,
     "currentPrice": 0.345,
     "shares": 39.56,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, aenews, donjo, debased",
     "whaleCount": 4,
@@ -13055,7 +13055,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-26T22:00:53.000Z"
+    "updatedAt": "2026-03-26T22:02:51.424Z",
+    "exitPrice": 0.345,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "3cc4f906-4649-450f-b200-cbb016221900",
