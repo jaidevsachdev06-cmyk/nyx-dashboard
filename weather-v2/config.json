@@ -189,13 +189,13 @@
     "chatId": "-1003762193481",
     "topicId": 2
   },
-  "paper": false,
+  "paper": true,
   "realTrading": {
-    "enabled": true,
+    "enabled": false,
     "maxSizeUSDC": 6,
     "maxDailySpendUSDC": 30,
     "lotteryMaxSizeUSDC": 2,
-    "mirrorPaper": true
+    "mirrorPaper": false
   },
   "circuitBreaker": {
     "enabled": true,
