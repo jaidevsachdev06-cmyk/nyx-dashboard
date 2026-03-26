@@ -13286,5 +13286,29 @@
       {}
     ],
     "updatedAt": "2026-03-26T02:01:27.093Z"
+  },
+  {
+    "id": "49cee810-d625-4f65-935b-7f21ebfbf251",
+    "market": "Will Israel take military action in Lebanon on March 20, 2026?",
+    "side": "No",
+    "entryPrice": 0.0645,
+    "currentPrice": 0.0645,
+    "shares": 268.68,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, aenews, Gr33d, Michael5289",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 85.2,
+    "avgWinRate": 75.1,
+    "reasoning": "Consensus: 4 whales (avg score 85.2, WR 75.1%) No. bet=$17.33, shares=268.68. Whales: Car, aenews, Gr33d, Michael5289",
+    "endDate": "2026-03-31",
+    "conditionId": "0x77508b9cb5962ff587890f79e3e39a1789384405b6ff530afbccb9d70743352a",
+    "createdAt": "2026-03-26T02:02:52.819Z",
+    "entryDate": "2026-03-26T02:02:52.819Z",
+    "invested": 17.3299,
+    "currentValue": 17.3299,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
