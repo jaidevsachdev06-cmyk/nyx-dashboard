@@ -12973,7 +12973,7 @@
     "entryPrice": 0.968,
     "currentPrice": 1,
     "shares": 27.93,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, Dropper, GollumGekko, aenews, kekkone",
     "whaleCount": 5,
@@ -12993,7 +12993,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-26T02:00:52.767Z"
+    "updatedAt": "2026-03-26T02:02:57.685Z",
+    "exitPrice": 1,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "98cf1bcd-e6a2-4b7f-a1cb-3ce5e5dba7bc",
