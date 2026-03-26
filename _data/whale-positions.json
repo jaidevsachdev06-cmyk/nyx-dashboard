@@ -13296,7 +13296,7 @@
     "market": "Will Israel take military action in Lebanon on March 20, 2026?",
     "side": "No",
     "entryPrice": 0.0645,
-    "currentPrice": 0.013999999999999999,
+    "currentPrice": 0.008,
     "shares": 268.68,
     "status": "open",
     "source": "consensus-scanner",
@@ -13311,14 +13311,14 @@
     "createdAt": "2026-03-26T02:02:52.819Z",
     "entryDate": "2026-03-26T02:02:52.819Z",
     "invested": 17.3299,
-    "currentValue": 3.7615,
-    "pnl": -13.5683,
-    "pnlPercent": -78.29,
+    "currentValue": 2.1494,
+    "pnl": -15.1804,
+    "pnlPercent": -87.6,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-26T05:31:24.815Z"
+    "updatedAt": "2026-03-26T06:01:34.994Z"
   },
   {
     "id": "55d6957b-6be3-453c-9518-5deaeba3c9ca",
