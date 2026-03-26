@@ -13207,9 +13207,9 @@
     "market": "Will Trump visit China by April 30?",
     "side": "No",
     "entryPrice": 0.9725,
-    "currentPrice": 0.9844999999999999,
+    "currentPrice": 0.9845,
     "shares": 17.84,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, debased, Gr33d, TheWolfOfPoly",
     "whaleCount": 4,
@@ -13229,7 +13229,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-26T04:01:24.010Z"
+    "updatedAt": "2026-03-26T04:03:01.142Z",
+    "exitPrice": 0.9845,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "ec07f094-3355-4f1a-a0d1-ab9b5b56e0bc",
