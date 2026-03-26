@@ -13348,5 +13348,29 @@
       {}
     ],
     "updatedAt": "2026-03-26T08:01:50.537Z"
+  },
+  {
+    "id": "d5f083fb-3bd5-4b32-bf76-61521e582db5",
+    "market": "US x Iran ceasefire by April 7?",
+    "side": "Yes",
+    "entryPrice": 0.225,
+    "currentPrice": 0.225,
+    "shares": 78.13,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "debased, GollumGekko, UbuntuTrading, donjo",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 86.1,
+    "avgWinRate": 76.2,
+    "reasoning": "Consensus: 4 whales (avg score 86.1, WR 76.2%) Yes. bet=$17.58, shares=78.13. Whales: debased, GollumGekko, UbuntuTrading, donjo",
+    "endDate": "2026-04-07",
+    "conditionId": "0x4c5701bcde0b8fb7d7f48c8e9d20245a6caa58c61a77f981fad98f2bfa0b1bc7",
+    "createdAt": "2026-03-26T08:02:52.720Z",
+    "entryDate": "2026-03-26T08:02:52.721Z",
+    "invested": 17.5792,
+    "currentValue": 17.5792,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
