@@ -13147,7 +13147,7 @@
     "market": "US x Iran ceasefire by May 31?",
     "side": "Yes",
     "entryPrice": 0.615,
-    "currentPrice": 0.585,
+    "currentPrice": 0.595,
     "shares": 27.06,
     "status": "open",
     "source": "consensus-scanner",
@@ -13162,14 +13162,14 @@
     "createdAt": "2026-03-25T08:02:49.234Z",
     "entryDate": "2026-03-25T08:02:49.234Z",
     "invested": 16.6419,
-    "currentValue": 15.8301,
-    "pnl": -0.8118,
-    "pnlPercent": -4.88,
+    "currentValue": 16.1007,
+    "pnl": -0.5412,
+    "pnlPercent": -3.25,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-26T00:31:10.901Z"
+    "updatedAt": "2026-03-26T01:01:13.345Z"
   },
   {
     "id": "ea02801d-6c4e-4452-8005-db2cd1479a3c",
