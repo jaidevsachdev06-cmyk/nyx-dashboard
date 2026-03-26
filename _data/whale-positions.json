@@ -13066,7 +13066,7 @@
     "entryPrice": 0.905,
     "currentPrice": 0.935,
     "shares": 19.03,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, scottilicious, debased, Gr33d",
     "whaleCount": 4,
@@ -13086,7 +13086,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-26T22:00:57.045Z"
+    "updatedAt": "2026-03-26T22:02:54.264Z",
+    "exitPrice": 0.935,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "ab797994-3785-4f8b-b51e-ac0f84910cdc",
