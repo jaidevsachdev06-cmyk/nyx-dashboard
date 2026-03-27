@@ -13244,7 +13244,7 @@
     "entryPrice": 0.345,
     "currentPrice": 0.375,
     "shares": 53.65,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, Roflan, UbuntuTrading, archaic",
     "whaleCount": 4,
@@ -13264,7 +13264,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-27T02:01:10.244Z"
+    "updatedAt": "2026-03-27T02:03:03.619Z",
+    "exitPrice": 0.375,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "3f670d1f-ac58-4013-b038-b6a8b0496921",
