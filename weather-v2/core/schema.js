@@ -129,11 +129,11 @@ function validateTrade(trade) {
     return { valid: false, errors: ['Trade must be a non-null object'] };
   }
 
-  // Check for unknown fields (no extra garbage)
+  // Check for unknown fields (no extra garbage) — STRICT MODE
   const knownFields = Object.keys(TRADE_SCHEMA);
   for (const key of Object.keys(trade)) {
     if (!knownFields.includes(key)) {
-      errors.push(`Unknown field: "${key}". Only schema-defined fields are allowed.`);
+      errors.push(`SCHEMA VIOLATION: Unknown field "${key}". Only schema-defined fields are allowed. This trade cannot be written to disk.`);
     }
   }
 
