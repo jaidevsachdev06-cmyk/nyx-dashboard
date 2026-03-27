@@ -8641,9 +8641,9 @@
       "bucket": "88-89°F",
       "question": "Will the highest temperature in Dallas be between 88-89°F on March 26?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 4.12,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.14,
       "createdAt": "2026-03-25T10:12:37.422Z",
       "signal": {
         "forecastTemp": 86,
@@ -8685,8 +8685,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.9985,
-      "updatedAt": "2026-03-27T01:00:39.892Z",
+      "currentPrice": 0.997,
+      "updatedAt": "2026-03-27T01:05:08.786Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -8696,11 +8696,17 @@
           "pnlUSDC": 3.6355,
           "timestamp": "2026-03-26T22:45:03.640Z"
         }
-      ]
+      ],
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-27T01:05:11.297Z",
+      "actualTemp": 86.7,
+      "forecastError": 0.7,
+      "closedAt": "2026-03-27T01:05:11.317Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-27T01:00:40.193Z",
-    "lastUpdated": "2026-03-27T00:05:08.380Z"
+    "lastUpdated": "2026-03-27T01:05:11.320Z"
   }
 }
