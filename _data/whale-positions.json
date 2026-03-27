@@ -13474,5 +13474,29 @@
       {}
     ],
     "updatedAt": "2026-03-27T14:01:34.666Z"
+  },
+  {
+    "id": "41306c99-3b7b-4d73-8df3-664baa62156c",
+    "market": "US forces enter Iran by April 30?",
+    "side": "No",
+    "entryPrice": 0.375,
+    "currentPrice": 0.375,
+    "shares": 47.39,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, JJo, debased, UbuntuTrading",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 91.1,
+    "avgWinRate": 77,
+    "reasoning": "Consensus: 4 whales (avg score 91.1, WR 77%) No. bet=$17.77, shares=47.39. Whales: Car, JJo, debased, UbuntuTrading",
+    "endDate": "2026-04-30",
+    "conditionId": "0x6d0e09d0f04572d9b1adad84703458b0297bc5603b69dccbde93147ee4443246",
+    "createdAt": "2026-03-27T14:03:02.658Z",
+    "entryDate": "2026-03-27T14:03:02.658Z",
+    "invested": 17.7713,
+    "currentValue": 17.7713,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
