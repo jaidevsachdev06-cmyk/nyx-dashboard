@@ -13436,5 +13436,29 @@
     "currentValue": 43.2601,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "b88fe7ae-b3be-47e2-a4f3-148e8cddf035",
+    "market": "Kharg Island no longer under Iranian control by March 31?",
+    "side": "No",
+    "entryPrice": 0.945,
+    "currentPrice": 0.945,
+    "shares": 17.16,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "scottilicious, JJo, Car, Gr33d",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 89.6,
+    "avgWinRate": 70.3,
+    "reasoning": "Consensus: 4 whales (avg score 89.6, WR 70.3%) No. bet=$16.22, shares=17.16. Whales: scottilicious, JJo, Car, Gr33d",
+    "endDate": "2026-03-31",
+    "conditionId": "0x4befb52f7cd2b606c63731ad74e677325ff0ed0f48f1104552a34f0f54619ea3",
+    "createdAt": "2026-03-27T02:02:58.410Z",
+    "entryDate": "2026-03-27T02:02:58.410Z",
+    "invested": 16.2162,
+    "currentValue": 16.2162,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
