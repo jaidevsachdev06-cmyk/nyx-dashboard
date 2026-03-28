@@ -13374,7 +13374,7 @@
     "entryPrice": 0.225,
     "currentPrice": 0.10500000000000001,
     "shares": 78.13,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "debased, GollumGekko, UbuntuTrading, donjo",
     "whaleCount": 4,
@@ -13394,7 +13394,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-28T11:01:18.037Z"
+    "updatedAt": "2026-03-28T11:20:52.188Z",
+    "exitPrice": 0.10500000000000001,
+    "notes": "Stop-loss triggered: -53.3% from entry"
   },
   {
     "id": "ecd3ce36-ce1e-49b4-a3da-5e9782d50f4d",
