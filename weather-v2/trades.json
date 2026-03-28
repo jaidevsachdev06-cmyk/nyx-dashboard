@@ -8717,7 +8717,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.99,
+      "pnlUSDC": 2.43,
       "createdAt": "2026-03-28T17:12:25.974Z",
       "signal": {
         "forecastTemp": 59.6,
@@ -8755,8 +8755,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.74,
-      "updatedAt": "2026-03-28T20:00:05.616Z"
+      "currentPrice": 0.82,
+      "updatedAt": "2026-03-28T20:30:06.457Z"
     },
     {
       "id": "oc-mnal8r6k-opmba6",
@@ -8813,10 +8813,55 @@
       "actualTemp": 76.5,
       "forecastError": 6.3,
       "closedAt": "2026-03-28T19:05:07.748Z"
+    },
+    {
+      "id": "oc-mnaro5y8-jzrsn6",
+      "conditionId": "0xd08af49a0f459afde8c9ebdd01d20c0eeaa0b880fe2462215cf6969ccbf00f56",
+      "tokenId": "0x435710a4812695ed598acdf2ffc5abde2433c2be8e33536e1eb545ab22856e76",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-29-2026-62-63f",
+      "city": "Chicago",
+      "date": "2026-03-29",
+      "bucket": "62-63°F",
+      "question": "Will the highest temperature in Chicago be between 62-63°F on March 29?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-28T20:12:22.688Z",
+      "signal": {
+        "forecastTemp": 59.2,
+        "forecastSource": "multi-source",
+        "sources": 4,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.7,
+        "impliedProb": 0.74,
+        "modelProb": 0.7958,
+        "edge": 0.0558,
+        "isLottery": false
+      },
+      "notes": "Forecast: 59.2°F | Model: 80% vs Market: 74% | Edge: 7.5%"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-28T20:00:05.917Z",
-    "lastUpdated": "2026-03-28T19:10:05.380Z"
+    "lastPriceSync": "2026-03-28T20:30:06.757Z",
+    "lastUpdated": "2026-03-28T20:12:22.692Z"
   }
 }
