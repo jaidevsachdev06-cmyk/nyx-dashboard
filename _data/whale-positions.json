@@ -13484,7 +13484,7 @@
     "entryPrice": 0.375,
     "currentPrice": 0.425,
     "shares": 47.39,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, JJo, debased, UbuntuTrading",
     "whaleCount": 4,
@@ -13504,7 +13504,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-28T06:01:39.076Z"
+    "updatedAt": "2026-03-28T06:02:58.990Z",
+    "exitPrice": 0.425,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "c09fac56-378c-49a5-8b32-52a01b2f6630",
