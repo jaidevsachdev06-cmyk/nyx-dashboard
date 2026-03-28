@@ -8920,12 +8920,173 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.5665,
-      "updatedAt": "2026-03-28T22:05:04.360Z"
+      "currentPrice": 0.5655,
+      "updatedAt": "2026-03-28T22:10:04.716Z"
+    },
+    {
+      "id": "oc-mnavygo1-mle1pa",
+      "conditionId": "0xe1d05a1b89f41ba2c7f264c7cbcd7d41f98505e01be2f97f095a1f7a56ef3742",
+      "tokenId": "0x92beb4bb9ba8fc1e8cf1c98060386402e72fc8a421d4f08fe279a631285a4bd8",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-28-2026-56-57f",
+      "city": "Dallas",
+      "date": "2026-03-28",
+      "bucket": "56-57°F",
+      "question": "Will the highest temperature in Dallas be between 56-57°F on March 28?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-28T22:12:21.601Z",
+      "signal": {
+        "forecastTemp": 63.6,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.25,
+        "modelProb": 0.806,
+        "edge": 0.556,
+        "isLottery": false
+      },
+      "notes": "Forecast: 63.6°F | Model: 81% vs Market: 25% | Edge: 222.4%",
+      "entryPrice": 0.25,
+      "size": 50,
+      "sizeUSDC": 12.5,
+      "enteredAt": "2026-03-28T22:12:21.615Z",
+      "orderId": "paper-mnavygoj-4vga",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
+    },
+    {
+      "id": "oc-mnavygoy-l346fu",
+      "conditionId": "0x0d0c66bf4ce03a8f000206e724c0dbfad1b1ee96e81c3050e15d73cce5efc138",
+      "tokenId": "0x59647cfa670f15ae7b7540655ab80e5ef1ceb78972c333dd99b31cb0a1e13065",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-28-2026-46-47f",
+      "city": "Chicago",
+      "date": "2026-03-28",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in Chicago be between 46-47°F on March 28?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-28T22:12:21.634Z",
+      "signal": {
+        "forecastTemp": 49.8,
+        "forecastSource": "multi-source",
+        "sources": 4,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.7,
+        "modelProb": 0.7944,
+        "edge": 0.0944,
+        "isLottery": false
+      },
+      "notes": "Forecast: 49.8°F | Model: 79% vs Market: 70% | Edge: 13.5%",
+      "entryPrice": 0.7,
+      "size": 22,
+      "sizeUSDC": 15.399999999999999,
+      "enteredAt": "2026-03-28T22:12:21.646Z",
+      "orderId": "paper-mnavygpe-jobp",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
+    },
+    {
+      "id": "oc-mnavygpt-fbopaz",
+      "conditionId": "0xf8460629f7d7015361bb964cef0baa2fd2c1c10919100a553197709078a0bbd9",
+      "tokenId": "0x98031d0f044a1359e82484a114f94fc36fb7d949acf18907e9557f87f0ade2e5",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-29-2026-54-55f",
+      "city": "New York City",
+      "date": "2026-03-29",
+      "bucket": "54-55°F",
+      "question": "Will the highest temperature in New York City be between 54-55°F on March 29?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-28T22:12:21.665Z",
+      "signal": {
+        "forecastTemp": 51.5,
+        "forecastSource": "multi-source",
+        "sources": 6,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.4,
+        "impliedProb": 0.725,
+        "modelProb": 0.7947,
+        "edge": 0.0697,
+        "isLottery": false
+      },
+      "notes": "Forecast: 51.5°F | Model: 79% vs Market: 73% | Edge: 9.6%"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-28T22:00:05.017Z",
-    "lastUpdated": "2026-03-28T22:05:06.407Z"
+    "lastUpdated": "2026-03-28T22:12:21.668Z"
   }
 }
