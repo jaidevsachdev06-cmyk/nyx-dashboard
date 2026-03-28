@@ -13612,7 +13612,7 @@
     "market": "Will John Cornyn win the 2026 Texas Republican Primary?",
     "side": "Yes",
     "entryPrice": 0.295,
-    "currentPrice": 0.315,
+    "currentPrice": 0.275,
     "shares": 97.39,
     "status": "open",
     "source": "consensus-scanner",
@@ -13627,14 +13627,14 @@
     "createdAt": "2026-03-28T12:02:51.158Z",
     "entryDate": "2026-03-28T12:02:51.158Z",
     "invested": 28.73,
-    "currentValue": 30.6778,
-    "pnl": 1.9478,
-    "pnlPercent": 6.78,
+    "currentValue": 26.7823,
+    "pnl": -1.9478,
+    "pnlPercent": -6.78,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-28T20:31:10.744Z"
+    "updatedAt": "2026-03-28T21:01:12.780Z"
   },
   {
     "id": "1e567c3f-1dae-453e-8131-bb900ffcf12e",
