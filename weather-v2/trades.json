@@ -8878,7 +8878,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.36,
+      "pnlUSDC": 1.2,
       "createdAt": "2026-03-28T21:12:21.938Z",
       "signal": {
         "forecastTemp": 49.2,
@@ -8920,8 +8920,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.5655,
-      "updatedAt": "2026-03-28T22:10:04.716Z"
+      "currentPrice": 0.626,
+      "updatedAt": "2026-03-28T22:30:03.569Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -8936,7 +8936,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": 5.73,
       "createdAt": "2026-03-28T22:12:21.601Z",
       "signal": {
         "forecastTemp": 63.6,
@@ -8973,7 +8973,9 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.3645,
+      "updatedAt": "2026-03-28T22:30:04.144Z"
     },
     {
       "id": "oc-mnavygoy-l346fu",
@@ -8988,7 +8990,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": -2.09,
       "createdAt": "2026-03-28T22:12:21.634Z",
       "signal": {
         "forecastTemp": 49.8,
@@ -9029,7 +9031,9 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.605,
+      "updatedAt": "2026-03-28T22:30:04.676Z"
     },
     {
       "id": "oc-mnavygpt-fbopaz",
@@ -9086,7 +9090,7 @@
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-28T22:00:05.017Z",
+    "lastPriceSync": "2026-03-28T22:30:04.976Z",
     "lastUpdated": "2026-03-28T22:12:21.668Z"
   }
 }
