@@ -13099,7 +13099,7 @@
     "entryPrice": 0.125,
     "currentPrice": 0.028999999999999998,
     "shares": 145.68,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, debased, Dropper, UbuntuTrading",
     "whaleCount": 4,
@@ -13119,7 +13119,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-28T11:00:55.579Z"
+    "updatedAt": "2026-03-28T11:20:50.830Z",
+    "exitPrice": 0.028999999999999998,
+    "notes": "Stop-loss triggered: -76.8% from entry"
   },
   {
     "id": "ad7027e5-f626-435a-b91c-28f582a7cc9d",
