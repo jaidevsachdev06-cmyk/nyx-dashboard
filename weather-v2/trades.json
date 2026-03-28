@@ -8755,8 +8755,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.965,
-      "updatedAt": "2026-03-28T21:00:04.901Z"
+      "currentPrice": 0.961,
+      "updatedAt": "2026-03-28T21:10:04.709Z"
     },
     {
       "id": "oc-mnal8r6k-opmba6",
@@ -8858,10 +8858,66 @@
         "isLottery": false
       },
       "notes": "Forecast: 59.2°F | Model: 80% vs Market: 74% | Edge: 7.5%"
+    },
+    {
+      "id": "oc-mnattb5e-q1hqkg",
+      "conditionId": "0x18fd006d7a4b8a2fbb4b0202e1f3b7e149f6aafb2e8a928f1f1805463092a339",
+      "tokenId": "0xf892a14a68072dd866b3d8f68fb8a346cf35e6d1ae2b4e723bcce2f989466da0",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-march-29-2026-46-47f",
+      "city": "Seattle",
+      "date": "2026-03-29",
+      "bucket": "46-47°F",
+      "question": "Will the highest temperature in Seattle be between 46-47°F on March 29?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-28T21:12:21.938Z",
+      "signal": {
+        "forecastTemp": 49.2,
+        "forecastSource": "multi-source",
+        "sources": 4,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.2,
+        "impliedProb": 0.58,
+        "modelProb": 0.7936,
+        "edge": 0.2136,
+        "isLottery": false
+      },
+      "notes": "Forecast: 49.2°F | Model: 79% vs Market: 58% | Edge: 36.8%",
+      "entryPrice": 0.58,
+      "size": 26,
+      "sizeUSDC": 15.079999999999998,
+      "enteredAt": "2026-03-28T21:12:21.952Z",
+      "orderId": "paper-mnattb5x-9yus",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-28T21:00:05.201Z",
-    "lastUpdated": "2026-03-28T20:12:22.692Z"
+    "lastUpdated": "2026-03-28T21:12:21.961Z"
   }
 }
