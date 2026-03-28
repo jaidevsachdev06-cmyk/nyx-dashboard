@@ -8878,7 +8878,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.2,
+      "pnlUSDC": 0.35,
       "createdAt": "2026-03-28T21:12:21.938Z",
       "signal": {
         "forecastTemp": 49.2,
@@ -8920,8 +8920,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.626,
-      "updatedAt": "2026-03-28T22:30:03.569Z"
+      "currentPrice": 0.5935,
+      "updatedAt": "2026-03-28T23:00:06.764Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -8936,7 +8936,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 5.73,
+      "pnlUSDC": -1.85,
       "createdAt": "2026-03-28T22:12:21.601Z",
       "signal": {
         "forecastTemp": 63.6,
@@ -8962,10 +8962,10 @@
         "edge": 0.556,
         "isLottery": false
       },
-      "notes": "Forecast: 63.6°F | Model: 81% vs Market: 25% | Edge: 222.4%",
+      "notes": "Forecast: 63.6°F | Model: 81% vs Market: 25% | Edge: 222.4% | SCALP normal-half: sold 25@0.376 (+$3.15)",
       "entryPrice": 0.25,
-      "size": 50,
-      "sizeUSDC": 12.5,
+      "size": 25,
+      "sizeUSDC": 6.25,
       "enteredAt": "2026-03-28T22:12:21.615Z",
       "orderId": "paper-mnavygoj-4vga",
       "tradeSource": "paper",
@@ -8974,8 +8974,18 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.3645,
-      "updatedAt": "2026-03-28T22:30:04.144Z"
+      "currentPrice": 0.176,
+      "updatedAt": "2026-03-28T23:00:07.317Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 25,
+          "price": 0.376,
+          "pnlUSDC": 3.15,
+          "timestamp": "2026-03-28T22:45:04.565Z"
+        }
+      ]
     },
     {
       "id": "oc-mnavygoy-l346fu",
@@ -8990,7 +9000,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.09,
+      "pnlUSDC": 6.59,
       "createdAt": "2026-03-28T22:12:21.634Z",
       "signal": {
         "forecastTemp": 49.8,
@@ -9032,8 +9042,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.605,
-      "updatedAt": "2026-03-28T22:30:04.676Z"
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-03-28T23:00:07.885Z"
     },
     {
       "id": "oc-mnavygpt-fbopaz",
@@ -9090,7 +9100,7 @@
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-28T22:30:04.976Z",
-    "lastUpdated": "2026-03-28T22:12:21.668Z"
+    "lastPriceSync": "2026-03-28T23:00:08.186Z",
+    "lastUpdated": "2026-03-28T22:45:04.570Z"
   }
 }
