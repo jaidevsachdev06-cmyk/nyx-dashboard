@@ -8920,8 +8920,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.5935,
-      "updatedAt": "2026-03-28T23:00:06.764Z"
+      "currentPrice": 0.598,
+      "updatedAt": "2026-03-28T23:05:05.352Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -8974,8 +8974,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.176,
-      "updatedAt": "2026-03-28T23:00:07.317Z",
+      "currentPrice": 0.168,
+      "updatedAt": "2026-03-28T23:05:05.620Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -8998,9 +8998,9 @@
       "bucket": "46-47°F",
       "question": "Will the highest temperature in Chicago be between 46-47°F on March 28?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 6.59,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 6.6,
       "createdAt": "2026-03-28T22:12:21.634Z",
       "signal": {
         "forecastTemp": 49.8,
@@ -9043,7 +9043,13 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-28T23:00:07.885Z"
+      "updatedAt": "2026-03-28T23:05:05.885Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-28T23:05:09.670Z",
+      "actualTemp": 45.8,
+      "forecastError": -4,
+      "closedAt": "2026-03-28T23:05:09.682Z"
     },
     {
       "id": "oc-mnavygpt-fbopaz",
@@ -9101,6 +9107,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-03-28T23:00:08.186Z",
-    "lastUpdated": "2026-03-28T22:45:04.570Z"
+    "lastUpdated": "2026-03-28T23:05:09.685Z"
   }
 }
