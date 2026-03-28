@@ -8703,10 +8703,110 @@
       "actualTemp": 86.7,
       "forecastError": 0.7,
       "closedAt": "2026-03-27T01:05:11.317Z"
+    },
+    {
+      "id": "oc-mnal8r5i-srwoui",
+      "conditionId": "0x3b243b389bd9553e91214618a4a554766791f775e55c4b453e21023caa119bd3",
+      "tokenId": "0x2529582de7085eda6af678c11803a4a084c3986fd3002aebf5c2dd666076334a",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-28-2026-62-63f",
+      "city": "Dallas",
+      "date": "2026-03-28",
+      "bucket": "62-63°F",
+      "question": "Will the highest temperature in Dallas be between 62-63°F on March 28?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-28T17:12:25.974Z",
+      "signal": {
+        "forecastTemp": 59.6,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.685,
+        "modelProb": 0.7929,
+        "edge": 0.1079,
+        "isLottery": false
+      },
+      "notes": "Forecast: 59.6°F | Model: 79% vs Market: 69% | Edge: 15.8%",
+      "entryPrice": 0.685,
+      "size": 18,
+      "sizeUSDC": 12.330000000000002,
+      "enteredAt": "2026-03-28T17:12:25.990Z",
+      "orderId": "paper-mnal8r63-vz9a",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
+    },
+    {
+      "id": "oc-mnal8r6k-opmba6",
+      "conditionId": "0x82df9bd38eb8211fcd5be60a31c14c505777240c3a8bc077299e2f1efae77406",
+      "tokenId": "0x743fd44ccc4446e732de6cdbef96421574d4db1512f580b41c62c3c3b840ff8f",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-28-2026-66-67f",
+      "city": "Atlanta",
+      "date": "2026-03-28",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Atlanta be between 66-67°F on March 28?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-28T17:12:26.012Z",
+      "signal": {
+        "forecastTemp": 70.2,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.69,
+        "modelProb": 0.7759,
+        "edge": 0.0859,
+        "isLottery": false
+      },
+      "notes": "Forecast: 70.2°F | Model: 78% vs Market: 69% | Edge: 12.4%",
+      "entryPrice": 0.69,
+      "size": 13,
+      "sizeUSDC": 8.969999999999999,
+      "enteredAt": "2026-03-28T17:12:26.029Z",
+      "orderId": "paper-mnal8r78-ir0h",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-27T01:00:40.193Z",
-    "lastUpdated": "2026-03-27T01:05:11.320Z"
+    "lastUpdated": "2026-03-28T17:12:26.042Z"
   }
 }
