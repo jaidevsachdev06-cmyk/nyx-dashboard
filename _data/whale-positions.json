@@ -13463,7 +13463,7 @@
     "market": "Kharg Island no longer under Iranian control by March 31?",
     "side": "No",
     "entryPrice": 0.945,
-    "currentPrice": 0.9635,
+    "currentPrice": 0.9684999999999999,
     "shares": 17.16,
     "status": "open",
     "source": "consensus-scanner",
@@ -13478,14 +13478,14 @@
     "createdAt": "2026-03-27T02:02:58.410Z",
     "entryDate": "2026-03-27T02:02:58.410Z",
     "invested": 16.2162,
-    "currentValue": 16.5337,
-    "pnl": 0.3175,
-    "pnlPercent": 1.96,
+    "currentValue": 16.6195,
+    "pnl": 0.4033,
+    "pnlPercent": 2.49,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-28T23:01:02.416Z"
+    "updatedAt": "2026-03-28T23:31:01.948Z"
   },
   {
     "id": "41306c99-3b7b-4d73-8df3-664baa62156c",
