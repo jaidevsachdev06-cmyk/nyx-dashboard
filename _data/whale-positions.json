@@ -12611,7 +12611,7 @@
     "entryPrice": 0.61,
     "currentPrice": 0.295,
     "shares": 18.46,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "nicoco89, elucidate, debased, archaic, Polar",
     "whaleCount": 5,
@@ -12631,7 +12631,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-28T11:00:35.125Z"
+    "updatedAt": "2026-03-28T11:20:46.409Z",
+    "exitPrice": 0.295,
+    "notes": "Stop-loss triggered: -51.6% from entry"
   },
   {
     "id": "26fc4f3e-93ee-45d6-a858-b825cfb05532",
