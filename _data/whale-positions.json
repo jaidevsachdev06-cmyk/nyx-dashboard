@@ -13281,7 +13281,7 @@
     "market": "Will the next Prime Minister of Hungary be Péter Magyar?",
     "side": "No",
     "entryPrice": 0.36,
-    "currentPrice": 0.335,
+    "currentPrice": 0.35,
     "shares": 50.25,
     "status": "open",
     "source": "consensus-scanner",
@@ -13296,14 +13296,14 @@
     "createdAt": "2026-03-26T00:02:51.351Z",
     "entryDate": "2026-03-26T00:02:51.351Z",
     "invested": 18.09,
-    "currentValue": 16.8338,
-    "pnl": -1.2562,
-    "pnlPercent": -6.94,
+    "currentValue": 17.5875,
+    "pnl": -0.5025,
+    "pnlPercent": -2.78,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-29T17:30:55.438Z"
+    "updatedAt": "2026-03-29T18:00:54.388Z"
   },
   {
     "id": "49cee810-d625-4f65-935b-7f21ebfbf251",
