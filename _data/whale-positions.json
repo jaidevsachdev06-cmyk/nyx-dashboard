@@ -13767,9 +13767,9 @@
     "market": "US x Iran ceasefire by April 15?",
     "side": "Yes",
     "entryPrice": 0.195,
-    "currentPrice": 0.135,
+    "currentPrice": 0.145,
     "shares": 223.13,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Dropper, donjo, JJo, debased, aenews, Car",
     "whaleCount": 6,
@@ -13782,13 +13782,15 @@
     "createdAt": "2026-03-29T06:02:51.515Z",
     "entryDate": "2026-03-29T06:02:51.515Z",
     "invested": 43.5104,
-    "currentValue": 30.1226,
-    "pnl": -13.3878,
-    "pnlPercent": -30.77,
+    "currentValue": 32.3538,
+    "pnl": -11.1565,
+    "pnlPercent": -25.64,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-29T12:01:13.991Z"
+    "updatedAt": "2026-03-29T12:02:54.199Z",
+    "exitPrice": 0.145,
+    "notes": "Stop-loss: -30.8% from entry ($0.195 → $0.135)"
   }
 ]
