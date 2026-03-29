@@ -8878,7 +8878,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.63,
+      "pnlUSDC": 1.27,
       "createdAt": "2026-03-28T21:12:21.938Z",
       "signal": {
         "forecastTemp": 49.2,
@@ -8920,8 +8920,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.6425,
-      "updatedAt": "2026-03-29T02:30:04.094Z"
+      "currentPrice": 0.629,
+      "updatedAt": "2026-03-29T03:00:04.539Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -8975,7 +8975,7 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.011,
-      "updatedAt": "2026-03-29T02:30:04.650Z",
+      "updatedAt": "2026-03-29T03:00:05.097Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -9106,7 +9106,7 @@
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-29T02:30:04.950Z",
+    "lastPriceSync": "2026-03-29T03:00:05.397Z",
     "lastUpdated": "2026-03-29T02:10:06.811Z"
   }
 }
