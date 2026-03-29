@@ -13816,5 +13816,29 @@
     "currentValue": 18.1188,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "f7586079-341d-4e03-87ed-a004f14e3adf",
+    "market": "US x Iran ceasefire by April 15?",
+    "side": "Yes",
+    "entryPrice": 0.145,
+    "currentPrice": 0.145,
+    "shares": 116.34,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Dropper, donjo, debased, JJo",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 89.1,
+    "avgWinRate": 73.1,
+    "reasoning": "Consensus: 4 whales (avg score 89.1, WR 73.1%) Yes. bet=$16.87, shares=116.34. Whales: Dropper, donjo, debased, JJo",
+    "endDate": "2026-04-15",
+    "conditionId": "0x773abaa5fe55e5cde51a261f444b7921652a4e059ead6b3be9fe56499c2d4609",
+    "createdAt": "2026-03-29T14:03:03.625Z",
+    "entryDate": "2026-03-29T14:03:03.625Z",
+    "invested": 16.8693,
+    "currentValue": 16.8693,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
