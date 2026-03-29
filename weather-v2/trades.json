@@ -8875,8 +8875,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.5795,
-      "updatedAt": "2026-03-29T10:00:06.059Z"
+      "currentPrice": 0.587,
+      "updatedAt": "2026-03-29T10:10:06.033Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -9059,8 +9059,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.785,
-      "updatedAt": "2026-03-29T10:00:06.614Z"
+      "currentPrice": 0.78,
+      "updatedAt": "2026-03-29T10:10:06.269Z"
     },
     {
       "id": "oc-mnbf84dw-wgyyow",
@@ -9174,12 +9174,64 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.715,
-      "updatedAt": "2026-03-29T10:00:07.165Z"
+      "currentPrice": 0.735,
+      "updatedAt": "2026-03-29T10:10:06.540Z"
+    },
+    {
+      "id": "oc-mnblnfbl-zmub6a",
+      "conditionId": "0x6b6d534a883aaeafea5f900decb185de0e617ab4c2efc4ac106fd97fbac906f0",
+      "tokenId": "0xe65bf4441aa2a491d5438f7981275ac852a74bfd6db9bf6d1288e3ecbff0b5eb",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-29-2026-80-81f",
+      "city": "Dallas",
+      "date": "2026-03-29",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Dallas be between 80-81°F on March 29?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-29T10:11:36.657Z",
+      "signal": {
+        "forecastTemp": 83.1,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.685,
+        "modelProb": 0.7918,
+        "edge": 0.1068,
+        "isLottery": false
+      },
+      "notes": "Forecast: 83.1°F | Model: 79% vs Market: 69% | Edge: 15.6%",
+      "entryPrice": 0.685,
+      "size": 18,
+      "sizeUSDC": 12.330000000000002,
+      "enteredAt": "2026-03-29T10:11:36.672Z",
+      "orderId": "paper-mnblnfc5-9lbu",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-29T10:00:07.465Z",
-    "lastUpdated": "2026-03-29T09:11:35.798Z"
+    "lastUpdated": "2026-03-29T10:11:36.682Z"
   }
 }
