@@ -8875,8 +8875,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.4655,
-      "updatedAt": "2026-03-29T17:00:04.614Z"
+      "currentPrice": 0.4215,
+      "updatedAt": "2026-03-29T17:10:04.461Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -9059,8 +9059,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.655,
-      "updatedAt": "2026-03-29T17:00:05.177Z"
+      "currentPrice": 0.685,
+      "updatedAt": "2026-03-29T17:10:04.739Z"
     },
     {
       "id": "oc-mnbf84dw-wgyyow",
@@ -9174,8 +9174,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.615,
-      "updatedAt": "2026-03-29T17:00:05.720Z"
+      "currentPrice": 0.66,
+      "updatedAt": "2026-03-29T17:10:05.009Z"
     },
     {
       "id": "oc-mnblnfbl-zmub6a",
@@ -9228,12 +9228,64 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.705,
-      "updatedAt": "2026-03-29T17:00:06.250Z"
+      "currentPrice": 0.655,
+      "updatedAt": "2026-03-29T17:10:05.262Z"
+    },
+    {
+      "id": "oc-mnc0njp5-8awr57",
+      "conditionId": "0xe8376f83fa2b2d74fb0ea861810df724c6b00356e69c0980df235b4e490e44b9",
+      "tokenId": "0xec972d91a8440edb8dc6c02106dada5e1fa9729136e4d70e7958419cd5d64a98",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-29-2026-52-53f",
+      "city": "New York City",
+      "date": "2026-03-29",
+      "bucket": "52-53°F",
+      "question": "Will the highest temperature in New York City be between 52-53°F on March 29?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-29T17:11:36.569Z",
+      "signal": {
+        "forecastTemp": 55.3,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.6,
+        "impliedProb": 0.535,
+        "modelProb": 0.7927,
+        "edge": 0.2577,
+        "isLottery": false
+      },
+      "notes": "Forecast: 55.3°F | Model: 79% vs Market: 54% | Edge: 48.2%",
+      "entryPrice": 0.535,
+      "size": 23,
+      "sizeUSDC": 12.305000000000001,
+      "enteredAt": "2026-03-29T17:11:36.583Z",
+      "orderId": "paper-mnc0njpo-36xn",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-29T17:00:06.550Z",
-    "lastUpdated": "2026-03-29T16:10:04.979Z"
+    "lastUpdated": "2026-03-29T17:11:36.593Z"
   }
 }
