@@ -13738,7 +13738,7 @@
     "market": "US forces enter Iran by April 30?",
     "side": "No",
     "entryPrice": 0.375,
-    "currentPrice": 0.28500000000000003,
+    "currentPrice": 0.295,
     "shares": 47.07,
     "status": "open",
     "source": "consensus-scanner",
@@ -13753,14 +13753,14 @@
     "createdAt": "2026-03-29T04:02:50.582Z",
     "entryDate": "2026-03-29T04:02:50.582Z",
     "invested": 17.6513,
-    "currentValue": 13.415,
-    "pnl": -4.2363,
-    "pnlPercent": -24,
+    "currentValue": 13.8857,
+    "pnl": -3.7656,
+    "pnlPercent": -21.33,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-29T14:01:11.933Z"
+    "updatedAt": "2026-03-29T14:31:15.624Z"
   },
   {
     "id": "d70cf548-f734-4a98-b0ee-51b203d1d915",
