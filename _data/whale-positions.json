@@ -12669,7 +12669,7 @@
     "market": "Netanyahu out by March 31?",
     "side": "No",
     "entryPrice": 0.9725,
-    "currentPrice": 0.9944999999999999,
+    "currentPrice": 0.9935,
     "shares": 16.99,
     "status": "open",
     "source": "consensus-scanner",
@@ -12684,14 +12684,14 @@
     "createdAt": "2026-03-19T00:02:52.565Z",
     "entryDate": "2026-03-19T00:02:52.565Z",
     "invested": 16.5228,
-    "currentValue": 16.8966,
-    "pnl": 0.3738,
-    "pnlPercent": 2.26,
+    "currentValue": 16.8796,
+    "pnl": 0.3568,
+    "pnlPercent": 2.16,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-29T08:00:34.554Z"
+    "updatedAt": "2026-03-29T08:30:34.188Z"
   },
   {
     "id": "ae60e53e-c7f0-4f9a-adba-600fee880a1b",
