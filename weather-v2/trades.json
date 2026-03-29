@@ -8920,8 +8920,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.629,
-      "updatedAt": "2026-03-29T03:00:04.539Z"
+      "currentPrice": 0.6305,
+      "updatedAt": "2026-03-29T03:05:04.617Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -8934,9 +8934,9 @@
       "bucket": "56-57°F",
       "question": "Will the highest temperature in Dallas be between 56-57°F on March 28?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -5.97,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -6.25,
       "createdAt": "2026-03-28T22:12:21.601Z",
       "signal": {
         "forecastTemp": 63.6,
@@ -8974,8 +8974,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.011,
-      "updatedAt": "2026-03-29T03:00:05.097Z",
+      "currentPrice": 0.0075,
+      "updatedAt": "2026-03-29T03:05:04.862Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -8985,7 +8985,13 @@
           "pnlUSDC": 3.15,
           "timestamp": "2026-03-28T22:45:04.565Z"
         }
-      ]
+      ],
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-29T03:05:07.658Z",
+      "actualTemp": 59.1,
+      "forecastError": -4.5,
+      "closedAt": "2026-03-29T03:05:07.681Z"
     },
     {
       "id": "oc-mnavygoy-l346fu",
@@ -9107,6 +9113,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-03-29T03:00:05.397Z",
-    "lastUpdated": "2026-03-29T02:10:06.811Z"
+    "lastUpdated": "2026-03-29T03:05:07.684Z"
   }
 }
