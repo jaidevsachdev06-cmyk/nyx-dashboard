@@ -8920,8 +8920,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.6375,
-      "updatedAt": "2026-03-29T04:00:06.445Z"
+      "currentPrice": 0.6335,
+      "updatedAt": "2026-03-29T04:10:05.751Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -9109,10 +9109,58 @@
         "isLottery": false
       },
       "notes": "Forecast: 51.5°F | Model: 79% vs Market: 73% | Edge: 9.6%"
+    },
+    {
+      "id": "oc-mnb8t3vs-ni7rgn",
+      "conditionId": "0xced875c81b33296989bfe995d068fce63a619746b73defe6ba312315f7b0eb17",
+      "tokenId": "0xe2cd936100c8490ac8dfcbd59c7f2676688c8d71f543395b2551d9c838b91d32",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-march-29-2026-66-67f",
+      "city": "Atlanta",
+      "date": "2026-03-29",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in Atlanta be between 66-67°F on March 29?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-29T04:12:06.760Z",
+      "signal": {
+        "forecastTemp": 63.6,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.5,
+        "impliedProb": 0.69,
+        "modelProb": 0.7747,
+        "edge": 0.0847,
+        "isLottery": false
+      },
+      "notes": "Forecast: 63.6°F | Model: 77% vs Market: 69% | Edge: 12.3%",
+      "entryPrice": 0.69,
+      "size": 13,
+      "sizeUSDC": 8.969999999999999,
+      "enteredAt": "2026-03-29T04:12:06.774Z",
+      "orderId": "paper-mnb8t3wc-er5i",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-29T04:00:06.746Z",
-    "lastUpdated": "2026-03-29T03:10:04.292Z"
+    "lastUpdated": "2026-03-29T04:12:06.785Z"
   }
 }
