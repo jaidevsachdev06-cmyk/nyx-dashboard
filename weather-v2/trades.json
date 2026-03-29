@@ -8833,7 +8833,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.7,
+      "pnlUSDC": -0.14,
       "createdAt": "2026-03-28T21:12:21.938Z",
       "signal": {
         "forecastTemp": 49.2,
@@ -8875,8 +8875,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.607,
-      "updatedAt": "2026-03-29T07:00:06.320Z"
+      "currentPrice": 0.5745,
+      "updatedAt": "2026-03-29T07:30:04.756Z"
     },
     {
       "id": "oc-mnavygo1-mle1pa",
@@ -9060,11 +9060,68 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.74,
-      "updatedAt": "2026-03-29T07:00:06.858Z"
+      "updatedAt": "2026-03-29T07:30:05.302Z"
+    },
+    {
+      "id": "oc-mnbf84dw-wgyyow",
+      "conditionId": "0xf8460629f7d7015361bb964cef0baa2fd2c1c10919100a553197709078a0bbd9",
+      "tokenId": "0x98031d0f044a1359e82484a114f94fc36fb7d949acf18907e9557f87f0ade2e5",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-29-2026-54-55f",
+      "city": "New York City",
+      "date": "2026-03-29",
+      "bucket": "54-55°F",
+      "question": "Will the highest temperature in New York City be between 54-55°F on March 29?",
+      "side": "NO",
+      "status": "candidate",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-29T07:11:44.948Z",
+      "signal": {
+        "forecastTemp": 50.3,
+        "forecastSource": "multi-source",
+        "sources": 7,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 5,
+        "impliedProb": 0.745,
+        "modelProb": 0.7978,
+        "edge": 0.0528,
+        "isLottery": false
+      },
+      "notes": "Forecast: 50.3°F | Model: 80% vs Market: 75% | Edge: 7.1%"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-29T07:00:07.159Z",
-    "lastUpdated": "2026-03-29T06:10:05.125Z"
+    "lastPriceSync": "2026-03-29T07:30:05.602Z",
+    "lastUpdated": "2026-03-29T07:11:44.952Z"
   }
 }
