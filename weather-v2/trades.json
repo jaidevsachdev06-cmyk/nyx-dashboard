@@ -8821,51 +8821,6 @@
       "closedAt": "2026-03-28T19:05:07.748Z"
     },
     {
-      "id": "oc-mnaro5y8-jzrsn6",
-      "conditionId": "0xd08af49a0f459afde8c9ebdd01d20c0eeaa0b880fe2462215cf6969ccbf00f56",
-      "tokenId": "0x435710a4812695ed598acdf2ffc5abde2433c2be8e33536e1eb545ab22856e76",
-      "tokenSide": "NO",
-      "marketSlug": "highest-temperature-in-chicago-on-march-29-2026-62-63f",
-      "city": "Chicago",
-      "date": "2026-03-29",
-      "bucket": "62-63°F",
-      "question": "Will the highest temperature in Chicago be between 62-63°F on March 29?",
-      "side": "NO",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-03-28T20:12:22.688Z",
-      "signal": {
-        "forecastTemp": 59.2,
-        "forecastSource": "multi-source",
-        "sources": 4,
-        "sourceDetails": [
-          {
-            "source": "open-meteo",
-            "weight": "0.650"
-          },
-          {
-            "source": "noaa",
-            "weight": "0.850"
-          },
-          {
-            "source": "visualcrossing",
-            "weight": "0.750"
-          },
-          {
-            "source": "weatherapi",
-            "weight": "0.700"
-          }
-        ],
-        "forecastSD": 4.7,
-        "impliedProb": 0.74,
-        "modelProb": 0.7958,
-        "edge": 0.0558,
-        "isLottery": false
-      },
-      "notes": "Forecast: 59.2°F | Model: 80% vs Market: 74% | Edge: 7.5%"
-    },
-    {
       "id": "oc-mnattb5e-q1hqkg",
       "conditionId": "0x18fd006d7a4b8a2fbb4b0202e1f3b7e149f6aafb2e8a928f1f1805463092a339",
       "tokenId": "0xf892a14a68072dd866b3d8f68fb8a346cf35e6d1ae2b4e723bcce2f989466da0",
@@ -9056,59 +9011,6 @@
       "actualTemp": 45.8,
       "forecastError": -4,
       "closedAt": "2026-03-28T23:05:09.682Z"
-    },
-    {
-      "id": "oc-mnavygpt-fbopaz",
-      "conditionId": "0xf8460629f7d7015361bb964cef0baa2fd2c1c10919100a553197709078a0bbd9",
-      "tokenId": "0x98031d0f044a1359e82484a114f94fc36fb7d949acf18907e9557f87f0ade2e5",
-      "tokenSide": "NO",
-      "marketSlug": "highest-temperature-in-nyc-on-march-29-2026-54-55f",
-      "city": "New York City",
-      "date": "2026-03-29",
-      "bucket": "54-55°F",
-      "question": "Will the highest temperature in New York City be between 54-55°F on March 29?",
-      "side": "NO",
-      "status": "candidate",
-      "result": null,
-      "pnlUSDC": null,
-      "createdAt": "2026-03-28T22:12:21.665Z",
-      "signal": {
-        "forecastTemp": 51.5,
-        "forecastSource": "multi-source",
-        "sources": 6,
-        "sourceDetails": [
-          {
-            "source": "open-meteo",
-            "weight": "0.650"
-          },
-          {
-            "source": "open-meteo",
-            "weight": "0.650"
-          },
-          {
-            "source": "open-meteo",
-            "weight": "0.650"
-          },
-          {
-            "source": "noaa",
-            "weight": "0.850"
-          },
-          {
-            "source": "visualcrossing",
-            "weight": "0.750"
-          },
-          {
-            "source": "weatherapi",
-            "weight": "0.700"
-          }
-        ],
-        "forecastSD": 4.4,
-        "impliedProb": 0.725,
-        "modelProb": 0.7947,
-        "edge": 0.0697,
-        "isLottery": false
-      },
-      "notes": "Forecast: 51.5°F | Model: 79% vs Market: 73% | Edge: 9.6%"
     },
     {
       "id": "oc-mnb8t3vs-ni7rgn",
