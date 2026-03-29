@@ -25,7 +25,7 @@
     "maxPositionSizeUSDC": 50,
     "maxOpenPositions": 20,
     "maxDailyLossUSDC": 50,
-    "minEdgePct": 10,
+    "minEdgePct": 15,
     "maxExposurePerCity": 150,
     "kellyMultiplier": 0.25,
     "defaultSizeUSDC": 6,

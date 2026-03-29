@@ -15,6 +15,20 @@ async function processCandidate(signal) {
   const tag = `[entry] ${signal.city} ${signal.date} ${signal.bucket} ${signal.side}`;
   console.log(`${tag} — Processing candidate...`);
 
+  // FIX (2026-03-29): ENFORCE CITY BLACKLIST
+  // Previous: not checked, allowing 20+ trades on London, Toronto, Miami
+  const cityBlacklist = config.risk?.cityBlacklist || [];
+  if (cityBlacklist.includes(signal.city)) {
+    return { entered: false, trade: null, reason: `City blacklisted: ${signal.city}` };
+  }
+
+  // FIX (2026-03-29): ENFORCE BUCKET TYPE BLACKLIST
+  const bucketTypeBlacklist = config.risk?.bucketTypeBlacklist || [];
+  const bucketType = signal.bucketType || (signal.bucket || '').toLowerCase();
+  if (bucketTypeBlacklist.some(pattern => bucketType.includes(pattern))) {
+    return { entered: false, trade: null, reason: `Bucket type blacklisted: ${bucketType}` };
+  }
+
   // FIX 6 (2026-03-14): Reject expired or near-expiry markets
   // The bug: scanner entered a March 13 market at 03:13 UTC on March 14.
   // Market resolved 50 mins later → guaranteed loss.
@@ -103,13 +117,10 @@ async function processCandidate(signal) {
   const edgePct = (edge / currentPrice) * 100;
   const rawProb = signal.rawModelProb || signal.modelProb;
 
-  // High-confidence bypass: raw >= 85% AND market <= 80c → skip edge % check
-  // Historical: 52 trades at raw 85%+, 76.9% WR, +$129 in V3 universe
-  // At 65-80c entry: 87% WR. Above 80c: 0% WR → cap bypass at 80c.
-  // Bypass edge check for high-confidence trades, but still require ≥3% edge minimum
-  // Without this floor: enters negative-edge trades where model agrees with market
-  const highConfBypass = rawProb >= 0.85 && currentPrice <= 0.80 && edgePct >= 3;
-  if (!highConfBypass && edgePct < config.risk.minEdgePct) {
+  // FIX (2026-03-29): STRICT EDGE CHECK — no bypass
+  // Previous highConfBypass (raw >= 85% && price <= 80c && edge >= 3%) allowed 86 trades with edge < 15%
+  // This decimated P&L. Require all trades to meet minEdgePct threshold (15%)
+  if (edgePct < config.risk.minEdgePct) {
     return { entered: false, trade: null, reason: `Insufficient edge: ${edgePct.toFixed(1)}% (min: ${config.risk.minEdgePct}%)` };
   }
 
