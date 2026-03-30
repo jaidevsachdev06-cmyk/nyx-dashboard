@@ -24,9 +24,14 @@ const config = require('../config.json');
 const { normalCDF, parseBucket, bucketProbability } = require('./scanner');
 
 // Config defaults (can be overridden in config.json under risk.thesisCheck)
+// 
+// exitEdgeThreshold: -10% means only exit when edge drops to -10% (model says we're 10% underwater).
+// This absorbs normal forecast noise (±0.5σ moves) without false-exiting winners.
+// Backtest V2 showed that 0% threshold would cause 38% false exits on wins.
+// At -10%, only 11-15% of wins would be at risk (the truly fragile ones).
 const DEFAULTS = {
   enabled: true,
-  exitEdgeThreshold: 0,        // Exit when calibrated edge drops below 0% (thesis dead)
+  exitEdgeThreshold: -10,      // Exit when edge drops below -10% (absorbs normal noise)
   graceMinutes: 60,            // Don't exit within 60 min of entry (forecast noise)
   nearResolutionHours: 4,      // Don't exit within 4h of resolution (let it ride)
   logOnly: false,              // If true, log but don't actually exit (dry run mode)

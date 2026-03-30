@@ -55,7 +55,7 @@
     },
     "thesisCheck": {
       "enabled": true,
-      "exitEdgeThreshold": 0,
+      "exitEdgeThreshold": -10,
       "graceMinutes": 60,
       "nearResolutionHours": 4,
       "logOnly": false
