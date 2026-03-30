@@ -9029,9 +9029,9 @@
       "bucket": "66-67°F",
       "question": "Will the highest temperature in Atlanta be between 66-67°F on March 29?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 3.96,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.03,
       "createdAt": "2026-03-29T04:12:06.760Z",
       "signal": {
         "forecastTemp": 63.6,
@@ -9065,8 +9065,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.9945,
-      "updatedAt": "2026-03-30T00:00:05.885Z"
+      "currentPrice": 0.9955,
+      "updatedAt": "2026-03-30T00:05:04.031Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-30T00:05:06.361Z",
+      "actualTemp": 66,
+      "forecastError": 2.4,
+      "closedAt": "2026-03-30T00:05:06.374Z"
     },
     {
       "id": "oc-mnbf84dw-wgyyow",
@@ -9180,8 +9186,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.0135,
-      "updatedAt": "2026-03-30T00:00:06.469Z"
+      "currentPrice": 0.0125,
+      "updatedAt": "2026-03-30T00:05:04.297Z"
     },
     {
       "id": "oc-mnblnfbl-zmub6a",
@@ -9306,6 +9312,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-03-30T00:00:06.771Z",
-    "lastUpdated": "2026-03-29T23:10:07.933Z"
+    "lastUpdated": "2026-03-30T00:05:06.376Z"
   }
 }
