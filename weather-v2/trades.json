@@ -9132,6 +9132,244 @@
       "notes": "Forecast: 50.3°F | Model: 80% vs Market: 75% | Edge: 7.1%",
       "resolutionSource": "manual-audit",
       "closedAt": "2026-03-30T12:22:41.732Z"
+    },
+    {
+      "id": "oc-mnbji8t6-ldely1",
+      "conditionId": "0xd08af49a0f459afde8c9ebdd01d20c0eeaa0b880fe2462215cf6969ccbf00f56",
+      "tokenId": "0x435710a4812695ed598acdf2ffc5abde2433c2be8e33536e1eb545ab22856e76",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-march-29-2026-62-63f",
+      "city": "Chicago",
+      "date": "2026-03-29",
+      "bucket": "62-63°F",
+      "question": "Will the highest temperature in Chicago be between 62-63°F on March 29?",
+      "side": "NO",
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -15.18,
+      "createdAt": "2026-03-29T09:11:35.706Z",
+      "signal": {
+        "forecastTemp": 66.6,
+        "forecastSource": "multi-source",
+        "sources": 4,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.9,
+        "impliedProb": 0.69,
+        "modelProb": 0.7972,
+        "edge": 0.1072,
+        "isLottery": false
+      },
+      "notes": "Forecast: 66.6°F | Model: 80% vs Market: 69% | Edge: 15.5%",
+      "entryPrice": 0.69,
+      "size": 22,
+      "sizeUSDC": 15.18,
+      "enteredAt": "2026-03-29T09:11:35.753Z",
+      "orderId": "paper-mnbji8va-5q8a",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.007,
+      "updatedAt": "2026-03-30T01:05:04.154Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-30T01:05:06.292Z",
+      "actualTemp": 61.1,
+      "forecastError": -5.5,
+      "closedAt": "2026-03-30T01:05:06.309Z"
+    },
+    {
+      "id": "oc-mnblnfbl-zmub6a",
+      "conditionId": "0x6b6d534a883aaeafea5f900decb185de0e617ab4c2efc4ac106fd97fbac906f0",
+      "tokenId": "0xe65bf4441aa2a491d5438f7981275ac852a74bfd6db9bf6d1288e3ecbff0b5eb",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-march-29-2026-80-81f",
+      "city": "Dallas",
+      "date": "2026-03-29",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Dallas be between 80-81°F on March 29?",
+      "side": "NO",
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.67,
+      "createdAt": "2026-03-29T10:11:36.657Z",
+      "signal": {
+        "forecastTemp": 83.1,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.685,
+        "modelProb": 0.7918,
+        "edge": 0.1068,
+        "isLottery": false
+      },
+      "notes": "Forecast: 83.1°F | Model: 79% vs Market: 69% | Edge: 15.6%",
+      "entryPrice": 0.685,
+      "size": 18,
+      "sizeUSDC": 12.330000000000002,
+      "enteredAt": "2026-03-29T10:11:36.672Z",
+      "orderId": "paper-mnblnfc5-9lbu",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-03-29T22:05:04.878Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-29T22:05:08.886Z",
+      "actualTemp": 79.6,
+      "forecastError": -3.5,
+      "closedAt": "2026-03-29T22:05:08.896Z"
+    },
+    {
+      "id": "oc-mnc0njp5-8awr57",
+      "conditionId": "0xe8376f83fa2b2d74fb0ea861810df724c6b00356e69c0980df235b4e490e44b9",
+      "tokenId": "0xec972d91a8440edb8dc6c02106dada5e1fa9729136e4d70e7958419cd5d64a98",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-29-2026-52-53f",
+      "city": "New York City",
+      "date": "2026-03-29",
+      "bucket": "52-53°F",
+      "question": "Will the highest temperature in New York City be between 52-53°F on March 29?",
+      "side": "NO",
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.305,
+      "createdAt": "2026-03-29T17:11:36.569Z",
+      "signal": {
+        "forecastTemp": 55.3,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.6,
+        "impliedProb": 0.535,
+        "modelProb": 0.7927,
+        "edge": 0.2577,
+        "isLottery": false
+      },
+      "notes": "Forecast: 55.3°F | Model: 79% vs Market: 54% | Edge: 48.2%",
+      "entryPrice": 0.535,
+      "size": 23,
+      "sizeUSDC": 12.305000000000001,
+      "enteredAt": "2026-03-29T17:11:36.583Z",
+      "orderId": "paper-mnc0njpo-36xn",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.0065,
+      "updatedAt": "2026-03-29T21:05:06.019Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-29T21:05:10.885Z",
+      "actualTemp": 52.2,
+      "forecastError": -3.1,
+      "closedAt": "2026-03-29T21:05:10.895Z"
+    },
+    {
+      "id": "oc-mncjyz2d-ommevb",
+      "conditionId": "0xb4dcb2c487cf0ff79850ae7346d72a739a99432fa6739b91de6e8b64cbbeb332",
+      "tokenId": "0x8655cd1d2c6c738bd6ad1b04c1233f838506ded7e97214ee15655de6c6518b14",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-30-2026-64-65f",
+      "city": "New York City",
+      "date": "2026-03-30",
+      "bucket": "64-65°F",
+      "question": "Will the highest temperature in New York City be between 64-65°F on March 30?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": 1.23,
+      "createdAt": "2026-03-30T02:12:22.405Z",
+      "signal": {
+        "forecastTemp": 61.8,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.7,
+        "impliedProb": 0.655,
+        "modelProb": 0.7926,
+        "edge": 0.1376,
+        "isLottery": false
+      },
+      "notes": "Forecast: 61.8°F | Model: 79% vs Market: 66% | Edge: 21.0%",
+      "entryPrice": 0.655,
+      "size": 19,
+      "sizeUSDC": 12.445,
+      "enteredAt": "2026-03-30T02:12:22.429Z",
+      "orderId": "paper-mncjyz3f-89gr",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.745,
+      "updatedAt": "2026-03-30T08:10:04.103Z"
     }
   ],
   "meta": {
