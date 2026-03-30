@@ -8,6 +8,7 @@
 const { scan } = require('../stormwatch/scanner');
 const { processCandidate } = require('../stormwatch/entry');
 const { scanAll: runScalper } = require('../stormwatch/scalper');
+const { checkAllPositions: runThesisCheck } = require('../stormwatch/thesis-check');
 const { syncPrices } = require('../core/price-sync');
 const config = require('../config.json');
 
@@ -84,6 +85,20 @@ async function main() {
 
   const result = await scan();
 
+  // Step 1: Thesis check — re-evaluate open positions against fresh forecasts
+  // This catches positions where the forecast shifted and the original edge evaporated
+  let thesisResults = { checked: 0, exits: [], skipped: 0, errors: [] };
+  if (result.forecasts) {
+    try {
+      thesisResults = await runThesisCheck(result.forecasts);
+      if (thesisResults.exits.length > 0) {
+        console.log(`[run-scan] Thesis check: ${thesisResults.exits.length} positions exited (forecast shifted)`);
+      }
+    } catch (err) {
+      console.error('[run-scan] Thesis check error (continuing to scan):', err.message);
+    }
+  }
+
   console.log(`\n[run-scan] Found ${result.candidates.length} candidates, ${result.passing.length} pass threshold`);
 
   // Initialize entry tracking
@@ -117,20 +132,28 @@ async function main() {
 
     console.log(`[run-scan] After sorting & filtering: ${result.passing.length} candidates (${normalTrades.length} normal, ${topLottery.length} lottery)`);
 
-    // Enter trades
-    for (const candidate of result.passing) {
-      try {
-        const res = await processCandidate(candidate);
-        if (res.entered) {
-          entered++;
-          enteredTrades.push(candidate);
-        } else {
-          console.log(`[run-scan] Skipped: ${res.reason}`);
-          skipped.push({ candidate, reason: res.reason });
+    // Enter trades (or log-only if analysisOnly mode)
+    if (config.analysisOnly) {
+      console.log(`[run-scan] ⚠️ ANALYSIS-ONLY MODE — logging candidates, no trades entered`);
+      for (const candidate of result.passing) {
+        console.log(`[run-scan] [ANALYSIS] ${candidate.city} ${candidate.bucket} ${candidate.side} @ ${(candidate.marketPrice*100).toFixed(0)}¢ | model: ${(candidate.modelProb*100).toFixed(0)}% | edge: ${(candidate.edge*100).toFixed(0)}pp`);
+        skipped.push({ candidate, reason: 'analysis-only mode' });
+      }
+    } else {
+      for (const candidate of result.passing) {
+        try {
+          const res = await processCandidate(candidate);
+          if (res.entered) {
+            entered++;
+            enteredTrades.push(candidate);
+          } else {
+            console.log(`[run-scan] Skipped: ${res.reason}`);
+            skipped.push({ candidate, reason: res.reason });
+          }
+        } catch (err) {
+          console.error(`[run-scan] Error: ${err.message}`);
+          skipped.push({ candidate, reason: err.message });
         }
-      } catch (err) {
-        console.error(`[run-scan] Error: ${err.message}`);
-        skipped.push({ candidate, reason: err.message });
       }
     }
 
@@ -143,7 +166,7 @@ async function main() {
   console.log('\n' + JSON.stringify(scanResult, null, 2));
   
   // Build notification
-  let msg = `🌪️ Weather Scan Complete\n\n`;
+  let msg = config.analysisOnly ? `🌪️ Weather Scan (ANALYSIS ONLY)\n\n` : `🌪️ Weather Scan Complete\n\n`;
   
   // Scalper results first
   if (scalperResults.scalps.length > 0 || scalperResults.exits.length > 0) {
@@ -157,12 +180,27 @@ async function main() {
     msg += `\n`;
   }
   
+  // Thesis exit results
+  if (thesisResults.exits.length > 0) {
+    msg += `🌪️ Thesis exits (forecast shifted):\n`;
+    for (const te of thesisResults.exits) {
+      const pnlStr = te.pnlUSDC >= 0 ? `+$${te.pnlUSDC.toFixed(2)}` : `-$${Math.abs(te.pnlUSDC).toFixed(2)}`;
+      msg += `• ${te.city} ${te.bucket} ${te.side} | ${pnlStr} | ${te.reason}\n`;
+    }
+    msg += `\n`;
+  }
+  
   if (entered > 0) {
     msg += `${entered} trade${entered > 1 ? 's' : ''} entered.\n\n`;
     msg += `Positions:\n`;
     for (const t of enteredTrades) {
       const lottery = t.modelProb < 0.6 && t.edgePct > 100 ? ' 🎰' : '';
       msg += `• ${t.city} ${t.bucket} ${t.side} @ ${(t.marketPrice*100).toFixed(0)}¢ (edge: ${t.edgePct.toFixed(0)}%)${lottery}\n`;
+    }
+  } else if (config.analysisOnly && result.passing && result.passing.length > 0) {
+    msg += `${result.passing.length} candidate${result.passing.length > 1 ? 's' : ''} found (not entered — analysis only):\n`;
+    for (const c of result.passing) {
+      msg += `• ${c.city} ${c.bucket} ${c.side} @ ${(c.marketPrice*100).toFixed(0)}¢ | model: ${(c.modelProb*100).toFixed(0)}% | edge: ${(c.edge*100).toFixed(0)}pp\n`;
     }
   } else {
     msg += `No trades entered this cycle.\n`;
@@ -248,14 +286,18 @@ async function main() {
   
   await sendTelegram(msg);
   
-  // Auto-push if any trades were entered
-  if (entered > 0) {
+  // Auto-push if any trades were entered or thesis-exited
+  if (entered > 0 || thesisResults.exits.length > 0) {
     try {
       const { execSync } = require('child_process');
       const path = require('path');
       const GIT_DIR = path.resolve(__dirname, '..', '..');
       execSync(`git -C ${GIT_DIR} add weather-v2/trades.json`, { stdio: 'pipe' });
-      try { execSync(`git -C ${GIT_DIR} commit -m "auto: ${entered} weather trade(s) entered"`, { stdio: 'pipe' }); } catch(e) { /* nothing to commit */ }
+      const commitParts = [];
+      if (entered > 0) commitParts.push(`${entered} entered`);
+      if (thesisResults.exits.length > 0) commitParts.push(`${thesisResults.exits.length} thesis-exited`);
+      const commitMsg = `auto: weather trades — ${commitParts.join(', ')}`;
+      try { execSync(`git -C ${GIT_DIR} commit -m "${commitMsg}"`, { stdio: 'pipe' }); } catch(e) { /* nothing to commit */ }
       execSync(`git -C ${GIT_DIR} pull --rebase origin main`, { stdio: 'pipe' });
       execSync(`git -C ${GIT_DIR} push origin main`, { stdio: 'pipe' });
       console.log(`[run-scan] Pushed ${entered} new trade(s) to GitHub`);

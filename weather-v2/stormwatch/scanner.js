@@ -547,7 +547,7 @@ async function scan() {
   const passing = candidates.filter(c => c.passesThreshold);
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
   console.log(`[scanner] Scan complete: ${candidates.length} evaluated, ${passing.length} pass threshold (${elapsed}s)`);
-  return { candidates, passing, timestamp: new Date().toISOString(), elapsedSeconds: parseFloat(elapsed) };
+  return { candidates, passing, forecasts: allForecasts, timestamp: new Date().toISOString(), elapsedSeconds: parseFloat(elapsed) };
 }
 
 module.exports = { scan, fetchForecasts, aggregateForecasts, parseBucket, bucketProbability, normalCDF, erf };

@@ -53,6 +53,13 @@
       "minModelProb": 0.06,
       "sameDayOnly": true
     },
+    "thesisCheck": {
+      "enabled": true,
+      "exitEdgeThreshold": 0,
+      "graceMinutes": 60,
+      "nearResolutionHours": 4,
+      "logOnly": false
+    },
     "swap": {
       "enabled": true,
       "minEdgePPImprove": 10,
@@ -189,6 +196,7 @@
     "chatId": "-1003762193481",
     "topicId": 2
   },
+  "analysisOnly": true,
   "paper": true,
   "realTrading": {
     "enabled": false,
