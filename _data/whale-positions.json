@@ -13974,5 +13974,29 @@
       {}
     ],
     "updatedAt": "2026-03-30T22:01:18.326Z"
+  },
+  {
+    "id": "18535975-846a-4823-be25-b404c276b01d",
+    "market": "US forces enter Iran by March 31?",
+    "side": "No",
+    "entryPrice": 0.9455,
+    "currentPrice": 0.9455,
+    "shares": 18.38,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Dropper, JJo, debased, Sonix",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 87.4,
+    "avgWinRate": 75.3,
+    "reasoning": "Consensus: 4 whales (avg score 87.4, WR 75.3%) No. bet=$17.38, shares=18.38. Whales: Dropper, JJo, debased, Sonix",
+    "endDate": "2026-03-31",
+    "conditionId": "0x306d10d4a4d51b41910dbc779ca00908bd917c131541c5c42bbbc736258d2d56",
+    "createdAt": "2026-03-30T22:02:49.414Z",
+    "entryDate": "2026-03-30T22:02:49.414Z",
+    "invested": 17.3783,
+    "currentValue": 17.3783,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
