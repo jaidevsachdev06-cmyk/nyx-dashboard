@@ -9142,9 +9142,9 @@
       "bucket": "62-63°F",
       "question": "Will the highest temperature in Chicago be between 62-63°F on March 29?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -15.09,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -15.18,
       "createdAt": "2026-03-29T09:11:35.706Z",
       "signal": {
         "forecastTemp": 66.6,
@@ -9186,8 +9186,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.004,
-      "updatedAt": "2026-03-30T01:00:32.925Z"
+      "currentPrice": 0.007,
+      "updatedAt": "2026-03-30T01:05:04.154Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-30T01:05:06.292Z",
+      "actualTemp": 61.1,
+      "forecastError": -5.5,
+      "closedAt": "2026-03-30T01:05:06.309Z"
     },
     {
       "id": "oc-mnblnfbl-zmub6a",
@@ -9312,6 +9318,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-03-30T01:00:33.226Z",
-    "lastUpdated": "2026-03-30T00:10:04.740Z"
+    "lastUpdated": "2026-03-30T01:05:06.312Z"
   }
 }
