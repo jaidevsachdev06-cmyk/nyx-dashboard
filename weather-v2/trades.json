@@ -9314,10 +9314,62 @@
       "actualTemp": 52.2,
       "forecastError": -3.1,
       "closedAt": "2026-03-29T21:05:10.895Z"
+    },
+    {
+      "id": "oc-mncjyz2d-ommevb",
+      "conditionId": "0xb4dcb2c487cf0ff79850ae7346d72a739a99432fa6739b91de6e8b64cbbeb332",
+      "tokenId": "0x8655cd1d2c6c738bd6ad1b04c1233f838506ded7e97214ee15655de6c6518b14",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-march-30-2026-64-65f",
+      "city": "New York City",
+      "date": "2026-03-30",
+      "bucket": "64-65°F",
+      "question": "Will the highest temperature in New York City be between 64-65°F on March 30?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-30T02:12:22.405Z",
+      "signal": {
+        "forecastTemp": 61.8,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.7,
+        "impliedProb": 0.655,
+        "modelProb": 0.7926,
+        "edge": 0.1376,
+        "isLottery": false
+      },
+      "notes": "Forecast: 61.8°F | Model: 79% vs Market: 66% | Edge: 21.0%",
+      "entryPrice": 0.655,
+      "size": 19,
+      "sizeUSDC": 12.445,
+      "enteredAt": "2026-03-30T02:12:22.429Z",
+      "orderId": "paper-mncjyz3f-89gr",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-30T01:00:33.226Z",
-    "lastUpdated": "2026-03-30T01:05:06.312Z"
+    "lastUpdated": "2026-03-30T02:12:22.449Z"
   }
 }
