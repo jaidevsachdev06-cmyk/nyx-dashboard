@@ -13889,7 +13889,7 @@
     "market": "Will the U.S. invade Iran by March 31?",
     "side": "No",
     "entryPrice": 0.8965,
-    "currentPrice": 0.928,
+    "currentPrice": 0.937,
     "shares": 19.46,
     "status": "open",
     "source": "consensus-scanner",
@@ -13904,13 +13904,13 @@
     "createdAt": "2026-03-29T22:02:54.011Z",
     "entryDate": "2026-03-29T22:02:54.011Z",
     "invested": 17.4459,
-    "currentValue": 18.0589,
-    "pnl": 0.613,
-    "pnlPercent": 3.51,
+    "currentValue": 18.234,
+    "pnl": 0.7881,
+    "pnlPercent": 4.52,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-30T00:01:18.414Z"
+    "updatedAt": "2026-03-30T00:31:16.293Z"
   }
 ]
