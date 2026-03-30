@@ -9328,8 +9328,8 @@
       "bucket": "64-65°F",
       "question": "Will the highest temperature in New York City be between 64-65°F on March 30?",
       "side": "NO",
-      "status": "open",
-      "result": null,
+      "status": "closed",
+      "result": "win",
       "pnlUSDC": 3.45,
       "createdAt": "2026-03-30T02:12:22.405Z",
       "signal": {
@@ -9369,7 +9369,7 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.9995,
-      "updatedAt": "2026-03-30T17:00:04.411Z",
+      "updatedAt": "2026-03-30T17:05:04.624Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -9379,11 +9379,17 @@
           "pnlUSDC": 3.042,
           "timestamp": "2026-03-30T16:10:04.749Z"
         }
-      ]
+      ],
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-03-30T17:05:06.340Z",
+      "actualTemp": 67.7,
+      "forecastError": 5.9,
+      "closedAt": "2026-03-30T17:05:06.361Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-30T17:00:04.711Z",
-    "lastUpdated": "2026-03-30T16:10:04.753Z"
+    "lastUpdated": "2026-03-30T17:05:06.366Z"
   }
 }
