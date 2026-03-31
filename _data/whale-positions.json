@@ -13903,9 +13903,9 @@
     "market": "Will the U.S. invade Iran by March 31?",
     "side": "No",
     "entryPrice": 0.8965,
-    "currentPrice": 0.9764999999999999,
+    "currentPrice": 0.979,
     "shares": 19.46,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "JJo, debased, Gr33d, Roflan",
     "whaleCount": 4,
@@ -13918,14 +13918,16 @@
     "createdAt": "2026-03-29T22:02:54.011Z",
     "entryDate": "2026-03-29T22:02:54.011Z",
     "invested": 17.4459,
-    "currentValue": 19.0027,
-    "pnl": 1.5568,
-    "pnlPercent": 8.92,
+    "currentValue": 19.0513,
+    "pnl": 1.6055,
+    "pnlPercent": 9.2,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-31T00:01:11.962Z"
+    "updatedAt": "2026-03-31T00:03:06.805Z",
+    "exitPrice": 0.979,
+    "notes": "Market expired (2026-03-31)"
   },
   {
     "id": "6d0e0923-04ad-4ffd-89ef-52d5b424511f",
