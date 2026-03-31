@@ -9403,7 +9403,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.49,
+      "pnlUSDC": 0.42,
       "createdAt": "2026-03-31T06:12:00.431Z",
       "signal": {
         "forecastTemp": 53.4,
@@ -9437,8 +9437,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-03-31T15:10:05.867Z"
+      "currentPrice": 0.66,
+      "updatedAt": "2026-03-31T15:30:04.768Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9453,7 +9453,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": null,
+      "pnlUSDC": 0.18,
       "createdAt": "2026-03-31T15:12:05.143Z",
       "signal": {
         "forecastTemp": 41.5,
@@ -9490,11 +9490,13 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.68,
+      "updatedAt": "2026-03-31T15:30:05.332Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-31T15:00:03.678Z",
+    "lastPriceSync": "2026-03-31T15:30:05.632Z",
     "lastUpdated": "2026-03-31T15:12:05.194Z"
   }
 }
