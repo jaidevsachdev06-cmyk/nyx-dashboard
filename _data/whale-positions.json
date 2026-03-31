@@ -13994,9 +13994,9 @@
     "market": "US forces enter Iran by March 31?",
     "side": "No",
     "entryPrice": 0.9455,
-    "currentPrice": 0.954,
+    "currentPrice": 0.9545,
     "shares": 18.38,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Dropper, JJo, debased, Sonix",
     "whaleCount": 4,
@@ -14009,13 +14009,15 @@
     "createdAt": "2026-03-30T22:02:49.414Z",
     "entryDate": "2026-03-30T22:02:49.414Z",
     "invested": 17.3783,
-    "currentValue": 17.5345,
-    "pnl": 0.1562,
-    "pnlPercent": 0.9,
+    "currentValue": 17.5437,
+    "pnl": 0.1654,
+    "pnlPercent": 0.95,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-03-31T00:01:20.494Z"
+    "updatedAt": "2026-03-31T00:03:13.205Z",
+    "exitPrice": 0.9545,
+    "notes": "Market expired (2026-03-31)"
   }
 ]
