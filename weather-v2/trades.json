@@ -9438,7 +9438,7 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.67,
-      "updatedAt": "2026-03-31T18:00:04.757Z"
+      "updatedAt": "2026-03-31T18:10:03.996Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9491,8 +9491,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.69,
-      "updatedAt": "2026-03-31T18:00:05.299Z"
+      "currentPrice": 0.71,
+      "updatedAt": "2026-03-31T18:10:04.265Z"
     },
     {
       "id": "oc-mneteiqt-rl39cy",
@@ -9545,12 +9545,80 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.7,
-      "updatedAt": "2026-03-31T18:00:05.832Z"
+      "currentPrice": 0.685,
+      "updatedAt": "2026-03-31T18:10:04.544Z"
+    },
+    {
+      "id": "oc-mnexoqot-piy84z",
+      "conditionId": "0x91a06c6753ccfbd29444bc3560cdd77d2aa762e71c642eeeb6ec111bc78e1e2d",
+      "tokenId": "0x6597f248f85759344a96e98d749b654ffd6f56c30f96b89d68f7b824bd2387dd",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-april-1-2026-76-77f",
+      "city": "New York City",
+      "date": "2026-04-01",
+      "bucket": "76-77°F",
+      "question": "Will the highest temperature in New York City be between 76-77°F on April 1?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-31T18:11:51.965Z",
+      "signal": {
+        "forecastTemp": 73.8,
+        "forecastSource": "multi-source",
+        "sources": 7,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.665,
+        "modelProb": 0.7922,
+        "edge": 0.1272,
+        "isLottery": false
+      },
+      "notes": "Forecast: 73.8°F | Model: 79% vs Market: 67% | Edge: 19.1%",
+      "entryPrice": 0.665,
+      "size": 23,
+      "sizeUSDC": 15.295000000000002,
+      "enteredAt": "2026-03-31T18:11:51.981Z",
+      "orderId": "paper-mnexoqpi-bneq",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-31T18:00:06.131Z",
-    "lastUpdated": "2026-03-31T17:10:06.261Z"
+    "lastUpdated": "2026-03-31T18:11:51.995Z"
   }
 }
