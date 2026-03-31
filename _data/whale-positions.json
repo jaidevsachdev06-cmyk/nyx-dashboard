@@ -13136,9 +13136,9 @@
     "market": "Will Reza Pahlavi enter Iran by March 31?",
     "side": "No",
     "entryPrice": 0.9925,
-    "currentPrice": 0.9984999999999999,
+    "currentPrice": 0.9985,
     "shares": 47.18,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, GollumGekko, scottilicious, debased, archaic, Gr33d, HolyMoses7",
     "whaleCount": 7,
@@ -13158,7 +13158,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-31T00:00:48.356Z"
+    "updatedAt": "2026-03-31T00:03:01.157Z",
+    "exitPrice": 0.9985,
+    "notes": "Market expired (2026-03-31)"
   },
   {
     "id": "20c2fb6c-546b-4745-9031-ed4b5791b4ad",
