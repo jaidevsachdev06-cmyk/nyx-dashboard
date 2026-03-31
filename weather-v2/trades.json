@@ -9438,11 +9438,63 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.665,
-      "updatedAt": "2026-03-31T15:00:03.377Z"
+      "updatedAt": "2026-03-31T15:10:05.867Z"
+    },
+    {
+      "id": "oc-mner9jiv-jl74ct",
+      "conditionId": "0x134cf35dcb44bd661636c9bdb7fb5bd869b3e05bd7669f99ad4dad3f8b6db70a",
+      "tokenId": "0x9045e5580e7551e7db7f9590d4a5531e4637205ad9786fe7626b5f3a8f5ed38",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-april-1-2026-44-45f",
+      "city": "Chicago",
+      "date": "2026-04-01",
+      "bucket": "44-45°F",
+      "question": "Will the highest temperature in Chicago be between 44-45°F on April 1?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-31T15:12:05.143Z",
+      "signal": {
+        "forecastTemp": 41.5,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.67,
+        "modelProb": 0.7933,
+        "edge": 0.1233,
+        "isLottery": false
+      },
+      "notes": "Forecast: 41.5°F | Model: 79% vs Market: 67% | Edge: 18.4%",
+      "entryPrice": 0.67,
+      "size": 18,
+      "sizeUSDC": 12.06,
+      "enteredAt": "2026-03-31T15:12:05.173Z",
+      "orderId": "paper-mner9jk2-g3gs",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-31T15:00:03.678Z",
-    "lastUpdated": "2026-03-31T14:10:04.185Z"
+    "lastUpdated": "2026-03-31T15:12:05.194Z"
   }
 }
