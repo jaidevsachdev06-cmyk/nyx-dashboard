@@ -12640,9 +12640,9 @@
     "market": "Will the Iranian regime fall by March 31?",
     "side": "No",
     "entryPrice": 0.9605,
-    "currentPrice": 0.9984999999999999,
+    "currentPrice": 0.9985,
     "shares": 6.19,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "debased, GollumGekko, kekkone, archaic",
     "whaleCount": 4,
@@ -12662,7 +12662,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-31T00:00:32.193Z"
+    "updatedAt": "2026-03-31T00:02:49.672Z",
+    "exitPrice": 0.9985,
+    "notes": "Market expired (2026-03-31)"
   },
   {
     "id": "3ba3d304-98f3-48e1-ae18-0a587472e33b",
