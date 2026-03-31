@@ -13723,7 +13723,7 @@
     "entryPrice": 0.9985,
     "currentPrice": 0.9995,
     "shares": 16.59,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, Anjun, Polar, Michael5289",
     "whaleCount": 4,
@@ -13743,7 +13743,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-31T00:01:00.540Z"
+    "updatedAt": "2026-03-31T00:03:03.968Z",
+    "exitPrice": 0.9995,
+    "notes": "Market expired (2026-03-31)"
   },
   {
     "id": "fdd33348-00d0-41fc-a2cd-297c787268ca",
