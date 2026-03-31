@@ -9389,10 +9389,58 @@
       "actualTemp": 67.7,
       "forecastError": 5.9,
       "closedAt": "2026-03-30T17:05:06.361Z"
+    },
+    {
+      "id": "oc-mne7yzvz-h4tslz",
+      "conditionId": "0x7cb999c5249ccb57c0aacb69525b6020afb0f1d8fe2fdd7afadf72e0641652f9",
+      "tokenId": "0x18b7bd034ab894fc97d4a94af958b037434b74ea7a3d22e63ab7982478d5f27c",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-april-1-2026-50-51f",
+      "city": "Seattle",
+      "date": "2026-04-01",
+      "bucket": "50-51°F",
+      "question": "Will the highest temperature in Seattle be between 50-51°F on April 1?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-31T06:12:00.431Z",
+      "signal": {
+        "forecastTemp": 53.4,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          }
+        ],
+        "forecastSD": 3.7,
+        "impliedProb": 0.63,
+        "modelProb": 0.7432,
+        "edge": 0.1132,
+        "isLottery": false
+      },
+      "notes": "Forecast: 53.4°F | Model: 74% vs Market: 63% | Edge: 18.0%",
+      "entryPrice": 0.63,
+      "size": 14,
+      "sizeUSDC": 8.82,
+      "enteredAt": "2026-03-31T06:12:00.460Z",
+      "orderId": "paper-mne7yzx3-stoz",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-30T17:00:04.711Z",
-    "lastUpdated": "2026-03-30T17:05:06.366Z"
+    "lastUpdated": "2026-03-31T06:12:00.477Z"
   }
 }
