@@ -9131,7 +9131,10 @@
       },
       "notes": "Forecast: 50.3°F | Model: 80% vs Market: 75% | Edge: 7.1%",
       "resolutionSource": "manual-audit",
-      "closedAt": "2026-03-30T12:22:41.732Z"
+      "closedAt": "2026-03-30T12:22:41.732Z",
+      "entryPrice": 0,
+      "size": 0,
+      "sizeUSDC": 0
     },
     {
       "id": "oc-mnbji8t6-ldely1",

@@ -7,7 +7,7 @@
 
 const VALID_STATUSES = ['candidate', 'entered', 'open', 'resolved', 'exited', 'closed'];
 const VALID_SIDES = ['YES', 'NO'];
-const VALID_RESULTS = ['win', 'loss', 'push', null];
+const VALID_RESULTS = ['win', 'loss', 'push', 'expired', null];
 
 // Status transition rules — no skipping steps
 const VALID_TRANSITIONS = {
