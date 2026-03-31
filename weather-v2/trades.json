@@ -9437,8 +9437,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-03-31T16:00:04.361Z"
+      "currentPrice": 0.66,
+      "updatedAt": "2026-03-31T16:10:04.161Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9491,12 +9491,64 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.65,
-      "updatedAt": "2026-03-31T16:00:04.992Z"
+      "currentPrice": 0.665,
+      "updatedAt": "2026-03-31T16:10:04.443Z"
+    },
+    {
+      "id": "oc-mneteiqt-rl39cy",
+      "conditionId": "0x47c29f52a1dfbbb7295794bdb110c4474ba14a9dae9cb5dec9526c72fddd0ff7",
+      "tokenId": "0x314b04b9ea902ce269fba3cdec3b0b2b7674e2413481f9e7971bcf348972519",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-april-1-2026-80-81f",
+      "city": "Atlanta",
+      "date": "2026-04-01",
+      "bucket": "80-81°F",
+      "question": "Will the highest temperature in Atlanta be between 80-81°F on April 1?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-03-31T16:11:56.645Z",
+      "signal": {
+        "forecastTemp": 83.2,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.685,
+        "modelProb": 0.7922,
+        "edge": 0.1072,
+        "isLottery": false
+      },
+      "notes": "Forecast: 83.2°F | Model: 79% vs Market: 69% | Edge: 15.6%",
+      "entryPrice": 0.685,
+      "size": 18,
+      "sizeUSDC": 12.330000000000002,
+      "enteredAt": "2026-03-31T16:11:56.671Z",
+      "orderId": "paper-mneteirr-846e",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-03-31T16:00:05.292Z",
-    "lastUpdated": "2026-03-31T15:12:05.194Z"
+    "lastUpdated": "2026-03-31T16:11:56.686Z"
   }
 }
