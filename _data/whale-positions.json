@@ -12671,9 +12671,9 @@
     "market": "Netanyahu out by March 31?",
     "side": "No",
     "entryPrice": 0.9725,
-    "currentPrice": 0.9984999999999999,
+    "currentPrice": 0.9985,
     "shares": 16.99,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "scottilicious, Polar, Car, aenews, Roflan, Rooke Brollins, debased, JJo, Euan, GollumGekko, FrancisSP8, MuddyRC, Michael5289",
     "whaleCount": 13,
@@ -12693,7 +12693,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-03-31T00:00:36.200Z"
+    "updatedAt": "2026-03-31T00:02:52.442Z",
+    "exitPrice": 0.9985,
+    "notes": "Market expired (2026-03-31)"
   },
   {
     "id": "ae60e53e-c7f0-4f9a-adba-600fee880a1b",
