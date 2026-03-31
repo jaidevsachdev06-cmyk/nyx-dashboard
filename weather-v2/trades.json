@@ -9438,11 +9438,11 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.67,
-      "updatedAt": "2026-03-31T11:30:04.260Z"
+      "updatedAt": "2026-03-31T12:00:05.143Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-03-31T11:30:04.561Z",
+    "lastPriceSync": "2026-03-31T12:00:05.443Z",
     "lastUpdated": "2026-03-31T11:10:05.243Z"
   }
 }
