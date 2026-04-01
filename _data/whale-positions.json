@@ -14021,5 +14021,29 @@
     "updatedAt": "2026-03-31T00:03:13.205Z",
     "exitPrice": 0.9545,
     "notes": "Market expired (2026-03-31)"
+  },
+  {
+    "id": "3fbfc832-d00a-4902-ae2c-93968dc6eeda",
+    "market": "Will the Iranian regime fall by June 30?",
+    "side": "No",
+    "entryPrice": 0.875,
+    "currentPrice": 0.875,
+    "shares": 50.49,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, Dropper, scottilicious, donjo, debased, kekkone, Roflan, Qualitative, archaic, elucidate, Gr33d, Euan",
+    "whaleCount": 12,
+    "confidence": "Very High",
+    "avgScore": 88.8,
+    "avgWinRate": 71.8,
+    "reasoning": "Consensus: 12 whales (avg score 88.8, WR 71.8%) No. bet=$44.18, shares=50.49. Whales: Car, Dropper, scottilicious, donjo, debased, kekkone, Roflan, Qualitative, archaic, elucidate, Gr33d, Euan",
+    "endDate": "2026-06-30",
+    "conditionId": "0x9352c559e9648ab4cab236087b64ca85c5b7123a4c7d9d7d4efde4a39c18056f",
+    "createdAt": "2026-04-01T00:02:51.700Z",
+    "entryDate": "2026-04-01T00:02:51.700Z",
+    "invested": 44.1788,
+    "currentValue": 44.1788,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
