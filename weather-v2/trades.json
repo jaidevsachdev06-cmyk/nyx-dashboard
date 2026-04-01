@@ -9403,7 +9403,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.7,
+      "pnlUSDC": 0.56,
       "createdAt": "2026-03-31T06:12:00.431Z",
       "signal": {
         "forecastTemp": 53.4,
@@ -9437,8 +9437,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.68,
-      "updatedAt": "2026-04-01T00:30:04.066Z"
+      "currentPrice": 0.67,
+      "updatedAt": "2026-04-01T01:30:04.077Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9453,7 +9453,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 2.25,
+      "pnlUSDC": 1.62,
       "createdAt": "2026-03-31T15:12:05.143Z",
       "signal": {
         "forecastTemp": 41.5,
@@ -9491,8 +9491,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.795,
-      "updatedAt": "2026-04-01T00:30:04.596Z"
+      "currentPrice": 0.76,
+      "updatedAt": "2026-04-01T01:30:04.620Z"
     },
     {
       "id": "oc-mneteiqt-rl39cy",
@@ -9507,7 +9507,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.18,
+      "pnlUSDC": 0.54,
       "createdAt": "2026-03-31T16:11:56.645Z",
       "signal": {
         "forecastTemp": 83.2,
@@ -9545,8 +9545,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.695,
-      "updatedAt": "2026-04-01T00:30:05.165Z"
+      "currentPrice": 0.715,
+      "updatedAt": "2026-04-01T01:30:05.168Z"
     },
     {
       "id": "oc-mnexoqot-piy84z",
@@ -9561,7 +9561,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.5,
+      "pnlUSDC": -2.3,
       "createdAt": "2026-03-31T18:11:51.965Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -9615,12 +9615,12 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.6,
-      "updatedAt": "2026-04-01T00:30:05.726Z"
+      "currentPrice": 0.565,
+      "updatedAt": "2026-04-01T01:30:05.787Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-04-01T00:30:06.026Z",
-    "lastUpdated": "2026-04-01T00:10:06.441Z"
+    "lastPriceSync": "2026-04-01T01:30:06.088Z",
+    "lastUpdated": "2026-04-01T01:10:05.375Z"
   }
 }
