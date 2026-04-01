@@ -9403,7 +9403,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.26,
+      "pnlUSDC": 2.17,
       "createdAt": "2026-03-31T06:12:00.431Z",
       "signal": {
         "forecastTemp": 53.4,
@@ -9437,8 +9437,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.72,
-      "updatedAt": "2026-04-01T02:30:07.297Z"
+      "currentPrice": 0.785,
+      "updatedAt": "2026-04-01T03:00:03.880Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9453,7 +9453,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.35,
+      "pnlUSDC": 1.17,
       "createdAt": "2026-03-31T15:12:05.143Z",
       "signal": {
         "forecastTemp": 41.5,
@@ -9491,8 +9491,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.745,
-      "updatedAt": "2026-04-01T02:30:07.844Z"
+      "currentPrice": 0.735,
+      "updatedAt": "2026-04-01T03:00:04.421Z"
     },
     {
       "id": "oc-mneteiqt-rl39cy",
@@ -9507,7 +9507,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.71,
+      "pnlUSDC": 1.8,
       "createdAt": "2026-03-31T16:11:56.645Z",
       "signal": {
         "forecastTemp": 83.2,
@@ -9545,8 +9545,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.78,
-      "updatedAt": "2026-04-01T02:30:08.399Z"
+      "currentPrice": 0.785,
+      "updatedAt": "2026-04-01T03:00:04.969Z"
     },
     {
       "id": "oc-mnexoqot-piy84z",
@@ -9561,7 +9561,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -2.76,
+      "pnlUSDC": -2.99,
       "createdAt": "2026-03-31T18:11:51.965Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -9615,12 +9615,12 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.545,
-      "updatedAt": "2026-04-01T02:30:08.940Z"
+      "currentPrice": 0.535,
+      "updatedAt": "2026-04-01T03:00:05.591Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-04-01T02:30:09.240Z",
+    "lastPriceSync": "2026-04-01T03:00:05.891Z",
     "lastUpdated": "2026-04-01T02:10:06.346Z"
   }
 }
