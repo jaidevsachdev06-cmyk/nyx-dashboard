@@ -13874,9 +13874,9 @@
     "market": "US x Iran ceasefire by April 7?",
     "side": "Yes",
     "entryPrice": 0.065,
-    "currentPrice": 0.08499999999999999,
+    "currentPrice": 0.085,
     "shares": 264.92,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "donjo, debased, JJo, UbuntuTrading",
     "whaleCount": 4,
@@ -13896,7 +13896,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-04-01T20:00:47.605Z"
+    "updatedAt": "2026-04-01T20:11:42.064Z",
+    "exitPrice": 0.085,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "45368abd-87d6-4c37-88fc-77e6c76096fd",
