@@ -9438,8 +9438,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.725,
-      "updatedAt": "2026-04-01T17:00:46.691Z"
+      "currentPrice": 0.825,
+      "updatedAt": "2026-04-01T19:05:05.370Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9493,7 +9493,7 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.9855,
-      "updatedAt": "2026-04-01T17:00:47.237Z"
+      "updatedAt": "2026-04-01T19:05:05.635Z"
     },
     {
       "id": "oc-mneteiqt-rl39cy",
@@ -9506,9 +9506,9 @@
       "bucket": "80-81°F",
       "question": "Will the highest temperature in Atlanta be between 80-81°F on April 1?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 3.33,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.67,
       "createdAt": "2026-03-31T16:11:56.645Z",
       "signal": {
         "forecastTemp": 83.2,
@@ -9546,8 +9546,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.87,
-      "updatedAt": "2026-04-01T17:00:47.807Z"
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-04-01T19:05:05.894Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-01T19:05:10.188Z",
+      "actualTemp": 82.3,
+      "forecastError": -0.9,
+      "closedAt": "2026-04-01T19:05:10.204Z"
     },
     {
       "id": "oc-mnexoqot-piy84z",
@@ -9560,9 +9566,9 @@
       "bucket": "76-77°F",
       "question": "Will the highest temperature in New York City be between 76-77°F on April 1?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -11.84,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 7.705,
       "createdAt": "2026-03-31T18:11:51.965Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -9616,12 +9622,18 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.15,
-      "updatedAt": "2026-04-01T17:00:48.389Z"
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-04-01T19:05:06.171Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-01T19:05:11.479Z",
+      "actualTemp": 78.6,
+      "forecastError": 4.8,
+      "closedAt": "2026-04-01T19:05:11.494Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-01T17:00:48.689Z",
-    "lastUpdated": "2026-04-01T16:10:08.219Z"
+    "lastUpdated": "2026-04-01T19:05:11.499Z"
   }
 }
