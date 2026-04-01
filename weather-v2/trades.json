@@ -9438,8 +9438,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.85,
-      "updatedAt": "2026-04-01T19:30:10.104Z"
+      "currentPrice": 0.895,
+      "updatedAt": "2026-04-01T20:10:54.669Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9452,9 +9452,9 @@
       "bucket": "44-45°F",
       "question": "Will the highest temperature in Chicago be between 44-45°F on April 1?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 5.68,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.94,
       "createdAt": "2026-03-31T15:12:05.143Z",
       "signal": {
         "forecastTemp": 41.5,
@@ -9492,8 +9492,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.9855,
-      "updatedAt": "2026-04-01T19:30:10.670Z"
+      "currentPrice": 0.992,
+      "updatedAt": "2026-04-01T20:10:54.928Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-01T20:10:57.848Z",
+      "actualTemp": 42.8,
+      "forecastError": 1.3,
+      "closedAt": "2026-04-01T20:10:57.862Z"
     },
     {
       "id": "oc-mneteiqt-rl39cy",
@@ -9634,6 +9640,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-04-01T19:30:10.970Z",
-    "lastUpdated": "2026-04-01T19:10:05.484Z"
+    "lastUpdated": "2026-04-01T20:10:57.866Z"
   }
 }
