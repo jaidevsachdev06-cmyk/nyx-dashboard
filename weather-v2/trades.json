@@ -9404,7 +9404,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 1.96,
+      "pnlUSDC": 1.82,
       "createdAt": "2026-03-31T06:12:00.431Z",
       "signal": {
         "forecastTemp": 53.4,
@@ -9438,8 +9438,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.77,
-      "updatedAt": "2026-04-01T05:00:04.563Z"
+      "currentPrice": 0.76,
+      "updatedAt": "2026-04-01T05:30:05.166Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9454,7 +9454,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 0.81,
+      "pnlUSDC": 1.53,
       "createdAt": "2026-03-31T15:12:05.143Z",
       "signal": {
         "forecastTemp": 41.5,
@@ -9492,8 +9492,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.715,
-      "updatedAt": "2026-04-01T05:00:05.126Z"
+      "currentPrice": 0.755,
+      "updatedAt": "2026-04-01T05:30:05.746Z"
     },
     {
       "id": "oc-mneteiqt-rl39cy",
@@ -9547,7 +9547,7 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.765,
-      "updatedAt": "2026-04-01T05:00:05.704Z"
+      "updatedAt": "2026-04-01T05:30:06.312Z"
     },
     {
       "id": "oc-mnexoqot-piy84z",
@@ -9562,7 +9562,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -0.23,
+      "pnlUSDC": -0.46,
       "createdAt": "2026-03-31T18:11:51.965Z",
       "signal": {
         "forecastTemp": 73.8,
@@ -9616,12 +9616,12 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.655,
-      "updatedAt": "2026-04-01T05:00:06.254Z"
+      "currentPrice": 0.645,
+      "updatedAt": "2026-04-01T05:30:06.854Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-04-01T05:00:06.554Z",
-    "lastUpdated": "2026-04-01T04:10:05.756Z"
+    "lastPriceSync": "2026-04-01T05:30:07.154Z",
+    "lastUpdated": "2026-04-01T05:10:18.104Z"
   }
 }
