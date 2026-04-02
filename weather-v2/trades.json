@@ -9652,10 +9652,58 @@
       "actualTemp": 78.6,
       "forecastError": 4.8,
       "closedAt": "2026-04-01T19:05:11.494Z"
+    },
+    {
+      "id": "oc-mngyleg3-icitf3",
+      "conditionId": "0xb2fcf12c2901ff31e50622b25553902e5636df7f76028eda128a7d159be68363",
+      "tokenId": "0x2e0d44a3700c03baf12e3b6db15476e015a56315afb34f71579155603bb7a13a",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-april-3-2026-82-83f",
+      "city": "Dallas",
+      "date": "2026-04-03",
+      "bucket": "82-83°F",
+      "question": "Will the highest temperature in Dallas be between 82-83°F on April 3?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-02T04:12:48.099Z",
+      "signal": {
+        "forecastTemp": 79.5,
+        "forecastSource": "multi-source",
+        "sources": 2,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          }
+        ],
+        "forecastSD": 3.8,
+        "impliedProb": 0.64,
+        "modelProb": 0.7437,
+        "edge": 0.1037,
+        "isLottery": false
+      },
+      "notes": "Forecast: 79.5°F | Model: 74% vs Market: 64% | Edge: 16.2%",
+      "entryPrice": 0.64,
+      "size": 14,
+      "sizeUSDC": 8.96,
+      "enteredAt": "2026-04-02T04:12:48.120Z",
+      "orderId": "paper-mngylegw-4bz3",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-02T01:15:44.265Z",
-    "lastUpdated": "2026-04-02T01:15:55.990Z"
+    "lastUpdated": "2026-04-02T04:12:48.133Z"
   }
 }
