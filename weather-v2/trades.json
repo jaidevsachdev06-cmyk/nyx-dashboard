@@ -9404,7 +9404,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": 3.71,
+      "pnlUSDC": 2.29,
       "createdAt": "2026-03-31T06:12:00.431Z",
       "signal": {
         "forecastTemp": 53.4,
@@ -9426,10 +9426,10 @@
         "edge": 0.1132,
         "isLottery": false
       },
-      "notes": "Forecast: 53.4°F | Model: 74% vs Market: 63% | Edge: 18.0%",
+      "notes": "Forecast: 53.4°F | Model: 74% vs Market: 63% | Edge: 18.0% | SCALP normal-half: sold 7@0.955 (+$2.27)",
       "entryPrice": 0.63,
-      "size": 14,
-      "sizeUSDC": 8.82,
+      "size": 7,
+      "sizeUSDC": 4.41,
       "enteredAt": "2026-03-31T06:12:00.460Z",
       "orderId": "paper-mne7yzx3-stoz",
       "tradeSource": "paper",
@@ -9438,8 +9438,18 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.895,
-      "updatedAt": "2026-04-01T22:31:54.871Z"
+      "currentPrice": 0.9565,
+      "updatedAt": "2026-04-02T00:02:04.675Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 7,
+          "price": 0.955,
+          "pnlUSDC": 2.275,
+          "timestamp": "2026-04-01T23:45:03.814Z"
+        }
+      ]
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9639,7 +9649,7 @@
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-04-01T22:31:55.171Z",
-    "lastUpdated": "2026-04-01T22:10:04.364Z"
+    "lastPriceSync": "2026-04-02T00:02:04.977Z",
+    "lastUpdated": "2026-04-01T23:45:03.819Z"
   }
 }
