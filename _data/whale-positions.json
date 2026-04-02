@@ -12580,9 +12580,9 @@
     "market": "Will the Iranian regime fall by April 30?",
     "side": "No",
     "entryPrice": 0.845,
-    "currentPrice": 0.963,
+    "currentPrice": 0.9635,
     "shares": 13.36,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "JJo, Qualitative, FrancisSP8, archaic, Dropper",
     "whaleCount": 5,
@@ -12595,14 +12595,16 @@
     "createdAt": "2026-03-18T07:57:24.863Z",
     "entryDate": "2026-03-18T07:57:24.863Z",
     "invested": 11.2892,
-    "currentValue": 12.8657,
-    "pnl": 1.5765,
-    "pnlPercent": 13.96,
+    "currentValue": 12.8724,
+    "pnl": 1.5832,
+    "pnlPercent": 14.02,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-04-02T01:30:26.668Z"
+    "updatedAt": "2026-04-02T01:33:01.607Z",
+    "exitPrice": 0.9635,
+    "notes": "Whale exit triggered: FrancisSP8 exited position"
   },
   {
     "id": "1cdc50a8-9231-4426-8c53-d83cfbe15eb2",
