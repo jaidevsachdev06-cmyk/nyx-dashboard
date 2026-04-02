@@ -14257,5 +14257,29 @@
       {}
     ],
     "updatedAt": "2026-04-02T02:01:12.676Z"
+  },
+  {
+    "id": "f73935b0-d0c7-4755-83c2-00412ee9dc36",
+    "market": "US forces enter Iran by April 30?",
+    "side": "No",
+    "entryPrice": 0.445,
+    "currentPrice": 0.445,
+    "shares": 62.49,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, debased, Anjun, kekkone, JJo",
+    "whaleCount": 5,
+    "confidence": "Very High",
+    "avgScore": 87.5,
+    "avgWinRate": 72.3,
+    "reasoning": "Consensus: 5 whales (avg score 87.5, WR 72.3%) No. bet=$27.81, shares=62.49. Whales: Car, debased, Anjun, kekkone, JJo",
+    "endDate": "2026-04-30",
+    "conditionId": "0x6d0e09d0f04572d9b1adad84703458b0297bc5603b69dccbde93147ee4443246",
+    "createdAt": "2026-04-02T02:02:49.833Z",
+    "entryDate": "2026-04-02T02:02:49.833Z",
+    "invested": 27.8081,
+    "currentValue": 27.8081,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
