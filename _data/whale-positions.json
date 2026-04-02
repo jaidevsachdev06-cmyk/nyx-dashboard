@@ -14213,5 +14213,29 @@
     "currentValue": 12.197,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "2e523138-d170-4a91-801b-34da9c4fb9f2",
+    "market": "Miguel Díaz-Canel out as leader of Cuba by June 30?",
+    "side": "No",
+    "entryPrice": 0.715,
+    "currentPrice": 0.715,
+    "shares": 10.36,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "Car, GenaTheBondKilIer, Michael5289",
+    "whaleCount": 3,
+    "confidence": "High",
+    "avgScore": 82.1,
+    "avgWinRate": 72.2,
+    "reasoning": "Consensus: 3 whales (avg score 82.1, WR 72.2%) No. bet=$7.41, shares=10.36, tierMult=1.33. Whales: Car, GenaTheBondKilIer, Michael5289",
+    "endDate": "2026-06-30",
+    "conditionId": "0x119db6dda44f109bcdc2ec5e1d9cb8c21fa1a7e66489f59b1190fdfb25c0d515",
+    "createdAt": "2026-04-02T01:34:08.667Z",
+    "entryDate": "2026-04-02T01:34:08.667Z",
+    "invested": 7.4074,
+    "currentValue": 7.4074,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
