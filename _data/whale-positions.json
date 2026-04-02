@@ -14238,7 +14238,7 @@
     "entryPrice": 0.715,
     "currentPrice": 0.715,
     "shares": 10.36,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, GenaTheBondKilIer, Michael5289",
     "whaleCount": 3,
@@ -14258,7 +14258,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-04-02T06:01:09.212Z"
+    "updatedAt": "2026-04-02T06:02:51.144Z",
+    "exitPrice": 0.715,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "f73935b0-d0c7-4755-83c2-00412ee9dc36",
