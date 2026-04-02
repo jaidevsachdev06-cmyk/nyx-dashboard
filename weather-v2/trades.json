@@ -9666,7 +9666,7 @@
       "side": "NO",
       "status": "open",
       "result": null,
-      "pnlUSDC": -1.47,
+      "pnlUSDC": -0.77,
       "createdAt": "2026-04-02T04:12:48.099Z",
       "signal": {
         "forecastTemp": 79.5,
@@ -9700,12 +9700,12 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.535,
-      "updatedAt": "2026-04-02T21:01:08.906Z"
+      "currentPrice": 0.585,
+      "updatedAt": "2026-04-02T21:31:09.106Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-04-02T21:01:09.207Z",
-    "lastUpdated": "2026-04-02T20:10:06.121Z"
+    "lastPriceSync": "2026-04-02T21:31:09.407Z",
+    "lastUpdated": "2026-04-02T21:10:06.178Z"
   }
 }
