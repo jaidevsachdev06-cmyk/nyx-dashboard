@@ -100,4 +100,4 @@ function getStatus() {
   return loadState();
 }
 
-module.exports = { recordResult, isTripped, reset, getStatus };
+module.exports = { recordResult, isTripped, reset, getStatus, getState: getStatus };
