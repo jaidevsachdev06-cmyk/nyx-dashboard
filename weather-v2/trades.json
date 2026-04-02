@@ -9402,9 +9402,9 @@
       "bucket": "50-51°F",
       "question": "Will the highest temperature in Seattle be between 50-51°F on April 1?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": 2.54,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 2.59,
       "createdAt": "2026-03-31T06:12:00.431Z",
       "signal": {
         "forecastTemp": 53.4,
@@ -9438,8 +9438,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.9925,
-      "updatedAt": "2026-04-02T01:15:43.964Z",
+      "currentPrice": 0.9915,
+      "updatedAt": "2026-04-02T01:15:53.886Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -9449,7 +9449,13 @@
           "pnlUSDC": 2.275,
           "timestamp": "2026-04-01T23:45:03.814Z"
         }
-      ]
+      ],
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-02T01:15:55.947Z",
+      "actualTemp": 56.6,
+      "forecastError": 3.2,
+      "closedAt": "2026-04-02T01:15:55.974Z"
     },
     {
       "id": "oc-mner9jiv-jl74ct",
@@ -9650,6 +9656,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-04-02T01:15:44.265Z",
-    "lastUpdated": "2026-04-02T00:10:07.042Z"
+    "lastUpdated": "2026-04-02T01:15:55.990Z"
   }
 }
