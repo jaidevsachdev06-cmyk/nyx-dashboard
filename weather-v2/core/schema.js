@@ -224,9 +224,9 @@ function validateTrade(trade) {
   // Cross-field: P&L on open trades = unrealized (from price sync), on resolved/closed = realized
   // Both are valid
 
-  // Cross-field: resolutionSource must be "polymarket" or "price-inferred"
-  if (trade.resolutionSource && !['polymarket', 'price-inferred', 'manual-exit', 'cli-inferred', 'clob-inferred', 'reconciliation'].includes(trade.resolutionSource)) {
-    errors.push(`resolutionSource must be "polymarket", "price-inferred", "manual-exit", "cli-inferred", "clob-inferred", or "reconciliation", got "${trade.resolutionSource}"`);
+  // Cross-field: resolutionSource must be one of the allowed values
+  if (trade.resolutionSource && !['polymarket', 'price-inferred', 'manual-exit', 'cli-inferred', 'clob-inferred', 'reconciliation', 'manual-audit'].includes(trade.resolutionSource)) {
+    errors.push(`resolutionSource must be one of: polymarket, price-inferred, manual-exit, cli-inferred, clob-inferred, reconciliation, manual-audit. Got: "${trade.resolutionSource}"`);
   }
 
   // Placeholder detection — catch fake conditionIds
