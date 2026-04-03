@@ -14269,9 +14269,9 @@
     "market": "US forces enter Iran by April 30?",
     "side": "No",
     "entryPrice": 0.445,
-    "currentPrice": 0.305,
+    "currentPrice": 0.325,
     "shares": 62.49,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, debased, Anjun, kekkone, JJo",
     "whaleCount": 5,
@@ -14284,14 +14284,16 @@
     "createdAt": "2026-04-02T02:02:49.833Z",
     "entryDate": "2026-04-02T02:02:49.833Z",
     "invested": 27.8081,
-    "currentValue": 19.0595,
-    "pnl": -8.7486,
-    "pnlPercent": -31.46,
+    "currentValue": 20.3093,
+    "pnl": -7.4988,
+    "pnlPercent": -26.97,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-04-03T04:00:59.254Z"
+    "updatedAt": "2026-04-03T04:02:50.244Z",
+    "exitPrice": 0.325,
+    "notes": "Stop-loss: -31.5% from entry ($0.445 → $0.305)"
   },
   {
     "id": "8aaedd3e-a597-4f4d-92bf-0ed175cfa712",
