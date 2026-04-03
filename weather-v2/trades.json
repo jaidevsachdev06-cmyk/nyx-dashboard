@@ -9701,11 +9701,11 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.54,
-      "updatedAt": "2026-04-02T23:31:08.894Z"
+      "updatedAt": "2026-04-03T00:01:13.650Z"
     }
   ],
   "meta": {
-    "lastPriceSync": "2026-04-02T23:31:09.195Z",
+    "lastPriceSync": "2026-04-03T00:01:13.951Z",
     "lastUpdated": "2026-04-02T23:10:06.548Z"
   }
 }
