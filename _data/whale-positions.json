@@ -14122,7 +14122,7 @@
     "entryPrice": 0.555,
     "currentPrice": 0.385,
     "shares": 29.41,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "Car, donjo, JJo, UbuntuTrading",
     "whaleCount": 4,
@@ -14142,7 +14142,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-04-03T10:00:50.128Z"
+    "updatedAt": "2026-04-03T10:02:50.695Z",
+    "exitPrice": 0.385,
+    "notes": "Stop-loss: -30.6% from entry ($0.555 → $0.385)"
   },
   {
     "id": "d83da714-a8e2-4540-ae72-803a15cfc0e9",
