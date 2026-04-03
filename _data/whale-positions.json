@@ -14351,5 +14351,29 @@
     "currentValue": 44.06,
     "pnl": 0,
     "pnlPercent": 0
+  },
+  {
+    "id": "ff521433-c2fe-4858-b5aa-20f6e4edc1d7",
+    "market": "US x Iran ceasefire by April 15?",
+    "side": "No",
+    "entryPrice": 0.935,
+    "currentPrice": 0.935,
+    "shares": 17.84,
+    "status": "open",
+    "source": "consensus-scanner",
+    "whales": "aenews, debased, Gr33d, scottilicious",
+    "whaleCount": 4,
+    "confidence": "High",
+    "avgScore": 84.1,
+    "avgWinRate": 72.3,
+    "reasoning": "Consensus: 4 whales (avg score 84.1, WR 72.3%) No. bet=$16.68, shares=17.84. Whales: aenews, debased, Gr33d, scottilicious",
+    "endDate": "2026-04-15",
+    "conditionId": "0x773abaa5fe55e5cde51a261f444b7921652a4e059ead6b3be9fe56499c2d4609",
+    "createdAt": "2026-04-03T16:02:59.886Z",
+    "entryDate": "2026-04-03T16:02:59.886Z",
+    "invested": 16.6804,
+    "currentValue": 16.6804,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
