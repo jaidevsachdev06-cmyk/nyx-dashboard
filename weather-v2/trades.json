@@ -9700,12 +9700,76 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.615,
-      "updatedAt": "2026-04-03T10:31:08.113Z"
+      "currentPrice": 0.585,
+      "updatedAt": "2026-04-03T12:10:06.693Z"
+    },
+    {
+      "id": "oc-mniv91gf-bfunrw",
+      "conditionId": "0xab507e958496c2b7b22edcb57c7ccc8a547432d12809a643cf5cbdd112b64a02",
+      "tokenId": "0x7f9b5fc009fe9ffab218f19e62dbd4b345ec28c36d51d3ebe2d2d5cbace356e8",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-april-3-2026-66-67f",
+      "city": "New York City",
+      "date": "2026-04-03",
+      "bucket": "66-67°F",
+      "question": "Will the highest temperature in New York City be between 66-67°F on April 3?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-03T12:14:44.895Z",
+      "signal": {
+        "forecastTemp": 63.8,
+        "forecastSource": "multi-source",
+        "sources": 6,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.1,
+        "impliedProb": 0.635,
+        "modelProb": 0.7934,
+        "edge": 0.1584,
+        "isLottery": false
+      },
+      "notes": "Forecast: 63.8°F | Model: 79% vs Market: 64% | Edge: 24.9%",
+      "entryPrice": 0.635,
+      "size": 24,
+      "sizeUSDC": 15.24,
+      "enteredAt": "2026-04-03T12:14:44.913Z",
+      "orderId": "paper-mniv91h3-7sz5",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-03T10:10:06.495Z"
+    "lastUpdated": "2026-04-03T12:14:44.924Z"
   }
 }
