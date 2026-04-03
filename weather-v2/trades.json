@@ -9700,8 +9700,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.585,
-      "updatedAt": "2026-04-03T12:10:06.693Z"
+      "currentPrice": 0.45,
+      "updatedAt": "2026-04-03T21:25:16.770Z"
     },
     {
       "id": "oc-mniv91gf-bfunrw",
@@ -9754,12 +9754,96 @@
         "edge": 0.1584,
         "isLottery": false
       },
-      "notes": "Forecast: 63.8°F | Model: 79% vs Market: 64% | Edge: 24.9%",
+      "notes": "Forecast: 63.8°F | Model: 79% vs Market: 64% | Edge: 24.9% | SCALP normal-half: sold 12@0.965 (+$3.96)",
       "entryPrice": 0.635,
-      "size": 24,
-      "sizeUSDC": 15.24,
+      "size": 12,
+      "sizeUSDC": 7.62,
       "enteredAt": "2026-04-03T12:14:44.913Z",
       "orderId": "paper-mniv91h3-7sz5",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.86,
+      "updatedAt": "2026-04-03T21:25:17.035Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 12,
+          "price": 0.965,
+          "pnlUSDC": 3.96,
+          "timestamp": "2026-04-03T20:15:05.953Z"
+        }
+      ]
+    },
+    {
+      "id": "oc-mnjf3cod-5lh8p1",
+      "conditionId": "0xe1ee5eba77a177cf582e445cab2ea9d0673bcb0d5b620ed42ba591f4d76fcdc7",
+      "tokenId": "0x67b437882ff1a0cbab50d56df26eec1b83fc9c88588947ad59a0b2494f7e8f4c",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-april-4-2026-62-63f",
+      "city": "Seattle",
+      "date": "2026-04-04",
+      "bucket": "62-63°F",
+      "question": "Will the highest temperature in Seattle be between 62-63°F on April 4?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-03T21:30:11.821Z",
+      "signal": {
+        "forecastTemp": 60,
+        "forecastSource": "multi-source",
+        "sources": 8,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.625,
+        "modelProb": 0.7715,
+        "edge": 0.1465,
+        "isLottery": false
+      },
+      "notes": "Forecast: 60.0°F | Model: 77% vs Market: 63% | Edge: 23.4%",
+      "entryPrice": 0.625,
+      "size": 20,
+      "sizeUSDC": 12.5,
+      "enteredAt": "2026-04-03T21:30:11.838Z",
+      "orderId": "paper-mnjf3cp0-m2po",
       "tradeSource": "paper",
       "realTrading": false,
       "realOrderId": null,
@@ -9770,6 +9854,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-03T12:14:44.924Z"
+    "lastUpdated": "2026-04-03T21:30:11.851Z"
   }
 }
