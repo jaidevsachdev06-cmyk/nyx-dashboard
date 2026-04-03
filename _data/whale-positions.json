@@ -14302,7 +14302,7 @@
     "entryPrice": 0.085,
     "currentPrice": 0.065,
     "shares": 197.06,
-    "status": "open",
+    "status": "closed-loss",
     "source": "consensus-scanner",
     "whales": "aenews, debased, donjo, UbuntuTrading",
     "whaleCount": 4,
@@ -14322,6 +14322,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-04-03T08:01:00.168Z"
+    "updatedAt": "2026-04-03T08:02:50.929Z",
+    "exitPrice": 0.065,
+    "notes": "Dropped from whale consensus"
   }
 ]
