@@ -9862,8 +9862,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.565,
-      "updatedAt": "2026-04-04T15:50:30.892Z"
+      "currentPrice": 0.2,
+      "updatedAt": "2026-04-04T22:05:06.399Z"
     },
     {
       "id": "oc-mnk71khv-33q7dy",
@@ -9876,9 +9876,9 @@
       "bucket": "82-83°F",
       "question": "Will the highest temperature in Atlanta be between 82-83°F on April 4?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.445,
       "createdAt": "2026-04-04T10:32:37.891Z",
       "signal": {
         "forecastTemp": 79.7,
@@ -9936,8 +9936,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.635,
-      "updatedAt": "2026-04-04T15:50:31.157Z"
+      "currentPrice": 0.0055,
+      "updatedAt": "2026-04-04T22:05:06.672Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-04T22:05:09.814Z",
+      "actualTemp": 81.8,
+      "forecastError": 2.1,
+      "closedAt": "2026-04-04T22:05:09.828Z"
     },
     {
       "id": "oc-mnkins4r-js3k7a",
@@ -10013,11 +10019,13 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.73,
+      "updatedAt": "2026-04-04T22:05:06.945Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-04T15:57:50.044Z"
+    "lastUpdated": "2026-04-04T22:05:09.831Z"
   }
 }
