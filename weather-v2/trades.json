@@ -9862,12 +9862,84 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.58,
-      "updatedAt": "2026-04-04T00:05:06.200Z"
+      "currentPrice": 0.505,
+      "updatedAt": "2026-04-04T10:25:31.310Z"
+    },
+    {
+      "id": "oc-mnk71khv-33q7dy",
+      "conditionId": "0x8f3cb84572c55b7cb2e35478f73076d0401acd3790ef2060996ce8686b41a91a",
+      "tokenId": "0xf3779b4cdff4c3a30d51cc3c31a1ae0cd2bef1149a57b597ae7ce0bd0cef6ed",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-april-4-2026-82-83f",
+      "city": "Atlanta",
+      "date": "2026-04-04",
+      "bucket": "82-83°F",
+      "question": "Will the highest temperature in Atlanta be between 82-83°F on April 4?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-04T10:32:37.891Z",
+      "signal": {
+        "forecastTemp": 79.7,
+        "forecastSource": "multi-source",
+        "sources": 8,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.655,
+        "modelProb": 0.7725,
+        "edge": 0.1175,
+        "isLottery": false
+      },
+      "notes": "Forecast: 79.7°F | Model: 77% vs Market: 66% | Edge: 17.9%",
+      "entryPrice": 0.655,
+      "size": 19,
+      "sizeUSDC": 12.445,
+      "enteredAt": "2026-04-04T10:32:37.913Z",
+      "orderId": "paper-mnk71kiv-t2ch",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-04T00:05:09.368Z"
+    "lastUpdated": "2026-04-04T10:32:37.932Z"
   }
 }
