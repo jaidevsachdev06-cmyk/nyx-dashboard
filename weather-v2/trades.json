@@ -9862,8 +9862,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.505,
-      "updatedAt": "2026-04-04T10:25:31.310Z"
+      "currentPrice": 0.565,
+      "updatedAt": "2026-04-04T15:50:30.892Z"
     },
     {
       "id": "oc-mnk71khv-33q7dy",
@@ -9935,11 +9935,89 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.635,
+      "updatedAt": "2026-04-04T15:50:31.157Z"
+    },
+    {
+      "id": "oc-mnkins4r-js3k7a",
+      "conditionId": "0xe037fdc85148426729289342fcf3f812cee4d22b60fc1189e3f2bd524f7bba89",
+      "tokenId": "0x85d705bbf514c38e5299650785ac6c04152909c35e239b3a2e115006bf69002e",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-april-5-2026-70-71f",
+      "city": "Dallas",
+      "date": "2026-04-05",
+      "bucket": "70-71°F",
+      "question": "Will the highest temperature in Dallas be between 70-71°F on April 5?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-04T15:57:49.995Z",
+      "signal": {
+        "forecastTemp": 67,
+        "forecastSource": "multi-source",
+        "sources": 9,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.9,
+        "impliedProb": 0.675,
+        "modelProb": 0.7954,
+        "edge": 0.1204,
+        "isLottery": false
+      },
+      "notes": "Forecast: 67.0°F | Model: 80% vs Market: 68% | Edge: 17.8%",
+      "entryPrice": 0.675,
+      "size": 23,
+      "sizeUSDC": 15.525,
+      "enteredAt": "2026-04-04T15:57:50.024Z",
+      "orderId": "paper-mnkins5z-qb34",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
       "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-04T10:32:37.932Z"
+    "lastUpdated": "2026-04-04T15:57:50.044Z"
   }
 }
