@@ -9664,9 +9664,9 @@
       "bucket": "82-83°F",
       "question": "Will the highest temperature in Dallas be between 82-83°F on April 3?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": -0.35,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -8.96,
       "createdAt": "2026-04-02T04:12:48.099Z",
       "signal": {
         "forecastTemp": 79.5,
@@ -9700,8 +9700,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.45,
-      "updatedAt": "2026-04-03T21:25:16.770Z"
+      "currentPrice": 0.0035,
+      "updatedAt": "2026-04-04T00:05:05.686Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-04T00:05:08.327Z",
+      "actualTemp": 81,
+      "forecastError": 1.5,
+      "closedAt": "2026-04-04T00:05:08.348Z"
     },
     {
       "id": "oc-mniv91gf-bfunrw",
@@ -9714,9 +9720,9 @@
       "bucket": "66-67°F",
       "question": "Will the highest temperature in New York City be between 66-67°F on April 3?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.38,
       "createdAt": "2026-04-03T12:14:44.895Z",
       "signal": {
         "forecastTemp": 63.8,
@@ -9766,8 +9772,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.86,
-      "updatedAt": "2026-04-03T21:25:17.035Z",
+      "currentPrice": 0.9935,
+      "updatedAt": "2026-04-04T00:05:05.929Z",
       "scalps": [
         {
           "rule": "normal-half",
@@ -9777,7 +9783,13 @@
           "pnlUSDC": 3.96,
           "timestamp": "2026-04-03T20:15:05.953Z"
         }
-      ]
+      ],
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-04T00:05:09.340Z",
+      "actualTemp": 67.9,
+      "forecastError": 4.1,
+      "closedAt": "2026-04-04T00:05:09.363Z"
     },
     {
       "id": "oc-mnjf3cod-5lh8p1",
@@ -9849,11 +9861,13 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.58,
+      "updatedAt": "2026-04-04T00:05:06.200Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-03T21:30:11.851Z"
+    "lastUpdated": "2026-04-04T00:05:09.368Z"
   }
 }
