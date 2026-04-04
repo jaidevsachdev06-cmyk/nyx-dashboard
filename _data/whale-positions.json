@@ -14064,7 +14064,7 @@
     "entryPrice": 0.905,
     "currentPrice": 0.935,
     "shares": 47.67,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "Car, scottilicious, kekkone, Roflan, archaic, elucidate",
     "whaleCount": 6,
@@ -14084,7 +14084,9 @@
       {},
       {}
     ],
-    "updatedAt": "2026-04-04T22:00:43.072Z"
+    "updatedAt": "2026-04-04T22:02:53.049Z",
+    "exitPrice": 0.935,
+    "notes": "Dropped from whale consensus"
   },
   {
     "id": "82c621c5-72e7-4dd0-bc43-d233010f26a0",
