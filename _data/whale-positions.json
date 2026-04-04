@@ -14368,7 +14368,7 @@
     "entryPrice": 0.935,
     "currentPrice": 0.935,
     "shares": 17.84,
-    "status": "open",
+    "status": "closed-win",
     "source": "consensus-scanner",
     "whales": "aenews, debased, Gr33d, scottilicious",
     "whaleCount": 4,
@@ -14388,6 +14388,8 @@
       {},
       {}
     ],
-    "updatedAt": "2026-04-04T04:00:52.261Z"
+    "updatedAt": "2026-04-04T04:02:54.837Z",
+    "exitPrice": 0.935,
+    "notes": "Dropped from whale consensus"
   }
 ]
