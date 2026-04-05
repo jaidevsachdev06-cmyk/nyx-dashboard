@@ -286,7 +286,7 @@
     "slug": "will-iran-strike-uae-again-in-march",
     "side": "No",
     "entryPrice": 0.573,
-    "currentPrice": 0.041999999999999996,
+    "currentPrice": 0.0245,
     "shares": 43,
     "invested": 24.639,
     "expectedPayout": 43,
@@ -312,13 +312,13 @@
       "military strikes"
     ],
     "notes": "",
-    "currentValue": 1.806,
-    "pnl": -22.833,
-    "pnlPercent": -92.67,
+    "currentValue": 1.0535,
+    "pnl": -23.5855,
+    "pnlPercent": -95.72,
     "priceHistory": [
       {},
       {}
     ],
-    "updatedAt": "2026-04-05T21:00:30.128Z"
+    "updatedAt": "2026-04-05T21:30:28.823Z"
   }
 ]
