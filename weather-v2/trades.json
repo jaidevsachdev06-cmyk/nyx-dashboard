@@ -10102,8 +10102,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.545,
-      "updatedAt": "2026-04-05T23:05:27.019Z"
+      "currentPrice": 0.53,
+      "updatedAt": "2026-04-05T23:17:02.747Z"
     },
     {
       "id": "oc-mnlcv7bm-h6arpy",
@@ -10180,12 +10180,88 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.82,
-      "updatedAt": "2026-04-05T23:05:27.297Z"
+      "currentPrice": 0.835,
+      "updatedAt": "2026-04-05T23:17:03.159Z"
+    },
+    {
+      "id": "oc-mnme1w25-7vu6g5",
+      "conditionId": "0x2d4498c507cda655ab4e5fc80d18fcd71a433e0a136239f3c241d8ea5550e850",
+      "tokenId": "0xc3caa0189d0ed1f9b94b0757dabaa6accff7672d778f865e556357eb559e91b6",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-dallas-on-april-6-2026-72-73f",
+      "city": "Dallas",
+      "date": "2026-04-06",
+      "bucket": "72-73°F",
+      "question": "Will the highest temperature in Dallas be between 72-73°F on April 6?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-05T23:24:22.541Z",
+      "signal": {
+        "forecastTemp": 69.9,
+        "forecastSource": "multi-source",
+        "sources": 9,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.3,
+        "impliedProb": 0.66,
+        "modelProb": 0.7936,
+        "edge": 0.1336,
+        "isLottery": false
+      },
+      "notes": "Forecast: 69.9°F | Model: 79% vs Market: 66% | Edge: 20.2%",
+      "entryPrice": 0.66,
+      "size": 23,
+      "sizeUSDC": 15.180000000000001,
+      "enteredAt": "2026-04-05T23:24:22.559Z",
+      "orderId": "paper-mnme1w2v-h2sw",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-05T23:05:29.497Z"
+    "lastUpdated": "2026-04-05T23:24:22.572Z"
   }
 }
