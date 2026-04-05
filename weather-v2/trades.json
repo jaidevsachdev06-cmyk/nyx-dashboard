@@ -10026,8 +10026,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.665,
-      "updatedAt": "2026-04-05T02:41:37.193Z"
+      "currentPrice": 0.65,
+      "updatedAt": "2026-04-05T05:56:36.815Z"
     },
     {
       "id": "oc-mnl5wxo3-lqni07",
@@ -10095,11 +10095,89 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.585,
+      "updatedAt": "2026-04-05T05:56:37.070Z"
+    },
+    {
+      "id": "oc-mnlcv7bm-h6arpy",
+      "conditionId": "0xbc9753c4bbae294955f828080c5a9e7f41a6d9ea8e037b7f24366d65e8f0f096",
+      "tokenId": "0x45b17f76eafe5973e281e3e085c5f4361457379fee0b13f0fbc5153a24af89e0",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-atlanta-on-april-6-2026-70-71f",
+      "city": "Atlanta",
+      "date": "2026-04-06",
+      "bucket": "70-71°F",
+      "question": "Will the highest temperature in Atlanta be between 70-71°F on April 6?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-05T06:03:24.754Z",
+      "signal": {
+        "forecastTemp": 67.8,
+        "forecastSource": "multi-source",
+        "sources": 9,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.66,
+        "modelProb": 0.7922,
+        "edge": 0.1322,
+        "isLottery": false
+      },
+      "notes": "Forecast: 67.8°F | Model: 79% vs Market: 66% | Edge: 20.0%",
+      "entryPrice": 0.66,
+      "size": 23,
+      "sizeUSDC": 15.180000000000001,
+      "enteredAt": "2026-04-05T06:03:24.778Z",
+      "orderId": "paper-mnlcv7ck-26ga",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
       "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-05T02:48:48.291Z"
+    "lastUpdated": "2026-04-05T06:03:24.794Z"
   }
 }
