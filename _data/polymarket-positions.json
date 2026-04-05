@@ -278,5 +278,42 @@
       {}
     ],
     "updatedAt": "2026-03-07T01:30:32.146Z"
+  },
+  {
+    "id": "reaper-1775378180247-9s3cko",
+    "market": "Will Iran strike UAE again in March?",
+    "conditionId": "0x2cb096be1ef4c94e4286b318eb660c61983faa47e88017d241d3967d1bd59ce5",
+    "slug": "will-iran-strike-uae-again-in-march",
+    "side": "No",
+    "entryPrice": 0.573,
+    "currentPrice": 0.573,
+    "shares": 43,
+    "invested": 24.639,
+    "expectedPayout": 43,
+    "expectedProfit": 18.361,
+    "confidence": 100,
+    "confidenceReason": "Event deadline passed 4d ago",
+    "endDate": "2026-03-07",
+    "entryDate": "2026-04-05T08:36:20.247Z",
+    "createdAt": "2026-04-05T08:36:21.692Z",
+    "status": "open",
+    "strategy": "resolution",
+    "ep": "reaper",
+    "tags": [
+      "politics",
+      "iran",
+      "geopolitics",
+      "israel",
+      "middle east",
+      "world",
+      "trump",
+      "iran offensive strikes",
+      "regional spillover",
+      "military strikes"
+    ],
+    "notes": "",
+    "currentValue": 24.639,
+    "pnl": 0,
+    "pnlPercent": 0
   }
 ]
