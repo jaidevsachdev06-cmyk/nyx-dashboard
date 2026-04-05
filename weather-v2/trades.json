@@ -9802,9 +9802,9 @@
       "bucket": "62-63°F",
       "question": "Will the highest temperature in Seattle be between 62-63°F on April 4?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.5,
       "createdAt": "2026-04-03T21:30:11.821Z",
       "signal": {
         "forecastTemp": 60,
@@ -9862,8 +9862,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.2,
-      "updatedAt": "2026-04-04T22:05:06.399Z"
+      "currentPrice": 0.0045,
+      "updatedAt": "2026-04-05T01:05:11.732Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-05T01:05:14.073Z",
+      "actualTemp": 58.7,
+      "forecastError": -1.3,
+      "closedAt": "2026-04-05T01:05:14.089Z"
     },
     {
       "id": "oc-mnk71khv-33q7dy",
@@ -10020,12 +10026,12 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.73,
-      "updatedAt": "2026-04-04T22:05:06.945Z"
+      "currentPrice": 0.745,
+      "updatedAt": "2026-04-05T01:05:11.979Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-04T22:05:09.831Z"
+    "lastUpdated": "2026-04-05T01:05:14.092Z"
   }
 }
