@@ -14447,6 +14447,11 @@
     "invested": 16.4792,
     "currentValue": 16.4792,
     "pnl": 0,
-    "pnlPercent": 0
+    "pnlPercent": 0,
+    "priceHistory": [
+      {},
+      {}
+    ],
+    "updatedAt": "2026-04-05T16:30:56.462Z"
   }
 ]
