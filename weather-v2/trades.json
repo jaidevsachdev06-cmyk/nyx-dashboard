@@ -10102,8 +10102,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.53,
-      "updatedAt": "2026-04-05T23:17:02.747Z"
+      "currentPrice": 0.535,
+      "updatedAt": "2026-04-06T01:27:01.044Z"
     },
     {
       "id": "oc-mnlcv7bm-h6arpy",
@@ -10180,8 +10180,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.835,
-      "updatedAt": "2026-04-05T23:17:03.159Z"
+      "currentPrice": 0.785,
+      "updatedAt": "2026-04-06T01:27:01.295Z"
     },
     {
       "id": "oc-mnme1w25-7vu6g5",
@@ -10257,11 +10257,85 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.645,
+      "updatedAt": "2026-04-06T01:27:01.548Z"
+    },
+    {
+      "id": "oc-mnmind2m-3zyw8u",
+      "conditionId": "0x70e4034a1129eb24a483df9e8fe0619a8531c1fa9858528334e7059bcf6cacf7",
+      "tokenId": "0xa8e20001048140806326e1ed7b5d849d600ca127900f008020c8c9bf17f3c92",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-april-6-2026-48-49f",
+      "city": "Chicago",
+      "date": "2026-04-06",
+      "bucket": "48-49°F",
+      "question": "Will the highest temperature in Chicago be between 48-49°F on April 6?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-06T01:33:02.830Z",
+      "signal": {
+        "forecastTemp": 51.1,
+        "forecastSource": "multi-source",
+        "sources": 8,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.9,
+        "impliedProb": 0.615,
+        "modelProb": 0.7727,
+        "edge": 0.1577,
+        "isLottery": false
+      },
+      "notes": "Forecast: 51.1°F | Model: 77% vs Market: 62% | Edge: 25.6%",
+      "entryPrice": 0.615,
+      "size": 20,
+      "sizeUSDC": 12.3,
+      "enteredAt": "2026-04-06T01:33:02.869Z",
+      "orderId": "paper-mnmind3y-ws2z",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
       "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-05T23:24:22.572Z"
+    "lastUpdated": "2026-04-06T01:33:02.883Z"
   }
 }
