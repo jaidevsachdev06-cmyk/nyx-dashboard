@@ -10514,8 +10514,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.505,
-      "updatedAt": "2026-04-07T18:05:13.139Z"
+      "currentPrice": 0.495,
+      "updatedAt": "2026-04-07T19:10:06.954Z"
     },
     {
       "id": "oc-mnon3p2p-oqf0g6",
@@ -10572,12 +10572,64 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.46,
-      "updatedAt": "2026-04-07T18:05:13.400Z"
+      "currentPrice": 0.425,
+      "updatedAt": "2026-04-07T19:10:07.221Z"
+    },
+    {
+      "id": "oc-mnozyb2u-5m8ltg",
+      "conditionId": "0xc8c1987159971db23766cc63afc8192eac3873063daa802392261ad3e14bc982",
+      "tokenId": "0x370c8df5cfc22aac0c95fe55afb02cbc1255656eda8522da63c5af7800ce5d2d",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-april-7-2026-54-55f",
+      "city": "Seattle",
+      "date": "2026-04-07",
+      "bucket": "54-55°F",
+      "question": "Will the highest temperature in Seattle be between 54-55°F on April 7?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-07T19:12:59.286Z",
+      "signal": {
+        "forecastTemp": 57.3,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.565,
+        "modelProb": 0.7925,
+        "edge": 0.2275,
+        "isLottery": false
+      },
+      "notes": "Forecast: 57.3°F | Model: 79% vs Market: 56% | Edge: 40.3%",
+      "entryPrice": 0.565,
+      "size": 22,
+      "sizeUSDC": 12.43,
+      "enteredAt": "2026-04-07T19:12:59.308Z",
+      "orderId": "paper-mnozyb3s-mt88",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-07T18:05:15.493Z"
+    "lastUpdated": "2026-04-07T19:12:59.326Z"
   }
 }
