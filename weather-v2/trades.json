@@ -10046,9 +10046,9 @@
       "bucket": "70-71°F",
       "question": "Will the highest temperature in Seattle be between 70-71°F on April 6?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 5.18,
       "createdAt": "2026-04-05T02:48:48.243Z",
       "signal": {
         "forecastTemp": 67.5,
@@ -10102,8 +10102,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.6,
-      "updatedAt": "2026-04-06T08:10:31.572Z"
+      "currentPrice": 0.36,
+      "updatedAt": "2026-04-06T22:13:51.464Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-07T04:13:24.838Z",
+      "actualTemp": 69.6,
+      "forecastError": 2.1,
+      "closedAt": "2026-04-07T04:13:24.852Z"
     },
     {
       "id": "oc-mnlcv7bm-h6arpy",
@@ -10116,9 +10122,9 @@
       "bucket": "70-71°F",
       "question": "Will the highest temperature in Atlanta be between 70-71°F on April 6?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.08,
       "createdAt": "2026-04-05T06:03:24.754Z",
       "signal": {
         "forecastTemp": 67.8,
@@ -10168,10 +10174,10 @@
         "edge": 0.1322,
         "isLottery": false
       },
-      "notes": "Forecast: 67.8°F | Model: 79% vs Market: 66% | Edge: 20.0%",
+      "notes": "Forecast: 67.8°F | Model: 79% vs Market: 66% | Edge: 20.0% | SCALP normal-half: sold 11@0.999 (+$3.73)",
       "entryPrice": 0.66,
-      "size": 23,
-      "sizeUSDC": 15.180000000000001,
+      "size": 12,
+      "sizeUSDC": 7.92,
       "enteredAt": "2026-04-05T06:03:24.778Z",
       "orderId": "paper-mnlcv7ck-26ga",
       "tradeSource": "paper",
@@ -10180,8 +10186,24 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.845,
-      "updatedAt": "2026-04-06T08:10:31.813Z"
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-04-07T04:13:22.334Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 11,
+          "price": 0.999,
+          "pnlUSDC": 3.729,
+          "timestamp": "2026-04-06T22:13:53.035Z"
+        }
+      ],
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-07T04:13:25.788Z",
+      "actualTemp": 65.4,
+      "forecastError": -2.4,
+      "closedAt": "2026-04-07T04:13:25.800Z"
     },
     {
       "id": "oc-mnme1w25-7vu6g5",
@@ -10194,9 +10216,9 @@
       "bucket": "72-73°F",
       "question": "Will the highest temperature in Dallas be between 72-73°F on April 6?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -15.18,
       "createdAt": "2026-04-05T23:24:22.541Z",
       "signal": {
         "forecastTemp": 69.9,
@@ -10258,8 +10280,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.565,
-      "updatedAt": "2026-04-06T08:10:32.054Z"
+      "currentPrice": 0.0005,
+      "updatedAt": "2026-04-07T04:13:22.604Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-07T04:13:27.108Z",
+      "actualTemp": 69.3,
+      "forecastError": -0.6,
+      "closedAt": "2026-04-07T04:13:27.120Z"
     },
     {
       "id": "oc-mnmind2m-3zyw8u",
@@ -10272,9 +10300,9 @@
       "bucket": "48-49°F",
       "question": "Will the highest temperature in Chicago be between 48-49°F on April 6?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 3.85,
       "createdAt": "2026-04-06T01:33:02.830Z",
       "signal": {
         "forecastTemp": 51.1,
@@ -10320,10 +10348,10 @@
         "edge": 0.1577,
         "isLottery": false
       },
-      "notes": "Forecast: 51.1°F | Model: 77% vs Market: 62% | Edge: 25.6%",
+      "notes": "Forecast: 51.1°F | Model: 77% vs Market: 62% | Edge: 25.6% | SCALP normal-half: sold 10@1.000 (+$3.85)",
       "entryPrice": 0.615,
-      "size": 20,
-      "sizeUSDC": 12.3,
+      "size": 10,
+      "sizeUSDC": 6.15,
       "enteredAt": "2026-04-06T01:33:02.869Z",
       "orderId": "paper-mnmind3y-ws2z",
       "tradeSource": "paper",
@@ -10332,8 +10360,24 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.61,
-      "updatedAt": "2026-04-06T08:10:32.331Z"
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-04-06T22:13:52.229Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 10,
+          "price": 0.9995,
+          "pnlUSDC": 3.845,
+          "timestamp": "2026-04-06T22:13:53.556Z"
+        }
+      ],
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-07T04:13:27.618Z",
+      "actualTemp": 49.4,
+      "forecastError": -1.7,
+      "closedAt": "2026-04-07T04:13:27.629Z"
     },
     {
       "id": "oc-mnmwzkwg-nswq1y",
@@ -10409,11 +10453,13 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.64,
+      "updatedAt": "2026-04-07T04:13:23.322Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-06T08:14:27.501Z"
+    "lastUpdated": "2026-04-07T04:13:27.633Z"
   }
 }
