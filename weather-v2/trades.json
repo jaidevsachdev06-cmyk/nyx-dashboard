@@ -10454,8 +10454,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.615,
-      "updatedAt": "2026-04-07T06:32:21.880Z"
+      "currentPrice": 0.745,
+      "updatedAt": "2026-04-07T13:10:06.024Z"
     },
     {
       "id": "oc-mno8xj6f-g4o6c8",
@@ -10507,11 +10507,69 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.485,
+      "updatedAt": "2026-04-07T13:10:06.299Z"
+    },
+    {
+      "id": "oc-mnon3p2p-oqf0g6",
+      "conditionId": "0x8a34184ef715d515f0f1d508bbe25c0d0add4bd325b32d190f2a420d78c111af",
+      "tokenId": "0x2a2dc2e2caca42c8cfe68875fd39153f2b88c49cb327282a6c42c34962cd527b",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-chicago-on-april-7-2026-38-39f",
+      "city": "Chicago",
+      "date": "2026-04-07",
+      "bucket": "38-39°F",
+      "question": "Will the highest temperature in Chicago be between 38-39°F on April 7?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-07T13:13:15.697Z",
+      "signal": {
+        "forecastTemp": 42,
+        "forecastSource": "multi-source",
+        "sources": 4,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.3,
+        "impliedProb": 0.615,
+        "modelProb": 0.7957,
+        "edge": 0.1807,
+        "isLottery": false
+      },
+      "notes": "Forecast: 42.0°F | Model: 80% vs Market: 62% | Edge: 29.4%",
+      "entryPrice": 0.615,
+      "size": 25,
+      "sizeUSDC": 15.375,
+      "enteredAt": "2026-04-07T13:13:15.713Z",
+      "orderId": "paper-mnon3p3b-nqlk",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
       "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-07T06:36:33.526Z"
+    "lastUpdated": "2026-04-07T13:13:15.723Z"
   }
 }
