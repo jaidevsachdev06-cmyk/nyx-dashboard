@@ -10514,8 +10514,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.475,
-      "updatedAt": "2026-04-08T02:05:06.676Z"
+      "currentPrice": 0.545,
+      "updatedAt": "2026-04-08T10:10:19.998Z"
     },
     {
       "id": "oc-mnon3p2p-oqf0g6",
@@ -10640,10 +10640,86 @@
       "actualTemp": 70.3,
       "forecastError": 13,
       "closedAt": "2026-04-08T02:05:10.079Z"
+    },
+    {
+      "id": "oc-mnpw3fzg-cuikyw",
+      "conditionId": "0xdb8ce5155dcce19c57d788c82b1b1ce1e4ed45551f4a2743e5a834e88744587a",
+      "tokenId": "0x333db4eaf139d612d8cbc7117a89d8e7b0df8dadfce4a830f38fde130aa50fbc",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-april-9-2026-52-53f",
+      "city": "New York City",
+      "date": "2026-04-09",
+      "bucket": "52-53°F",
+      "question": "Will the highest temperature in New York City be between 52-53°F on April 9?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-08T10:12:46.636Z",
+      "signal": {
+        "forecastTemp": 46.8,
+        "forecastSource": "multi-source",
+        "sources": 9,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.9,
+        "impliedProb": 0.68,
+        "modelProb": 0.8007,
+        "edge": 0.1207,
+        "isLottery": false
+      },
+      "notes": "Forecast: 46.8°F | Model: 80% vs Market: 68% | Edge: 17.7%",
+      "entryPrice": 0.68,
+      "size": 22,
+      "sizeUSDC": 14.96,
+      "enteredAt": "2026-04-08T10:12:46.652Z",
+      "orderId": "paper-mnpw3g02-nak0",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-08T02:05:10.083Z"
+    "lastUpdated": "2026-04-08T10:12:46.662Z"
   }
 }
