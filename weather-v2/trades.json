@@ -10474,9 +10474,9 @@
       "bucket": "78-79°F",
       "question": "Will the highest temperature in Dallas be between 78-79°F on April 8?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.33,
       "createdAt": "2026-04-07T06:36:33.495Z",
       "signal": {
         "forecastTemp": 74.2,
@@ -10514,8 +10514,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.0165,
-      "updatedAt": "2026-04-08T22:10:12.933Z"
+      "currentPrice": 0.0095,
+      "updatedAt": "2026-04-08T23:05:11.638Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-08T23:05:14.597Z",
+      "actualTemp": 75.2,
+      "forecastError": 1,
+      "closedAt": "2026-04-08T23:05:14.622Z"
     },
     {
       "id": "oc-mnon3p2p-oqf0g6",
@@ -10717,7 +10723,7 @@
       "realEntryPrice": null,
       "txHash": null,
       "currentPrice": 0.75,
-      "updatedAt": "2026-04-08T22:10:13.206Z"
+      "updatedAt": "2026-04-08T23:05:11.921Z"
     },
     {
       "id": "oc-mnq2iyoe-5zeabd",
@@ -10790,8 +10796,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.765,
-      "updatedAt": "2026-04-08T22:10:13.480Z"
+      "currentPrice": 0.715,
+      "updatedAt": "2026-04-08T23:05:12.196Z"
     },
     {
       "id": "oc-mnqlszph-nvjdtb",
@@ -10804,9 +10810,9 @@
       "bucket": "58-59°F",
       "question": "Will the highest temperature in Seattle be between 58-59°F on April 8?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 7.6,
       "createdAt": "2026-04-08T22:12:28.997Z",
       "signal": {
         "forecastTemp": 61.6,
@@ -10843,11 +10849,19 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.9995,
+      "updatedAt": "2026-04-08T23:05:12.462Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-08T23:05:17.291Z",
+      "actualTemp": 57.3,
+      "forecastError": -4.3,
+      "closedAt": "2026-04-08T23:05:17.309Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-08T22:12:29.038Z"
+    "lastUpdated": "2026-04-08T23:05:17.312Z"
   }
 }
