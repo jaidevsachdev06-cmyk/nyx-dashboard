@@ -10514,8 +10514,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.38,
-      "updatedAt": "2026-04-08T13:10:21.362Z"
+      "currentPrice": 0.0165,
+      "updatedAt": "2026-04-08T22:10:12.933Z"
     },
     {
       "id": "oc-mnon3p2p-oqf0g6",
@@ -10716,8 +10716,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.71,
-      "updatedAt": "2026-04-08T13:10:21.628Z"
+      "currentPrice": 0.75,
+      "updatedAt": "2026-04-08T22:10:13.206Z"
     },
     {
       "id": "oc-mnq2iyoe-5zeabd",
@@ -10789,11 +10789,65 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
+      "txHash": null,
+      "currentPrice": 0.765,
+      "updatedAt": "2026-04-08T22:10:13.480Z"
+    },
+    {
+      "id": "oc-mnqlszph-nvjdtb",
+      "conditionId": "0xa84fb3456c44016715eac7025507be4773004ddf537bd1db778adccc3c7525bb",
+      "tokenId": "0xa581dc5c4bfc952885b223ffc0e2e07b6f29408733e838b052542784eb61d52c",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-seattle-on-april-8-2026-58-59f",
+      "city": "Seattle",
+      "date": "2026-04-08",
+      "bucket": "58-59°F",
+      "question": "Will the highest temperature in Seattle be between 58-59°F on April 8?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-08T22:12:28.997Z",
+      "signal": {
+        "forecastTemp": 61.6,
+        "forecastSource": "multi-source",
+        "sources": 3,
+        "sourceDetails": [
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.5,
+        "impliedProb": 0.62,
+        "modelProb": 0.7936,
+        "edge": 0.1736,
+        "isLottery": false
+      },
+      "notes": "Forecast: 61.6°F | Model: 79% vs Market: 62% | Edge: 28.0%",
+      "entryPrice": 0.62,
+      "size": 20,
+      "sizeUSDC": 12.4,
+      "enteredAt": "2026-04-08T22:12:29.021Z",
+      "orderId": "paper-mnqlszqh-0288",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
       "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-08T13:12:48.425Z"
+    "lastUpdated": "2026-04-08T22:12:29.038Z"
   }
 }
