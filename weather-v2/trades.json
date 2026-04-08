@@ -10514,8 +10514,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.465,
-      "updatedAt": "2026-04-08T00:05:09.366Z"
+      "currentPrice": 0.475,
+      "updatedAt": "2026-04-08T02:05:06.676Z"
     },
     {
       "id": "oc-mnon3p2p-oqf0g6",
@@ -10592,9 +10592,9 @@
       "bucket": "54-55°F",
       "question": "Will the highest temperature in Seattle be between 54-55°F on April 7?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "loss",
+      "pnlUSDC": -12.43,
       "createdAt": "2026-04-07T19:12:59.286Z",
       "signal": {
         "forecastTemp": 57.3,
@@ -10632,12 +10632,18 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.065,
-      "updatedAt": "2026-04-08T00:05:09.898Z"
+      "currentPrice": 0.0035,
+      "updatedAt": "2026-04-08T02:05:06.939Z",
+      "resolutionPrice": 1,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-08T02:05:10.066Z",
+      "actualTemp": 70.3,
+      "forecastError": 13,
+      "closedAt": "2026-04-08T02:05:10.079Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-08T00:05:12.770Z"
+    "lastUpdated": "2026-04-08T02:05:10.083Z"
   }
 }
