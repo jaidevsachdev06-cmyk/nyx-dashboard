@@ -10658,9 +10658,9 @@
       "bucket": "52-53°F",
       "question": "Will the highest temperature in New York City be between 52-53°F on April 9?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 7.04,
       "createdAt": "2026-04-08T10:12:46.636Z",
       "signal": {
         "forecastTemp": 46.8,
@@ -10722,8 +10722,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.75,
-      "updatedAt": "2026-04-08T23:05:11.921Z"
+      "currentPrice": 0.997,
+      "updatedAt": "2026-04-09T20:07:54.184Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-09T20:07:56.460Z",
+      "actualTemp": 49,
+      "forecastError": 2.2,
+      "closedAt": "2026-04-09T20:07:56.475Z"
     },
     {
       "id": "oc-mnq2iyoe-5zeabd",
@@ -10796,8 +10802,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.715,
-      "updatedAt": "2026-04-08T23:05:12.196Z"
+      "currentPrice": 0.45,
+      "updatedAt": "2026-04-09T20:07:54.457Z"
     },
     {
       "id": "oc-mnqlszph-nvjdtb",
@@ -10862,6 +10868,6 @@
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-08T23:05:17.312Z"
+    "lastUpdated": "2026-04-09T20:07:56.479Z"
   }
 }
