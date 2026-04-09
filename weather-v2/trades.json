@@ -10802,8 +10802,8 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.45,
-      "updatedAt": "2026-04-09T20:07:54.457Z"
+      "currentPrice": 0.435,
+      "updatedAt": "2026-04-09T20:10:30.118Z"
     },
     {
       "id": "oc-mnqlszph-nvjdtb",
@@ -10864,10 +10864,86 @@
       "actualTemp": 57.3,
       "forecastError": -4.3,
       "closedAt": "2026-04-08T23:05:17.309Z"
+    },
+    {
+      "id": "oc-mnrwyh8c-w09k6a",
+      "conditionId": "0xce108868cb3adaf1ba05715742bfb4c8a73946ee193ca4cd61af2e999c37617d",
+      "tokenId": "0xd4b275a05e0cd0bef47edf56e0e06efbf6eab948ed765221210d6bbea4eca6e9",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-april-10-2026-60-61f",
+      "city": "New York City",
+      "date": "2026-04-10",
+      "bucket": "60-61°F",
+      "question": "Will the highest temperature in New York City be between 60-61°F on April 10?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-09T20:12:26.940Z",
+      "signal": {
+        "forecastTemp": 56.4,
+        "forecastSource": "multi-source",
+        "sources": 9,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 4.5,
+        "impliedProb": 0.655,
+        "modelProb": 0.7973,
+        "edge": 0.1423,
+        "isLottery": false
+      },
+      "notes": "Forecast: 56.4°F | Model: 80% vs Market: 66% | Edge: 21.7%",
+      "entryPrice": 0.655,
+      "size": 23,
+      "sizeUSDC": 15.065000000000001,
+      "enteredAt": "2026-04-09T20:12:26.957Z",
+      "orderId": "paper-mnrwyh90-bdpf",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-09T20:07:56.479Z"
+    "lastUpdated": "2026-04-09T20:12:26.970Z"
   }
 }
