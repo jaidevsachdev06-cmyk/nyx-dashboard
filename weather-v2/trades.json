@@ -10742,9 +10742,9 @@
       "bucket": "72-73°F",
       "question": "Will the highest temperature in Atlanta be between 72-73°F on April 9?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 7.935,
       "createdAt": "2026-04-08T13:12:48.398Z",
       "signal": {
         "forecastTemp": 70,
@@ -10802,8 +10802,14 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.435,
-      "updatedAt": "2026-04-09T20:10:30.118Z"
+      "currentPrice": 0.996,
+      "updatedAt": "2026-04-09T22:05:28.693Z",
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-09T22:05:31.484Z",
+      "actualTemp": 70.2,
+      "forecastError": 0.2,
+      "closedAt": "2026-04-09T22:05:31.499Z"
     },
     {
       "id": "oc-mnqlszph-nvjdtb",
@@ -10939,11 +10945,13 @@
       "realOrderId": null,
       "realSize": null,
       "realEntryPrice": null,
-      "txHash": null
+      "txHash": null,
+      "currentPrice": 0.61,
+      "updatedAt": "2026-04-09T22:05:29.033Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-09T20:12:26.970Z"
+    "lastUpdated": "2026-04-09T22:05:31.502Z"
   }
 }
