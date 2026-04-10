@@ -10882,9 +10882,9 @@
       "bucket": "60-61°F",
       "question": "Will the highest temperature in New York City be between 60-61°F on April 10?",
       "side": "NO",
-      "status": "open",
-      "result": null,
-      "pnlUSDC": null,
+      "status": "closed",
+      "result": "win",
+      "pnlUSDC": 4.14,
       "createdAt": "2026-04-09T20:12:26.940Z",
       "signal": {
         "forecastTemp": 56.4,
@@ -10934,10 +10934,10 @@
         "edge": 0.1423,
         "isLottery": false
       },
-      "notes": "Forecast: 56.4°F | Model: 80% vs Market: 66% | Edge: 21.7%",
+      "notes": "Forecast: 56.4°F | Model: 80% vs Market: 66% | Edge: 21.7% | SCALP normal-half: sold 11@0.984 (+$3.62)",
       "entryPrice": 0.655,
-      "size": 23,
-      "sizeUSDC": 15.065000000000001,
+      "size": 12,
+      "sizeUSDC": 7.86,
       "enteredAt": "2026-04-09T20:12:26.957Z",
       "orderId": "paper-mnrwyh90-bdpf",
       "tradeSource": "paper",
@@ -10946,12 +10946,28 @@
       "realSize": null,
       "realEntryPrice": null,
       "txHash": null,
-      "currentPrice": 0.61,
-      "updatedAt": "2026-04-09T22:05:29.033Z"
+      "currentPrice": 0.995,
+      "updatedAt": "2026-04-10T20:06:17.417Z",
+      "scalps": [
+        {
+          "rule": "normal-half",
+          "fraction": 0.5,
+          "shares": 11,
+          "price": 0.984,
+          "pnlUSDC": 3.619,
+          "timestamp": "2026-04-10T19:46:16.435Z"
+        }
+      ],
+      "resolutionPrice": 0,
+      "resolutionSource": "polymarket",
+      "resolvedAt": "2026-04-10T20:06:19.588Z",
+      "actualTemp": 62.6,
+      "forecastError": 6.2,
+      "closedAt": "2026-04-10T20:06:19.604Z"
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-09T22:05:31.502Z"
+    "lastUpdated": "2026-04-10T20:06:19.607Z"
   }
 }
