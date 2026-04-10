@@ -10964,10 +10964,86 @@
       "actualTemp": 62.6,
       "forecastError": 6.2,
       "closedAt": "2026-04-10T20:06:19.604Z"
+    },
+    {
+      "id": "oc-mntiv5ug-o0j3mf",
+      "conditionId": "0x51f0668fba499e0a6b99bf11e54f1a7f74d58b5dede34c35657dd35e14c2e94b",
+      "tokenId": "0xa2265e1a890fbfbe3a8d8a81b13c227b172d734f40fe0ae31f72d45aa2bfc277",
+      "tokenSide": "NO",
+      "marketSlug": "highest-temperature-in-nyc-on-april-11-2026-62-63f",
+      "city": "New York City",
+      "date": "2026-04-11",
+      "bucket": "62-63°F",
+      "question": "Will the highest temperature in New York City be between 62-63°F on April 11?",
+      "side": "NO",
+      "status": "open",
+      "result": null,
+      "pnlUSDC": null,
+      "createdAt": "2026-04-10T23:13:29.944Z",
+      "signal": {
+        "forecastTemp": 59.3,
+        "forecastSource": "multi-source",
+        "sources": 9,
+        "sourceDetails": [
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "open-meteo",
+            "weight": "0.650"
+          },
+          {
+            "source": "noaa",
+            "weight": "0.850"
+          },
+          {
+            "source": "visualcrossing",
+            "weight": "0.750"
+          },
+          {
+            "source": "weatherapi",
+            "weight": "0.700"
+          }
+        ],
+        "forecastSD": 3.7,
+        "impliedProb": 0.635,
+        "modelProb": 0.7942,
+        "edge": 0.1592,
+        "isLottery": false
+      },
+      "notes": "Forecast: 59.3°F | Model: 79% vs Market: 64% | Edge: 25.1%",
+      "entryPrice": 0.635,
+      "size": 24,
+      "sizeUSDC": 15.24,
+      "enteredAt": "2026-04-10T23:13:29.962Z",
+      "orderId": "paper-mntiv5v6-9z0j",
+      "tradeSource": "paper",
+      "realTrading": false,
+      "realOrderId": null,
+      "realSize": null,
+      "realEntryPrice": null,
+      "txHash": null
     }
   ],
   "meta": {
     "lastPriceSync": "2026-04-03T10:31:08.414Z",
-    "lastUpdated": "2026-04-10T20:06:19.607Z"
+    "lastUpdated": "2026-04-10T23:13:29.975Z"
   }
 }
